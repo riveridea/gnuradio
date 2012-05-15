@@ -47,6 +47,9 @@ from uhd_interface import uhd_receiver
 import os, sys
 import random, time, struct
 
+import fcntl
+import socket
+
 #print os.getpid()
 #raw_input('Attach and press enter')
 
@@ -62,22 +65,61 @@ import random, time, struct
 # Linux specific...
 # TUNSETIFF ifr flags from <linux/tun_if.h>
 
-IFF_TUN		= 0x0001   # tunnel IP packets
-IFF_TAP		= 0x0002   # tunnel ethernet frames
-IFF_NO_PI	= 0x1000   # don't pass extra packet info
-IFF_ONE_QUEUE	= 0x2000   # beats me ;)
+IFF_TUN        = 0x0001   # tunnel IP packets
+IFF_TAP        = 0x0002   # tunnel ethernet frames
+IFF_NO_PI    = 0x1000   # don't pass extra packet info
+IFF_ONE_QUEUE    = 0x2000   # beats me ;)
+
+
+# From linux/sockios.h
+SIOCGIFINDEX = 0x8933
+SIOCGIFFLAGS =  0x8913
+SIOCSIFFLAGS =  0x8914
+SIOCGIFHWADDR = 0x8927
+SIOCSIFHWADDR = 0x8924
+SIOCGIFADDR = 0x8915
+SIOCSIFADDR = 0x8916
+SIOCGIFNETMASK = 0x891B
+SIOCSIFNETMASK = 0x891C
+SIOCETHTOOL = 0x8946
+ 
+# From linux/if.h
+IFF_UP       = 0x1
+ 
+# From linux/socket.h
+AF_UNIX      = 1
+AF_INET      = 2
 
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
-    
+   
     mode = IFF_TAP | IFF_NO_PI
     TUNSETIFF = 0x400454ca
-
+   
+    #print mode
     tun = os.open(tun_device_filename, os.O_RDWR)
-    ifs = ioctl(tun, TUNSETIFF, struct.pack("16sH", "gr%d", mode))
+    ifs = fcntl.ioctl(tun, TUNSETIFF, struct.pack("16sH", "gr%d", mode))
+    #print ifs
     ifname = ifs[:16].strip("\x00")
+
+    #print ifname
+
+    newmac = '22:22:11:11:11:33'
+    macbytes = [int(i, 16) for i in newmac.split(':')]
+    #macbytes = [22,22,22,22,22,22]
+    ifreq = struct.pack('16sH6B8x', ifname, AF_UNIX, *macbytes)
+    fcntl.ioctl(tun, SIOCSIFHWADDR, ifreq)
+
+    ''' Obtain the device's mac address. '''
+    ifreq = struct.pack('16sH14s', ifname, AF_UNIX, '\x00'*14)
+    res = fcntl.ioctl(tun, SIOCGIFHWADDR, ifreq)
+    address = struct.unpack('16sH14s', res)[2]
+    mac = struct.unpack('6B8x', address)
+    #print mac
+ 
+    #print ":".join(['%02X' % i for i in mac])
+
     return (tun, ifname)
-    
 
 # /////////////////////////////////////////////////////////////////////////////
 #                             the flow graph
