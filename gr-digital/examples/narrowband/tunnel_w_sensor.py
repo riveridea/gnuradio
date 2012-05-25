@@ -125,7 +125,7 @@ class my_top_block(gr.top_block):
         options.samples_per_symbol = self.source._sps
 
         # Setup a FFT plotting window
-		self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
+        self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
 			self.GetWin(),
 			baseband_freq=option.sx_freq,
 			y_per_div=20,
