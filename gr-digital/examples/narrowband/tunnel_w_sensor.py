@@ -140,7 +140,7 @@ class my_top_block(gr.top_block):
 			title="FFT Plot",
 			peak_hold=False,
 		)
-		self.Add(self.wxgui_fftsink2_0.win)       
+        self.Add(self.wxgui_fftsink2_0.win)       
         
         self.txpath = transmit_path(mod_class, options)
         self.rxpath = receive_path(demod_class, rx_callback, options)
