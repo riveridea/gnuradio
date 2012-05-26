@@ -51,9 +51,9 @@ from optparse import OptionParser
 # from current dir
 from receive_path  import receive_path
 from transmit_path import transmit_path
-from uhd_interface_w_sensor.py import uhd_transmitter
-from uhd_interface_w_sensor.py import uhd_receiver
-from uhd_interface_w_sensor.py import uhd_sensor
+from uhd_interface.py import uhd_transmitter
+from uhd_interface.py import uhd_receiver
+from uhd_interface.py import uhd_sensor
 
 import os, sys
 import random, time, struct
