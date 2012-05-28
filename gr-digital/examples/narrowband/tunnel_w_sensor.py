@@ -106,6 +106,11 @@ class my_top_block(gr.top_block):
                  rx_callback, options):
 
         gr.top_block.__init__(self)
+        
+        # for grc block initializaiton
+        grc_wxgui.top_block_gui.__init__(self, title="fft_plot")
+        _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
+        self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
         # Get the modulation's bits_per_symbol
         args = mod_class.extract_kwargs_from_options(options)
