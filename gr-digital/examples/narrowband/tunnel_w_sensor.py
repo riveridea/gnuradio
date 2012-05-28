@@ -55,6 +55,12 @@ from uhd_interface import uhd_transmitter
 from uhd_interface import uhd_receiver
 from uhd_interface import uhd_sensor
 
+from gnuradio import window
+from gnuradio.gr import firdes
+from gnuradio.wxgui import fftsink2
+from grc_gnuradio import wxgui as grc_wxgui
+import wx
+
 import os, sys
 import random, time, struct
 
