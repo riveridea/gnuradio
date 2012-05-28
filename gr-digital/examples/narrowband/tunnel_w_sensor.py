@@ -100,7 +100,8 @@ def open_tun_interface(tun_device_filename):
 #                     the flow graph
 # ////////////////////////////////////////////////////////////////////
 
-class my_top_block(gr.top_block):
+#class my_top_block(gr.top_block):
+class my_top_block(grc_wxgui.top_block_gui)
 
     def __init__(self, mod_class, demod_class,
                  rx_callback, options):
@@ -108,9 +109,9 @@ class my_top_block(gr.top_block):
         gr.top_block.__init__(self)
         
         # for grc block initializaiton
-        #grc_wxgui.top_block_gui.__init__(self, title="fft_plot")
-        #_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-        #self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+        grc_wxgui.top_block_gui.__init__(self, title="My Top Block")
+        _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
+        self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
 
         # Get the modulation's bits_per_symbol
         args = mod_class.extract_kwargs_from_options(options)
