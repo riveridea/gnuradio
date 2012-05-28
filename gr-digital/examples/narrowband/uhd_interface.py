@@ -146,11 +146,11 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
             
     def add_options(parser):
         add_freq_option(parser)
-        parser.add_option("-ta", "--tx-addr", type="string", default="",
+        parser.add_option("", "--tx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-spec", type="string", default=None,
                           help="Subdevice of UHD device where appropriate")
-        parser.add_option("-tA", "--tx-antenna", type="string", default=None,
+        parser.add_option("", "--tx-antenna", type="string", default=None,
                           help="select Rx Antenna where appropriate")
         parser.add_option("", "--tx-freq", type="eng_float", default=None,
                           help="set transmit frequency to FREQ [default=%default]",
