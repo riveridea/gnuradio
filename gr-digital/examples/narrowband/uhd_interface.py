@@ -198,11 +198,11 @@ class uhd_receiver(uhd_interface, gr.hier_block2):
 
     def add_options(parser):
         add_freq_option(parser)
-        parser.add_option("-ra", "--rx-addr", type="string", default="",
+        parser.add_option("", "--rx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--rx-spec", type="string", default=None,
                           help="Subdevice of UHD device where appropriate")
-        parser.add_option("-rA", "--rx-antenna", type="string", default=None,
+        parser.add_option("", "--rx-antenna", type="string", default=None,
                           help="select Rx Antenna where appropriate")
         parser.add_option("", "--rx-freq", type="eng_float", default=None,
                           help="set receive frequency to FREQ [default=%default]",
@@ -263,11 +263,11 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
 
     def add_options(parser):
         add_freq_option(parser)
-        parser.add_option("-sa", "--sx-addr", type="string", default="",
+        parser.add_option("", "--sx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--sx-spec", type="string", default=None,
                           help="Subdevice of UHD device where appropriate")
-        parser.add_option("-sA", "--sx-antenna", type="string", default=None,
+        parser.add_option("", "--sx-antenna", type="string", default=None,
                           help="select Sx Antenna where appropriate")
         parser.add_option("", "--sx-freq", type="eng_float", default=None,
                           help="set sensing frequency to FREQ [default=%default]",
