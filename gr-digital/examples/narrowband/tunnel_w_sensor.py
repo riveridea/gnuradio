@@ -101,7 +101,7 @@ def open_tun_interface(tun_device_filename):
 # ////////////////////////////////////////////////////////////////////
 
 #class my_top_block(gr.top_block):
-class my_top_block(grc_wxgui.top_block_gui)
+class my_top_block(grc_wxgui.top_block_gui):
 
     def __init__(self, mod_class, demod_class,
                  rx_callback, options):
