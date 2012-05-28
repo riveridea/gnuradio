@@ -136,7 +136,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
                                 gr.io_signature(0,0,0))
 
         # Set up the UHD interface as a transmitter
-        uhd_interface.__init__(self, True, args, sym_rate, sps,
+        uhd_interface.__init__(self, True, addr, sym_rate, sps,
                                freq, gain, spec, antenna)
 
         self.connect(self, self.u)
@@ -146,11 +146,11 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
             
     def add_options(parser):
         add_freq_option(parser)
-        parser.add_option("-ta", "--tx-addr", type="string", default="",
+        parser.add_option("", "--tx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-spec", type="string", default=None,
                           help="Subdevice of UHD device where appropriate")
-        parser.add_option("-tA", "--tx-antenna", type="string", default=None,
+        parser.add_option("", "--tx-antenna", type="string", default=None,
                           help="select Rx Antenna where appropriate")
         parser.add_option("", "--tx-freq", type="eng_float", default=None,
                           help="set transmit frequency to FREQ [default=%default]",
@@ -254,7 +254,12 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
         self._gain = self.set_gain(gain)
         self._freq = self.set_freq(freq)
 
-        self._rate = self.u.set_samp_rate(samp_rate)
+        # Set the sample rate
+        if(samp_rate is None):
+            sys.stderr.write("You must specify --sx-samprate for uhd sensor\n")
+            sys.exit(1)            
+        else:
+            self._rate = self.u.set_samp_rate(samp_rate)
 
         self.connect(self.u, self)
 
