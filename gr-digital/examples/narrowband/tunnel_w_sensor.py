@@ -259,6 +259,7 @@ def main():
     receive_path.add_options(parser, expert_grp)
     uhd_receiver.add_options(parser)
     uhd_transmitter.add_options(parser)
+    uhd_sensor.add_options(parser)
 
     for mod in mods.values():
         mod.add_options(expert_grp)
