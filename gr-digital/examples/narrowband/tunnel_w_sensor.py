@@ -106,7 +106,7 @@ class my_top_block(grc_wxgui.top_block_gui):
     def __init__(self, mod_class, demod_class,
                  rx_callback, options):
 
-        gr.top_block.__init__(self)
+        #gr.top_block.__init__(self)
         
         # for grc block initializaiton
         grc_wxgui.top_block_gui.__init__(self, title="My Top Block")
