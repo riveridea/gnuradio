@@ -118,10 +118,10 @@ class my_top_block(gr.top_block):
                                     options.verbose)
         
         # Setup the sensor
-        self.sensor = uhd_sensor(option.sx_addr, option.sx_samprate,
-                                 option.sx_freq, option.sx_gain,
-                                 option.sx_spec, option.sx_antenna, 
-                                 option.verbose)
+        self.sensor = uhd_sensor(options.sx_addr, options.sx_samprate,
+                                 options.sx_freq, options.sx_gain,
+                                 options.sx_spec, options.sx_antenna, 
+                                 options.verbose)
         
         options.samples_per_symbol = self.source._sps
 
