@@ -145,7 +145,7 @@ class my_top_block(grc_wxgui.top_block_gui):
 			y_divs=10,
 			ref_level=0,
 			ref_scale=2.0,
-			sample_rate=option.sx_samprate,
+			sample_rate=options.sx_samprate,
 			fft_size=1024,
 			fft_rate=15,
 			average=False,
