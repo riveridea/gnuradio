@@ -140,7 +140,7 @@ class my_top_block(grc_wxgui.top_block_gui):
         # Setup a FFT plotting window
         self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
 			self.GetWin(),
-			baseband_freq=option.sx_freq,
+			baseband_freq=options.sx_freq,
 			y_per_div=20,
 			y_divs=10,
 			ref_level=0,
