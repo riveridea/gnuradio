@@ -256,7 +256,7 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
 
         # Set the sample rate
         if(samp_rate is None):
-            sys.stderr.write("You must specify --sx-samprate for sensor\n")
+            sys.stderr.write("You must specify --sx-samprate for uhd sensor\n")
             sys.exit(1)            
         else:
             self._rate = self.u.set_samp_rate(samp_rate)
