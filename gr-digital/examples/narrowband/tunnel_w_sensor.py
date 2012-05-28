@@ -159,7 +159,7 @@ class my_top_block(grc_wxgui.top_block_gui):
         self.rxpath = receive_path(demod_class, rx_callback, options)
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        self.connect(self.sensor, self.wxgui_fftsink2_1)
+        self.connect(self.sensor, self.wxgui_fftsink2_0)
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
