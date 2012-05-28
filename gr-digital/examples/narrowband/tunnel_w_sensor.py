@@ -51,9 +51,9 @@ from optparse import OptionParser
 # from current dir
 from receive_path  import receive_path
 from transmit_path import transmit_path
-from uhd_interface import uhd_transmitter
-from uhd_interface import uhd_receiver
-from uhd_interface import uhd_sensor
+from uhd_interface_w_sensor import uhd_transmitter
+from uhd_interface_w_sensor import uhd_receiver
+from uhd_interface_w_sensor import uhd_sensor
 
 from gnuradio import window
 from gnuradio.gr import firdes
