@@ -490,7 +490,17 @@ public:
         cmd.num_samps = nsamps;
         cmd.stream_now = _stream_now;
         static const double reasonable_delay = 0.1; //order of magnitude over RTT
-        cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
+
+        //tell the device when to start the acquisition
+        if (_start_time_set){
+            _start_time_set = false; //cleared for next run
+            cmd.time_spec = _start_time;
+        }
+        else{
+            cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
+        }
+
+        //cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
         _dev->issue_stream_cmd(cmd);
 
         //receive samples until timeout
