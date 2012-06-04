@@ -490,7 +490,7 @@ public:
         uhd::stream_cmd_t cmd(uhd::stream_cmd_t::STREAM_MODE_NUM_SAMPS_AND_DONE);
         cmd.num_samps = nsamps;
         cmd.stream_now = _stream_now;
-        static const double reasonable_delay = 0.1; //order of magnitude over RTT
+        static const double reasonable_delay = 5; //order of magnitude over RTT
 
         //tell the device when to start the acquisition
         if (_start_time_set){
