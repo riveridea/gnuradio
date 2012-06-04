@@ -426,56 +426,6 @@ public:
         return true;
     }
 
-    std::vector<std::complex<float> > test_start(void){     
-        boost::mutex::scoped_lock lock(_mutex);
-        _is_streaming = true;
-
-        #ifdef GR_UHD_USE_STREAM_API
-        _rx_stream = _dev->get_rx_stream(_stream_args);
-        _samps_per_packet = _rx_stream->get_max_num_samps();
-        #endif
-
-        //flush so there is no queued-up data
-        this->flush();
-
-        //create a multi-dimensional container to hold an array of sample buffers
-        std::vector<std::vector<std::complex<float> > > samps(_nchan, std::vector<std::complex<float> >(nsamps));
-
-        //load the void* vector of buffer pointers
-        std::vector<void *> buffs(_nchan);
-        for (size_t i = 0; i < _nchan; i++){
-            buffs[i] = &samps[i].front();
-        }
-     
-        //setup a stream command that starts streaming slightly in the future
-        static const double reasonable_delay = 0.1; //order of magnitude over RTT
-        uhd::stream_cmd_t stream_cmd(uhd::stream_cmd_t::STREAM_MODE_START_CONTINUOUS);
-        stream_cmd.stream_now = _stream_now;
-        
-        if (_start_time_set){
-            _start_time_set = false; //cleared for next run
-            stream_cmd.time_spec = _start_time;
-        }
-        else{
-            stream_cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
-        }
-        _dev->issue_stream_cmd(stream_cmd);
-        _tag_now = true;
-
-        //receive samples until timeout
-        const size_t actual_num_samps = _rx_stream->recv(
-            buffs, nsamps, _metadata, 1.0
-        );
-
-        //resize the resulting sample buffers
-        for (size_t i = 0; i < _nchan; i++){
-            samps[i].resize(actual_num_samps);
-        }
-
-        return samps;
-
-    }
-
     void flush(void){
         const size_t nbytes = 4096;
         gr_vector_void_star outputs;
@@ -540,13 +490,13 @@ public:
         uhd::stream_cmd_t cmd(uhd::stream_cmd_t::STREAM_MODE_NUM_SAMPS_AND_DONE);
         cmd.num_samps = nsamps;
         cmd.stream_now = _stream_now;
-        static const double reasonable_delay = 5; //order of magnitude over RTT
+        static const double reasonable_delay = 0.1; //order of magnitude over RTT
 
         //tell the device when to start the acquisition
         if (_start_time_set){
             _start_time_set = false; //cleared for next run
             cmd.time_spec = _start_time;
-            printf("start time set");
+            fprintf(stderr, "start time set");
         }
         else{
             cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
