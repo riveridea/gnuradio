@@ -29,6 +29,8 @@
 #include <boost/make_shared.hpp>
 #include "gr_uhd_common.h"
 #include <stdio.h>
+#include <uhd/utils/msg.hpp>
+#include <uhd/utils/log.hpp>
 
 static const pmt::pmt_t TIME_KEY = pmt::pmt_string_to_symbol("rx_time");
 
@@ -496,7 +498,7 @@ public:
         if (_start_time_set){
             _start_time_set = false; //cleared for next run
             cmd.time_spec = _start_time;
-            fprintf(stderr, "start time set");
+            uhd::msg_to_cout("start time set");
         }
         else{
             cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
