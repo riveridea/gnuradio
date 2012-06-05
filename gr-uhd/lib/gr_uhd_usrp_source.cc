@@ -29,8 +29,6 @@
 #include <boost/make_shared.hpp>
 #include "gr_uhd_common.h"
 #include <stdio.h>
-#include <uhd/utils/msg.hpp>
-#include <uhd/utils/log.hpp>
 
 static const pmt::pmt_t TIME_KEY = pmt::pmt_string_to_symbol("rx_time");
 
@@ -331,13 +329,8 @@ public:
         while (!_is_streaming)
         {
             _cond.wait(lock);
-<<<<<<< HEAD
-        }    
-    
-=======
         }
 
->>>>>>> 371bdb3b500fce39bc1bd3041065917020007f7c
         #ifdef GR_UHD_USE_STREAM_API
         //In order to allow for low-latency:
         //We receive all available packets without timeout.
@@ -458,13 +451,8 @@ public:
 
     bool stop(void){
         boost::mutex::scoped_lock lock(_mutex);
-<<<<<<< HEAD
-        _is_streaming = false;  
-        
-=======
         _is_streaming = false;
 
->>>>>>> 371bdb3b500fce39bc1bd3041065917020007f7c
         _dev->issue_stream_cmd(uhd::stream_cmd_t::STREAM_MODE_STOP_CONTINUOUS);
 
         this->flush();
@@ -553,11 +541,7 @@ private:
 
     bool _is_streaming;
     boost::condition_variable _cond;
-<<<<<<< HEAD
-    boost::mutex _mutex;    
-=======
     boost::mutex _mutex;
->>>>>>> 371bdb3b500fce39bc1bd3041065917020007f7c
 };
 
 
