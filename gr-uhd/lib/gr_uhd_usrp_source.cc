@@ -495,7 +495,7 @@ public:
         static const double reasonable_delay = 0.1; //order of magnitude over RTT
 
         //tell the device when to start the acquisition
-        int timeout = 1.0;
+        double timeout = 1.0;
         if (_start_time_set){
             _start_time_set = false; //cleared for next run
             cmd.time_spec = _start_time;
