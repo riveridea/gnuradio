@@ -28,7 +28,7 @@
 #include <boost/thread/condition_variable.hpp>
 #include <boost/make_shared.hpp>
 #include "gr_uhd_common.h"
-#include <Python.h>
+#include <python2.7/Python.h>
 
 static const pmt::pmt_t TIME_KEY = pmt::pmt_string_to_symbol("rx_time");
 
