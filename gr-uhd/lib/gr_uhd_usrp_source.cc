@@ -476,6 +476,7 @@ public:
             this->stop();
         }
 
+        printf("ipython printing message for finite_acquistition\n");
         //flush so there is no queued-up data
         this->flush();
 
