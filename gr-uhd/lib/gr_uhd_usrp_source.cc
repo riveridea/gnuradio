@@ -32,6 +32,8 @@
 
 static const pmt::pmt_t TIME_KEY = pmt::pmt_string_to_symbol("rx_time");
 
+#define printf PySys_WriteStdout
+
 #include <uhd/convert.hpp>
 inline gr_io_signature_sptr args_to_io_sig(const uhd::stream_args_t &args){
     const size_t nchan = std::max<size_t>(args.channels.size(), 1);
