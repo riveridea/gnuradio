@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsci__trellis__encoder_8h" kind="file">
+    <compoundname>atsci_trellis_encoder.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes refid="atsci__basic__trellis__encoder_8h" local="no">atsci_basic_trellis_encoder.h</includes>
+    <includes refid="atsc__types_8h" local="no">atsc_types.h</includes>
+    <includedby refid="atsc__trellis__encoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_trellis_encoder.h</includedby>
+    <includedby refid="GrAtscTrellisEncoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscTrellisEncoder.h</includedby>
+    <includedby refid="qa__atsci__trellis__encoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_trellis_encoder.h</includedby>
+    <incdepgraph>
+      <node id="508">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_trellis_encoder.h</label>
+        <link refid="atsci_trellis_encoder.h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="512">
+        <label>assert.h</label>
+      </node>
+      <node id="516">
+        <label>cassert</label>
+      </node>
+      <node id="509">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="510" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>atsc_types.h</label>
+        <link refid="atsc__types_8h"/>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+      </node>
+      <node id="511">
+        <label>atsci_basic_trellis_encoder.h</label>
+        <link refid="atsci__basic__trellis__encoder_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="514">
+        <label>atsc_consts.h</label>
+        <link refid="atsc__consts_8h"/>
+      </node>
+      <node id="515">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="519">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscTrellisEncoder.h</label>
+        <link refid="GrAtscTrellisEncoder_8h"/>
+      </node>
+      <node id="517">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_trellis_encoder.h</label>
+        <link refid="atsci_trellis_encoder.h"/>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_trellis_encoder.h</label>
+        <link refid="atsc__trellis__encoder_8h"/>
+      </node>
+      <node id="520">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_trellis_encoder.h</label>
+        <link refid="qa__atsci__trellis__encoder_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classatsci__trellis__encoder" prot="public">atsci_trellis_encoder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2002<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ATSC_TRELLIS_ENCODER_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_ATSC_TRELLIS_ENCODER_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsc__api_8h" kindref="compound">atsc_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsci__basic__trellis__encoder_8h" kindref="compound">atsci_basic_trellis_encoder.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsc__types_8h" kindref="compound">atsc_types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classatsci__trellis__encoder" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref><sp/><ref refid="classatsci__trellis__encoder" kindref="compound" tooltip="fancy, schmancy 12-way interleaved trellis encoder for ATSC">atsci_trellis_encoder</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="classatsci__trellis__encoder_1a03e72454b9a3e32233a862cae64a52a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NCODERS<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classatsci__trellis__encoder" kindref="compound" tooltip="fancy, schmancy 12-way interleaved trellis encoder for ATSC">atsci_trellis_encoder</ref><sp/>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>~<ref refid="classatsci__trellis__encoder" kindref="compound" tooltip="fancy, schmancy 12-way interleaved trellis encoder for ATSC">atsci_trellis_encoder</ref><sp/>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset<sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encode<sp/>(<ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>out[NCODERS],</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref><sp/>in[NCODERS]);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="classatsci__trellis__encoder_1a3e2c569d172cf231dcc0c7e744a585d7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SEGMENT_SIZE<sp/>=<sp/>ATSC_MPEG_RS_ENCODED_LENGTH;<sp/><sp/></highlight><highlight class="comment">//<sp/>207</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classatsci__trellis__encoder_1a650db430d766ff15c2372f3c9fba62ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>INPUT_SIZE<sp/>=<sp/>(SEGMENT_SIZE<sp/>*<sp/>12);</highlight></codeline>
+<codeline lineno="57" refid="classatsci__trellis__encoder_1afecf24b0711360dd6a939df9b90bf644" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>OUTPUT_SIZE<sp/>=<sp/>(ATSC_DATA_SEGMENT_LENGTH<sp/>*<sp/>12);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>encode_helper<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>out[OUTPUT_SIZE],</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>in[INPUT_SIZE]);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classatsci__trellis__encoder_1a3984f5c41bb9051d2bcfe98fc80a5f00" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classatsci__basic__trellis__encoder" kindref="compound" tooltip="ATSC trellis encoder building block.">atsci_basic_trellis_encoder</ref><sp/><sp/><sp/>enc[NCODERS];</highlight></codeline>
+<codeline lineno="63" refid="classatsci__trellis__encoder_1ae49e87a30bdb3f1b30caee1cde511921" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsci__trellis__encoder_1ae49e87a30bdb3f1b30caee1cde511921" kindref="member">debug</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_ATSC_TRELLIS_ENCODER_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_trellis_encoder.h"/>
+  </compounddef>
+</doxygen>

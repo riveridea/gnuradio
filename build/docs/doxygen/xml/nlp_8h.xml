@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="nlp_8h" kind="file">
+    <compoundname>nlp.h</compoundname>
+    <includes refid="comp_8h" local="yes">comp.h</includes>
+    <incdepgraph>
+      <node id="14535">
+        <label>comp.h</label>
+        <link refid="comp_8h"/>
+      </node>
+      <node id="14534">
+        <label>nlp.h</label>
+        <link refid="nlp.h"/>
+        <childnode refid="14535" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nlp_8h_1af96428da018cccfbea6ba0c894e9a0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>void* nlp_create</definition>
+        <argsstring>()</argsstring>
+        <name>nlp_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/nlp.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="nlp_8h_1aa1e01208eb414cfdcb0bc9d7701c6fa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void nlp_destroy</definition>
+        <argsstring>(void *nlp_state)</argsstring>
+        <name>nlp_destroy</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>nlp_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/nlp.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="nlp_8h_1a008e5913a938344feaa9f54fb660b61c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float nlp</definition>
+        <argsstring>(void *nlp_state, float Sn[], int n, int m, int pmin, int pmax, float *pitch, COMP Sw[], float *prev_Wo)</argsstring>
+        <name>nlp</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>nlp_state</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pmin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pmax</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>prev_Wo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/nlp.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="nlp_8h_1a6336a3a6015b884995906520345c0866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float test_candidate_mbe</definition>
+        <argsstring>(COMP Sw[], float f0, COMP Sw_[])</argsstring>
+        <name>test_candidate_mbe</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>f0</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw_</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/nlp.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/nlp.h"/>
+  </compounddef>
+</doxygen>

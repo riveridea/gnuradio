@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__constants_8h" kind="file">
+    <compoundname>gr_constants.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="6136">
+        <label>string</label>
+      </node>
+      <node id="6134">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="6135" relation="include">
+        </childnode>
+      </node>
+      <node id="6133">
+        <label>gr_constants.h</label>
+        <link refid="gr_constants.h"/>
+        <childnode refid="6134" relation="include">
+        </childnode>
+        <childnode refid="6136" relation="include">
+        </childnode>
+      </node>
+      <node id="6135">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__constants_8h_1a4fa3b999461de0c95852d8922fa385bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> const std::string</type>
+        <definition>GR_CORE_API const std::string gr_prefix</definition>
+        <argsstring>()</argsstring>
+        <name>gr_prefix</name>
+        <briefdescription>
+<para>return ./configure --prefix argument. Typically /usr/local </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__constants_8h_1aa74bf1a8876b42db714ccab59771316a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> const std::string</type>
+        <definition>GR_CORE_API const std::string gr_sysconfdir</definition>
+        <argsstring>()</argsstring>
+        <name>gr_sysconfdir</name>
+        <briefdescription>
+<para>return ./configure --sysconfdir argument. Typically $prefix/etc or /etc </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__constants_8h_1ac915cea978882045d38178d6a9aaf86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> const std::string</type>
+        <definition>GR_CORE_API const std::string gr_prefsdir</definition>
+        <argsstring>()</argsstring>
+        <name>gr_prefsdir</name>
+        <briefdescription>
+<para>return preferences file directory. Typically $sysconfdir/etc/conf.d </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__constants_8h_1a8cd33d05f22337ce9bbde52ed69d217e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> const std::string</type>
+        <definition>GR_CORE_API const std::string gr_build_date</definition>
+        <argsstring>()</argsstring>
+        <name>gr_build_date</name>
+        <briefdescription>
+<para>return date/time of build, as set when &apos;bootstrap&apos; is run </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__constants_8h_1a3cd4c1648dff516ea29dc5a1cf21f487" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> const std::string</type>
+        <definition>GR_CORE_API const std::string gr_version</definition>
+        <argsstring>()</argsstring>
+        <name>gr_version</name>
+        <briefdescription>
+<para>return version string defined in configure.ac </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_constants.h"/>
+  </compounddef>
+</doxygen>

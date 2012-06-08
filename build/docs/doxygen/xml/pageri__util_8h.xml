@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="pageri__util_8h" kind="file">
+    <compoundname>pageri_util.h</compoundname>
+    <includes refid="gr__types_8h" local="no">gr_types.h</includes>
+    <incdepgraph>
+      <node id="14816">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="14812">
+        <label>pageri_util.h</label>
+        <link refid="pageri_util.h"/>
+        <childnode refid="14813" relation="include">
+        </childnode>
+      </node>
+      <node id="14819">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="14820" relation="include">
+        </childnode>
+      </node>
+      <node id="14813">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="14814" relation="include">
+        </childnode>
+        <childnode refid="14816" relation="include">
+        </childnode>
+        <childnode refid="14817" relation="include">
+        </childnode>
+        <childnode refid="14818" relation="include">
+        </childnode>
+        <childnode refid="14819" relation="include">
+        </childnode>
+      </node>
+      <node id="14814">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="14815" relation="include">
+        </childnode>
+      </node>
+      <node id="14818">
+        <label>stddef.h</label>
+      </node>
+      <node id="14817">
+        <label>vector</label>
+      </node>
+      <node id="14815">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="14820">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pageri__util_8h_1a1541033e16a716399c8bb356066ba68e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char pageri_reverse_bits8</definition>
+        <argsstring>(unsigned char val)</argsstring>
+        <name>pageri_reverse_bits8</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pageri_util.h" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="pageri__util_8h_1a0dd266797c58b1308a092109c26d5c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__types_8h_1ac07cda22882f844c0aa1633d49f1c144" kindref="member">gr_int32</ref></type>
+        <definition>gr_int32 pageri_reverse_bits32</definition>
+        <argsstring>(gr_int32 val)</argsstring>
+        <name>pageri_reverse_bits32</name>
+        <param>
+          <type><ref refid="gr__types_8h_1ac07cda22882f844c0aa1633d49f1c144" kindref="member">gr_int32</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pageri_util.h" line="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pageri_util.h"/>
+  </compounddef>
+</doxygen>

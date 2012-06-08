@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__constellation__receiver__cb" kind="class" prot="public">
+    <compoundname>digital_constellation_receiver_cb</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <basecompoundref refid="classgri__control__loop" prot="public" virt="non-virtual">gri_control_loop</basecompoundref>
+    <includes refid="digital__constellation__receiver__cb_8h" local="no">digital_constellation_receiver_cb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1af7830ee615fe7851dfb4fa90fe62d77a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_M</definition>
+        <argsstring></argsstring>
+        <name>d_M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1ab4772d92bda44d548ffc42ca61ea21e5" prot="private" static="no" mutable="no">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_sptr</ref></type>
+        <definition>digital_constellation_sptr digital_constellation_receiver_cb::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a821c5d75efef71a83cf8458ebeb58819" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_current_const_point</definition>
+        <argsstring></argsstring>
+        <name>d_current_const_point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a6ca026c06e983dbb73263f13614e6e07" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_dl_idx</definition>
+        <argsstring></argsstring>
+        <name>d_dl_idx</name>
+        <briefdescription>
+<para>index to delay line </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="116" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a06c10301f2d1c0fe7ea9c13701fe898a" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int digital_constellation_receiver_cb::DLLEN</definition>
+        <argsstring></argsstring>
+        <name>DLLEN</name>
+        <initializer> 8</initializer>
+        <briefdescription>
+<para>delay line length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a8243ab960b918764374270ef798173f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int digital_constellation_receiver_cb::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a9abc9ee651b5dc5263ff5fd66a5e13b8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_constellation_receiver_cb::digital_constellation_receiver_cb</definition>
+        <argsstring>(digital_constellation_sptr constellation, float loop_bw, float fmin, float fmax)</argsstring>
+        <name>digital_constellation_receiver_cb</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_sptr</ref></type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor to synchronize incoming M-PSK symbols. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>constellation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>constellation of points for generic modulation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop_bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Loop bandwidth of the Costas Loop (~ 2pi/100) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum normalized frequency value the loop can achieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum normalized frequency value the loop can achieve</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor also chooses which phase detector and decision maker to use in the work loop based on the value of M. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a6209a7fcfe993273b9cd1eea28e84929" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_constellation_receiver_cb::phase_error_tracking</definition>
+        <argsstring>(float phase_error)</argsstring>
+        <name>phase_error_tracking</name>
+        <param>
+          <type>float</type>
+          <declname>phase_error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1ad6f014b24cc22ff185f9b26b8b5a1cd3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_constellation_receiver_cb::__GR_ATTR_ALIGNED</definition>
+        <argsstring>(8) gr_complex d_dl[2 *DLLEN]</argsstring>
+        <name>__GR_ATTR_ALIGNED</name>
+        <param>
+          <type>8</type>
+        </param>
+        <briefdescription>
+<para>delay line plus some length for overflow protection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__constellation__receiver__cb_1a1e95698688ce7d95f489834e14f570fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_receiver_cb_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_receiver_cb_sptr digital_make_constellation_receiver_cb</definition>
+        <argsstring>(digital_constellation_sptr constell, float loop_bw, float fmin, float fmax)</argsstring>
+        <name>digital_make_constellation_receiver_cb</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_sptr</ref></type>
+          <declname>constell</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This block takes care of receiving generic modulated signals through phase, frequency, and symbol synchronization.</para><para>This block takes care of receiving generic modulated signals through phase, frequency, and symbol synchronization. It performs carrier frequency and phase locking as well as symbol timing recovery. </para>    </briefdescription>
+    <detaileddescription>
+<para>The phase and frequency synchronization are based on a Costas loop that finds the error of the incoming signal point compared to its nearest constellation point. The frequency and phase of the NCO are updated according to this error.</para><para>The symbol synchronization is done using a modified Mueller and Muller circuit from the paper:</para><para>&quot;G. R. Danesfahani, T.G. Jeans, &quot;Optimisation of modified Mueller and Muller algorithm,&quot; Electronics Letters, Vol. 31, no. 13, 22
+ June 1995, pp. 1032 - 1033.&quot;</para><para>This circuit interpolates the downconverted sample (using the NCO developed by the Costas loop) every mu samples, then it finds the sampling error based on this and the past symbols and the decision made on the samples. Like the phase error detector, there are optimized decision algorithms for BPSK and QPKS, but 8PSK uses another brute force computation against all possible symbols. The modifications to the M&amp;M used here reduce self-noise. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1129">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1127">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1128" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1130">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1126">
+        <label>digital_constellation_receiver_cb</label>
+        <link refid="classdigital__constellation__receiver__cb"/>
+        <childnode refid="1127" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1131" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1131">
+        <label>gri_control_loop</label>
+        <link refid="classgri__control__loop"/>
+      </node>
+      <node id="1128">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1129" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1135">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1137">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="1138" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1136">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1132">
+        <label>digital_constellation_receiver_cb</label>
+        <link refid="classdigital__constellation__receiver__cb"/>
+        <childnode refid="1133" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1141" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1141">
+        <label>gri_control_loop</label>
+        <link refid="classgri__control__loop"/>
+      </node>
+      <node id="1138">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="1134">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1135" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1137" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="1139" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1139">
+        <label>std::string</label>
+        <childnode refid="1140" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="77" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classdigital__constellation__receiver__cb_1ad6f014b24cc22ff185f9b26b8b5a1cd3" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>__GR_ATTR_ALIGNED</name></member>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>add_item_tag</name></member>
+      <member refid="classgri__control__loop_1a28d9553fbb472f7d061fd6d25392ac63" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>advance_loop</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>consume_each</name></member>
+      <member refid="classgri__control__loop_1ae506efda44062047ca8715cd750b65e4" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_alpha</name></member>
+      <member refid="classgri__control__loop_1a2134b6631db367d7d7a93d52b991c2d9" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_beta</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_color</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1ab4772d92bda44d548ffc42ca61ea21e5" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_constellation</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a821c5d75efef71a83cf8458ebeb58819" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_current_const_point</name></member>
+      <member refid="classgri__control__loop_1a8231c282a273e0b07b84170bb20306a8" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_damping</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a6ca026c06e983dbb73263f13614e6e07" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_dl_idx</name></member>
+      <member refid="classgri__control__loop_1a42a6732580496b6f30000a2c41ee836f" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_freq</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_input_signature</name></member>
+      <member refid="classgri__control__loop_1a94567390864b3182ce88aa2243caa61b" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_loop_bw</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1af7830ee615fe7851dfb4fa90fe62d77a" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_M</name></member>
+      <member refid="classgri__control__loop_1ab5027caee2503be49e95ca72fe70d52c" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_max_freq</name></member>
+      <member refid="classgri__control__loop_1a879954cc120f992ea1a4b31219a3ec70" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_min_freq</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_output_signature</name></member>
+      <member refid="classgri__control__loop_1ae7ce04a289ee1e3a5b7be8e156dba371" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_phase</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>detail</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a9abc9ee651b5dc5263ff5fd66a5e13b8" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>digital_constellation_receiver_cb</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a1e95698688ce7d95f489834e14f570fe" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>digital_make_constellation_receiver_cb</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a06c10301f2d1c0fe7ea9c13701fe898a" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>DLLEN</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>forecast</name></member>
+      <member refid="classgri__control__loop_1ac61a43fb70d96c5a727e87de7cea123f" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>frequency_limit</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a8243ab960b918764374270ef798173f0" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>general_work</name></member>
+      <member refid="classgri__control__loop_1aef0ddd87ede66367425db9fcff605d8f" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_alpha</name></member>
+      <member refid="classgri__control__loop_1ae613ad824f873f88738f009e069e290e" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_beta</name></member>
+      <member refid="classgri__control__loop_1a4b8d42ef24799cc7bd63395f4f7872fe" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_damping_factor</name></member>
+      <member refid="classgri__control__loop_1abacc2448c0c6e54e7c3f7c2c89fc7326" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_frequency</name></member>
+      <member refid="classgri__control__loop_1a700ac8b13c088f67ebd3e40157d1e48e" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_loop_bandwidth</name></member>
+      <member refid="classgri__control__loop_1a965443d91327875e4a2936cd5d519a7d" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_phase</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>GREY</name></member>
+      <member refid="classgri__control__loop_1a312bd7c64f1d0dbad92bf61935bda1e3" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>gri_control_loop</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>output_signature</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a6209a7fcfe993273b9cd1eea28e84929" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>phase_error_tracking</name></member>
+      <member refid="classgri__control__loop_1aa08d9f6d6551089e77c9e758d84a47c3" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>phase_wrap</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_alignment</name></member>
+      <member refid="classgri__control__loop_1a5ad976cdb6a0d7f4c67710f77361be88" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_alpha</name></member>
+      <member refid="classgri__control__loop_1a926557505f7bdeff03adeb3805d9aa34" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_beta</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_color</name></member>
+      <member refid="classgri__control__loop_1ac7b0c098ed71cbf1e0cb523ef2201e89" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_damping_factor</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_fixed_rate</name></member>
+      <member refid="classgri__control__loop_1ab5309b3d4959f1299288a95a8bfd50e8" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_frequency</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_is_unaligned</name></member>
+      <member refid="classgri__control__loop_1a35b2e90ed2b8a1a757f550e76d4a81c8" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_loop_bandwidth</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_output_signature</name></member>
+      <member refid="classgri__control__loop_1a6c8bf0e6f168c23ab16afa6c33f4a1cb" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_phase</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>unique_id</name></member>
+      <member refid="classgri__control__loop_1a8a42d0495ec0c416b7506468561491d8" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>update_gains</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgri__control__loop_1ada37c1edf3dc039561c450f109478cb5" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>~gri_control_loop</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>digital_constellation_receiver_cb</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

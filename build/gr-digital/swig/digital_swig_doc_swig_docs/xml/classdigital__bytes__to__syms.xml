@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__bytes__to__syms" kind="class" prot="public">
+    <compoundname>digital_bytes_to_syms</compoundname>
+    <includes refid="digital__bytes__to__syms_8h" local="no">digital_bytes_to_syms.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__bytes__to__syms_1a886ed63ee9da431e3285285298ee125d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__bytes__to__syms_8h_1a419ace2ebe09a732ec4e3f112416f592" kindref="member">digital_bytes_to_syms_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_bytes_to_syms_sptr digital_make_bytes_to_syms</definition>
+        <argsstring>()</argsstring>
+        <name>digital_make_bytes_to_syms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_bytes_to_syms.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__bytes__to__syms_1afa5ea4bcaadf3ae1510a28d3d5561a44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_bytes_to_syms::digital_bytes_to_syms</definition>
+        <argsstring>()</argsstring>
+        <name>digital_bytes_to_syms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_bytes_to_syms.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__bytes__to__syms_1ab1b781de57e78e36d8d17cd85c3b5bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_bytes_to_syms::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_bytes_to_syms.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convert stream of bytes to stream of +/- 1 symbols</para><para>input: stream of bytes; output: stream of float. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block is deprecated.</para><para>The combination of gr_packed_to_unpacked_bb followed by gr_chunks_to_symbols_bf or gr_chunks_to_symbols_bc handles the general case of mapping from a stream of bytes into arbitrary float or complex symbols.</para><para><simplesect kind="see"><para>gr_packed_to_unpacked_bb, gr_unpacked_to_packed_bb, </para><simplesectsep/><para>gr_chunks_to_symbols_bf, gr_chunks_to_symbols_bc. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_bytes_to_syms.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_bytes_to_syms.h" bodystart="49" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classdigital__bytes__to__syms_1afa5ea4bcaadf3ae1510a28d3d5561a44" prot="private" virt="non-virtual"><scope>digital_bytes_to_syms</scope><name>digital_bytes_to_syms</name></member>
+      <member refid="classdigital__bytes__to__syms_1a886ed63ee9da431e3285285298ee125d" prot="private" virt="non-virtual"><scope>digital_bytes_to_syms</scope><name>digital_make_bytes_to_syms</name></member>
+      <member refid="classdigital__bytes__to__syms_1ab1b781de57e78e36d8d17cd85c3b5bf6" prot="public" virt="non-virtual"><scope>digital_bytes_to_syms</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

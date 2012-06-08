@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="volk__32fc__s32f__power__32fc__a_8h" kind="file">
+    <compoundname>volk_32fc_s32f_power_32fc_a.h</compoundname>
+    <includes refid="inttypes_8h" local="no">inttypes.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="17582">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="17583" relation="include">
+        </childnode>
+        <childnode refid="17584" relation="include">
+        </childnode>
+      </node>
+      <node id="17583">
+        <label>limits.h</label>
+      </node>
+      <node id="17584">
+        <label>wchar.h</label>
+      </node>
+      <node id="17586">
+        <label>math.h</label>
+      </node>
+      <node id="17581">
+        <label>inttypes.h</label>
+        <link refid="inttypes_8h"/>
+        <childnode refid="17582" relation="include">
+        </childnode>
+      </node>
+      <node id="17580">
+        <label>volk_32fc_s32f_power_32fc_a.h</label>
+        <link refid="volk_32fc_s32f_power_32fc_a.h"/>
+        <childnode refid="17581" relation="include">
+        </childnode>
+        <childnode refid="17585" relation="include">
+        </childnode>
+        <childnode refid="17586" relation="include">
+        </childnode>
+      </node>
+      <node id="17585">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="volk__32fc__s32f__power__32fc__a_8h_1a7a37060eb76f67600f6d3951f9e4938b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk__complex_8h_1ace50e1c8ef539cdeee04bc86f0e99169" kindref="member">lv_32fc_t</ref></type>
+        <definition>static lv_32fc_t __volk_s32fc_s32f_power_s32fc_a</definition>
+        <argsstring>(const lv_32fc_t exp, const float power)</argsstring>
+        <name>__volk_s32fc_s32f_power_s32fc_a</name>
+        <param>
+          <type>const <ref refid="volk__complex_8h_1ace50e1c8ef539cdeee04bc86f0e99169" kindref="member">lv_32fc_t</ref></type>
+          <declname>exp</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>power</declname>
+        </param>
+        <briefdescription>
+<para>raise a complex float to a real float power </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/volk/include/volk/volk_32fc_s32f_power_32fc_a.h" line="9" bodyfile="/home/alexzh/gr_alex/gnuradio/volk/include/volk/volk_32fc_s32f_power_32fc_a.h" bodystart="9" bodyend="13"/>
+        <references refid="volk__complex_8h_1a1f58129a88c382411b2e8997c8dd89e4" compoundref="volk__complex_8h" startline="78">lv_cimag</references>
+        <references refid="volk__complex_8h_1a241cf3f7a97e885e45ff971a6a82c12d" compoundref="volk__complex_8h" startline="59">lv_cmake</references>
+        <references refid="volk__complex_8h_1a9e9cedc79eafa6db42f03878b5a5ba47" compoundref="volk__complex_8h" startline="76">lv_creal</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/volk/include/volk/volk_32fc_s32f_power_32fc_a.h"/>
+  </compounddef>
+</doxygen>

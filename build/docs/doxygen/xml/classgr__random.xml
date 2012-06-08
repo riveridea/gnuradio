@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__random" kind="class" prot="public">
+    <compoundname>gr_random</compoundname>
+    <includes refid="gr__random_8h" local="no">gr_random.h</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classgr__random_1a8f1b1e5c54a30ac69fff02349c29bb3c" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_random::NTAB</definition>
+        <argsstring></argsstring>
+        <name>NTAB</name>
+        <initializer> 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__random_1a24ce6b632729fa0e58e6cadbe145b6c6" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_random::d_seed</definition>
+        <argsstring></argsstring>
+        <name>d_seed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__random_1abbc296b1c059b526c417c0f224e4ffbd" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_random::d_iy</definition>
+        <argsstring></argsstring>
+        <name>d_iy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__random_1a822a421f17a5535137212900f336d50f" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_random::d_iv[NTAB]</definition>
+        <argsstring>[NTAB]</argsstring>
+        <name>d_iv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__random_1ae0bd3109414fa9436e2cea16cdd0eaba" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_random::d_iset</definition>
+        <argsstring></argsstring>
+        <name>d_iset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__random_1a4d6557a7e16c78e76ffd54d06d238ba3" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_random::d_gset</definition>
+        <argsstring></argsstring>
+        <name>d_gset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__random_1af460e2b5104adde02514d8f31b5992ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_random::gr_random</definition>
+        <argsstring>(long seed=3021)</argsstring>
+        <name>gr_random</name>
+        <param>
+          <type>long</type>
+          <declname>seed</declname>
+          <defval>3021</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1ac789aea501776358ecadc0e8335cb91d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_random::reseed</definition>
+        <argsstring>(long seed)</argsstring>
+        <name>reseed</name>
+        <param>
+          <type>long</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a1d75713da92a7d0f5d61c333464620a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_random::ran1</definition>
+        <argsstring>()</argsstring>
+        <name>ran1</name>
+        <briefdescription>
+<para>uniform random deviate in the range [0.0, 1.0) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a875e2d1c38685842fac1bb2ffe91d376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_random::gasdev</definition>
+        <argsstring>()</argsstring>
+        <name>gasdev</name>
+        <briefdescription>
+<para>normally distributed deviate with zero mean and variance 1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a6a1c068278c3dd02fd7f37247fa18939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_random::laplacian</definition>
+        <argsstring>()</argsstring>
+        <name>laplacian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a3e9aa9db8d55613357baf9c39950d23c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_random::impulse</definition>
+        <argsstring>(float factor)</argsstring>
+        <name>impulse</name>
+        <param>
+          <type>float</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a93e7d95c8aa0af5e911bcb269e137950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_random::rayleigh</definition>
+        <argsstring>()</argsstring>
+        <name>rayleigh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__random_1a48dd1831d7a5bdf81d2dc6aac6c23b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gr_random::rayleigh_complex</definition>
+        <argsstring>()</argsstring>
+        <name>rayleigh_complex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>pseudo random number generator </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_random.h" bodystart="33" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classgr__random_1a4d6557a7e16c78e76ffd54d06d238ba3" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>d_gset</name></member>
+      <member refid="classgr__random_1ae0bd3109414fa9436e2cea16cdd0eaba" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>d_iset</name></member>
+      <member refid="classgr__random_1a822a421f17a5535137212900f336d50f" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>d_iv</name></member>
+      <member refid="classgr__random_1abbc296b1c059b526c417c0f224e4ffbd" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>d_iy</name></member>
+      <member refid="classgr__random_1a24ce6b632729fa0e58e6cadbe145b6c6" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>d_seed</name></member>
+      <member refid="classgr__random_1a875e2d1c38685842fac1bb2ffe91d376" prot="public" virt="non-virtual"><scope>gr_random</scope><name>gasdev</name></member>
+      <member refid="classgr__random_1af460e2b5104adde02514d8f31b5992ef" prot="public" virt="non-virtual"><scope>gr_random</scope><name>gr_random</name></member>
+      <member refid="classgr__random_1a3e9aa9db8d55613357baf9c39950d23c" prot="public" virt="non-virtual"><scope>gr_random</scope><name>impulse</name></member>
+      <member refid="classgr__random_1a6a1c068278c3dd02fd7f37247fa18939" prot="public" virt="non-virtual"><scope>gr_random</scope><name>laplacian</name></member>
+      <member refid="classgr__random_1a8f1b1e5c54a30ac69fff02349c29bb3c" prot="protected" virt="non-virtual"><scope>gr_random</scope><name>NTAB</name></member>
+      <member refid="classgr__random_1a1d75713da92a7d0f5d61c333464620a1" prot="public" virt="non-virtual"><scope>gr_random</scope><name>ran1</name></member>
+      <member refid="classgr__random_1a93e7d95c8aa0af5e911bcb269e137950" prot="public" virt="non-virtual"><scope>gr_random</scope><name>rayleigh</name></member>
+      <member refid="classgr__random_1a48dd1831d7a5bdf81d2dc6aac6c23b27" prot="public" virt="non-virtual"><scope>gr_random</scope><name>rayleigh_complex</name></member>
+      <member refid="classgr__random_1ac789aea501776358ecadc0e8335cb91d" prot="public" virt="non-virtual"><scope>gr_random</scope><name>reseed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

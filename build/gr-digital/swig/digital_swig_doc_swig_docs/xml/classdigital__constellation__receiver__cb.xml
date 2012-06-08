@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__constellation__receiver__cb" kind="class" prot="public">
+    <compoundname>digital_constellation_receiver_cb</compoundname>
+    <includes refid="digital__constellation__receiver__cb_8h" local="no">digital_constellation_receiver_cb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1af7830ee615fe7851dfb4fa90fe62d77a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_M</definition>
+        <argsstring></argsstring>
+        <name>d_M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1ab4772d92bda44d548ffc42ca61ea21e5" prot="private" static="no" mutable="no">
+        <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+        <definition>digital_constellation_sptr digital_constellation_receiver_cb::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a821c5d75efef71a83cf8458ebeb58819" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_current_const_point</definition>
+        <argsstring></argsstring>
+        <name>d_current_const_point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a6ca026c06e983dbb73263f13614e6e07" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_receiver_cb::d_dl_idx</definition>
+        <argsstring></argsstring>
+        <name>d_dl_idx</name>
+        <briefdescription>
+<para>index to delay line </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="116" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdigital__constellation__receiver__cb_1a06c10301f2d1c0fe7ea9c13701fe898a" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int digital_constellation_receiver_cb::DLLEN</definition>
+        <argsstring></argsstring>
+        <name>DLLEN</name>
+        <initializer> 8</initializer>
+        <briefdescription>
+<para>delay line length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a8243ab960b918764374270ef798173f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_constellation_receiver_cb::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a9abc9ee651b5dc5263ff5fd66a5e13b8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_constellation_receiver_cb::digital_constellation_receiver_cb</definition>
+        <argsstring>(digital_constellation_sptr constellation, float loop_bw, float fmin, float fmax)</argsstring>
+        <name>digital_constellation_receiver_cb</name>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <briefdescription>
+<para>Constructor to synchronize incoming M-PSK symbols. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>constellation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>constellation of points for generic modulation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop_bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Loop bandwidth of the Costas Loop (~ 2pi/100) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum normalized frequency value the loop can achieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum normalized frequency value the loop can achieve</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor also chooses which phase detector and decision maker to use in the work loop based on the value of M. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1a6209a7fcfe993273b9cd1eea28e84929" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_constellation_receiver_cb::phase_error_tracking</definition>
+        <argsstring>(float phase_error)</argsstring>
+        <name>phase_error_tracking</name>
+        <param>
+          <type>float</type>
+          <declname>phase_error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="101"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__constellation__receiver__cb_1ad6f014b24cc22ff185f9b26b8b5a1cd3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_constellation_receiver_cb::__GR_ATTR_ALIGNED</definition>
+        <argsstring>(8) gr_complex d_dl[2 *DLLEN]</argsstring>
+        <name>__GR_ATTR_ALIGNED</name>
+        <param>
+          <type>8</type>
+        </param>
+        <briefdescription>
+<para>delay line plus some length for overflow protection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__constellation__receiver__cb_1a3ee222febdb2f54cd1c1f4de3868f084" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__constellation__receiver__cb_8h_1ab8942c1d42e816da49c5db0ef2381225" kindref="member">digital_constellation_receiver_cb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_constellation_receiver_cb_sptr digital_make_constellation_receiver_cb</definition>
+        <argsstring>(digital_constellation_sptr constell, float loop_bw, float fmin, float fmax)</argsstring>
+        <name>digital_make_constellation_receiver_cb</name>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>constell</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This block takes care of receiving generic modulated signals through phase, frequency, and symbol synchronization.</para><para>This block takes care of receiving generic modulated signals through phase, frequency, and symbol synchronization. It performs carrier frequency and phase locking as well as symbol timing recovery. </para>    </briefdescription>
+    <detaileddescription>
+<para>The phase and frequency synchronization are based on a Costas loop that finds the error of the incoming signal point compared to its nearest constellation point. The frequency and phase of the NCO are updated according to this error.</para><para>The symbol synchronization is done using a modified Mueller and Muller circuit from the paper:</para><para>&quot;G. R. Danesfahani, T.G. Jeans, &quot;Optimisation of modified Mueller and Muller algorithm,&quot; Electronics Letters, Vol. 31, no. 13, 22
+ June 1995, pp. 1032 - 1033.&quot;</para><para>This circuit interpolates the downconverted sample (using the NCO developed by the Costas loop) every mu samples, then it finds the sampling error based on this and the past symbols and the decision made on the samples. Like the phase error detector, there are optimized decision algorithms for BPSK and QPKS, but 8PSK uses another brute force computation against all possible symbols. The modifications to the M&amp;M used here reduce self-noise. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_receiver_cb.h" bodystart="77" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classdigital__constellation__receiver__cb_1ad6f014b24cc22ff185f9b26b8b5a1cd3" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>__GR_ATTR_ALIGNED</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1ab4772d92bda44d548ffc42ca61ea21e5" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_constellation</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a821c5d75efef71a83cf8458ebeb58819" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_current_const_point</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a6ca026c06e983dbb73263f13614e6e07" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_dl_idx</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1af7830ee615fe7851dfb4fa90fe62d77a" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>d_M</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a9abc9ee651b5dc5263ff5fd66a5e13b8" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>digital_constellation_receiver_cb</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a3ee222febdb2f54cd1c1f4de3868f084" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>digital_make_constellation_receiver_cb</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a06c10301f2d1c0fe7ea9c13701fe898a" prot="private" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>DLLEN</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a8243ab960b918764374270ef798173f0" prot="public" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>general_work</name></member>
+      <member refid="classdigital__constellation__receiver__cb_1a6209a7fcfe993273b9cd1eea28e84929" prot="protected" virt="non-virtual"><scope>digital_constellation_receiver_cb</scope><name>phase_error_tracking</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

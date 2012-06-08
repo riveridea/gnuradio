@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__single__pole__iir__filter__cc" kind="class" prot="public">
+    <compoundname>gr_single_pole_iir_filter_cc</compoundname>
+    <includes refid="gr__single__pole__iir__filter__cc_8h" local="no">gr_single_pole_iir_filter_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__single__pole__iir__filter__cc_1a2190d122718e3b7b396a67d75c128f88" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_single_pole_iir_filter_cc::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__single__pole__iir__filter__cc_1a75122191fba2c8217866e660af320542" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgr__single__pole__iir" kindref="compound">gr_single_pole_iir</ref>&lt; gr_complex, gr_complex, double &gt; &gt;</type>
+        <definition>std::vector&lt;gr_single_pole_iir&lt;gr_complex,gr_complex,double&gt; &gt; gr_single_pole_iir_filter_cc::d_iir</definition>
+        <argsstring></argsstring>
+        <name>d_iir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__single__pole__iir__filter__cc_1a9f1b534bbc32006ce4b661b1a7b62c7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__single__pole__iir__filter__cc_8h_1aed75198e4a63df1086b7b4c87c1682fa" kindref="member">gr_single_pole_iir_filter_cc_sptr</ref></type>
+        <definition>GR_CORE_API gr_single_pole_iir_filter_cc_sptr gr_make_single_pole_iir_filter_cc</definition>
+        <argsstring>(double alpha, unsigned int vlen)</argsstring>
+        <name>gr_make_single_pole_iir_filter_cc</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__single__pole__iir__filter__cc_1a78a5c0adfe8402dc2ecabe219fde6e32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_single_pole_iir_filter_cc::gr_single_pole_iir_filter_cc</definition>
+        <argsstring>(double alpha, unsigned int vlen)</argsstring>
+        <name>gr_single_pole_iir_filter_cc</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__single__pole__iir__filter__cc_1af6fa1aa403d2e88b3c972fc154f5c9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_single_pole_iir_filter_cc::~gr_single_pole_iir_filter_cc</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_single_pole_iir_filter_cc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__single__pole__iir__filter__cc_1ad4d722586f2e3feeaef9bac41fa7b255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_single_pole_iir_filter_cc::set_taps</definition>
+        <argsstring>(double alpha)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__single__pole__iir__filter__cc_1a260246be376f893de8819cc3f21c2f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_single_pole_iir_filter_cc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>single pole IIR filter with complex input, complex output</para><para>The input and output satisfy a difference equation of the form <htmlonly> 
+ \f{
+ y[n] - (1-alpha) y[n-1] = alpha x[n]
+ \f}
+ </htmlonly> </para>    </briefdescription>
+    <detaileddescription>
+<para> 
+ y[n] - (1-alpha) y[n-1] = alpha x[n]
+ </para><para>with the corresponding rational system function <htmlonly> 
+ \f{
+ H(z) = \frac{alpha}{1 - (1-alpha) z^{-1}}
+ \f}
+ </htmlonly></para><para> 
+ H(z) = \ frac{alpha}{1 - (1-alpha) z^{-1}}
+ </para><para>Note that some texts define the system function with a + in the denominator. If you&apos;re using that convention, you&apos;ll need to negate the feedback tap. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_single_pole_iir_filter_cc.h" bodystart="67" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classgr__single__pole__iir__filter__cc_1a75122191fba2c8217866e660af320542" prot="private" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>d_iir</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1a2190d122718e3b7b396a67d75c128f88" prot="private" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>d_vlen</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1a9f1b534bbc32006ce4b661b1a7b62c7b" prot="private" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>gr_make_single_pole_iir_filter_cc</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1a78a5c0adfe8402dc2ecabe219fde6e32" prot="private" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>gr_single_pole_iir_filter_cc</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1ad4d722586f2e3feeaef9bac41fa7b255" prot="public" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>set_taps</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1a260246be376f893de8819cc3f21c2f54" prot="public" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>work</name></member>
+      <member refid="classgr__single__pole__iir__filter__cc_1af6fa1aa403d2e88b3c972fc154f5c9f9" prot="public" virt="non-virtual"><scope>gr_single_pole_iir_filter_cc</scope><name>~gr_single_pole_iir_filter_cc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

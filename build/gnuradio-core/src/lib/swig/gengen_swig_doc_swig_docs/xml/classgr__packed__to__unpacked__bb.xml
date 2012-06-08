@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__packed__to__unpacked__bb" kind="class" prot="public">
+    <compoundname>gr_packed_to_unpacked_bb</compoundname>
+    <includes refid="gr__packed__to__unpacked__bb_8h" local="no">gr_packed_to_unpacked_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__packed__to__unpacked__bb_1a183277bb8c866fd7addfbb6f8dca3ac5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_packed_to_unpacked_bb::d_bits_per_chunk</definition>
+        <argsstring></argsstring>
+        <name>d_bits_per_chunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__packed__to__unpacked__bb_1ae0cbc0e37fa9433c3e11b97efaed8f80" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__endianness_8h_1aa340baf760c129189bc842d8f2c0e2e6" kindref="member">gr_endianness_t</ref></type>
+        <definition>gr_endianness_t gr_packed_to_unpacked_bb::d_endianness</definition>
+        <argsstring></argsstring>
+        <name>d_endianness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__packed__to__unpacked__bb_1a07c2ee7f81c7a76a63a946826edf07ab" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_packed_to_unpacked_bb::d_index</definition>
+        <argsstring></argsstring>
+        <name>d_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__packed__to__unpacked__bb_1af81fbaf962b701ca789140f5380c0e8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__packed__to__unpacked__bb_8h_1a1b858c12a4ef77da876712a7b3cc195e" kindref="member">gr_packed_to_unpacked_bb_sptr</ref></type>
+        <definition>GR_CORE_API gr_packed_to_unpacked_bb_sptr gr_make_packed_to_unpacked_bb</definition>
+        <argsstring>(unsigned int bits_per_chunk, gr_endianness_t endianness)</argsstring>
+        <name>gr_make_packed_to_unpacked_bb</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bits_per_chunk</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__endianness_8h_1aa340baf760c129189bc842d8f2c0e2e6" kindref="member">gr_endianness_t</ref></type>
+          <declname>endianness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__packed__to__unpacked__bb_1a5911bc8773f7702f84f86760340c23af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_packed_to_unpacked_bb::gr_packed_to_unpacked_bb</definition>
+        <argsstring>(unsigned int bits_per_chunk, gr_endianness_t endianness)</argsstring>
+        <name>gr_packed_to_unpacked_bb</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bits_per_chunk</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__endianness_8h_1aa340baf760c129189bc842d8f2c0e2e6" kindref="member">gr_endianness_t</ref></type>
+          <declname>endianness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__packed__to__unpacked__bb_1a911b82f5e94c2eba07967cd37fb8536d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_packed_to_unpacked_bb::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__packed__to__unpacked__bb_1ac5f0a6efe70256b688207ea0635008aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_packed_to_unpacked_bb::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__packed__to__unpacked__bb_1aa06049b2172c31155807b33f94c20bf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_packed_to_unpacked_bb::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="81" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convert a stream of packed bytes or shorts to stream of unpacked bytes or shorts.</para><para>input: stream of unsigned char; output: stream of unsigned char. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is the inverse of gr_unpacked_to_packed_XX.</para><para>The bits in the bytes or shorts input stream are grouped into chunks of <computeroutput>bits_per_chunk</computeroutput> bits and each resulting chunk is written right- justified to the output stream of bytes or shorts. All b or 16 bits of the each input bytes or short are processed. The right thing is done if bits_per_chunk is not a power of two.</para><para>The combination of gr_packed_to_unpacked_XX_ followed by gr_chunks_to_symbols_Xf or gr_chunks_to_symbols_Xc handles the general case of mapping from a stream of bytes or shorts into arbitrary float or complex symbols.</para><para><simplesect kind="see"><para><ref refid="classgr__packed__to__unpacked__bb" kindref="compound">gr_packed_to_unpacked_bb</ref>, <ref refid="classgr__unpacked__to__packed__bb" kindref="compound">gr_unpacked_to_packed_bb</ref>, </para><simplesectsep/><para><ref refid="classgr__packed__to__unpacked__ss" kindref="compound">gr_packed_to_unpacked_ss</ref>, <ref refid="classgr__unpacked__to__packed__ss" kindref="compound">gr_unpacked_to_packed_ss</ref>, </para><simplesectsep/><para><ref refid="classgr__chunks__to__symbols__bf" kindref="compound">gr_chunks_to_symbols_bf</ref>, <ref refid="classgr__chunks__to__symbols__bc" kindref="compound">gr_chunks_to_symbols_bc</ref>. </para><simplesectsep/><para><ref refid="classgr__chunks__to__symbols__sf" kindref="compound">gr_chunks_to_symbols_sf</ref>, <ref refid="classgr__chunks__to__symbols__sc" kindref="compound">gr_chunks_to_symbols_sc</ref>. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_packed_to_unpacked_bb.h" bodystart="63" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classgr__packed__to__unpacked__bb_1aa06049b2172c31155807b33f94c20bf2" prot="public" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>check_topology</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1a183277bb8c866fd7addfbb6f8dca3ac5" prot="private" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>d_bits_per_chunk</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1ae0cbc0e37fa9433c3e11b97efaed8f80" prot="private" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>d_endianness</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1a07c2ee7f81c7a76a63a946826edf07ab" prot="private" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>d_index</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1a911b82f5e94c2eba07967cd37fb8536d" prot="public" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>forecast</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1ac5f0a6efe70256b688207ea0635008aa" prot="public" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>general_work</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1af81fbaf962b701ca789140f5380c0e8e" prot="private" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>gr_make_packed_to_unpacked_bb</name></member>
+      <member refid="classgr__packed__to__unpacked__bb_1a5911bc8773f7702f84f86760340c23af" prot="private" virt="non-virtual"><scope>gr_packed_to_unpacked_bb</scope><name>gr_packed_to_unpacked_bb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__realtime_8h" kind="file">
+    <compoundname>gr_realtime.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="realtime_8h" local="no">gruel/realtime.h</includes>
+    <incdepgraph>
+      <node id="10349">
+        <label>gr_realtime.h</label>
+        <link refid="gr_realtime.h"/>
+        <childnode refid="10350" relation="include">
+        </childnode>
+        <childnode refid="10352" relation="include">
+        </childnode>
+      </node>
+      <node id="10353">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="10351" relation="include">
+        </childnode>
+      </node>
+      <node id="10354">
+        <label>stdexcept</label>
+      </node>
+      <node id="10352">
+        <label>gruel/realtime.h</label>
+        <link refid="realtime_8h"/>
+        <childnode refid="10353" relation="include">
+        </childnode>
+        <childnode refid="10354" relation="include">
+        </childnode>
+      </node>
+      <node id="10350">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="10351" relation="include">
+        </childnode>
+      </node>
+      <node id="10351">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gr__realtime_8h_1a37b8bb23e68a45e726f6e9a4a8818375" prot="public" static="no">
+        <type><ref refid="namespacegruel_1a926b5ecf465d839c1f2865d324d65e49" kindref="member">gruel::rt_status_t</ref></type>
+        <definition>typedef gruel::rt_status_t gr_rt_status_t</definition>
+        <argsstring></argsstring>
+        <name>gr_rt_status_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_realtime.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_realtime.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__misc_1ga9aeee54f1970b0ab3dfab32ce0888f83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="namespacegruel_1a926b5ecf465d839c1f2865d324d65e49" kindref="member">gr_rt_status_t</ref></type>
+        <definition>GR_CORE_API gr_rt_status_t gr_enable_realtime_scheduling</definition>
+        <argsstring>()</argsstring>
+        <name>gr_enable_realtime_scheduling</name>
+        <briefdescription>
+<para>If possible, enable high-priority &quot;real time&quot; scheduling. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_realtime.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_realtime.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__annotator__1to1" kind="class" prot="public">
+    <compoundname>gr_annotator_1to1</compoundname>
+    <includes refid="gr__annotator__1to1_8h" local="no">gr_annotator_1to1.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__annotator__1to1_1a2af3627c2063862c7d636cc6663508db" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_annotator_1to1::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__annotator__1to1_1a6a00b820b225c6549af885631df537b2" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_annotator_1to1::d_when</definition>
+        <argsstring></argsstring>
+        <name>d_when</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__annotator__1to1_1ada2a32f46a34822650ac2b33c3588e95" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_annotator_1to1::d_tag_counter</definition>
+        <argsstring></argsstring>
+        <name>d_tag_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__annotator__1to1_1a95a8aebdfbfea2d9a94a24c24ef9fbf1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_tag_t &gt;</type>
+        <definition>std::vector&lt;gr_tag_t&gt; gr_annotator_1to1::d_stored_tags</definition>
+        <argsstring></argsstring>
+        <name>d_stored_tags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__annotator__1to1_1a157cf62e5e69824fa0f2f5b3435aa6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_annotator_1to1::~gr_annotator_1to1</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_annotator_1to1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__annotator__1to1_1abdee3dbec3697e9ec05ab4f4eb0e2a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_annotator_1to1::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__annotator__1to1_1a1e63ac963aa6dd62aae6530a8740b44f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; gr_tag_t &gt;</type>
+        <definition>std::vector&lt;gr_tag_t&gt; gr_annotator_1to1::data</definition>
+        <argsstring>() const </argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__annotator__1to1_1a4b98baad74a8a0093bfd26e6252b9b94" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_annotator_1to1::gr_annotator_1to1</definition>
+        <argsstring>(int when, size_t sizeof_stream_item)</argsstring>
+        <name>gr_annotator_1to1</name>
+        <param>
+          <type>int</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__annotator__1to1_1acabe20de8772aee8d6787e2d94d1480d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="gr__annotator__1to1_8h_1a79d4900f0801a95b53121411c84fa041" kindref="member">gr_annotator_1to1_sptr</ref></type>
+        <definition>GR_CORE_API gr_annotator_1to1_sptr gr_make_annotator_1to1</definition>
+        <argsstring>(int when, size_t sizeof_stream_item)</argsstring>
+        <name>gr_make_annotator_1to1</name>
+        <param>
+          <type>int</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>1-to-1 stream annotator testing block. FOR TESTING PURPOSES ONLY. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block creates tags to be sent downstream every 10,000 items it sees. The tags contain the name and ID of the instantiated block, use &quot;seq&quot; as a key, and have a counter that increments by 1 for every tag produced that is used as the tag&apos;s value. The tags are propagated using the 1-to-1 policy.</para><para>It also stores a copy of all tags it sees flow past it. These tags can be recalled externally with the <ref refid="classgr__annotator__1to1_1a1e63ac963aa6dd62aae6530a8740b44f" kindref="member">data()</ref> member.</para><para>This block is only meant for testing and showing how to use the tags. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_annotator_1to1.h" bodystart="49" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classgr__annotator__1to1_1a2af3627c2063862c7d636cc6663508db" prot="private" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>d_itemsize</name></member>
+      <member refid="classgr__annotator__1to1_1a95a8aebdfbfea2d9a94a24c24ef9fbf1" prot="private" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>d_stored_tags</name></member>
+      <member refid="classgr__annotator__1to1_1ada2a32f46a34822650ac2b33c3588e95" prot="private" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>d_tag_counter</name></member>
+      <member refid="classgr__annotator__1to1_1a6a00b820b225c6549af885631df537b2" prot="private" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>d_when</name></member>
+      <member refid="classgr__annotator__1to1_1a1e63ac963aa6dd62aae6530a8740b44f" prot="public" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>data</name></member>
+      <member refid="classgr__annotator__1to1_1a4b98baad74a8a0093bfd26e6252b9b94" prot="protected" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>gr_annotator_1to1</name></member>
+      <member refid="classgr__annotator__1to1_1acabe20de8772aee8d6787e2d94d1480d" prot="private" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>gr_make_annotator_1to1</name></member>
+      <member refid="classgr__annotator__1to1_1abdee3dbec3697e9ec05ab4f4eb0e2a50" prot="public" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>work</name></member>
+      <member refid="classgr__annotator__1to1_1a157cf62e5e69824fa0f2f5b3435aa6a2" prot="public" virt="non-virtual"><scope>gr_annotator_1to1</scope><name>~gr_annotator_1to1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__oscope__guts" kind="class" prot="public">
+    <compoundname>gr_oscope_guts</compoundname>
+    <includes refid="gr__oscope__guts_8h" local="no">gr_oscope_guts.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473" prot="private" static="no">
+        <name>scope_state</name>
+        <enumvalue id="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473ab01c05d17ebd7cfabd2a1a8b351a0da0" prot="private">
+          <name>HOLD_OFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473a6c226597b34107d468ca46fbdd2da40e" prot="private">
+          <name>LOOK_FOR_TRIGGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473ab615006e8701837da2962e8f3f8bb751" prot="private">
+          <name>POST_TRIGGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgr__oscope__guts_1aca17048bc6e1b7b02431d665396bca99" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_oscope_guts::MAX_CHANNELS</definition>
+        <argsstring></argsstring>
+        <name>MAX_CHANNELS</name>
+        <initializer> 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__oscope__guts_1a2f3413f478c58b1f13e5e6d39b129a1d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_nchannels</definition>
+        <argsstring></argsstring>
+        <name>d_nchannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1ad350e599635a545d2ca42d6f596e3b71" prot="private" static="no" mutable="no">
+        <type>gr_msg_queue_sptr</type>
+        <definition>gr_msg_queue_sptr gr_oscope_guts::d_msgq</definition>
+        <argsstring></argsstring>
+        <name>d_msgq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a82c8411918e39f1215b9036378ad3c88" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__trigger__mode_8h_1a7e65c0684a01d162cca66feca6af3701" kindref="member">gr_trigger_mode</ref></type>
+        <definition>gr_trigger_mode gr_oscope_guts::d_trigger_mode</definition>
+        <argsstring></argsstring>
+        <name>d_trigger_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1ac39dba16b8320f1655c7938d54b46714" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__trigger__mode_8h_1ac6b9bf75f9495085c9364ee6af1a82cf" kindref="member">gr_trigger_slope</ref></type>
+        <definition>gr_trigger_slope gr_oscope_guts::d_trigger_slope</definition>
+        <argsstring></argsstring>
+        <name>d_trigger_slope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a7a7977689469c1e078df0ad46f6e6dd5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_trigger_channel</definition>
+        <argsstring></argsstring>
+        <name>d_trigger_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1aa681631e2d799cfdea8b204a0c7d77ca" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_oscope_guts::d_sample_rate</definition>
+        <argsstring></argsstring>
+        <name>d_sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a518c526233cdda0d3a23d7cd44b2e61f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_oscope_guts::d_update_rate</definition>
+        <argsstring></argsstring>
+        <name>d_update_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a3fd5a0d78ea9a0f67bc29b708901f872" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_oscope_guts::d_trigger_level</definition>
+        <argsstring></argsstring>
+        <name>d_trigger_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a830f8bebd2f8c81ca94097c63f899f7d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_obi</definition>
+        <argsstring></argsstring>
+        <name>d_obi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1abd8669b734f4cbad968cf70fa4374a3e" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gr_oscope_guts::d_buffer[MAX_CHANNELS]</definition>
+        <argsstring>[MAX_CHANNELS]</argsstring>
+        <name>d_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1ac102f74adbbf9fec07e8f88edafc1638" prot="private" static="no" mutable="no">
+        <type>scope_state</type>
+        <definition>scope_state gr_oscope_guts::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1afa28c273cc6c10fdbd87fd5996c11c5a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_decimator_count</definition>
+        <argsstring></argsstring>
+        <name>d_decimator_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1ae480abd70abefb44dea5b04478a076c0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_decimator_count_init</definition>
+        <argsstring></argsstring>
+        <name>d_decimator_count_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1ad90ccbc42a87364c1dddedf4fc7634d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_hold_off_count</definition>
+        <argsstring></argsstring>
+        <name>d_hold_off_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1abbd912b08b4648fc41f3c859a4c2a65d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_hold_off_count_init</definition>
+        <argsstring></argsstring>
+        <name>d_hold_off_count_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a400fdbbe4950f1e186f5b104ff315356" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_pre_trigger_count</definition>
+        <argsstring></argsstring>
+        <name>d_pre_trigger_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1af6bfe4ab8f911b13bbca55ef07afb896" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_post_trigger_count</definition>
+        <argsstring></argsstring>
+        <name>d_post_trigger_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1aad1ac3f833bf38b998e52e043862e1bf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_oscope_guts::d_post_trigger_count_init</definition>
+        <argsstring></argsstring>
+        <name>d_post_trigger_count_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__guts_1a951ad6821e32e0935281bf46c6aaeb4c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_oscope_guts::d_trigger_off</definition>
+        <argsstring></argsstring>
+        <name>d_trigger_off</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__oscope__guts_1a1dd3f3114208f3a253f0782d243d75d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_guts::gr_oscope_guts</definition>
+        <argsstring>(const gr_oscope_guts &amp;rhs)</argsstring>
+        <name>gr_oscope_guts</name>
+        <param>
+          <type>const <ref refid="classgr__oscope__guts" kindref="compound">gr_oscope_guts</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a70f6e1c6f9fd928102dfe8393bd884c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr__oscope__guts" kindref="compound">gr_oscope_guts</ref> &amp;</type>
+        <definition>gr_oscope_guts&amp; gr_oscope_guts::operator=</definition>
+        <argsstring>(const gr_oscope_guts &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classgr__oscope__guts" kindref="compound">gr_oscope_guts</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a23b61aa4afc936f4df4244ecdb12eaf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::trigger_changed</definition>
+        <argsstring>()</argsstring>
+        <name>trigger_changed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a2c6de63332b22cd167d55f444be1789d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::update_rate_or_decimation_changed</definition>
+        <argsstring>()</argsstring>
+        <name>update_rate_or_decimation_changed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a528876865736872b36041984de6c8d0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::found_trigger</definition>
+        <argsstring>()</argsstring>
+        <name>found_trigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a3a3dcfe85f2f4964dd6c588c510b5cdc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::write_output_records</definition>
+        <argsstring>()</argsstring>
+        <name>write_output_records</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1ac92a6cbd369c2b58068913e6a6c5be49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::enter_hold_off</definition>
+        <argsstring>()</argsstring>
+        <name>enter_hold_off</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a665ac00f3f52e7db941723319bf4eb00" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::enter_look_for_trigger</definition>
+        <argsstring>()</argsstring>
+        <name>enter_look_for_trigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1acc6ff0ea29b7fe6b8810546fa6718982" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::enter_post_trigger</definition>
+        <argsstring>()</argsstring>
+        <name>enter_post_trigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__oscope__guts_1a1318e79496ef836662d5859753e2b014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_guts::gr_oscope_guts</definition>
+        <argsstring>(double sample_rate, gr_msg_queue_sptr msgq)</argsstring>
+        <name>gr_oscope_guts</name>
+        <param>
+          <type>double</type>
+          <declname>sample_rate</declname>
+        </param>
+        <param>
+          <type>gr_msg_queue_sptr</type>
+          <declname>msgq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a0a32a61be318c2040ed5657a447c09f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_guts::~gr_oscope_guts</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_oscope_guts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a36c880bef593417876568a7264bc07c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_oscope_guts::process_sample</definition>
+        <argsstring>(const float *channel_data)</argsstring>
+        <name>process_sample</name>
+        <param>
+          <type>const float *</type>
+          <declname>channel_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>channel_data</computeroutput> points to nchannels float values. These are the values for each channel at this sample time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a6528e5ffc86fb33a5aee6ac531a26a6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_update_rate</definition>
+        <argsstring>(double update_rate)</argsstring>
+        <name>set_update_rate</name>
+        <param>
+          <type>double</type>
+          <declname>update_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1ae27cbfbaa29983f981294931b416e41a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_decimation_count</definition>
+        <argsstring>(int decimation_count)</argsstring>
+        <name>set_decimation_count</name>
+        <param>
+          <type>int</type>
+          <declname>decimation_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1af0df18aec7ea9aedfd97bacfd90edcb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_trigger_channel</definition>
+        <argsstring>(int channel)</argsstring>
+        <name>set_trigger_channel</name>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1aefd251287cc8553c09442ae73268a75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_trigger_mode</definition>
+        <argsstring>(gr_trigger_mode mode)</argsstring>
+        <name>set_trigger_mode</name>
+        <param>
+          <type><ref refid="gr__trigger__mode_8h_1a7e65c0684a01d162cca66feca6af3701" kindref="member">gr_trigger_mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a1ac643187b1ff94b94b0a47d2992b1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_trigger_slope</definition>
+        <argsstring>(gr_trigger_slope slope)</argsstring>
+        <name>set_trigger_slope</name>
+        <param>
+          <type><ref refid="gr__trigger__mode_8h_1ac6b9bf75f9495085c9364ee6af1a82cf" kindref="member">gr_trigger_slope</ref></type>
+          <declname>slope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1aad4c3e6cda7b9d6402da682731549f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_trigger_level</definition>
+        <argsstring>(double trigger_level)</argsstring>
+        <name>set_trigger_level</name>
+        <param>
+          <type>double</type>
+          <declname>trigger_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1aabd19352da62644f125a91bd620896d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_trigger_level_auto</definition>
+        <argsstring>()</argsstring>
+        <name>set_trigger_level_auto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1ad38ca8cc8ee7de91a69faa310f4f613e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_sample_rate</definition>
+        <argsstring>(double sample_rate)</argsstring>
+        <name>set_sample_rate</name>
+        <param>
+          <type>double</type>
+          <declname>sample_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a9654f8b7445c2111771eefd7e1bd73dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_guts::set_num_channels</definition>
+        <argsstring>(int nchannels)</argsstring>
+        <name>set_num_channels</name>
+        <param>
+          <type>int</type>
+          <declname>nchannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a990e0908fa15f0587f2c54f1ad0280af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_guts::num_channels</definition>
+        <argsstring>() const </argsstring>
+        <name>num_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1ab130f9e5eba44e25b47b5f28656f8834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_guts::sample_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1aaef013aa2b95f997249b60dcb6670385" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_guts::update_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>update_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a420a6a5a46a04db9ee1dafe0942d97cc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_guts::get_decimation_count</definition>
+        <argsstring>() const </argsstring>
+        <name>get_decimation_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a61f072bbae310aed24897cff81e2029c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_guts::get_trigger_channel</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1ab8e705dc8bab64f3f4fc171310ca4734" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__trigger__mode_8h_1a7e65c0684a01d162cca66feca6af3701" kindref="member">gr_trigger_mode</ref></type>
+        <definition>gr_trigger_mode gr_oscope_guts::get_trigger_mode</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1afbeaa19d51d7a01ece5af5a4633253d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__trigger__mode_8h_1ac6b9bf75f9495085c9364ee6af1a82cf" kindref="member">gr_trigger_slope</ref></type>
+        <definition>gr_trigger_slope gr_oscope_guts::get_trigger_slope</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_slope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1a591e96e8914d856cea53ae3711824d1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_guts::get_trigger_level</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__guts_1aac1f07a6e125cf5f1e423801e81d5493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_guts::get_samples_per_output_record</definition>
+        <argsstring>() const </argsstring>
+        <name>get_samples_per_output_record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>guts of oscilloscope trigger and buffer module </para>    </briefdescription>
+    <detaileddescription>
+<para>This module processes sets of samples provided the <computeroutput>process_sample</computeroutput> method. When appropriate given the updateRate, sampleRate and trigger conditions, process_sample will periodically write output records of captured data to output_fd. For each trigger event, nchannels records will be written. Each record consists of get_samples_per_output_record binary floats. The trigger instant occurs at the 1/2 way point in the buffer. Thus, output records consist of 50% pre-trigger data and 50% post-trigger data. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_guts.h" bodystart="44" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classgr__oscope__guts_1abd8669b734f4cbad968cf70fa4374a3e" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_buffer</name></member>
+      <member refid="classgr__oscope__guts_1afa28c273cc6c10fdbd87fd5996c11c5a" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_decimator_count</name></member>
+      <member refid="classgr__oscope__guts_1ae480abd70abefb44dea5b04478a076c0" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_decimator_count_init</name></member>
+      <member refid="classgr__oscope__guts_1ad90ccbc42a87364c1dddedf4fc7634d7" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_hold_off_count</name></member>
+      <member refid="classgr__oscope__guts_1abbd912b08b4648fc41f3c859a4c2a65d" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_hold_off_count_init</name></member>
+      <member refid="classgr__oscope__guts_1ad350e599635a545d2ca42d6f596e3b71" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_msgq</name></member>
+      <member refid="classgr__oscope__guts_1a2f3413f478c58b1f13e5e6d39b129a1d" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_nchannels</name></member>
+      <member refid="classgr__oscope__guts_1a830f8bebd2f8c81ca94097c63f899f7d" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_obi</name></member>
+      <member refid="classgr__oscope__guts_1af6bfe4ab8f911b13bbca55ef07afb896" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_post_trigger_count</name></member>
+      <member refid="classgr__oscope__guts_1aad1ac3f833bf38b998e52e043862e1bf" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_post_trigger_count_init</name></member>
+      <member refid="classgr__oscope__guts_1a400fdbbe4950f1e186f5b104ff315356" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_pre_trigger_count</name></member>
+      <member refid="classgr__oscope__guts_1aa681631e2d799cfdea8b204a0c7d77ca" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_sample_rate</name></member>
+      <member refid="classgr__oscope__guts_1ac102f74adbbf9fec07e8f88edafc1638" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_state</name></member>
+      <member refid="classgr__oscope__guts_1a7a7977689469c1e078df0ad46f6e6dd5" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_trigger_channel</name></member>
+      <member refid="classgr__oscope__guts_1a3fd5a0d78ea9a0f67bc29b708901f872" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_trigger_level</name></member>
+      <member refid="classgr__oscope__guts_1a82c8411918e39f1215b9036378ad3c88" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_trigger_mode</name></member>
+      <member refid="classgr__oscope__guts_1a951ad6821e32e0935281bf46c6aaeb4c" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_trigger_off</name></member>
+      <member refid="classgr__oscope__guts_1ac39dba16b8320f1655c7938d54b46714" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_trigger_slope</name></member>
+      <member refid="classgr__oscope__guts_1a518c526233cdda0d3a23d7cd44b2e61f" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>d_update_rate</name></member>
+      <member refid="classgr__oscope__guts_1ac92a6cbd369c2b58068913e6a6c5be49" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>enter_hold_off</name></member>
+      <member refid="classgr__oscope__guts_1a665ac00f3f52e7db941723319bf4eb00" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>enter_look_for_trigger</name></member>
+      <member refid="classgr__oscope__guts_1acc6ff0ea29b7fe6b8810546fa6718982" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>enter_post_trigger</name></member>
+      <member refid="classgr__oscope__guts_1a528876865736872b36041984de6c8d0f" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>found_trigger</name></member>
+      <member refid="classgr__oscope__guts_1a420a6a5a46a04db9ee1dafe0942d97cc" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_decimation_count</name></member>
+      <member refid="classgr__oscope__guts_1aac1f07a6e125cf5f1e423801e81d5493" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_samples_per_output_record</name></member>
+      <member refid="classgr__oscope__guts_1a61f072bbae310aed24897cff81e2029c" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_trigger_channel</name></member>
+      <member refid="classgr__oscope__guts_1a591e96e8914d856cea53ae3711824d1e" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_trigger_level</name></member>
+      <member refid="classgr__oscope__guts_1ab8e705dc8bab64f3f4fc171310ca4734" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_trigger_mode</name></member>
+      <member refid="classgr__oscope__guts_1afbeaa19d51d7a01ece5af5a4633253d4" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>get_trigger_slope</name></member>
+      <member refid="classgr__oscope__guts_1a1dd3f3114208f3a253f0782d243d75d3" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>gr_oscope_guts</name></member>
+      <member refid="classgr__oscope__guts_1a1318e79496ef836662d5859753e2b014" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>gr_oscope_guts</name></member>
+      <member refid="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473ab01c05d17ebd7cfabd2a1a8b351a0da0" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>HOLD_OFF</name></member>
+      <member refid="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473a6c226597b34107d468ca46fbdd2da40e" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>LOOK_FOR_TRIGGER</name></member>
+      <member refid="classgr__oscope__guts_1aca17048bc6e1b7b02431d665396bca99" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>MAX_CHANNELS</name></member>
+      <member refid="classgr__oscope__guts_1a990e0908fa15f0587f2c54f1ad0280af" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>num_channels</name></member>
+      <member refid="classgr__oscope__guts_1a70f6e1c6f9fd928102dfe8393bd884c1" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>operator=</name></member>
+      <member refid="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473ab615006e8701837da2962e8f3f8bb751" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>POST_TRIGGER</name></member>
+      <member refid="classgr__oscope__guts_1a36c880bef593417876568a7264bc07c6" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>process_sample</name></member>
+      <member refid="classgr__oscope__guts_1ab130f9e5eba44e25b47b5f28656f8834" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>sample_rate</name></member>
+      <member refid="classgr__oscope__guts_1ad6360916d88ee70cc13af98542dab473" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>scope_state</name></member>
+      <member refid="classgr__oscope__guts_1ae27cbfbaa29983f981294931b416e41a" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_decimation_count</name></member>
+      <member refid="classgr__oscope__guts_1a9654f8b7445c2111771eefd7e1bd73dd" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_num_channels</name></member>
+      <member refid="classgr__oscope__guts_1ad38ca8cc8ee7de91a69faa310f4f613e" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_sample_rate</name></member>
+      <member refid="classgr__oscope__guts_1af0df18aec7ea9aedfd97bacfd90edcb8" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_trigger_channel</name></member>
+      <member refid="classgr__oscope__guts_1aad4c3e6cda7b9d6402da682731549f09" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_trigger_level</name></member>
+      <member refid="classgr__oscope__guts_1aabd19352da62644f125a91bd620896d9" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_trigger_level_auto</name></member>
+      <member refid="classgr__oscope__guts_1aefd251287cc8553c09442ae73268a75c" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_trigger_mode</name></member>
+      <member refid="classgr__oscope__guts_1a1ac643187b1ff94b94b0a47d2992b1a7" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_trigger_slope</name></member>
+      <member refid="classgr__oscope__guts_1a6528e5ffc86fb33a5aee6ac531a26a6c" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>set_update_rate</name></member>
+      <member refid="classgr__oscope__guts_1a23b61aa4afc936f4df4244ecdb12eaf9" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>trigger_changed</name></member>
+      <member refid="classgr__oscope__guts_1aaef013aa2b95f997249b60dcb6670385" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>update_rate</name></member>
+      <member refid="classgr__oscope__guts_1a2c6de63332b22cd167d55f444be1789d" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>update_rate_or_decimation_changed</name></member>
+      <member refid="classgr__oscope__guts_1a3a3dcfe85f2f4964dd6c588c510b5cdc" prot="private" virt="non-virtual"><scope>gr_oscope_guts</scope><name>write_output_records</name></member>
+      <member refid="classgr__oscope__guts_1a0a32a61be318c2040ed5657a447c09f7" prot="public" virt="non-virtual"><scope>gr_oscope_guts</scope><name>~gr_oscope_guts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

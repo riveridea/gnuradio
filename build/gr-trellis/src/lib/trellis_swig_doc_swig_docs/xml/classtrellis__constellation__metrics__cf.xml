@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classtrellis__constellation__metrics__cf" kind="class" prot="public">
+    <compoundname>trellis_constellation_metrics_cf</compoundname>
+    <includes refid="trellis__constellation__metrics__cf_8h" local="no">trellis_constellation_metrics_cf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtrellis__constellation__metrics__cf_1a34085f2b40ac0da8b97a7c37ef86dca0" prot="private" static="no" mutable="no">
+        <type>digital_constellation_sptr</type>
+        <definition>digital_constellation_sptr trellis_constellation_metrics_cf::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__constellation__metrics__cf_1aabdf80f958b43e4a68400534a9fa3529" prot="private" static="no" mutable="no">
+        <type>trellis_metric_type_t</type>
+        <definition>trellis_metric_type_t trellis_constellation_metrics_cf::d_TYPE</definition>
+        <argsstring></argsstring>
+        <name>d_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__constellation__metrics__cf_1a30ca3c77aa1218a413fd0f71620a6a1c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int trellis_constellation_metrics_cf::d_O</definition>
+        <argsstring></argsstring>
+        <name>d_O</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__constellation__metrics__cf_1a0e541c6e546e7e418c2e1f681e71d0d5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int trellis_constellation_metrics_cf::d_D</definition>
+        <argsstring></argsstring>
+        <name>d_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrellis__constellation__metrics__cf_1a1f46a5d92a4f58b30539e3c9bc79354d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void trellis_constellation_metrics_cf::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__constellation__metrics__cf_1a81e6bbe93275232e3ef704643fc084b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_constellation_metrics_cf::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrellis__constellation__metrics__cf_1ad323ba27f67ff84eeba7ebf89aa8101c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>trellis_constellation_metrics_cf::trellis_constellation_metrics_cf</definition>
+        <argsstring>(digital_constellation_sptr constellation, trellis_metric_type_t TYPE)</argsstring>
+        <name>trellis_constellation_metrics_cf</name>
+        <param>
+          <type>digital_constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtrellis__constellation__metrics__cf_1a46315d2c9d4df1d536e184f159391417" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="trellis__constellation__metrics__cf_8h_1a35cbfd83e054c2f2c2e322851a59d241" kindref="member">trellis_constellation_metrics_cf_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT trellis_constellation_metrics_cf_sptr trellis_make_constellation_metrics_cf</definition>
+        <argsstring>(digital_constellation_sptr constellation, trellis_metric_type_t TYPE)</argsstring>
+        <name>trellis_make_constellation_metrics_cf</name>
+        <param>
+          <type>digital_constellation_sptr</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Evaluate metrics for use by the Viterbi algorithm. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h" bodystart="40" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classtrellis__constellation__metrics__cf_1a34085f2b40ac0da8b97a7c37ef86dca0" prot="private" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>d_constellation</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1a0e541c6e546e7e418c2e1f681e71d0d5" prot="private" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>d_D</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1a30ca3c77aa1218a413fd0f71620a6a1c" prot="private" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>d_O</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1aabdf80f958b43e4a68400534a9fa3529" prot="private" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>d_TYPE</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1a1f46a5d92a4f58b30539e3c9bc79354d" prot="public" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>forecast</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1a81e6bbe93275232e3ef704643fc084b1" prot="public" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>general_work</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1ad323ba27f67ff84eeba7ebf89aa8101c" prot="protected" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>trellis_constellation_metrics_cf</name></member>
+      <member refid="classtrellis__constellation__metrics__cf_1a46315d2c9d4df1d536e184f159391417" prot="private" virt="non-virtual"><scope>trellis_constellation_metrics_cf</scope><name>trellis_make_constellation_metrics_cf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

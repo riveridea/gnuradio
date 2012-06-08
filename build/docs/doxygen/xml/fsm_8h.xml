@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="fsm_8h" kind="file">
+    <compoundname>fsm.h</compoundname>
+    <includes refid="trellis__api_8h" local="no">trellis_api.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">iosfwd</includes>
+    <includedby refid="core__algorithms_8h" local="yes">core_algorithms.h</includedby>
+    <includedby refid="trellis__siso__combined__f_8h" local="yes">trellis_siso_combined_f.h</includedby>
+    <includedby refid="trellis__siso__f_8h" local="yes">trellis_siso_f.h</includedby>
+    <incdepgraph>
+      <node id="4105">
+        <label>fsm.h</label>
+        <link refid="fsm.h"/>
+        <childnode refid="4106" relation="include">
+        </childnode>
+        <childnode refid="4108" relation="include">
+        </childnode>
+        <childnode refid="4109" relation="include">
+        </childnode>
+      </node>
+      <node id="4108">
+        <label>vector</label>
+      </node>
+      <node id="4106">
+        <label>trellis_api.h</label>
+        <link refid="trellis__api_8h"/>
+        <childnode refid="4107" relation="include">
+        </childnode>
+      </node>
+      <node id="4107">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="4109">
+        <label>iosfwd</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4112">
+        <label>trellis_siso_combined_f.h</label>
+        <link refid="trellis__siso__combined__f_8h"/>
+      </node>
+      <node id="4110">
+        <label>fsm.h</label>
+        <link refid="fsm.h"/>
+        <childnode refid="4111" relation="include">
+        </childnode>
+        <childnode refid="4112" relation="include">
+        </childnode>
+        <childnode refid="4113" relation="include">
+        </childnode>
+      </node>
+      <node id="4111">
+        <label>core_algorithms.h</label>
+        <link refid="core__algorithms_8h"/>
+        <childnode refid="4112" relation="include">
+        </childnode>
+        <childnode refid="4113" relation="include">
+        </childnode>
+      </node>
+      <node id="4113">
+        <label>trellis_siso_f.h</label>
+        <link refid="trellis__siso__f_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfsm" prot="public">fsm</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/fsm.h"/>
+  </compounddef>
+</doxygen>

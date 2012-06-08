@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__fff__altivec" kind="class" prot="public">
+    <compoundname>gr_fir_fff_altivec</compoundname>
+    <includes refid="gr__fir__fff__altivec_8h" local="no">gr_fir_fff_altivec.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__fir__fff__altivec_1a82b5a06200353df059b9f700894ef1d6" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_fir_fff_altivec::d_naligned_taps</definition>
+        <argsstring></argsstring>
+        <name>d_naligned_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fir__fff__altivec_1a17803e69f4414ff456c4c984259180c0" prot="protected" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gr_fir_fff_altivec::d_aligned_taps</definition>
+        <argsstring></argsstring>
+        <name>d_aligned_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__fff__altivec_1a07b20e60658c8997fe2a138353b43c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fff_altivec::gr_fir_fff_altivec</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_fff_altivec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fff__altivec_1aba089bd817981a7dfb4f80b357ab01d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fff_altivec::gr_fir_fff_altivec</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_fff_altivec</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fff__altivec_1a518ae25dcf07c3e8cad14a0404a88730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fff_altivec::~gr_fir_fff_altivec</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fir_fff_altivec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fff__altivec_1a7d38cc74814840008f179064825e945b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_fir_fff_altivec::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fff__altivec_1aa1b8a9d8435b82e208047ab6b79d05be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>float</type>
+        <definition>virtual float gr_fir_fff_altivec::filter</definition>
+        <argsstring>(const float input[])</argsstring>
+        <name>filter</name>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>altivec version of gr_fir_fff </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fff_altivec.h" bodystart="30" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classgr__fir__fff__altivec_1a17803e69f4414ff456c4c984259180c0" prot="protected" virt="non-virtual"><scope>gr_fir_fff_altivec</scope><name>d_aligned_taps</name></member>
+      <member refid="classgr__fir__fff__altivec_1a82b5a06200353df059b9f700894ef1d6" prot="protected" virt="non-virtual"><scope>gr_fir_fff_altivec</scope><name>d_naligned_taps</name></member>
+      <member refid="classgr__fir__fff__altivec_1aa1b8a9d8435b82e208047ab6b79d05be" prot="public" virt="virtual"><scope>gr_fir_fff_altivec</scope><name>filter</name></member>
+      <member refid="classgr__fir__fff__altivec_1a07b20e60658c8997fe2a138353b43c75" prot="public" virt="non-virtual"><scope>gr_fir_fff_altivec</scope><name>gr_fir_fff_altivec</name></member>
+      <member refid="classgr__fir__fff__altivec_1aba089bd817981a7dfb4f80b357ab01d7" prot="public" virt="non-virtual"><scope>gr_fir_fff_altivec</scope><name>gr_fir_fff_altivec</name></member>
+      <member refid="classgr__fir__fff__altivec_1a7d38cc74814840008f179064825e945b" prot="public" virt="virtual"><scope>gr_fir_fff_altivec</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__fff__altivec_1a518ae25dcf07c3e8cad14a0404a88730" prot="public" virt="non-virtual"><scope>gr_fir_fff_altivec</scope><name>~gr_fir_fff_altivec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

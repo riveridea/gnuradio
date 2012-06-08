@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsc__field__sync__mux_8h" kind="file">
+    <compoundname>atsc_field_sync_mux.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes refid="gr__sync__block_8h" local="no">gr_sync_block.h</includes>
+    <includes refid="atsc__types_8h" local="no">atsc_types.h</includes>
+    <incdepgraph>
+      <node id="674">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="686">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="685">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="684" relation="include">
+        </childnode>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="678" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+      </node>
+      <node id="677">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="678" relation="include">
+        </childnode>
+      </node>
+      <node id="689">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+      </node>
+      <node id="668">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="670" relation="include">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="671">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+        <childnode refid="679" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>cassert</label>
+      </node>
+      <node id="693">
+        <label>stdexcept</label>
+      </node>
+      <node id="673">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="688">
+        <label>string</label>
+      </node>
+      <node id="670">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="695">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+      </node>
+      <node id="676">
+        <label>stddef.h</label>
+      </node>
+      <node id="681">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="690">
+        <label>limits.h</label>
+      </node>
+      <node id="687">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="672">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="673" relation="include">
+        </childnode>
+      </node>
+      <node id="691">
+        <label>wchar.h</label>
+      </node>
+      <node id="666">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="667" relation="include">
+        </childnode>
+      </node>
+      <node id="696">
+        <label>atsc_types.h</label>
+        <link refid="atsc__types_8h"/>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+      </node>
+      <node id="682">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+      </node>
+      <node id="675">
+        <label>vector</label>
+      </node>
+      <node id="680">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="667">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="665">
+        <label>atsc_field_sync_mux.h</label>
+        <link refid="atsc_field_sync_mux.h"/>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>iosfwd</label>
+      </node>
+      <node id="694">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="697">
+        <label>atsc_consts.h</label>
+        <link refid="atsc__consts_8h"/>
+      </node>
+      <node id="679">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+      </node>
+      <node id="678">
+        <label>complex</label>
+      </node>
+      <node id="698">
+        <label>cstring</label>
+      </node>
+      <node id="683">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="684" relation="include">
+        </childnode>
+        <childnode refid="685" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classatsc__field__sync__mux" prot="public">atsc_field_sync_mux</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="atsc__field__sync__mux_8h_1aa0ad982b116fd07d319ce841769be364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">atsc_field_sync_mux_sptr</ref></type>
+        <definition>ATSC_API atsc_field_sync_mux_sptr atsc_make_field_sync_mux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_field_sync_mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="structgr__fir__fff__info" kind="struct" prot="public">
+    <compoundname>gr_fir_fff_info</compoundname>
+    <includes refid="gr__fir__util_8h" local="no">gr_fir_util.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgr__fir__fff__info_1a56f138dcab8baa0a1a66d986a9793bf7" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gr_fir_fff_info::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgr__fir__fff__info_1adaf6c12946519d91dd8224c530225c9a" prot="public" static="no" mutable="no">
+        <type><ref refid="classgr__fir__fff" kindref="compound">gr_fir_fff</ref> *(*</type>
+        <definition>gr_fir_fff*(* gr_fir_fff_info::create)(const std::vector&lt; float &gt; &amp;taps)</definition>
+        <argsstring>)(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="533">
+        <label>gr_fir_fff</label>
+        <link refid="classgr__fir__fff"/>
+        <childnode refid="534" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="534">
+        <label>std::vector&lt; float &gt;</label>
+      </node>
+      <node id="532">
+        <label>gr_fir_fff_info</label>
+        <link refid="structgr__fir__fff__info"/>
+        <childnode refid="533" relation="usage">
+          <edgelabel>create</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_util.h" bodystart="75" bodyend="78"/>
+    <listofallmembers>
+      <member refid="structgr__fir__fff__info_1adaf6c12946519d91dd8224c530225c9a" prot="public" virt="non-virtual"><scope>gr_fir_fff_info</scope><name>create</name></member>
+      <member refid="structgr__fir__fff__info_1a56f138dcab8baa0a1a66d986a9793bf7" prot="public" virt="non-virtual"><scope>gr_fir_fff_info</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

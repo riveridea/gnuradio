@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__fcc__sse" kind="class" prot="public">
+    <compoundname>gr_fir_fcc_sse</compoundname>
+    <basecompoundref refid="classgr__fir__fcc__simd" prot="public" virt="non-virtual">gr_fir_fcc_simd</basecompoundref>
+    <includes refid="gr__fir__fcc__x86_8h" local="no">gr_fir_fcc_x86.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__fcc__sse_1a9ab3c8b8c132f34150c7de4978a5275e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fcc_sse::gr_fir_fcc_sse</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_fcc_sse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fcc_x86.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fcc__sse_1a0260f9225d8dc6ec1e6aef70904e00b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fcc_sse::gr_fir_fcc_sse</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>gr_fir_fcc_sse</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fcc_x86.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SSE version of <ref refid="classgr__fir__fcc" kindref="compound">gr_fir_fcc</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="480">
+        <label>gr_fir_fcc_sse</label>
+        <link refid="classgr__fir__fcc__sse"/>
+        <childnode refid="481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>gr_fir_fcc</label>
+        <link refid="classgr__fir__fcc"/>
+      </node>
+      <node id="482">
+        <label>gr_fir_fcc_generic</label>
+        <link refid="classgr__fir__fcc__generic"/>
+        <childnode refid="483" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="481">
+        <label>gr_fir_fcc_simd</label>
+        <link refid="classgr__fir__fcc__simd"/>
+        <childnode refid="482" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="484">
+        <label>gr_fir_fcc_sse</label>
+        <link refid="classgr__fir__fcc__sse"/>
+        <childnode refid="485" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="487">
+        <label>gr_fir_fcc</label>
+        <link refid="classgr__fir__fcc"/>
+        <childnode refid="488" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="488">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="486">
+        <label>gr_fir_fcc_generic</label>
+        <link refid="classgr__fir__fcc__generic"/>
+        <childnode refid="487" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>gr_fir_fcc_simd</label>
+        <link refid="classgr__fir__fcc__simd"/>
+        <childnode refid="486" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fcc_x86.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fcc_x86.h" bodystart="44" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classgr__fir__fcc__simd_1a906c60ba5291b279c76dcb9904a626ff" prot="protected" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>d_aligned_taps</name></member>
+      <member refid="classgr__fir__fcc__simd_1a2fc799422f5a0e280a248ca56704d71d" prot="protected" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>d_fcomplex_dotprod</name></member>
+      <member refid="classgr__fir__fcc_1a53f351706cdd0e7cc714087eca85002d" prot="protected" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__fcc__simd_1a14a79e1e8b9284727079c214a1ed68c7" prot="protected" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>fcomplex_dotprod_t</name></member>
+      <member refid="classgr__fir__fcc__simd_1a868747af1b2acfc6fd376afd12fdcf29" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>filter</name></member>
+      <member refid="classgr__fir__fcc__generic_1ab6f6924bfaff50518e5ddcf4abc0a2d8" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>filterN</name></member>
+      <member refid="classgr__fir__fcc__generic_1a57bccce1991278446982c0e9c1b7fbae" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__fcc_1ab27c9fa920e78e94219575cca834522a" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__fcc_1a602df7de8dc88cda40b9ad4bc9ed4895" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc</name></member>
+      <member refid="classgr__fir__fcc_1a8485ef01a775803216857a97066687b6" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc</name></member>
+      <member refid="classgr__fir__fcc__generic_1aa8f55866d711f0ac7b09bc8ce9e05f5b" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_generic</name></member>
+      <member refid="classgr__fir__fcc__generic_1a5b4dc47c41270356f818371710fb5433" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_generic</name></member>
+      <member refid="classgr__fir__fcc__simd_1af1b5f81c4f2fd407f2437ccf0e68e07b" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_simd</name></member>
+      <member refid="classgr__fir__fcc__simd_1a98a04cf70768c2647d221fa9efa8ddf5" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_simd</name></member>
+      <member refid="classgr__fir__fcc__sse_1a9ab3c8b8c132f34150c7de4978a5275e" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_sse</name></member>
+      <member refid="classgr__fir__fcc__sse_1a0260f9225d8dc6ec1e6aef70904e00b4" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>gr_fir_fcc_sse</name></member>
+      <member refid="classgr__fir__fcc_1a480be7ebc5d223ab61a8a375486acb41" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__fcc__simd_1addafd951a10d29910605186df87db899" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__fcc_1a396ea765ab9c6f2535e927b09342933b" prot="public" virt="virtual"><scope>gr_fir_fcc_sse</scope><name>~gr_fir_fcc</name></member>
+      <member refid="classgr__fir__fcc__simd_1aaba4d235c2bd9c7d069f3b54ab17d6ba" prot="public" virt="non-virtual"><scope>gr_fir_fcc_sse</scope><name>~gr_fir_fcc_simd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

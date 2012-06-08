@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__fsf__simd" kind="class" prot="public">
+    <compoundname>gr_fir_fsf_simd</compoundname>
+    <basecompoundref refid="classgr__fir__fsf__generic" prot="public" virt="non-virtual">gr_fir_fsf_generic</basecompoundref>
+    <derivedcompoundref refid="classgr__fir__fsf__3dnow" prot="public" virt="non-virtual">gr_fir_fsf_3dnow</derivedcompoundref>
+    <derivedcompoundref refid="classgr__fir__fsf__sse" prot="public" virt="non-virtual">gr_fir_fsf_sse</derivedcompoundref>
+    <includes refid="gr__fir__fsf__simd_8h" local="no">gr_fir_fsf_simd.h</includes>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classgr__fir__fsf__simd_1af0585e56d7a55c28bd095262ce9833f7" prot="protected" static="no">
+        <type>float(*</type>
+        <definition>typedef float(* gr_fir_fsf_simd::float_dotprod_t)(const float *input, const float *taps, unsigned n_4_float_blocks)</definition>
+        <argsstring>)(const float *input, const float *taps, unsigned n_4_float_blocks)</argsstring>
+        <name>float_dotprod_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__fir__fsf__simd_1ad6155ccd8813f66870faba766d0e3b5c" prot="protected" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gr_fir_fsf_simd::d_aligned_taps[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>d_aligned_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>aligned_taps</computeroutput> holds 4 copies of the coefficients preshifted by 0, 1, 2, or 3 floats to meet all possible input data alignments. This allows us to always fetch data and taps that are 128-bit aligned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fir__fsf__simd_1ad656ca2d761e97a0c746913bc6c0d6f3" prot="protected" static="no" mutable="no">
+        <type><ref refid="classgr__fir__fsf__simd_1af0585e56d7a55c28bd095262ce9833f7" kindref="member">float_dotprod_t</ref></type>
+        <definition>float_dotprod_t gr_fir_fsf_simd::d_float_dotprod</definition>
+        <argsstring></argsstring>
+        <name>d_float_dotprod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__fsf__simd_1ac164834831dc5e1c7fc9f093407ffb44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fsf_simd::gr_fir_fsf_simd</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_fsf_simd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__simd_1a4c327e214a874e99833839dbe2e28e76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fsf_simd::gr_fir_fsf_simd</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_fsf_simd</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__simd_1a234d610431ed29c91adcccc2104f259e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fsf_simd::~gr_fir_fsf_simd</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fir_fsf_simd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__simd_1a73c1e774c165feec6b4e16123d4d83b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_fsf_simd::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <reimplements refid="classgr__fir__fsf_1adc6959598abe050fe195c2202fc6c521">set_taps</reimplements>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>install <computeroutput>new_taps</computeroutput> as the current taps. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__simd_1a9b221f60ff010490358eed5e39bc9673" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>short</type>
+        <definition>virtual short gr_fir_fsf_simd::filter</definition>
+        <argsstring>(const float input[])</argsstring>
+        <name>filter</name>
+        <reimplements refid="classgr__fir__fsf__generic_1a8a88649387d44e24b3c2ab7033087f82">filter</reimplements>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> valid entries. input[0] .. input[<ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> - 1] are referenced to compute the output value.</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>common base class for SIMD versions of <ref refid="classgr__fir__fsf" kindref="compound">gr_fir_fsf</ref></para><para>This base class handles alignment issues common to SSE and 3DNOW subclasses. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="593">
+        <label>gr_fir_fsf_simd</label>
+        <link refid="classgr__fir__fsf__simd"/>
+        <childnode refid="594" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="595">
+        <label>gr_fir_fsf</label>
+        <link refid="classgr__fir__fsf"/>
+      </node>
+      <node id="597">
+        <label>gr_fir_fsf_sse</label>
+        <link refid="classgr__fir__fsf__sse"/>
+        <childnode refid="593" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="594">
+        <label>gr_fir_fsf_generic</label>
+        <link refid="classgr__fir__fsf__generic"/>
+        <childnode refid="595" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="596">
+        <label>gr_fir_fsf_3dnow</label>
+        <link refid="classgr__fir__fsf__3dnow"/>
+        <childnode refid="593" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="598">
+        <label>gr_fir_fsf_simd</label>
+        <link refid="classgr__fir__fsf__simd"/>
+        <childnode refid="599" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="601">
+        <label>std::vector&lt; float &gt;</label>
+      </node>
+      <node id="600">
+        <label>gr_fir_fsf</label>
+        <link refid="classgr__fir__fsf"/>
+        <childnode refid="601" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="599">
+        <label>gr_fir_fsf_generic</label>
+        <link refid="classgr__fir__fsf__generic"/>
+        <childnode refid="600" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_fsf_simd.h" bodystart="36" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classgr__fir__fsf__simd_1ad6155ccd8813f66870faba766d0e3b5c" prot="protected" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>d_aligned_taps</name></member>
+      <member refid="classgr__fir__fsf__simd_1ad656ca2d761e97a0c746913bc6c0d6f3" prot="protected" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>d_float_dotprod</name></member>
+      <member refid="classgr__fir__fsf_1a4cd04bb59ee2ab71a3b470ead188d101" prot="protected" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__fsf__simd_1a9b221f60ff010490358eed5e39bc9673" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>filter</name></member>
+      <member refid="classgr__fir__fsf__generic_1a5a22acd8dae47ae1bc008198ffa68b5e" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>filterN</name></member>
+      <member refid="classgr__fir__fsf__generic_1a4893ed68bbc23906e76e5094b50ffbbf" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__fsf__simd_1af0585e56d7a55c28bd095262ce9833f7" prot="protected" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>float_dotprod_t</name></member>
+      <member refid="classgr__fir__fsf_1ae6dcb8e0d14dd3fe98459f76d1b329c9" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__fsf_1af2b781c4ecca64a3a5315dfe6e10a62f" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf</name></member>
+      <member refid="classgr__fir__fsf_1a58226fbee4ba0994918afe687343f548" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf</name></member>
+      <member refid="classgr__fir__fsf__generic_1ad54060741ad9661759d6d24acc548f0d" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf_generic</name></member>
+      <member refid="classgr__fir__fsf__generic_1aae20245aa49bd786ec8e49e128aaaa40" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf_generic</name></member>
+      <member refid="classgr__fir__fsf__simd_1ac164834831dc5e1c7fc9f093407ffb44" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf_simd</name></member>
+      <member refid="classgr__fir__fsf__simd_1a4c327e214a874e99833839dbe2e28e76" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>gr_fir_fsf_simd</name></member>
+      <member refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__fsf__simd_1a73c1e774c165feec6b4e16123d4d83b4" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__fsf_1a711d702cf671f00754acd74813d38c4d" prot="public" virt="virtual"><scope>gr_fir_fsf_simd</scope><name>~gr_fir_fsf</name></member>
+      <member refid="classgr__fir__fsf__simd_1a234d610431ed29c91adcccc2104f259e" prot="public" virt="non-virtual"><scope>gr_fir_fsf_simd</scope><name>~gr_fir_fsf_simd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

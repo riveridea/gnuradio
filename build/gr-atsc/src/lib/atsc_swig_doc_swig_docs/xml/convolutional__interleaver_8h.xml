@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="convolutional__interleaver_8h" kind="file">
+    <compoundname>convolutional_interleaver.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="interleaver__fifo_8h" local="no">interleaver_fifo.h</includes>
+    <includes local="no">assert.h</includes>
+    <includedby refid="atsci__data__interleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_data_interleaver.h</includedby>
+    <includedby refid="qa__convolutional__interleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_convolutional_interleaver.h</includedby>
+    <incdepgraph>
+      <node id="540">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h</label>
+        <link refid="convolutional_interleaver.h"/>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+      </node>
+      <node id="544">
+        <label>assert.h</label>
+      </node>
+      <node id="542">
+        <label>interleaver_fifo.h</label>
+        <link refid="interleaver__fifo_8h"/>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+      </node>
+      <node id="543">
+        <label>string.h</label>
+      </node>
+      <node id="541">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="545">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h</label>
+        <link refid="convolutional_interleaver.h"/>
+        <childnode refid="546" relation="include">
+        </childnode>
+        <childnode refid="552" relation="include">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_data_interleaver.h</label>
+        <link refid="atsci__data__interleaver_8h"/>
+        <childnode refid="547" relation="include">
+        </childnode>
+        <childnode refid="548" relation="include">
+        </childnode>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="552">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_convolutional_interleaver.h</label>
+        <link refid="qa__convolutional__interleaver_8h"/>
+      </node>
+      <node id="548">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_interleaver.h</label>
+        <link refid="atsc__interleaver_8h"/>
+      </node>
+      <node id="551">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_data_interleaver.h</label>
+        <link refid="qa__atsci__data__interleaver_8h"/>
+      </node>
+      <node id="549">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDeinterleaver.h</label>
+        <link refid="GrAtscDeinterleaver_8h"/>
+      </node>
+      <node id="550">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscInterleaver.h</label>
+        <link refid="GrAtscInterleaver_8h"/>
+      </node>
+      <node id="547">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h</label>
+        <link refid="atsc__deinterleaver_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classconvolutional__interleaver" prot="public">convolutional_interleaver</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2002<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CONVOLUTIONAL_INTERLEAVER_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_CONVOLUTIONAL_INTERLEAVER_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interleaver__fifo_8h" kindref="compound">interleaver_fifo.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="35" refid="classconvolutional__interleaver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classconvolutional__interleaver" kindref="compound" tooltip="template class for generic convolutional interleaver">convolutional_interleaver</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classconvolutional__interleaver_1ac01f306da38de29b1282f1e5cc5e51c7" kindref="member">convolutional_interleaver</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>interleave_p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbanks,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fifo_size_incr);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classconvolutional__interleaver_1a4fb48a3b97910049994ea2be0bc91c40" kindref="member">~convolutional_interleaver</ref><sp/>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classconvolutional__interleaver_1a758195fcfe60037184a30e39e718126a" kindref="member" tooltip="reset interleaver (flushes contents and resets commutator)">reset</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classconvolutional__interleaver_1ad47cdb2855d94872bea06fec637b82eb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classconvolutional__interleaver_1ad47cdb2855d94872bea06fec637b82eb" kindref="member" tooltip="sync interleaver (resets commutator, but doesn&amp;#39;t flush fifos)">sync</ref><sp/>()<sp/>{<sp/><ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref><sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classconvolutional__interleaver_1a95147618a994510cdc46db6f0ee23e27" kindref="member" tooltip="return end to end delay in symbols (delay through concatenated interleaver / deinterleaver)">end_to_end_delay</ref><sp/>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" refkind="member"><highlight class="normal"><sp/><sp/>symbol_type<sp/><ref refid="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" kindref="member" tooltip="transform a single symbol">transform</ref><sp/>(symbol_type<sp/>input){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>symbol_type<sp/>retval<sp/>=<sp/><ref refid="classconvolutional__interleaver_1a361938024041b40e650ff6ad3492d0d7" kindref="member">m_fifo</ref>[<ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref>]-&gt;stuff<sp/>(input);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref>++;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref><sp/>&gt;=<sp/><ref refid="classconvolutional__interleaver_1a0e5b1c5a67032ce5ec79291e8bc957d1" kindref="member">m_nbanks</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" kindref="member" tooltip="transform a single symbol">transform</ref><sp/>(symbol_type<sp/>*out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>symbol_type<sp/>*in,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nsymbols);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63" refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" kindref="member">m_commutator</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classconvolutional__interleaver_1a0e5b1c5a67032ce5ec79291e8bc957d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classconvolutional__interleaver_1a0e5b1c5a67032ce5ec79291e8bc957d1" kindref="member">m_nbanks</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classconvolutional__interleaver_1a64583ae8484756fba1845db8adee1bc7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classconvolutional__interleaver_1a64583ae8484756fba1845db8adee1bc7" kindref="member">m_fifo_size_incr</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classconvolutional__interleaver_1a361938024041b40e650ff6ad3492d0d7" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;interleaver_fifo&lt;symbol_type&gt;<sp/>*&gt;<sp/><ref refid="classconvolutional__interleaver_1a361938024041b40e650ff6ad3492d0d7" kindref="member">m_fifo</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="70" refid="classconvolutional__interleaver_1ac01f306da38de29b1282f1e5cc5e51c7" refkind="member"><highlight class="normal"><ref refid="classconvolutional__interleaver_1ac01f306da38de29b1282f1e5cc5e51c7" kindref="member">convolutional_interleaver&lt;symbol_type&gt;::convolutional_interleaver</ref><sp/>(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>interleave_p,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbanks,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fifo_size_incr)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>assert<sp/>(nbanks<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>assert<sp/>(fifo_size_incr<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>m_nbanks<sp/>=<sp/>nbanks;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>m_fifo_size_incr<sp/>=<sp/>fifo_size_incr;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>m_fifo.resize<sp/>(nbanks);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interleave_p){<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>configure<sp/>as<sp/>interleaver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nbanks;<sp/>i++)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_fifo[i]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classinterleaver__fifo" kindref="compound" tooltip="template class for interleaver fifo">interleaver_fifo&lt;symbol_type&gt;</ref>(i<sp/>*<sp/>fifo_size_incr);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>configure<sp/>as<sp/>de-interleaver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nbanks;<sp/>i++)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_fifo[nbanks<sp/>-<sp/>1<sp/>-<sp/>i]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classinterleaver__fifo" kindref="compound" tooltip="template class for interleaver fifo">interleaver_fifo&lt;symbol_type&gt;</ref>(i<sp/>*<sp/>fifo_size_incr);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>sync<sp/>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="95" refid="classconvolutional__interleaver_1a4fb48a3b97910049994ea2be0bc91c40" refkind="member"><highlight class="normal"><ref refid="classconvolutional__interleaver_1a4fb48a3b97910049994ea2be0bc91c40" kindref="member">convolutional_interleaver&lt;symbol_type&gt;::~convolutional_interleaver</ref><sp/>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_nbanks;<sp/>i++)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_fifo[i];</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classconvolutional__interleaver_1a758195fcfe60037184a30e39e718126a" refkind="member"><highlight class="normal"><ref refid="classconvolutional__interleaver_1a758195fcfe60037184a30e39e718126a" kindref="member" tooltip="reset interleaver (flushes contents and resets commutator)">convolutional_interleaver&lt;symbol_type&gt;::reset</ref><sp/>()</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>sync<sp/>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_nbanks;<sp/>i++)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>m_fifo[i]-&gt;reset<sp/>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classconvolutional__interleaver_1a95147618a994510cdc46db6f0ee23e27" refkind="member"><highlight class="normal"><ref refid="classconvolutional__interleaver_1a95147618a994510cdc46db6f0ee23e27" kindref="member" tooltip="return end to end delay in symbols (delay through concatenated interleaver / deinterleaver)">convolutional_interleaver&lt;symbol_type&gt;::end_to_end_delay</ref><sp/>()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>m_nbanks<sp/>*<sp/>m_fifo_size_incr;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m<sp/>*<sp/>(m_nbanks<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classconvolutional__interleaver_1afe0e221849f0feb4796f620e1858231b" refkind="member"><highlight class="normal"><ref refid="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" kindref="member" tooltip="transform a single symbol">convolutional_interleaver&lt;symbol_type&gt;::transform</ref><sp/>(symbol_type<sp/>*out,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>symbol_type<sp/>*in,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nsymbols)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>may<sp/>want<sp/>to<sp/>unroll<sp/>this<sp/>a<sp/>couple<sp/>of<sp/>times...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nsymbols;<sp/>i++)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>out[i]<sp/>=<sp/>transform<sp/>(in[i]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_CONVOLUTIONAL_INTERLEAVER_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h"/>
+  </compounddef>
+</doxygen>

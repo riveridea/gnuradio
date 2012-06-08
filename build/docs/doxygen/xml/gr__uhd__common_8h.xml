@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__uhd__common_8h" kind="file">
+    <compoundname>gr_uhd_common.h</compoundname>
+    <includes local="no">uhd/version.hpp</includes>
+    <includes local="no">boost/format.hpp</includes>
+    <includes local="no">stdexcept</includes>
+    <incdepgraph>
+      <node id="13345">
+        <label>boost/format.hpp</label>
+      </node>
+      <node id="13346">
+        <label>stdexcept</label>
+      </node>
+      <node id="13344">
+        <label>uhd/version.hpp</label>
+      </node>
+      <node id="13343">
+        <label>gr_uhd_common.h</label>
+        <link refid="gr_uhd_common.h"/>
+        <childnode refid="13344" relation="include">
+        </childnode>
+        <childnode refid="13345" relation="include">
+        </childnode>
+        <childnode refid="13346" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__uhd__common_8h_1a0c0f40a90b7f243a6f39aa553b285267" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>static void gr_uhd_check_abi</definition>
+        <argsstring>(void)</argsstring>
+        <name>gr_uhd_check_abi</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/lib/gr_uhd_common.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/lib/gr_uhd_common.h" bodystart="29" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/lib/gr_uhd_common.h"/>
+  </compounddef>
+</doxygen>

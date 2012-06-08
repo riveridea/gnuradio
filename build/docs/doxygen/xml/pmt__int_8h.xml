@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="pmt__int_8h" kind="file">
+    <compoundname>pmt_int.h</compoundname>
+    <includes refid="pmt_8h" local="no">gruel/pmt.h</includes>
+    <includes local="no">boost/utility.hpp</includes>
+    <includes local="no">boost/detail/atomic_count.hpp</includes>
+    <includes local="yes">pmt_unv_int.h</includes>
+    <incdepgraph>
+      <node id="15149">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="15148">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="15145">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="15146" relation="include">
+        </childnode>
+        <childnode refid="15148" relation="include">
+        </childnode>
+        <childnode refid="15149" relation="include">
+        </childnode>
+        <childnode refid="15150" relation="include">
+        </childnode>
+        <childnode refid="15151" relation="include">
+        </childnode>
+        <childnode refid="15152" relation="include">
+        </childnode>
+        <childnode refid="15153" relation="include">
+        </childnode>
+        <childnode refid="15156" relation="include">
+        </childnode>
+        <childnode refid="15157" relation="include">
+        </childnode>
+        <childnode refid="15158" relation="include">
+        </childnode>
+      </node>
+      <node id="15153">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="15154" relation="include">
+        </childnode>
+        <childnode refid="15155" relation="include">
+        </childnode>
+      </node>
+      <node id="15146">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="15147" relation="include">
+        </childnode>
+      </node>
+      <node id="15157">
+        <label>stdexcept</label>
+      </node>
+      <node id="15152">
+        <label>string</label>
+      </node>
+      <node id="15160">
+        <label>boost/detail/atomic_count.hpp</label>
+      </node>
+      <node id="15161">
+        <label>pmt_unv_int.h</label>
+      </node>
+      <node id="15154">
+        <label>limits.h</label>
+      </node>
+      <node id="15150">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="15155">
+        <label>wchar.h</label>
+      </node>
+      <node id="15159">
+        <label>boost/utility.hpp</label>
+      </node>
+      <node id="15147">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="15156">
+        <label>iosfwd</label>
+      </node>
+      <node id="15158">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="15144">
+        <label>pmt_int.h</label>
+        <link refid="pmt_int.h"/>
+        <childnode refid="15145" relation="include">
+        </childnode>
+        <childnode refid="15159" relation="include">
+        </childnode>
+        <childnode refid="15160" relation="include">
+        </childnode>
+        <childnode refid="15161" relation="include">
+        </childnode>
+      </node>
+      <node id="15151">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classpmt_1_1pmt__base" prot="public">pmt::pmt_base</innerclass>
+    <innerclass refid="classpmt_1_1pmt__bool" prot="public">pmt::pmt_bool</innerclass>
+    <innerclass refid="classpmt_1_1pmt__symbol" prot="public">pmt::pmt_symbol</innerclass>
+    <innerclass refid="classpmt_1_1pmt__integer" prot="public">pmt::pmt_integer</innerclass>
+    <innerclass refid="classpmt_1_1pmt__uint64" prot="public">pmt::pmt_uint64</innerclass>
+    <innerclass refid="classpmt_1_1pmt__real" prot="public">pmt::pmt_real</innerclass>
+    <innerclass refid="classpmt_1_1pmt__complex" prot="public">pmt::pmt_complex</innerclass>
+    <innerclass refid="classpmt_1_1pmt__null" prot="public">pmt::pmt_null</innerclass>
+    <innerclass refid="classpmt_1_1pmt__pair" prot="public">pmt::pmt_pair</innerclass>
+    <innerclass refid="classpmt_1_1pmt__vector" prot="public">pmt::pmt_vector</innerclass>
+    <innerclass refid="classpmt_1_1pmt__tuple" prot="public">pmt::pmt_tuple</innerclass>
+    <innerclass refid="classpmt_1_1pmt__any" prot="public">pmt::pmt_any</innerclass>
+    <innerclass refid="classpmt_1_1pmt__uniform__vector" prot="public">pmt::pmt_uniform_vector</innerclass>
+    <innernamespace refid="namespacepmt">pmt</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pmt__int_8h_1a5c42c14236dcb8ac2b832e55e9cb55dd" prot="public" static="no">
+        <name>PMT_LOCAL_ALLOCATOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h"/>
+  </compounddef>
+</doxygen>

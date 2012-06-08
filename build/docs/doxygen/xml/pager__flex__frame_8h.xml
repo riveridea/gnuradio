@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="pager__flex__frame_8h" kind="file">
+    <compoundname>pager_flex_frame.h</compoundname>
+    <includes refid="pager__api_8h" local="no">pager_api.h</includes>
+    <includes local="no">boost/shared_ptr.hpp</includes>
+    <incdepgraph>
+      <node id="14684">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="14683">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="14681">
+        <label>pager_flex_frame.h</label>
+        <link refid="pager_flex_frame.h"/>
+        <childnode refid="14682" relation="include">
+        </childnode>
+        <childnode refid="14684" relation="include">
+        </childnode>
+      </node>
+      <node id="14682">
+        <label>pager_api.h</label>
+        <link refid="pager__api_8h"/>
+        <childnode refid="14683" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classpager__flex__frame" prot="public">pager_flex_frame</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pager__flex__frame_8h_1ac446e4e7dd5cdfcf0e83c6b4333d7890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pager__api_8h_1a0466fe431406887375cfa789a185150e" kindref="member">PAGER_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">pager_flex_frame_sptr</ref></type>
+        <definition>PAGER_API pager_flex_frame_sptr pager_make_flex_frame</definition>
+        <argsstring>()</argsstring>
+        <name>pager_make_flex_frame</name>
+        <briefdescription>
+<para>public constructor for <ref refid="classpager__flex__frame" kindref="compound">pager_flex_frame</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_frame.h" line="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_frame.h"/>
+  </compounddef>
+</doxygen>

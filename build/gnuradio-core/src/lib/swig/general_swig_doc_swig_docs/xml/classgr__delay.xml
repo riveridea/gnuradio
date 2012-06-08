@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__delay" kind="class" prot="public">
+    <compoundname>gr_delay</compoundname>
+    <includes refid="gr__delay_8h" local="no">gr_delay.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__delay_1aa5ada0762d5dc4faa2c59b4f12fe8547" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_delay::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__delay_1a2327ee4f25fedd2496fa990ea43eb606" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_delay::d_delta</definition>
+        <argsstring></argsstring>
+        <name>d_delta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__delay_1a2fcf0d7f97232d871c6305525554d9af" prot="private" static="no" mutable="no">
+        <type>gruel::mutex</type>
+        <definition>gruel::mutex gr_delay::d_mutex_delay</definition>
+        <argsstring></argsstring>
+        <name>d_mutex_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__delay_1a750ddfd4ce1739abf8e9d2be5ba85161" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__delay_8h_1a3a856fb6a43e48867ebcd9df5d43486d" kindref="member">gr_delay_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_delay_sptr gr_make_delay</definition>
+        <argsstring>(size_t itemsize, int delay)</argsstring>
+        <name>gr_make_delay</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__delay_1aecb3d44bcaed49f2c9b4dd1716160d07" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_delay::gr_delay</definition>
+        <argsstring>(size_t itemsize, int delay)</argsstring>
+        <name>gr_delay</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__delay_1a8644fb68174be4d03c9a1a75c670870d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_delay::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__delay_1a1b480a7ef7039a053d573bf5cb6d91cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_delay::delay</definition>
+        <argsstring>() const </argsstring>
+        <name>delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__delay_1a2d4928b0b56e292322abddcbac9992a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_delay::set_delay</definition>
+        <argsstring>(int delay)</argsstring>
+        <name>set_delay</name>
+        <param>
+          <type>int</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__delay_1afce2c0a36b859ef44964d6591fbf5978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_delay::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>delay the input by a certain number of samples </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_delay.h" bodystart="39" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classgr__delay_1a2327ee4f25fedd2496fa990ea43eb606" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>d_delta</name></member>
+      <member refid="classgr__delay_1aa5ada0762d5dc4faa2c59b4f12fe8547" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>d_itemsize</name></member>
+      <member refid="classgr__delay_1a2fcf0d7f97232d871c6305525554d9af" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>d_mutex_delay</name></member>
+      <member refid="classgr__delay_1a1b480a7ef7039a053d573bf5cb6d91cd" prot="public" virt="non-virtual"><scope>gr_delay</scope><name>delay</name></member>
+      <member refid="classgr__delay_1a8644fb68174be4d03c9a1a75c670870d" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>forecast</name></member>
+      <member refid="classgr__delay_1afce2c0a36b859ef44964d6591fbf5978" prot="public" virt="non-virtual"><scope>gr_delay</scope><name>general_work</name></member>
+      <member refid="classgr__delay_1aecb3d44bcaed49f2c9b4dd1716160d07" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>gr_delay</name></member>
+      <member refid="classgr__delay_1a750ddfd4ce1739abf8e9d2be5ba85161" prot="private" virt="non-virtual"><scope>gr_delay</scope><name>gr_make_delay</name></member>
+      <member refid="classgr__delay_1a2d4928b0b56e292322abddcbac9992a1" prot="public" virt="non-virtual"><scope>gr_delay</scope><name>set_delay</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

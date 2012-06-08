@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__oscope__sink__x" kind="class" prot="public">
+    <compoundname>gr_oscope_sink_x</compoundname>
+    <derivedcompoundref refid="classgr__oscope__sink__f" prot="public" virt="non-virtual">gr_oscope_sink_f</derivedcompoundref>
+    <includes refid="gr__oscope__sink__x_8h" local="no">gr_oscope_sink_x.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__oscope__sink__x_1a4497ab7216f56cb9b95621a480301328" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_oscope_sink_x::d_sampling_rate</definition>
+        <argsstring></argsstring>
+        <name>d_sampling_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__oscope__sink__x_1acf158a1d3fe024bc67f1af47dc5c0d7c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classgr__oscope__guts" kindref="compound">gr_oscope_guts</ref> *</type>
+        <definition>gr_oscope_guts* gr_oscope_sink_x::d_guts</definition>
+        <argsstring></argsstring>
+        <name>d_guts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a3b5f42aa9d79d5ed2506cf11810c1405" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_sink_x::gr_oscope_sink_x</definition>
+        <argsstring>(const std::string name, gr_io_signature_sptr input_sig, double sampling_rate)</argsstring>
+        <name>gr_oscope_sink_x</name>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>gr_io_signature_sptr</type>
+          <declname>input_sig</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__oscope__sink__x_1ad995f3288e3855eebbc0ebe8df0bbb9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_sink_x::~gr_oscope_sink_x</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_oscope_sink_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1ac3a5d8d328ba1db2cd9913f2f0ac6029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_update_rate</definition>
+        <argsstring>(double update_rate)</argsstring>
+        <name>set_update_rate</name>
+        <param>
+          <type>double</type>
+          <declname>update_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a16a3b6e4b7c028b0303043cbb562cb31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_decimation_count</definition>
+        <argsstring>(int decimation_count)</argsstring>
+        <name>set_decimation_count</name>
+        <param>
+          <type>int</type>
+          <declname>decimation_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a55e2ba4ce16782be63dc3e87fc6a5119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_trigger_channel</definition>
+        <argsstring>(int channel)</argsstring>
+        <name>set_trigger_channel</name>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a7e90e706010f4db7a45a181bc3707753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_trigger_mode</definition>
+        <argsstring>(gr_trigger_mode mode)</argsstring>
+        <name>set_trigger_mode</name>
+        <param>
+          <type><ref refid="gr__trigger__mode_8h_1a7e65c0684a01d162cca66feca6af3701" kindref="member">gr_trigger_mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1ae218ffc2d928920a228917952b976e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_trigger_slope</definition>
+        <argsstring>(gr_trigger_slope slope)</argsstring>
+        <name>set_trigger_slope</name>
+        <param>
+          <type><ref refid="gr__trigger__mode_8h_1ac6b9bf75f9495085c9364ee6af1a82cf" kindref="member">gr_trigger_slope</ref></type>
+          <declname>slope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1ac081ec1b3910da257d41307acb799c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_trigger_level</definition>
+        <argsstring>(double trigger_level)</argsstring>
+        <name>set_trigger_level</name>
+        <param>
+          <type>double</type>
+          <declname>trigger_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a15c77b82bb13ddd320cfe80f3c4fc721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_trigger_level_auto</definition>
+        <argsstring>()</argsstring>
+        <name>set_trigger_level_auto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a3d973f5912f631a21c04336808008ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_sample_rate</definition>
+        <argsstring>(double sample_rate)</argsstring>
+        <name>set_sample_rate</name>
+        <param>
+          <type>double</type>
+          <declname>sample_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a1ffade6dfc4c9902c9bfbbf19629bb2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_x::set_num_channels</definition>
+        <argsstring>(int nchannels)</argsstring>
+        <name>set_num_channels</name>
+        <param>
+          <type>int</type>
+          <declname>nchannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a529708ff61d3c66840be2722ac3b379d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_sink_x::num_channels</definition>
+        <argsstring>() const </argsstring>
+        <name>num_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a16b30720f2d9baae14aa723639def521" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_sink_x::sample_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a32b7adcf5e17ecf358af7ce78988398d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_sink_x::update_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>update_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a9b7672044dafd9723e75a033f16d8818" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_sink_x::get_decimation_count</definition>
+        <argsstring>() const </argsstring>
+        <name>get_decimation_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1aa4925a7202147e2a481e35dd83451dce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_sink_x::get_trigger_channel</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1ab6c31bf8b672de84edc98cd971502edb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__trigger__mode_8h_1a7e65c0684a01d162cca66feca6af3701" kindref="member">gr_trigger_mode</ref></type>
+        <definition>gr_trigger_mode gr_oscope_sink_x::get_trigger_mode</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a4eabd73733c1f3abb5c411e37a851837" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__trigger__mode_8h_1ac6b9bf75f9495085c9364ee6af1a82cf" kindref="member">gr_trigger_slope</ref></type>
+        <definition>gr_trigger_slope gr_oscope_sink_x::get_trigger_slope</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_slope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1afc1ccf53b16ac11d42b8500f4afe2a1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_oscope_sink_x::get_trigger_level</definition>
+        <argsstring>() const </argsstring>
+        <name>get_trigger_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__x_1a1150e5177f62755c639c2a60067bad4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_sink_x::get_samples_per_output_record</definition>
+        <argsstring>() const </argsstring>
+        <name>get_samples_per_output_record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for python oscilloscope module.</para><para>Don&apos;t instantiate this. Use <ref refid="classgr__oscope__sink__f" kindref="compound">gr_oscope_sink_f</ref> or gr_oscope_sink_c instead. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="339">
+        <label>gr_oscope_sink_f</label>
+        <link refid="classgr__oscope__sink__f"/>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="338">
+        <label>gr_oscope_sink_x</label>
+        <link refid="classgr__oscope__sink__x"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="341">
+        <label>gr_oscope_guts</label>
+        <link refid="classgr__oscope__guts"/>
+      </node>
+      <node id="340">
+        <label>gr_oscope_sink_x</label>
+        <link refid="classgr__oscope__sink__x"/>
+        <childnode refid="341" relation="usage">
+          <edgelabel>d_guts</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_x.h" bodystart="38" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classgr__oscope__sink__x_1acf158a1d3fe024bc67f1af47dc5c0d7c" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>d_guts</name></member>
+      <member refid="classgr__oscope__sink__x_1a4497ab7216f56cb9b95621a480301328" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>d_sampling_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a9b7672044dafd9723e75a033f16d8818" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_decimation_count</name></member>
+      <member refid="classgr__oscope__sink__x_1a1150e5177f62755c639c2a60067bad4b" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_samples_per_output_record</name></member>
+      <member refid="classgr__oscope__sink__x_1aa4925a7202147e2a481e35dd83451dce" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_trigger_channel</name></member>
+      <member refid="classgr__oscope__sink__x_1afc1ccf53b16ac11d42b8500f4afe2a1f" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_trigger_level</name></member>
+      <member refid="classgr__oscope__sink__x_1ab6c31bf8b672de84edc98cd971502edb" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_trigger_mode</name></member>
+      <member refid="classgr__oscope__sink__x_1a4eabd73733c1f3abb5c411e37a851837" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>get_trigger_slope</name></member>
+      <member refid="classgr__oscope__sink__x_1a3b5f42aa9d79d5ed2506cf11810c1405" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>gr_oscope_sink_x</name></member>
+      <member refid="classgr__oscope__sink__x_1a529708ff61d3c66840be2722ac3b379d" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>num_channels</name></member>
+      <member refid="classgr__oscope__sink__x_1a16b30720f2d9baae14aa723639def521" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>sample_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a16a3b6e4b7c028b0303043cbb562cb31" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_decimation_count</name></member>
+      <member refid="classgr__oscope__sink__x_1a1ffade6dfc4c9902c9bfbbf19629bb2c" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_num_channels</name></member>
+      <member refid="classgr__oscope__sink__x_1a3d973f5912f631a21c04336808008ef4" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_sample_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a55e2ba4ce16782be63dc3e87fc6a5119" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_trigger_channel</name></member>
+      <member refid="classgr__oscope__sink__x_1ac081ec1b3910da257d41307acb799c11" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_trigger_level</name></member>
+      <member refid="classgr__oscope__sink__x_1a15c77b82bb13ddd320cfe80f3c4fc721" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_trigger_level_auto</name></member>
+      <member refid="classgr__oscope__sink__x_1a7e90e706010f4db7a45a181bc3707753" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_trigger_mode</name></member>
+      <member refid="classgr__oscope__sink__x_1ae218ffc2d928920a228917952b976e50" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_trigger_slope</name></member>
+      <member refid="classgr__oscope__sink__x_1ac3a5d8d328ba1db2cd9913f2f0ac6029" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>set_update_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a32b7adcf5e17ecf358af7ce78988398d" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>update_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1ad995f3288e3855eebbc0ebe8df0bbb9b" prot="public" virt="non-virtual"><scope>gr_oscope_sink_x</scope><name>~gr_oscope_sink_x</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="qtgui__time__sink__c_8h" kind="file">
+    <compoundname>qtgui_time_sink_c.h</compoundname>
+    <includes local="no">Python.h</includes>
+    <includes refid="gr__qtgui__api_8h" local="no">gr_qtgui_api.h</includes>
+    <includes refid="gr__sync__block_8h" local="no">gr_sync_block.h</includes>
+    <includes refid="gr__firdes_8h" local="no">gr_firdes.h</includes>
+    <includes refid="gri__fft_8h" local="no">gri_fft.h</includes>
+    <includes local="no">qapplication.h</includes>
+    <includes local="no">timedisplayform.h</includes>
+    <incdepgraph>
+      <node id="15591">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="15603">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="15602">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="15601" relation="include">
+        </childnode>
+        <childnode refid="15603" relation="include">
+        </childnode>
+        <childnode refid="15591" relation="include">
+        </childnode>
+        <childnode refid="15604" relation="include">
+        </childnode>
+        <childnode refid="15595" relation="include">
+        </childnode>
+        <childnode refid="15605" relation="include">
+        </childnode>
+        <childnode refid="15606" relation="include">
+        </childnode>
+        <childnode refid="15609" relation="include">
+        </childnode>
+        <childnode refid="15610" relation="include">
+        </childnode>
+        <childnode refid="15611" relation="include">
+        </childnode>
+      </node>
+      <node id="15594">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="15595" relation="include">
+        </childnode>
+      </node>
+      <node id="15606">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="15607" relation="include">
+        </childnode>
+        <childnode refid="15608" relation="include">
+        </childnode>
+      </node>
+      <node id="15585">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15587" relation="include">
+        </childnode>
+      </node>
+      <node id="15601">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="15584" relation="include">
+        </childnode>
+      </node>
+      <node id="15588">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15589" relation="include">
+        </childnode>
+        <childnode refid="15596" relation="include">
+        </childnode>
+        <childnode refid="15597" relation="include">
+        </childnode>
+        <childnode refid="15598" relation="include">
+        </childnode>
+        <childnode refid="15599" relation="include">
+        </childnode>
+        <childnode refid="15605" relation="include">
+        </childnode>
+      </node>
+      <node id="15614">
+        <label>cmath</label>
+      </node>
+      <node id="15610">
+        <label>stdexcept</label>
+      </node>
+      <node id="15590">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15591" relation="include">
+        </childnode>
+        <childnode refid="15592" relation="include">
+        </childnode>
+        <childnode refid="15593" relation="include">
+        </childnode>
+        <childnode refid="15594" relation="include">
+        </childnode>
+      </node>
+      <node id="15605">
+        <label>string</label>
+      </node>
+      <node id="15616">
+        <label>boost/thread.hpp</label>
+      </node>
+      <node id="15587">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15588" relation="include">
+        </childnode>
+        <childnode refid="15612" relation="include">
+        </childnode>
+      </node>
+      <node id="15586">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="15584" relation="include">
+        </childnode>
+      </node>
+      <node id="15612">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15602" relation="include">
+        </childnode>
+      </node>
+      <node id="15593">
+        <label>stddef.h</label>
+      </node>
+      <node id="15617">
+        <label>qapplication.h</label>
+      </node>
+      <node id="15598">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="15618">
+        <label>timedisplayform.h</label>
+      </node>
+      <node id="15607">
+        <label>limits.h</label>
+      </node>
+      <node id="15604">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="15589">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15590" relation="include">
+        </childnode>
+      </node>
+      <node id="15581">
+        <label>qtgui_time_sink_c.h</label>
+        <link refid="qtgui_time_sink_c.h"/>
+        <childnode refid="15582" relation="include">
+        </childnode>
+        <childnode refid="15583" relation="include">
+        </childnode>
+        <childnode refid="15585" relation="include">
+        </childnode>
+        <childnode refid="15613" relation="include">
+        </childnode>
+        <childnode refid="15615" relation="include">
+        </childnode>
+        <childnode refid="15617" relation="include">
+        </childnode>
+        <childnode refid="15618" relation="include">
+        </childnode>
+      </node>
+      <node id="15583">
+        <label>gr_qtgui_api.h</label>
+        <link refid="gr__qtgui__api_8h"/>
+        <childnode refid="15584" relation="include">
+        </childnode>
+      </node>
+      <node id="15608">
+        <label>wchar.h</label>
+      </node>
+      <node id="15582">
+        <label>Python.h</label>
+      </node>
+      <node id="15599">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15600" relation="include">
+        </childnode>
+        <childnode refid="15602" relation="include">
+        </childnode>
+      </node>
+      <node id="15592">
+        <label>vector</label>
+      </node>
+      <node id="15597">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="15584">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="15609">
+        <label>iosfwd</label>
+      </node>
+      <node id="15615">
+        <label>gri_fft.h</label>
+        <link refid="gri__fft_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15594" relation="include">
+        </childnode>
+        <childnode refid="15616" relation="include">
+        </childnode>
+      </node>
+      <node id="15611">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="15596">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15591" relation="include">
+        </childnode>
+      </node>
+      <node id="15595">
+        <label>complex</label>
+      </node>
+      <node id="15613">
+        <label>gr_firdes.h</label>
+        <link refid="gr__firdes_8h"/>
+        <childnode refid="15586" relation="include">
+        </childnode>
+        <childnode refid="15592" relation="include">
+        </childnode>
+        <childnode refid="15614" relation="include">
+        </childnode>
+        <childnode refid="15594" relation="include">
+        </childnode>
+      </node>
+      <node id="15600">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="15601" relation="include">
+        </childnode>
+        <childnode refid="15602" relation="include">
+        </childnode>
+        <childnode refid="15591" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classqtgui__time__sink__c" prot="public">qtgui_time_sink_c</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="qtgui__time__sink__c_8h_1a0f9cd795c7a010e2e778130960122eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__qtgui__api_8h_1a630d282784934fe850aee3162ce6515b" kindref="member">GR_QTGUI_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">qtgui_time_sink_c_sptr</ref></type>
+        <definition>GR_QTGUI_API qtgui_time_sink_c_sptr qtgui_make_time_sink_c</definition>
+        <argsstring>(int size, double bw, const std::string &amp;name, int nconnectons=1, QWidget *parent=NULL)</argsstring>
+        <name>qtgui_make_time_sink_c</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bw</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nconnectons</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_c.h" line="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_c.h"/>
+  </compounddef>
+</doxygen>

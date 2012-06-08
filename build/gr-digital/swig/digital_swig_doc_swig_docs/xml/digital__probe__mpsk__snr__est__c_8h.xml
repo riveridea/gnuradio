@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__probe__mpsk__snr__est__c_8h" kind="file">
+    <compoundname>digital_probe_mpsk_snr_est_c.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes local="no">gr_sync_block.h</includes>
+    <includes refid="digital__impl__mpsk__snr__est_8h" local="no">digital_impl_mpsk_snr_est.h</includes>
+    <incdepgraph>
+      <node id="362">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h</label>
+        <link refid="digital_probe_mpsk_snr_est_c.h"/>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="365">
+        <label>gr_sync_block.h</label>
+      </node>
+      <node id="363">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="364" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>digital_impl_mpsk_snr_est.h</label>
+        <link refid="digital__impl__mpsk__snr__est_8h"/>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__probe__mpsk__snr__est__c" prot="public">digital_probe_mpsk_snr_est_c</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classdigital__probe__mpsk__snr__est__c" kindref="compound">digital_probe_mpsk_snr_est_c</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;digital_probe_mpsk_snr_est_c&gt; digital_probe_mpsk_snr_est_c_sptr</definition>
+        <argsstring></argsstring>
+        <name>digital_probe_mpsk_snr_est_c_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__probe__mpsk__snr__est__c_8h_1a24bdbc18709897b5bb6cc9ca341fd7e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" kindref="member">digital_probe_mpsk_snr_est_c_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_probe_mpsk_snr_est_c_sptr digital_make_probe_mpsk_snr_est_c</definition>
+        <argsstring>(snr_est_type_t type, int msg_nsamples=10000, double alpha=0.001)</argsstring>
+        <name>digital_make_probe_mpsk_snr_est_c</name>
+        <param>
+          <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msg_nsamples</declname>
+          <defval>10000</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function returning shared pointer of this class</para><para>Parameters:</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of estimator to use <ref refid="digital__impl__mpsk__snr__est_8h_1ref_snr_est_types" kindref="member">snr_est_type_t</ref> for details about the available types. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg_nsamples</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[not implemented yet] after this many samples, a message containing the SNR (key=&apos;snr&apos;) will be sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the update rate of internal running average calculations. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2011<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_DIGITAL_PROBE_MPSK_SNR_EST_C_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_DIGITAL_PROBE_MPSK_SNR_EST_C_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="digital__api_8h" kindref="compound">digital_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_sync_block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="digital__impl__mpsk__snr__est_8h" kindref="compound">digital_impl_mpsk_snr_est.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdigital__probe__mpsk__snr__est__c" kindref="compound" tooltip="A probe for computing SNR of a signal.">digital_probe_mpsk_snr_est_c</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;digital_probe_mpsk_snr_est_c&gt;<sp/><ref refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" kindref="member">digital_probe_mpsk_snr_est_c_sptr</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" kindref="member">digital_probe_mpsk_snr_est_c_sptr</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="digital__probe__mpsk__snr__est__c_8h_1a24bdbc18709897b5bb6cc9ca341fd7e4" kindref="member">digital_make_probe_mpsk_snr_est_c</ref>(<ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/><ref refid="classdigital__probe__mpsk__snr__est__c_1a7c916b326792350a0169dfe1ab0a8afe" kindref="member" tooltip="Return the type of estimator in use.">type</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msg_nsamples=10000,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classdigital__probe__mpsk__snr__est__c_1ac3ec88dfad49c85b12e2f63a9be38f89" kindref="member" tooltip="Get the running-average coefficient.">alpha</ref>=0.001);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"></codeline>
+<codeline lineno="51" refid="classdigital__probe__mpsk__snr__est__c" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="classdigital__probe__mpsk__snr__est__c" kindref="compound" tooltip="A probe for computing SNR of a signal.">digital_probe_mpsk_snr_est_c</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_sync_block</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/>d_type;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_nsamples,<sp/>d_count;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d_alpha;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classdigital__impl__mpsk__snr__est" kindref="compound" tooltip="A parent class for SNR estimators, specifically for M-PSK signals in AWGN channels.">digital_impl_mpsk_snr_est</ref><sp/>*d_snr_est;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//d_key<sp/>is<sp/>the<sp/>message<sp/>name,<sp/>&apos;snr&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>pmt::pmt_t<sp/>d_key;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" kindref="member">digital_probe_mpsk_snr_est_c_sptr</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="digital__probe__mpsk__snr__est__c_8h_1a24bdbc18709897b5bb6cc9ca341fd7e4" kindref="member">digital_make_probe_mpsk_snr_est_c</ref>(<ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/>type,<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msg_nsamples,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="classdigital__probe__mpsk__snr__est__c" kindref="compound" tooltip="A probe for computing SNR of a signal.">digital_probe_mpsk_snr_est_c</ref>(<ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/>type,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msg_nsamples,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>~<ref refid="classdigital__probe__mpsk__snr__est__c" kindref="compound" tooltip="A probe for computing SNR of a signal.">digital_probe_mpsk_snr_est_c</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>snr();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/>type()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>msg_nsample()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_type(<ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member" tooltip="Enum for the type of SNR estimator to select.">snr_est_type_t</ref><sp/>t);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_msg_nsample(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_alpha(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>alpha);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_DIGITAL_PROBE_MPSK_SNR_EST_C_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__sliding__correlator" kind="class" prot="public">
+    <compoundname>atsci_sliding_correlator</compoundname>
+    <includes refid="atsci__sliding__correlator_8h" local="no">atsci_sliding_correlator.h</includes>
+    <innerclass refid="classatsci__sliding__correlator_1_1shift__reg" prot="private">atsci_sliding_correlator::shift_reg</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classatsci__sliding__correlator_1a39a1491be0cc9860293445460fd05f4f" prot="private" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long atsci_sliding_correlator::srblock</definition>
+        <argsstring></argsstring>
+        <name>srblock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1aa8bb7268bafb6997d23b6835c6a763e7" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_sliding_correlator::bits_per_char</definition>
+        <argsstring></argsstring>
+        <name>bits_per_char</name>
+        <initializer> 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1ae061d5da2cd544e30cca90922b52bb34" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_sliding_correlator::srblock_bitsize</definition>
+        <argsstring></argsstring>
+        <name>srblock_bitsize</name>
+        <initializer> sizeof (srblock) * bits_per_char</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1a61e90d960e4d20196afaccadb55a17c7" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_sliding_correlator::NSRBLOCKS</definition>
+        <argsstring></argsstring>
+        <name>NSRBLOCKS</name>
+        <initializer> (511 + srblock_bitsize - 1) / srblock_bitsize</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1af4a7eaf373bfc8e68a8cb688693e5434" prot="private" static="no" mutable="no">
+        <type>shift_reg</type>
+        <definition>shift_reg atsci_sliding_correlator::mask</definition>
+        <argsstring></argsstring>
+        <name>mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1a8e565223c7f13cf89b17d745ad12ba68" prot="private" static="no" mutable="no">
+        <type>shift_reg</type>
+        <definition>shift_reg atsci_sliding_correlator::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="81" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__sliding__correlator_1a7e0595bd9486b2a508718eb51beca9a2" prot="private" static="no" mutable="no">
+        <type>shift_reg</type>
+        <definition>shift_reg atsci_sliding_correlator::and_mask</definition>
+        <argsstring></argsstring>
+        <name>and_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__sliding__correlator_1aa2074605b86f8c6b88cfda8d0a9ad56f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_sliding_correlator::atsci_sliding_correlator</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_sliding_correlator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__sliding__correlator_1acd1d7213cc2fbc010bce91a0354bcf12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>atsci_sliding_correlator::~atsci_sliding_correlator</definition>
+        <argsstring>()</argsstring>
+        <name>~atsci_sliding_correlator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__sliding__correlator_1acf24b0fdb9a50cae3cd16a25efb741b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsci_sliding_correlator::input_bit</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>input_bit</name>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>input hard decision bit, return correlation (0,511) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__sliding__correlator_1a26857c435718b729aca8cfba9f180514" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsci_sliding_correlator::input_int</definition>
+        <argsstring>(int sample)</argsstring>
+        <name>input_int</name>
+        <param>
+          <type>int</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>input sample, return correlation (0,511) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__sliding__correlator_1a3ad9061e99f53468476069dacb29cacc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsci_sliding_correlator::input_float</definition>
+        <argsstring>(float sample)</argsstring>
+        <name>input_float</name>
+        <param>
+          <type>float</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>input sample, return correlation (0,511) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__sliding__correlator_1ab59826df4797d2a48cdc1265e02a6d7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsci_sliding_correlator::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>look for the PN 511 field sync pattern </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sliding_correlator.h" bodystart="35" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classatsci__sliding__correlator_1a7e0595bd9486b2a508718eb51beca9a2" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>and_mask</name></member>
+      <member refid="classatsci__sliding__correlator_1aa2074605b86f8c6b88cfda8d0a9ad56f" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>atsci_sliding_correlator</name></member>
+      <member refid="classatsci__sliding__correlator_1aa8bb7268bafb6997d23b6835c6a763e7" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>bits_per_char</name></member>
+      <member refid="classatsci__sliding__correlator_1a8e565223c7f13cf89b17d745ad12ba68" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>input</name></member>
+      <member refid="classatsci__sliding__correlator_1acf24b0fdb9a50cae3cd16a25efb741b0" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>input_bit</name></member>
+      <member refid="classatsci__sliding__correlator_1a3ad9061e99f53468476069dacb29cacc" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>input_float</name></member>
+      <member refid="classatsci__sliding__correlator_1a26857c435718b729aca8cfba9f180514" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>input_int</name></member>
+      <member refid="classatsci__sliding__correlator_1af4a7eaf373bfc8e68a8cb688693e5434" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>mask</name></member>
+      <member refid="classatsci__sliding__correlator_1a61e90d960e4d20196afaccadb55a17c7" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>NSRBLOCKS</name></member>
+      <member refid="classatsci__sliding__correlator_1ab59826df4797d2a48cdc1265e02a6d7b" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>reset</name></member>
+      <member refid="classatsci__sliding__correlator_1a39a1491be0cc9860293445460fd05f4f" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>srblock</name></member>
+      <member refid="classatsci__sliding__correlator_1ae061d5da2cd544e30cca90922b52bb34" prot="private" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>srblock_bitsize</name></member>
+      <member refid="classatsci__sliding__correlator_1acd1d7213cc2fbc010bce91a0354bcf12" prot="public" virt="non-virtual"><scope>atsci_sliding_correlator</scope><name>~atsci_sliding_correlator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

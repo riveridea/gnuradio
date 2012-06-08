@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__randomizer" kind="class" prot="public">
+    <compoundname>atsci_randomizer</compoundname>
+    <includes refid="atsci__randomizer_8h" local="no">atsci_randomizer.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsci__randomizer_1a1060bf9f7a3c4a8e786274178c629c1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class qa_atsci_randomizer</definition>
+        <argsstring></argsstring>
+        <name>qa_atsci_randomizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsci__randomizer_1abb1a0ed64cddd992dfbb242c1cc3b22c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int atsci_randomizer::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="89" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classatsci__randomizer_1ac55a872fffb48985f65f4fcacaa8ef15" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int atsci_randomizer::PRELOAD_VALUE</definition>
+        <argsstring></argsstring>
+        <name>PRELOAD_VALUE</name>
+        <initializer> 0x018f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__randomizer_1a8ea229f42473de524c0ff1bc36a2d127" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int atsci_randomizer::MASK</definition>
+        <argsstring></argsstring>
+        <name>MASK</name>
+        <initializer> 0xa638</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__randomizer_1ad77916e194243160aedddef4a305a029" prot="private" static="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_randomizer::s_output_map[1&lt;&lt; 14]</definition>
+        <argsstring>[1&lt;&lt; 14]</argsstring>
+        <name>s_output_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__randomizer_1ac005e5e7678a9abb8da8946bc978a320" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool atsci_randomizer::s_output_map_initialized_p</definition>
+        <argsstring></argsstring>
+        <name>s_output_map_initialized_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="94" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__randomizer_1ada8bf463b636b8e8bd845c8556381333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_randomizer::atsci_randomizer</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_randomizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a1865bb2ca37c9b69aaa8a7af63f169a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_randomizer::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>reset randomizer LFSR </para>        </briefdescription>
+        <detaileddescription>
+<para>must be called during the Data Segment Sync interval prior to the first data segment. I.e., the LFSR is reset prior to the first field of each VSB data frame. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1ab8fb39a99fd894aab795122ee558bd89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_randomizer::randomize</definition>
+        <argsstring>(atsc_mpeg_packet_no_sync &amp;out, const atsc_mpeg_packet &amp;in)</argsstring>
+        <name>randomize</name>
+        <param>
+          <type><ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>randomize (whiten) mpeg packet and remove leading MPEG-2 sync byte </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a65f4416b52d2d298dec86b3a69c94948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_randomizer::derandomize</definition>
+        <argsstring>(atsc_mpeg_packet &amp;out, const atsc_mpeg_packet_no_sync &amp;in)</argsstring>
+        <name>derandomize</name>
+        <param>
+          <type><ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>derandomize (de-whiten) mpeg packet and add leading MPEG-2 sync byte </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a45e77aa7fce62f26bd4de7e0320c93ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int atsci_randomizer::state</definition>
+        <argsstring>() const </argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classatsci__randomizer_1aed6d396116404d90abbf3e322c93fb23" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>static void atsci_randomizer::initialize_output_map</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_output_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1aa1633f9671989b421d2cab5c60a4ec48" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char atsci_randomizer::slow_output_map</definition>
+        <argsstring>(int st)</argsstring>
+        <name>slow_output_map</name>
+        <param>
+          <type>int</type>
+          <declname>st</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a84b35c3e6e63ec6dc89abf764312aed9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char atsci_randomizer::fast_output_map</definition>
+        <argsstring>(int st)</argsstring>
+        <name>fast_output_map</name>
+        <param>
+          <type>int</type>
+          <declname>st</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="62" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsci__randomizer_1aa73a204cd12b78297def08bb222c91f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_randomizer::output</definition>
+        <argsstring>()</argsstring>
+        <name>output</name>
+        <briefdescription>
+<para>return current output value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a884c2cc2d31fd2b8a7b795f8f040b828" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_randomizer::clk</definition>
+        <argsstring>()</argsstring>
+        <name>clk</name>
+        <briefdescription>
+<para>clock LFSR; advance to next state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__randomizer_1a656f6253ca1acc6f996a2d3cb2a4007f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_randomizer::output_and_clk</definition>
+        <argsstring>()</argsstring>
+        <name>output_and_clk</name>
+        <briefdescription>
+<para>return current output value and advance to next state </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="83" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC data &quot;whitener&quot;. </para>    </briefdescription>
+    <detaileddescription>
+<para>The data randomizer described in ATSC standard A/53B. See figure D4 on page 54. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h" bodystart="36" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classatsci__randomizer_1ada8bf463b636b8e8bd845c8556381333" prot="public" virt="non-virtual"><scope>atsci_randomizer</scope><name>atsci_randomizer</name></member>
+      <member refid="classatsci__randomizer_1a884c2cc2d31fd2b8a7b795f8f040b828" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>clk</name></member>
+      <member refid="classatsci__randomizer_1abb1a0ed64cddd992dfbb242c1cc3b22c" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>d_state</name></member>
+      <member refid="classatsci__randomizer_1a65f4416b52d2d298dec86b3a69c94948" prot="public" virt="non-virtual"><scope>atsci_randomizer</scope><name>derandomize</name></member>
+      <member refid="classatsci__randomizer_1a84b35c3e6e63ec6dc89abf764312aed9" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>fast_output_map</name></member>
+      <member refid="classatsci__randomizer_1aed6d396116404d90abbf3e322c93fb23" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>initialize_output_map</name></member>
+      <member refid="classatsci__randomizer_1a8ea229f42473de524c0ff1bc36a2d127" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>MASK</name></member>
+      <member refid="classatsci__randomizer_1aa73a204cd12b78297def08bb222c91f0" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>output</name></member>
+      <member refid="classatsci__randomizer_1a656f6253ca1acc6f996a2d3cb2a4007f" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>output_and_clk</name></member>
+      <member refid="classatsci__randomizer_1ac55a872fffb48985f65f4fcacaa8ef15" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>PRELOAD_VALUE</name></member>
+      <member refid="classatsci__randomizer_1a1060bf9f7a3c4a8e786274178c629c1b" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>qa_atsci_randomizer</name></member>
+      <member refid="classatsci__randomizer_1ab8fb39a99fd894aab795122ee558bd89" prot="public" virt="non-virtual"><scope>atsci_randomizer</scope><name>randomize</name></member>
+      <member refid="classatsci__randomizer_1a1865bb2ca37c9b69aaa8a7af63f169a2" prot="public" virt="non-virtual"><scope>atsci_randomizer</scope><name>reset</name></member>
+      <member refid="classatsci__randomizer_1ad77916e194243160aedddef4a305a029" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>s_output_map</name></member>
+      <member refid="classatsci__randomizer_1ac005e5e7678a9abb8da8946bc978a320" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>s_output_map_initialized_p</name></member>
+      <member refid="classatsci__randomizer_1aa1633f9671989b421d2cab5c60a4ec48" prot="private" virt="non-virtual"><scope>atsci_randomizer</scope><name>slow_output_map</name></member>
+      <member refid="classatsci__randomizer_1a45e77aa7fce62f26bd4de7e0320c93ea" prot="public" virt="non-virtual"><scope>atsci_randomizer</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

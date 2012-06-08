@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="trellis__viterbi__combined__ib_8h" kind="file">
+    <compoundname>trellis_viterbi_combined_ib.h</compoundname>
+    <includes refid="trellis__api_8h" local="no">trellis_api.h</includes>
+    <includes refid="fsm_8h" local="yes">fsm.h</includes>
+    <includes local="no">gr_block.h</includes>
+    <includes refid="calc__metric_8h" local="yes">calc_metric.h</includes>
+    <includes refid="core__algorithms_8h" local="yes">core_algorithms.h</includes>
+    <incdepgraph>
+      <node id="506">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="515">
+        <label>cmath</label>
+      </node>
+      <node id="516">
+        <label>interleaver.h</label>
+        <link refid="interleaver_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>gr_complex.h</label>
+      </node>
+      <node id="504">
+        <label>trellis_viterbi_combined_ib.h</label>
+        <link refid="trellis_viterbi_combined_ib.h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>gr_block.h</label>
+      </node>
+      <node id="508">
+        <label>vector</label>
+      </node>
+      <node id="514">
+        <label>core_algorithms.h</label>
+        <link refid="core__algorithms_8h"/>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>trellis_api.h</label>
+        <link refid="trellis__api_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>iosfwd</label>
+      </node>
+      <node id="513">
+        <label>digital_metric_type.h</label>
+      </node>
+      <node id="511">
+        <label>calc_metric.h</label>
+        <link refid="calc__metric_8h"/>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classtrellis__viterbi__combined__ib" prot="public">trellis_viterbi_combined_ib</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classtrellis__viterbi__combined__ib" kindref="compound">trellis_viterbi_combined_ib</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;trellis_viterbi_combined_ib&gt; trellis_viterbi_combined_ib_sptr</definition>
+        <argsstring></argsstring>
+        <name>trellis_viterbi_combined_ib_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_ib.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_ib.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="trellis__viterbi__combined__ib_8h_1a1bd5a4c7d0fc765f9567122042758c7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref> <ref refid="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" kindref="member">trellis_viterbi_combined_ib_sptr</ref></type>
+        <definition>TRELLIS_API trellis_viterbi_combined_ib_sptr trellis_make_viterbi_combined_ib</definition>
+        <argsstring>(const fsm &amp;FSM, int K, int S0, int SK, int D, const std::vector&lt; int &gt; &amp;TABLE, trellis_metric_type_t TYPE)</argsstring>
+        <name>trellis_make_viterbi_combined_ib</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_ib.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WARNING:<sp/>this<sp/>file<sp/>is<sp/>machine<sp/>generated.<sp/><sp/>Edits<sp/>will<sp/>be<sp/>over<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_TRELLIS_VITERBI_COMBINED_IB_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_TRELLIS_VITERBI_COMBINED_IB_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="trellis__api_8h" kindref="compound">trellis_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fsm_8h" kindref="compound">fsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="calc__metric_8h" kindref="compound">calc_metric.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="core__algorithms_8h" kindref="compound">core_algorithms.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrellis__viterbi__combined__ib" kindref="compound">trellis_viterbi_combined_ib</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;trellis_viterbi_combined_ib&gt;<sp/><ref refid="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" kindref="member">trellis_viterbi_combined_ib_sptr</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref><sp/><ref refid="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" kindref="member">trellis_viterbi_combined_ib_sptr</ref><sp/><ref refid="trellis__viterbi__combined__ib_8h_1a1bd5a4c7d0fc765f9567122042758c7a" kindref="member">trellis_make_viterbi_combined_ib</ref><sp/>(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfsm" kindref="compound" tooltip="Finite State Machine Specification class.">fsm</ref><sp/>&amp;<ref refid="classtrellis__viterbi__combined__ib_1a361cd5594a78644af504684c5c3861b5" kindref="member">FSM</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a8612914607bb2f1602dafecd1746766e" kindref="member">K</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1aacee8a50e5a80324cdf579d1042ce623" kindref="member">S0</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a3f7f03b1c414ddfb2967f6b498645d31" kindref="member">SK</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a1658c99d85427e76616bb2d7cfd31e36" kindref="member">D</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>&amp;<ref refid="classtrellis__viterbi__combined__ib_1a30c87b572a72790a6af13562412a329e" kindref="member">TABLE</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>trellis_metric_type_t<sp/><ref refid="classtrellis__viterbi__combined__ib_1a3c54bcca73799c81fedb6c3116c3db04" kindref="member">TYPE</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classtrellis__viterbi__combined__ib" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref><sp/><ref refid="classtrellis__viterbi__combined__ib" kindref="compound">trellis_viterbi_combined_ib</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_block</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classfsm" kindref="compound" tooltip="Finite State Machine Specification class.">fsm</ref><sp/>d_FSM;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_K;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_S0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_SK;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_D;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/>d_TABLE;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>trellis_metric_type_t<sp/>d_TYPE;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;int&gt;<sp/>d_trace;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref><sp/><ref refid="trellis__viterbi__combined__ib_8h_1aa6be0841880f43ffabb26e822c594f09" kindref="member">trellis_viterbi_combined_ib_sptr</ref><sp/><ref refid="trellis__viterbi__combined__ib_8h_1a1bd5a4c7d0fc765f9567122042758c7a" kindref="member">trellis_make_viterbi_combined_ib</ref><sp/>(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfsm" kindref="compound" tooltip="Finite State Machine Specification class.">fsm</ref><sp/>&amp;FSM,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>K,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>S0,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SK,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>&amp;TABLE,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>trellis_metric_type_t<sp/>TYPE);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classtrellis__viterbi__combined__ib" kindref="compound">trellis_viterbi_combined_ib</ref><sp/>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfsm" kindref="compound" tooltip="Finite State Machine Specification class.">fsm</ref><sp/>&amp;FSM,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>K,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>S0,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SK,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>&amp;TABLE,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>trellis_metric_type_t<sp/>TYPE);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="classtrellis__viterbi__combined__ib_1a361cd5594a78644af504684c5c3861b5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classfsm" kindref="compound" tooltip="Finite State Machine Specification class.">fsm</ref><sp/><ref refid="classtrellis__viterbi__combined__ib_1a361cd5594a78644af504684c5c3861b5" kindref="member">FSM</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_FSM;<sp/>}</highlight></codeline>
+<codeline lineno="83" refid="classtrellis__viterbi__combined__ib_1a8612914607bb2f1602dafecd1746766e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a8612914607bb2f1602dafecd1746766e" kindref="member">K</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_K;<sp/>}</highlight></codeline>
+<codeline lineno="84" refid="classtrellis__viterbi__combined__ib_1aacee8a50e5a80324cdf579d1042ce623" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1aacee8a50e5a80324cdf579d1042ce623" kindref="member">S0</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_S0;<sp/>}</highlight></codeline>
+<codeline lineno="85" refid="classtrellis__viterbi__combined__ib_1a3f7f03b1c414ddfb2967f6b498645d31" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a3f7f03b1c414ddfb2967f6b498645d31" kindref="member">SK</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_SK;<sp/>}</highlight></codeline>
+<codeline lineno="86" refid="classtrellis__viterbi__combined__ib_1a1658c99d85427e76616bb2d7cfd31e36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtrellis__viterbi__combined__ib_1a1658c99d85427e76616bb2d7cfd31e36" kindref="member">D</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_D;<sp/>}</highlight></codeline>
+<codeline lineno="87" refid="classtrellis__viterbi__combined__ib_1a30c87b572a72790a6af13562412a329e" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classtrellis__viterbi__combined__ib_1a30c87b572a72790a6af13562412a329e" kindref="member">TABLE</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_TABLE;<sp/>}</highlight></codeline>
+<codeline lineno="88" refid="classtrellis__viterbi__combined__ib_1a3c54bcca73799c81fedb6c3116c3db04" refkind="member"><highlight class="normal"><sp/><sp/>trellis_metric_type_t<sp/><ref refid="classtrellis__viterbi__combined__ib_1a3c54bcca73799c81fedb6c3116c3db04" kindref="member">TYPE</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_TYPE;<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;int&gt;<sp/>trace<sp/>()<sp/>const<sp/>{<sp/>return<sp/>d_trace;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_TABLE<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>&amp;table);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>forecast<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_int<sp/>&amp;ninput_items_required);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>general_work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_int<sp/>&amp;ninput_items,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_ib.h"/>
+  </compounddef>
+</doxygen>

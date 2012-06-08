@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__add__ii" kind="class" prot="public">
+    <compoundname>gr_add_ii</compoundname>
+    <includes refid="gr__add__ii_8h" local="no">gr_add_ii.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__add__ii_1ab26133ff0840d85962fe5495b6657037" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_add_ii::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__add__ii_1aed2d899bf243c399109d0124124dded7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__add__ii_8h_1aca0e2987f930c0abcd3fc8d7251291f3" kindref="member">gr_add_ii_sptr</ref></type>
+        <definition>GR_CORE_API gr_add_ii_sptr gr_make_add_ii</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_make_add_ii</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__add__ii_1ab7dfb605ca31473e1884aa5fdde89452" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_add_ii::gr_add_ii</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_add_ii</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__add__ii_1a30f1d219235e6ec98bf0910f6a3e25bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_add_ii::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output = sum (input_0, input_1, ...)</para><para>Add across all input streams. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_add_ii.h" bodystart="42" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgr__add__ii_1ab26133ff0840d85962fe5495b6657037" prot="private" virt="non-virtual"><scope>gr_add_ii</scope><name>d_vlen</name></member>
+      <member refid="classgr__add__ii_1ab7dfb605ca31473e1884aa5fdde89452" prot="private" virt="non-virtual"><scope>gr_add_ii</scope><name>gr_add_ii</name></member>
+      <member refid="classgr__add__ii_1aed2d899bf243c399109d0124124dded7" prot="private" virt="non-virtual"><scope>gr_add_ii</scope><name>gr_make_add_ii</name></member>
+      <member refid="classgr__add__ii_1a30f1d219235e6ec98bf0910f6a3e25bf" prot="public" virt="non-virtual"><scope>gr_add_ii</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

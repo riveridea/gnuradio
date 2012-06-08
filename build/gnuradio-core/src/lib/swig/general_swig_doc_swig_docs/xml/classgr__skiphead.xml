@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__skiphead" kind="class" prot="public">
+    <compoundname>gr_skiphead</compoundname>
+    <includes refid="gr__skiphead_8h" local="no">gr_skiphead.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__skiphead_1abf91323a36d51225855424c738339743" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_skiphead::d_nitems_to_skip</definition>
+        <argsstring></argsstring>
+        <name>d_nitems_to_skip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__skiphead_1ab96a02eb44017afec8067ec15d08cd5b" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_skiphead::d_nitems</definition>
+        <argsstring></argsstring>
+        <name>d_nitems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__skiphead_1af5d69ea496976e89e74a1615e2ce2351" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__skiphead_8h_1a1df191cb7e3fd15ce5f9a0c32578cfe3" kindref="member">gr_skiphead_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_skiphead_sptr gr_make_skiphead</definition>
+        <argsstring>(size_t itemsize, uint64_t nitems_to_skip)</argsstring>
+        <name>gr_make_skiphead</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>nitems_to_skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__skiphead_1a90a253fa0d35e4403c5d5ca6071c8500" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_skiphead::gr_skiphead</definition>
+        <argsstring>(size_t itemsize, uint64_t nitems_to_skip)</argsstring>
+        <name>gr_skiphead</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>nitems_to_skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__skiphead_1a91b916781b405d2982db9aab2e16f868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_skiphead::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>skips the first N items, from then on copies items to the output</para><para>Useful for building test cases and sources which have metadata or junk at the start </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_skiphead.h" bodystart="44" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgr__skiphead_1ab96a02eb44017afec8067ec15d08cd5b" prot="private" virt="non-virtual"><scope>gr_skiphead</scope><name>d_nitems</name></member>
+      <member refid="classgr__skiphead_1abf91323a36d51225855424c738339743" prot="private" virt="non-virtual"><scope>gr_skiphead</scope><name>d_nitems_to_skip</name></member>
+      <member refid="classgr__skiphead_1a91b916781b405d2982db9aab2e16f868" prot="public" virt="non-virtual"><scope>gr_skiphead</scope><name>general_work</name></member>
+      <member refid="classgr__skiphead_1af5d69ea496976e89e74a1615e2ce2351" prot="private" virt="non-virtual"><scope>gr_skiphead</scope><name>gr_make_skiphead</name></member>
+      <member refid="classgr__skiphead_1a90a253fa0d35e4403c5d5ca6071c8500" prot="private" virt="non-virtual"><scope>gr_skiphead</scope><name>gr_skiphead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

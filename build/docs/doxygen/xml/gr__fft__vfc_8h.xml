@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__fft__vfc_8h" kind="file">
+    <compoundname>gr_fft_vfc.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__sync__block_8h" local="no">gr_sync_block.h</includes>
+    <incdepgraph>
+      <node id="7290">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="7302">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="7301">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7302" relation="include">
+        </childnode>
+        <childnode refid="7290" relation="include">
+        </childnode>
+        <childnode refid="7303" relation="include">
+        </childnode>
+        <childnode refid="7294" relation="include">
+        </childnode>
+        <childnode refid="7304" relation="include">
+        </childnode>
+        <childnode refid="7305" relation="include">
+        </childnode>
+        <childnode refid="7308" relation="include">
+        </childnode>
+        <childnode refid="7309" relation="include">
+        </childnode>
+        <childnode refid="7310" relation="include">
+        </childnode>
+      </node>
+      <node id="7282">
+        <label>gr_fft_vfc.h</label>
+        <link refid="gr_fft_vfc.h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7285" relation="include">
+        </childnode>
+      </node>
+      <node id="7293">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="7294" relation="include">
+        </childnode>
+      </node>
+      <node id="7305">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="7306" relation="include">
+        </childnode>
+        <childnode refid="7307" relation="include">
+        </childnode>
+      </node>
+      <node id="7285">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7286" relation="include">
+        </childnode>
+      </node>
+      <node id="7300">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="7284" relation="include">
+        </childnode>
+      </node>
+      <node id="7287">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7295" relation="include">
+        </childnode>
+        <childnode refid="7296" relation="include">
+        </childnode>
+        <childnode refid="7297" relation="include">
+        </childnode>
+        <childnode refid="7298" relation="include">
+        </childnode>
+        <childnode refid="7304" relation="include">
+        </childnode>
+      </node>
+      <node id="7309">
+        <label>stdexcept</label>
+      </node>
+      <node id="7289">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7290" relation="include">
+        </childnode>
+        <childnode refid="7291" relation="include">
+        </childnode>
+        <childnode refid="7292" relation="include">
+        </childnode>
+        <childnode refid="7293" relation="include">
+        </childnode>
+      </node>
+      <node id="7304">
+        <label>string</label>
+      </node>
+      <node id="7286">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7287" relation="include">
+        </childnode>
+        <childnode refid="7311" relation="include">
+        </childnode>
+      </node>
+      <node id="7283">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="7284" relation="include">
+        </childnode>
+      </node>
+      <node id="7311">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7301" relation="include">
+        </childnode>
+      </node>
+      <node id="7292">
+        <label>stddef.h</label>
+      </node>
+      <node id="7297">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="7306">
+        <label>limits.h</label>
+      </node>
+      <node id="7303">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="7288">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7289" relation="include">
+        </childnode>
+      </node>
+      <node id="7307">
+        <label>wchar.h</label>
+      </node>
+      <node id="7298">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7299" relation="include">
+        </childnode>
+        <childnode refid="7301" relation="include">
+        </childnode>
+      </node>
+      <node id="7291">
+        <label>vector</label>
+      </node>
+      <node id="7296">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="7284">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="7308">
+        <label>iosfwd</label>
+      </node>
+      <node id="7310">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="7295">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7290" relation="include">
+        </childnode>
+      </node>
+      <node id="7294">
+        <label>complex</label>
+      </node>
+      <node id="7299">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7301" relation="include">
+        </childnode>
+        <childnode refid="7290" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__fft__vfc" prot="public">gr_fft_vfc</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__fft__vfc_8h_1ab6469c7da1ee09b55c69ea3e93e8e180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_fft_vfc_sptr</ref></type>
+        <definition>GR_CORE_API gr_fft_vfc_sptr gr_make_fft_vfc</definition>
+        <argsstring>(int fft_size, bool forward, const std::vector&lt; float &gt; &amp;window, int nthreads=1)</argsstring>
+        <name>gr_make_fft_vfc</name>
+        <param>
+          <type>int</type>
+          <declname>fft_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>forward</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nthreads</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fft_vfc.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fft_vfc.h"/>
+  </compounddef>
+</doxygen>

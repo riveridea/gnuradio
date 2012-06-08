@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__chunks__to__symbols__ic_8h" kind="file">
+    <compoundname>digital_chunks_to_symbols_ic.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes local="no">gr_sync_interpolator.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="13">
+        <label>gr_sync_interpolator.h</label>
+      </node>
+      <node id="10">
+        <label>/home/alexzh/gr_alex/gnuradio/build/gr-digital/include/digital_chunks_to_symbols_ic.h</label>
+        <link refid="digital_chunks_to_symbols_ic.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__chunks__to__symbols__ic" prot="public">digital_chunks_to_symbols_ic</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classdigital__chunks__to__symbols__ic" kindref="compound">digital_chunks_to_symbols_ic</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;digital_chunks_to_symbols_ic&gt; digital_chunks_to_symbols_ic_sptr</definition>
+        <argsstring></argsstring>
+        <name>digital_chunks_to_symbols_ic_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-digital/include/digital_chunks_to_symbols_ic.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-digital/include/digital_chunks_to_symbols_ic.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__chunks__to__symbols__ic_8h_1a3abea914e95348ecbfd7bdc3d334a9e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" kindref="member">digital_chunks_to_symbols_ic_sptr</ref></type>
+        <definition>DIGITAL_API digital_chunks_to_symbols_ic_sptr digital_make_chunks_to_symbols_ic</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;symbol_table, const int D=1)</argsstring>
+        <name>digital_make_chunks_to_symbols_ic</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>symbol_table</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>D</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-digital/include/digital_chunks_to_symbols_ic.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004,2012<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WARNING:<sp/>this<sp/>file<sp/>is<sp/>machine<sp/>generated.<sp/><sp/>Edits<sp/>will<sp/>be<sp/>over<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_DIGITAL_CHUNKS_TO_SYMBOLS_IC_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_DIGITAL_CHUNKS_TO_SYMBOLS_IC_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="digital__api_8h" kindref="compound">digital_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_sync_interpolator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdigital__chunks__to__symbols__ic" kindref="compound" tooltip="Map a stream of symbol indexes (unpacked bytes or shorts) to stream of float or complex constellation...">digital_chunks_to_symbols_ic</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;digital_chunks_to_symbols_ic&gt;<sp/><ref refid="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" kindref="member">digital_chunks_to_symbols_ic_sptr</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" kindref="member">digital_chunks_to_symbols_ic_sptr</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="digital__chunks__to__symbols__ic_8h_1a3abea914e95348ecbfd7bdc3d334a9e6" kindref="member">digital_make_chunks_to_symbols_ic</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;gr_complex&gt;<sp/>&amp;<ref refid="classdigital__chunks__to__symbols__ic_1a4a89586bdc18cddfe3e08c3f0795b75f" kindref="member">symbol_table</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdigital__chunks__to__symbols__ic_1a40d2cd1d2b65c5478687fc84c1f2e1b9" kindref="member">D</ref><sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classdigital__chunks__to__symbols__ic" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="classdigital__chunks__to__symbols__ic" kindref="compound" tooltip="Map a stream of symbol indexes (unpacked bytes or shorts) to stream of float or complex constellation...">digital_chunks_to_symbols_ic</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_sync_interpolator</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref><sp/><ref refid="digital__chunks__to__symbols__ic_8h_1a81a815dfe8b4bfa85009e4bfdba3cd1b" kindref="member">digital_chunks_to_symbols_ic_sptr</ref><sp/><ref refid="digital__chunks__to__symbols__ic_8h_1a3abea914e95348ecbfd7bdc3d334a9e6" kindref="member">digital_make_chunks_to_symbols_ic</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;gr_complex&gt;<sp/>&amp;symbol_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d_D;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>std::vector&lt;gr_complex&gt;<sp/>d_symbol_table;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="classdigital__chunks__to__symbols__ic" kindref="compound" tooltip="Map a stream of symbol indexes (unpacked bytes or shorts) to stream of float or complex constellation...">digital_chunks_to_symbols_ic</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;gr_complex&gt;<sp/>&amp;symbol_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66" refid="classdigital__chunks__to__symbols__ic_1a40d2cd1d2b65c5478687fc84c1f2e1b9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classdigital__chunks__to__symbols__ic_1a40d2cd1d2b65c5478687fc84c1f2e1b9" kindref="member">D</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_D;<sp/>}</highlight></codeline>
+<codeline lineno="67" refid="classdigital__chunks__to__symbols__ic_1a4a89586bdc18cddfe3e08c3f0795b75f" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;gr_complex&gt;<sp/><ref refid="classdigital__chunks__to__symbols__ic_1a4a89586bdc18cddfe3e08c3f0795b75f" kindref="member">symbol_table</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_symbol_table;<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classdigital__chunks__to__symbols__ic_1a2e7beab59cb01057ce0bdddb2ebc4bff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdigital__chunks__to__symbols__ic_1a2e7beab59cb01057ce0bdddb2ebc4bff" kindref="member">check_topology</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ninputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ninputs<sp/>==<sp/>noutputs;<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gr-digital/include/digital_chunks_to_symbols_ic.h"/>
+  </compounddef>
+</doxygen>

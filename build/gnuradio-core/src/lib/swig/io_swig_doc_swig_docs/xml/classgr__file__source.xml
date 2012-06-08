@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__file__source" kind="class" prot="public">
+    <compoundname>gr_file_source</compoundname>
+    <includes refid="gr__file__source_8h" local="no">gr_file_source.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__file__source_1af182ac356c2866419103d174a8c6f687" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_file_source::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__source_1a61aee6b99d16715f575c65daf1f16f26" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* gr_file_source::d_fp</definition>
+        <argsstring></argsstring>
+        <name>d_fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__source_1a76f1f5ec15066e177b263df8a9660913" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_file_source::d_repeat</definition>
+        <argsstring></argsstring>
+        <name>d_repeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__file__source_1a36b4dde5a3a25390d460c7e6b4cdd1df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__file__source_8h_1a1fff729a36d1530d53a1350f5e5e1d49" kindref="member">gr_file_source_sptr</ref></type>
+        <definition>GR_CORE_API gr_file_source_sptr gr_make_file_source</definition>
+        <argsstring>(size_t itemsize, const char *filename, bool repeat)</argsstring>
+        <name>gr_make_file_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__file__source_1ad237a93ac0cdf390d52ecaf5ba47a01a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_file_source::gr_file_source</definition>
+        <argsstring>(size_t itemsize, const char *filename, bool repeat)</argsstring>
+        <name>gr_file_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__file__source_1a6f48f666cf2ce07f32be02f08561ff24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_file_source::~gr_file_source</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_file_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__source_1a498f0bb7a704de43e3c1ffb61fed0d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_file_source::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__source_1a0a206ac10dccf0e7b8faabd836a20846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_file_source::seek</definition>
+        <argsstring>(long seek_point, int whence)</argsstring>
+        <name>seek</name>
+        <param>
+          <type>long</type>
+          <declname>seek_point</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>whence</declname>
+        </param>
+        <briefdescription>
+<para>seek file to <computeroutput>seek_point</computeroutput> relative to <computeroutput>whence</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seek_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sample offset in file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>whence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>one of SEEK_SET, SEEK_CUR, SEEK_END (man fseek) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read stream from file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_source.h" bodystart="40" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classgr__file__source_1a61aee6b99d16715f575c65daf1f16f26" prot="private" virt="non-virtual"><scope>gr_file_source</scope><name>d_fp</name></member>
+      <member refid="classgr__file__source_1af182ac356c2866419103d174a8c6f687" prot="private" virt="non-virtual"><scope>gr_file_source</scope><name>d_itemsize</name></member>
+      <member refid="classgr__file__source_1a76f1f5ec15066e177b263df8a9660913" prot="private" virt="non-virtual"><scope>gr_file_source</scope><name>d_repeat</name></member>
+      <member refid="classgr__file__source_1ad237a93ac0cdf390d52ecaf5ba47a01a" prot="protected" virt="non-virtual"><scope>gr_file_source</scope><name>gr_file_source</name></member>
+      <member refid="classgr__file__source_1a36b4dde5a3a25390d460c7e6b4cdd1df" prot="private" virt="non-virtual"><scope>gr_file_source</scope><name>gr_make_file_source</name></member>
+      <member refid="classgr__file__source_1a0a206ac10dccf0e7b8faabd836a20846" prot="public" virt="non-virtual"><scope>gr_file_source</scope><name>seek</name></member>
+      <member refid="classgr__file__source_1a498f0bb7a704de43e3c1ffb61fed0d1d" prot="public" virt="non-virtual"><scope>gr_file_source</scope><name>work</name></member>
+      <member refid="classgr__file__source_1a6f48f666cf2ce07f32be02f08561ff24" prot="public" virt="non-virtual"><scope>gr_file_source</scope><name>~gr_file_source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

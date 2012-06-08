@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__mpsk__receiver__cc_8h" kind="file">
+    <compoundname>digital_mpsk_receiver_cc.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes refid="attributes_8h" local="no">gruel/attributes.h</includes>
+    <includes refid="gri__control__loop_8h" local="no">gri_control_loop.h</includes>
+    <includes refid="gr__block_8h" local="no">gr_block.h</includes>
+    <includes refid="gr__complex_8h" local="no">gr_complex.h</includes>
+    <includes local="no">fstream</includes>
+    <incdepgraph>
+      <node id="3311">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="3323">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="3322">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="3321" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3324" relation="include">
+        </childnode>
+        <childnode refid="3315" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+      </node>
+      <node id="3314">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="3315" relation="include">
+        </childnode>
+      </node>
+      <node id="3326">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+      </node>
+      <node id="3321">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3308">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+        <childnode refid="3316" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+        <childnode refid="3318" relation="include">
+        </childnode>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+      </node>
+      <node id="3330">
+        <label>stdexcept</label>
+      </node>
+      <node id="3310">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3312" relation="include">
+        </childnode>
+        <childnode refid="3313" relation="include">
+        </childnode>
+        <childnode refid="3314" relation="include">
+        </childnode>
+      </node>
+      <node id="3325">
+        <label>string</label>
+      </node>
+      <node id="3307">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3308" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+      </node>
+      <node id="3306">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3332">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+      </node>
+      <node id="3313">
+        <label>stddef.h</label>
+      </node>
+      <node id="3333">
+        <label>fstream</label>
+      </node>
+      <node id="3318">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="3327">
+        <label>limits.h</label>
+      </node>
+      <node id="3324">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3309">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3310" relation="include">
+        </childnode>
+      </node>
+      <node id="3328">
+        <label>wchar.h</label>
+      </node>
+      <node id="3319">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+      </node>
+      <node id="3312">
+        <label>vector</label>
+      </node>
+      <node id="3305">
+        <label>gri_control_loop.h</label>
+        <link refid="gri__control__loop_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+      </node>
+      <node id="3302">
+        <label>digital_mpsk_receiver_cc.h</label>
+        <link refid="digital_mpsk_receiver_cc.h"/>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3304" relation="include">
+        </childnode>
+        <childnode refid="3305" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3314" relation="include">
+        </childnode>
+        <childnode refid="3333" relation="include">
+        </childnode>
+      </node>
+      <node id="3303">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="3304" relation="include">
+        </childnode>
+      </node>
+      <node id="3317">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="3304">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="3329">
+        <label>iosfwd</label>
+      </node>
+      <node id="3331">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="3316">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+      </node>
+      <node id="3315">
+        <label>complex</label>
+      </node>
+      <node id="3320">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="3321" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__mpsk__receiver__cc" prot="public">digital_mpsk_receiver_cc</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__mpsk__receiver__cc_8h_1a41e056f958d47947947830cd7f9ce0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_mpsk_receiver_cc_sptr</ref></type>
+        <definition>DIGITAL_API digital_mpsk_receiver_cc_sptr digital_make_mpsk_receiver_cc</definition>
+        <argsstring>(unsigned int M, float theta, float loop_bw, float fmin, float fmax, float mu, float gain_mu, float omega, float gain_omega, float omega_rel)</argsstring>
+        <name>digital_make_mpsk_receiver_cc</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega_rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h"/>
+  </compounddef>
+</doxygen>

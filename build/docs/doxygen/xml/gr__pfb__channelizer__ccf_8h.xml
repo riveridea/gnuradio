@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__pfb__channelizer__ccf_8h" kind="file">
+    <compoundname>gr_pfb_channelizer_ccf.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__block_8h" local="no">gr_block.h</includes>
+    <includes refid="thread_8h" local="no">gruel/thread.h</includes>
+    <incdepgraph>
+      <node id="9746">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="9748">
+        <label>boost/thread/condition_variable.hpp</label>
+      </node>
+      <node id="9722">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="9734">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="9733">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="9732" relation="include">
+        </childnode>
+        <childnode refid="9734" relation="include">
+        </childnode>
+        <childnode refid="9722" relation="include">
+        </childnode>
+        <childnode refid="9735" relation="include">
+        </childnode>
+        <childnode refid="9726" relation="include">
+        </childnode>
+        <childnode refid="9736" relation="include">
+        </childnode>
+        <childnode refid="9737" relation="include">
+        </childnode>
+        <childnode refid="9740" relation="include">
+        </childnode>
+        <childnode refid="9741" relation="include">
+        </childnode>
+        <childnode refid="9742" relation="include">
+        </childnode>
+      </node>
+      <node id="9725">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="9726" relation="include">
+        </childnode>
+      </node>
+      <node id="9737">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="9738" relation="include">
+        </childnode>
+        <childnode refid="9739" relation="include">
+        </childnode>
+      </node>
+      <node id="9732">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="9717" relation="include">
+        </childnode>
+      </node>
+      <node id="9719">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9720" relation="include">
+        </childnode>
+        <childnode refid="9727" relation="include">
+        </childnode>
+        <childnode refid="9728" relation="include">
+        </childnode>
+        <childnode refid="9729" relation="include">
+        </childnode>
+        <childnode refid="9730" relation="include">
+        </childnode>
+        <childnode refid="9736" relation="include">
+        </childnode>
+      </node>
+      <node id="9741">
+        <label>stdexcept</label>
+      </node>
+      <node id="9745">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="9721">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9722" relation="include">
+        </childnode>
+        <childnode refid="9723" relation="include">
+        </childnode>
+        <childnode refid="9724" relation="include">
+        </childnode>
+        <childnode refid="9725" relation="include">
+        </childnode>
+      </node>
+      <node id="9736">
+        <label>string</label>
+      </node>
+      <node id="9718">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9719" relation="include">
+        </childnode>
+        <childnode refid="9743" relation="include">
+        </childnode>
+      </node>
+      <node id="9716">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="9717" relation="include">
+        </childnode>
+      </node>
+      <node id="9743">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9733" relation="include">
+        </childnode>
+      </node>
+      <node id="9724">
+        <label>stddef.h</label>
+      </node>
+      <node id="9729">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="9738">
+        <label>limits.h</label>
+      </node>
+      <node id="9735">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="9720">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9721" relation="include">
+        </childnode>
+      </node>
+      <node id="9739">
+        <label>wchar.h</label>
+      </node>
+      <node id="9747">
+        <label>boost/thread/locks.hpp</label>
+      </node>
+      <node id="9744">
+        <label>gruel/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="9732" relation="include">
+        </childnode>
+        <childnode refid="9745" relation="include">
+        </childnode>
+        <childnode refid="9746" relation="include">
+        </childnode>
+        <childnode refid="9747" relation="include">
+        </childnode>
+        <childnode refid="9748" relation="include">
+        </childnode>
+      </node>
+      <node id="9730">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9731" relation="include">
+        </childnode>
+        <childnode refid="9733" relation="include">
+        </childnode>
+      </node>
+      <node id="9723">
+        <label>vector</label>
+      </node>
+      <node id="9728">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="9717">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="9740">
+        <label>iosfwd</label>
+      </node>
+      <node id="9742">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="9727">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9722" relation="include">
+        </childnode>
+      </node>
+      <node id="9726">
+        <label>complex</label>
+      </node>
+      <node id="9715">
+        <label>gr_pfb_channelizer_ccf.h</label>
+        <link refid="gr_pfb_channelizer_ccf.h"/>
+        <childnode refid="9716" relation="include">
+        </childnode>
+        <childnode refid="9718" relation="include">
+        </childnode>
+        <childnode refid="9744" relation="include">
+        </childnode>
+      </node>
+      <node id="9731">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="9732" relation="include">
+        </childnode>
+        <childnode refid="9733" relation="include">
+        </childnode>
+        <childnode refid="9722" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__pfb__channelizer__ccf" prot="public">gr_pfb_channelizer_ccf</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__pfb__channelizer__ccf_8h_1afc4095ac8b5859e85ac8986800768004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_pfb_channelizer_ccf_sptr</ref></type>
+        <definition>GR_CORE_API gr_pfb_channelizer_ccf_sptr gr_make_pfb_channelizer_ccf</definition>
+        <argsstring>(unsigned int numchans, const std::vector&lt; float &gt; &amp;taps, float oversample_rate=1)</argsstring>
+        <name>gr_make_pfb_channelizer_ccf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numchans</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oversample_rate</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank decimator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numchans</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Specifies the number of channels <emphasis>M</emphasis> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oversample_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) The over sampling rate is the ratio of the the actual output sampling rate to the normal output sampling rate. It must be rationally related to the number of channels as N/i for i in [1,N], which gives an outputsample rate of [fs/N, fs] where fs is the input sample rate and N is the number of channels.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+For example, for 6 channels with fs = 6000 Hz, the normal rate is 6000/6 = 1000 Hz. Allowable oversampling rates are 6/6, 6/5, 6/4, 6/3, 6/2, and 6/1 where the output sample rate of a 6/1 oversample ratio is 6000 Hz, or 6 times the normal 1000 Hz. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h"/>
+  </compounddef>
+</doxygen>

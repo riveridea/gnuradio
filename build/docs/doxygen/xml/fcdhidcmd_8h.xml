@@ -1,0 +1,1933 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="fcdhidcmd_8h" kind="file">
+    <compoundname>fcdhidcmd.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fcdhidcmd_8h_1a30a7e22c5511307db7127989589a3590" prot="public" static="no">
+        <name>FCD_HID_CMD_H</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="23" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a5f4d9e4a5c1fdce68a4a87e48b037654" prot="public" static="no">
+        <name>FCD_CMD_BL_QUERY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns string with &quot;FCDAPP version&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="27" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a6d4b6ec621c815e629f74fde5e1f87cc" prot="public" static="no">
+        <name>FCD_CMD_BL_RESET</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset to application mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="28" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ab16a28867af64980cc7a2d6063fe8e02" prot="public" static="no">
+        <name>FCD_CMD_BL_ERASE</name>
+        <initializer>24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase firmware from FCD flash. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1abcc3567bef789294694b600701075d23" prot="public" static="no">
+        <name>FCD_CMD_BL_SET_BYTE_ADDR</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TBD </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1adaeb85ff5b189eb27ac5ac6341333989" prot="public" static="no">
+        <name>FCD_CMD_BL_GET_BYTE_ADDR_RANGE</name>
+        <initializer>26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get address range. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1aab43aeee5d28dba0ba6345010e286b24" prot="public" static="no">
+        <name>FCD_CMD_BL_WRITE_FLASH_BLOCK</name>
+        <initializer>27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write flash block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1aebe60377709d1847c58e3d6a4f619f55" prot="public" static="no">
+        <name>FCD_CMD_BL_READ_FLASH_BLOCK</name>
+        <initializer>28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read flash block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ae3942b3632e3418641655844063bfd7d" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_FREQ_KHZ</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send with 3 byte unsigned little endian frequency in kHz. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ad36308c46b3cf55a7d7c2bffbd969614" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_FREQ_HZ</name>
+        <initializer>101</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send with 4 byte unsigned little endian frequency in Hz, returns with actual frequency set in Hz </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a260567c4ce672d592e63557e9deb03b6" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_FREQ_HZ</name>
+        <initializer>102</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 4 byte unsigned little endian frequency in Hz. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a7b48d695d525b6700a853c4fcca411b7" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_RSSI</name>
+        <initializer>104</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Supposed to return 1 byte unsigned IF RSSI (-35dBm=0, -10dBm=70) but it is not functional. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a4f47cc9f6e01e75bbe5f5d53008c301e" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_PLL_LOCK</name>
+        <initializer>105</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 1 bit, true if locked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a623a4310c8026fed69b45cca96f25fc0" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_DC_CORR</name>
+        <initializer>106</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send with 2 byte unsigned I DC correction followed by 2 byte unsigned Q DC correction. 32768 is the default centre value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a1a105847a59f125f5f326ec68d80c8cc" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_DC_CORR</name>
+        <initializer>107</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 2 byte unsigned I DC correction followed by 2 byte unsigned Q DC correction. 32768 is the default centre value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ae8ceacbf79bf17a5f0c210856be70576" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IQ_CORR</name>
+        <initializer>108</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send with 2 byte signed phase correction followed by 2 byte unsigned gain correction. 0 is the default centre value for phase correction, 32768 is the default centre value for gain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ab147601a1efc3e12456ab6fa72391547" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IQ_CORR</name>
+        <initializer>109</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 2 byte signed phase correction followed by 2 byte unsigned gain correction. 0 is the default centre value for phase correction, 32768 is the default centre value for gain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a40569024ddc411187a62ff10913fb6ee" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_LNA_GAIN</name>
+        <initializer>110</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Send a 1 byte value, see enums for reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ab95e01ccd565f51d54713065415987d6" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_LNA_ENHANCE</name>
+        <initializer>111</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ada4360f659a3d586042aa144d164c0e2" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_BAND</name>
+        <initializer>112</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a0e08e0f5b084f2b4ce8afb4ce32cc59f" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_RF_FILTER</name>
+        <initializer>113</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ace47680073f4d5942f690c6485c26064" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_MIXER_GAIN</name>
+        <initializer>114</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a419eee0bee18c715e68f6bcb823842d0" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_BIAS_CURRENT</name>
+        <initializer>115</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ae2257b5248cdaf7a63b53981b6af9afd" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_MIXER_FILTER</name>
+        <initializer>116</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a680acf328946b9e83126e547ef3b9ffa" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN1</name>
+        <initializer>117</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a23ce0500da40615bc26857169b678828" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN_MODE</name>
+        <initializer>118</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a64a7166ba2834555b49a7a5304c95b92" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_RC_FILTER</name>
+        <initializer>119</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ab0ec288caf849a3665f655620c47e70e" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN2</name>
+        <initializer>120</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a40206c4e6cef1b193907d36c69e49a7c" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN3</name>
+        <initializer>121</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a43608cccb3694e8bb3d3f54329be256e" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_FILTER</name>
+        <initializer>122</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a806df66004d0630fd7fc4867e0c8897e" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN4</name>
+        <initializer>123</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a614c9b9f31a24aac548cf3322f7f21b0" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN5</name>
+        <initializer>124</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1af7e0e4f225265446c2f486d493176b8d" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_IF_GAIN6</name>
+        <initializer>125</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a73c13d72400bb84b087bb0c3d4a8530c" prot="public" static="no">
+        <name>FCD_CMD_APP_SET_BIAS_TEE</name>
+        <initializer>126</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bias T for ext LNA. Send with one byte: 1=ON, 0=OFF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1adac9b62a8bf2f369f41fe38483d751ad" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_LNA_GAIN</name>
+        <initializer>150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a980511a34f5e7af54c573c796d4471d4" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_LNA_ENHANCE</name>
+        <initializer>151</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1aa3abdd54b21d5ed2d3711c59b4eca7de" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_BAND</name>
+        <initializer>152</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a9921c1f2730fc70a7f2a08c9c40a29ce" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_RF_FILTER</name>
+        <initializer>153</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a80ff47f6f836ca41a1482ca70e8a828c" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_MIXER_GAIN</name>
+        <initializer>154</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a66f22e3442576f8f6e695c8a28208e28" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_BIAS_CURRENT</name>
+        <initializer>155</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1aa6d2b361a2c41d04030c97a43f3ee5c2" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_MIXER_FILTER</name>
+        <initializer>156</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a52250cb0999413809ba3441703950cff" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN1</name>
+        <initializer>157</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1ae462eead40005811998feb1e9dd3a99f" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN_MODE</name>
+        <initializer>158</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a74874e2f1c8e3f2a3d8e9e8a3dff8be5" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_RC_FILTER</name>
+        <initializer>159</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1adbed3a467f06897626fb573eccbafd9a" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN2</name>
+        <initializer>160</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a0b280908ad881b8b6eae9445749bf061" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN3</name>
+        <initializer>161</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a1303e7478e49d32946dd2572cc0d2fa4" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_FILTER</name>
+        <initializer>162</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a99b7bc9b48b5cc839e87d87a58fa877e" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN4</name>
+        <initializer>163</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a9dccedf322b013fd3491eefc9bcd2c15" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN5</name>
+        <initializer>164</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1af81987d7c74e332815a3c981257c430a" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_IF_GAIN6</name>
+        <initializer>165</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="81" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1aadd86958c12675e3020f7aec29062859" prot="public" static="no">
+        <name>FCD_CMD_APP_GET_BIAS_TEE</name>
+        <initializer>166</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bias T. 1=ON, 0=OFF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a9db04141937112639e84bbf84a1d76dd" prot="public" static="no">
+        <name>FCD_CMD_APP_SEND_I2C_BYTE</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a13f5ea36b03811004ecb1f262de60535" prot="public" static="no">
+        <name>FCD_CMD_APP_RECV_I2C_BYTE</name>
+        <initializer>201</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcdhidcmd_8h_1a4fb9977e715c0c2cf8c7492803540f1d" prot="public" static="no">
+        <name>FCD_CMD_APP_RESET</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541" prot="public" static="no">
+        <name>TUNER_LNA_GAIN_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a908ce43d3b7467eb207f15ceff6e7e3e" prot="public">
+          <name>TLGE_N5_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a3b4f9dc46f27d08aac43b13ccda314cd" prot="public">
+          <name>TLGE_N2_5DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a36428ecc51ce0bcc281e5eeeeb9a51eb" prot="public">
+          <name>TLGE_P0_0DB</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a267553c7bcf822fba963dca8a01cd5d0" prot="public">
+          <name>TLGE_P2_5DB</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541aa53f2e97b5591c3601411f9b567549df" prot="public">
+          <name>TLGE_P5_0DB</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541af387dba1030beee34e550b40cf5c46d7" prot="public">
+          <name>TLGE_P7_5DB</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a25c399426e8f8b5bed6fc6467911db93" prot="public">
+          <name>TLGE_P10_0DB</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541ae907d1c344416adc065c0d7e2b11461c" prot="public">
+          <name>TLGE_P12_5DB</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a835b4a7eda864b863e11bc2ff28114b8" prot="public">
+          <name>TLGE_P15_0DB</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a66fdbb1ec66980cfda0520c44cce01f8" prot="public">
+          <name>TLGE_P17_5DB</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a84c1de8a2c819840824c817b3e8c2876" prot="public">
+          <name>TLGE_P20_0DB</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541afbd5836e13d221f6aa3545dca3c4f3e4" prot="public">
+          <name>TLGE_P25_0DB</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aebb4378b8baf6d22799cf2471f484541a7a8e8958ab89b55546c447f783fdf2bc" prot="public">
+          <name>TLGE_P30_0DB</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="90" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870" prot="public" static="no">
+        <name>TUNER_LNA_ENHANCE_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870a9713dc71ea56f4d93cf3ab9b8b230543" prot="public">
+          <name>TLEE_OFF</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870a71f7cf1fd5ea44a3fc58d4395063dc49" prot="public">
+          <name>TLEE_0</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870a75057f8d33139e1ec9e4097195d78db9" prot="public">
+          <name>TLEE_1</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870a107095a3cf5333f357a4abfba0f4dce0" prot="public">
+          <name>TLEE_2</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a438d8632fec8cd0e1cfb38ec18339870a29b0c57c62fc90474f69cdbfb4de6915" prot="public">
+          <name>TLEE_3</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="108" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="107" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1aa4748eba84405af88ba433e18efda89d" prot="public" static="no">
+        <name>TUNER_BAND_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1aa4748eba84405af88ba433e18efda89daa0d217c05dc734dcdc58f37d9eb5bcb5" prot="public">
+          <name>TBE_VHF2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aa4748eba84405af88ba433e18efda89daea71c8ec38f9fb1b112888a546e6100f" prot="public">
+          <name>TBE_VHF3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aa4748eba84405af88ba433e18efda89daa0e8d414e26437bdfc6f2e9d3d1e8fd7" prot="public">
+          <name>TBE_UHF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1aa4748eba84405af88ba433e18efda89da2879167979867ac8787a9b6a78a88ff1" prot="public">
+          <name>TBE_LBAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="116" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1" prot="public" static="no">
+        <name>TUNER_RF_FILTER_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a4f02b3d445f8d83342452d9b135da3bf" prot="public">
+          <name>TRFE_LPF268MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ac48adea57432135afbbb8aa4ca513059" prot="public">
+          <name>TRFE_LPF299MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a7496e6b9cfb2ca802b135209c631c80c" prot="public">
+          <name>TRFE_LPF509MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1aa74e2d5b8687aad3362e91abb0e8aac4" prot="public">
+          <name>TRFE_LPF656MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a83e1a6cbb2c4c0efde70e31ae07c9545" prot="public">
+          <name>TRFE_BPF360MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a89168370e2b8fd04982fcc170ff2b9b0" prot="public">
+          <name>TRFE_BPF380MHZ</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a09c9f3ba1578f3118641b53bc2286bb9" prot="public">
+          <name>TRFE_BPF405MHZ</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a667a9e6a4c23e9d36833ee09bf9e245b" prot="public">
+          <name>TRFE_BPF425MHZ</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a4806b3835e9913031fb892401d726887" prot="public">
+          <name>TRFE_BPF450MHZ</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ab8366af5acfea925df41de48bf906dac" prot="public">
+          <name>TRFE_BPF475MHZ</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a140df017f9bcaa43771c28a7e777cf9c" prot="public">
+          <name>TRFE_BPF505MHZ</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a191e488786a8a55062e83f814f7f691f" prot="public">
+          <name>TRFE_BPF540MHZ</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1aeb72da5759e90dbaa4989f84882658c0" prot="public">
+          <name>TRFE_BPF575MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a9181025e7fb746eb89a39310840843df" prot="public">
+          <name>TRFE_BPF615MHZ</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1af344a4f85167306677522576f1b37d7c" prot="public">
+          <name>TRFE_BPF670MHZ</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a172388dbea578cfb5ff4d8d6c30d9351" prot="public">
+          <name>TRFE_BPF720MHZ</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ae6b8b48afbce09063337e2263c6b33fe" prot="public">
+          <name>TRFE_BPF760MHZ</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1adf25efa28dc32aef5fe08c417c6ae517" prot="public">
+          <name>TRFE_BPF840MHZ</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ae586ab864d6da2658296177cecc1b02a" prot="public">
+          <name>TRFE_BPF890MHZ</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1acf3cb703d6a891535fcbd135095967c5" prot="public">
+          <name>TRFE_BPF970MHZ</name>
+          <initializer>15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a8f3278def9ed652c3456b82d8066ba02" prot="public">
+          <name>TRFE_BPF1300MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1aa4771c3fe1dac77d3331e9194c9b9ea4" prot="public">
+          <name>TRFE_BPF1320MHZ</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ae86356408515ff930fef2a0597a6901e" prot="public">
+          <name>TRFE_BPF1360MHZ</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1aecaff1bb1d86c27f5efc115e88af12b8" prot="public">
+          <name>TRFE_BPF1410MHZ</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a03d656b1a29437c3c69f5ed9c3f6311f" prot="public">
+          <name>TRFE_BPF1445MHZ</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a2042658667e86bbfee3c18d866f83336" prot="public">
+          <name>TRFE_BPF1460MHZ</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a2348cd665447e9a55bf3f06019c418ee" prot="public">
+          <name>TRFE_BPF1490MHZ</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a1ebc91a77567a52ec734e106603ab64f" prot="public">
+          <name>TRFE_BPF1530MHZ</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a61be8dd3fff13e739288ff989d5a63c4" prot="public">
+          <name>TRFE_BPF1560MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a05a6bcc2cef2d2fa505b0ca0ed497821" prot="public">
+          <name>TRFE_BPF1590MHZ</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1ad80eea7176cb91baf0c5a5288620e08c" prot="public">
+          <name>TRFE_BPF1640MHZ</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a05a14c7b58752ef0b7e7f16087b66dd7" prot="public">
+          <name>TRFE_BPF1660MHZ</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a32e1050c19b1ace3cc497faa4e985b19" prot="public">
+          <name>TRFE_BPF1680MHZ</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a6040f198a8995a0b999ffd383f52b6fe" prot="public">
+          <name>TRFE_BPF1700MHZ</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a7a562cfdb777bb2f07b149d7ba4ab823" prot="public">
+          <name>TRFE_BPF1720MHZ</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad257814c33d9b462dc65112167522ab1a9ba6868464eb7a826864adf355658d95" prot="public">
+          <name>TRFE_BPF1750MHZ</name>
+          <initializer>15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="124" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a39f470a14498c7d63204e279b5a8a0e6" prot="public" static="no">
+        <name>TUNER_MIXER_GAIN_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a39f470a14498c7d63204e279b5a8a0e6a129ef67ab34e7b7aae52402e32b9cc58" prot="public">
+          <name>TMGE_P4_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a39f470a14498c7d63204e279b5a8a0e6ab1c1dbbb1088fff90f4f20acf55e4f13" prot="public">
+          <name>TMGE_P12_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="169" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="168" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a50c42ba1ad8f223d87de9bb946b4453b" prot="public" static="no">
+        <name>TUNER_BIAS_CURRENT_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a50c42ba1ad8f223d87de9bb946b4453ba0bc09fbc0ce7e0c8d29643e6d69ac847" prot="public">
+          <name>TBCE_LBAND</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a50c42ba1ad8f223d87de9bb946b4453ba10cae14329a09a1569b2d96e205cb559" prot="public">
+          <name>TBCE_1</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a50c42ba1ad8f223d87de9bb946b4453baf69b58a9179f44cb49dfb44bc1046184" prot="public">
+          <name>TBCE_2</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a50c42ba1ad8f223d87de9bb946b4453ba399849a2d4327b9b76dca396657d01b8" prot="public">
+          <name>TBCE_VUBAND</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="175" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="174" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fd" prot="public" static="no">
+        <name>TUNER_MIXER_FILTER_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdad4b428292e08c4a8040d0b13e46a8bb8" prot="public">
+          <name>TMFE_27_0MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdadcce6fe1f2550c49b867391cf5103d14" prot="public">
+          <name>TMFE_4_6MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdab307d66fd26f0e5c323ad5cf01b2adfa" prot="public">
+          <name>TMFE_4_2MHZ</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdaa11b89910440f3fe96a635e51af7c7eb" prot="public">
+          <name>TMFE_3_8MHZ</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdaaae45948a0516e4460231fe68eb095c3" prot="public">
+          <name>TMFE_3_4MHZ</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdae8a60220b8bb441ece63f34d3fba9189" prot="public">
+          <name>TMFE_3_0MHZ</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdac7c34bf493700a239c41f08985d31a7a" prot="public">
+          <name>TMFE_2_7MHZ</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdabfb964361885fd9d41444e983ec846b7" prot="public">
+          <name>TMFE_2_3MHZ</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a295292c7c4d4fc4788c5e2a99125c3fdaad9b59190b3d14f6a11a34ddc5f7c5db" prot="public">
+          <name>TMFE_1_9MHZ</name>
+          <initializer>15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="183" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="182" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a9632b66f67e2501e49c0f3936dbd070d" prot="public" static="no">
+        <name>TUNER_IF_GAIN1_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a9632b66f67e2501e49c0f3936dbd070da1c2fbd7dd63d7977655e7d178b0b0645" prot="public">
+          <name>TIG1E_N3_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a9632b66f67e2501e49c0f3936dbd070da69d768b0af921176b65a9373d2cb8629" prot="public">
+          <name>TIG1E_P6_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="196" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="195" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1ab85dc7dc1431915c653c2974a6703612" prot="public" static="no">
+        <name>TUNER_IF_GAIN_MODE_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1ab85dc7dc1431915c653c2974a6703612ad43c5b625c6e9323868e1ceafa2dac97" prot="public">
+          <name>TIGME_LINEARITY</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ab85dc7dc1431915c653c2974a6703612a58271013404d3e923dcc0cdcdfdd6c7c" prot="public">
+          <name>TIGME_SENSITIVITY</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="202" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133a" prot="public" static="no">
+        <name>TUNER_IF_RC_FILTER_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa862a1287ac740ae47ba6d924c7127bba" prot="public">
+          <name>TIRFE_21_4MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aad9bc0da912cea1577f8f94c64cf21de2" prot="public">
+          <name>TIRFE_21_0MHZ</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aaa5a68655422722b48bff485bde7c8567" prot="public">
+          <name>TIRFE_17_6MHZ</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aad1651ab07c95ee152195c5d5c9de91e7" prot="public">
+          <name>TIRFE_14_7MHZ</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa8a4c258cd76c22ef518c5dda8503817b" prot="public">
+          <name>TIRFE_12_4MHZ</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aae68e67fd0b631a4ad331e6c9028ebfd4" prot="public">
+          <name>TIRFE_10_6MHZ</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa228915f15b6fcc099642354d1ecdf298" prot="public">
+          <name>TIRFE_9_0MHZ</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa2677fc903fb46727d2921d89e2fa27cf" prot="public">
+          <name>TIRFE_7_7MHZ</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa04ae254db72f9e37e3324f7c8abfa122" prot="public">
+          <name>TIRFE_6_4MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aaf8e9d067baecc665ecd5d8fe083d01a0" prot="public">
+          <name>TIRFE_5_3MHZ</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa54c32d248f61c8699c7d107f0e730076" prot="public">
+          <name>TIRFE_4_4MHZ</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa23f3d97af3643fd9457b388e48771eac" prot="public">
+          <name>TIRFE_3_4MHZ</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aa451f75093746baedc446c9d82bf12996" prot="public">
+          <name>TIRFE_2_6MHZ</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aafd8236c59091b7d06df5070add75b3b3" prot="public">
+          <name>TIRFE_1_8MHZ</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aadaaaeffd22375b70e3c337d1f668c1b2" prot="public">
+          <name>TIRFE_1_2MHZ</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad7f2a29708afaf099f058a236ea2133aae35f6bf3c59f48c646e5c5e1a3589f29" prot="public">
+          <name>TIRFE_1_0MHZ</name>
+          <initializer>15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="208" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="207" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a4206f49726b30f1dbf04bc6a067089a6" prot="public" static="no">
+        <name>TUNER_IF_GAIN2_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a4206f49726b30f1dbf04bc6a067089a6a1c97ae2d6de465e259236484eb8eb78b" prot="public">
+          <name>TIG2E_P0_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a4206f49726b30f1dbf04bc6a067089a6aa5e393ac1f8b56c3a152ca7630f92ebc" prot="public">
+          <name>TIG2E_P3_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a4206f49726b30f1dbf04bc6a067089a6a1e8a03d9df97a52674f623f2648b261f" prot="public">
+          <name>TIG2E_P6_0DB</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a4206f49726b30f1dbf04bc6a067089a6a720048f6ab54bc8cdcd9f694199799b6" prot="public">
+          <name>TIG2E_P9_0DB</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="228" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="227" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a1878da191075eb1895acc1e6655dd3be" prot="public" static="no">
+        <name>TUNER_IF_GAIN3_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a1878da191075eb1895acc1e6655dd3bead3b32289c98f35cd145039c12f4406d5" prot="public">
+          <name>TIG3E_P0_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a1878da191075eb1895acc1e6655dd3bea33b901ce0690c3b3aedb6320e454901f" prot="public">
+          <name>TIG3E_P3_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a1878da191075eb1895acc1e6655dd3bea0666c8d4a073accc0555b955bab3cf56" prot="public">
+          <name>TIG3E_P6_0DB</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a1878da191075eb1895acc1e6655dd3bea06a56dc1b8e6d2d73be4851c517f9ad2" prot="public">
+          <name>TIG3E_P9_0DB</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="236" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="235" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1af0dd2545cf6901a802c383ed3aab0048" prot="public" static="no">
+        <name>TUNER_IF_GAIN4_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1af0dd2545cf6901a802c383ed3aab0048aa85ffe3730230d35113f71f5efe9aa03" prot="public">
+          <name>TIG4E_P0_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1af0dd2545cf6901a802c383ed3aab0048afbc941aa7cbff3c8b74172994c92c8b3" prot="public">
+          <name>TIG4E_P1_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1af0dd2545cf6901a802c383ed3aab0048ad14768c9460f196c3869d2a28eff1c41" prot="public">
+          <name>TIG4E_P2_0DB</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="244" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="243" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920" prot="public" static="no">
+        <name>TUNER_IF_FILTER_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a6645aa52ddde50b76a0e4aca40d577ad" prot="public">
+          <name>TIFE_5_50MHZ</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920acf943398457d95fc696092843416d24a" prot="public">
+          <name>TIFE_5_30MHZ</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920ad04d3a8e7e4030d7cd0e76aa1132b0bd" prot="public">
+          <name>TIFE_5_00MHZ</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920ac67a7936c91fdba8025a038b2d5f3328" prot="public">
+          <name>TIFE_4_80MHZ</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a2e63f9be2c4ac84bf54ce5cdfd236540" prot="public">
+          <name>TIFE_4_60MHZ</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a4e1004638f4699a7d998cf4184028631" prot="public">
+          <name>TIFE_4_40MHZ</name>
+          <initializer>5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a06f774a96ff059f99049c4c138703280" prot="public">
+          <name>TIFE_4_30MHZ</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a2794dce05f94eb4a3bfca5dc1bcd17d2" prot="public">
+          <name>TIFE_4_10MHZ</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a492aab3998ffda2be6468a80bb6798ee" prot="public">
+          <name>TIFE_3_90MHZ</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920acef51ddfe7f512b1c137f458f0d4733c" prot="public">
+          <name>TIFE_3_80MHZ</name>
+          <initializer>9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a5a752548bf70c1c85000225dce382f97" prot="public">
+          <name>TIFE_3_70MHZ</name>
+          <initializer>10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a126f5d8220f4b5e82ede082f23b2d772" prot="public">
+          <name>TIFE_3_60MHZ</name>
+          <initializer>11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920acbc3ed74770c1e1f9cb96d7e93af338d" prot="public">
+          <name>TIFE_3_40MHZ</name>
+          <initializer>12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920abb751051303a592d289fddba57a5f14a" prot="public">
+          <name>TIFE_3_30MHZ</name>
+          <initializer>13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a6ce3a44771c1642a8260504d1d8a6634" prot="public">
+          <name>TIFE_3_20MHZ</name>
+          <initializer>14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920ad7fef5573b736722c06a94b2a4366ca1" prot="public">
+          <name>TIFE_3_10MHZ</name>
+          <initializer>15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920af3b692ad65b7da8d184827f77d78a334" prot="public">
+          <name>TIFE_3_00MHZ</name>
+          <initializer>16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a53611522c6ec0efab7a8345827b2c4d2" prot="public">
+          <name>TIFE_2_95MHZ</name>
+          <initializer>17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a27dbdae69a9356dfb7f2726e196fa14f" prot="public">
+          <name>TIFE_2_90MHZ</name>
+          <initializer>18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a15d43b24a4dbd869f9b0740f5bd41b4c" prot="public">
+          <name>TIFE_2_80MHZ</name>
+          <initializer>19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a91cb0df37856c2320c108c7c9b5ed379" prot="public">
+          <name>TIFE_2_75MHZ</name>
+          <initializer>20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a2f4488aca9b00f1753ed3a99546456f1" prot="public">
+          <name>TIFE_2_70MHZ</name>
+          <initializer>21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a6e058fc395501bba0a9eaaa713aadc50" prot="public">
+          <name>TIFE_2_60MHZ</name>
+          <initializer>22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a4e21fd0ef7f853026c73b9fec665f1c1" prot="public">
+          <name>TIFE_2_55MHZ</name>
+          <initializer>23</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a760de42b78116678527b421d64dd4c07" prot="public">
+          <name>TIFE_2_50MHZ</name>
+          <initializer>24</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920af3eb0c5a25423d75f021f73fce961559" prot="public">
+          <name>TIFE_2_45MHZ</name>
+          <initializer>25</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a6200c972d27f3594df56c2b9def96b4a" prot="public">
+          <name>TIFE_2_40MHZ</name>
+          <initializer>26</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a2a9bd4504e92ebae078b5f8e0d91f4ce" prot="public">
+          <name>TIFE_2_30MHZ</name>
+          <initializer>27</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a439a287fdc0a070c1455b060aa173fa6" prot="public">
+          <name>TIFE_2_28MHZ</name>
+          <initializer>28</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920a442e41a5933198cde5d2c057fee7baad" prot="public">
+          <name>TIFE_2_24MHZ</name>
+          <initializer>29</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920af24299a6b352aa7872323bdb44ca17d9" prot="public">
+          <name>TIFE_2_20MHZ</name>
+          <initializer>30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1a7089cdcf6e6a800ceb8814b00eb00920afce7ae36c2e752adf580602b04e17ea4" prot="public">
+          <name>TIFE_2_15MHZ</name>
+          <initializer>31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="251" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="250" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdb" prot="public" static="no">
+        <name>TUNER_IF_GAIN5_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdba2328c97aa9ba4b2d2f3dd11b9af68d4b" prot="public">
+          <name>TIG5E_P3_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdba5991d5ca0a394f2aced0f372e2ae0bf7" prot="public">
+          <name>TIG5E_P6_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdbaecc3b03237598f2f4833ff9cd9e5aaf7" prot="public">
+          <name>TIG5E_P9_0DB</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdba2a32e41f98fbebcbde17a2e81fd15dde" prot="public">
+          <name>TIG5E_P12_0DB</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1afb5667e4e010126c1a12d6718b883fdbadd92e85287dc6a907616a66213687ee3" prot="public">
+          <name>TIG5E_P15_0DB</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="287" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="286" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="enum" id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62" prot="public" static="no">
+        <name>TUNER_IF_GAIN6_ENUM</name>
+        <enumvalue id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62aa3e05adf0bd935f13334661ddcaf57cc" prot="public">
+          <name>TIG6E_P3_0DB</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62af52a0c62d242cf9be016ec75a09eb097" prot="public">
+          <name>TIG6E_P6_0DB</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62a35f9d08fc9c1eebbe915349181d62e66" prot="public">
+          <name>TIG6E_P9_0DB</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62aa64ee9fa0ee53f0823bcdefd0d28540d" prot="public">
+          <name>TIG6E_P12_0DB</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcdhidcmd_8h_1ad6a0c001e2cb9ea49ca659a930431b62a7fe1fab823395324b837d8b3ce48d3e6" prot="public">
+          <name>TIG6E_P15_0DB</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" line="296" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h" bodystart="295" bodyend="302"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcdhidcmd.h"/>
+  </compounddef>
+</doxygen>

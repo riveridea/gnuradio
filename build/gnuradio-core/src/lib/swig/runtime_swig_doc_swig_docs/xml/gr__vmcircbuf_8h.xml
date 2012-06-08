@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__vmcircbuf_8h" kind="file">
+    <compoundname>gr_vmcircbuf.h</compoundname>
+    <includes local="no">gr_core_api.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="gr__vmcircbuf__createfilemapping_8h" local="no">/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_createfilemapping.h</includedby>
+    <includedby refid="gr__vmcircbuf__mmap__shm__open_8h" local="no">/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_shm_open.h</includedby>
+    <includedby refid="gr__vmcircbuf__mmap__tmpfile_8h" local="no">/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h</includedby>
+    <includedby refid="gr__vmcircbuf__sysv__shm_8h" local="no">/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h</includedby>
+    <incdepgraph>
+      <node id="688">
+        <label>gr_core_api.h</label>
+      </node>
+      <node id="689">
+        <label>vector</label>
+      </node>
+      <node id="687">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf.h</label>
+        <link refid="gr_vmcircbuf.h"/>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="691">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_createfilemapping.h</label>
+        <link refid="gr__vmcircbuf__createfilemapping_8h"/>
+      </node>
+      <node id="692">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_shm_open.h</label>
+        <link refid="gr__vmcircbuf__mmap__shm__open_8h"/>
+      </node>
+      <node id="693">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h</label>
+        <link refid="gr__vmcircbuf__mmap__tmpfile_8h"/>
+      </node>
+      <node id="690">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf.h</label>
+        <link refid="gr_vmcircbuf.h"/>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h</label>
+        <link refid="gr__vmcircbuf__sysv__shm_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr__vmcircbuf" prot="public">gr_vmcircbuf</innerclass>
+    <innerclass refid="classgr__vmcircbuf__factory" prot="public">gr_vmcircbuf_factory</innerclass>
+    <innerclass refid="classgr__vmcircbuf__sysconfig" prot="public">gr_vmcircbuf_sysconfig</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2003<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GR_VMCIRCBUF_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_GR_VMCIRCBUF_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_core_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classgr__vmcircbuf" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">GR_CORE_API<sp/><ref refid="classgr__vmcircbuf" kindref="compound" tooltip="abstract class to implement doubly mapped virtual memory circular buffers">gr_vmcircbuf</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="classgr__vmcircbuf_1a584fb274c233d5dd5f96b017ebf5003d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgr__vmcircbuf_1a584fb274c233d5dd5f96b017ebf5003d" kindref="member">d_size</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classgr__vmcircbuf_1a87e071030553ae4121476de06e48aec4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*<ref refid="classgr__vmcircbuf_1a87e071030553ae4121476de06e48aec4" kindref="member">d_base</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>CREATORS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classgr__vmcircbuf_1abad97351cda0ab091567e78e09fca4ed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__vmcircbuf_1abad97351cda0ab091567e78e09fca4ed" kindref="member">gr_vmcircbuf</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>:<sp/>d_size<sp/>(size),<sp/>d_base<sp/>(0)<sp/>{};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classgr__vmcircbuf" kindref="compound" tooltip="abstract class to implement doubly mapped virtual memory circular buffers">gr_vmcircbuf</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ACCESSORS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classgr__vmcircbuf_1a03d4abaf899703c1b1226083982cae58" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="classgr__vmcircbuf_1a03d4abaf899703c1b1226083982cae58" kindref="member">pointer_to_first_copy</ref><sp/>()</highlight><highlight class="keyword"><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_base;<sp/>}</highlight></codeline>
+<codeline lineno="46" refid="classgr__vmcircbuf_1a4f994ddc4c1c45b5eaa28c303af71e61" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="classgr__vmcircbuf_1a4f994ddc4c1c45b5eaa28c303af71e61" kindref="member">pointer_to_second_copy</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_base<sp/>+<sp/>d_size;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classgr__vmcircbuf__factory" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">GR_CORE_API<sp/><ref refid="classgr__vmcircbuf__factory" kindref="compound" tooltip="abstract factory for creating circular buffers">gr_vmcircbuf_factory</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="classgr__vmcircbuf__factory_1a5d08857f4d2c09b0bd027963cf904a10" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__vmcircbuf__factory_1a5d08857f4d2c09b0bd027963cf904a10" kindref="member">gr_vmcircbuf_factory</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classgr__vmcircbuf__factory" kindref="compound" tooltip="abstract factory for creating circular buffers">gr_vmcircbuf_factory</ref><sp/>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name<sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>granularity<sp/>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classgr__vmcircbuf" kindref="compound" tooltip="abstract class to implement doubly mapped virtual memory circular buffers">gr_vmcircbuf</ref><sp/>*make<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>\brief<sp/>pulls<sp/>together<sp/>all<sp/>implementations<sp/>of<sp/>gr_vmcircbuf</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classgr__vmcircbuf__sysconfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GR_CORE_API<sp/><ref refid="classgr__vmcircbuf__sysconfig" kindref="compound">gr_vmcircbuf_sysconfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/>*<sp/>\brief<sp/>return<sp/>the<sp/>single<sp/>instance<sp/>of<sp/>the<sp/>default<sp/>factory.</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/>*<sp/>returns<sp/>the<sp/>default<sp/>factory<sp/>to<sp/>use<sp/>if<sp/>it&apos;s<sp/>already<sp/>defined,</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/>*<sp/>else<sp/>find<sp/>the<sp/>first<sp/>working<sp/>factory<sp/>and<sp/>use<sp/>it.</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgr__vmcircbuf__factory" kindref="compound" tooltip="abstract factory for creating circular buffers">gr_vmcircbuf_factory</ref><sp/>*get_default_factory<sp/>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classgr__vmcircbuf__sysconfig_1aaae9e70d8b158d2e22b64c8ad283dbaa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__vmcircbuf__sysconfig_1aaae9e70d8b158d2e22b64c8ad283dbaa" kindref="member">granularity</ref><sp/>()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_default_factory()-&gt;<ref refid="classgr__vmcircbuf__factory_1a1e6730e738aef0a4164538ce8bcf5e8d" kindref="member" tooltip="return granularity of mapping, typically equal to page size">granularity</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="93" refid="classgr__vmcircbuf__sysconfig_1a1c521da3ec4c80ae20fd95cde531991f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classgr__vmcircbuf" kindref="compound" tooltip="abstract class to implement doubly mapped virtual memory circular buffers">gr_vmcircbuf</ref><sp/>*<ref refid="classgr__vmcircbuf__sysconfig_1a1c521da3ec4c80ae20fd95cde531991f" kindref="member">make</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_default_factory()-&gt;<ref refid="classgr__vmcircbuf__factory_1a93e1d9a839a9edc332e1b7b9eb594293" kindref="member" tooltip="return a gr_vmcircbuf, or 0 if unable.">make</ref>(size);<sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>N.B.<sp/>not<sp/>all<sp/>factories<sp/>are<sp/>guaranteed<sp/>to<sp/>work.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>It&apos;s<sp/>too<sp/>hard<sp/>to<sp/>check<sp/>everything<sp/>at<sp/>config<sp/>time,<sp/>so<sp/>we<sp/>check<sp/>at<sp/>runtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;gr_vmcircbuf_factory<sp/>*&gt;<sp/>all_factories<sp/>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>this<sp/>factory<sp/>the<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_default_factory<sp/>(<ref refid="classgr__vmcircbuf__factory" kindref="compound" tooltip="abstract factory for creating circular buffers">gr_vmcircbuf_factory</ref><sp/>*f);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>test_factory<sp/>(<ref refid="classgr__vmcircbuf__factory" kindref="compound" tooltip="abstract factory for creating circular buffers">gr_vmcircbuf_factory</ref><sp/>*f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>test_all_factories<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_GR_VMCIRCBUF_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf.h"/>
+  </compounddef>
+</doxygen>

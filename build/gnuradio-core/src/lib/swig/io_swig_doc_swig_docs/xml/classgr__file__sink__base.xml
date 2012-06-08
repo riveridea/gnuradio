@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__file__sink__base" kind="class" prot="public">
+    <compoundname>gr_file_sink_base</compoundname>
+    <derivedcompoundref refid="classgr__file__sink" prot="public" virt="non-virtual">gr_file_sink</derivedcompoundref>
+    <includes refid="gr__file__sink__base_8h" local="no">gr_file_sink_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__file__sink__base_1ab456fb9924239a56cafdfd4e3d3b5ee1" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* gr_file_sink_base::d_fp</definition>
+        <argsstring></argsstring>
+        <name>d_fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__sink__base_1a7d716a5627d11d8e68341ab3d3855b07" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* gr_file_sink_base::d_new_fp</definition>
+        <argsstring></argsstring>
+        <name>d_new_fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__sink__base_1a3322e5059ccae5f8c5d2ce0edc0df91a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_file_sink_base::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__sink__base_1ada5f41c561d503d233b64ba76e61a738" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_file_sink_base::d_is_binary</definition>
+        <argsstring></argsstring>
+        <name>d_is_binary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__sink__base_1a9d99c18d57a9d802826f57f6abe5dbe9" prot="protected" static="no" mutable="no">
+        <type>boost::mutex</type>
+        <definition>boost::mutex gr_file_sink_base::d_mutex</definition>
+        <argsstring></argsstring>
+        <name>d_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__file__sink__base_1a6d3450e6c074c63a6a5b77564385ed56" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_file_sink_base::d_unbuffered</definition>
+        <argsstring></argsstring>
+        <name>d_unbuffered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__file__sink__base_1a94d0aa96bdcdf647bd1f1dc7d4882839" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_file_sink_base::gr_file_sink_base</definition>
+        <argsstring>(const char *filename, bool is_binary)</argsstring>
+        <name>gr_file_sink_base</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_binary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__file__sink__base_1a37b3f2432e56dfd8ff8d70d2e08a657b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_file_sink_base::~gr_file_sink_base</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_file_sink_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__sink__base_1a10aaf2ad9ef353fc1c59551d3470f64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_file_sink_base::open</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open filename and begin output to it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__sink__base_1a15fee46d8070d8cd1786bcdf3901b5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_file_sink_base::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+<para>Close current output file. </para>        </briefdescription>
+        <detaileddescription>
+<para>Closes current output file and ignores any output until open is called to connect to another file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__sink__base_1a2c500bf0f2106cfadeb54976410416d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_file_sink_base::do_update</definition>
+        <argsstring>()</argsstring>
+        <name>do_update</name>
+        <briefdescription>
+<para>if we&apos;ve had an update, do it now. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__file__sink__base_1a1a952e289231b301825364e499e5362f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_file_sink_base::set_unbuffered</definition>
+        <argsstring>(bool unbuffered)</argsstring>
+        <name>set_unbuffered</name>
+        <param>
+          <type>bool</type>
+          <declname>unbuffered</declname>
+        </param>
+        <briefdescription>
+<para>turn on unbuffered writes for slower outputs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Common base class for file sinks. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="321">
+        <label>gr_file_sink</label>
+        <link refid="classgr__file__sink"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>gr_file_sink_base</label>
+        <link refid="classgr__file__sink__base"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_file_sink_base.h" bodystart="33" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classgr__file__sink__base_1a15fee46d8070d8cd1786bcdf3901b5df" prot="public" virt="non-virtual"><scope>gr_file_sink_base</scope><name>close</name></member>
+      <member refid="classgr__file__sink__base_1ab456fb9924239a56cafdfd4e3d3b5ee1" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_fp</name></member>
+      <member refid="classgr__file__sink__base_1ada5f41c561d503d233b64ba76e61a738" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_is_binary</name></member>
+      <member refid="classgr__file__sink__base_1a9d99c18d57a9d802826f57f6abe5dbe9" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_mutex</name></member>
+      <member refid="classgr__file__sink__base_1a7d716a5627d11d8e68341ab3d3855b07" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_new_fp</name></member>
+      <member refid="classgr__file__sink__base_1a6d3450e6c074c63a6a5b77564385ed56" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_unbuffered</name></member>
+      <member refid="classgr__file__sink__base_1a3322e5059ccae5f8c5d2ce0edc0df91a" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>d_updated</name></member>
+      <member refid="classgr__file__sink__base_1a2c500bf0f2106cfadeb54976410416d9" prot="public" virt="non-virtual"><scope>gr_file_sink_base</scope><name>do_update</name></member>
+      <member refid="classgr__file__sink__base_1a94d0aa96bdcdf647bd1f1dc7d4882839" prot="protected" virt="non-virtual"><scope>gr_file_sink_base</scope><name>gr_file_sink_base</name></member>
+      <member refid="classgr__file__sink__base_1a10aaf2ad9ef353fc1c59551d3470f64b" prot="public" virt="non-virtual"><scope>gr_file_sink_base</scope><name>open</name></member>
+      <member refid="classgr__file__sink__base_1a1a952e289231b301825364e499e5362f" prot="public" virt="non-virtual"><scope>gr_file_sink_base</scope><name>set_unbuffered</name></member>
+      <member refid="classgr__file__sink__base_1a37b3f2432e56dfd8ff8d70d2e08a657b" prot="public" virt="non-virtual"><scope>gr_file_sink_base</scope><name>~gr_file_sink_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

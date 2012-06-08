@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__short__to__float" kind="class" prot="public">
+    <compoundname>gr_short_to_float</compoundname>
+    <includes refid="gr__short__to__float_8h" local="no">gr_short_to_float.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__short__to__float_1a4c9beef4cb49a14b14749762094dee5f" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_short_to_float::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__short__to__float_1a0da12435c4191d9a7e644619442c3211" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_short_to_float::d_scale</definition>
+        <argsstring></argsstring>
+        <name>d_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__short__to__float_1a49183dfcdfa58376a15eea12b96f04f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__short__to__float_8h_1ab48fd6d108b86578043d352279e2a249" kindref="member">gr_short_to_float_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_short_to_float_sptr gr_make_short_to_float</definition>
+        <argsstring>(size_t vlen, float scale)</argsstring>
+        <name>gr_make_short_to_float</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__short__to__float_1a3dedab59a9b57c1c7c66b0571b520276" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_short_to_float::gr_short_to_float</definition>
+        <argsstring>(size_t vlen, float scale)</argsstring>
+        <name>gr_short_to_float</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__short__to__float_1a396665bfb067ba406a44a97e2afabe10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_short_to_float::scale</definition>
+        <argsstring>() const </argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the scalar divider value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__short__to__float_1ad71c2768799560b0716ede9084011069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_short_to_float::set_scale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>set_scale</name>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the scalar divider value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__short__to__float_1a6fba37d341c0bb3efa8ba8deda6924ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_short_to_float::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convert stream of short to a stream of float. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector length of data streams. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a scalar divider to change the output signal scale. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_float.h" bodystart="43" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classgr__short__to__float_1a0da12435c4191d9a7e644619442c3211" prot="private" virt="non-virtual"><scope>gr_short_to_float</scope><name>d_scale</name></member>
+      <member refid="classgr__short__to__float_1a4c9beef4cb49a14b14749762094dee5f" prot="private" virt="non-virtual"><scope>gr_short_to_float</scope><name>d_vlen</name></member>
+      <member refid="classgr__short__to__float_1a49183dfcdfa58376a15eea12b96f04f5" prot="private" virt="non-virtual"><scope>gr_short_to_float</scope><name>gr_make_short_to_float</name></member>
+      <member refid="classgr__short__to__float_1a3dedab59a9b57c1c7c66b0571b520276" prot="private" virt="non-virtual"><scope>gr_short_to_float</scope><name>gr_short_to_float</name></member>
+      <member refid="classgr__short__to__float_1a396665bfb067ba406a44a97e2afabe10" prot="public" virt="non-virtual"><scope>gr_short_to_float</scope><name>scale</name></member>
+      <member refid="classgr__short__to__float_1ad71c2768799560b0716ede9084011069" prot="public" virt="non-virtual"><scope>gr_short_to_float</scope><name>set_scale</name></member>
+      <member refid="classgr__short__to__float_1a6fba37d341c0bb3efa8ba8deda6924ec" prot="public" virt="virtual"><scope>gr_short_to_float</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

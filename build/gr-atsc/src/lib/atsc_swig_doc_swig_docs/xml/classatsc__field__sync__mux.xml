@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__field__sync__mux" kind="class" prot="public">
+    <compoundname>atsc_field_sync_mux</compoundname>
+    <includes refid="atsc__field__sync__mux_8h" local="no">atsc_field_sync_mux.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classatsc__field__sync__mux_1a1793da91f1eced2e6e9aad2ce1140cda" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsc_field_sync_mux::N_SAVED_SYMBOLS</definition>
+        <argsstring></argsstring>
+        <name>N_SAVED_SYMBOLS</name>
+        <initializer> 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__field__sync__mux_1a2d521f3a888763836fb3b848d58431f3" prot="protected" static="no" mutable="no">
+        <type>gr_uint64</type>
+        <definition>gr_uint64 atsc_field_sync_mux::d_current_index</definition>
+        <argsstring></argsstring>
+        <name>d_current_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__mux_1ab8414f6b2978125970615bd5230161e4" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool atsc_field_sync_mux::d_already_output_field_sync</definition>
+        <argsstring></argsstring>
+        <name>d_already_output_field_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__mux_1a6f937335cd67ddef985264d01120cc4a" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsc_field_sync_mux::d_saved_symbols[N_SAVED_SYMBOLS]</definition>
+        <argsstring>[N_SAVED_SYMBOLS]</argsstring>
+        <name>d_saved_symbols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__field__sync__mux_1a740e1903c294c2d9fb211a01b5d2b479" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__field__sync__mux_8h_1a2423e4056a12a87ca9843a55efb66ce7" kindref="member">atsc_field_sync_mux_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_field_sync_mux_sptr atsc_make_field_sync_mux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_field_sync_mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__field__sync__mux_1a58f865f7c249b7473d609ae344ad51dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_field_sync_mux::atsc_field_sync_mux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_field_sync_mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__field__sync__mux_1a7d1e7b3f5ce562f49e1f5c9634df22c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_field_sync_mux::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__field__sync__mux_1ae45f7fff73dd59a616ef1d46cc897c41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_field_sync_mux::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__field__sync__mux_1adaeb8bb0ec6053666f9c4313b364fad6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_field_sync_mux::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Insert ATSC Field Syncs as required (<ref refid="classatsc__data__segment" kindref="compound">atsc_data_segment</ref> --&gt; <ref refid="classatsc__data__segment" kindref="compound">atsc_data_segment</ref>)</para><para>input: <ref refid="classatsc__data__segment" kindref="compound">atsc_data_segment</ref>; output: <ref refid="classatsc__data__segment" kindref="compound">atsc_data_segment</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h" bodystart="40" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classatsc__field__sync__mux_1a58f865f7c249b7473d609ae344ad51dc" prot="private" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>atsc_field_sync_mux</name></member>
+      <member refid="classatsc__field__sync__mux_1a740e1903c294c2d9fb211a01b5d2b479" prot="private" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>atsc_make_field_sync_mux</name></member>
+      <member refid="classatsc__field__sync__mux_1ab8414f6b2978125970615bd5230161e4" prot="protected" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>d_already_output_field_sync</name></member>
+      <member refid="classatsc__field__sync__mux_1a2d521f3a888763836fb3b848d58431f3" prot="protected" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>d_current_index</name></member>
+      <member refid="classatsc__field__sync__mux_1a6f937335cd67ddef985264d01120cc4a" prot="protected" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>d_saved_symbols</name></member>
+      <member refid="classatsc__field__sync__mux_1a7d1e7b3f5ce562f49e1f5c9634df22c6" prot="public" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>forecast</name></member>
+      <member refid="classatsc__field__sync__mux_1a1793da91f1eced2e6e9aad2ce1140cda" prot="public" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>N_SAVED_SYMBOLS</name></member>
+      <member refid="classatsc__field__sync__mux_1adaeb8bb0ec6053666f9c4313b364fad6" prot="public" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>reset</name></member>
+      <member refid="classatsc__field__sync__mux_1ae45f7fff73dd59a616ef1d46cc897c41" prot="public" virt="non-virtual"><scope>atsc_field_sync_mux</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__pfb__arb__resampler__ccf" kind="class" prot="public">
+    <compoundname>gr_pfb_arb_resampler_ccf</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="gr__pfb__arb__resampler__ccf_8h" local="no">gr_pfb_arb_resampler_ccf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1ab1e4ae04f6e5284cec6644716c10d73b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_fir_ccf * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_arb_resampler_ccf::d_filters</definition>
+        <argsstring></argsstring>
+        <name>d_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="116" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1abb21dffd90da6006915a857962e70fe9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_fir_ccf * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_arb_resampler_ccf::d_diff_filters</definition>
+        <argsstring></argsstring>
+        <name>d_diff_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a8e783086f8bd37adc9bcc1facf7f1405" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_arb_resampler_ccf::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="118" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a50c524f45588f3ce61788f4507e5dc98" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_arb_resampler_ccf::d_dtaps</definition>
+        <argsstring></argsstring>
+        <name>d_dtaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a6a090538a3b23041530784a64e4cf00d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_arb_resampler_ccf::d_int_rate</definition>
+        <argsstring></argsstring>
+        <name>d_int_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="120" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a489cb3b4ea77293270327e6890c3a89f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_arb_resampler_ccf::d_dec_rate</definition>
+        <argsstring></argsstring>
+        <name>d_dec_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1ac98d6ebdf716225501cdfcdf18559726" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_arb_resampler_ccf::d_flt_rate</definition>
+        <argsstring></argsstring>
+        <name>d_flt_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="122" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a56791c6699a32e48258563e5969f00d2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_arb_resampler_ccf::d_acc</definition>
+        <argsstring></argsstring>
+        <name>d_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="123" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a7ed62526e1d1fda23abd07556e02e01f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_arb_resampler_ccf::d_last_filter</definition>
+        <argsstring></argsstring>
+        <name>d_last_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="124" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a652a22b487828b9ab640a192b371eb95" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_arb_resampler_ccf::d_start_index</definition>
+        <argsstring></argsstring>
+        <name>d_start_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a6fedd38b18b4dfdbc356081c0d216081" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_arb_resampler_ccf::d_taps_per_filter</definition>
+        <argsstring></argsstring>
+        <name>d_taps_per_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="126" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__arb__resampler__ccf_1a5e9f99a0ceba4cddfe26b38c1b2427b0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_pfb_arb_resampler_ccf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="127" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__pfb__arb__resampler__ccf_1a7037e124d74e3803f732d3982fdcd2ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_pfb_arb_resampler_ccf_sptr</ref></type>
+        <definition>GR_CORE_API gr_pfb_arb_resampler_ccf_sptr gr_make_pfb_arb_resampler_ccf</definition>
+        <argsstring>(float rate, const std::vector&lt; float &gt; &amp;taps, unsigned int filter_size)</argsstring>
+        <name>gr_make_pfb_arb_resampler_ccf</name>
+        <param>
+          <type>float</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>filter_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank arbitray resampler. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Specifies the resampling rate to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. The taps should be generated at the filter_size sampling rate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned int) The number of filters in the filter bank. This is directly related to quantization noise introduced during the resampling. Defaults to 32 filters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1a3f80e0fc696c9d723b7839163c6c5986" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_arb_resampler_ccf::gr_pfb_arb_resampler_ccf</definition>
+        <argsstring>(float rate, const std::vector&lt; float &gt; &amp;taps, unsigned int filter_size)</argsstring>
+        <name>gr_pfb_arb_resampler_ccf</name>
+        <param>
+          <type>float</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>filter_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank arbitray resampler. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Specifies the resampling rate to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. The taps should be generated at the filter_size sampling rate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned int) The number of filters in the filter bank. This is directly related to quantization noise introduced during the resampling. Defaults to 32 filters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1aceb7bfba388c815451ce501aada94242" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_arb_resampler_ccf::create_diff_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;newtaps, std::vector&lt; float &gt; &amp;difftaps)</argsstring>
+        <name>create_diff_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>newtaps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>difftaps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1a8340cc27186c92a99f890b6463cd2c08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_arb_resampler_ccf::create_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;newtaps, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;ourtaps, std::vector&lt; gr_fir_ccf * &gt; &amp;ourfilter)</argsstring>
+        <name>create_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>newtaps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; float &gt; &gt; &amp;</type>
+          <declname>ourtaps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gr_fir_ccf * &gt; &amp;</type>
+          <declname>ourfilter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the filterbank&apos;s filter taps with the new prototype filter <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newtaps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector of floats) The prototype filter to populate the filterbank. The taps should be generated at the interpolated sampling rate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ourtaps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector of floats) Reference to our internal member of holding the taps. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ourfilter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector of filters) Reference to our internal filter to set the taps for. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1a24aef28515295bbbe73f02fe0b3ca432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_arb_resampler_ccf::~gr_pfb_arb_resampler_ccf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_pfb_arb_resampler_ccf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1a6750f5b1232fe85982e30f20efdf87db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_arb_resampler_ccf::print_taps</definition>
+        <argsstring>()</argsstring>
+        <name>print_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print all of the filterbank taps to screen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1ac5fa86f9ca6a1e076ece4d218ff62e42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_arb_resampler_ccf::set_rate</definition>
+        <argsstring>(float rate)</argsstring>
+        <name>set_rate</name>
+        <param>
+          <type>float</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="166" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="166" bodyend="170"/>
+        <references refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d">gr_block::set_relative_rate</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__arb__resampler__ccf_1ae1758735ee29c79cf3c1b962f17b1b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int gr_pfb_arb_resampler_ccf::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Polyphase filterbank arbitrary resampler with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block takes in a signal stream and performs arbitrary resampling. The resampling rate can be any real number <emphasis>r</emphasis>. The resampling is done by constructing <emphasis>N</emphasis> filters where <emphasis>N</emphasis> is the interpolation rate. We then calculate <emphasis>D</emphasis> where <emphasis>D = floor(N/r)</emphasis>.</para><para>Using <emphasis>N</emphasis> and <emphasis>D</emphasis>, we can perform rational resampling where <emphasis>N/D</emphasis> is a rational number close to the input rate <emphasis>r</emphasis> where we have <emphasis>N</emphasis> filters and we cycle through them as a polyphase filterbank with a stride of <emphasis>D</emphasis> so that <emphasis>i+1 = (i + D) % N</emphasis>.</para><para>To get the arbitrary rate, we want to interpolate between two points. For each value out, we take an output from the current filter, <emphasis>i</emphasis>, and the next filter <emphasis>i+1</emphasis> and then linearly interpolate between the two based on the real resampling rate we want.</para><para>The linear interpolation only provides us with an approximation to the real sampling rate specified. The error is a quantization error between the two filters we used as our interpolation points. To this end, the number of filters, <emphasis>N</emphasis>, used determines the quantization error; the larger <emphasis>N</emphasis>, the smaller the noise. You can design for a specified noise floor by setting the filter size (parameters <emphasis>filter_size</emphasis>). The size defaults to 32 filters, which is about as good as most implementations need.</para><para>The trick with designing this filter is in how to specify the taps of the prototype filter. Like the PFB interpolator, the taps are specified using the interpolated filter rate. In this case, that rate is the input sample rate multiplied by the number of filters in the filterbank, which is also the interpolation rate. All other values should be relative to this rate.</para><para>For example, for a 32-filter arbitrary resampler and using the GNU Radio&apos;s firdes utility to build the filter, we build a low-pass filter with a sampling rate of <emphasis>fs</emphasis>, a 3-dB bandwidth of <emphasis>BW</emphasis> and a transition bandwidth of <emphasis>TB</emphasis>. We can also specify the out-of-band attenuation to use, <emphasis>ATT</emphasis>, and the filter window function (a Blackman-harris window in this case). The first input is the gain of the filter, which we specify here as the interpolation rate (<emphasis>32</emphasis>).</para><para><bold><emphasis>self._taps = gr.firdes.low_pass_2(32, 32*fs, BW, TB, attenuation_dB=ATT, window=gr.firdes.WIN_BLACKMAN_hARRIS)</emphasis></bold></para><para>The theory behind this block can be found in Chapter 7.5 of the following book.</para><para><bold><emphasis>f. harris, &quot;Multirate Signal Processing for Communication
+       Systems&quot;, Upper Saddle River, NJ: Prentice Hall, Inc. 2004.</emphasis></bold> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4620">
+        <label>gr_pfb_arb_resampler_ccf</label>
+        <link refid="classgr__pfb__arb__resampler__ccf"/>
+        <childnode refid="4621" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4623">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4624" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4621">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4622" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4624">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4622">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4623" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4625">
+        <label>gr_pfb_arb_resampler_ccf</label>
+        <link refid="classgr__pfb__arb__resampler__ccf"/>
+        <childnode refid="4626" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4628">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4629" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4626">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4627" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4630">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="4631" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="4633">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="4629">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4631">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="4627">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4628" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4630" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="4632" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4632">
+        <label>std::string</label>
+        <childnode refid="4633" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" line="101" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_arb_resampler_ccf.h" bodystart="100" bodyend="176"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>consume_each</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1aceb7bfba388c815451ce501aada94242" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>create_diff_taps</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a8340cc27186c92a99f890b6463cd2c08" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>create_taps</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a56791c6699a32e48258563e5969f00d2" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_acc</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_color</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a489cb3b4ea77293270327e6890c3a89f" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_dec_rate</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1abb21dffd90da6006915a857962e70fe9" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_diff_filters</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a50c524f45588f3ce61788f4507e5dc98" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_dtaps</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1ab1e4ae04f6e5284cec6644716c10d73b" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_filters</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1ac98d6ebdf716225501cdfcdf18559726" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_flt_rate</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_input_signature</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a6a090538a3b23041530784a64e4cf00d" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_int_rate</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a7ed62526e1d1fda23abd07556e02e01f" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_last_filter</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_output_signature</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a652a22b487828b9ab640a192b371eb95" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_start_index</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a8e783086f8bd37adc9bcc1facf7f1405" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_taps</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a6fedd38b18b4dfdbc356081c0d216081" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_taps_per_filter</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_unique_id</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a5e9f99a0ceba4cddfe26b38c1b2427b0" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>d_updated</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>forecast</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1ae1758735ee29c79cf3c1b962f17b1b4f" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a7037e124d74e3803f732d3982fdcd2ad" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_make_pfb_arb_resampler_ccf</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a3f80e0fc696c9d723b7839163c6c5986" prot="private" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_pfb_arb_resampler_ccf</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>post</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a6750f5b1232fe85982e30f20efdf87db" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>print_taps</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_output_signature</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1ac5fa86f9ca6a1e076ece4d218ff62e42" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_rate</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__arb__resampler__ccf_1a24aef28515295bbbe73f02fe0b3ca432" prot="public" virt="non-virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>~gr_pfb_arb_resampler_ccf</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>gr_pfb_arb_resampler_ccf</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

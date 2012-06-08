@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__decode__ccsds__27__fb" kind="class" prot="public">
+    <compoundname>gr_decode_ccsds_27_fb</compoundname>
+    <includes refid="gr__decode__ccsds__27__fb_8h" local="no">gr_decode_ccsds_27_fb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__decode__ccsds__27__fb_1a4d5c2880c5d849ae6be685f9e50f3c3e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_decode_ccsds_27_fb::d_mettab[2][256]</definition>
+        <argsstring>[2][256]</argsstring>
+        <name>d_mettab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__decode__ccsds__27__fb_1a5fcabb0f681befa77655796c52ef3806" prot="private" static="no" mutable="no">
+        <type>struct viterbi_state</type>
+        <definition>struct viterbi_state gr_decode_ccsds_27_fb::d_state0[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>d_state0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__decode__ccsds__27__fb_1a57d61abeee8d1867f36dc9c262e8a812" prot="private" static="no" mutable="no">
+        <type>struct viterbi_state</type>
+        <definition>struct viterbi_state gr_decode_ccsds_27_fb::d_state1[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>d_state1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__decode__ccsds__27__fb_1a27c11783037a6f7f70793ab151ffaf61" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_decode_ccsds_27_fb::d_viterbi_in[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>d_viterbi_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__decode__ccsds__27__fb_1ac50e92431d1c3066c79fbd62eb84ce46" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_decode_ccsds_27_fb::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__decode__ccsds__27__fb_1acd5b4ca54737adf578776854a4df4e95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__decode__ccsds__27__fb_8h_1a59afb5f00ba92fbfb5b9027f6e82de8c" kindref="member">gr_decode_ccsds_27_fb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_decode_ccsds_27_fb_sptr gr_make_decode_ccsds_27_fb</definition>
+        <argsstring>()</argsstring>
+        <name>gr_make_decode_ccsds_27_fb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__decode__ccsds__27__fb_1a8d3c3b11825d9518662b493517cfa098" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_decode_ccsds_27_fb::gr_decode_ccsds_27_fb</definition>
+        <argsstring>()</argsstring>
+        <name>gr_decode_ccsds_27_fb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__decode__ccsds__27__fb_1ae325913365d75520e8b9ccddb1832522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_decode_ccsds_27_fb::~gr_decode_ccsds_27_fb</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_decode_ccsds_27_fb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__decode__ccsds__27__fb_1a913481b6b9bfbf8a97ba5f02deddd31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_decode_ccsds_27_fb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A rate 1/2, k=7 convolutional decoder for the CCSDS standard</para><para>This block performs soft-decision convolutional decoding using the Viterbi algorithm. </para>    </briefdescription>
+    <detaileddescription>
+<para>The input is a stream of (possibly noise corrupted) floating point values nominally spanning [-1.0, 1.0], representing the encoded channel symbols 0 (-1.0) and 1 (1.0), with erased symbols at 0.0.</para><para>The output is MSB first packed bytes of decoded values.</para><para>As a rate 1/2 code, there will be one output byte for every 16 input symbols.</para><para>This block is designed for continuous data streaming, not packetized data. The first 32 bits out will be zeroes, with the output delayed four bytes from the corresponding inputs. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_decode_ccsds_27_fb.h" bodystart="55" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classgr__decode__ccsds__27__fb_1ac50e92431d1c3066c79fbd62eb84ce46" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>d_count</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a4d5c2880c5d849ae6be685f9e50f3c3e" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>d_mettab</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a5fcabb0f681befa77655796c52ef3806" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>d_state0</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a57d61abeee8d1867f36dc9c262e8a812" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>d_state1</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a27c11783037a6f7f70793ab151ffaf61" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>d_viterbi_in</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a8d3c3b11825d9518662b493517cfa098" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>gr_decode_ccsds_27_fb</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1acd5b4ca54737adf578776854a4df4e95" prot="private" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>gr_make_decode_ccsds_27_fb</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1a913481b6b9bfbf8a97ba5f02deddd31d" prot="public" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>work</name></member>
+      <member refid="classgr__decode__ccsds__27__fb_1ae325913365d75520e8b9ccddb1832522" prot="public" virt="non-virtual"><scope>gr_decode_ccsds_27_fb</scope><name>~gr_decode_ccsds_27_fb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

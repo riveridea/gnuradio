@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gri__control__loop_8h" kind="file">
+    <compoundname>gri_control_loop.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includedby refid="gr__pll__carriertracking__cc_8h" local="no">gr_pll_carriertracking_cc.h</includedby>
+    <includedby refid="gr__pll__freqdet__cf_8h" local="no">gr_pll_freqdet_cf.h</includedby>
+    <includedby refid="gr__pll__refout__cc_8h" local="no">gr_pll_refout_cc.h</includedby>
+    <includedby refid="digital__constellation__receiver__cb_8h" local="no">digital_constellation_receiver_cb.h</includedby>
+    <includedby refid="digital__costas__loop__cc_8h" local="no">digital_costas_loop_cc.h</includedby>
+    <includedby refid="digital__fll__band__edge__cc_8h" local="no">digital_fll_band_edge_cc.h</includedby>
+    <includedby refid="digital__mpsk__receiver__cc_8h" local="no">digital_mpsk_receiver_cc.h</includedby>
+    <incdepgraph>
+      <node id="13745">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13746" relation="include">
+        </childnode>
+      </node>
+      <node id="13744">
+        <label>gri_control_loop.h</label>
+        <link refid="gri_control_loop.h"/>
+        <childnode refid="13745" relation="include">
+        </childnode>
+      </node>
+      <node id="13746">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13752">
+        <label>digital_costas_loop_cc.h</label>
+        <link refid="digital__costas__loop__cc_8h"/>
+      </node>
+      <node id="13748">
+        <label>gr_pll_carriertracking_cc.h</label>
+        <link refid="gr__pll__carriertracking__cc_8h"/>
+      </node>
+      <node id="13747">
+        <label>gri_control_loop.h</label>
+        <link refid="gri_control_loop.h"/>
+        <childnode refid="13748" relation="include">
+        </childnode>
+        <childnode refid="13749" relation="include">
+        </childnode>
+        <childnode refid="13750" relation="include">
+        </childnode>
+        <childnode refid="13751" relation="include">
+        </childnode>
+        <childnode refid="13752" relation="include">
+        </childnode>
+        <childnode refid="13753" relation="include">
+        </childnode>
+        <childnode refid="13754" relation="include">
+        </childnode>
+      </node>
+      <node id="13754">
+        <label>digital_mpsk_receiver_cc.h</label>
+        <link refid="digital__mpsk__receiver__cc_8h"/>
+      </node>
+      <node id="13751">
+        <label>digital_constellation_receiver_cb.h</label>
+        <link refid="digital__constellation__receiver__cb_8h"/>
+      </node>
+      <node id="13753">
+        <label>digital_fll_band_edge_cc.h</label>
+        <link refid="digital__fll__band__edge__cc_8h"/>
+      </node>
+      <node id="13749">
+        <label>gr_pll_freqdet_cf.h</label>
+        <link refid="gr__pll__freqdet__cf_8h"/>
+      </node>
+      <node id="13750">
+        <label>gr_pll_refout_cc.h</label>
+        <link refid="gr__pll__refout__cc_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgri__control__loop" prot="public">gri_control_loop</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_control_loop.h"/>
+  </compounddef>
+</doxygen>

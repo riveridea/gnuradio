@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__fft__filter__fff_8h" kind="file">
+    <compoundname>gr_fft_filter_fff.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__sync__decimator_8h" local="no">gr_sync_decimator.h</includes>
+    <incdepgraph>
+      <node id="7195">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="7207">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="7206">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="7205" relation="include">
+        </childnode>
+        <childnode refid="7207" relation="include">
+        </childnode>
+        <childnode refid="7195" relation="include">
+        </childnode>
+        <childnode refid="7208" relation="include">
+        </childnode>
+        <childnode refid="7199" relation="include">
+        </childnode>
+        <childnode refid="7209" relation="include">
+        </childnode>
+        <childnode refid="7210" relation="include">
+        </childnode>
+        <childnode refid="7213" relation="include">
+        </childnode>
+        <childnode refid="7214" relation="include">
+        </childnode>
+        <childnode refid="7215" relation="include">
+        </childnode>
+      </node>
+      <node id="7198">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="7199" relation="include">
+        </childnode>
+      </node>
+      <node id="7210">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="7211" relation="include">
+        </childnode>
+        <childnode refid="7212" relation="include">
+        </childnode>
+      </node>
+      <node id="7190">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7191" relation="include">
+        </childnode>
+      </node>
+      <node id="7205">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="7188" relation="include">
+        </childnode>
+      </node>
+      <node id="7192">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7193" relation="include">
+        </childnode>
+        <childnode refid="7200" relation="include">
+        </childnode>
+        <childnode refid="7201" relation="include">
+        </childnode>
+        <childnode refid="7202" relation="include">
+        </childnode>
+        <childnode refid="7203" relation="include">
+        </childnode>
+        <childnode refid="7209" relation="include">
+        </childnode>
+      </node>
+      <node id="7214">
+        <label>stdexcept</label>
+      </node>
+      <node id="7194">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7195" relation="include">
+        </childnode>
+        <childnode refid="7196" relation="include">
+        </childnode>
+        <childnode refid="7197" relation="include">
+        </childnode>
+        <childnode refid="7198" relation="include">
+        </childnode>
+      </node>
+      <node id="7209">
+        <label>string</label>
+      </node>
+      <node id="7191">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7192" relation="include">
+        </childnode>
+        <childnode refid="7216" relation="include">
+        </childnode>
+      </node>
+      <node id="7187">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="7188" relation="include">
+        </childnode>
+      </node>
+      <node id="7216">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7206" relation="include">
+        </childnode>
+      </node>
+      <node id="7197">
+        <label>stddef.h</label>
+      </node>
+      <node id="7202">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="7211">
+        <label>limits.h</label>
+      </node>
+      <node id="7208">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="7193">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7194" relation="include">
+        </childnode>
+      </node>
+      <node id="7212">
+        <label>wchar.h</label>
+      </node>
+      <node id="7203">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7204" relation="include">
+        </childnode>
+        <childnode refid="7206" relation="include">
+        </childnode>
+      </node>
+      <node id="7196">
+        <label>vector</label>
+      </node>
+      <node id="7201">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="7188">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="7213">
+        <label>iosfwd</label>
+      </node>
+      <node id="7186">
+        <label>gr_fft_filter_fff.h</label>
+        <link refid="gr_fft_filter_fff.h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7189" relation="include">
+        </childnode>
+      </node>
+      <node id="7215">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="7189">
+        <label>gr_sync_decimator.h</label>
+        <link refid="gr__sync__decimator_8h"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7190" relation="include">
+        </childnode>
+      </node>
+      <node id="7200">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="7187" relation="include">
+        </childnode>
+        <childnode refid="7195" relation="include">
+        </childnode>
+      </node>
+      <node id="7199">
+        <label>complex</label>
+      </node>
+      <node id="7204">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="7205" relation="include">
+        </childnode>
+        <childnode refid="7206" relation="include">
+        </childnode>
+        <childnode refid="7195" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__fft__filter__fff" prot="public">gr_fft_filter_fff</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__fft__filter__fff_8h_1a14cdabc5baf41313d79df24282819d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_fft_filter_fff_sptr</ref></type>
+        <definition>GR_CORE_API gr_fft_filter_fff_sptr gr_make_fft_filter_fff</definition>
+        <argsstring>(int decimation, const std::vector&lt; float &gt; &amp;taps, int nthreads=1)</argsstring>
+        <name>gr_make_fft_filter_fff</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nthreads</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_fff.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_fff.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/gnuradio
+
+Name: gnuradio-core
+Description: GNU Software Radio toolkit
+Requires: gruel fftw3f
+Version: 3.6.1git
+Libs.private:   
+Libs: -L${libdir} -lgnuradio-core
+Cflags:   -I${includedir}

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__ccf__3dnow" kind="class" prot="public">
+    <compoundname>gr_fir_ccf_3dnow</compoundname>
+    <basecompoundref refid="classgr__fir__ccf__simd" prot="public" virt="non-virtual">gr_fir_ccf_simd</basecompoundref>
+    <includes refid="gr__fir__ccf__x86_8h" local="no">gr_fir_ccf_x86.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__ccf__3dnow_1acd42279ba0f86b1e5f9c7fd192c4db74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_3dnow::gr_fir_ccf_3dnow</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_ccf_3dnow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_x86.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__3dnow_1a56bbb9a96831a0e0f32a87ebf6a1ee24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_3dnow::gr_fir_ccf_3dnow</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_ccf_3dnow</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_x86.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>3DNow! version of <ref refid="classgr__fir__ccf" kindref="compound">gr_fir_ccf</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="397">
+        <label>gr_fir_ccf_simd</label>
+        <link refid="classgr__fir__ccf__simd"/>
+        <childnode refid="398" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>gr_fir_ccf</label>
+        <link refid="classgr__fir__ccf"/>
+      </node>
+      <node id="398">
+        <label>gr_fir_ccf_generic</label>
+        <link refid="classgr__fir__ccf__generic"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>gr_fir_ccf_3dnow</label>
+        <link refid="classgr__fir__ccf__3dnow"/>
+        <childnode refid="397" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="401">
+        <label>gr_fir_ccf_simd</label>
+        <link refid="classgr__fir__ccf__simd"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="404">
+        <label>std::vector&lt; float &gt;</label>
+      </node>
+      <node id="403">
+        <label>gr_fir_ccf</label>
+        <link refid="classgr__fir__ccf"/>
+        <childnode refid="404" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="402">
+        <label>gr_fir_ccf_generic</label>
+        <link refid="classgr__fir__ccf__generic"/>
+        <childnode refid="403" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>gr_fir_ccf_3dnow</label>
+        <link refid="classgr__fir__ccf__3dnow"/>
+        <childnode refid="401" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_x86.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_x86.h" bodystart="33" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classgr__fir__ccf__simd_1a21b414b07a0353484e342e1e96216bd0" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>d_aligned_taps</name></member>
+      <member refid="classgr__fir__ccf__simd_1a1f38cc30575580de30009fc8b50e9640" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>d_fcomplex_dotprod</name></member>
+      <member refid="classgr__fir__ccf_1a9af107e829a86398e5f607702840806a" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__ccf__simd_1abcf7817f4bfed0daf6111c7a238859a2" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>fcomplex_dotprod_t</name></member>
+      <member refid="classgr__fir__ccf__simd_1a8acdb63d025f11d8f028565c68f03bc0" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>filter</name></member>
+      <member refid="classgr__fir__ccf__generic_1ad06a6a9c87cfd7c20f0b0746f46fa28c" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>filterN</name></member>
+      <member refid="classgr__fir__ccf__generic_1a05e2e78319edd5f5a8902b9b09c45756" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__ccf_1ab1ed3d65aaa985e7032fd5e9243537d1" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__ccf_1aa48a9accdb4deced4b5b04061a8961df" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf</name></member>
+      <member refid="classgr__fir__ccf_1a9d5ba21009ff25164b8fdf08d0c8c7e3" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf</name></member>
+      <member refid="classgr__fir__ccf__3dnow_1acd42279ba0f86b1e5f9c7fd192c4db74" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_3dnow</name></member>
+      <member refid="classgr__fir__ccf__3dnow_1a56bbb9a96831a0e0f32a87ebf6a1ee24" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_3dnow</name></member>
+      <member refid="classgr__fir__ccf__generic_1aa73fecc18b02a5ad506342c7ef284f36" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_generic</name></member>
+      <member refid="classgr__fir__ccf__generic_1a012c8d0043999db86aaf5d45fde4d506" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_generic</name></member>
+      <member refid="classgr__fir__ccf__simd_1a9c8229586ed0a73d176c0960feb90531" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_simd</name></member>
+      <member refid="classgr__fir__ccf__simd_1ae6af6ec1bf4f676d0a1a3c2acd744285" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>gr_fir_ccf_simd</name></member>
+      <member refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__ccf__simd_1a970d13e317fa6471e65da3bcd94a2e24" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__ccf_1a1823367b810356281a5e87efa1b57d8f" prot="public" virt="virtual"><scope>gr_fir_ccf_3dnow</scope><name>~gr_fir_ccf</name></member>
+      <member refid="classgr__fir__ccf__simd_1a233af35deedb8f55261421089c923e73" prot="public" virt="non-virtual"><scope>gr_fir_ccf_3dnow</scope><name>~gr_fir_ccf_simd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

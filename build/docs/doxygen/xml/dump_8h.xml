@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dump_8h" kind="file">
+    <compoundname>dump.h</compoundname>
+    <includes refid="comp_8h" local="yes">comp.h</includes>
+    <incdepgraph>
+      <node id="3856">
+        <label>dump.h</label>
+        <link refid="dump.h"/>
+        <childnode refid="3857" relation="include">
+        </childnode>
+      </node>
+      <node id="3857">
+        <label>comp.h</label>
+        <link refid="comp_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dump_8h_1a77c522b3ccf68cf1bce49d1b1c0afbdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_on</definition>
+        <argsstring>(char filename_prefix[])</argsstring>
+        <name>dump_on</name>
+        <param>
+          <type>char</type>
+          <declname>filename_prefix</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6711b540fed88bd990476addbc0cce3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_off</definition>
+        <argsstring>()</argsstring>
+        <name>dump_off</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6b3b22bccc7dc70d021d8bb6768f3fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Sn</definition>
+        <argsstring>(float Sn[])</argsstring>
+        <name>dump_Sn</name>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1aaf16d7111fca607a342b378a662553ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Sw</definition>
+        <argsstring>(COMP Sw[])</argsstring>
+        <name>dump_Sw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a509ff9a4bdbfe1b57f8d6d78d98512ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Sw_</definition>
+        <argsstring>(COMP Sw_[])</argsstring>
+        <name>dump_Sw_</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw_</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a83dda246b4f24217002baff54c10d653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Ew</definition>
+        <argsstring>(COMP Ew[])</argsstring>
+        <name>dump_Ew</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Ew</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1afed5e2a7e9c8fde158719e426f4075b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_model</definition>
+        <argsstring>(MODEL *m)</argsstring>
+        <name>dump_model</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a8457e1b5739ee1ea0aacd0d9ae0286b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_quantised_model</definition>
+        <argsstring>(MODEL *m)</argsstring>
+        <name>dump_quantised_model</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1af9d93c550ca9f94d9508e5dc8c565399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Pw</definition>
+        <argsstring>(COMP Pw[])</argsstring>
+        <name>dump_Pw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Pw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a83ef2e051293897a7e638fbd2ad19e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_lsp</definition>
+        <argsstring>(float lsp[])</argsstring>
+        <name>dump_lsp</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1ab752be7a460639fd05882e94e93e3247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_ak</definition>
+        <argsstring>(float ak[], int order)</argsstring>
+        <name>dump_ak</name>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1aa8745e158c253fb2fb67bfb9a8a87682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_E</definition>
+        <argsstring>(float E)</argsstring>
+        <name>dump_E</name>
+        <param>
+          <type>float</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a5b86c2c769feca7f17a8771f2453478d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_resample</definition>
+        <argsstring>(float w[], float A[], int n)</argsstring>
+        <name>dump_resample</name>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>A</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6360ffc3a9fc4f032eb4eb7630c99902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_snr</definition>
+        <argsstring>(float snr)</argsstring>
+        <name>dump_snr</name>
+        <param>
+          <type>float</type>
+          <declname>snr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1afb3f36bfe6d12d57a5b2a6d505c68570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_phase</definition>
+        <argsstring>(float phase[], int L)</argsstring>
+        <name>dump_phase</name>
+        <param>
+          <type>float</type>
+          <declname>phase</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a55c6cdc63679ff2efc83659e5f5743c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_phase_</definition>
+        <argsstring>(float phase[], int L)</argsstring>
+        <name>dump_phase_</name>
+        <param>
+          <type>float</type>
+          <declname>phase</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a79d8fab9e29b44f53e1a35355111dafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_sq</definition>
+        <argsstring>(float sq[])</argsstring>
+        <name>dump_sq</name>
+        <param>
+          <type>float</type>
+          <declname>sq</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a856934965ae01000a22e13905fc605ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_dec</definition>
+        <argsstring>(COMP Fw[])</argsstring>
+        <name>dump_dec</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Fw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1af30a5c2cec1ea4fc781350be5f1753ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Fw</definition>
+        <argsstring>(COMP Fw[])</argsstring>
+        <name>dump_Fw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Fw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1ac3960fba4259d2bbb7aa69eabcce2678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_e</definition>
+        <argsstring>(float e_hz[])</argsstring>
+        <name>dump_e</name>
+        <param>
+          <type>float</type>
+          <declname>e_hz</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6f0d82189cbbece2dd3d871a235338f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_Rk</definition>
+        <argsstring>(float Rk[])</argsstring>
+        <name>dump_Rk</name>
+        <param>
+          <type>float</type>
+          <declname>Rk</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a3d40a706e73a46ceee53c89bd93ca503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void dump_bg</definition>
+        <argsstring>(float e, float bg_est, float percent_uv)</argsstring>
+        <name>dump_bg</name>
+        <param>
+          <type>float</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bg_est</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>percent_uv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/dump.h"/>
+  </compounddef>
+</doxygen>

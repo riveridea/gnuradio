@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsc__bit__timing__loop_8h" kind="file">
+    <compoundname>atsc_bit_timing_loop.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes local="no">cstdio</includes>
+    <includes refid="gr__block_8h" local="no">gr_block.h</includes>
+    <includes refid="atsci__diag__output_8h" local="no">atsci_diag_output.h</includes>
+    <includes refid="atsci__sssr_8h" local="no">atsci_sssr.h</includes>
+    <includes refid="atsci__syminfo_8h" local="no">atsci_syminfo.h</includes>
+    <incdepgraph>
+      <node id="421">
+        <label>atsci_diag_output.h</label>
+        <link refid="atsci__diag__output_8h"/>
+      </node>
+      <node id="399">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="411">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="410">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="403" relation="include">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+      </node>
+      <node id="409">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>gri_mmse_fir_interpolator.h</label>
+        <link refid="gri__mmse__fir__interpolator_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="413" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>stdexcept</label>
+      </node>
+      <node id="398">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>string</label>
+      </node>
+      <node id="394">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="395">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+      </node>
+      <node id="401">
+        <label>stddef.h</label>
+      </node>
+      <node id="406">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="415">
+        <label>limits.h</label>
+      </node>
+      <node id="412">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="397">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="398" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>wchar.h</label>
+      </node>
+      <node id="393">
+        <label>cstdio</label>
+      </node>
+      <node id="391">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+      <node id="407">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>vector</label>
+      </node>
+      <node id="422">
+        <label>atsci_sssr.h</label>
+        <link refid="atsci__sssr_8h"/>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="424" relation="include">
+        </childnode>
+        <childnode refid="425" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>atsci_syminfo.h</label>
+        <link refid="atsci__syminfo_8h"/>
+      </node>
+      <node id="390">
+        <label>atsc_bit_timing_loop.h</label>
+        <link refid="atsc_bit_timing_loop.h"/>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="394" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+      </node>
+      <node id="405">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="392">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="417">
+        <label>iosfwd</label>
+      </node>
+      <node id="419">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="423">
+        <label>atsc_consts.h</label>
+        <link refid="atsc__consts_8h"/>
+      </node>
+      <node id="404">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+      </node>
+      <node id="403">
+        <label>complex</label>
+      </node>
+      <node id="425">
+        <label>gr_single_pole_iir.h</label>
+        <link refid="gr__single__pole__iir_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+      </node>
+      <node id="408">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classatsc__bit__timing__loop" prot="public">atsc_bit_timing_loop</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="atsc__bit__timing__loop_8h_1abf4c176537c5c9472ec57e06f6bbcd77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">atsc_bit_timing_loop_sptr</ref></type>
+        <definition>ATSC_API atsc_bit_timing_loop_sptr atsc_make_bit_timing_loop</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_bit_timing_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h"/>
+  </compounddef>
+</doxygen>

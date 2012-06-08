@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__test__types_8h" kind="file">
+    <compoundname>gr_test_types.h</compoundname>
+    <includedby refid="gr__test_8h" local="yes">gr_test.h</includedby>
+    <invincdepgraph>
+      <node id="12641">
+        <label>gr_test_types.h</label>
+        <link refid="gr_test_types.h"/>
+        <childnode refid="12642" relation="include">
+        </childnode>
+      </node>
+      <node id="12642">
+        <label>gr_test.h</label>
+        <link refid="gr__test_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" prot="public" static="no">
+        <name>gr_consume_type_t</name>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a4091f414fb071161bd0fa54c6879695d" prot="public">
+          <name>CONSUME_NOUTPUT_ITEMS</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a013eed6079e2aba6c0e4d84caaec6413" prot="public">
+          <name>CONSUME_NOUTPUT_ITEMS_LIMIT_MAX</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a1f6c799da5ceb5f65a802aaaf2fba269" prot="public">
+          <name>CONSUME_NOUTPUT_ITEMS_LIMIT_MIN</name>
+          <initializer>2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a7e0ddaad19d52565be3c6882636f4c64" prot="public">
+          <name>CONSUME_ALL_AVAILABLE</name>
+          <initializer>3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a140b3ab0037b12ad79b8c8b2f7ff5032" prot="public">
+          <name>CONSUME_ALL_AVAILABLE_LIMIT_MAX</name>
+          <initializer>4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a2be4deb9e5324bf350c000772ac8afdd" prot="public">
+          <name>CONSUME_ZERO</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a4c59c956397c481211bea8399a18bfa2" prot="public">
+          <name>CONSUME_ONE</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6abfc7676284a13e8ef4b0706a672d2c0e" prot="public">
+          <name>CONSUME_MINUS_ONE</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test_types.h" line="25" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test_types.h" bodystart="25" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" prot="public" static="no">
+        <name>gr_produce_type_t</name>
+        <enumvalue id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329acc1c979665b05a7393265cb8b834a82b" prot="public">
+          <name>PRODUCE_NOUTPUT_ITEMS</name>
+          <initializer>0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329ae98d41f480b12d3fc5cdafd6e4c0fe97" prot="public">
+          <name>PRODUCE_NOUTPUT_ITEMS_LIMIT_MAX</name>
+          <initializer>1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329a6aee266d4a9263d0c7303bfccaedf867" prot="public">
+          <name>PRODUCE_ZERO</name>
+          <initializer>6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329a809662a927fc580530038378ba2425b6" prot="public">
+          <name>PRODUCE_ONE</name>
+          <initializer>7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329aae14efd037bd305a840cdc87a38c5a4d" prot="public">
+          <name>PRODUCE_MINUS_ONE</name>
+          <initializer>8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test_types.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test_types.h" bodystart="37" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test_types.h"/>
+  </compounddef>
+</doxygen>

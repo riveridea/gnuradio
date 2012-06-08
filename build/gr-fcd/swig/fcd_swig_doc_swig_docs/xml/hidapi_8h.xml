@@ -1,0 +1,889 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="hidapi_8h" kind="file">
+    <compoundname>hidapi.h</compoundname>
+    <includes local="no">wchar.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>wchar.h</label>
+      </node>
+      <node id="10">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h</label>
+        <link refid="hidapi.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structhid__device__info" prot="public">hid_device_info</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" prot="public" static="no">
+        <name>HID_API_EXPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>API export macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hidapi_8h_1af140a25716604e86096670a505a58ee0" prot="public" static="no">
+        <name>HID_API_CALL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>API call macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" prot="public" static="no">
+        <name>HID_API_EXPORT_CALL</name>
+        <initializer><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref> <ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>API export and call macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" prot="public" static="no">
+        <type>struct hid_device_</type>
+        <definition>typedef struct hid_device_ hid_device</definition>
+        <argsstring></argsstring>
+        <name>hid_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>opaque hidapi structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__API_1ga64ad070e06390652736c6a83e241d1ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>hid_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the HIDAPI library. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the HIDAPI library. Calling it is not strictly necessary, as it will be called automatically by <ref refid="group__API_1ga24b184963329af1f874ee56ee14c1839" kindref="member">hid_enumerate()</ref> and any of the hid_open_*() functions if it is needed. This function should be called at the beginning of execution however, if there is a chance of HIDAPI handles being opened by different threads simultaneously.</para><para><simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga00e8f8cb6f3d97f4f3322de2cc29de0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_exit</definition>
+        <argsstring>(void)</argsstring>
+        <name>hid_exit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Finalize the HIDAPI library. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function frees all of the static data associated with HIDAPI. It should be called at the end of execution to avoid memory leaks.</para><para><simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga24b184963329af1f874ee56ee14c1839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structhid__device__info" kindref="compound">hid_device_info</ref> *</type>
+        <definition>struct hid_device_info* hid_enumerate</definition>
+        <argsstring>(unsigned short vendor_id, unsigned short product_id)</argsstring>
+        <name>hid_enumerate</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>vendor_id</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>product_id</declname>
+        </param>
+        <briefdescription>
+<para>Enumerate the HID Devices. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns a linked list of all the HID devices attached to the system which match vendor_id and product_id. If <computeroutput>vendor_id</computeroutput> and <computeroutput>product_id</computeroutput> are both set to 0, then all HID devices will be returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vendor_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Vendor ID (VID) of the types of device to open. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>product_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Product ID (PID) of the types of device to open.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a pointer to a linked list of type struct <ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref>, containing information about the HID devices attached to the system, or NULL in the case of failure. Free this linked list by calling <ref refid="group__API_1ga32d26a69bd5a374d7e856e7c5dd164dc" kindref="member">hid_free_enumeration()</ref>.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga32d26a69bd5a374d7e856e7c5dd164dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hid_free_enumeration</definition>
+        <argsstring>(struct hid_device_info *devs)</argsstring>
+        <name>hid_free_enumeration</name>
+        <param>
+          <type>struct <ref refid="structhid__device__info" kindref="compound">hid_device_info</ref> *</type>
+          <declname>devs</declname>
+        </param>
+        <briefdescription>
+<para>Free an enumeration Linked List. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function frees a linked list created by <ref refid="group__API_1ga24b184963329af1f874ee56ee14c1839" kindref="member">hid_enumerate()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a list of struct_device returned from <ref refid="group__API_1ga24b184963329af1f874ee56ee14c1839" kindref="member">hid_enumerate()</ref>.&lt; API export macro &lt; API call macro </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+        <definition>hid_device* hid_open</definition>
+        <argsstring>(unsigned short vendor_id, unsigned short product_id, wchar_t *serial_number)</argsstring>
+        <name>hid_open</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>vendor_id</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>product_id</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>serial_number</declname>
+        </param>
+        <briefdescription>
+<para>Open a HID device using a Vendor ID (VID), Product ID (PID) and optionally a serial number. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <computeroutput>serial_number</computeroutput> is NULL, the first device with the specified VID and PID is opened.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vendor_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Vendor ID (VID) of the device to open. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>product_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Product ID (PID) of the device to open. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serial_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Serial Number of the device to open (Optionally NULL).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a pointer to a <ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> object on success or NULL on failure.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga8f3549163f39bb6b55d1429561d63f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+        <definition>hid_device* hid_open_path</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>hid_open_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Open a HID device by its path name. </para>        </briefdescription>
+        <detaileddescription>
+<para>The path name be determined by calling <ref refid="group__API_1ga24b184963329af1f874ee56ee14c1839" kindref="member">hid_enumerate()</ref>, or a platform-specific path name can be used (eg: /dev/hidraw0 on Linux).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path name of the device to open</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a pointer to a <ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> object on success or NULL on failure.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga71129f1817bdaec29b56b56cd24da32e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_write</definition>
+        <argsstring>(hid_device *device, const unsigned char *data, size_t length)</argsstring>
+        <name>hid_write</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Write an Output report to a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para>The first byte of <computeroutput>data</computeroutput>[] must contain the Report ID. For devices which only support a single report, this must be set to 0x0. The remaining bytes contain the report data. Since the Report ID is mandatory, calls to <ref refid="group__API_1ga71129f1817bdaec29b56b56cd24da32e" kindref="member">hid_write()</ref> will always contain one more byte than the report contains. For example, if a hid report is 16 bytes long, 17 bytes must be passed to <ref refid="group__API_1ga71129f1817bdaec29b56b56cd24da32e" kindref="member">hid_write()</ref>, the Report ID (or 0x0, for devices with a single report), followed by the report data (16 bytes). In this example, the length passed in would be 17.</para><para><ref refid="group__API_1ga71129f1817bdaec29b56b56cd24da32e" kindref="member">hid_write()</ref> will send the data on the first OUT endpoint, if one exists. If it does not, it will send the data through the Control Endpoint (Endpoint 0).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to send, including the report number as the first byte. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in bytes of the data to send.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the actual number of bytes written and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="201"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga4f16e67104d17054708b9e213d080a14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_read_timeout</definition>
+        <argsstring>(hid_device *dev, unsigned char *data, size_t length, int milliseconds)</argsstring>
+        <name>hid_read_timeout</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Read an Input report from a HID device with timeout. </para>        </briefdescription>
+        <detaileddescription>
+<para>Input reports are returned to the host through the INTERRUPT IN endpoint. The first byte will contain the Report number if the device uses numbered reports.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer to put the read data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. For devices with multiple reports, make sure to read an extra byte for the report number. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>milliseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timeout in milliseconds or -1 for blocking wait.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the actual number of bytes read and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga41c35a4f6fe0330eca5185f3450907a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_read</definition>
+        <argsstring>(hid_device *device, unsigned char *data, size_t length)</argsstring>
+        <name>hid_read</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Read an Input report from a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Input reports are returned to the host through the INTERRUPT IN endpoint. The first byte will contain the Report number if the device uses numbered reports.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer to put the read data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read. For devices with multiple reports, make sure to read an extra byte for the report number.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the actual number of bytes read and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga2e60473260d02d943e4e6b9fc20f7b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_set_nonblocking</definition>
+        <argsstring>(hid_device *device, int nonblock)</argsstring>
+        <name>hid_set_nonblocking</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nonblock</declname>
+        </param>
+        <briefdescription>
+<para>Set the device handle to be non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para>In non-blocking mode calls to <ref refid="group__API_1ga41c35a4f6fe0330eca5185f3450907a1" kindref="member">hid_read()</ref> will return immediately with a value of 0 if there is no data to be read. In blocking mode, <ref refid="group__API_1ga41c35a4f6fe0330eca5185f3450907a1" kindref="member">hid_read()</ref> will wait (block) until there is data to read before returning.</para><para>Nonblocking can be turned on and off at any time.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nonblock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enable or not the nonblocking reads<itemizedlist>
+<listitem><para>1 to enable nonblocking</para></listitem><listitem><para>0 to disable nonblocking.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1gae6fdb108b9a5de8eb4093ba6c0ffd4f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_send_feature_report</definition>
+        <argsstring>(hid_device *device, const unsigned char *data, size_t length)</argsstring>
+        <name>hid_send_feature_report</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Send a Feature report to the device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Feature reports are sent over the Control endpoint as a Set_Report transfer. The first byte of <computeroutput>data</computeroutput>[] must contain the Report ID. For devices which only support a single report, this must be set to 0x0. The remaining bytes contain the report data. Since the Report ID is mandatory, calls to <ref refid="group__API_1gae6fdb108b9a5de8eb4093ba6c0ffd4f4" kindref="member">hid_send_feature_report()</ref> will always contain one more byte than the report contains. For example, if a hid report is 16 bytes long, 17 bytes must be passed to <ref refid="group__API_1gae6fdb108b9a5de8eb4093ba6c0ffd4f4" kindref="member">hid_send_feature_report()</ref>: the Report ID (or 0x0, for devices which do not use numbered reports), followed by the report data (16 bytes). In this example, the length passed in would be 17.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to send, including the report number as the first byte. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length in bytes of the data to send, including the report number.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the actual number of bytes written and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga79c8b5ac7450192dddaf92c9b53977c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_get_feature_report</definition>
+        <argsstring>(hid_device *device, unsigned char *data, size_t length)</argsstring>
+        <name>hid_get_feature_report</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Get a feature report from a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Make sure to set the first byte of <computeroutput>data</computeroutput>[] to the Report ID of the report to be read. Make sure to allow space for this extra byte in <computeroutput>data</computeroutput>[].</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A buffer to put the read data into, including the Report ID. Set the first byte of <computeroutput>data</computeroutput>[] to the Report ID of the report to be read. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read, including an extra byte for the report ID. The buffer can be longer than the actual report.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns the number of bytes read and -1 on error.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="309"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga347f9a308e7f2002a8eb781364342e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hid_close</definition>
+        <argsstring>(hid_device *device)</argsstring>
+        <name>hid_close</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Close a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>.&lt; API export macro &lt; API call macro </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="316"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga4445a50b644fa01d4bba023a4643166c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_get_manufacturer_string</definition>
+        <argsstring>(hid_device *device, wchar_t *string, size_t maxlen)</argsstring>
+        <name>hid_get_manufacturer_string</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+<para>Get The Manufacturer String from a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wide string buffer to put the data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in multiples of wchar_t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro &lt; API export and call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="328"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga8fcbdf29b34b5694c43f4bef4e94b0b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_get_product_string</definition>
+        <argsstring>(hid_device *device, wchar_t *string, size_t maxlen)</argsstring>
+        <name>hid_get_product_string</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+<para>Get The Product String from a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wide string buffer to put the data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in multiples of wchar_t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro &lt; API export and call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="340"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1ga2180e7483e1921e257e485a4d59e0662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_get_serial_number_string</definition>
+        <argsstring>(hid_device *device, wchar_t *string, size_t maxlen)</argsstring>
+        <name>hid_get_serial_number_string</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+<para>Get The Serial Number String from a HID device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wide string buffer to put the data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in multiples of wchar_t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro &lt; API export and call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1gac10112b92a859a5fcf9f41e3a7d7cc21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hid_get_indexed_string</definition>
+        <argsstring>(hid_device *device, int string_index, wchar_t *string, size_t maxlen)</argsstring>
+        <name>hid_get_indexed_string</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>string_index</declname>
+        </param>
+        <param>
+          <type>wchar_t *</type>
+          <declname>string</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxlen</declname>
+        </param>
+        <briefdescription>
+<para>Get a string from a HID device, based on its string index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the string to get. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wide string buffer to put the data into. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer in multiples of wchar_t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns 0 on success and -1 on error.&lt; API export macro &lt; API call macro &lt; API export and call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="365"/>
+      </memberdef>
+      <memberdef kind="function" id="group__API_1gaac18cce84573cf59c7ae6e03714716d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* hid_error</definition>
+        <argsstring>(hid_device *device)</argsstring>
+        <name>hid_error</name>
+        <param>
+          <type><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Get a string describing the last error which occurred. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device handle returned from <ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member">hid_open()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This function returns a string containing the last error which occurred or NULL if none has occurred.&lt; API export macro &lt; API call macro </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h" line="376"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*******************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>HIDAPI<sp/>-<sp/>Multi-Platform<sp/>library<sp/>for</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>communication<sp/>with<sp/>HID<sp/>devices.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>Alan<sp/>Ott</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>Signal<sp/>11<sp/>Software</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>8/22/2009</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>Copyright<sp/>2009,<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>At<sp/>the<sp/>discretion<sp/>of<sp/>the<sp/>user<sp/>of<sp/>this<sp/>library,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>this<sp/>software<sp/>may<sp/>be<sp/>licensed<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>GNU<sp/>Public<sp/>License<sp/>v3,<sp/>a<sp/>BSD-Style<sp/>license,<sp/>or<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>original<sp/>HIDAPI<sp/>license<sp/>as<sp/>outlined<sp/>in<sp/>the<sp/>LICENSE.txt,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>LICENSE-gpl3.txt,<sp/>LICENSE-bsd.txt,<sp/>and<sp/>LICENSE-orig.txt</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>files<sp/>located<sp/>at<sp/>the<sp/>root<sp/>of<sp/>the<sp/>source<sp/>distribution.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>These<sp/>files<sp/>may<sp/>also<sp/>be<sp/>found<sp/>in<sp/>the<sp/>public<sp/>source</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>code<sp/>repository<sp/>located<sp/>at:</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://github.com/signal11/hidapi<sp/>.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">********************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#ifndef<sp/>HIDAPI_H__</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HIDAPI_H__</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>HID_API_EXPORT<sp/>__declspec(dllexport)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>HID_API_CALL</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="36" refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>HID_API_EXPORT<sp/></highlight></codeline>
+<codeline lineno="37" refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>HID_API_CALL<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HID_API_EXPORT_CALL<sp/>HID_API_EXPORT<sp/>HID_API_CALL<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">hid_device_;</highlight></codeline>
+<codeline lineno="46" refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">hid_device_<sp/><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref>;<sp/></highlight></codeline>
+<codeline lineno="49" refid="structhid__device__info" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhid__device__info" kindref="compound">hid_device_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="51" refid="structhid__device__info_1a6384b5bf4d9583598e5f5a889f240921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1a6384b5bf4d9583598e5f5a889f240921" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structhid__device__info_1a5037a3914e0bd8a3f821d1be9376c709" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a5037a3914e0bd8a3f821d1be9376c709" kindref="member">vendor_id</ref>;</highlight></codeline>
+<codeline lineno="55" refid="structhid__device__info_1a04595915457b4374492edb1fdb62d65d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a04595915457b4374492edb1fdb62d65d" kindref="member">product_id</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structhid__device__info_1a80756cea367e1566f966438984b75faf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1a80756cea367e1566f966438984b75faf" kindref="member">serial_number</ref>;</highlight></codeline>
+<codeline lineno="60" refid="structhid__device__info_1a6a832d25260f7ec17ef008e53e50e1d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a6a832d25260f7ec17ef008e53e50e1d0" kindref="member">release_number</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structhid__device__info_1a484eebf746220cd2910954cc861759b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1a484eebf746220cd2910954cc861759b7" kindref="member">manufacturer_string</ref>;</highlight></codeline>
+<codeline lineno="64" refid="structhid__device__info_1aceee256b4f7cd7fdd9fa5d556f49d221" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1aceee256b4f7cd7fdd9fa5d556f49d221" kindref="member">product_string</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structhid__device__info_1ab811117f8084ce2036815bdd33b16b3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1ab811117f8084ce2036815bdd33b16b3b" kindref="member">usage_page</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structhid__device__info_1a47f8011d58bcddd67f1403d6d3b4cab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a47f8011d58bcddd67f1403d6d3b4cab6" kindref="member">usage</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structhid__device__info_1a9163d8d5d7db8dc47bddfaf876e17547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a9163d8d5d7db8dc47bddfaf876e17547" kindref="member">interface_number</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structhid__device__info_1a2bfebc240baf3bdaf03965816e11f149" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhid__device__info" kindref="compound">hid_device_info</ref><sp/>*<ref refid="structhid__device__info_1a2bfebc240baf3bdaf03965816e11f149" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga64ad070e06390652736c6a83e241d1ab" kindref="member" tooltip="Initialize the HIDAPI library.">hid_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga00e8f8cb6f3d97f4f3322de2cc29de0a" kindref="member" tooltip="Finalize the HIDAPI library.">hid_exit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhid__device__info" kindref="compound">hid_device_info</ref><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/>*<sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga24b184963329af1f874ee56ee14c1839" kindref="member" tooltip="Enumerate the HID Devices.">hid_enumerate</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a5037a3914e0bd8a3f821d1be9376c709" kindref="member">vendor_id</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a04595915457b4374492edb1fdb62d65d" kindref="member">product_id</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga32d26a69bd5a374d7e856e7c5dd164dc" kindref="member" tooltip="Free an enumeration Linked List.">hid_free_enumeration</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info" kindref="compound">hid_device_info</ref><sp/>*devs);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*<sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1gaa2d920021b9c039cfedc15ed46e7b76d" kindref="member" tooltip="Open a HID device using a Vendor ID (VID), Product ID (PID) and optionally a serial number...">hid_open</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a5037a3914e0bd8a3f821d1be9376c709" kindref="member">vendor_id</ref>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structhid__device__info_1a04595915457b4374492edb1fdb62d65d" kindref="member">product_id</ref>,<sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1a80756cea367e1566f966438984b75faf" kindref="member">serial_number</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*<sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga8f3549163f39bb6b55d1429561d63f1c" kindref="member" tooltip="Open a HID device by its path name.">hid_open_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structhid__device__info_1a6384b5bf4d9583598e5f5a889f240921" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga71129f1817bdaec29b56b56cd24da32e" kindref="member" tooltip="Write an Output report to a HID device.">hid_write</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga4f16e67104d17054708b9e213d080a14" kindref="member" tooltip="Read an Input report from a HID device with timeout.">hid_read_timeout</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*dev,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>milliseconds);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga41c35a4f6fe0330eca5185f3450907a1" kindref="member" tooltip="Read an Input report from a HID device.">hid_read</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga2e60473260d02d943e4e6b9fc20f7b66" kindref="member" tooltip="Set the device handle to be non-blocking.">hid_set_nonblocking</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nonblock);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1gae6fdb108b9a5de8eb4093ba6c0ffd4f4" kindref="member" tooltip="Send a Feature report to the device.">hid_send_feature_report</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga79c8b5ac7450192dddaf92c9b53977c1" kindref="member" tooltip="Get a feature report from a HID device.">hid_get_feature_report</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1ga347f9a308e7f2002a8eb781364342e4c" kindref="member" tooltip="Close a HID device.">hid_close</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" kindref="member">HID_API_EXPORT_CALL</ref><sp/><ref refid="group__API_1ga4445a50b644fa01d4bba023a4643166c" kindref="member" tooltip="Get The Manufacturer String from a HID device.">hid_get_manufacturer_string</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" kindref="member">HID_API_EXPORT_CALL</ref><sp/><ref refid="group__API_1ga8fcbdf29b34b5694c43f4bef4e94b0b4" kindref="member" tooltip="Get The Product String from a HID device.">hid_get_product_string</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" kindref="member">HID_API_EXPORT_CALL</ref><sp/><ref refid="group__API_1ga2180e7483e1921e257e485a4d59e0662" kindref="member" tooltip="Get The Serial Number String from a HID device.">hid_get_serial_number_string</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hidapi_8h_1a70c49eda5025c1bc455af77da19ca312" kindref="member">HID_API_EXPORT_CALL</ref><sp/><ref refid="group__API_1gac10112b92a859a5fcf9f41e3a7d7cc21" kindref="member" tooltip="Get a string from a HID device, based on its string index.">hid_get_indexed_string</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>string_index,<sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxlen);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hidapi_8h_1aa60150016800ccb88fdf140e8553ae13" kindref="member">HID_API_EXPORT</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal">*<sp/><ref refid="hidapi_8h_1af140a25716604e86096670a505a58ee0" kindref="member">HID_API_CALL</ref><sp/><ref refid="group__API_1gaac18cce84573cf59c7ae6e03714716d1" kindref="member" tooltip="Get a string describing the last error which occurred.">hid_error</ref>(<ref refid="hidapi_8h_1aa6da74d5686d198dd3e5440e60088fcc" kindref="member">hid_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="379"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="381"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/hid/hidapi.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__ofdm__insert__preamble" kind="class" prot="public">
+    <compoundname>digital_ofdm_insert_preamble</compoundname>
+    <includes refid="digital__ofdm__insert__preamble_8h" local="no">digital_ofdm_insert_preamble.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471b" prot="private" static="no">
+        <name>state_t</name>
+        <enumvalue id="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba27d608d9aa738df40ca918ad2b1ff907" prot="private">
+          <name>ST_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba4afc68663837346a45f8b741f0632232" prot="private">
+          <name>ST_PREAMBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba20515e348bb5b7193057d4b090222b88" prot="private">
+          <name>ST_FIRST_PAYLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471bae2aecb0583cff2e27914ab81314f73ff" prot="private">
+          <name>ST_PAYLOAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="77" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__ofdm__insert__preamble_1af557f6998e4d6611d3424af6fb548550" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_ofdm_insert_preamble::d_fft_length</definition>
+        <argsstring></argsstring>
+        <name>d_fft_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__insert__preamble_1afc2b905be3a1da399a03ebdfa449e60c" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt;</type>
+        <definition>const std::vector&lt;std::vector&lt;gr_complex&gt; &gt; digital_ofdm_insert_preamble::d_preamble</definition>
+        <argsstring></argsstring>
+        <name>d_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__insert__preamble_1a607163db2bc0b40a3955a4e776bd5d20" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t digital_ofdm_insert_preamble::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__insert__preamble_1a96741e922bf1d4e36a72eb0a23878144" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_ofdm_insert_preamble::d_nsymbols_output</definition>
+        <argsstring></argsstring>
+        <name>d_nsymbols_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__insert__preamble_1a173bbca3cfda266a2ab3eb526f933faa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_ofdm_insert_preamble::d_pending_flag</definition>
+        <argsstring></argsstring>
+        <name>d_pending_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__ofdm__insert__preamble_1a3fa7304a3f9c9c544a8bc441bd1526ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__ofdm__insert__preamble_8h_1a026135b86133597a0eeec82a531508b5" kindref="member">digital_ofdm_insert_preamble_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_ofdm_insert_preamble_sptr digital_make_ofdm_insert_preamble</definition>
+        <argsstring>(int fft_length, const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;preamble)</argsstring>
+        <name>digital_make_ofdm_insert_preamble</name>
+        <param>
+          <type>int</type>
+          <declname>fft_length</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1ab7d9c85d73f1c1e327d496bfeaed4ce2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_ofdm_insert_preamble::digital_ofdm_insert_preamble</definition>
+        <argsstring>(int fft_length, const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;preamble)</argsstring>
+        <name>digital_ofdm_insert_preamble</name>
+        <param>
+          <type>int</type>
+          <declname>fft_length</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; gr_complex &gt; &gt; &amp;</type>
+          <declname>preamble</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1ae874181a68c4f00760ec6841e1be6fb8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::enter_idle</definition>
+        <argsstring>()</argsstring>
+        <name>enter_idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::enter_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>enter_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a3769cdcd4b0b5cbd98910ecfda85ae77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::enter_first_payload</definition>
+        <argsstring>()</argsstring>
+        <name>enter_first_payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a0dffeaf555045fc014a37e90a3735813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::enter_payload</definition>
+        <argsstring>()</argsstring>
+        <name>enter_payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="93"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a0e5e316940f266b80ea87de302891dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_ofdm_insert_preamble::~digital_ofdm_insert_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_ofdm_insert_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a0d91935a5b6964c66a4ee2b12642734f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_ofdm_insert_preamble::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>insert &quot;pre-modulated&quot; preamble symbols before each payload. </para>    </briefdescription>
+    <detaileddescription>
+<para><preformatted>
+ input 1: stream of vectors of gr_complex [fft_length]
+          These are the modulated symbols of the payload.</preformatted></para><para><preformatted> input 2: stream of char.  The LSB indicates whether the corresponding
+          symbol on input 1 is the first symbol of the payload or not.
+          It&apos;s a 1 if the corresponding symbol is the first symbol,
+          otherwise 0.</preformatted></para><para><preformatted> N.B., this implies that there must be at least 1 symbol in the payload.</preformatted></para><para><preformatted> output 1: stream of vectors of gr_complex [fft_length]
+           These include the preamble symbols and the payload symbols.</preformatted></para><para><preformatted> output 2: stream of char.  The LSB indicates whether the corresponding
+           symbol on input 1 is the first symbol of a packet (i.e., the
+           first symbol of the preamble.)   It&apos;s a 1 if the corresponding
+           symbol is the first symbol, otherwise 0.
+ </preformatted></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fft_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of each symbol in samples. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>preamble</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of symbols that represent the pre-modulated preamble. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="66" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classdigital__ofdm__insert__preamble_1af557f6998e4d6611d3424af6fb548550" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_fft_length</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a96741e922bf1d4e36a72eb0a23878144" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_nsymbols_output</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a173bbca3cfda266a2ab3eb526f933faa" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_pending_flag</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1afc2b905be3a1da399a03ebdfa449e60c" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a607163db2bc0b40a3955a4e776bd5d20" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_state</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a3fa7304a3f9c9c544a8bc441bd1526ea" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>digital_make_ofdm_insert_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1ab7d9c85d73f1c1e327d496bfeaed4ce2" prot="protected" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>digital_ofdm_insert_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a3769cdcd4b0b5cbd98910ecfda85ae77" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_first_payload</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1ae874181a68c4f00760ec6841e1be6fb8" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_idle</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a0dffeaf555045fc014a37e90a3735813" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_payload</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a0d91935a5b6964c66a4ee2b12642734f" prot="public" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>general_work</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba20515e348bb5b7193057d4b090222b88" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_FIRST_PAYLOAD</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba27d608d9aa738df40ca918ad2b1ff907" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_IDLE</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471bae2aecb0583cff2e27914ab81314f73ff" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_PAYLOAD</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba4afc68663837346a45f8b741f0632232" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_PREAMBLE</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471b" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>state_t</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1a0e5e316940f266b80ea87de302891dcc" prot="public" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>~digital_ofdm_insert_preamble</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

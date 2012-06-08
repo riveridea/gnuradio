@@ -1,0 +1,669 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__ofdm__frame__acquisition" kind="class" prot="public">
+    <compoundname>digital_ofdm_frame_acquisition</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="digital__ofdm__frame__acquisition_8h" local="no">digital_ofdm_frame_acquisition.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1ab8da47092337f039a810edb6e5442c72" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_ofdm_frame_acquisition::d_occupied_carriers</definition>
+        <argsstring></argsstring>
+        <name>d_occupied_carriers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1af17d5c8e7a7dfb6fb190eed9edadd4e3" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_ofdm_frame_acquisition::d_fft_length</definition>
+        <argsstring></argsstring>
+        <name>d_fft_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a01852910faf9a86ee0551994f4084920" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_ofdm_frame_acquisition::d_cplen</definition>
+        <argsstring></argsstring>
+        <name>d_cplen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a5ab4a3c3112387635127af37a63442ad" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_ofdm_frame_acquisition::d_freq_shift_len</definition>
+        <argsstring></argsstring>
+        <name>d_freq_shift_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="89" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1af82321571ffa13deffeec32f77158c00" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_ofdm_frame_acquisition::d_known_symbol</definition>
+        <argsstring></argsstring>
+        <name>d_known_symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a80dff206f03c2ae7d9b84fb15d6ba24b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; digital_ofdm_frame_acquisition::d_known_phase_diff</definition>
+        <argsstring></argsstring>
+        <name>d_known_phase_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1afe38142d9c18c5c38a014f3a302248da" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; digital_ofdm_frame_acquisition::d_symbol_phase_diff</definition>
+        <argsstring></argsstring>
+        <name>d_symbol_phase_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1acd3392e10ef992c4169bb1d648c54f0a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_ofdm_frame_acquisition::d_hestimate</definition>
+        <argsstring></argsstring>
+        <name>d_hestimate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a3f5f42bd1228c45ab76611bf6918bcea" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_ofdm_frame_acquisition::d_coarse_freq</definition>
+        <argsstring></argsstring>
+        <name>d_coarse_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="94" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a6b8f17de4456baefb1f1cf72c72d355f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_ofdm_frame_acquisition::d_phase_count</definition>
+        <argsstring></argsstring>
+        <name>d_phase_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="95" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a4274283c632e8154136872cd9a3c9b96" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_ofdm_frame_acquisition::d_snr_est</definition>
+        <argsstring></argsstring>
+        <name>d_snr_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="96" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__ofdm__frame__acquisition_1a04bde5aa46f342f706b4ca53006bc289" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+        <definition>gr_complex* digital_ofdm_frame_acquisition::d_phase_lut</definition>
+        <argsstring></argsstring>
+        <name>d_phase_lut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__ofdm__frame__acquisition_1a68c5767d93151cc47209b45aff817c99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_ofdm_frame_acquisition_sptr</ref></type>
+        <definition>DIGITAL_API digital_ofdm_frame_acquisition_sptr digital_make_ofdm_frame_acquisition</definition>
+        <argsstring>(unsigned int occupied_carriers, unsigned int fft_length, unsigned int cplen, const std::vector&lt; gr_complex &gt; &amp;known_symbol, unsigned int max_fft_shift_len)</argsstring>
+        <name>digital_make_ofdm_frame_acquisition</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>occupied_carriers</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fft_length</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>cplen</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>known_symbol</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_fft_shift_len</declname>
+        </param>
+        <briefdescription>
+<para>Build an OFDM correlator and equalizer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>occupied_carriers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subcarriers with data in the received symbol </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fft_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the FFT vector (occupied_carriers + unused carriers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cplen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the cycle prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>known_symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of complex numbers representing a known symbol at the start of a frame (usually a BPSK PN sequence) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_fft_shift_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set&apos;s the maximum distance you can look between bins for correlation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1ab78c6018c0c2a8ba38c49d990237fdd1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_ofdm_frame_acquisition::digital_ofdm_frame_acquisition</definition>
+        <argsstring>(unsigned int occupied_carriers, unsigned int fft_length, unsigned int cplen, const std::vector&lt; gr_complex &gt; &amp;known_symbol, unsigned int max_fft_shift_len)</argsstring>
+        <name>digital_ofdm_frame_acquisition</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>occupied_carriers</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fft_length</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>cplen</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>known_symbol</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_fft_shift_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a18fbb7db097b88cee71e213fcdcd18f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char digital_ofdm_frame_acquisition::slicer</definition>
+        <argsstring>(gr_complex x)</argsstring>
+        <name>slicer</name>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a3adcd9bb2b66721587a749dd92e0a6f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_ofdm_frame_acquisition::correlate</definition>
+        <argsstring>(const gr_complex *symbol, int zeros_on_left)</argsstring>
+        <name>correlate</name>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zeros_on_left</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a26f4eb9de5a68ce0067e2d189982a999" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_ofdm_frame_acquisition::calculate_equalizer</definition>
+        <argsstring>(const gr_complex *symbol, int zeros_on_left)</argsstring>
+        <name>calculate_equalizer</name>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>zeros_on_left</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1ad4558869d61a19ad8943fbefbd82088c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex digital_ofdm_frame_acquisition::coarse_freq_comp</definition>
+        <argsstring>(int freq_delta, int count)</argsstring>
+        <name>coarse_freq_comp</name>
+        <param>
+          <type>int</type>
+          <declname>freq_delta</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a9a6e25a485b5b448ffb9dbc79154de83" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_ofdm_frame_acquisition::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <reimplements refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a">forecast</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+<para>Estimate input requirements given output request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to produce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items_required</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items required on each input stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Given a request to product <computeroutput>noutput_items</computeroutput>, estimate the number of data items required on each input stream. The estimate doesn&apos;t have to be exact, but should be close. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a5eaf7d26758f6cb9486fcebcbba10640" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_ofdm_frame_acquisition::snr</definition>
+        <argsstring>()</argsstring>
+        <name>snr</name>
+        <briefdescription>
+<para>Return an estimate of the SNR of the channel. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1a25af84f8f31a5a2a8c2dc65d5d179683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_ofdm_frame_acquisition::~digital_ofdm_frame_acquisition</definition>
+        <argsstring>(void)</argsstring>
+        <name>~digital_ofdm_frame_acquisition</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__frame__acquisition_1aa3c370a5204800671828e0976f39b66f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int digital_ofdm_frame_acquisition::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>take a vector of complex constellation points in from an FFT and performs a correlation and equalization.</para><para>This block takes the output of an FFT of a received OFDM symbol and finds the start of a frame based on two known symbols. It also looks at the surrounding bins in the FFT output for the correlation in case there is a large frequency shift in the data. This block assumes that the fine frequency shift has already been corrected and that the samples fall in the middle of one FFT bin. </para>    </briefdescription>
+    <detaileddescription>
+<para>It then uses one of those known symbols to estimate the channel response over all subcarriers and does a simple 1-tap equalization on all subcarriers. This corrects for the phase and amplitude distortion caused by the channel. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1517">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1518" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1516" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>digital_ofdm_frame_acquisition</label>
+        <link refid="classdigital__ofdm__frame__acquisition"/>
+        <childnode refid="1515" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1516">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1517" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1522">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1523" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1524">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="1525" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="1527">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1519">
+        <label>digital_ofdm_frame_acquisition</label>
+        <link refid="classdigital__ofdm__frame__acquisition"/>
+        <childnode refid="1520" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1523">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1525">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="1521">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1522" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1524" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="1526" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1526">
+        <label>std::string</label>
+        <childnode refid="1527" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" bodystart="57" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>BLACK</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a26f4eb9de5a68ce0067e2d189982a999" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>calculate_equalizer</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>check_topology</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1ad4558869d61a19ad8943fbefbd82088c" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>coarse_freq_comp</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>consume_each</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a3adcd9bb2b66721587a749dd92e0a6f9" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>correlate</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a3f5f42bd1228c45ab76611bf6918bcea" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_coarse_freq</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_color</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a01852910faf9a86ee0551994f4084920" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_cplen</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1af17d5c8e7a7dfb6fb190eed9edadd4e3" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_fft_length</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a5ab4a3c3112387635127af37a63442ad" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_freq_shift_len</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1acd3392e10ef992c4169bb1d648c54f0a" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_hestimate</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_input_signature</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a80dff206f03c2ae7d9b84fb15d6ba24b" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_known_phase_diff</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1af82321571ffa13deffeec32f77158c00" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_known_symbol</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_name</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1ab8da47092337f039a810edb6e5442c72" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_occupied_carriers</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_output_signature</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a6b8f17de4456baefb1f1cf72c72d355f" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_phase_count</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a04bde5aa46f342f706b4ca53006bc289" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_phase_lut</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a4274283c632e8154136872cd9a3c9b96" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_snr_est</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1afe38142d9c18c5c38a014f3a302248da" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_symbol_phase_diff</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>detail</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a68c5767d93151cc47209b45aff817c99" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>digital_make_ofdm_frame_acquisition</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1ab78c6018c0c2a8ba38c49d990237fdd1" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>digital_ofdm_frame_acquisition</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a9a6e25a485b5b448ffb9dbc79154de83" prot="private" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>forecast</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1aa3c370a5204800671828e0976f39b66f" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>set_unaligned</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a18fbb7db097b88cee71e213fcdcd18f7" prot="private" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>slicer</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a5eaf7d26758f6cb9486fcebcbba10640" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>snr</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>WORK_DONE</name></member>
+      <member refid="classdigital__ofdm__frame__acquisition_1a25af84f8f31a5a2a8c2dc65d5d179683" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>~digital_ofdm_frame_acquisition</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>digital_ofdm_frame_acquisition</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>digital_ofdm_frame_acquisition</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

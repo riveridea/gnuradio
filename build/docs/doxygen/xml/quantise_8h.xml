@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="quantise_8h" kind="file">
+    <compoundname>quantise.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="quantise_8h_1a35e21391e1b7e4df6bb383c552d5541e" prot="public" static="no">
+        <name>WO_BITS</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="quantise_8h_1a7e06332d7ea01ed08f8f455df41272bb" prot="public" static="no">
+        <name>WO_LEVELS</name>
+        <initializer>(1&lt;&lt;<ref refid="quantise_8h_1a35e21391e1b7e4df6bb383c552d5541e" kindref="member">WO_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="quantise_8h_1a4ef43416c3082b95dfc7b9b4b37ed4a7" prot="public" static="no">
+        <name>E_BITS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="quantise_8h_1a1e2787c64ea7b91af74449ba708a2d7c" prot="public" static="no">
+        <name>E_LEVELS</name>
+        <initializer>(1&lt;&lt;<ref refid="quantise_8h_1a4ef43416c3082b95dfc7b9b4b37ed4a7" kindref="member">E_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="quantise_8h_1a336e320775d3defe71d7a90942bfdd00" prot="public" static="no">
+        <name>E_MIN_DB</name>
+        <initializer>-10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="quantise_8h_1a79d8b57a521ce507705a0f750c5f8a58" prot="public" static="no">
+        <name>E_MAX_DB</name>
+        <initializer>40.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="quantise_8h_1ac5e5ac486c99c05b4643a32ffffa1342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void quantise_init</definition>
+        <argsstring>()</argsstring>
+        <name>quantise_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1af0766dffc5fb1af4991d3244bdec1901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float lpc_model_amplitudes</definition>
+        <argsstring>(float Sn[], float w[], MODEL *model, int order, int lsp, float ak[])</argsstring>
+        <name>lpc_model_amplitudes</name>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lsp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a27e08518f3f10364fdccfed5143ddabe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void aks_to_M2</definition>
+        <argsstring>(float ak[], int order, MODEL *model, float E, float *snr, int dump)</argsstring>
+        <name>aks_to_M2</name>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>snr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dump</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ad2534a9cfbb286f0ececc6e464c7de90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int encode_Wo</definition>
+        <argsstring>(float Wo)</argsstring>
+        <name>encode_Wo</name>
+        <param>
+          <type>float</type>
+          <declname>Wo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1aa66572e7d63d6bdcc592783ad2b31005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float decode_Wo</definition>
+        <argsstring>(int index)</argsstring>
+        <name>decode_Wo</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a7cc136c8b47d55703d462f4374d22f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void encode_lsps</definition>
+        <argsstring>(int indexes[], float lsp[], int order)</argsstring>
+        <name>encode_lsps</name>
+        <param>
+          <type>int</type>
+          <declname>indexes</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ae399dc1b48613450d0509a9f0bb6a936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void decode_lsps</definition>
+        <argsstring>(float lsp[], int indexes[], int order)</argsstring>
+        <name>decode_lsps</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indexes</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ab60be04693bc430f953dc0ec3274264d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void lspd_quantise</definition>
+        <argsstring>(float lsp[], float lsp_[], int order)</argsstring>
+        <name>lspd_quantise</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lsp_</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a141ee786c47fe0d1b63e5f6717f427a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void lspdvq_quantise</definition>
+        <argsstring>(float lsp[], float lsp_[], int order)</argsstring>
+        <name>lspdvq_quantise</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lsp_</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ae9ceecbe9ee05559e8f1d421b660e73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int encode_energy</definition>
+        <argsstring>(float e)</argsstring>
+        <name>encode_energy</name>
+        <param>
+          <type>float</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1adc23397d11f358c2207e79363a68fb6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float decode_energy</definition>
+        <argsstring>(int index)</argsstring>
+        <name>decode_energy</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a7db4561db183a1a1e70bc089a64caa3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void encode_amplitudes</definition>
+        <argsstring>(int lsp_indexes[], int *energy_index, MODEL *model, float Sn[], float w[])</argsstring>
+        <name>encode_amplitudes</name>
+        <param>
+          <type>int</type>
+          <declname>lsp_indexes</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>energy_index</declname>
+        </param>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a3288a3863ed9c579b7b92fb76bdc36d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float decode_amplitudes</definition>
+        <argsstring>(MODEL *model, float ak[], int lsp_indexes[], int energy_index, float lsps[], float *e)</argsstring>
+        <name>decode_amplitudes</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lsp_indexes</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy_index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lsps</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a9a1318571a086d065b560c8d4b9d3fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pack</definition>
+        <argsstring>(unsigned char *bits, unsigned int *nbit, int index, unsigned int index_bits)</argsstring>
+        <name>pack</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>nbit</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index_bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ad731359873cd1088d5682bd4b22d5d67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int unpack</definition>
+        <argsstring>(const unsigned char *bits, unsigned int *nbit, unsigned int index_bits)</argsstring>
+        <name>unpack</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>nbit</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>index_bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a2fd39afc92b410f515b02bc57e4e8fda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lsp_bits</definition>
+        <argsstring>(int i)</argsstring>
+        <name>lsp_bits</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a597b6feeb13fa196bcf928ebed184812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void apply_lpc_correction</definition>
+        <argsstring>(MODEL *model)</argsstring>
+        <name>apply_lpc_correction</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1ad66489db602e697a830dec136588b160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float speech_to_uq_lsps</definition>
+        <argsstring>(float lsp[], float ak[], float Sn[], float w[], int order)</argsstring>
+        <name>speech_to_uq_lsps</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="quantise_8h_1a52eb2d5170f56428935df1e9e4273ac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void bw_expand_lsps</definition>
+        <argsstring>(float lsp[], int order)</argsstring>
+        <name>bw_expand_lsps</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/quantise.h"/>
+  </compounddef>
+</doxygen>

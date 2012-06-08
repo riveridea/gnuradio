@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="audio__windows__sink_8h" kind="file">
+    <compoundname>audio_windows_sink.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includes local="no">mmsystem.h</includes>
+    <includes refid="gr__audio__sink_8h" local="no">gr_audio_sink.h</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="2142">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="2154">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="2131">
+        <label>windows.h</label>
+      </node>
+      <node id="2153">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="2152" relation="include">
+        </childnode>
+        <childnode refid="2154" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+        <childnode refid="2155" relation="include">
+        </childnode>
+        <childnode refid="2146" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
+        </childnode>
+        <childnode refid="2157" relation="include">
+        </childnode>
+        <childnode refid="2160" relation="include">
+        </childnode>
+        <childnode refid="2161" relation="include">
+        </childnode>
+        <childnode refid="2162" relation="include">
+        </childnode>
+      </node>
+      <node id="2145">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="2146" relation="include">
+        </childnode>
+      </node>
+      <node id="2157">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="2158" relation="include">
+        </childnode>
+        <childnode refid="2159" relation="include">
+        </childnode>
+      </node>
+      <node id="2136">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
+        </childnode>
+      </node>
+      <node id="2152">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="2135" relation="include">
+        </childnode>
+      </node>
+      <node id="2139">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2140" relation="include">
+        </childnode>
+        <childnode refid="2147" relation="include">
+        </childnode>
+        <childnode refid="2148" relation="include">
+        </childnode>
+        <childnode refid="2149" relation="include">
+        </childnode>
+        <childnode refid="2150" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
+        </childnode>
+      </node>
+      <node id="2161">
+        <label>stdexcept</label>
+      </node>
+      <node id="2141">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+        <childnode refid="2143" relation="include">
+        </childnode>
+        <childnode refid="2144" relation="include">
+        </childnode>
+        <childnode refid="2145" relation="include">
+        </childnode>
+      </node>
+      <node id="2156">
+        <label>string</label>
+      </node>
+      <node id="2138">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2139" relation="include">
+        </childnode>
+        <childnode refid="2163" relation="include">
+        </childnode>
+      </node>
+      <node id="2137">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="2135" relation="include">
+        </childnode>
+      </node>
+      <node id="2163">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+      </node>
+      <node id="2144">
+        <label>stddef.h</label>
+      </node>
+      <node id="2149">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="2158">
+        <label>limits.h</label>
+      </node>
+      <node id="2155">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="2140">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2141" relation="include">
+        </childnode>
+      </node>
+      <node id="2159">
+        <label>wchar.h</label>
+      </node>
+      <node id="2150">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2151" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+      </node>
+      <node id="2143">
+        <label>vector</label>
+      </node>
+      <node id="2134">
+        <label>gr_audio_api.h</label>
+        <link refid="gr__audio__api_8h"/>
+        <childnode refid="2135" relation="include">
+        </childnode>
+      </node>
+      <node id="2148">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="2135">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2160">
+        <label>iosfwd</label>
+      </node>
+      <node id="2130">
+        <label>audio_windows_sink.h</label>
+        <link refid="audio_windows_sink.h"/>
+        <childnode refid="2131" relation="include">
+        </childnode>
+        <childnode refid="2132" relation="include">
+        </childnode>
+        <childnode refid="2133" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
+        </childnode>
+      </node>
+      <node id="2132">
+        <label>mmsystem.h</label>
+      </node>
+      <node id="2133">
+        <label>gr_audio_sink.h</label>
+        <link refid="gr__audio__sink_8h"/>
+        <childnode refid="2134" relation="include">
+        </childnode>
+        <childnode refid="2136" relation="include">
+        </childnode>
+      </node>
+      <node id="2162">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="2147">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+      </node>
+      <node id="2146">
+        <label>complex</label>
+      </node>
+      <node id="2151">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="2152" relation="include">
+        </childnode>
+        <childnode refid="2153" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classaudio__windows__sink" prot="public">audio_windows_sink</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="audio__windows__sink_8h_1ac7bef5d85e3dcd73eef56ad39ffc84a9" prot="public" static="no">
+        <name>WIN32_LEAN_AND_MEAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/windows/audio_windows_sink.h" line="26" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/windows/audio_windows_sink.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="audio__windows__sink_8h_1a9f918755b601cf4bffca775992e6fb90" prot="public" static="no">
+        <name>NOMINMAX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/windows/audio_windows_sink.h" line="27" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/windows/audio_windows_sink.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/windows/audio_windows_sink.h"/>
+  </compounddef>
+</doxygen>

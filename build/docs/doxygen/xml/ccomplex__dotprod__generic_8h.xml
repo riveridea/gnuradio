@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="ccomplex__dotprod__generic_8h" kind="file">
+    <compoundname>ccomplex_dotprod_generic.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <incdepgraph>
+      <node id="2211">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="2212" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
+        <label>ccomplex_dotprod_generic.h</label>
+        <link refid="ccomplex_dotprod_generic.h"/>
+        <childnode refid="2211" relation="include">
+        </childnode>
+      </node>
+      <node id="2212">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ccomplex__dotprod__generic_8h_1a9c5bbb3eda871978fe911ff38bf25f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void ccomplex_dotprod_generic</definition>
+        <argsstring>(const float *input, const float *taps, unsigned n_2_ccomplex_blocks, float *result)</argsstring>
+        <name>ccomplex_dotprod_generic</name>
+        <param>
+          <type>const float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>n_2_ccomplex_blocks</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/ccomplex_dotprod_generic.h" line="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/ccomplex_dotprod_generic.h"/>
+  </compounddef>
+</doxygen>

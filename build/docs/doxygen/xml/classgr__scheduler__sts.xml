@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__scheduler__sts" kind="class" prot="public">
+    <compoundname>gr_scheduler_sts</compoundname>
+    <basecompoundref refid="classgr__scheduler" prot="public" virt="non-virtual">gr_scheduler</basecompoundref>
+    <includes refid="gr__scheduler__sts_8h" local="no">gr_scheduler_sts.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__scheduler__sts_1a32fdaad8ce7fef3be81d2871614df0a5" prot="private" static="no" mutable="no">
+        <type><ref refid="classgruel_1_1thread__group" kindref="compound">gruel::thread_group</ref></type>
+        <definition>gruel::thread_group gr_scheduler_sts::d_threads</definition>
+        <argsstring></argsstring>
+        <name>d_threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__scheduler__sts_1a52515bb2a35e49e50ef1052d0ef0731d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_scheduler_sts::gr_scheduler_sts</definition>
+        <argsstring>(gr_flat_flowgraph_sptr ffg, int max_noutput_items)</argsstring>
+        <name>gr_scheduler_sts</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_flat_flowgraph_sptr</ref></type>
+          <declname>ffg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_noutput_items</declname>
+        </param>
+        <briefdescription>
+<para>Construct a scheduler and begin evaluating the graph. </para>        </briefdescription>
+        <detaileddescription>
+<para>The scheduler will continue running until all blocks until they report that they are done or the stop method is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr__scheduler__sts_1af89f32ea2c6d9069d5e6c16bbb2774dd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_scheduler_sptr</ref></type>
+        <definition>static gr_scheduler_sptr gr_scheduler_sts::make</definition>
+        <argsstring>(gr_flat_flowgraph_sptr ffg, int max_noutput_items)</argsstring>
+        <name>make</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_flat_flowgraph_sptr</ref></type>
+          <declname>ffg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_noutput_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__scheduler__sts_1a505ddcaaa2435330684e2171d121bdb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_scheduler_sts::~gr_scheduler_sts</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_scheduler_sts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__scheduler__sts_1a3f8dd7ae4f1140e7e45b073eaf438c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_scheduler_sts::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <reimplements refid="classgr__scheduler_1a9aa911eac6894694dfb67a59cc4a4e46">stop</reimplements>
+        <briefdescription>
+<para>Tell the scheduler to stop executing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__scheduler__sts_1a04c1d2ea387752e303586164eac90fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_scheduler_sts::wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <reimplements refid="classgr__scheduler_1a27993c1e1a34a5d29a3ede97b731506e">wait</reimplements>
+        <briefdescription>
+<para>Block until the graph is done. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Concrete scheduler that uses the single_threaded_scheduler. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5036">
+        <label>gr_scheduler_sts</label>
+        <link refid="classgr__scheduler__sts"/>
+        <childnode refid="5037" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5037">
+        <label>gr_scheduler</label>
+        <link refid="classgr__scheduler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5038">
+        <label>gr_scheduler_sts</label>
+        <link refid="classgr__scheduler__sts"/>
+        <childnode refid="5039" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5039">
+        <label>gr_scheduler</label>
+        <link refid="classgr__scheduler"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_scheduler_sts.h" bodystart="31" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgr__scheduler__sts_1a32fdaad8ce7fef3be81d2871614df0a5" prot="private" virt="non-virtual"><scope>gr_scheduler_sts</scope><name>d_threads</name></member>
+      <member refid="classgr__scheduler_1a35163aaf31e92ba884f37513e6f89304" prot="public" virt="non-virtual"><scope>gr_scheduler_sts</scope><name>gr_scheduler</name></member>
+      <member refid="classgr__scheduler__sts_1a52515bb2a35e49e50ef1052d0ef0731d" prot="protected" virt="non-virtual"><scope>gr_scheduler_sts</scope><name>gr_scheduler_sts</name></member>
+      <member refid="classgr__scheduler__sts_1af89f32ea2c6d9069d5e6c16bbb2774dd" prot="public" virt="non-virtual"><scope>gr_scheduler_sts</scope><name>make</name></member>
+      <member refid="classgr__scheduler__sts_1a3f8dd7ae4f1140e7e45b073eaf438c2d" prot="public" virt="virtual"><scope>gr_scheduler_sts</scope><name>stop</name></member>
+      <member refid="classgr__scheduler__sts_1a04c1d2ea387752e303586164eac90fc9" prot="public" virt="virtual"><scope>gr_scheduler_sts</scope><name>wait</name></member>
+      <member refid="classgr__scheduler_1a997dc366c2a0b1bcdd66e3b145a95a31" prot="public" virt="virtual"><scope>gr_scheduler_sts</scope><name>~gr_scheduler</name></member>
+      <member refid="classgr__scheduler__sts_1a505ddcaaa2435330684e2171d121bdb9" prot="public" virt="non-virtual"><scope>gr_scheduler_sts</scope><name>~gr_scheduler_sts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

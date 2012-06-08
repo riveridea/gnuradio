@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__dpll__bb" kind="class" prot="public">
+    <compoundname>gr_dpll_bb</compoundname>
+    <includes refid="gr__dpll__bb_8h" local="no">gr_dpll_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__dpll__bb_1a3c1e9a3bc6286baba90195d5d633b55b" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_dpll_bb::d_restart</definition>
+        <argsstring></argsstring>
+        <name>d_restart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__dpll__bb_1a17702943476fdfaf2ebd6936084ddf61" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_dpll_bb::d_pulse_phase</definition>
+        <argsstring></argsstring>
+        <name>d_pulse_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__dpll__bb_1a9505947a72ef2d6f3588c213f9ecdfdc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_dpll_bb::d_pulse_frequency</definition>
+        <argsstring></argsstring>
+        <name>d_pulse_frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__dpll__bb_1a24926decb42ded33abdea5bd63db63c3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_dpll_bb::d_gain</definition>
+        <argsstring></argsstring>
+        <name>d_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__dpll__bb_1ab7f6f9c38da39494b4b40ff5367dff43" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_dpll_bb::d_decision_threshold</definition>
+        <argsstring></argsstring>
+        <name>d_decision_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__dpll__bb_1ac03b2f9db3a64d7fd0925e293cb99bbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__dpll__bb_8h_1abaa0acee060f8208106adac2b216ef1b" kindref="member">gr_dpll_bb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_dpll_bb_sptr gr_make_dpll_bb</definition>
+        <argsstring>(float period, float gain)</argsstring>
+        <name>gr_make_dpll_bb</name>
+        <param>
+          <type>float</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__dpll__bb_1ab2d94dd8beb2f56aaa75f2981df121b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_dpll_bb::gr_dpll_bb</definition>
+        <argsstring>(float period, float gain)</argsstring>
+        <name>gr_dpll_bb</name>
+        <param>
+          <type>float</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__dpll__bb_1ae71727e6a83512b65927e2b9ea367c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_dpll_bb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detect the peak of a signal</para><para>If a peak is detected, this block outputs a 1, or it outputs 0&apos;s. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_dpll_bb.h" bodystart="41" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classgr__dpll__bb_1ab7f6f9c38da39494b4b40ff5367dff43" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>d_decision_threshold</name></member>
+      <member refid="classgr__dpll__bb_1a24926decb42ded33abdea5bd63db63c3" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>d_gain</name></member>
+      <member refid="classgr__dpll__bb_1a9505947a72ef2d6f3588c213f9ecdfdc" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>d_pulse_frequency</name></member>
+      <member refid="classgr__dpll__bb_1a17702943476fdfaf2ebd6936084ddf61" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>d_pulse_phase</name></member>
+      <member refid="classgr__dpll__bb_1a3c1e9a3bc6286baba90195d5d633b55b" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>d_restart</name></member>
+      <member refid="classgr__dpll__bb_1ab2d94dd8beb2f56aaa75f2981df121b9" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>gr_dpll_bb</name></member>
+      <member refid="classgr__dpll__bb_1ac03b2f9db3a64d7fd0925e293cb99bbc" prot="private" virt="non-virtual"><scope>gr_dpll_bb</scope><name>gr_make_dpll_bb</name></member>
+      <member refid="classgr__dpll__bb_1ae71727e6a83512b65927e2b9ea367c35" prot="public" virt="non-virtual"><scope>gr_dpll_bb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__sample__and__hold__bb" kind="class" prot="public">
+    <compoundname>gr_sample_and_hold_bb</compoundname>
+    <includes refid="gr__sample__and__hold__bb_8h" local="no">gr_sample_and_hold_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__sample__and__hold__bb_1a2a20b23329839cca478f2c02434b612b" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_sample_and_hold_bb::d_data</definition>
+        <argsstring></argsstring>
+        <name>d_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__sample__and__hold__bb_1a7fe54ce632e7e39fcf068b0158e65ff6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__sample__and__hold__bb_8h_1a306f2202af302968be8bfaafd3413c4f" kindref="member">gr_sample_and_hold_bb_sptr</ref></type>
+        <definition>GR_CORE_API gr_sample_and_hold_bb_sptr gr_make_sample_and_hold_bb</definition>
+        <argsstring>()</argsstring>
+        <name>gr_make_sample_and_hold_bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__sample__and__hold__bb_1a4e936cfb18e217217928abe1da7a950f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_sample_and_hold_bb::gr_sample_and_hold_bb</definition>
+        <argsstring>()</argsstring>
+        <name>gr_sample_and_hold_bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__sample__and__hold__bb_1a5e12174bf3fd1d262757c4c48a3562e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_sample_and_hold_bb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>sample and hold circuit</para><para>Samples the data stream (input stream 0) and holds the value if the control signal is 1 (intput stream 1). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_sample_and_hold_bb.h" bodystart="43" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classgr__sample__and__hold__bb_1a2a20b23329839cca478f2c02434b612b" prot="private" virt="non-virtual"><scope>gr_sample_and_hold_bb</scope><name>d_data</name></member>
+      <member refid="classgr__sample__and__hold__bb_1a7fe54ce632e7e39fcf068b0158e65ff6" prot="private" virt="non-virtual"><scope>gr_sample_and_hold_bb</scope><name>gr_make_sample_and_hold_bb</name></member>
+      <member refid="classgr__sample__and__hold__bb_1a4e936cfb18e217217928abe1da7a950f" prot="private" virt="non-virtual"><scope>gr_sample_and_hold_bb</scope><name>gr_sample_and_hold_bb</name></member>
+      <member refid="classgr__sample__and__hold__bb_1a5e12174bf3fd1d262757c4c48a3562e0" prot="public" virt="non-virtual"><scope>gr_sample_and_hold_bb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

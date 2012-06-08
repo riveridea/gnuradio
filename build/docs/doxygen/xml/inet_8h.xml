@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="inet_8h" kind="file">
+    <compoundname>inet.h</compoundname>
+    <includes refid="gruel_2src_2include_2gruel_2api_8h" local="no">gruel/api.h</includes>
+    <includes refid="stdint_8h" local="no">stdint.h</includes>
+    <includes local="no">byteswap.h</includes>
+    <includes local="no">arpa/inet.h</includes>
+    <incdepgraph>
+      <node id="13956">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="13952">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="13953" relation="include">
+        </childnode>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13950">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="13951" relation="include">
+        </childnode>
+      </node>
+      <node id="13953">
+        <label>limits.h</label>
+      </node>
+      <node id="13954">
+        <label>wchar.h</label>
+      </node>
+      <node id="13955">
+        <label>byteswap.h</label>
+      </node>
+      <node id="13951">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="13949">
+        <label>inet.h</label>
+        <link refid="inet.h"/>
+        <childnode refid="13950" relation="include">
+        </childnode>
+        <childnode refid="13952" relation="include">
+        </childnode>
+        <childnode refid="13955" relation="include">
+        </childnode>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="inet_8h_1a67e5164e8959473008351818d70775dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>static uint64_t htonll</definition>
+        <argsstring>(uint64_t x)</argsstring>
+        <name>htonll</name>
+        <param>
+          <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="46" bodyend="46"/>
+        <referencedby refid="inet_8h_1a6e269102b3061af6ff093a850d61edc6" compoundref="inet_8h" startline="98" endline="98">htonx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a686a31cfa5478ae0f3ea01400d7b24a6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>static uint64_t ntohll</definition>
+        <argsstring>(uint64_t x)</argsstring>
+        <name>ntohll</name>
+        <param>
+          <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="47" bodyend="47"/>
+        <referencedby refid="inet_8h_1acf7aa1710bebea2394ac60fb85fa862d" compoundref="inet_8h" startline="94" endline="94">ntohx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a17a4534ad0cff8e00f8bf7eb6327251f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+        <definition>static uint8_t ntohx</definition>
+        <argsstring>(uint8_t x)</argsstring>
+        <name>ntohx</name>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1ad139e18466d9c5daf5bfea1850a17398" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1a273cf69d639a59973b6019625df33e30" kindref="member">uint16_t</ref></type>
+        <definition>static uint16_t ntohx</definition>
+        <argsstring>(uint16_t x)</argsstring>
+        <name>ntohx</name>
+        <param>
+          <type><ref refid="stdint_8h_1a273cf69d639a59973b6019625df33e30" kindref="member">uint16_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a0369dc31c2517a1d96ac1aa9a3a38f02" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1a435d1572bf3f880d55459d9805097f62" kindref="member">uint32_t</ref></type>
+        <definition>static uint32_t ntohx</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>ntohx</name>
+        <param>
+          <type><ref refid="stdint_8h_1a435d1572bf3f880d55459d9805097f62" kindref="member">uint32_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1acf7aa1710bebea2394ac60fb85fa862d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>static uint64_t ntohx</definition>
+        <argsstring>(uint64_t x)</argsstring>
+        <name>ntohx</name>
+        <param>
+          <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="94" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="94" bodyend="94"/>
+        <references refid="inet_8h_1a686a31cfa5478ae0f3ea01400d7b24a6" compoundref="inet_8h" startline="47" endline="47">ntohll</references>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a7841fce8e8946db1d7f2b5542a3cdbd7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+        <definition>static uint8_t htonx</definition>
+        <argsstring>(uint8_t x)</argsstring>
+        <name>htonx</name>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="95" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a1a00dff37bbe31c5fa27da29bbdf0bd5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1a273cf69d639a59973b6019625df33e30" kindref="member">uint16_t</ref></type>
+        <definition>static uint16_t htonx</definition>
+        <argsstring>(uint16_t x)</argsstring>
+        <name>htonx</name>
+        <param>
+          <type><ref refid="stdint_8h_1a273cf69d639a59973b6019625df33e30" kindref="member">uint16_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="96" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a4fb2f728756fb7c7e178f501b47e1a23" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1a435d1572bf3f880d55459d9805097f62" kindref="member">uint32_t</ref></type>
+        <definition>static uint32_t htonx</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>htonx</name>
+        <param>
+          <type><ref refid="stdint_8h_1a435d1572bf3f880d55459d9805097f62" kindref="member">uint32_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="97" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="inet_8h_1a6e269102b3061af6ff093a850d61edc6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>static uint64_t htonx</definition>
+        <argsstring>(uint64_t x)</argsstring>
+        <name>htonx</name>
+        <param>
+          <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h" bodystart="98" bodyend="98"/>
+        <references refid="inet_8h_1a67e5164e8959473008351818d70775dd" compoundref="inet_8h" startline="46" endline="46">htonll</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gruel/src/include/gruel/inet.h"/>
+  </compounddef>
+</doxygen>

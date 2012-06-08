@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__noise__source__s" kind="class" prot="public">
+    <compoundname>gr_noise_source_s</compoundname>
+    <includes refid="gr__noise__source__s_8h" local="no">gr_noise_source_s.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__noise__source__s_1aaaaf4c9afe075e77f51b5537342e3680" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__noise__type_8h_1a12ee6e1f6ac7ef3b10353cb76c0a8728" kindref="member">gr_noise_type_t</ref></type>
+        <definition>gr_noise_type_t gr_noise_source_s::d_type</definition>
+        <argsstring></argsstring>
+        <name>d_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__noise__source__s_1a2db149d39510e394fee03309dd73508e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_noise_source_s::d_ampl</definition>
+        <argsstring></argsstring>
+        <name>d_ampl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__noise__source__s_1af800d4059f6266e1ad73f512e5fd52ff" prot="private" static="no" mutable="no">
+        <type>gr_random</type>
+        <definition>gr_random gr_noise_source_s::d_rng</definition>
+        <argsstring></argsstring>
+        <name>d_rng</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__noise__source__s_1acdf779c8bfa386a91c365f12a5374d77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__noise__source__s_8h_1a02721a89c5b43f7c49eb02140ab08fc5" kindref="member">gr_noise_source_s_sptr</ref></type>
+        <definition>GR_CORE_API gr_noise_source_s_sptr gr_make_noise_source_s</definition>
+        <argsstring>(gr_noise_type_t type, float ampl, long seed)</argsstring>
+        <name>gr_make_noise_source_s</name>
+        <param>
+          <type><ref refid="gr__noise__type_8h_1a12ee6e1f6ac7ef3b10353cb76c0a8728" kindref="member">gr_noise_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ampl</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Make a noise source. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the random distribution to use (see <ref refid="gr__noise__type_8h" kindref="compound">gr_noise_type.h</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ampl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a scaling factor for the output </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seed for random generators. Note that for uniform and Gaussian distributions, this should be a negative number. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__noise__source__s_1ad611d04d9f83380bcedbdc8a9fc0f485" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_noise_source_s::gr_noise_source_s</definition>
+        <argsstring>(gr_noise_type_t type, float ampl, long seed=0)</argsstring>
+        <name>gr_noise_source_s</name>
+        <param>
+          <type><ref refid="gr__noise__type_8h_1a12ee6e1f6ac7ef3b10353cb76c0a8728" kindref="member">gr_noise_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ampl</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>seed</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__noise__source__s_1af4fbae30f60c3210086fd25d48e80fe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_noise_source_s::set_type</definition>
+        <argsstring>(gr_noise_type_t type)</argsstring>
+        <name>set_type</name>
+        <param>
+          <type><ref refid="gr__noise__type_8h_1a12ee6e1f6ac7ef3b10353cb76c0a8728" kindref="member">gr_noise_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__noise__source__s_1afc4a62504662daf88d48d6363c933161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_noise_source_s::set_amplitude</definition>
+        <argsstring>(float ampl)</argsstring>
+        <name>set_amplitude</name>
+        <param>
+          <type>float</type>
+          <declname>ampl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__noise__source__s_1a0b620afdc1b2acc8ec15b1dd45eaeead" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__noise__type_8h_1a12ee6e1f6ac7ef3b10353cb76c0a8728" kindref="member">gr_noise_type_t</ref></type>
+        <definition>gr_noise_type_t gr_noise_source_s::type</definition>
+        <argsstring>() const </argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__noise__source__s_1a402738b57defc0f00183790c87c35466" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_noise_source_s::amplitude</definition>
+        <argsstring>() const </argsstring>
+        <name>amplitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__noise__source__s_1a3647f0ea2b04ba1edcbb76933992a3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_noise_source_s::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Random number source. </para>    </briefdescription>
+    <detaileddescription>
+<para>Generate random values from different distributions. Currently, only Gaussian and uniform are enabled.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the random distribution to use (see <ref refid="gr__noise__type_8h" kindref="compound">gr_noise_type.h</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ampl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a scaling factor for the output </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>seed for random generators. Note that for uniform and Gaussian distributions, this should be a negative number. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_noise_source_s.h" bodystart="59" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classgr__noise__source__s_1a402738b57defc0f00183790c87c35466" prot="public" virt="non-virtual"><scope>gr_noise_source_s</scope><name>amplitude</name></member>
+      <member refid="classgr__noise__source__s_1a2db149d39510e394fee03309dd73508e" prot="private" virt="non-virtual"><scope>gr_noise_source_s</scope><name>d_ampl</name></member>
+      <member refid="classgr__noise__source__s_1af800d4059f6266e1ad73f512e5fd52ff" prot="private" virt="non-virtual"><scope>gr_noise_source_s</scope><name>d_rng</name></member>
+      <member refid="classgr__noise__source__s_1aaaaf4c9afe075e77f51b5537342e3680" prot="private" virt="non-virtual"><scope>gr_noise_source_s</scope><name>d_type</name></member>
+      <member refid="classgr__noise__source__s_1acdf779c8bfa386a91c365f12a5374d77" prot="private" virt="non-virtual"><scope>gr_noise_source_s</scope><name>gr_make_noise_source_s</name></member>
+      <member refid="classgr__noise__source__s_1ad611d04d9f83380bcedbdc8a9fc0f485" prot="private" virt="non-virtual"><scope>gr_noise_source_s</scope><name>gr_noise_source_s</name></member>
+      <member refid="classgr__noise__source__s_1afc4a62504662daf88d48d6363c933161" prot="public" virt="non-virtual"><scope>gr_noise_source_s</scope><name>set_amplitude</name></member>
+      <member refid="classgr__noise__source__s_1af4fbae30f60c3210086fd25d48e80fe0" prot="public" virt="non-virtual"><scope>gr_noise_source_s</scope><name>set_type</name></member>
+      <member refid="classgr__noise__source__s_1a0b620afdc1b2acc8ec15b1dd45eaeead" prot="public" virt="non-virtual"><scope>gr_noise_source_s</scope><name>type</name></member>
+      <member refid="classgr__noise__source__s_1a3647f0ea2b04ba1edcbb76933992a3de" prot="public" virt="virtual"><scope>gr_noise_source_s</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

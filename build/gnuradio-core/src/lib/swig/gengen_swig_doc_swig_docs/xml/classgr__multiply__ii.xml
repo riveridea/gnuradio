@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__multiply__ii" kind="class" prot="public">
+    <compoundname>gr_multiply_ii</compoundname>
+    <includes refid="gr__multiply__ii_8h" local="no">gr_multiply_ii.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__multiply__ii_1a88c4a7f1156293e5548a5d14dd5528ad" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_multiply_ii::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__multiply__ii_1a5dc075885dbf4d4faec3390cd3b35599" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__multiply__ii_8h_1a7c493331e6c0ca6ec4bbd0f115a22b80" kindref="member">gr_multiply_ii_sptr</ref></type>
+        <definition>GR_CORE_API gr_multiply_ii_sptr gr_make_multiply_ii</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_make_multiply_ii</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__multiply__ii_1af337fe7db7503fb32686ddf8097b42bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_multiply_ii::gr_multiply_ii</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_multiply_ii</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__multiply__ii_1a08cbe499aa7cf264c3410480cfec9bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_multiply_ii::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output = prod (input_0, input_1, ...)</para><para>Multiply across all input streams. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_multiply_ii.h" bodystart="42" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgr__multiply__ii_1a88c4a7f1156293e5548a5d14dd5528ad" prot="private" virt="non-virtual"><scope>gr_multiply_ii</scope><name>d_vlen</name></member>
+      <member refid="classgr__multiply__ii_1a5dc075885dbf4d4faec3390cd3b35599" prot="private" virt="non-virtual"><scope>gr_multiply_ii</scope><name>gr_make_multiply_ii</name></member>
+      <member refid="classgr__multiply__ii_1af337fe7db7503fb32686ddf8097b42bd" prot="private" virt="non-virtual"><scope>gr_multiply_ii</scope><name>gr_multiply_ii</name></member>
+      <member refid="classgr__multiply__ii_1a08cbe499aa7cf264c3410480cfec9bef" prot="public" virt="non-virtual"><scope>gr_multiply_ii</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

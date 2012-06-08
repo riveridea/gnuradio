@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__phase__modulator__fc" kind="class" prot="public">
+    <compoundname>gr_phase_modulator_fc</compoundname>
+    <includes refid="gr__phase__modulator__fc_8h" local="no">gr_phase_modulator_fc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__phase__modulator__fc_1a312c4aba254f725d6d5919e627cf74b6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_phase_modulator_fc::d_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>d_sensitivity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__phase__modulator__fc_1abd2e00e29684e67dfd1590324a2726f2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_phase_modulator_fc::d_phase</definition>
+        <argsstring></argsstring>
+        <name>d_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__phase__modulator__fc_1a1a3285972069e1bc2bbd6c1a9004a266" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__phase__modulator__fc_8h_1a74618c5c6790bea9bbeb1afc4514b5df" kindref="member">gr_phase_modulator_fc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_phase_modulator_fc_sptr gr_make_phase_modulator_fc</definition>
+        <argsstring>(double sensitivity)</argsstring>
+        <name>gr_make_phase_modulator_fc</name>
+        <param>
+          <type>double</type>
+          <declname>sensitivity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__phase__modulator__fc_1afa86f8e6dc21469b3e59f39ed071cf5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_phase_modulator_fc::gr_phase_modulator_fc</definition>
+        <argsstring>(double sensitivity)</argsstring>
+        <name>gr_phase_modulator_fc</name>
+        <param>
+          <type>double</type>
+          <declname>sensitivity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__phase__modulator__fc_1a5d616ce12afae6d48d3df4d40dc08993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_phase_modulator_fc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Phase modulator block</para><para>output=complex(cos(in*sensitivity),sin(in*sensitivity)) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_phase_modulator_fc.h" bodystart="39" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr__phase__modulator__fc_1abd2e00e29684e67dfd1590324a2726f2" prot="private" virt="non-virtual"><scope>gr_phase_modulator_fc</scope><name>d_phase</name></member>
+      <member refid="classgr__phase__modulator__fc_1a312c4aba254f725d6d5919e627cf74b6" prot="private" virt="non-virtual"><scope>gr_phase_modulator_fc</scope><name>d_sensitivity</name></member>
+      <member refid="classgr__phase__modulator__fc_1a1a3285972069e1bc2bbd6c1a9004a266" prot="private" virt="non-virtual"><scope>gr_phase_modulator_fc</scope><name>gr_make_phase_modulator_fc</name></member>
+      <member refid="classgr__phase__modulator__fc_1afa86f8e6dc21469b3e59f39ed071cf5d" prot="private" virt="non-virtual"><scope>gr_phase_modulator_fc</scope><name>gr_phase_modulator_fc</name></member>
+      <member refid="classgr__phase__modulator__fc_1a5d616ce12afae6d48d3df4d40dc08993" prot="public" virt="non-virtual"><scope>gr_phase_modulator_fc</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

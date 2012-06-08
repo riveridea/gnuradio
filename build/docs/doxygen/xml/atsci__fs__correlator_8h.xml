@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsci__fs__correlator_8h" kind="file">
+    <compoundname>atsci_fs_correlator.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includedby refid="atsci__fs__correlator__naive_8h" local="no">atsci_fs_correlator_naive.h</includedby>
+    <incdepgraph>
+      <node id="1139">
+        <label>atsci_fs_correlator.h</label>
+        <link refid="atsci_fs_correlator.h"/>
+        <childnode refid="1140" relation="include">
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="1141" relation="include">
+        </childnode>
+      </node>
+      <node id="1141">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1143">
+        <label>atsci_fs_correlator_naive.h</label>
+        <link refid="atsci__fs__correlator__naive_8h"/>
+      </node>
+      <node id="1142">
+        <label>atsci_fs_correlator.h</label>
+        <link refid="atsci_fs_correlator.h"/>
+        <childnode refid="1143" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classatsci__fs__correlator" prot="public">atsci_fs_correlator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_correlator.h"/>
+  </compounddef>
+</doxygen>

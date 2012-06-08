@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gnuradio-vocoder
+Description: GNU Radio blocks implementing voice codecs
+Requires: gnuradio-core
+Version: 3.6.1git
+Libs: -L${libdir} -lgnuradio-vocoder
+Cflags: -I${includedir}

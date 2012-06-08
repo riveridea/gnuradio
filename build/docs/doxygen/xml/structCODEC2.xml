@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="structCODEC2" kind="struct" prot="public">
+    <compoundname>CODEC2</compoundname>
+    <includes refid="codec2__internal_8h" local="no">codec2_internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCODEC2_1ae35aa6e0ed2c51587399c7d46a7f4cfd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::w[M]</definition>
+        <argsstring>[M]</argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1acd39f81c9cbe95f445e71ce46b906ebb" prot="public" static="no" mutable="no">
+        <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+        <definition>COMP CODEC2::W[FFT_ENC]</definition>
+        <argsstring>[FFT_ENC]</argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a515dd383285a5863ef53e7991c40356f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Pn[2 *N]</definition>
+        <argsstring>[2 *N]</argsstring>
+        <name>Pn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a01173089b0922ba8a1fa97b166a44c07" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Sn[M]</definition>
+        <argsstring>[M]</argsstring>
+        <name>Sn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a712eb0d13efbe8ae7108f93f1fb785d0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::hpf_states[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>hpf_states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1abcb055f551f3d72344c7d534a48ead54" prot="public" static="no" mutable="no">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>void* CODEC2::nlp</definition>
+        <argsstring></argsstring>
+        <name>nlp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a5cb0415565e3bf98617802bb3552652a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Sn_[2 *N]</definition>
+        <argsstring>[2 *N]</argsstring>
+        <name>Sn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1aedad4717cab5a7738c41774b72f7f10e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::ex_phase</definition>
+        <argsstring></argsstring>
+        <name>ex_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1ad3d4074892c052d76047965394e1e0c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::bg_est</definition>
+        <argsstring></argsstring>
+        <name>bg_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1adf3d5a3379d26497b0de7e37cd34c6d4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_Wo</definition>
+        <argsstring></argsstring>
+        <name>prev_Wo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1aee274a7bfdcdea53be7171d54a993910" prot="public" static="no" mutable="no">
+        <type><ref refid="structMODEL" kindref="compound">MODEL</ref></type>
+        <definition>MODEL CODEC2::prev_model</definition>
+        <argsstring></argsstring>
+        <name>prev_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1afa4e48bf1638df9f09e277ccf055045c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_lsps[LPC_ORD]</definition>
+        <argsstring>[LPC_ORD]</argsstring>
+        <name>prev_lsps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a90d7b053f557fb1d1319f31f7a2801c1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_energy</definition>
+        <argsstring></argsstring>
+        <name>prev_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="871">
+        <label>COMP</label>
+        <link refid="structCOMP"/>
+      </node>
+      <node id="870">
+        <label>MODEL</label>
+        <link refid="structMODEL"/>
+      </node>
+      <node id="869">
+        <label>CODEC2</label>
+        <link refid="structCODEC2"/>
+        <childnode refid="870" relation="usage">
+          <edgelabel>prev_model</edgelabel>
+        </childnode>
+        <childnode refid="871" relation="usage">
+          <edgelabel>W</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/codec2/codec2_internal.h" bodystart="38" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structCODEC2_1ad3d4074892c052d76047965394e1e0c4" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>bg_est</name></member>
+      <member refid="structCODEC2_1aedad4717cab5a7738c41774b72f7f10e" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>ex_phase</name></member>
+      <member refid="structCODEC2_1a712eb0d13efbe8ae7108f93f1fb785d0" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>hpf_states</name></member>
+      <member refid="structCODEC2_1abcb055f551f3d72344c7d534a48ead54" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>nlp</name></member>
+      <member refid="structCODEC2_1a515dd383285a5863ef53e7991c40356f" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Pn</name></member>
+      <member refid="structCODEC2_1a90d7b053f557fb1d1319f31f7a2801c1" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_energy</name></member>
+      <member refid="structCODEC2_1afa4e48bf1638df9f09e277ccf055045c" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_lsps</name></member>
+      <member refid="structCODEC2_1aee274a7bfdcdea53be7171d54a993910" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_model</name></member>
+      <member refid="structCODEC2_1adf3d5a3379d26497b0de7e37cd34c6d4" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_Wo</name></member>
+      <member refid="structCODEC2_1a01173089b0922ba8a1fa97b166a44c07" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Sn</name></member>
+      <member refid="structCODEC2_1a5cb0415565e3bf98617802bb3552652a" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Sn_</name></member>
+      <member refid="structCODEC2_1ae35aa6e0ed2c51587399c7d46a7f4cfd" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>w</name></member>
+      <member refid="structCODEC2_1acd39f81c9cbe95f445e71ce46b906ebb" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>W</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

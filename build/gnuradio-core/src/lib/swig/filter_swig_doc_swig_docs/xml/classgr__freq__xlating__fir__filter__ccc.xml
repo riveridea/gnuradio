@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__freq__xlating__fir__filter__ccc" kind="class" prot="public">
+    <compoundname>gr_freq_xlating_fir_filter_ccc</compoundname>
+    <includes refid="gr__freq__xlating__fir__filter__ccc_8h" local="no">gr_freq_xlating_fir_filter_ccc.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1a9c6baf4434c14288c11b8d823145b2a6" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_freq_xlating_fir_filter_ccc::d_proto_taps</definition>
+        <argsstring></argsstring>
+        <name>d_proto_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1a78f874324d32366b7b2adf00a9a5b929" prot="protected" static="no" mutable="no">
+        <type><ref refid="classgr__fir__ccc" kindref="compound">gr_fir_ccc</ref> *</type>
+        <definition>gr_fir_ccc* gr_freq_xlating_fir_filter_ccc::d_composite_fir</definition>
+        <argsstring></argsstring>
+        <name>d_composite_fir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1a05823911c8244dfb4b90acd14043db14" prot="protected" static="no" mutable="no">
+        <type><ref refid="classgr__rotator" kindref="compound">gr_rotator</ref></type>
+        <definition>gr_rotator gr_freq_xlating_fir_filter_ccc::d_r</definition>
+        <argsstring></argsstring>
+        <name>d_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1aec2574785758bfe717994be25c5f1466" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_freq_xlating_fir_filter_ccc::d_center_freq</definition>
+        <argsstring></argsstring>
+        <name>d_center_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1a43be22175d6c3abf0e3e4e999be36c19" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_freq_xlating_fir_filter_ccc::d_sampling_freq</definition>
+        <argsstring></argsstring>
+        <name>d_sampling_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__freq__xlating__fir__filter__ccc_1a4ec1b308e519aa20f2a874d8cb9357d1" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_freq_xlating_fir_filter_ccc::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1ab421ef417ddac35df6e27c4fe0467581" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_freq_xlating_fir_filter_ccc::~gr_freq_xlating_fir_filter_ccc</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_freq_xlating_fir_filter_ccc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1a28bcc4952dc242aa7858881d0a1b4e7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_freq_xlating_fir_filter_ccc::set_center_freq</definition>
+        <argsstring>(double center_freq)</argsstring>
+        <name>set_center_freq</name>
+        <param>
+          <type>double</type>
+          <declname>center_freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1a1c5ecbfce1bcf47433c0cd617df18532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_freq_xlating_fir_filter_ccc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1acb55c9a922b28cf3bdcc0e573ecf9aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_freq_xlating_fir_filter_ccc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__freq__xlating__fir__filter__ccc_1a2139d84818600e662be8477a6490fd32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__freq__xlating__fir__filter__ccc_8h_1a000754669dbd18672ea316d509c77190" kindref="member">gr_freq_xlating_fir_filter_ccc_sptr</ref></type>
+        <definition>GR_CORE_API gr_freq_xlating_fir_filter_ccc_sptr gr_make_freq_xlating_fir_filter_ccc</definition>
+        <argsstring>(int decimation, const std::vector&lt; gr_complex &gt; &amp;taps, double center_freq, double sampling_freq)</argsstring>
+        <name>gr_make_freq_xlating_fir_filter_ccc</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>center_freq</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sampling_freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a FIR filter with the given taps and a composite frequency translation that shifts center_freq down to zero Hz. The frequency translation logically comes before the filtering operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1adaef07844d23dc053f0758df24cfeb47" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_freq_xlating_fir_filter_ccc::build_composite_fir</definition>
+        <argsstring>()</argsstring>
+        <name>build_composite_fir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__freq__xlating__fir__filter__ccc_1ac70bc667772a68eed000dc2718c73277" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_freq_xlating_fir_filter_ccc::gr_freq_xlating_fir_filter_ccc</definition>
+        <argsstring>(int decimation, const std::vector&lt; gr_complex &gt; &amp;taps, double center_freq, double sampling_freq)</argsstring>
+        <name>gr_freq_xlating_fir_filter_ccc</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>center_freq</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sampling_freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a FIR filter with the given taps and a composite frequency translation that shifts center_freq down to zero Hz. The frequency translation logically comes before the filtering operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FIR filter combined with frequency translation with gr_complex input, gr_complex output and gr_complex taps</para><para>This class efficiently combines a frequency translation (typically &quot;down conversion&quot;) with a FIR filter (typically low-pass) and decimation. It is ideally suited for a &quot;channel selection filter&quot; and can be efficiently used to select and decimate a narrow band signal out of wide bandwidth input. </para>    </briefdescription>
+    <detaileddescription>
+<para>Uses a single input array to produce a single output array. Additional inputs and/or outputs are ignored. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="708">
+        <label>gr_fir_ccc</label>
+        <link refid="classgr__fir__ccc"/>
+        <childnode refid="709" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="709">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="707">
+        <label>gr_freq_xlating_fir_filter_ccc</label>
+        <link refid="classgr__freq__xlating__fir__filter__ccc"/>
+        <childnode refid="708" relation="usage">
+          <edgelabel>d_composite_fir</edgelabel>
+        </childnode>
+        <childnode refid="710" relation="usage">
+          <edgelabel>d_r</edgelabel>
+        </childnode>
+        <childnode refid="709" relation="usage">
+          <edgelabel>d_proto_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="710">
+        <label>gr_rotator</label>
+        <link refid="classgr__rotator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_freq_xlating_fir_filter_ccc.h" bodystart="64" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1adaef07844d23dc053f0758df24cfeb47" prot="protected" virt="virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>build_composite_fir</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1aec2574785758bfe717994be25c5f1466" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_center_freq</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a78f874324d32366b7b2adf00a9a5b929" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_composite_fir</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a9c6baf4434c14288c11b8d823145b2a6" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_proto_taps</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a05823911c8244dfb4b90acd14043db14" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_r</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a43be22175d6c3abf0e3e4e999be36c19" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_sampling_freq</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a4ec1b308e519aa20f2a874d8cb9357d1" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>d_updated</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1ac70bc667772a68eed000dc2718c73277" prot="protected" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>gr_freq_xlating_fir_filter_ccc</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a2139d84818600e662be8477a6490fd32" prot="private" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>gr_make_freq_xlating_fir_filter_ccc</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a28bcc4952dc242aa7858881d0a1b4e7b" prot="public" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>set_center_freq</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1a1c5ecbfce1bcf47433c0cd617df18532" prot="public" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>set_taps</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1acb55c9a922b28cf3bdcc0e573ecf9aa9" prot="public" virt="non-virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>work</name></member>
+      <member refid="classgr__freq__xlating__fir__filter__ccc_1ab421ef417ddac35df6e27c4fe0467581" prot="public" virt="virtual"><scope>gr_freq_xlating_fir_filter_ccc</scope><name>~gr_freq_xlating_fir_filter_ccc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

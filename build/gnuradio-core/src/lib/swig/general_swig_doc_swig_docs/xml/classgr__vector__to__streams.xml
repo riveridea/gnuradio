@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vector__to__streams" kind="class" prot="public">
+    <compoundname>gr_vector_to_streams</compoundname>
+    <includes refid="gr__vector__to__streams_8h" local="no">gr_vector_to_streams.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__vector__to__streams_1aad8ed37966496eaaf699440226b0f646" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__vector__to__streams_8h_1a563fd21115ea9c194fe1c20d8b02ede8" kindref="member">gr_vector_to_streams_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_vector_to_streams_sptr gr_make_vector_to_streams</definition>
+        <argsstring>(size_t item_size, size_t nstreams)</argsstring>
+        <name>gr_make_vector_to_streams</name>
+        <param>
+          <type>size_t</type>
+          <declname>item_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nstreams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vector_to_streams.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__vector__to__streams_1acf5ec7e258d5b9926595b436769d69b0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_vector_to_streams::gr_vector_to_streams</definition>
+        <argsstring>(size_t item_size, size_t nstreams)</argsstring>
+        <name>gr_vector_to_streams</name>
+        <param>
+          <type>size_t</type>
+          <declname>item_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nstreams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vector_to_streams.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vector__to__streams_1a7e7eb4fee66cbd3ffc9b478a05b46d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_vector_to_streams::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vector_to_streams.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convert 1 stream of vectors of length N to N streams of items. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vector_to_streams.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vector_to_streams.h" bodystart="40" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classgr__vector__to__streams_1aad8ed37966496eaaf699440226b0f646" prot="private" virt="non-virtual"><scope>gr_vector_to_streams</scope><name>gr_make_vector_to_streams</name></member>
+      <member refid="classgr__vector__to__streams_1acf5ec7e258d5b9926595b436769d69b0" prot="protected" virt="non-virtual"><scope>gr_vector_to_streams</scope><name>gr_vector_to_streams</name></member>
+      <member refid="classgr__vector__to__streams_1a7e7eb4fee66cbd3ffc9b478a05b46d86" prot="public" virt="non-virtual"><scope>gr_vector_to_streams</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

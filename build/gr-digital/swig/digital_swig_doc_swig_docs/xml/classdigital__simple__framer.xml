@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__simple__framer" kind="class" prot="public">
+    <compoundname>digital_simple_framer</compoundname>
+    <includes refid="digital__simple__framer_8h" local="no">digital_simple_framer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__simple__framer_1a016d7ad7ce2594d620125f3efbfe0b9f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_simple_framer::d_seqno</definition>
+        <argsstring></argsstring>
+        <name>d_seqno</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__simple__framer_1ab3c6cca4c219cac3709e13deea1728f4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_simple_framer::d_payload_bytesize</definition>
+        <argsstring></argsstring>
+        <name>d_payload_bytesize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__simple__framer_1a75691c354d5c04fad69b3a6718de0334" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_simple_framer::d_input_block_size</definition>
+        <argsstring></argsstring>
+        <name>d_input_block_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__simple__framer_1a53dfb34137bade2483299cc3b472a77b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_simple_framer::d_output_block_size</definition>
+        <argsstring></argsstring>
+        <name>d_output_block_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__simple__framer_1a705bb4b781d41cb286a7f458428b1bcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__simple__framer_8h_1a83af2cc72133ec490a5c605529df6360" kindref="member">digital_simple_framer_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_simple_framer_sptr digital_make_simple_framer</definition>
+        <argsstring>(int payload_bytesize)</argsstring>
+        <name>digital_make_simple_framer</name>
+        <param>
+          <type>int</type>
+          <declname>payload_bytesize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__simple__framer_1a2b2fd4eb8d64db2189fa04a01a58a6ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_simple_framer::digital_simple_framer</definition>
+        <argsstring>(int payload_bytesize)</argsstring>
+        <name>digital_simple_framer</name>
+        <param>
+          <type>int</type>
+          <declname>payload_bytesize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__simple__framer_1a9fa102e63a2dfc581b86f0f52599311b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_simple_framer::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__simple__framer_1a681d115818c121180ea993a862107c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_simple_framer::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>add sync field, seq number and command field to payload</para><para>Takes in enough samples to create a full output frame. The frame is prepended with the GRSF_SYNC (defind in <ref refid="digital__simple__framer__sync_8h" kindref="compound">digital_simple_framer_sync.h</ref>) and an 8-bit sequence number. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>payload_bytesize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the payload in bytes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_simple_framer.h" bodystart="44" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classdigital__simple__framer_1a75691c354d5c04fad69b3a6718de0334" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>d_input_block_size</name></member>
+      <member refid="classdigital__simple__framer_1a53dfb34137bade2483299cc3b472a77b" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>d_output_block_size</name></member>
+      <member refid="classdigital__simple__framer_1ab3c6cca4c219cac3709e13deea1728f4" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>d_payload_bytesize</name></member>
+      <member refid="classdigital__simple__framer_1a016d7ad7ce2594d620125f3efbfe0b9f" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>d_seqno</name></member>
+      <member refid="classdigital__simple__framer_1a705bb4b781d41cb286a7f458428b1bcc" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>digital_make_simple_framer</name></member>
+      <member refid="classdigital__simple__framer_1a2b2fd4eb8d64db2189fa04a01a58a6ee" prot="private" virt="non-virtual"><scope>digital_simple_framer</scope><name>digital_simple_framer</name></member>
+      <member refid="classdigital__simple__framer_1a9fa102e63a2dfc581b86f0f52599311b" prot="public" virt="non-virtual"><scope>digital_simple_framer</scope><name>forecast</name></member>
+      <member refid="classdigital__simple__framer_1a681d115818c121180ea993a862107c14" prot="public" virt="non-virtual"><scope>digital_simple_framer</scope><name>general_work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

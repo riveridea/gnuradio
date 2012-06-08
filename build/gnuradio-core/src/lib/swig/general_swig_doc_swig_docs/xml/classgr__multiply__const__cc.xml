@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__multiply__const__cc" kind="class" prot="public">
+    <compoundname>gr_multiply_const_cc</compoundname>
+    <includes refid="gr__multiply__const__cc_8h" local="no">gr_multiply_const_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__multiply__const__cc_1af959fbae184092708c0b7ac159c177a0" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr_multiply_const_cc::d_k</definition>
+        <argsstring></argsstring>
+        <name>d_k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__multiply__const__cc_1ace7621e6b14515f2e01a19d6f429b2a1" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_multiply_const_cc::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__multiply__const__cc_1aa5905bca4e82da37394c734d8a885413" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__multiply__const__cc_8h_1a276b27b8373208e80e318f0eb4563a2c" kindref="member">gr_multiply_const_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_multiply_const_cc_sptr gr_make_multiply_const_cc</definition>
+        <argsstring>(gr_complex k, size_t vlen)</argsstring>
+        <name>gr_make_multiply_const_cc</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__multiply__const__cc_1a8e73a0b763e8b4453b2df9066a9192db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_multiply_const_cc::gr_multiply_const_cc</definition>
+        <argsstring>(gr_complex k, size_t vlen)</argsstring>
+        <name>gr_multiply_const_cc</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__multiply__const__cc_1a6f7017985c0bcfe4e92855daad61347a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex gr_multiply_const_cc::k</definition>
+        <argsstring>() const </argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__multiply__const__cc_1a3db6f2e0d16772ce5480dbf275f744c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_multiply_const_cc::set_k</definition>
+        <argsstring>(gr_complex k)</argsstring>
+        <name>set_k</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__multiply__const__cc_1a3fd3870953319a288610ac1c3dfcedaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_multiply_const_cc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Multiply stream of complex values with a constant <computeroutput>k</computeroutput>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_multiply_const_cc.h" bodystart="40" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classgr__multiply__const__cc_1af959fbae184092708c0b7ac159c177a0" prot="private" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>d_k</name></member>
+      <member refid="classgr__multiply__const__cc_1ace7621e6b14515f2e01a19d6f429b2a1" prot="private" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>d_vlen</name></member>
+      <member refid="classgr__multiply__const__cc_1aa5905bca4e82da37394c734d8a885413" prot="private" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>gr_make_multiply_const_cc</name></member>
+      <member refid="classgr__multiply__const__cc_1a8e73a0b763e8b4453b2df9066a9192db" prot="private" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>gr_multiply_const_cc</name></member>
+      <member refid="classgr__multiply__const__cc_1a6f7017985c0bcfe4e92855daad61347a" prot="public" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>k</name></member>
+      <member refid="classgr__multiply__const__cc_1a3db6f2e0d16772ce5480dbf275f744c9" prot="public" virt="non-virtual"><scope>gr_multiply_const_cc</scope><name>set_k</name></member>
+      <member refid="classgr__multiply__const__cc_1a3fd3870953319a288610ac1c3dfcedaa" prot="public" virt="virtual"><scope>gr_multiply_const_cc</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

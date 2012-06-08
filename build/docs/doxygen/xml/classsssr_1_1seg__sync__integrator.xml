@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classsssr_1_1seg__sync__integrator" kind="class" prot="public">
+    <compoundname>sssr::seg_sync_integrator</compoundname>
+    <includes refid="atsci__sssr_8h" local="no">atsci_sssr.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsssr_1_1seg__sync__integrator_1a676ac4ad7428750285508f8a5e50f9cf" prot="private" static="no" mutable="no">
+        <type>signed char</type>
+        <definition>signed char sssr::seg_sync_integrator::d_integrator[ATSC_DATA_SEGMENT_LENGTH]</definition>
+        <argsstring>[ATSC_DATA_SEGMENT_LENGTH]</argsstring>
+        <name>d_integrator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsssr_1_1seg__sync__integrator_1a2e5decded32cb0aca0409ac93e70c189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sssr::seg_sync_integrator::seg_sync_integrator</definition>
+        <argsstring>()</argsstring>
+        <name>seg_sync_integrator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classsssr_1_1seg__sync__integrator_1a6bd0c45fdcb5634c56f0a33047271601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sssr::seg_sync_integrator::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>called on channel change </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classsssr_1_1seg__sync__integrator_1aa5f378b6f4d825972bd4de3e37eb7e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sssr::seg_sync_integrator::update</definition>
+        <argsstring>(int weight, int index)</argsstring>
+        <name>update</name>
+        <param>
+          <type>int</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>update current tap with weight and return integrated correlation value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classsssr_1_1seg__sync__integrator_1acffaa9571a94ba2da517ba9db7e78d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sssr::seg_sync_integrator::find_max</definition>
+        <argsstring>(int *value)</argsstring>
+        <name>find_max</name>
+        <param>
+          <type>int *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>return index of maximum correlation value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>segment sync integrator </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="74" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classsssr_1_1seg__sync__integrator_1a676ac4ad7428750285508f8a5e50f9cf" prot="private" virt="non-virtual"><scope>sssr::seg_sync_integrator</scope><name>d_integrator</name></member>
+      <member refid="classsssr_1_1seg__sync__integrator_1acffaa9571a94ba2da517ba9db7e78d46" prot="public" virt="non-virtual"><scope>sssr::seg_sync_integrator</scope><name>find_max</name></member>
+      <member refid="classsssr_1_1seg__sync__integrator_1a6bd0c45fdcb5634c56f0a33047271601" prot="public" virt="non-virtual"><scope>sssr::seg_sync_integrator</scope><name>reset</name></member>
+      <member refid="classsssr_1_1seg__sync__integrator_1a2e5decded32cb0aca0409ac93e70c189" prot="public" virt="non-virtual"><scope>sssr::seg_sync_integrator</scope><name>seg_sync_integrator</name></member>
+      <member refid="classsssr_1_1seg__sync__integrator_1aa5f378b6f4d825972bd4de3e37eb7e09" prot="public" virt="non-virtual"><scope>sssr::seg_sync_integrator</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

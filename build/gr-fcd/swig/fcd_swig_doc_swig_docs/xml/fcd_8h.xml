@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="fcd_8h" kind="file">
+    <compoundname>fcd.h</compoundname>
+    <includes local="no">fcd_api.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <incdepgraph>
+      <node id="0">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h</label>
+        <link refid="fcd.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>fcd_api.h</label>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structFCD__CAPS__STRUCT" prot="public">FCD_CAPS_STRUCT</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" prot="public" static="no">
+        <name>EXTERN</name>
+        <initializer>extern</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcd_8h_1ab873c0d7f3599c1a0b12a38013c09795" prot="public" static="no">
+        <name>ASSIGN</name>
+        <param><defname>x</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" prot="public" static="no">
+        <name>FCD_MODE_ENUM</name>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2a754fac31b653570ba1da3d8a37a5c3e3" prot="public">
+          <name>FCD_MODE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No FCD detected. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ad7f54f4399ac0fe7f8d30b58a596c99c" prot="public">
+          <name>FCD_MODE_BL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FCD present in bootloader mode. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ae8c4b40edb1b42f2a0d7a397ac0d3be1" prot="public">
+          <name>FCD_MODE_APP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FCD present in aplpication mode. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>FCD mode enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fcd_8h_1aeaa261f930c3a1bfb55767521b9e8e61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdGetMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdGetMode</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a003fcc05a579230ea7e8b4898df342f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdGetFwVerStr</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>fcdGetFwVerStr</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a68407b647ce12e4721d0e2cd4e4b3b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdGetCaps</definition>
+        <argsstring>(FCD_CAPS_STRUCT *fcd_caps)</argsstring>
+        <name>fcdGetCaps</name>
+        <param>
+          <type><ref refid="structFCD__CAPS__STRUCT" kindref="compound">FCD_CAPS_STRUCT</ref> *</type>
+          <declname>fcd_caps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1af5815224a2452b60a37072f4055cc308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdGetCapsStr</definition>
+        <argsstring>(char *caps_str)</argsstring>
+        <name>fcdGetCapsStr</name>
+        <param>
+          <type>char *</type>
+          <declname>caps_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a543303c20b58d6f436f1282634e243cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdAppReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdAppReset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1aaf88f72c1f619e38cc90580e22cd9241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdAppSetFreqkHz</definition>
+        <argsstring>(int nFreq)</argsstring>
+        <name>fcdAppSetFreqkHz</name>
+        <param>
+          <type>int</type>
+          <declname>nFreq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1aabb0f79c4730ba08ba44b4f8261b4d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdAppSetFreq</definition>
+        <argsstring>(int nFreq)</argsstring>
+        <name>fcdAppSetFreq</name>
+        <param>
+          <type>int</type>
+          <declname>nFreq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a576d5f17550c0a0af830ca6b3f2106e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdAppSetParam</definition>
+        <argsstring>(uint8_t u8Cmd, uint8_t *pu8Data, uint8_t u8len)</argsstring>
+        <name>fcdAppSetParam</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8Cmd</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pu8Data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1ae219b188a9a7139d59e273d717e134ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdAppGetParam</definition>
+        <argsstring>(uint8_t u8Cmd, uint8_t *pu8Data, uint8_t u8len)</argsstring>
+        <name>fcdAppGetParam</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8Cmd</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pu8Data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1ab65883e1a8360986942c9e07f1a1349e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdBlReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdBlReset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a773821d1093807201a9562b48474d7ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdBlErase</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdBlErase</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a7017a49f6784b15f11ae78fe1931e7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdBlWriteFirmware</definition>
+        <argsstring>(char *pc, int64_t n64Size)</argsstring>
+        <name>fcdBlWriteFirmware</name>
+        <param>
+          <type>char *</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>n64Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a6f05d26ce4f207791650e84b604810c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FCD_API <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>FCD_API FCD_MODE_ENUM fcdBlVerifyFirmware</definition>
+        <argsstring>(char *pc, int64_t n64Size)</argsstring>
+        <name>fcdBlVerifyFirmware</name>
+        <param>
+          <type>char *</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>n64Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>Qthid.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(C)<sp/>2010<sp/><sp/>Howard<sp/>Long,<sp/>G6LVB</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>CopyRight<sp/>(C)<sp/>2011<sp/><sp/>Alexandru<sp/>Csete,<sp/>OZ9AEC</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mario<sp/>Lorenz,<sp/>DL5MLO</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Qthid<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Qthid<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>along<sp/>with<sp/>Qthid.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FCD_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FCD_H<sp/>1</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcd_api.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>FCD</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EXTERN</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ASSIGN<sp/>(x)<sp/>=x</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="32" refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EXTERN<sp/>extern</highlight></codeline>
+<codeline lineno="33" refid="fcd_8h_1ab873c0d7f3599c1a0b12a38013c09795" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ASSIGN(x)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2a754fac31b653570ba1da3d8a37a5c3e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2a754fac31b653570ba1da3d8a37a5c3e3" kindref="member">FCD_MODE_NONE</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ad7f54f4399ac0fe7f8d30b58a596c99c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ad7f54f4399ac0fe7f8d30b58a596c99c" kindref="member">FCD_MODE_BL</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ae8c4b40edb1b42f2a0d7a397ac0d3be1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ae8c4b40edb1b42f2a0d7a397ac0d3be1" kindref="member">FCD_MODE_APP</ref><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref>;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>mode<sp/>of<sp/>the<sp/>FCD:<sp/>none<sp/>inserted,<sp/>in<sp/>bootloader<sp/>mode<sp/>or<sp/>in<sp/>normal<sp/>application<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structFCD__CAPS__STRUCT" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structFCD__CAPS__STRUCT_1a24252c50b7f60e614172bd93d22b7809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structFCD__CAPS__STRUCT_1a24252c50b7f60e614172bd93d22b7809" kindref="member">hasBiasT</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structFCD__CAPS__STRUCT_1abeabda4231aa744222f8adc6fd535218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structFCD__CAPS__STRUCT_1abeabda4231aa744222f8adc6fd535218" kindref="member">hasCellBlock</ref>;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="structFCD__CAPS__STRUCT" kindref="compound" tooltip="FCD capabilities that depend on both hardware and firmware.">FCD_CAPS_STRUCT</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Application<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1aeaa261f930c3a1bfb55767521b9e8e61" kindref="member">fcdGetMode</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a003fcc05a579230ea7e8b4898df342f8" kindref="member">fcdGetFwVerStr</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a68407b647ce12e4721d0e2cd4e4b3b02" kindref="member">fcdGetCaps</ref>(<ref refid="structFCD__CAPS__STRUCT" kindref="compound" tooltip="FCD capabilities that depend on both hardware and firmware.">FCD_CAPS_STRUCT</ref><sp/>*fcd_caps);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1af5815224a2452b60a37072f4055cc308" kindref="member">fcdGetCapsStr</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*caps_str);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a543303c20b58d6f436f1282634e243cf" kindref="member">fcdAppReset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1aaf88f72c1f619e38cc90580e22cd9241" kindref="member">fcdAppSetFreqkHz</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nFreq);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1aabb0f79c4730ba08ba44b4f8261b4d17" kindref="member">fcdAppSetFreq</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nFreq);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a576d5f17550c0a0af830ca6b3f2106e6" kindref="member">fcdAppSetParam</ref>(uint8_t<sp/>u8Cmd,<sp/>uint8_t<sp/>*pu8Data,<sp/>uint8_t<sp/>u8len);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1ae219b188a9a7139d59e273d717e134ff" kindref="member">fcdAppGetParam</ref>(uint8_t<sp/>u8Cmd,<sp/>uint8_t<sp/>*pu8Data,<sp/>uint8_t<sp/>u8len);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Bootloader<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1ab65883e1a8360986942c9e07f1a1349e" kindref="member">fcdBlReset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a773821d1093807201a9562b48474d7ff" kindref="member">fcdBlErase</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a7017a49f6784b15f11ae78fe1931e7f5" kindref="member">fcdBlWriteFirmware</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pc,<sp/>int64_t<sp/>n64Size);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>FCD_API<sp/><ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member" tooltip="FCD mode enumeration.">FCD_MODE_ENUM</ref><sp/><ref refid="fcd_8h_1a6f05d26ce4f207791650e84b604810c3" kindref="member">fcdBlVerifyFirmware</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pc,<sp/>int64_t<sp/>n64Size);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>FCD_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h"/>
+  </compounddef>
+</doxygen>

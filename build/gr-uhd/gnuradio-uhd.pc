@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gnuradio-uhd
+Description: GNU Radio blocks for UHD
+Requires: gnuradio-core
+Version: 3.6.1git
+Libs: -L${libdir} -lgnuradio-uhd
+Cflags: -I${includedir}

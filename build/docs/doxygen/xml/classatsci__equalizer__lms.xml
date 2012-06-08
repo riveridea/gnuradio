@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__equalizer__lms" kind="class" prot="public">
+    <compoundname>atsci_equalizer_lms</compoundname>
+    <basecompoundref refid="classatsci__equalizer" prot="public" virt="non-virtual">atsci_equalizer</basecompoundref>
+    <includes refid="atsci__equalizer__lms_8h" local="no">atsci_equalizer_lms.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsci__equalizer__lms_1a38d81eba656d2fb0677ca05a148e3c80" prot="protected" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* atsci_equalizer_lms::trainingfile</definition>
+        <argsstring></argsstring>
+        <name>trainingfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsci__equalizer__lms_1aca9c4562b48c2ceef166193c0ba16f98" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; atsci_equalizer_lms::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a3f8c96e777f330523325486b8d9f63d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_equalizer_lms::atsci_equalizer_lms</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_equalizer_lms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1ab960684994bb8124d0ba3b0f69daa05b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual atsci_equalizer_lms::~atsci_equalizer_lms</definition>
+        <argsstring>()</argsstring>
+        <name>~atsci_equalizer_lms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1ada8cd96d000ac03af7b53276651bfab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void atsci_equalizer_lms::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <reimplements refid="classatsci__equalizer_1ae1f4fea799066b5a030bf9cedd9f9141">reset</reimplements>
+        <briefdescription>
+<para>reset state (e.g., on channel change) </para>        </briefdescription>
+        <detaileddescription>
+<para>Note, subclasses must invoke the superclass&apos;s method too! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int atsci_equalizer_lms::ntaps</definition>
+        <argsstring>() const </argsstring>
+        <name>ntaps</name>
+        <reimplements refid="classatsci__equalizer_1a8db8cff0e3739aa59911eeb059913d9b">ntaps</reimplements>
+        <briefdescription>
+<para>how much history the input data stream requires. </para>        </briefdescription>
+        <detaileddescription>
+<para>This must return a value &gt;= 1. Think of this as the number of samples you need to look at to compute a single output sample. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a22680b8926f2ce6bd5c5fb38e25de25b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int atsci_equalizer_lms::npretaps</definition>
+        <argsstring>() const </argsstring>
+        <name>npretaps</name>
+        <reimplements refid="classatsci__equalizer_1a3d1ec7e9d8d647af683be66334658b9a">npretaps</reimplements>
+        <briefdescription>
+<para>how many taps are &quot;in the future&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para>This allows us to handle what the ATSC folks call &quot;pre-ghosts&quot;. What it really does is allow the caller to jack with the offset between the tags and the data so that everything magically works out.</para><para>npretaps () must return a value between 0 and <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1.</para><para>If npretaps () returns 0, this means that the equalizer will only handle multipath &quot;in the past.&quot; I suspect that a good value would be something like 15% - 20% of ntaps (). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classatsci__equalizer__lms_1af29b102348176dc728260eb52d4954d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void atsci_equalizer_lms::filter_normal</definition>
+        <argsstring>(const float *input_samples, float *output_samples, int nsamples)</argsstring>
+        <name>filter_normal</name>
+        <reimplements refid="classatsci__equalizer_1af41b4d5184df08f6df672752d1d3c9d3">filter_normal</reimplements>
+        <param>
+          <type>const float *</type>
+          <declname>input_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_samples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input range is known NOT TO CONTAIN data segment syncs or field syncs. This should be the fast path. In the non decicion directed case, this just runs the input through the filter without adapting it.</para><para><computeroutput>input_samples</computeroutput> has (nsamples + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1) valid entries. input_samples[0] .. input_samples[nsamples - 1 + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1] may be referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a4d8b1c86277efdb78890150b564b71ef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void atsci_equalizer_lms::filter_data_seg_sync</definition>
+        <argsstring>(const float *input_samples, float *output_samples, int nsamples, int offset)</argsstring>
+        <name>filter_data_seg_sync</name>
+        <reimplements refid="classatsci__equalizer_1a1826a36e71cd5b23b37212a382363a59">filter_data_seg_sync</reimplements>
+        <param>
+          <type>const float *</type>
+          <declname>input_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_samples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input range is known to consist of only a data segment sync or a portion of a data segment sync. <computeroutput>nsamples</computeroutput> will be in [1,4]. <computeroutput>offset</computeroutput> will be in [0,3]. <computeroutput>offset</computeroutput> is the offset of the input from the beginning of the data segment sync pattern.</para><para><computeroutput>input_samples</computeroutput> has (nsamples + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1) valid entries. input_samples[0] .. input_samples[nsamples - 1 + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1] may be referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a16f3f405c5eee8cd233d87e6ee67748b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void atsci_equalizer_lms::filter_field_sync</definition>
+        <argsstring>(const float *input_samples, float *output_samples, int nsamples, int offset, int which_field)</argsstring>
+        <name>filter_field_sync</name>
+        <reimplements refid="classatsci__equalizer_1a4731ead6a02b3ebba75f3e0b70eefe55">filter_field_sync</reimplements>
+        <param>
+          <type>const float *</type>
+          <declname>input_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_samples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>which_field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input range is known to consist of only a field sync segment or a portion of a field sync segment. <computeroutput>nsamples</computeroutput> will be in [1,832]. <computeroutput>offset</computeroutput> will be in [0,831]. <computeroutput>offset</computeroutput> is the offset of the input from the beginning of the data segment sync pattern. We consider the 4 symbols of the immediately preceding data segment sync to be the first symbols of the field sync segment. <computeroutput>which_field</computeroutput> is in [0,1] and specifies which field (duh).</para><para><computeroutput>input_samples</computeroutput> has (nsamples + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1) valid entries. input_samples[0] .. input_samples[nsamples - 1 + <ref refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" kindref="member">ntaps()</ref> - 1] may be referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsci__equalizer__lms_1acd9e712f6cd3e1170756eed4b242bfab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_equalizer_lms::filterN</definition>
+        <argsstring>(const float *input_samples, float *output_samples, int nsamples)</argsstring>
+        <name>filterN</name>
+        <param>
+          <type>const float *</type>
+          <declname>input_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_samples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a9ccc5df60747650149c446e78395fdba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_equalizer_lms::adaptN</definition>
+        <argsstring>(const float *input_samples, const float *training_pattern, float *output_samples, int nsamples)</argsstring>
+        <name>adaptN</name>
+        <param>
+          <type>const float *</type>
+          <declname>input_samples</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>training_pattern</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_samples</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a0dbe462f3bf3895f288f5761a52f4446" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float atsci_equalizer_lms::filter1</definition>
+        <argsstring>(const float input[])</argsstring>
+        <name>filter1</name>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__equalizer__lms_1a4ceadb2fa2abd7cae00975334b8f6ac2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float atsci_equalizer_lms::adapt1</definition>
+        <argsstring>(const float input[], float ideal_output)</argsstring>
+        <name>adapt1</name>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ideal_output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="328">
+        <label>atsci_equalizer_lms</label>
+        <link refid="classatsci__equalizer__lms"/>
+        <childnode refid="329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>atsci_equalizer</label>
+        <link refid="classatsci__equalizer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="330">
+        <label>atsci_equalizer_lms</label>
+        <link refid="classatsci__equalizer__lms"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>atsci_equalizer</label>
+        <link refid="classatsci__equalizer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_equalizer_lms.h" bodystart="31" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classatsci__equalizer__lms_1a4ceadb2fa2abd7cae00975334b8f6ac2" prot="private" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>adapt1</name></member>
+      <member refid="classatsci__equalizer__lms_1a9ccc5df60747650149c446e78395fdba" prot="private" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>adaptN</name></member>
+      <member refid="classatsci__equalizer_1ac0a5af23fc9f5fb75f75da695b085003" prot="public" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>atsci_equalizer</name></member>
+      <member refid="classatsci__equalizer__lms_1a3f8c96e777f330523325486b8d9f63d5" prot="public" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>atsci_equalizer_lms</name></member>
+      <member refid="classatsci__equalizer__lms_1aca9c4562b48c2ceef166193c0ba16f98" prot="private" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>d_taps</name></member>
+      <member refid="classatsci__equalizer_1a652624aa36e1a9973e63fa22e05fceb4" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>filter</name></member>
+      <member refid="classatsci__equalizer__lms_1a0dbe462f3bf3895f288f5761a52f4446" prot="private" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>filter1</name></member>
+      <member refid="classatsci__equalizer__lms_1a4d8b1c86277efdb78890150b564b71ef" prot="protected" virt="virtual"><scope>atsci_equalizer_lms</scope><name>filter_data_seg_sync</name></member>
+      <member refid="classatsci__equalizer__lms_1a16f3f405c5eee8cd233d87e6ee67748b" prot="protected" virt="virtual"><scope>atsci_equalizer_lms</scope><name>filter_field_sync</name></member>
+      <member refid="classatsci__equalizer__lms_1af29b102348176dc728260eb52d4954d4" prot="protected" virt="virtual"><scope>atsci_equalizer_lms</scope><name>filter_normal</name></member>
+      <member refid="classatsci__equalizer__lms_1acd9e712f6cd3e1170756eed4b242bfab" prot="private" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>filterN</name></member>
+      <member refid="classatsci__equalizer__lms_1a22680b8926f2ce6bd5c5fb38e25de25b" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>npretaps</name></member>
+      <member refid="classatsci__equalizer__lms_1a175be27cd2a7066c00ef70e73a4d8a21" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>ntaps</name></member>
+      <member refid="classatsci__equalizer__lms_1ada8cd96d000ac03af7b53276651bfab7" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>reset</name></member>
+      <member refid="classatsci__equalizer__lms_1a38d81eba656d2fb0677ca05a148e3c80" prot="protected" virt="non-virtual"><scope>atsci_equalizer_lms</scope><name>trainingfile</name></member>
+      <member refid="classatsci__equalizer_1a96543909a04bd0861632aa2b21388507" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>~atsci_equalizer</name></member>
+      <member refid="classatsci__equalizer__lms_1ab960684994bb8124d0ba3b0f69daa05b" prot="public" virt="virtual"><scope>atsci_equalizer_lms</scope><name>~atsci_equalizer_lms</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

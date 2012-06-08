@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__glfsr__source__f" kind="class" prot="public">
+    <compoundname>gr_glfsr_source_f</compoundname>
+    <includes refid="gr__glfsr__source__f_8h" local="no">gr_glfsr_source_f.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__glfsr__source__f_1ae4d6a81ff2cdc9028983821fdbebb41a" prot="private" static="no" mutable="no">
+        <type><ref refid="classgri__glfsr" kindref="compound">gri_glfsr</ref> *</type>
+        <definition>gri_glfsr* gr_glfsr_source_f::d_glfsr</definition>
+        <argsstring></argsstring>
+        <name>d_glfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__glfsr__source__f_1a1740ba414b10b0d8b0a2a03627733e5c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_glfsr_source_f::d_repeat</definition>
+        <argsstring></argsstring>
+        <name>d_repeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__glfsr__source__f_1a008f1d721e460c93e345317fb84a8e31" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_glfsr_source_f::d_index</definition>
+        <argsstring></argsstring>
+        <name>d_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__glfsr__source__f_1a3ab3417b7b3e75c5282fd19224493e94" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_glfsr_source_f::d_length</definition>
+        <argsstring></argsstring>
+        <name>d_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__glfsr__source__f_1ad5f39764a8538c552c2116d7fe428324" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__glfsr__source__f_8h_1a6505b04fc9198cd3cf52825eefbcca0a" kindref="member">gr_glfsr_source_f_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_glfsr_source_f_sptr gr_make_glfsr_source_f</definition>
+        <argsstring>(int degree, bool repeat, int mask, int seed)</argsstring>
+        <name>gr_make_glfsr_source_f</name>
+        <param>
+          <type>int</type>
+          <declname>degree</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__glfsr__source__f_1a6a736417dcca9a6f8ef04340d73ff092" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_glfsr_source_f::gr_glfsr_source_f</definition>
+        <argsstring>(int degree, bool repeat, int mask, int seed)</argsstring>
+        <name>gr_glfsr_source_f</name>
+        <param>
+          <type>int</type>
+          <declname>degree</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__glfsr__source__f_1a6b06dfc0fd71c46c64763fd0b140e094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_glfsr_source_f::~gr_glfsr_source_f</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_glfsr_source_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__glfsr__source__f_1a7038108e788466dbb6f1131ec784527a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_glfsr_source_f::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__glfsr__source__f_1a4a013d13a434a2d11d640178ce85d566" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_glfsr_source_f::period</definition>
+        <argsstring>() const </argsstring>
+        <name>period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__glfsr__source__f_1a9db52f4cf7e50766eddc10c4f59a87c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_glfsr_source_f::mask</definition>
+        <argsstring>() const </argsstring>
+        <name>mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Galois LFSR pseudo-random source generating float outputs -1.0 - 1.0. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_glfsr_source_f.h" bodystart="40" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classgr__glfsr__source__f_1ae4d6a81ff2cdc9028983821fdbebb41a" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>d_glfsr</name></member>
+      <member refid="classgr__glfsr__source__f_1a008f1d721e460c93e345317fb84a8e31" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>d_index</name></member>
+      <member refid="classgr__glfsr__source__f_1a3ab3417b7b3e75c5282fd19224493e94" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>d_length</name></member>
+      <member refid="classgr__glfsr__source__f_1a1740ba414b10b0d8b0a2a03627733e5c" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>d_repeat</name></member>
+      <member refid="classgr__glfsr__source__f_1a6a736417dcca9a6f8ef04340d73ff092" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>gr_glfsr_source_f</name></member>
+      <member refid="classgr__glfsr__source__f_1ad5f39764a8538c552c2116d7fe428324" prot="private" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>gr_make_glfsr_source_f</name></member>
+      <member refid="classgr__glfsr__source__f_1a9db52f4cf7e50766eddc10c4f59a87c0" prot="public" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>mask</name></member>
+      <member refid="classgr__glfsr__source__f_1a4a013d13a434a2d11d640178ce85d566" prot="public" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>period</name></member>
+      <member refid="classgr__glfsr__source__f_1a7038108e788466dbb6f1131ec784527a" prot="public" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>work</name></member>
+      <member refid="classgr__glfsr__source__f_1a6b06dfc0fd71c46c64763fd0b140e094" prot="public" virt="non-virtual"><scope>gr_glfsr_source_f</scope><name>~gr_glfsr_source_f</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

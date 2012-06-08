@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__additive__scrambler__bb" kind="class" prot="public">
+    <compoundname>digital_additive_scrambler_bb</compoundname>
+    <includes refid="digital__additive__scrambler__bb_8h" local="no">digital_additive_scrambler_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__additive__scrambler__bb_1ad045062597e676e1d74202e58321b6e0" prot="private" static="no" mutable="no">
+        <type>gri_lfsr</type>
+        <definition>gri_lfsr digital_additive_scrambler_bb::d_lfsr</definition>
+        <argsstring></argsstring>
+        <name>d_lfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__additive__scrambler__bb_1a58e9618f19f6c86aa307c906d9418ba6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_additive_scrambler_bb::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__additive__scrambler__bb_1acf8d638587919169eaf17986f7be1f9c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_additive_scrambler_bb::d_bits</definition>
+        <argsstring></argsstring>
+        <name>d_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__additive__scrambler__bb_1aeb888c9d59c6b15ae486a02606d3af39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="digital__additive__scrambler__bb_8h_1a25327e57888ef210fb9372a9dc3c34f4" kindref="member">digital_additive_scrambler_bb_sptr</ref></type>
+        <definition>DIGITAL_API digital_additive_scrambler_bb_sptr digital_make_additive_scrambler_bb</definition>
+        <argsstring>(int mask, int seed, int len, int count)</argsstring>
+        <name>digital_make_additive_scrambler_bb</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__additive__scrambler__bb_1a360696c85796c5d6561c9cdb0604fa92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_additive_scrambler_bb::digital_additive_scrambler_bb</definition>
+        <argsstring>(int mask, int seed, int len, int count)</argsstring>
+        <name>digital_additive_scrambler_bb</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__additive__scrambler__bb_1aaa093767a5709fcf5855a45685214ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_additive_scrambler_bb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Scramble an input stream using an LFSR. This block works on the LSB only of the input data stream, i.e., on an &quot;unpacked binary&quot; stream, and produces the same format on its output.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polynomial mask for LFSR </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial shift register contents </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shift register length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bits after which shift register is reset, 0=never</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The scrambler works by XORing the incoming bit stream by the output of the LFSR. Optionally, after &apos;count&apos; bits have been processed, the shift register is reset to the seed value. This allows processing fixed length vectors of samples. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_additive_scrambler_bb.h" bodystart="54" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classdigital__additive__scrambler__bb_1acf8d638587919169eaf17986f7be1f9c" prot="private" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>d_bits</name></member>
+      <member refid="classdigital__additive__scrambler__bb_1a58e9618f19f6c86aa307c906d9418ba6" prot="private" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>d_count</name></member>
+      <member refid="classdigital__additive__scrambler__bb_1ad045062597e676e1d74202e58321b6e0" prot="private" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>d_lfsr</name></member>
+      <member refid="classdigital__additive__scrambler__bb_1a360696c85796c5d6561c9cdb0604fa92" prot="private" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>digital_additive_scrambler_bb</name></member>
+      <member refid="classdigital__additive__scrambler__bb_1aeb888c9d59c6b15ae486a02606d3af39" prot="private" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>digital_make_additive_scrambler_bb</name></member>
+      <member refid="classdigital__additive__scrambler__bb_1aaa093767a5709fcf5855a45685214ee8" prot="public" virt="non-virtual"><scope>digital_additive_scrambler_bb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

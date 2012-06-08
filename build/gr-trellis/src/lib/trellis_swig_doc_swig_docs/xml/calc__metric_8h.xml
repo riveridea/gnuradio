@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="calc__metric_8h" kind="file">
+    <compoundname>calc_metric.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">gr_complex.h</includes>
+    <includes local="no">digital_metric_type.h</includes>
+    <includedby refid="trellis__siso__combined__f_8h" local="yes">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_combined_f.h</includedby>
+    <includedby refid="trellis__metrics__c_8h" local="yes">trellis_metrics_c.h</includedby>
+    <includedby refid="trellis__metrics__f_8h" local="yes">trellis_metrics_f.h</includedby>
+    <includedby refid="trellis__metrics__i_8h" local="yes">trellis_metrics_i.h</includedby>
+    <includedby refid="trellis__metrics__s_8h" local="yes">trellis_metrics_s.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__cb_8h" local="yes">trellis_pccc_decoder_combined_cb.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__ci_8h" local="yes">trellis_pccc_decoder_combined_ci.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__cs_8h" local="yes">trellis_pccc_decoder_combined_cs.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fb_8h" local="yes">trellis_pccc_decoder_combined_fb.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fi_8h" local="yes">trellis_pccc_decoder_combined_fi.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fs_8h" local="yes">trellis_pccc_decoder_combined_fs.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__cb_8h" local="yes">trellis_sccc_decoder_combined_cb.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__ci_8h" local="yes">trellis_sccc_decoder_combined_ci.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__cs_8h" local="yes">trellis_sccc_decoder_combined_cs.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fb_8h" local="yes">trellis_sccc_decoder_combined_fb.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fi_8h" local="yes">trellis_sccc_decoder_combined_fi.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fs_8h" local="yes">trellis_sccc_decoder_combined_fs.h</includedby>
+    <includedby refid="trellis__viterbi__combined__cb_8h" local="yes">trellis_viterbi_combined_cb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ci_8h" local="yes">trellis_viterbi_combined_ci.h</includedby>
+    <includedby refid="trellis__viterbi__combined__cs_8h" local="yes">trellis_viterbi_combined_cs.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fb_8h" local="yes">trellis_viterbi_combined_fb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fi_8h" local="yes">trellis_viterbi_combined_fi.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fs_8h" local="yes">trellis_viterbi_combined_fs.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ib_8h" local="yes">trellis_viterbi_combined_ib.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ii_8h" local="yes">trellis_viterbi_combined_ii.h</includedby>
+    <includedby refid="trellis__viterbi__combined__is_8h" local="yes">trellis_viterbi_combined_is.h</includedby>
+    <includedby refid="trellis__viterbi__combined__sb_8h" local="yes">trellis_viterbi_combined_sb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__si_8h" local="yes">trellis_viterbi_combined_si.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ss_8h" local="yes">trellis_viterbi_combined_ss.h</includedby>
+    <incdepgraph>
+      <node id="617">
+        <label>gr_complex.h</label>
+      </node>
+      <node id="616">
+        <label>vector</label>
+      </node>
+      <node id="618">
+        <label>digital_metric_type.h</label>
+      </node>
+      <node id="615">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/calc_metric.h</label>
+        <link refid="calc_metric.h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="624">
+        <label>trellis_metrics_s.h</label>
+        <link refid="trellis__metrics__s_8h"/>
+      </node>
+      <node id="634">
+        <label>trellis_sccc_decoder_combined_fb.h</label>
+        <link refid="trellis__sccc__decoder__combined__fb_8h"/>
+      </node>
+      <node id="637">
+        <label>trellis_viterbi_combined_cb.h</label>
+        <link refid="trellis__viterbi__combined__cb_8h"/>
+      </node>
+      <node id="641">
+        <label>trellis_viterbi_combined_fi.h</label>
+        <link refid="trellis__viterbi__combined__fi_8h"/>
+      </node>
+      <node id="646">
+        <label>trellis_viterbi_combined_sb.h</label>
+        <link refid="trellis__viterbi__combined__sb_8h"/>
+      </node>
+      <node id="620">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_combined_f.h</label>
+        <link refid="trellis__siso__combined__f_8h"/>
+      </node>
+      <node id="628">
+        <label>trellis_pccc_decoder_combined_fb.h</label>
+        <link refid="trellis__pccc__decoder__combined__fb_8h"/>
+      </node>
+      <node id="633">
+        <label>trellis_sccc_decoder_combined_cs.h</label>
+        <link refid="trellis__sccc__decoder__combined__cs_8h"/>
+      </node>
+      <node id="644">
+        <label>trellis_viterbi_combined_ii.h</label>
+        <link refid="trellis__viterbi__combined__ii_8h"/>
+      </node>
+      <node id="631">
+        <label>trellis_sccc_decoder_combined_cb.h</label>
+        <link refid="trellis__sccc__decoder__combined__cb_8h"/>
+      </node>
+      <node id="627">
+        <label>trellis_pccc_decoder_combined_cs.h</label>
+        <link refid="trellis__pccc__decoder__combined__cs_8h"/>
+      </node>
+      <node id="635">
+        <label>trellis_sccc_decoder_combined_fi.h</label>
+        <link refid="trellis__sccc__decoder__combined__fi_8h"/>
+      </node>
+      <node id="625">
+        <label>trellis_pccc_decoder_combined_cb.h</label>
+        <link refid="trellis__pccc__decoder__combined__cb_8h"/>
+      </node>
+      <node id="640">
+        <label>trellis_viterbi_combined_fb.h</label>
+        <link refid="trellis__viterbi__combined__fb_8h"/>
+      </node>
+      <node id="629">
+        <label>trellis_pccc_decoder_combined_fi.h</label>
+        <link refid="trellis__pccc__decoder__combined__fi_8h"/>
+      </node>
+      <node id="623">
+        <label>trellis_metrics_i.h</label>
+        <link refid="trellis__metrics__i_8h"/>
+      </node>
+      <node id="643">
+        <label>trellis_viterbi_combined_ib.h</label>
+        <link refid="trellis__viterbi__combined__ib_8h"/>
+      </node>
+      <node id="632">
+        <label>trellis_sccc_decoder_combined_ci.h</label>
+        <link refid="trellis__sccc__decoder__combined__ci_8h"/>
+      </node>
+      <node id="639">
+        <label>trellis_viterbi_combined_cs.h</label>
+        <link refid="trellis__viterbi__combined__cs_8h"/>
+      </node>
+      <node id="648">
+        <label>trellis_viterbi_combined_ss.h</label>
+        <link refid="trellis__viterbi__combined__ss_8h"/>
+      </node>
+      <node id="642">
+        <label>trellis_viterbi_combined_fs.h</label>
+        <link refid="trellis__viterbi__combined__fs_8h"/>
+      </node>
+      <node id="626">
+        <label>trellis_pccc_decoder_combined_ci.h</label>
+        <link refid="trellis__pccc__decoder__combined__ci_8h"/>
+      </node>
+      <node id="622">
+        <label>trellis_metrics_f.h</label>
+        <link refid="trellis__metrics__f_8h"/>
+      </node>
+      <node id="636">
+        <label>trellis_sccc_decoder_combined_fs.h</label>
+        <link refid="trellis__sccc__decoder__combined__fs_8h"/>
+      </node>
+      <node id="638">
+        <label>trellis_viterbi_combined_ci.h</label>
+        <link refid="trellis__viterbi__combined__ci_8h"/>
+      </node>
+      <node id="630">
+        <label>trellis_pccc_decoder_combined_fs.h</label>
+        <link refid="trellis__pccc__decoder__combined__fs_8h"/>
+      </node>
+      <node id="647">
+        <label>trellis_viterbi_combined_si.h</label>
+        <link refid="trellis__viterbi__combined__si_8h"/>
+      </node>
+      <node id="645">
+        <label>trellis_viterbi_combined_is.h</label>
+        <link refid="trellis__viterbi__combined__is_8h"/>
+      </node>
+      <node id="621">
+        <label>trellis_metrics_c.h</label>
+        <link refid="trellis__metrics__c_8h"/>
+      </node>
+      <node id="619">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/calc_metric.h</label>
+        <link refid="calc_metric.h"/>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="calc__metric_8h_1ad394c7f147175f9d64a026110fca8410" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void calc_metric</definition>
+        <argsstring>(int O, int D, const std::vector&lt; T &gt; &amp;TABLE, const T *in, float *metric, trellis_metric_type_t type)</argsstring>
+        <name>calc_metric</name>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>metric</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/calc_metric.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="calc__metric_8h_1a944b71c8605ff5b47ef3f856d0cc7ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calc_metric</definition>
+        <argsstring>(int O, int D, const std::vector&lt; gr_complex &gt; &amp;TABLE, const gr_complex *in, float *metric, trellis_metric_type_t type)</argsstring>
+        <name>calc_metric</name>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>metric</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/calc_metric.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_CALC_METRIC_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_CALC_METRIC_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;digital_metric_type.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calc__metric_8h_1ad394c7f147175f9d64a026110fca8410" kindref="member">calc_metric</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>O,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;<sp/>&amp;TABLE,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>*in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*metric,<sp/>trellis_metric_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">void<sp/>calc_metric(int<sp/>O,<sp/>int<sp/>D,<sp/>const<sp/>std::vector&lt;short&gt;<sp/>&amp;TABLE,<sp/>const<sp/>short<sp/>*in,<sp/>float<sp/>*metric,<sp/>trellis_metric_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">void<sp/>calc_metric(int<sp/>O,<sp/>int<sp/>D,<sp/>const<sp/>std::vector&lt;int&gt;<sp/>&amp;TABLE,<sp/>const<sp/>int<sp/>*in,<sp/>float<sp/>*metric,<sp/>trellis_metric_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">void<sp/>calc_metric(int<sp/>O,<sp/>int<sp/>D,<sp/>const<sp/>std::vector&lt;float&gt;<sp/>&amp;TABLE,<sp/>const<sp/>float<sp/>*in,<sp/>float<sp/>*metric,<sp/>trellis_metric_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="calc__metric_8h_1ad394c7f147175f9d64a026110fca8410" kindref="member">calc_metric</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>O,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;gr_complex&gt;<sp/>&amp;TABLE,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gr_complex<sp/>*in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*metric,<sp/>trellis_metric_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/calc_metric.h"/>
+  </compounddef>
+</doxygen>

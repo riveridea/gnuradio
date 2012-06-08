@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="noaa__api_8h" kind="file">
+    <compoundname>noaa_api.h</compoundname>
+    <includes refid="attributes_8h" local="no">gruel/attributes.h</includes>
+    <includedby refid="noaa__hrpt__decoder_8h" local="no">noaa_hrpt_decoder.h</includedby>
+    <includedby refid="noaa__hrpt__deframer_8h" local="no">noaa_hrpt_deframer.h</includedby>
+    <includedby refid="noaa__hrpt__pll__cf_8h" local="no">noaa_hrpt_pll_cf.h</includedby>
+    <incdepgraph>
+      <node id="14537">
+        <label>noaa_api.h</label>
+        <link refid="noaa_api.h"/>
+        <childnode refid="14538" relation="include">
+        </childnode>
+      </node>
+      <node id="14538">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14541">
+        <label>noaa_hrpt_deframer.h</label>
+        <link refid="noaa__hrpt__deframer_8h"/>
+      </node>
+      <node id="14540">
+        <label>noaa_hrpt_decoder.h</label>
+        <link refid="noaa__hrpt__decoder_8h"/>
+      </node>
+      <node id="14539">
+        <label>noaa_api.h</label>
+        <link refid="noaa_api.h"/>
+        <childnode refid="14540" relation="include">
+        </childnode>
+        <childnode refid="14541" relation="include">
+        </childnode>
+        <childnode refid="14542" relation="include">
+        </childnode>
+      </node>
+      <node id="14542">
+        <label>noaa_hrpt_pll_cf.h</label>
+        <link refid="noaa__hrpt__pll__cf_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="noaa__api_8h_1a799d47153d76874e09e71b816d4f4a87" prot="public" static="no">
+        <name>NOAA_API</name>
+        <initializer><ref refid="attributes_8h_1a17b9cb3c185c92af4799ec9b0a38f3c1" kindref="member">__GR_ATTR_IMPORT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-noaa/lib/noaa_api.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-noaa/lib/noaa_api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-noaa/lib/noaa_api.h"/>
+  </compounddef>
+</doxygen>

@@ -40,13 +40,12 @@ class top_block(grc_wxgui.top_block_gui):
 		self.uhd_usrp_source_0.set_samp_rate(samp_rate)
 		self.uhd_usrp_source_0.set_center_freq(908000000, 0)
 		self.uhd_usrp_source_0.set_gain(0, 0)
-		self.gr_file_sink_0 = gr.file_sink(gr.sizeof_gr_complex*1, "/home/alexzh/gnuradio/test/stream")
-		self.gr_file_sink_0.set_unbuffered(False)
 
 		##################################################
 		# Connections
 		##################################################
-		self.connect((self.uhd_usrp_source_0, 0), (self.gr_file_sink_0, 0))
+                self.connect((self.uhd_usrp_source_0, 0), gr.file_sink(gr.sizeof_gr_complex*1,
+                                                       "stream.dat"))
 
 	def get_samp_rate(self):
 		return self.samp_rate
@@ -63,15 +62,13 @@ class stream_control(object):
 
     def stream_loop(self):
 	print "enter stream_loop"
-        if tb == none:
-            print "no top block specified and exit"
-            sys.exit(1)
 
-        for i in range(itera):
+        for i in range(self._itera):
             t = self._tb.uhd_usrp_source_0.get_time_now(0).get_real_secs() + 4
             print t
             self._tb.uhd_usrp_source_0.set_start_time(uhd.time_spec_t(t))
-            self._tb.uhd_usrp_source_0.finite_acquisition(4096)
+            samps = self._tb.uhd_usrp_source_0.finite_acquisition(8)
+            print samps
         
 
 def main():

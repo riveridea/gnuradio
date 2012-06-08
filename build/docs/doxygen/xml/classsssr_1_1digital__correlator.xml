@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classsssr_1_1digital__correlator" kind="class" prot="public">
+    <compoundname>sssr::digital_correlator</compoundname>
+    <includes refid="atsci__sssr_8h" local="no">atsci_sssr.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsssr_1_1digital__correlator_1ade3077bb6d7da265f121b98f454d1373" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sssr::digital_correlator::d_sr</definition>
+        <argsstring></argsstring>
+        <name>d_sr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsssr_1_1digital__correlator_1a6bd1f578cbf103f22434eaebcc965064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sssr::digital_correlator::digital_correlator</definition>
+        <argsstring>()</argsstring>
+        <name>digital_correlator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classsssr_1_1digital__correlator_1a1967ef4b1dc93713e7fa99bd3abc5a0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sssr::digital_correlator::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>called on channel change </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classsssr_1_1digital__correlator_1a67daf77c072d07b0db0d108414bc3875" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sssr::digital_correlator::update</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>update</name>
+        <param>
+          <type>int</type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+<para>clock bit in and return true if we&apos;ve seen 1001 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="62" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>digital correlator for 1001 and 0110 patterns </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_sssr.h" bodystart="47" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classsssr_1_1digital__correlator_1ade3077bb6d7da265f121b98f454d1373" prot="private" virt="non-virtual"><scope>sssr::digital_correlator</scope><name>d_sr</name></member>
+      <member refid="classsssr_1_1digital__correlator_1a6bd1f578cbf103f22434eaebcc965064" prot="public" virt="non-virtual"><scope>sssr::digital_correlator</scope><name>digital_correlator</name></member>
+      <member refid="classsssr_1_1digital__correlator_1a1967ef4b1dc93713e7fa99bd3abc5a0a" prot="public" virt="non-virtual"><scope>sssr::digital_correlator</scope><name>reset</name></member>
+      <member refid="classsssr_1_1digital__correlator_1a67daf77c072d07b0db0d108414bc3875" prot="public" virt="non-virtual"><scope>sssr::digital_correlator</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

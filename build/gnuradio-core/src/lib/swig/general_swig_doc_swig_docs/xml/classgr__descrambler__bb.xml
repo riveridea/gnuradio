@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__descrambler__bb" kind="class" prot="public">
+    <compoundname>gr_descrambler_bb</compoundname>
+    <includes refid="gr__descrambler__bb_8h" local="no">gr_descrambler_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__descrambler__bb_1ad2d9c5daaff6e4a4c0165af7f9296f22" prot="private" static="no" mutable="no">
+        <type><ref refid="classgri__lfsr" kindref="compound">gri_lfsr</ref></type>
+        <definition>gri_lfsr gr_descrambler_bb::d_lfsr</definition>
+        <argsstring></argsstring>
+        <name>d_lfsr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__descrambler__bb_1a5c72a2f04921fd2fa980f19412f0539d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__descrambler__bb_8h_1a89e575188ce2c8811f66eedb5187d3a4" kindref="member">gr_descrambler_bb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_descrambler_bb_sptr gr_make_descrambler_bb</definition>
+        <argsstring>(int mask, int seed, int len)</argsstring>
+        <name>gr_make_descrambler_bb</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__descrambler__bb_1af61353224c7ef2adf4ffc1069978377d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_descrambler_bb::gr_descrambler_bb</definition>
+        <argsstring>(int mask, int seed, int len)</argsstring>
+        <name>gr_descrambler_bb</name>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__descrambler__bb_1ac64b7d32099c1616decec364ba6dc15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_descrambler_bb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Descramble an input stream using an LFSR. This block works on the LSB only of the input data stream, i.e., on an &quot;unpacked binary&quot; stream, and produces the same format on its output.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polynomial mask for LFSR </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial shift register contents </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shift register length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_descrambler_bb.h" bodystart="46" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgr__descrambler__bb_1ad2d9c5daaff6e4a4c0165af7f9296f22" prot="private" virt="non-virtual"><scope>gr_descrambler_bb</scope><name>d_lfsr</name></member>
+      <member refid="classgr__descrambler__bb_1af61353224c7ef2adf4ffc1069978377d" prot="private" virt="non-virtual"><scope>gr_descrambler_bb</scope><name>gr_descrambler_bb</name></member>
+      <member refid="classgr__descrambler__bb_1a5c72a2f04921fd2fa980f19412f0539d" prot="private" virt="non-virtual"><scope>gr_descrambler_bb</scope><name>gr_make_descrambler_bb</name></member>
+      <member refid="classgr__descrambler__bb_1ac64b7d32099c1616decec364ba6dc15d" prot="public" virt="non-virtual"><scope>gr_descrambler_bb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

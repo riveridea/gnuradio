@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classstd_1_1exception" kind="class" prot="public">
+    <compoundname>std::exception</compoundname>
+    <derivedcompoundref refid="classstd_1_1bad__alloc" prot="public" virt="non-virtual">std::bad_alloc</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1bad__cast" prot="public" virt="non-virtual">std::bad_cast</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1bad__exception" prot="public" virt="non-virtual">std::bad_exception</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1bad__typeid" prot="public" virt="non-virtual">std::bad_typeid</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1ios__base_1_1failure" prot="public" virt="non-virtual">std::ios_base::failure</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1logic__error" prot="public" virt="non-virtual">std::logic_error</derivedcompoundref>
+    <derivedcompoundref refid="classstd_1_1runtime__error" prot="public" virt="non-virtual">std::runtime_error</derivedcompoundref>
+    <briefdescription>
+<para>STL class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="284">
+        <label>std::logic_error</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>std::bad_alloc</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>std::invalid_argument</label>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>std::bad_typeid</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>std::out_of_range</label>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>std::domain_error</label>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>std::runtime_error</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>pmt::pmt_exception</label>
+        <link refid="classpmt_1_1pmt__exception"/>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="286">
+        <label>pmt::pmt_notimplemented</label>
+        <link refid="classpmt_1_1pmt__notimplemented"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>pmt::pmt_out_of_range</label>
+        <link refid="classpmt_1_1pmt__out__of__range"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>std::ios_base::failure</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>std::exception</label>
+      </node>
+      <node id="291">
+        <label>std::length_error</label>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>std::overflow_error</label>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>std::bad_exception</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>std::bad_cast</label>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>pmt::pmt_wrong_type</label>
+        <link refid="classpmt_1_1pmt__wrong__type"/>
+        <childnode refid="285" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>std::underflow_error</label>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>std::range_error</label>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="[STL]" line="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

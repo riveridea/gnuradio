@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fxpt" kind="class" prot="public">
+    <compoundname>gr_fxpt</compoundname>
+    <includes refid="gr__fxpt_8h" local="no">gr_fxpt.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgr__fxpt_1a6ff6ee559d1a47c401d629c05ad3b4c5" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_fxpt::WORDBITS</definition>
+        <argsstring></argsstring>
+        <name>WORDBITS</name>
+        <initializer> 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fxpt_1a5aaff247cb9df5d8a0b4bb98ded657e7" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_fxpt::NBITS</definition>
+        <argsstring></argsstring>
+        <name>NBITS</name>
+        <initializer> 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fxpt_1a364b1bb8b6e44187336b05b1a88fc5a4" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float gr_fxpt::s_sine_table[1&lt;&lt; NBITS][2]</definition>
+        <argsstring>[1&lt;&lt; NBITS][2]</argsstring>
+        <name>s_sine_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fxpt_1aeaf20869b2f56ca17b380666148b9df9" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float gr_fxpt::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fxpt_1a9000ad855326ef9783e9a21a73a99e04" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float gr_fxpt::TWO_TO_THE_31</definition>
+        <argsstring></argsstring>
+        <name>TWO_TO_THE_31</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr__fxpt_1a8cf5f6942dd8db09072fb711d09b4820" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>gr_int32</type>
+        <definition>static gr_int32 gr_fxpt::float_to_fixed</definition>
+        <argsstring>(float x)</argsstring>
+        <name>float_to_fixed</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fxpt_1a4b89af0770b5c4751f52224976514c20" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float gr_fxpt::fixed_to_float</definition>
+        <argsstring>(gr_int32 x)</argsstring>
+        <name>fixed_to_float</name>
+        <param>
+          <type>gr_int32</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fxpt_1a26312e3f31f6d7a6ae4810c05f30979a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float gr_fxpt::sin</definition>
+        <argsstring>(gr_int32 x)</argsstring>
+        <name>sin</name>
+        <param>
+          <type>gr_int32</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Given a fixed point angle x, return float sine (x) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fxpt_1a61861c9e4535e05a567a96a2551430a9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float gr_fxpt::cos</definition>
+        <argsstring>(gr_int32 x)</argsstring>
+        <name>cos</name>
+        <param>
+          <type>gr_int32</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fxpt_1aee55c2ee476ef0c90aadd6084d01eefa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gr_fxpt::sincos</definition>
+        <argsstring>(gr_int32 x, float *s, float *c)</argsstring>
+        <name>sincos</name>
+        <param>
+          <type>gr_int32</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="89" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>fixed point sine and cosine and friends.</para><para>fixed pt radians </para>    </briefdescription>
+    <detaileddescription>
+<para>--------- -------- -2**31 -pi 0 0 2**31-1 pi - epsilon </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt.h" bodystart="39" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classgr__fxpt_1a61861c9e4535e05a567a96a2551430a9" prot="public" virt="non-virtual"><scope>gr_fxpt</scope><name>cos</name></member>
+      <member refid="classgr__fxpt_1a4b89af0770b5c4751f52224976514c20" prot="public" virt="non-virtual"><scope>gr_fxpt</scope><name>fixed_to_float</name></member>
+      <member refid="classgr__fxpt_1a8cf5f6942dd8db09072fb711d09b4820" prot="public" virt="non-virtual"><scope>gr_fxpt</scope><name>float_to_fixed</name></member>
+      <member refid="classgr__fxpt_1a5aaff247cb9df5d8a0b4bb98ded657e7" prot="private" virt="non-virtual"><scope>gr_fxpt</scope><name>NBITS</name></member>
+      <member refid="classgr__fxpt_1aeaf20869b2f56ca17b380666148b9df9" prot="private" virt="non-virtual"><scope>gr_fxpt</scope><name>PI</name></member>
+      <member refid="classgr__fxpt_1a364b1bb8b6e44187336b05b1a88fc5a4" prot="private" virt="non-virtual"><scope>gr_fxpt</scope><name>s_sine_table</name></member>
+      <member refid="classgr__fxpt_1a26312e3f31f6d7a6ae4810c05f30979a" prot="public" virt="non-virtual"><scope>gr_fxpt</scope><name>sin</name></member>
+      <member refid="classgr__fxpt_1aee55c2ee476ef0c90aadd6084d01eefa" prot="public" virt="non-virtual"><scope>gr_fxpt</scope><name>sincos</name></member>
+      <member refid="classgr__fxpt_1a9000ad855326ef9783e9a21a73a99e04" prot="private" virt="non-virtual"><scope>gr_fxpt</scope><name>TWO_TO_THE_31</name></member>
+      <member refid="classgr__fxpt_1a6ff6ee559d1a47c401d629c05ad3b4c5" prot="private" virt="non-virtual"><scope>gr_fxpt</scope><name>WORDBITS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

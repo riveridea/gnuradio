@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classplinfo" kind="class" prot="public">
+    <compoundname>plinfo</compoundname>
+    <includes refid="atsc__types_8h" local="no">atsc_types.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" prot="protected" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short plinfo::_flags</definition>
+        <argsstring></argsstring>
+        <name>_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="114" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" compoundref="atsc__types_8h" startline="42" endline="42">field_sync1_p</referencedby>
+        <referencedby refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" compoundref="atsc__types_8h" startline="43" endline="43">field_sync2_p</referencedby>
+        <referencedby refid="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" compoundref="atsc__types_8h" startline="51" endline="51">first_regular_seg_p</referencedby>
+        <referencedby refid="classplinfo_1a02b25069563db6d9fabc3fcfeb1f8cfd" compoundref="atsc__types_8h" startline="56" endline="56">flags</referencedby>
+        <referencedby refid="classplinfo_1af2a97fde4b955f80d649704d7bc31050" compoundref="atsc__types_8h" startline="48" endline="48">in_field1_p</referencedby>
+        <referencedby refid="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" compoundref="atsc__types_8h" startline="49" endline="49">in_field2_p</referencedby>
+        <referencedby refid="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" compoundref="atsc__types_8h" startline="97" endline="99">operator!=</referencedby>
+        <referencedby refid="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" compoundref="atsc__types_8h" startline="93" endline="95">operator==</referencedby>
+        <referencedby refid="classplinfo_1af4a0c397d755e80e394305393e71164c" compoundref="atsc__types_8h" startline="46" endline="46">regular_seg_p</referencedby>
+        <referencedby refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" compoundref="atsc__types_8h" startline="60" endline="64">set_field_sync1</referencedby>
+        <referencedby refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" compoundref="atsc__types_8h" startline="66" endline="70">set_field_sync2</referencedby>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+        <referencedby refid="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" compoundref="atsc__types_8h" startline="85" endline="90">set_transport_error</referencedby>
+        <referencedby refid="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" compoundref="atsc__types_8h" startline="53" endline="53">transport_error_p</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" prot="protected" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short plinfo::_segno</definition>
+        <argsstring></argsstring>
+        <name>_segno</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="115" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" compoundref="atsc__types_8h" startline="97" endline="99">operator!=</referencedby>
+        <referencedby refid="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" compoundref="atsc__types_8h" startline="93" endline="95">operator==</referencedby>
+        <referencedby refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" compoundref="atsc__types_8h" startline="55" endline="55">segno</referencedby>
+        <referencedby refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" compoundref="atsc__types_8h" startline="60" endline="64">set_field_sync1</referencedby>
+        <referencedby refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" compoundref="atsc__types_8h" startline="66" endline="70">set_field_sync2</referencedby>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classplinfo_1a37debcf201a535eacd07dfa184ae7229" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_regular_seg</definition>
+        <argsstring></argsstring>
+        <name>fl_regular_seg</name>
+        <initializer> 0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="classplinfo_1af4a0c397d755e80e394305393e71164c" compoundref="atsc__types_8h" startline="46" endline="46">regular_seg_p</referencedby>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1ae2e21079493045786f5abd39292b8438" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_field_sync1</definition>
+        <argsstring></argsstring>
+        <name>fl_field_sync1</name>
+        <initializer> 0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" compoundref="atsc__types_8h" startline="42" endline="42">field_sync1_p</referencedby>
+        <referencedby refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" compoundref="atsc__types_8h" startline="60" endline="64">set_field_sync1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1a07c74a60a76912485b923b3eb20943df" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_field_sync2</definition>
+        <argsstring></argsstring>
+        <name>fl_field_sync2</name>
+        <initializer> 0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="123" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" compoundref="atsc__types_8h" startline="43" endline="43">field_sync2_p</referencedby>
+        <referencedby refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" compoundref="atsc__types_8h" startline="66" endline="70">set_field_sync2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1a4bd64848947619d4817872309c47814e" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_first_regular_seg</definition>
+        <argsstring></argsstring>
+        <name>fl_first_regular_seg</name>
+        <initializer> 0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="128" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" compoundref="atsc__types_8h" startline="51" endline="51">first_regular_seg_p</referencedby>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_field2</definition>
+        <argsstring></argsstring>
+        <name>fl_field2</name>
+        <initializer> 0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="131" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="classplinfo_1af2a97fde4b955f80d649704d7bc31050" compoundref="atsc__types_8h" startline="48" endline="48">in_field1_p</referencedby>
+        <referencedby refid="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" compoundref="atsc__types_8h" startline="49" endline="49">in_field2_p</referencedby>
+        <referencedby refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" compoundref="atsc__types_8h" startline="66" endline="70">set_field_sync2</referencedby>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int plinfo::fl_transport_error</definition>
+        <argsstring></argsstring>
+        <name>fl_transport_error</name>
+        <initializer> 0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="138" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+        <referencedby refid="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" compoundref="atsc__types_8h" startline="85" endline="90">set_transport_error</referencedby>
+        <referencedby refid="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" compoundref="atsc__types_8h" startline="53" endline="53">transport_error_p</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classplinfo_1a0e97b5f98e1cb344abd5c41806ab707e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>plinfo::plinfo</definition>
+        <argsstring>()</argsstring>
+        <name>plinfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::field_sync1_p</definition>
+        <argsstring>() const </argsstring>
+        <name>field_sync1_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="42" bodyend="42"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1ae2e21079493045786f5abd39292b8438" compoundref="atsc__types_8h" startline="121">fl_field_sync1</references>
+        <referencedby refid="classplinfo_1a7a56c55909014f80814dd326464d7922" compoundref="atsc__types_8h" startline="44" endline="44">field_sync_p</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a904e79ef01df225b807b619f9a6064fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::field_sync2_p</definition>
+        <argsstring>() const </argsstring>
+        <name>field_sync2_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="43" bodyend="43"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" compoundref="atsc__types_8h" startline="123">fl_field_sync2</references>
+        <referencedby refid="classplinfo_1a7a56c55909014f80814dd326464d7922" compoundref="atsc__types_8h" startline="44" endline="44">field_sync_p</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a7a56c55909014f80814dd326464d7922" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::field_sync_p</definition>
+        <argsstring>() const </argsstring>
+        <name>field_sync_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="44" bodyend="44"/>
+        <references refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" compoundref="atsc__types_8h" startline="42" endline="42">field_sync1_p</references>
+        <references refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" compoundref="atsc__types_8h" startline="43" endline="43">field_sync2_p</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1af4a0c397d755e80e394305393e71164c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::regular_seg_p</definition>
+        <argsstring>() const </argsstring>
+        <name>regular_seg_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="46" bodyend="46"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" compoundref="atsc__types_8h" startline="119">fl_regular_seg</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1af2a97fde4b955f80d649704d7bc31050" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::in_field1_p</definition>
+        <argsstring>() const </argsstring>
+        <name>in_field1_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="48" bodyend="48"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" compoundref="atsc__types_8h" startline="131">fl_field2</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::in_field2_p</definition>
+        <argsstring>() const </argsstring>
+        <name>in_field2_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="49" bodyend="49"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" compoundref="atsc__types_8h" startline="131">fl_field2</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::first_regular_seg_p</definition>
+        <argsstring>() const </argsstring>
+        <name>first_regular_seg_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="51" bodyend="51"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1a4bd64848947619d4817872309c47814e" compoundref="atsc__types_8h" startline="128">fl_first_regular_seg</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::transport_error_p</definition>
+        <argsstring>() const </argsstring>
+        <name>transport_error_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="53" bodyend="53"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" compoundref="atsc__types_8h" startline="138">fl_transport_error</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int plinfo::segno</definition>
+        <argsstring>() const </argsstring>
+        <name>segno</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="55" bodyend="55"/>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+        <referencedby refid="classplinfo_1a615c5375f70e40637093c10027001233" compoundref="atsc__types_8h" startline="72" endline="83">set_regular_seg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a02b25069563db6d9fabc3fcfeb1f8cfd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int plinfo::flags</definition>
+        <argsstring>() const </argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="56" bodyend="56"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1ad186ced5afd703e8b2d9050529922486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void plinfo::set_field_sync1</definition>
+        <argsstring>()</argsstring>
+        <name>set_field_sync1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="60" bodyend="64"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+        <references refid="classplinfo_1ae2e21079493045786f5abd39292b8438" compoundref="atsc__types_8h" startline="121">fl_field_sync1</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void plinfo::set_field_sync2</definition>
+        <argsstring>()</argsstring>
+        <name>set_field_sync2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="66" bodyend="70"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+        <references refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" compoundref="atsc__types_8h" startline="131">fl_field2</references>
+        <references refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" compoundref="atsc__types_8h" startline="123">fl_field_sync2</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a615c5375f70e40637093c10027001233" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void plinfo::set_regular_seg</definition>
+        <argsstring>(bool field2, int segno)</argsstring>
+        <name>set_regular_seg</name>
+        <param>
+          <type>bool</type>
+          <declname>field2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>segno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="72" bodyend="83"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+        <references refid="atsc__consts_8h_1a52be11bff98822a1e7fd954b8f8c04c2" compoundref="atsc__consts_8h" startline="34">ATSC_DSEGS_PER_FIELD</references>
+        <references refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" compoundref="atsc__types_8h" startline="131">fl_field2</references>
+        <references refid="classplinfo_1a4bd64848947619d4817872309c47814e" compoundref="atsc__types_8h" startline="128">fl_first_regular_seg</references>
+        <references refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" compoundref="atsc__types_8h" startline="119">fl_regular_seg</references>
+        <references refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" compoundref="atsc__types_8h" startline="138">fl_transport_error</references>
+        <references refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" compoundref="atsc__types_8h" startline="55" endline="55">segno</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void plinfo::set_transport_error</definition>
+        <argsstring>(bool error)</argsstring>
+        <name>set_transport_error</name>
+        <param>
+          <type>bool</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="85" bodyend="90"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" compoundref="atsc__types_8h" startline="138">fl_transport_error</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::operator==</definition>
+        <argsstring>(const plinfo &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classplinfo" kindref="compound">plinfo</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="93" bodyend="95"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool plinfo::operator!=</definition>
+        <argsstring>(const plinfo &amp;other) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classplinfo" kindref="compound">plinfo</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="97" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="97" bodyend="99"/>
+        <references refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" compoundref="atsc__types_8h" startline="114">_flags</references>
+        <references refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" compoundref="atsc__types_8h" startline="115">_segno</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classplinfo_1a01ea3fce8eb54cdf7f20197f14c05aec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>static void plinfo::delay</definition>
+        <argsstring>(plinfo &amp;out, const plinfo &amp;in, int nsegs_of_delay)</argsstring>
+        <name>delay</name>
+        <param>
+          <type><ref refid="classplinfo" kindref="compound">plinfo</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classplinfo" kindref="compound">plinfo</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsegs_of_delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set <computeroutput>OUT</computeroutput> such that it reflects a <computeroutput>NSEGS_OF_DELAY</computeroutput> pipeline delay from <computeroutput>IN</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classplinfo_1ad5aa65fd17fd5f72ae791cad72079393" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>static void plinfo::sanity_check</definition>
+        <argsstring>(const plinfo &amp;in)</argsstring>
+        <name>sanity_check</name>
+        <param>
+          <type>const <ref refid="classplinfo" kindref="compound">plinfo</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>confirm that <computeroutput>X</computeroutput> is plausible </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>pipeline info that flows with data </para>    </briefdescription>
+    <detaileddescription>
+<para>Not all modules need all the info </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="36" bodyend="139"/>
+    <listofallmembers>
+      <member refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>_flags</name></member>
+      <member refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>_segno</name></member>
+      <member refid="classplinfo_1a01ea3fce8eb54cdf7f20197f14c05aec" prot="public" virt="non-virtual"><scope>plinfo</scope><name>delay</name></member>
+      <member refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" prot="public" virt="non-virtual"><scope>plinfo</scope><name>field_sync1_p</name></member>
+      <member refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" prot="public" virt="non-virtual"><scope>plinfo</scope><name>field_sync2_p</name></member>
+      <member refid="classplinfo_1a7a56c55909014f80814dd326464d7922" prot="public" virt="non-virtual"><scope>plinfo</scope><name>field_sync_p</name></member>
+      <member refid="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" prot="public" virt="non-virtual"><scope>plinfo</scope><name>first_regular_seg_p</name></member>
+      <member refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_field2</name></member>
+      <member refid="classplinfo_1ae2e21079493045786f5abd39292b8438" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_field_sync1</name></member>
+      <member refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_field_sync2</name></member>
+      <member refid="classplinfo_1a4bd64848947619d4817872309c47814e" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_first_regular_seg</name></member>
+      <member refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_regular_seg</name></member>
+      <member refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" prot="protected" virt="non-virtual"><scope>plinfo</scope><name>fl_transport_error</name></member>
+      <member refid="classplinfo_1a02b25069563db6d9fabc3fcfeb1f8cfd" prot="public" virt="non-virtual"><scope>plinfo</scope><name>flags</name></member>
+      <member refid="classplinfo_1af2a97fde4b955f80d649704d7bc31050" prot="public" virt="non-virtual"><scope>plinfo</scope><name>in_field1_p</name></member>
+      <member refid="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" prot="public" virt="non-virtual"><scope>plinfo</scope><name>in_field2_p</name></member>
+      <member refid="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" prot="public" virt="non-virtual"><scope>plinfo</scope><name>operator!=</name></member>
+      <member refid="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" prot="public" virt="non-virtual"><scope>plinfo</scope><name>operator==</name></member>
+      <member refid="classplinfo_1a0e97b5f98e1cb344abd5c41806ab707e" prot="public" virt="non-virtual"><scope>plinfo</scope><name>plinfo</name></member>
+      <member refid="classplinfo_1af4a0c397d755e80e394305393e71164c" prot="public" virt="non-virtual"><scope>plinfo</scope><name>regular_seg_p</name></member>
+      <member refid="classplinfo_1ad5aa65fd17fd5f72ae791cad72079393" prot="public" virt="non-virtual"><scope>plinfo</scope><name>sanity_check</name></member>
+      <member refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" prot="public" virt="non-virtual"><scope>plinfo</scope><name>segno</name></member>
+      <member refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" prot="public" virt="non-virtual"><scope>plinfo</scope><name>set_field_sync1</name></member>
+      <member refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" prot="public" virt="non-virtual"><scope>plinfo</scope><name>set_field_sync2</name></member>
+      <member refid="classplinfo_1a615c5375f70e40637093c10027001233" prot="public" virt="non-virtual"><scope>plinfo</scope><name>set_regular_seg</name></member>
+      <member refid="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" prot="public" virt="non-virtual"><scope>plinfo</scope><name>set_transport_error</name></member>
+      <member refid="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" prot="public" virt="non-virtual"><scope>plinfo</scope><name>transport_error_p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

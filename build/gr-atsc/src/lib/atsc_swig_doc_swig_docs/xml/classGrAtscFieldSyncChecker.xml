@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classGrAtscFieldSyncChecker" kind="class" prot="public">
+    <compoundname>GrAtscFieldSyncChecker</compoundname>
+    <includes refid="GrAtscFieldSyncChecker_8h" local="no">GrAtscFieldSyncChecker.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGrAtscFieldSyncChecker_1ab5a4c10f43b8fb65d1b3b768ffa366ea" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__fs__checker" kindref="compound">atsci_fs_checker</ref> *</type>
+        <definition>atsci_fs_checker* GrAtscFieldSyncChecker::d_fsc</definition>
+        <argsstring></argsstring>
+        <name>d_fsc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrAtscFieldSyncChecker_1af6a2f655ac28b2d612df17a6046c0312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscFieldSyncChecker::GrAtscFieldSyncChecker</definition>
+        <argsstring>()</argsstring>
+        <name>GrAtscFieldSyncChecker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncChecker_1ae4e92f94e4f1f366ea0220b1f6a9ffd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscFieldSyncChecker::~GrAtscFieldSyncChecker</definition>
+        <argsstring>()</argsstring>
+        <name>~GrAtscFieldSyncChecker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncChecker_1a13d994fb808f9bb4c1346e9fbe4ab5a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* GrAtscFieldSyncChecker::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncChecker_1a8489a6f90d990e88a22dad87b6de0aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GrAtscFieldSyncChecker::work</definition>
+        <argsstring>(VrSampleRange output, void *o[], VrSampleRange inputs[], void *i[])</argsstring>
+        <name>work</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>o</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>i</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC field sync checker (float,syminfo --&gt; float,syminfo) </para>    </briefdescription>
+    <detaileddescription>
+<para>first output is delayed version of input. second output is set of tags, one-for-one with first output. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="473">
+        <label>GrAtscFieldSyncChecker</label>
+        <link refid="classGrAtscFieldSyncChecker"/>
+        <childnode refid="474" relation="usage">
+          <edgelabel>d_fsc</edgelabel>
+        </childnode>
+      </node>
+      <node id="474">
+        <label>atsci_fs_checker</label>
+        <link refid="classatsci__fs__checker"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncChecker.h" bodystart="37" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classGrAtscFieldSyncChecker_1ab5a4c10f43b8fb65d1b3b768ffa366ea" prot="protected" virt="non-virtual"><scope>GrAtscFieldSyncChecker</scope><name>d_fsc</name></member>
+      <member refid="classGrAtscFieldSyncChecker_1af6a2f655ac28b2d612df17a6046c0312" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncChecker</scope><name>GrAtscFieldSyncChecker</name></member>
+      <member refid="classGrAtscFieldSyncChecker_1a13d994fb808f9bb4c1346e9fbe4ab5a8" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncChecker</scope><name>name</name></member>
+      <member refid="classGrAtscFieldSyncChecker_1a8489a6f90d990e88a22dad87b6de0aba" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncChecker</scope><name>work</name></member>
+      <member refid="classGrAtscFieldSyncChecker_1ae4e92f94e4f1f366ea0220b1f6a9ffd8" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncChecker</scope><name>~GrAtscFieldSyncChecker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

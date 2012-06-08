@@ -1,0 +1,708 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__buffer" kind="class" prot="public">
+    <compoundname>gr_buffer</compoundname>
+    <includes refid="gr__buffer_8h" local="no">gr_buffer.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__buffer_1a7ecfad759b1fdf2dcb7416a16f563482" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class gr_buffer_reader</definition>
+        <argsstring></argsstring>
+        <name>gr_buffer_reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__buffer_1ae7059abdea031e9dabb05114ddb8f7be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_buffer_sptr</ref></type>
+        <definition>GR_CORE_API gr_buffer_sptr gr_make_buffer</definition>
+        <argsstring>(int nitems, size_t sizeof_item, gr_block_sptr link)</argsstring>
+        <name>gr_make_buffer</name>
+        <param>
+          <type>int</type>
+          <declname>nitems</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_item</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_block_sptr</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Allocate a buffer that holds at least <computeroutput>nitems</computeroutput> of size <computeroutput>sizeof_item</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>The total size of the buffer will be rounded up to a system dependent boundary. This is typically the system page size, but under MS windows is 64KB.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nitems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the minimum number of items the buffer will hold. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeof_item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the size of an item in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the block that writes to this buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="120"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__buffer_1adc1ca197033760254a594982fde1a4a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_buffer_reader_sptr</ref></type>
+        <definition>GR_CORE_API gr_buffer_reader_sptr gr_buffer_add_reader</definition>
+        <argsstring>(gr_buffer_sptr buf, int nzero_preload, gr_block_sptr link)</argsstring>
+        <name>gr_buffer_add_reader</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_buffer_sptr</ref></type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nzero_preload</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_block_sptr</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref> and attach it to buffer <computeroutput>buf</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the buffer the <computeroutput><ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref></computeroutput> reads from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nzero_preload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>-- number of zero items to &quot;preload&quot; into buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the block that reads from the buffer using this <ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__buffer_1a60aa2c93de67e9c5782a34130aac8da3" prot="protected" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* gr_buffer::d_base</definition>
+        <argsstring></argsstring>
+        <name>d_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="124" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a2ce1b319068ce94e4799b7affe4b48ae" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_buffer::d_bufsize</definition>
+        <argsstring></argsstring>
+        <name>d_bufsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__buffer_1a1f4a14166f2750055fce78f19668f507" prot="private" static="no" mutable="no">
+        <type><ref refid="classgr__vmcircbuf" kindref="compound">gr_vmcircbuf</ref> *</type>
+        <definition>gr_vmcircbuf* gr_buffer::d_vmcircbuf</definition>
+        <argsstring></argsstring>
+        <name>d_vmcircbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="127" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1ab1456289193ea99bb03e9a683b6320aa" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_buffer::d_sizeof_item</definition>
+        <argsstring></argsstring>
+        <name>d_sizeof_item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="128" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a07555097fda9bd99e23fd8649971bf7d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref> * &gt;</type>
+        <definition>std::vector&lt;gr_buffer_reader *&gt; gr_buffer::d_readers</definition>
+        <argsstring></argsstring>
+        <name>d_readers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="129" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1aadfe3072e4aa511b0a20b9d5769817fb" prot="private" static="no" mutable="no">
+        <type>boost::weak_ptr&lt; <ref refid="classgr__block" kindref="compound">gr_block</ref> &gt;</type>
+        <definition>boost::weak_ptr&lt;gr_block&gt; gr_buffer::d_link</definition>
+        <argsstring></argsstring>
+        <name>d_link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="130" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a214d501519a0e4f1344a6efcbdba264e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">gruel::mutex</ref></type>
+        <definition>gruel::mutex gr_buffer::d_mutex</definition>
+        <argsstring></argsstring>
+        <name>d_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="136" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a25bae292c516aaac0b39b8cf6eb7db7e" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_buffer::d_write_index</definition>
+        <argsstring></argsstring>
+        <name>d_write_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="137" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a41872d16abf6461d065a8fda67654afa" prot="private" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t gr_buffer::d_abs_write_offset</definition>
+        <argsstring></argsstring>
+        <name>d_abs_write_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="138" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1ac0aa4692972c778d6eabadab3c006982" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_buffer::d_done</definition>
+        <argsstring></argsstring>
+        <name>d_done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="139" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a0b40edb0d63cd7fe24d695f13eb498da" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &gt;</type>
+        <definition>std::deque&lt;gr_tag_t&gt; gr_buffer::d_item_tags</definition>
+        <argsstring></argsstring>
+        <name>d_item_tags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="140" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__buffer_1a7f51cddf10930dfc15531ecf80f5c488" prot="private" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t gr_buffer::d_last_min_items_read</definition>
+        <argsstring></argsstring>
+        <name>d_last_min_items_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="141" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__buffer_1ab3c5c8028b30a30c6c3eb3015225ba4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_buffer::~gr_buffer</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a1d064236bb139c339a425b51212813b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_buffer::space_available</definition>
+        <argsstring>()</argsstring>
+        <name>space_available</name>
+        <briefdescription>
+<para>return number of items worth of space available for writing </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a39a2c75577d0b37f7eef0b930d588da4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_buffer::bufsize</definition>
+        <argsstring>() const </argsstring>
+        <name>bufsize</name>
+        <briefdescription>
+<para>return size of this buffer in items </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a1a4dc904e4da49e58a3405550665a712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>void* gr_buffer::write_pointer</definition>
+        <argsstring>()</argsstring>
+        <name>write_pointer</name>
+        <briefdescription>
+<para>return pointer to write buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>The return value points at space that can hold at least <ref refid="classgr__buffer_1a1d064236bb139c339a425b51212813b1" kindref="member">space_available()</ref> items. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1aba102b9c8394068b2c4b570c0e788e82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_buffer::update_write_pointer</definition>
+        <argsstring>(int nitems)</argsstring>
+        <name>update_write_pointer</name>
+        <param>
+          <type>int</type>
+          <declname>nitems</declname>
+        </param>
+        <briefdescription>
+<para>tell buffer that we wrote <computeroutput>nitems</computeroutput> into it </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1af7528d62028e0b7e022734b00f8aeb1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_buffer::set_done</definition>
+        <argsstring>(bool done)</argsstring>
+        <name>set_done</name>
+        <param>
+          <type>bool</type>
+          <declname>done</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a89a1d9c85ba243e952a62015c7009d8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_buffer::done</definition>
+        <argsstring>() const </argsstring>
+        <name>done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a3e5c410222891cad5b7d5b85ff82b85f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_block_sptr</ref></type>
+        <definition>gr_block_sptr gr_buffer::link</definition>
+        <argsstring>()</argsstring>
+        <name>link</name>
+        <briefdescription>
+<para>Return the block that writes to this buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a2eb5af8306fe4a2c6d6838ff41b3240b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gr_buffer::nreaders</definition>
+        <argsstring>() const </argsstring>
+        <name>nreaders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="89" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a2009bf87ea09dd35abd0f42030911381" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref> *</type>
+        <definition>gr_buffer_reader* gr_buffer::reader</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>reader</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1ad55c520b62a7ebae0593f7c74fdba745" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">gruel::mutex</ref> *</type>
+        <definition>gruel::mutex* gr_buffer::mutex</definition>
+        <argsstring>()</argsstring>
+        <name>mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a024cd85cd041d18208b717d38cf67d0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t gr_buffer::nitems_written</definition>
+        <argsstring>()</argsstring>
+        <name>nitems_written</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="94" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a404f1dda059344e176e8e37e77525978" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gr_buffer::get_sizeof_item</definition>
+        <argsstring>()</argsstring>
+        <name>get_sizeof_item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="96" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a616aa3e09d83804ea3d6045e4f7f5153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_buffer::add_item_tag</definition>
+        <argsstring>(const gr_tag_t &amp;tag)</argsstring>
+        <name>add_item_tag</name>
+        <param>
+          <type>const <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new tag to the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new tag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a9c41b22bab8406fab93853f72b5151d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_buffer::prune_tags</definition>
+        <argsstring>(uint64_t max_time)</argsstring>
+        <name>prune_tags</name>
+        <param>
+          <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>max_time</declname>
+        </param>
+        <briefdescription>
+<para>Removes all tags before <computeroutput>max_time</computeroutput> from buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time (item number) to trim up until. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1adcc2b78e50b043782f070fb741b8e941" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::deque&lt; <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &gt;::iterator</type>
+        <definition>std::deque&lt;gr_tag_t&gt;::iterator gr_buffer::get_tags_begin</definition>
+        <argsstring>()</argsstring>
+        <name>get_tags_begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="112" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1aaed6d72be9df4318038213bd3de747c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::deque&lt; <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &gt;::iterator</type>
+        <definition>std::deque&lt;gr_tag_t&gt;::iterator gr_buffer::get_tags_end</definition>
+        <argsstring>()</argsstring>
+        <name>get_tags_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="113" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__buffer_1aa342c611f82264a19900347aec141d31" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_buffer::index_add</definition>
+        <argsstring>(unsigned a, unsigned b)</argsstring>
+        <name>index_add</name>
+        <param>
+          <type>unsigned</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="145" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="144" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1aafa0c53ad2b6907137f4938ac4c04133" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_buffer::index_sub</definition>
+        <argsstring>(unsigned a, unsigned b)</argsstring>
+        <name>index_sub</name>
+        <param>
+          <type>unsigned</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="157" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="156" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1ac5d11dd803413063783d7553a30e2925" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_buffer::allocate_buffer</definition>
+        <argsstring>(int nitems, size_t sizeof_item)</argsstring>
+        <name>allocate_buffer</name>
+        <param>
+          <type>int</type>
+          <declname>nitems</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a037ac1055d472175f763c21edb792c25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_buffer::gr_buffer</definition>
+        <argsstring>(int nitems, size_t sizeof_item, gr_block_sptr link)</argsstring>
+        <name>gr_buffer</name>
+        <param>
+          <type>int</type>
+          <declname>nitems</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_item</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_block_sptr</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>constructor is private. Use gr_make_buffer to create instances. </para>        </briefdescription>
+        <detaileddescription>
+<para>Allocate a buffer that holds at least <computeroutput>nitems</computeroutput> of size <computeroutput>sizeof_item</computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nitems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the minimum number of items the buffer will hold. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeof_item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the size of an item in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the block that writes to this buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The total size of the buffer will be rounded up to a system dependent boundary. This is typically the system page size, but under MS windows is 64KB. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__buffer_1a5dbf84734d797bfc776dc66571ec17ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_buffer::drop_reader</definition>
+        <argsstring>(gr_buffer_reader *reader)</argsstring>
+        <name>drop_reader</name>
+        <param>
+          <type><ref refid="classgr__buffer__reader" kindref="compound">gr_buffer_reader</ref> *</type>
+          <declname>reader</declname>
+        </param>
+        <briefdescription>
+<para>disassociate <computeroutput>reader</computeroutput> from this buffer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="187"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Single writer, multiple reader fifo. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_buffer.h" bodystart="53" bodyend="189"/>
+    <listofallmembers>
+      <member refid="classgr__buffer_1a616aa3e09d83804ea3d6045e4f7f5153" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>add_item_tag</name></member>
+      <member refid="classgr__buffer_1ac5d11dd803413063783d7553a30e2925" prot="private" virt="virtual"><scope>gr_buffer</scope><name>allocate_buffer</name></member>
+      <member refid="classgr__buffer_1a39a2c75577d0b37f7eef0b930d588da4" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>bufsize</name></member>
+      <member refid="classgr__buffer_1a41872d16abf6461d065a8fda67654afa" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_abs_write_offset</name></member>
+      <member refid="classgr__buffer_1a60aa2c93de67e9c5782a34130aac8da3" prot="protected" virt="non-virtual"><scope>gr_buffer</scope><name>d_base</name></member>
+      <member refid="classgr__buffer_1a2ce1b319068ce94e4799b7affe4b48ae" prot="protected" virt="non-virtual"><scope>gr_buffer</scope><name>d_bufsize</name></member>
+      <member refid="classgr__buffer_1ac0aa4692972c778d6eabadab3c006982" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_done</name></member>
+      <member refid="classgr__buffer_1a0b40edb0d63cd7fe24d695f13eb498da" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_item_tags</name></member>
+      <member refid="classgr__buffer_1a7f51cddf10930dfc15531ecf80f5c488" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_last_min_items_read</name></member>
+      <member refid="classgr__buffer_1aadfe3072e4aa511b0a20b9d5769817fb" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_link</name></member>
+      <member refid="classgr__buffer_1a214d501519a0e4f1344a6efcbdba264e" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_mutex</name></member>
+      <member refid="classgr__buffer_1a07555097fda9bd99e23fd8649971bf7d" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_readers</name></member>
+      <member refid="classgr__buffer_1ab1456289193ea99bb03e9a683b6320aa" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_sizeof_item</name></member>
+      <member refid="classgr__buffer_1a1f4a14166f2750055fce78f19668f507" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_vmcircbuf</name></member>
+      <member refid="classgr__buffer_1a25bae292c516aaac0b39b8cf6eb7db7e" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>d_write_index</name></member>
+      <member refid="classgr__buffer_1a89a1d9c85ba243e952a62015c7009d8d" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>done</name></member>
+      <member refid="classgr__buffer_1a5dbf84734d797bfc776dc66571ec17ce" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>drop_reader</name></member>
+      <member refid="classgr__buffer_1a404f1dda059344e176e8e37e77525978" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>get_sizeof_item</name></member>
+      <member refid="classgr__buffer_1adcc2b78e50b043782f070fb741b8e941" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>get_tags_begin</name></member>
+      <member refid="classgr__buffer_1aaed6d72be9df4318038213bd3de747c3" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>get_tags_end</name></member>
+      <member refid="classgr__buffer_1a037ac1055d472175f763c21edb792c25" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>gr_buffer</name></member>
+      <member refid="classgr__buffer_1adc1ca197033760254a594982fde1a4a0" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>gr_buffer_add_reader</name></member>
+      <member refid="classgr__buffer_1a7ecfad759b1fdf2dcb7416a16f563482" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>gr_buffer_reader</name></member>
+      <member refid="classgr__buffer_1ae7059abdea031e9dabb05114ddb8f7be" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>gr_make_buffer</name></member>
+      <member refid="classgr__buffer_1aa342c611f82264a19900347aec141d31" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>index_add</name></member>
+      <member refid="classgr__buffer_1aafa0c53ad2b6907137f4938ac4c04133" prot="private" virt="non-virtual"><scope>gr_buffer</scope><name>index_sub</name></member>
+      <member refid="classgr__buffer_1a3e5c410222891cad5b7d5b85ff82b85f" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>link</name></member>
+      <member refid="classgr__buffer_1ad55c520b62a7ebae0593f7c74fdba745" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>mutex</name></member>
+      <member refid="classgr__buffer_1a024cd85cd041d18208b717d38cf67d0c" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>nitems_written</name></member>
+      <member refid="classgr__buffer_1a2eb5af8306fe4a2c6d6838ff41b3240b" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>nreaders</name></member>
+      <member refid="classgr__buffer_1a9c41b22bab8406fab93853f72b5151d4" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>prune_tags</name></member>
+      <member refid="classgr__buffer_1a2009bf87ea09dd35abd0f42030911381" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>reader</name></member>
+      <member refid="classgr__buffer_1af7528d62028e0b7e022734b00f8aeb1b" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>set_done</name></member>
+      <member refid="classgr__buffer_1a1d064236bb139c339a425b51212813b1" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>space_available</name></member>
+      <member refid="classgr__buffer_1aba102b9c8394068b2c4b570c0e788e82" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>update_write_pointer</name></member>
+      <member refid="classgr__buffer_1a1a4dc904e4da49e58a3405550665a712" prot="public" virt="non-virtual"><scope>gr_buffer</scope><name>write_pointer</name></member>
+      <member refid="classgr__buffer_1ab3c5c8028b30a30c6c3eb3015225ba4b" prot="public" virt="virtual"><scope>gr_buffer</scope><name>~gr_buffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

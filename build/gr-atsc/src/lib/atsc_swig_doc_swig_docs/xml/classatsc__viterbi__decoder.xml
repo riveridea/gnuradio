@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__viterbi__decoder" kind="class" prot="public">
+    <compoundname>atsc_viterbi_decoder</compoundname>
+    <includes refid="atsc__viterbi__decoder_8h" local="no">atsc_viterbi_decoder.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsc__viterbi__decoder_1a2dc08c708342fdb11f1eafc816850a54" prot="private" static="no" mutable="no">
+        <type><ref refid="classatsci__viterbi__decoder" kindref="compound">atsci_viterbi_decoder</ref></type>
+        <definition>atsci_viterbi_decoder atsc_viterbi_decoder::d_viterbi_decoder</definition>
+        <argsstring></argsstring>
+        <name>d_viterbi_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__viterbi__decoder_1a19b9ca8e201ad6b45f29b39165ea3028" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsc_viterbi_decoder::last_start</definition>
+        <argsstring></argsstring>
+        <name>last_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__viterbi__decoder_1a8f91ae8f3786417ffbdb6548780e3006" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__viterbi__decoder_8h_1a1dae4e77c9388c115e842f3744720b1e" kindref="member">atsc_viterbi_decoder_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_viterbi_decoder_sptr atsc_make_viterbi_decoder</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_viterbi_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__viterbi__decoder_1a8b1efd44514655b7b8bd22c31775e8d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_viterbi_decoder::atsc_viterbi_decoder</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_viterbi_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__viterbi__decoder_1acbcef146a8f4f32dfe043221171bc5b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_viterbi_decoder::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__viterbi__decoder_1a548208593e430bd1ca4f9c1f60973016" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_viterbi_decoder::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC 12-way interleaved viterbi decoder (<ref refid="classatsc__soft__data__segment" kindref="compound">atsc_soft_data_segment</ref> --&gt; <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>)</para><para>input: <ref refid="classatsc__soft__data__segment" kindref="compound">atsc_soft_data_segment</ref>; output: <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h" bodystart="40" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classatsc__viterbi__decoder_1a8f91ae8f3786417ffbdb6548780e3006" prot="private" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>atsc_make_viterbi_decoder</name></member>
+      <member refid="classatsc__viterbi__decoder_1a8b1efd44514655b7b8bd22c31775e8d1" prot="private" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>atsc_viterbi_decoder</name></member>
+      <member refid="classatsc__viterbi__decoder_1a2dc08c708342fdb11f1eafc816850a54" prot="private" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>d_viterbi_decoder</name></member>
+      <member refid="classatsc__viterbi__decoder_1a19b9ca8e201ad6b45f29b39165ea3028" prot="protected" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>last_start</name></member>
+      <member refid="classatsc__viterbi__decoder_1a548208593e430bd1ca4f9c1f60973016" prot="public" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>reset</name></member>
+      <member refid="classatsc__viterbi__decoder_1acbcef146a8f4f32dfe043221171bc5b9" prot="public" virt="non-virtual"><scope>atsc_viterbi_decoder</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

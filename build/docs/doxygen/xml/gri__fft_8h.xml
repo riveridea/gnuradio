@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gri__fft_8h" kind="file">
+    <compoundname>gri_fft.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__complex_8h" local="no">gr_complex.h</includes>
+    <includes local="no">boost/thread.hpp</includes>
+    <includedby refid="qtgui__sink__c_8h" local="no">qtgui_sink_c.h</includedby>
+    <includedby refid="qtgui__sink__f_8h" local="no">qtgui_sink_f.h</includedby>
+    <includedby refid="qtgui__time__sink__c_8h" local="no">qtgui_time_sink_c.h</includedby>
+    <includedby refid="qtgui__time__sink__f_8h" local="no">qtgui_time_sink_f.h</includedby>
+    <incdepgraph>
+      <node id="13762">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="13763" relation="include">
+        </childnode>
+      </node>
+      <node id="13764">
+        <label>boost/thread.hpp</label>
+      </node>
+      <node id="13760">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13761" relation="include">
+        </childnode>
+      </node>
+      <node id="13761">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="13759">
+        <label>gri_fft.h</label>
+        <link refid="gri_fft.h"/>
+        <childnode refid="13760" relation="include">
+        </childnode>
+        <childnode refid="13762" relation="include">
+        </childnode>
+        <childnode refid="13764" relation="include">
+        </childnode>
+      </node>
+      <node id="13763">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13766">
+        <label>qtgui_sink_c.h</label>
+        <link refid="qtgui__sink__c_8h"/>
+      </node>
+      <node id="13767">
+        <label>qtgui_sink_f.h</label>
+        <link refid="qtgui__sink__f_8h"/>
+      </node>
+      <node id="13769">
+        <label>qtgui_time_sink_f.h</label>
+        <link refid="qtgui__time__sink__f_8h"/>
+      </node>
+      <node id="13768">
+        <label>qtgui_time_sink_c.h</label>
+        <link refid="qtgui__time__sink__c_8h"/>
+      </node>
+      <node id="13765">
+        <label>gri_fft.h</label>
+        <link refid="gri_fft.h"/>
+        <childnode refid="13766" relation="include">
+        </childnode>
+        <childnode refid="13767" relation="include">
+        </childnode>
+        <childnode refid="13768" relation="include">
+        </childnode>
+        <childnode refid="13769" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgri__fft__planner" prot="public">gri_fft_planner</innerclass>
+    <innerclass refid="classgri__fft__complex" prot="public">gri_fft_complex</innerclass>
+    <innerclass refid="classgri__fft__real__fwd" prot="public">gri_fft_real_fwd</innerclass>
+    <innerclass refid="classgri__fft__real__rev" prot="public">gri_fft_real_rev</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gri__fft_8h_1a9da15d54ff87afa746acf010efb7ea64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+        <definition>gr_complex* gri_fft_malloc_complex</definition>
+        <argsstring>(int size)</argsstring>
+        <name>gri_fft_malloc_complex</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for allocating complex fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="gri__fft_8h_1a59bfbed9180248d1d99d41ba0cbac7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float* gri_fft_malloc_float</definition>
+        <argsstring>(int size)</argsstring>
+        <name>gri_fft_malloc_float</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for allocating float fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="gri__fft_8h_1add5aa27b2f3fe053012daabbf21177a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_fft_free</definition>
+        <argsstring>(void *b)</argsstring>
+        <name>gri_fft_free</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for freeing fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h"/>
+  </compounddef>
+</doxygen>

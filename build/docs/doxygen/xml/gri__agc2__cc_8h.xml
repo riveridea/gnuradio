@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gri__agc2__cc_8h" kind="file">
+    <compoundname>gri_agc2_cc.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">math.h</includes>
+    <includedby refid="gr__agc2__cc_8h" local="no">gr_agc2_cc.h</includedby>
+    <incdepgraph>
+      <node id="13709">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13710" relation="include">
+        </childnode>
+      </node>
+      <node id="13708">
+        <label>gri_agc2_cc.h</label>
+        <link refid="gri_agc2_cc.h"/>
+        <childnode refid="13709" relation="include">
+        </childnode>
+        <childnode refid="13711" relation="include">
+        </childnode>
+      </node>
+      <node id="13711">
+        <label>math.h</label>
+      </node>
+      <node id="13710">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13713">
+        <label>gr_agc2_cc.h</label>
+        <link refid="gr__agc2__cc_8h"/>
+      </node>
+      <node id="13712">
+        <label>gri_agc2_cc.h</label>
+        <link refid="gri_agc2_cc.h"/>
+        <childnode refid="13713" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgri__agc2__cc" prot="public">gri_agc2_cc</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h"/>
+  </compounddef>
+</doxygen>

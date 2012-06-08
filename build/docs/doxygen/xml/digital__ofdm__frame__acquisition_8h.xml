@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__ofdm__frame__acquisition_8h" kind="file">
+    <compoundname>digital_ofdm_frame_acquisition.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes refid="gr__block_8h" local="no">gr_block.h</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="3410">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="3422">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="3421">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3422" relation="include">
+        </childnode>
+        <childnode refid="3410" relation="include">
+        </childnode>
+        <childnode refid="3423" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3429" relation="include">
+        </childnode>
+        <childnode refid="3430" relation="include">
+        </childnode>
+      </node>
+      <node id="3413">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="3414" relation="include">
+        </childnode>
+      </node>
+      <node id="3425">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="3426" relation="include">
+        </childnode>
+        <childnode refid="3427" relation="include">
+        </childnode>
+      </node>
+      <node id="3420">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="3404" relation="include">
+        </childnode>
+      </node>
+      <node id="3407">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+        <childnode refid="3415" relation="include">
+        </childnode>
+        <childnode refid="3416" relation="include">
+        </childnode>
+        <childnode refid="3417" relation="include">
+        </childnode>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+      </node>
+      <node id="3429">
+        <label>stdexcept</label>
+      </node>
+      <node id="3409">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3410" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+      </node>
+      <node id="3424">
+        <label>string</label>
+      </node>
+      <node id="3405">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3407" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+      </node>
+      <node id="3406">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="3404" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3421" relation="include">
+        </childnode>
+      </node>
+      <node id="3412">
+        <label>stddef.h</label>
+      </node>
+      <node id="3417">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="3426">
+        <label>limits.h</label>
+      </node>
+      <node id="3423">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3408">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+      </node>
+      <node id="3427">
+        <label>wchar.h</label>
+      </node>
+      <node id="3418">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+        <childnode refid="3421" relation="include">
+        </childnode>
+      </node>
+      <node id="3411">
+        <label>vector</label>
+      </node>
+      <node id="3403">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="3404" relation="include">
+        </childnode>
+      </node>
+      <node id="3416">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="3404">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="3428">
+        <label>iosfwd</label>
+      </node>
+      <node id="3430">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="3415">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3410" relation="include">
+        </childnode>
+      </node>
+      <node id="3414">
+        <label>complex</label>
+      </node>
+      <node id="3402">
+        <label>digital_ofdm_frame_acquisition.h</label>
+        <link refid="digital_ofdm_frame_acquisition.h"/>
+        <childnode refid="3403" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+      </node>
+      <node id="3419">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3421" relation="include">
+        </childnode>
+        <childnode refid="3410" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__ofdm__frame__acquisition" prot="public">digital_ofdm_frame_acquisition</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__ofdm__frame__acquisition_8h_1a6b2e1eb93ccc511055e69c7ea460e8f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">digital_ofdm_frame_acquisition_sptr</ref> <ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref></type>
+        <definition>digital_ofdm_frame_acquisition_sptr DIGITAL_API digital_make_ofdm_frame_acquisition</definition>
+        <argsstring>(unsigned int occupied_carriers, unsigned int fft_length, unsigned int cplen, const std::vector&lt; gr_complex &gt; &amp;known_symbol, unsigned int max_fft_shift_len=10)</argsstring>
+        <name>digital_make_ofdm_frame_acquisition</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>occupied_carriers</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fft_length</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>cplen</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>known_symbol</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_fft_shift_len</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>occupied_carriers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subcarriers with data in the received symbol </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fft_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the FFT vector (occupied_carriers + unused carriers) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cplen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the cycle prefix </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>known_symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of complex numbers representing a known symbol at the start of a frame (usually a BPSK PN sequence) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_fft_shift_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set&apos;s the maximum distance you can look between bins for correlation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_frame_acquisition.h"/>
+  </compounddef>
+</doxygen>

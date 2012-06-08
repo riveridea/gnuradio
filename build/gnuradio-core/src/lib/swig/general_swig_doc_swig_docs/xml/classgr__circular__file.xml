@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__circular__file" kind="class" prot="public">
+    <compoundname>gr_circular_file</compoundname>
+    <includes refid="gr__circular__file_8h" local="no">gr_circular_file.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__circular__file_1a3e5d8473d7097628de3e69bba12515b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_circular_file::d_fd</definition>
+        <argsstring></argsstring>
+        <name>d_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__circular__file_1adaee9467894f0addd674445861e96827" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* gr_circular_file::d_header</definition>
+        <argsstring></argsstring>
+        <name>d_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__circular__file_1a8153c99ada0a44d3a0d654e7bfc2825e" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_circular_file::d_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__circular__file_1aee20e5c2dff8d9813a902f738af3a0a3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_circular_file::d_mapped_size</definition>
+        <argsstring></argsstring>
+        <name>d_mapped_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__circular__file_1adf9d2b686200fd30367d446a170b86f6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_circular_file::d_bytes_read</definition>
+        <argsstring></argsstring>
+        <name>d_bytes_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__circular__file_1aacc44889aeeaa46400d7175e01c4fa35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_circular_file::gr_circular_file</definition>
+        <argsstring>(const char *filename, bool writable=false, int size=0)</argsstring>
+        <name>gr_circular_file</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>writable</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__circular__file_1a6f834abceb6325a4bf09fecb683538ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_circular_file::~gr_circular_file</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_circular_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__circular__file_1a52f1ad5a4f1f7a2735a67755c4230f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_circular_file::write</definition>
+        <argsstring>(void *data, int nbytes)</argsstring>
+        <name>write</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__circular__file_1ad534d23853c83470b41c147364b51919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_circular_file::read</definition>
+        <argsstring>(void *data, int nbytes)</argsstring>
+        <name>read</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nbytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__circular__file_1a3558f7c7cb1023c484d80e6c84ef6160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_circular_file::reset_read_pointer</definition>
+        <argsstring>()</argsstring>
+        <name>reset_read_pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_circular_file.h" bodystart="40" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgr__circular__file_1a8153c99ada0a44d3a0d654e7bfc2825e" prot="private" virt="non-virtual"><scope>gr_circular_file</scope><name>d_buffer</name></member>
+      <member refid="classgr__circular__file_1adf9d2b686200fd30367d446a170b86f6" prot="private" virt="non-virtual"><scope>gr_circular_file</scope><name>d_bytes_read</name></member>
+      <member refid="classgr__circular__file_1a3e5d8473d7097628de3e69bba12515b2" prot="private" virt="non-virtual"><scope>gr_circular_file</scope><name>d_fd</name></member>
+      <member refid="classgr__circular__file_1adaee9467894f0addd674445861e96827" prot="private" virt="non-virtual"><scope>gr_circular_file</scope><name>d_header</name></member>
+      <member refid="classgr__circular__file_1aee20e5c2dff8d9813a902f738af3a0a3" prot="private" virt="non-virtual"><scope>gr_circular_file</scope><name>d_mapped_size</name></member>
+      <member refid="classgr__circular__file_1aacc44889aeeaa46400d7175e01c4fa35" prot="public" virt="non-virtual"><scope>gr_circular_file</scope><name>gr_circular_file</name></member>
+      <member refid="classgr__circular__file_1ad534d23853c83470b41c147364b51919" prot="public" virt="non-virtual"><scope>gr_circular_file</scope><name>read</name></member>
+      <member refid="classgr__circular__file_1a3558f7c7cb1023c484d80e6c84ef6160" prot="public" virt="non-virtual"><scope>gr_circular_file</scope><name>reset_read_pointer</name></member>
+      <member refid="classgr__circular__file_1a52f1ad5a4f1f7a2735a67755c4230f22" prot="public" virt="non-virtual"><scope>gr_circular_file</scope><name>write</name></member>
+      <member refid="classgr__circular__file_1a6f834abceb6325a4bf09fecb683538ba" prot="public" virt="non-virtual"><scope>gr_circular_file</scope><name>~gr_circular_file</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

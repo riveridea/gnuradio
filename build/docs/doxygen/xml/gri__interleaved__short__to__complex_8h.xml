@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gri__interleaved__short__to__complex_8h" kind="file">
+    <compoundname>gri_interleaved_short_to_complex.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__complex_8h" local="no">gr_complex.h</includes>
+    <incdepgraph>
+      <node id="13846">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="13847" relation="include">
+        </childnode>
+      </node>
+      <node id="13844">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13845" relation="include">
+        </childnode>
+      </node>
+      <node id="13845">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="13847">
+        <label>complex</label>
+      </node>
+      <node id="13843">
+        <label>gri_interleaved_short_to_complex.h</label>
+        <link refid="gri_interleaved_short_to_complex.h"/>
+        <childnode refid="13844" relation="include">
+        </childnode>
+        <childnode refid="13846" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gri__interleaved__short__to__complex_8h_1af1c7c784fed964841bd252bb8575fb61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void gri_interleaved_short_to_complex</definition>
+        <argsstring>(const short *in, gr_complex *out, int nsamples)</argsstring>
+        <name>gri_interleaved_short_to_complex</name>
+        <param>
+          <type>const short *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsamples</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_interleaved_short_to_complex.h" line="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_interleaved_short_to_complex.h"/>
+  </compounddef>
+</doxygen>

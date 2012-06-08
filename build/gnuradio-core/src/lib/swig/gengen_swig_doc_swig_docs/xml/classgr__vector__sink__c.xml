@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vector__sink__c" kind="class" prot="public">
+    <compoundname>gr_vector_sink_c</compoundname>
+    <includes refid="gr__vector__sink__c_8h" local="no">gr_vector_sink_c.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__vector__sink__c_1ac0e60b95d54d4910608d36434ccf7628" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_vector_sink_c::d_data</definition>
+        <argsstring></argsstring>
+        <name>d_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vector__sink__c_1a87c2c80020b46755e0c3ea257210da75" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_vector_sink_c::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__vector__sink__c_1a2dc215cd7552bd233278ccfd386f170f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__vector__sink__c_8h_1aab8eabe3e616464326b7addc8701c4e5" kindref="member">gr_vector_sink_c_sptr</ref></type>
+        <definition>GR_CORE_API gr_vector_sink_c_sptr gr_make_vector_sink_c</definition>
+        <argsstring>(int vlen)</argsstring>
+        <name>gr_make_vector_sink_c</name>
+        <param>
+          <type>int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__vector__sink__c_1ac299d529f5d9a16f1dc9b5894f81390e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_vector_sink_c::gr_vector_sink_c</definition>
+        <argsstring>(int vlen)</argsstring>
+        <name>gr_vector_sink_c</name>
+        <param>
+          <type>int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vector__sink__c_1a443a150ad3a0b4ae9d3217bfe44447eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_vector_sink_c::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vector__sink__c_1a1ea54c775732c24d2e8996a7745b1493" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_vector_sink_c::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vector__sink__c_1a58730bff8892e97da6807e57072643f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_vector_sink_c::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vector__sink__c_1ad6d33e9559b51b3aeb68e41025e802a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_vector_sink_c::data</definition>
+        <argsstring>() const </argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>gr_complex sink that writes to a vector </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_sink_c.h" bodystart="43" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classgr__vector__sink__c_1a58730bff8892e97da6807e57072643f4" prot="public" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>clear</name></member>
+      <member refid="classgr__vector__sink__c_1ac0e60b95d54d4910608d36434ccf7628" prot="private" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>d_data</name></member>
+      <member refid="classgr__vector__sink__c_1a87c2c80020b46755e0c3ea257210da75" prot="private" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>d_vlen</name></member>
+      <member refid="classgr__vector__sink__c_1ad6d33e9559b51b3aeb68e41025e802a5" prot="public" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>data</name></member>
+      <member refid="classgr__vector__sink__c_1a2dc215cd7552bd233278ccfd386f170f" prot="private" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>gr_make_vector_sink_c</name></member>
+      <member refid="classgr__vector__sink__c_1ac299d529f5d9a16f1dc9b5894f81390e" prot="private" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>gr_vector_sink_c</name></member>
+      <member refid="classgr__vector__sink__c_1a1ea54c775732c24d2e8996a7745b1493" prot="public" virt="non-virtual"><scope>gr_vector_sink_c</scope><name>reset</name></member>
+      <member refid="classgr__vector__sink__c_1a443a150ad3a0b4ae9d3217bfe44447eb" prot="public" virt="virtual"><scope>gr_vector_sink_c</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

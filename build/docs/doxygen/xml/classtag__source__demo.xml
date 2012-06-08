@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classtag__source__demo" kind="class" prot="public">
+    <compoundname>tag_source_demo</compoundname>
+    <basecompoundref refid="classgr__sync__block" prot="public" virt="non-virtual">gr_sync_block</basecompoundref>
+    <includes refid="tag__source__demo_8h" local="no">tag_source_demo.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtag__source__demo_1a2e88a52bd8249af2cefbab573692b5bb" prot="private" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t tag_source_demo::_time_secs</definition>
+        <argsstring></argsstring>
+        <name>_time_secs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="120" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1a94df515e4eb6e13975ac31caf5201211" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tag_source_demo::_time_fracs</definition>
+        <argsstring></argsstring>
+        <name>_time_fracs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1ab0a3d6710bc65430186a876d181812fd" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double tag_source_demo::_samp_rate</definition>
+        <argsstring></argsstring>
+        <name>_samp_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="122" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1a42671cc1f8505dda02ece5f84363edc2" prot="private" static="no" mutable="no">
+        <type>const <ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>const uint64_t tag_source_demo::_samps_per_burst</definition>
+        <argsstring></argsstring>
+        <name>_samps_per_burst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="123" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1ae923466b2062fac723d633fe751f8ca1" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double tag_source_demo::_cycle_duration</definition>
+        <argsstring></argsstring>
+        <name>_cycle_duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="124" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1a4e82edde6a2f4af6f192685c24b96add" prot="private" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t tag_source_demo::_samps_left_in_burst</definition>
+        <argsstring></argsstring>
+        <name>_samps_left_in_burst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtag__source__demo_1abe277385a06c8c417d2fb687e95482c9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tag_source_demo::_do_new_burst</definition>
+        <argsstring></argsstring>
+        <name>_do_new_burst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="126" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtag__source__demo_1a040ce85b70575b05d9f069d9039c986e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tag_source_demo::tag_source_demo</definition>
+        <argsstring>(const uint64_t start_secs, const double start_fracs, const double samp_rate, const double idle_duration, const double burst_duration)</argsstring>
+        <name>tag_source_demo</name>
+        <param>
+          <type>const <ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>start_secs</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>start_fracs</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>samp_rate</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>idle_duration</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>burst_duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="32" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classtag__source__demo_1afc52d4e66cec13534d92abde34cadffc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void tag_source_demo::make_time_tag</definition>
+        <argsstring>(const uint64_t tag_count)</argsstring>
+        <name>make_time_tag</name>
+        <param>
+          <type>const <ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>tag_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="55" bodyend="63"/>
+        <references refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</references>
+        <references refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" compoundref="gr__basic__block_8h" startline="103" endline="103">gr_basic_block::name</references>
+        <references refid="namespacepmt_1aa4f8469d075bcccc81553ccb55408265">pmt::pmt_from_double</references>
+        <references refid="namespacepmt_1ad23c52d29b752f449c03213abb8ec263">pmt::pmt_from_uint64</references>
+        <references refid="namespacepmt_1a3b7024e45111b1f37b1b4ec700bb5d3f">pmt::pmt_make_tuple</references>
+        <references refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6">pmt::pmt_string_to_symbol</references>
+        <referencedby refid="classtag__source__demo_1ab52a13afff158b6d53c6ea1d56512d28" compoundref="tag__source__demo_8h" startline="79" endline="117">work</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtag__source__demo_1a816102a6804493b5fded33363aae4e0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void tag_source_demo::make_sob_tag</definition>
+        <argsstring>(const uint64_t tag_count)</argsstring>
+        <name>make_sob_tag</name>
+        <param>
+          <type>const <ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>tag_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="65" bodyend="70"/>
+        <references refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</references>
+        <references refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" compoundref="gr__basic__block_8h" startline="103" endline="103">gr_basic_block::name</references>
+        <references refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6">pmt::pmt_string_to_symbol</references>
+        <references refid="namespacepmt_1ad41a6c124e405727b4b5ea54247005ac">pmt::PMT_T</references>
+        <referencedby refid="classtag__source__demo_1ab52a13afff158b6d53c6ea1d56512d28" compoundref="tag__source__demo_8h" startline="79" endline="117">work</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtag__source__demo_1a1f7cf2c665c9fb575ca9b8241a9bbaa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void tag_source_demo::make_eob_tag</definition>
+        <argsstring>(const uint64_t tag_count)</argsstring>
+        <name>make_eob_tag</name>
+        <param>
+          <type>const <ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+          <declname>tag_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="72" bodyend="77"/>
+        <references refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</references>
+        <references refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" compoundref="gr__basic__block_8h" startline="103" endline="103">gr_basic_block::name</references>
+        <references refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6">pmt::pmt_string_to_symbol</references>
+        <references refid="namespacepmt_1ad41a6c124e405727b4b5ea54247005ac">pmt::PMT_T</references>
+        <referencedby refid="classtag__source__demo_1ab52a13afff158b6d53c6ea1d56512d28" compoundref="tag__source__demo_8h" startline="79" endline="117">work</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtag__source__demo_1ab52a13afff158b6d53c6ea1d56512d28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int tag_source_demo::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <reimplements refid="classgr__sync__block_1a0c523f4285a6eb690f677ee6295ab117">work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>just like <ref refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" kindref="member">gr_block::general_work</ref>, only this arranges to call consume_each for you </para>        </briefdescription>
+        <detaileddescription>
+<para>The user must override work to define the signal processing code </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="79" bodyend="117"/>
+        <references refid="classtag__source__demo_1a1f7cf2c665c9fb575ca9b8241a9bbaa2" compoundref="tag__source__demo_8h" startline="72" endline="77">make_eob_tag</references>
+        <references refid="classtag__source__demo_1a816102a6804493b5fded33363aae4e0f" compoundref="tag__source__demo_8h" startline="65" endline="70">make_sob_tag</references>
+        <references refid="classtag__source__demo_1afc52d4e66cec13534d92abde34cadffc" compoundref="tag__source__demo_8h" startline="55" endline="63">make_time_tag</references>
+        <references refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2">gr_block::nitems_written</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7013">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="7014" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7010">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="7011" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7011">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="7012" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7014">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="7012">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="7013" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7009">
+        <label>tag_source_demo</label>
+        <link refid="classtag__source__demo"/>
+        <childnode refid="7010" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7019">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="7020" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7016">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="7017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7017">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="7018" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7021">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="7022" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="7024">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="7020">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="7022">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="7018">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="7019" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7021" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="7023" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="7015">
+        <label>tag_source_demo</label>
+        <link refid="classtag__source__demo"/>
+        <childnode refid="7016" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7023">
+        <label>std::string</label>
+        <childnode refid="7024" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/examples/c++/tag_source_demo.h" bodystart="29" bodyend="128"/>
+    <listofallmembers>
+      <member refid="classtag__source__demo_1ae923466b2062fac723d633fe751f8ca1" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_cycle_duration</name></member>
+      <member refid="classtag__source__demo_1abe277385a06c8c417d2fb687e95482c9" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_do_new_burst</name></member>
+      <member refid="classtag__source__demo_1ab0a3d6710bc65430186a876d181812fd" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_samp_rate</name></member>
+      <member refid="classtag__source__demo_1a4e82edde6a2f4af6f192685c24b96add" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_samps_left_in_burst</name></member>
+      <member refid="classtag__source__demo_1a42671cc1f8505dda02ece5f84363edc2" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_samps_per_burst</name></member>
+      <member refid="classtag__source__demo_1a94df515e4eb6e13975ac31caf5201211" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_time_fracs</name></member>
+      <member refid="classtag__source__demo_1a2e88a52bd8249af2cefbab573692b5bb" prot="private" virt="non-virtual"><scope>tag_source_demo</scope><name>_time_secs</name></member>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>d_color</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>d_output_signature</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>fixed_rate</name></member>
+      <member refid="classgr__sync__block_1a0cbbc0ce275498411248e678038710b2" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__sync__block_1adaecb00ae09408c22e46c44d09aad53e" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__sync__block_1a1327e83509baf039aa3c816ea81a8f22" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>forecast</name></member>
+      <member refid="classgr__sync__block_1a56ca60b6bc20a3510f71d961891fa81b" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__sync__block_1a8e8100cc8cafbc89a0cd64fbc2fc4153" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__block_1a832d8dad2dbd38e8e9cfa0b954d37c87" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>is_unaligned</name></member>
+      <member refid="classtag__source__demo_1a1f7cf2c665c9fb575ca9b8241a9bbaa2" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>make_eob_tag</name></member>
+      <member refid="classtag__source__demo_1a816102a6804493b5fded33363aae4e0f" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>make_sob_tag</name></member>
+      <member refid="classtag__source__demo_1afc52d4e66cec13534d92abde34cadffc" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>make_time_tag</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classtag__source__demo_1a040ce85b70575b05d9f069d9039c986e" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>tag_source_demo</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>tag_source_demo</scope><name>WHITE</name></member>
+      <member refid="classtag__source__demo_1ab52a13afff158b6d53c6ea1d56512d28" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>tag_source_demo</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>tag_source_demo</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

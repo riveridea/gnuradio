@@ -1,0 +1,712 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="trellis__api_8h" kind="file">
+    <compoundname>trellis_api.h</compoundname>
+    <includes local="no">gruel/attributes.h</includes>
+    <includedby refid="fsm_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/fsm.h</includedby>
+    <includedby refid="interleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/interleaver.h</includedby>
+    <includedby refid="trellis__constellation__metrics__cf_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h</includedby>
+    <includedby refid="trellis__permutation_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_permutation.h</includedby>
+    <includedby refid="trellis__siso__combined__f_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_combined_f.h</includedby>
+    <includedby refid="trellis__siso__f_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h</includedby>
+    <includedby refid="trellis__encoder__bb_8h" local="no">trellis_encoder_bb.h</includedby>
+    <includedby refid="trellis__encoder__bi_8h" local="no">trellis_encoder_bi.h</includedby>
+    <includedby refid="trellis__encoder__bs_8h" local="no">trellis_encoder_bs.h</includedby>
+    <includedby refid="trellis__encoder__ii_8h" local="no">trellis_encoder_ii.h</includedby>
+    <includedby refid="trellis__encoder__si_8h" local="no">trellis_encoder_si.h</includedby>
+    <includedby refid="trellis__encoder__ss_8h" local="no">trellis_encoder_ss.h</includedby>
+    <includedby refid="trellis__metrics__c_8h" local="no">trellis_metrics_c.h</includedby>
+    <includedby refid="trellis__metrics__f_8h" local="no">trellis_metrics_f.h</includedby>
+    <includedby refid="trellis__metrics__i_8h" local="no">trellis_metrics_i.h</includedby>
+    <includedby refid="trellis__metrics__s_8h" local="no">trellis_metrics_s.h</includedby>
+    <includedby refid="trellis__pccc__decoder__b_8h" local="no">trellis_pccc_decoder_b.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__cb_8h" local="no">trellis_pccc_decoder_combined_cb.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__ci_8h" local="no">trellis_pccc_decoder_combined_ci.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__cs_8h" local="no">trellis_pccc_decoder_combined_cs.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fb_8h" local="no">trellis_pccc_decoder_combined_fb.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fi_8h" local="no">trellis_pccc_decoder_combined_fi.h</includedby>
+    <includedby refid="trellis__pccc__decoder__combined__fs_8h" local="no">trellis_pccc_decoder_combined_fs.h</includedby>
+    <includedby refid="trellis__pccc__decoder__i_8h" local="no">trellis_pccc_decoder_i.h</includedby>
+    <includedby refid="trellis__pccc__decoder__s_8h" local="no">trellis_pccc_decoder_s.h</includedby>
+    <includedby refid="trellis__pccc__encoder__bb_8h" local="no">trellis_pccc_encoder_bb.h</includedby>
+    <includedby refid="trellis__pccc__encoder__bi_8h" local="no">trellis_pccc_encoder_bi.h</includedby>
+    <includedby refid="trellis__pccc__encoder__bs_8h" local="no">trellis_pccc_encoder_bs.h</includedby>
+    <includedby refid="trellis__pccc__encoder__ii_8h" local="no">trellis_pccc_encoder_ii.h</includedby>
+    <includedby refid="trellis__pccc__encoder__si_8h" local="no">trellis_pccc_encoder_si.h</includedby>
+    <includedby refid="trellis__pccc__encoder__ss_8h" local="no">trellis_pccc_encoder_ss.h</includedby>
+    <includedby refid="trellis__sccc__decoder__b_8h" local="no">trellis_sccc_decoder_b.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__cb_8h" local="no">trellis_sccc_decoder_combined_cb.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__ci_8h" local="no">trellis_sccc_decoder_combined_ci.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__cs_8h" local="no">trellis_sccc_decoder_combined_cs.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fb_8h" local="no">trellis_sccc_decoder_combined_fb.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fi_8h" local="no">trellis_sccc_decoder_combined_fi.h</includedby>
+    <includedby refid="trellis__sccc__decoder__combined__fs_8h" local="no">trellis_sccc_decoder_combined_fs.h</includedby>
+    <includedby refid="trellis__sccc__decoder__i_8h" local="no">trellis_sccc_decoder_i.h</includedby>
+    <includedby refid="trellis__sccc__decoder__s_8h" local="no">trellis_sccc_decoder_s.h</includedby>
+    <includedby refid="trellis__sccc__encoder__bb_8h" local="no">trellis_sccc_encoder_bb.h</includedby>
+    <includedby refid="trellis__sccc__encoder__bi_8h" local="no">trellis_sccc_encoder_bi.h</includedby>
+    <includedby refid="trellis__sccc__encoder__bs_8h" local="no">trellis_sccc_encoder_bs.h</includedby>
+    <includedby refid="trellis__sccc__encoder__ii_8h" local="no">trellis_sccc_encoder_ii.h</includedby>
+    <includedby refid="trellis__sccc__encoder__si_8h" local="no">trellis_sccc_encoder_si.h</includedby>
+    <includedby refid="trellis__sccc__encoder__ss_8h" local="no">trellis_sccc_encoder_ss.h</includedby>
+    <includedby refid="trellis__viterbi__b_8h" local="no">trellis_viterbi_b.h</includedby>
+    <includedby refid="trellis__viterbi__combined__cb_8h" local="no">trellis_viterbi_combined_cb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ci_8h" local="no">trellis_viterbi_combined_ci.h</includedby>
+    <includedby refid="trellis__viterbi__combined__cs_8h" local="no">trellis_viterbi_combined_cs.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fb_8h" local="no">trellis_viterbi_combined_fb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fi_8h" local="no">trellis_viterbi_combined_fi.h</includedby>
+    <includedby refid="trellis__viterbi__combined__fs_8h" local="no">trellis_viterbi_combined_fs.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ib_8h" local="no">trellis_viterbi_combined_ib.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ii_8h" local="no">trellis_viterbi_combined_ii.h</includedby>
+    <includedby refid="trellis__viterbi__combined__is_8h" local="no">trellis_viterbi_combined_is.h</includedby>
+    <includedby refid="trellis__viterbi__combined__sb_8h" local="no">trellis_viterbi_combined_sb.h</includedby>
+    <includedby refid="trellis__viterbi__combined__si_8h" local="no">trellis_viterbi_combined_si.h</includedby>
+    <includedby refid="trellis__viterbi__combined__ss_8h" local="no">trellis_viterbi_combined_ss.h</includedby>
+    <includedby refid="trellis__viterbi__i_8h" local="no">trellis_viterbi_i.h</includedby>
+    <includedby refid="trellis__viterbi__s_8h" local="no">trellis_viterbi_s.h</includedby>
+    <incdepgraph>
+      <node id="815">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="814">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_api.h</label>
+        <link refid="trellis_api.h"/>
+        <childnode refid="815" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="878">
+        <label>trellis_metrics_s.h</label>
+        <link refid="trellis__metrics__s_8h"/>
+      </node>
+      <node id="865">
+        <label>trellis_sccc_decoder_s.h</label>
+        <link refid="trellis__sccc__decoder__s_8h"/>
+      </node>
+      <node id="868">
+        <label>trellis_sccc_encoder_bs.h</label>
+        <link refid="trellis__sccc__encoder__bs_8h"/>
+      </node>
+      <node id="838">
+        <label>trellis_encoder_bs.h</label>
+        <link refid="trellis__encoder__bs_8h"/>
+      </node>
+      <node id="874">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_permutation.h</label>
+        <link refid="trellis__permutation_8h"/>
+      </node>
+      <node id="861">
+        <label>trellis_sccc_decoder_combined_fb.h</label>
+        <link refid="trellis__sccc__decoder__combined__fb_8h"/>
+      </node>
+      <node id="854">
+        <label>trellis_pccc_encoder_ii.h</label>
+        <link refid="trellis__pccc__encoder__ii_8h"/>
+      </node>
+      <node id="822">
+        <label>trellis_viterbi_combined_cb.h</label>
+        <link refid="trellis__viterbi__combined__cb_8h"/>
+      </node>
+      <node id="826">
+        <label>trellis_viterbi_combined_fi.h</label>
+        <link refid="trellis__viterbi__combined__fi_8h"/>
+      </node>
+      <node id="850">
+        <label>trellis_pccc_decoder_s.h</label>
+        <link refid="trellis__pccc__decoder__s_8h"/>
+      </node>
+      <node id="857">
+        <label>trellis_sccc_decoder_b.h</label>
+        <link refid="trellis__sccc__decoder__b_8h"/>
+      </node>
+      <node id="831">
+        <label>trellis_viterbi_combined_sb.h</label>
+        <link refid="trellis__viterbi__combined__sb_8h"/>
+      </node>
+      <node id="819">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_combined_f.h</label>
+        <link refid="trellis__siso__combined__f_8h"/>
+      </node>
+      <node id="872">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/interleaver.h</label>
+        <link refid="interleaver_8h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="857" relation="include">
+        </childnode>
+        <childnode refid="858" relation="include">
+        </childnode>
+        <childnode refid="859" relation="include">
+        </childnode>
+        <childnode refid="860" relation="include">
+        </childnode>
+        <childnode refid="861" relation="include">
+        </childnode>
+        <childnode refid="862" relation="include">
+        </childnode>
+        <childnode refid="863" relation="include">
+        </childnode>
+        <childnode refid="864" relation="include">
+        </childnode>
+        <childnode refid="865" relation="include">
+        </childnode>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+        <childnode refid="870" relation="include">
+        </childnode>
+        <childnode refid="871" relation="include">
+        </childnode>
+      </node>
+      <node id="846">
+        <label>trellis_pccc_decoder_combined_fb.h</label>
+        <link refid="trellis__pccc__decoder__combined__fb_8h"/>
+      </node>
+      <node id="871">
+        <label>trellis_sccc_encoder_ss.h</label>
+        <link refid="trellis__sccc__encoder__ss_8h"/>
+      </node>
+      <node id="860">
+        <label>trellis_sccc_decoder_combined_cs.h</label>
+        <link refid="trellis__sccc__decoder__combined__cs_8h"/>
+      </node>
+      <node id="829">
+        <label>trellis_viterbi_combined_ii.h</label>
+        <link refid="trellis__viterbi__combined__ii_8h"/>
+      </node>
+      <node id="853">
+        <label>trellis_pccc_encoder_bs.h</label>
+        <link refid="trellis__pccc__encoder__bs_8h"/>
+      </node>
+      <node id="858">
+        <label>trellis_sccc_decoder_combined_cb.h</label>
+        <link refid="trellis__sccc__decoder__combined__cb_8h"/>
+      </node>
+      <node id="845">
+        <label>trellis_pccc_decoder_combined_cs.h</label>
+        <link refid="trellis__pccc__decoder__combined__cs_8h"/>
+      </node>
+      <node id="866">
+        <label>trellis_sccc_encoder_bb.h</label>
+        <link refid="trellis__sccc__encoder__bb_8h"/>
+      </node>
+      <node id="836">
+        <label>trellis_encoder_bb.h</label>
+        <link refid="trellis__encoder__bb_8h"/>
+      </node>
+      <node id="856">
+        <label>trellis_pccc_encoder_ss.h</label>
+        <link refid="trellis__pccc__encoder__ss_8h"/>
+      </node>
+      <node id="862">
+        <label>trellis_sccc_decoder_combined_fi.h</label>
+        <link refid="trellis__sccc__decoder__combined__fi_8h"/>
+      </node>
+      <node id="843">
+        <label>trellis_pccc_decoder_combined_cb.h</label>
+        <link refid="trellis__pccc__decoder__combined__cb_8h"/>
+      </node>
+      <node id="864">
+        <label>trellis_sccc_decoder_i.h</label>
+        <link refid="trellis__sccc__decoder__i_8h"/>
+      </node>
+      <node id="825">
+        <label>trellis_viterbi_combined_fb.h</label>
+        <link refid="trellis__viterbi__combined__fb_8h"/>
+      </node>
+      <node id="877">
+        <label>trellis_metrics_i.h</label>
+        <link refid="trellis__metrics__i_8h"/>
+      </node>
+      <node id="847">
+        <label>trellis_pccc_decoder_combined_fi.h</label>
+        <link refid="trellis__pccc__decoder__combined__fi_8h"/>
+      </node>
+      <node id="840">
+        <label>trellis_encoder_si.h</label>
+        <link refid="trellis__encoder__si_8h"/>
+      </node>
+      <node id="835">
+        <label>trellis_viterbi_s.h</label>
+        <link refid="trellis__viterbi__s_8h"/>
+      </node>
+      <node id="842">
+        <label>trellis_pccc_decoder_b.h</label>
+        <link refid="trellis__pccc__decoder__b_8h"/>
+      </node>
+      <node id="828">
+        <label>trellis_viterbi_combined_ib.h</label>
+        <link refid="trellis__viterbi__combined__ib_8h"/>
+      </node>
+      <node id="817">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="857" relation="include">
+        </childnode>
+        <childnode refid="858" relation="include">
+        </childnode>
+        <childnode refid="859" relation="include">
+        </childnode>
+        <childnode refid="860" relation="include">
+        </childnode>
+        <childnode refid="861" relation="include">
+        </childnode>
+        <childnode refid="862" relation="include">
+        </childnode>
+        <childnode refid="863" relation="include">
+        </childnode>
+        <childnode refid="864" relation="include">
+        </childnode>
+        <childnode refid="865" relation="include">
+        </childnode>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+        <childnode refid="870" relation="include">
+        </childnode>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+      </node>
+      <node id="851">
+        <label>trellis_pccc_encoder_bb.h</label>
+        <link refid="trellis__pccc__encoder__bb_8h"/>
+      </node>
+      <node id="859">
+        <label>trellis_sccc_decoder_combined_ci.h</label>
+        <link refid="trellis__sccc__decoder__combined__ci_8h"/>
+      </node>
+      <node id="818">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h</label>
+        <link refid="core__algorithms_8h"/>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+      </node>
+      <node id="837">
+        <label>trellis_encoder_bi.h</label>
+        <link refid="trellis__encoder__bi_8h"/>
+      </node>
+      <node id="824">
+        <label>trellis_viterbi_combined_cs.h</label>
+        <link refid="trellis__viterbi__combined__cs_8h"/>
+      </node>
+      <node id="870">
+        <label>trellis_sccc_encoder_si.h</label>
+        <link refid="trellis__sccc__encoder__si_8h"/>
+      </node>
+      <node id="867">
+        <label>trellis_sccc_encoder_bi.h</label>
+        <link refid="trellis__sccc__encoder__bi_8h"/>
+      </node>
+      <node id="833">
+        <label>trellis_viterbi_combined_ss.h</label>
+        <link refid="trellis__viterbi__combined__ss_8h"/>
+      </node>
+      <node id="839">
+        <label>trellis_encoder_ii.h</label>
+        <link refid="trellis__encoder__ii_8h"/>
+      </node>
+      <node id="827">
+        <label>trellis_viterbi_combined_fs.h</label>
+        <link refid="trellis__viterbi__combined__fs_8h"/>
+      </node>
+      <node id="844">
+        <label>trellis_pccc_decoder_combined_ci.h</label>
+        <link refid="trellis__pccc__decoder__combined__ci_8h"/>
+      </node>
+      <node id="816">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_api.h</label>
+        <link refid="trellis_api.h"/>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="872" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="853" relation="include">
+        </childnode>
+        <childnode refid="854" relation="include">
+        </childnode>
+        <childnode refid="855" relation="include">
+        </childnode>
+        <childnode refid="856" relation="include">
+        </childnode>
+        <childnode refid="857" relation="include">
+        </childnode>
+        <childnode refid="858" relation="include">
+        </childnode>
+        <childnode refid="859" relation="include">
+        </childnode>
+        <childnode refid="860" relation="include">
+        </childnode>
+        <childnode refid="861" relation="include">
+        </childnode>
+        <childnode refid="862" relation="include">
+        </childnode>
+        <childnode refid="863" relation="include">
+        </childnode>
+        <childnode refid="864" relation="include">
+        </childnode>
+        <childnode refid="865" relation="include">
+        </childnode>
+        <childnode refid="866" relation="include">
+        </childnode>
+        <childnode refid="867" relation="include">
+        </childnode>
+        <childnode refid="868" relation="include">
+        </childnode>
+        <childnode refid="869" relation="include">
+        </childnode>
+        <childnode refid="870" relation="include">
+        </childnode>
+        <childnode refid="871" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>trellis_viterbi_b.h</label>
+        <link refid="trellis__viterbi__b_8h"/>
+      </node>
+      <node id="876">
+        <label>trellis_metrics_f.h</label>
+        <link refid="trellis__metrics__f_8h"/>
+      </node>
+      <node id="849">
+        <label>trellis_pccc_decoder_i.h</label>
+        <link refid="trellis__pccc__decoder__i_8h"/>
+      </node>
+      <node id="855">
+        <label>trellis_pccc_encoder_si.h</label>
+        <link refid="trellis__pccc__encoder__si_8h"/>
+      </node>
+      <node id="873">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_constellation_metrics_cf.h</label>
+        <link refid="trellis__constellation__metrics__cf_8h"/>
+      </node>
+      <node id="863">
+        <label>trellis_sccc_decoder_combined_fs.h</label>
+        <link refid="trellis__sccc__decoder__combined__fs_8h"/>
+      </node>
+      <node id="852">
+        <label>trellis_pccc_encoder_bi.h</label>
+        <link refid="trellis__pccc__encoder__bi_8h"/>
+      </node>
+      <node id="820">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h</label>
+        <link refid="trellis__siso__f_8h"/>
+      </node>
+      <node id="823">
+        <label>trellis_viterbi_combined_ci.h</label>
+        <link refid="trellis__viterbi__combined__ci_8h"/>
+      </node>
+      <node id="848">
+        <label>trellis_pccc_decoder_combined_fs.h</label>
+        <link refid="trellis__pccc__decoder__combined__fs_8h"/>
+      </node>
+      <node id="869">
+        <label>trellis_sccc_encoder_ii.h</label>
+        <link refid="trellis__sccc__encoder__ii_8h"/>
+      </node>
+      <node id="841">
+        <label>trellis_encoder_ss.h</label>
+        <link refid="trellis__encoder__ss_8h"/>
+      </node>
+      <node id="832">
+        <label>trellis_viterbi_combined_si.h</label>
+        <link refid="trellis__viterbi__combined__si_8h"/>
+      </node>
+      <node id="830">
+        <label>trellis_viterbi_combined_is.h</label>
+        <link refid="trellis__viterbi__combined__is_8h"/>
+      </node>
+      <node id="875">
+        <label>trellis_metrics_c.h</label>
+        <link refid="trellis__metrics__c_8h"/>
+      </node>
+      <node id="834">
+        <label>trellis_viterbi_i.h</label>
+        <link refid="trellis__viterbi__i_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" prot="public" static="no">
+        <name>TRELLIS_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_api.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2011<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_TRELLIS_API_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_TRELLIS_API_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gruel/attributes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>gnuradio_trellis_EXPORTS</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>TRELLIS_API<sp/>__GR_ATTR_EXPORT</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="30" refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>TRELLIS_API<sp/>__GR_ATTR_IMPORT</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_TRELLIS_API_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_api.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="group__uhd__blk" kind="group">
+    <compoundname>uhd_blk</compoundname>
+    <title>UHD Interface</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__uhd__blk_1gaa05125887cab9f7fb43e4d93243eb1a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__uhd__api_8h_1af9aa018424cf030907c7f8c5a48f4771" kindref="member">GR_UHD_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">boost::shared_ptr</ref>&lt; <ref refid="classuhd__amsg__source" kindref="compound">uhd_amsg_source</ref> &gt;</type>
+        <definition>GR_UHD_API boost::shared_ptr&lt;uhd_amsg_source&gt; uhd_make_amsg_source</definition>
+        <argsstring>(const uhd::device_addr_t &amp;device_addr, gr_msg_queue_sptr msgq)</argsstring>
+        <name>uhd_make_amsg_source</name>
+        <param>
+          <type>const uhd::device_addr_t &amp;</type>
+          <declname>device_addr</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_msg_queue_sptr</ref></type>
+          <declname>msgq</declname>
+        </param>
+        <briefdescription>
+<para>Make a new USRP asynchronous message-based source block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_amsg_source.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__uhd__blk_1gae6b24e6bb291ec3aeddd50b7c48721b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__uhd__api_8h_1af9aa018424cf030907c7f8c5a48f4771" kindref="member">GR_UHD_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">boost::shared_ptr</ref>&lt; <ref refid="classuhd__usrp__sink" kindref="compound">uhd_usrp_sink</ref> &gt;</type>
+        <definition>GR_UHD_API boost::shared_ptr&lt;uhd_usrp_sink&gt; uhd_make_usrp_sink</definition>
+        <argsstring>(const uhd::device_addr_t &amp;device_addr, const uhd::io_type_t &amp;io_type, size_t num_channels)</argsstring>
+        <name>uhd_make_usrp_sink</name>
+        <param>
+          <type>const uhd::device_addr_t &amp;</type>
+          <declname>device_addr</declname>
+        </param>
+        <param>
+          <type>const uhd::io_type_t &amp;</type>
+          <declname>io_type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_channels</declname>
+        </param>
+        <briefdescription>
+<para>Make a new USRP sink block.</para><para>The USRP sink block reads a stream and transmits the samples. The sink block also provides API calls for transmitter settings. </para>        </briefdescription>
+        <detaileddescription>
+<para>TX Stream tagging:</para><para>The following tag keys will be consumed by the work function:<itemizedlist>
+<listitem><para><ref refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6" kindref="member">pmt::pmt_string_to_symbol</ref>(&quot;tx_sob&quot;)</para></listitem><listitem><para><ref refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6" kindref="member">pmt::pmt_string_to_symbol</ref>(&quot;tx_eob&quot;)</para></listitem><listitem><para><ref refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6" kindref="member">pmt::pmt_string_to_symbol</ref>(&quot;tx_time&quot;)</para></listitem></itemizedlist>
+</para><para>The sob and eob (start and end of burst) tag values are pmt booleans. When present, burst tags should be set to true (<ref refid="namespacepmt_1ad41a6c124e405727b4b5ea54247005ac" kindref="member">pmt::PMT_T</ref>).</para><para>The timstamp tag value is a pmt tuple of the following: (uint64 seconds, and double fractional seconds).</para><para>See the UHD manual for more detailed documentation: <ulink url="http://code.ettus.com/redmine/ettus/projects/uhd/wiki">http://code.ettus.com/redmine/ettus/projects/uhd/wiki</ulink></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address to identify the hardware </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>io_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired input data type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of stream from the device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new USRP sink block object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="group__uhd__blk_1ga21d8f9c05e6a24d118628e2ed98c2e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__uhd__api_8h_1af9aa018424cf030907c7f8c5a48f4771" kindref="member">GR_UHD_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">boost::shared_ptr</ref>&lt; <ref refid="classuhd__usrp__source" kindref="compound">uhd_usrp_source</ref> &gt;</type>
+        <definition>GR_UHD_API boost::shared_ptr&lt;uhd_usrp_source&gt; uhd_make_usrp_source</definition>
+        <argsstring>(const uhd::device_addr_t &amp;device_addr, const uhd::io_type_t &amp;io_type, size_t num_channels)</argsstring>
+        <name>uhd_make_usrp_source</name>
+        <param>
+          <type>const uhd::device_addr_t &amp;</type>
+          <declname>device_addr</declname>
+        </param>
+        <param>
+          <type>const uhd::io_type_t &amp;</type>
+          <declname>io_type</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_channels</declname>
+        </param>
+        <briefdescription>
+<para>Make a new USRP source block.</para><para>The USRP source block receives samples and writes to a stream. The source block also provides API calls for receiver settings. </para>        </briefdescription>
+        <detaileddescription>
+<para>RX Stream tagging:</para><para>The following tag keys will be produced by the work function:<itemizedlist>
+<listitem><para><ref refid="namespacepmt_1a9175b04fc88cb7be663ee7b7925dfda6" kindref="member">pmt::pmt_string_to_symbol</ref>(&quot;rx_time&quot;)</para></listitem></itemizedlist>
+</para><para>The timstamp tag value is a pmt tuple of the following: (uint64 seconds, and double fractional seconds). A timestamp tag is produced at start() and after overflows.</para><para>See the UHD manual for more detailed documentation: <ulink url="http://code.ettus.com/redmine/ettus/projects/uhd/wiki">http://code.ettus.com/redmine/ettus/projects/uhd/wiki</ulink></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address to identify the hardware </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>io_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired output data type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of stream from the device </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new USRP source block object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_source.h" line="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

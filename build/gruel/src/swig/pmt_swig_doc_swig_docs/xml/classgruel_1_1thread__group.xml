@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgruel_1_1thread__group" kind="class" prot="public">
+    <compoundname>gruel::thread_group</compoundname>
+    <includes refid="thread__group_8h" local="no">thread_group.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgruel_1_1thread__group_1a20c3ea8065bd879c7b8fe95b868cc6ed" prot="private" static="no" mutable="no">
+        <type>std::list&lt; boost::thread * &gt;</type>
+        <definition>std::list&lt;boost::thread*&gt; gruel::thread_group::m_threads</definition>
+        <argsstring></argsstring>
+        <name>m_threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgruel_1_1thread__group_1aec4014306b25e5e1e572aa6c3aaa6a7e" prot="private" static="no" mutable="yes">
+        <type>boost::shared_mutex</type>
+        <definition>boost::shared_mutex gruel::thread_group::m_mutex</definition>
+        <argsstring></argsstring>
+        <name>m_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgruel_1_1thread__group_1af8df0a7a066fc4408e7d3cfaf30ca32e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gruel::thread_group::thread_group</definition>
+        <argsstring>()</argsstring>
+        <name>thread_group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1aa3f3df343999967f01518ead0cf17cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gruel::thread_group::~thread_group</definition>
+        <argsstring>()</argsstring>
+        <name>~thread_group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1a2b21f505b5a5ce3ec3669886e73f805a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::thread *</type>
+        <definition>boost::thread* gruel::thread_group::create_thread</definition>
+        <argsstring>(const boost::function0&lt; void &gt; &amp;threadfunc)</argsstring>
+        <name>create_thread</name>
+        <param>
+          <type>const boost::function0&lt; void &gt; &amp;</type>
+          <declname>threadfunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1a8bb35726ea6c93c186628b902e131069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gruel::thread_group::add_thread</definition>
+        <argsstring>(boost::thread *thrd)</argsstring>
+        <name>add_thread</name>
+        <param>
+          <type>boost::thread *</type>
+          <declname>thrd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1a9f5f4f366bd41cfb359f453c4bff2507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gruel::thread_group::remove_thread</definition>
+        <argsstring>(boost::thread *thrd)</argsstring>
+        <name>remove_thread</name>
+        <param>
+          <type>boost::thread *</type>
+          <declname>thrd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1a0dbb2d31902c7fd937ee663a7874b522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gruel::thread_group::join_all</definition>
+        <argsstring>()</argsstring>
+        <name>join_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1a79bc2e4ed04468ceb5084d019952ad7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gruel::thread_group::interrupt_all</definition>
+        <argsstring>()</argsstring>
+        <name>interrupt_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1thread__group_1ae0d59795aab53ea8bdaafa9f24e4a288" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gruel::thread_group::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" line="27" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h" bodystart="26" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classgruel_1_1thread__group_1a8bb35726ea6c93c186628b902e131069" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>add_thread</name></member>
+      <member refid="classgruel_1_1thread__group_1a2b21f505b5a5ce3ec3669886e73f805a" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>create_thread</name></member>
+      <member refid="classgruel_1_1thread__group_1a79bc2e4ed04468ceb5084d019952ad7a" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>interrupt_all</name></member>
+      <member refid="classgruel_1_1thread__group_1a0dbb2d31902c7fd937ee663a7874b522" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>join_all</name></member>
+      <member refid="classgruel_1_1thread__group_1aec4014306b25e5e1e572aa6c3aaa6a7e" prot="private" virt="non-virtual"><scope>gruel::thread_group</scope><name>m_mutex</name></member>
+      <member refid="classgruel_1_1thread__group_1a20c3ea8065bd879c7b8fe95b868cc6ed" prot="private" virt="non-virtual"><scope>gruel::thread_group</scope><name>m_threads</name></member>
+      <member refid="classgruel_1_1thread__group_1a9f5f4f366bd41cfb359f453c4bff2507" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>remove_thread</name></member>
+      <member refid="classgruel_1_1thread__group_1ae0d59795aab53ea8bdaafa9f24e4a288" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>size</name></member>
+      <member refid="classgruel_1_1thread__group_1af8df0a7a066fc4408e7d3cfaf30ca32e" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>thread_group</name></member>
+      <member refid="classgruel_1_1thread__group_1aa3f3df343999967f01518ead0cf17cd5" prot="public" virt="non-virtual"><scope>gruel::thread_group</scope><name>~thread_group</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

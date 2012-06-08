@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vmcircbuf__mmap__tmpfile__factory" kind="class" prot="public">
+    <compoundname>gr_vmcircbuf_mmap_tmpfile_factory</compoundname>
+    <basecompoundref refid="classgr__vmcircbuf__factory" prot="public" virt="non-virtual">gr_vmcircbuf_factory</basecompoundref>
+    <includes refid="gr__vmcircbuf__mmap__tmpfile_8h" local="no">gr_vmcircbuf_mmap_tmpfile.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgr__vmcircbuf__mmap__tmpfile__factory_1acb6c685535ef912efc4f0c0682190f41" prot="private" static="yes" mutable="no">
+        <type><ref refid="classgr__vmcircbuf__factory" kindref="compound">gr_vmcircbuf_factory</ref> *</type>
+        <definition>gr_vmcircbuf_factory* gr_vmcircbuf_mmap_tmpfile_factory::s_the_factory</definition>
+        <argsstring></argsstring>
+        <name>s_the_factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr__vmcircbuf__mmap__tmpfile__factory_1a7ae863b82c23b9696425fa60b06639f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr__vmcircbuf__factory" kindref="compound">gr_vmcircbuf_factory</ref> *</type>
+        <definition>static gr_vmcircbuf_factory* gr_vmcircbuf_mmap_tmpfile_factory::singleton</definition>
+        <argsstring>()</argsstring>
+        <name>singleton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vmcircbuf__mmap__tmpfile__factory_1a96b5bc3b5be9becb3304ebd99ff7a98f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* gr_vmcircbuf_mmap_tmpfile_factory::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <reimplements refid="classgr__vmcircbuf__factory_1ac8f96616c04ac03db2c5f9fa0c2d728d">name</reimplements>
+        <briefdescription>
+<para>return name of this factory </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vmcircbuf__mmap__tmpfile__factory_1af21cbed100a7518c960af20b570c93e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_vmcircbuf_mmap_tmpfile_factory::granularity</definition>
+        <argsstring>()</argsstring>
+        <name>granularity</name>
+        <reimplements refid="classgr__vmcircbuf__factory_1a1e6730e738aef0a4164538ce8bcf5e8d">granularity</reimplements>
+        <briefdescription>
+<para>return granularity of mapping, typically equal to page size </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vmcircbuf__mmap__tmpfile__factory_1a3d1ede7a9b2c35892b2237bef39a10ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classgr__vmcircbuf" kindref="compound">gr_vmcircbuf</ref> *</type>
+        <definition>virtual gr_vmcircbuf* gr_vmcircbuf_mmap_tmpfile_factory::make</definition>
+        <argsstring>(int size)</argsstring>
+        <name>make</name>
+        <reimplements refid="classgr__vmcircbuf__factory_1a93e1d9a839a9edc332e1b7b9eb594293">make</reimplements>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>return a <ref refid="classgr__vmcircbuf" kindref="compound">gr_vmcircbuf</ref>, or 0 if unable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Call this to create a doubly mapped circular buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>concrete factory for circular buffers built using mmap and shm_open </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="537">
+        <label>gr_vmcircbuf_mmap_tmpfile_factory</label>
+        <link refid="classgr__vmcircbuf__mmap__tmpfile__factory"/>
+        <childnode refid="538" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="538">
+        <label>gr_vmcircbuf_factory</label>
+        <link refid="classgr__vmcircbuf__factory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="539">
+        <label>gr_vmcircbuf_mmap_tmpfile_factory</label>
+        <link refid="classgr__vmcircbuf__mmap__tmpfile__factory"/>
+        <childnode refid="540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="540">
+        <label>gr_vmcircbuf_factory</label>
+        <link refid="classgr__vmcircbuf__factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_mmap_tmpfile.h" bodystart="45" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classgr__vmcircbuf__factory_1a5d08857f4d2c09b0bd027963cf904a10" prot="protected" virt="non-virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>gr_vmcircbuf_factory</name></member>
+      <member refid="classgr__vmcircbuf__mmap__tmpfile__factory_1af21cbed100a7518c960af20b570c93e6" prot="public" virt="virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>granularity</name></member>
+      <member refid="classgr__vmcircbuf__mmap__tmpfile__factory_1a3d1ede7a9b2c35892b2237bef39a10ca" prot="public" virt="virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>make</name></member>
+      <member refid="classgr__vmcircbuf__mmap__tmpfile__factory_1a96b5bc3b5be9becb3304ebd99ff7a98f" prot="public" virt="virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>name</name></member>
+      <member refid="classgr__vmcircbuf__mmap__tmpfile__factory_1acb6c685535ef912efc4f0c0682190f41" prot="private" virt="non-virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>s_the_factory</name></member>
+      <member refid="classgr__vmcircbuf__mmap__tmpfile__factory_1a7ae863b82c23b9696425fa60b06639f5" prot="public" virt="non-virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>singleton</name></member>
+      <member refid="classgr__vmcircbuf__factory_1af7b1bc5f8cf80eadd8f771a8931e10cf" prot="protected" virt="virtual"><scope>gr_vmcircbuf_mmap_tmpfile_factory</scope><name>~gr_vmcircbuf_factory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,655 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__packet__sink" kind="class" prot="public">
+    <compoundname>digital_packet_sink</compoundname>
+    <basecompoundref refid="classgr__sync__block" prot="public" virt="non-virtual">gr_sync_block</basecompoundref>
+    <includes refid="digital__packet__sink_8h" local="no">digital_packet_sink.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998" prot="private" static="no">
+        <name>state_t</name>
+        <enumvalue id="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a74f992da58ab161185580da6e2973dcd" prot="private">
+          <name>STATE_SYNC_SEARCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a1964752f12c12c175022a953fdd9d9f8" prot="private">
+          <name>STATE_HAVE_SYNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a551774b6f9181877d1f4facb3e4e2999" prot="private">
+          <name>STATE_HAVE_HEADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdigital__packet__sink_1a4aeddfb2c284d9298d403004ae174a90" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int digital_packet_sink::MAX_PKT_LEN</definition>
+        <argsstring></argsstring>
+        <name>MAX_PKT_LEN</name>
+        <initializer> 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a3745844bde7527fd5189c6bdb7852ce8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int digital_packet_sink::HEADERBITLEN</definition>
+        <argsstring></argsstring>
+        <name>HEADERBITLEN</name>
+        <initializer> 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__packet__sink_1a0c90b85d8cd367b3d39dcfed88de5594" prot="private" static="no" mutable="no">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_msg_queue_sptr</ref></type>
+        <definition>gr_msg_queue_sptr digital_packet_sink::d_target_queue</definition>
+        <argsstring></argsstring>
+        <name>d_target_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1ae3ba7a77e49072a94debf47cd5eb25d2" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long digital_packet_sink::d_sync_vector</definition>
+        <argsstring></argsstring>
+        <name>d_sync_vector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a9dfe5093a5ea4018660ce6db946926a3" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_packet_sink::d_threshold</definition>
+        <argsstring></argsstring>
+        <name>d_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a68602c42d6b5667e450bff993b6c66ba" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t digital_packet_sink::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a9dc1e32ff39f55dc118985c5184d03de" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long digital_packet_sink::d_shift_reg</definition>
+        <argsstring></argsstring>
+        <name>d_shift_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1ad16ba7e67b3b7246f5b90f89cbae898c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_packet_sink::d_header</definition>
+        <argsstring></argsstring>
+        <name>d_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1adc9bb901573636c9fda4ea91325e2fd9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_packet_sink::d_headerbitlen_cnt</definition>
+        <argsstring></argsstring>
+        <name>d_headerbitlen_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a7bb73fdd76312e7297688d7302c4ea61" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char digital_packet_sink::d_packet[MAX_PKT_LEN]</definition>
+        <argsstring>[MAX_PKT_LEN]</argsstring>
+        <name>d_packet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a10ec7083deda27cd24f0928709fa8b7d" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char digital_packet_sink::d_packet_byte</definition>
+        <argsstring></argsstring>
+        <name>d_packet_byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a229f9650fbcbb2c9e0f784c84bbca2a6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_packet_sink::d_packet_byte_index</definition>
+        <argsstring></argsstring>
+        <name>d_packet_byte_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a2d542b6180eee21e769a1f90e696a5b9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_packet_sink::d_packetlen</definition>
+        <argsstring></argsstring>
+        <name>d_packetlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__packet__sink_1a856fa9ecb6b8e4f729d853e7051a3513" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_packet_sink::d_packetlen_cnt</definition>
+        <argsstring></argsstring>
+        <name>d_packetlen_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="89" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__packet__sink_1a629303d0843d0ce6a44ffadd1cd85b5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_packet_sink_sptr</ref></type>
+        <definition>DIGITAL_API digital_packet_sink_sptr digital_make_packet_sink</definition>
+        <argsstring>(const std::vector&lt; unsigned char &gt; &amp;sync_vector, gr_msg_queue_sptr target_queue, int threshold)</argsstring>
+        <name>digital_make_packet_sink</name>
+        <param>
+          <type>const std::vector&lt; unsigned char &gt; &amp;</type>
+          <declname>sync_vector</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_msg_queue_sptr</ref></type>
+          <declname>target_queue</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__packet__sink_1ad2a3e2217c5b7e32c367aeb698dbc087" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_packet_sink::digital_packet_sink</definition>
+        <argsstring>(const std::vector&lt; unsigned char &gt; &amp;sync_vector, gr_msg_queue_sptr target_queue, int threshold)</argsstring>
+        <name>digital_packet_sink</name>
+        <param>
+          <type>const std::vector&lt; unsigned char &gt; &amp;</type>
+          <declname>sync_vector</declname>
+        </param>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">gr_msg_queue_sptr</ref></type>
+          <declname>target_queue</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1a65022bc72119138da6ca451b7d5fe805" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_packet_sink::enter_search</definition>
+        <argsstring>()</argsstring>
+        <name>enter_search</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1a9c296570e79b8b0332d22bfbe8372c07" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_packet_sink::enter_have_sync</definition>
+        <argsstring>()</argsstring>
+        <name>enter_have_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1ad80bd30646af6a8a20ac76864b190c57" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void digital_packet_sink::enter_have_header</definition>
+        <argsstring>(int payload_len)</argsstring>
+        <name>enter_have_header</name>
+        <param>
+          <type>int</type>
+          <declname>payload_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1abdd5acf50b7271440fb6e20b14a1a4e5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_packet_sink::slice</definition>
+        <argsstring>(float x)</argsstring>
+        <name>slice</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="100" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1a7716a78e10dfa2c582ec8cbd19b0a698" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool digital_packet_sink::header_ok</definition>
+        <argsstring>()</argsstring>
+        <name>header_ok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="103" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1a1dbbd3c74f1b733f37fa714bd12fcdc3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_packet_sink::header_payload_len</definition>
+        <argsstring>()</argsstring>
+        <name>header_payload_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="109" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="108" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__packet__sink_1a8179d7d2507fc81d4cc755c9322649a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_packet_sink::~digital_packet_sink</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_packet_sink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1aedd3c9b8a702b6e9111a53684b81b272" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int digital_packet_sink::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <reimplements refid="classgr__sync__block_1a0c523f4285a6eb690f677ee6295ab117">work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>just like <ref refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" kindref="member">gr_block::general_work</ref>, only this arranges to call consume_each for you </para>        </briefdescription>
+        <detaileddescription>
+<para>The user must override work to define the signal processing code </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__packet__sink_1a733587ee87c332e10972eb4c52fc138b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool digital_packet_sink::carrier_sensed</definition>
+        <argsstring>() const </argsstring>
+        <name>carrier_sensed</name>
+        <briefdescription>
+<para>return true if we detect carrier </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>process received bits looking for packet sync, header, and process bits into packet</para><para>input: stream of symbols to be sliced. </para>    </briefdescription>
+    <detaileddescription>
+<para>output: none. Pushes assembled packet into target queue</para><para>The packet sink takes in a stream of binary symbols that are sliced around 0. The bits are then checked for the <computeroutput>sync_vector</computeroutput> to determine find and decode the packet. It then expects a fixed length header of 2 16-bit shorts containing the payload length, followed by the payload. If the 2 16-bit shorts are not identical, this packet is ignored. Better algs are welcome.</para><para>This block is not very useful anymore as it only works with 2-level modulations such as BPSK or GMSK. The block can generally be replaced with a correlate access code and frame sink blocks.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sync_vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The synchronization vector as a vector of 1&apos;s and 0&apos;s. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target_queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message queue that packets are sent to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bits that can be incorrect in the <computeroutput>sync_vector</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1592">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1593" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1589">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="1590" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1590">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1591" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1588">
+        <label>digital_packet_sink</label>
+        <link refid="classdigital__packet__sink"/>
+        <childnode refid="1589" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1593">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1591">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1592" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1598">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1599" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1595">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="1596" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1596">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1600">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="1601" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="1603">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1594">
+        <label>digital_packet_sink</label>
+        <link refid="classdigital__packet__sink"/>
+        <childnode refid="1595" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1599">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1601">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="1597">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1598" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1600" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="1602" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1602">
+        <label>std::string</label>
+        <childnode refid="1603" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_packet_sink.h" bodystart="61" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>BLACK</name></member>
+      <member refid="classdigital__packet__sink_1a733587ee87c332e10972eb4c52fc138b" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>carrier_sensed</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_color</name></member>
+      <member refid="classdigital__packet__sink_1ad16ba7e67b3b7246f5b90f89cbae898c" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_header</name></member>
+      <member refid="classdigital__packet__sink_1adc9bb901573636c9fda4ea91325e2fd9" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_headerbitlen_cnt</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_output_signature</name></member>
+      <member refid="classdigital__packet__sink_1a7bb73fdd76312e7297688d7302c4ea61" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_packet</name></member>
+      <member refid="classdigital__packet__sink_1a10ec7083deda27cd24f0928709fa8b7d" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_packet_byte</name></member>
+      <member refid="classdigital__packet__sink_1a229f9650fbcbb2c9e0f784c84bbca2a6" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_packet_byte_index</name></member>
+      <member refid="classdigital__packet__sink_1a2d542b6180eee21e769a1f90e696a5b9" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_packetlen</name></member>
+      <member refid="classdigital__packet__sink_1a856fa9ecb6b8e4f729d853e7051a3513" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_packetlen_cnt</name></member>
+      <member refid="classdigital__packet__sink_1a9dc1e32ff39f55dc118985c5184d03de" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_shift_reg</name></member>
+      <member refid="classdigital__packet__sink_1a68602c42d6b5667e450bff993b6c66ba" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_state</name></member>
+      <member refid="classdigital__packet__sink_1ae3ba7a77e49072a94debf47cd5eb25d2" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_sync_vector</name></member>
+      <member refid="classdigital__packet__sink_1a0c90b85d8cd367b3d39dcfed88de5594" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_target_queue</name></member>
+      <member refid="classdigital__packet__sink_1a9dfe5093a5ea4018660ce6db946926a3" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_threshold</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>detail</name></member>
+      <member refid="classdigital__packet__sink_1a629303d0843d0ce6a44ffadd1cd85b5a" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>digital_make_packet_sink</name></member>
+      <member refid="classdigital__packet__sink_1ad2a3e2217c5b7e32c367aeb698dbc087" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>digital_packet_sink</name></member>
+      <member refid="classdigital__packet__sink_1ad80bd30646af6a8a20ac76864b190c57" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>enter_have_header</name></member>
+      <member refid="classdigital__packet__sink_1a9c296570e79b8b0332d22bfbe8372c07" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>enter_have_sync</name></member>
+      <member refid="classdigital__packet__sink_1a65022bc72119138da6ca451b7d5fe805" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>enter_search</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>fixed_rate</name></member>
+      <member refid="classgr__sync__block_1a0cbbc0ce275498411248e678038710b2" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__sync__block_1adaecb00ae09408c22e46c44d09aad53e" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__sync__block_1a1327e83509baf039aa3c816ea81a8f22" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>forecast</name></member>
+      <member refid="classgr__sync__block_1a56ca60b6bc20a3510f71d961891fa81b" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__sync__block_1a8e8100cc8cafbc89a0cd64fbc2fc4153" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__block_1a832d8dad2dbd38e8e9cfa0b954d37c87" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>GREY</name></member>
+      <member refid="classdigital__packet__sink_1a7716a78e10dfa2c582ec8cbd19b0a698" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>header_ok</name></member>
+      <member refid="classdigital__packet__sink_1a1dbbd3c74f1b733f37fa714bd12fcdc3" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>header_payload_len</name></member>
+      <member refid="classdigital__packet__sink_1a3745844bde7527fd5189c6bdb7852ce8" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>HEADERBITLEN</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>is_unaligned</name></member>
+      <member refid="classdigital__packet__sink_1a4aeddfb2c284d9298d403004ae174a90" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>MAX_PKT_LEN</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>set_unaligned</name></member>
+      <member refid="classdigital__packet__sink_1abdd5acf50b7271440fb6e20b14a1a4e5" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>slice</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>start</name></member>
+      <member refid="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a551774b6f9181877d1f4facb3e4e2999" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>STATE_HAVE_HEADER</name></member>
+      <member refid="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a1964752f12c12c175022a953fdd9d9f8" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>STATE_HAVE_SYNC</name></member>
+      <member refid="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998a74f992da58ab161185580da6e2973dcd" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>STATE_SYNC_SEARCH</name></member>
+      <member refid="classdigital__packet__sink_1a8a2a31f36a38ba7eff562cc8d7b36998" prot="private" virt="non-virtual"><scope>digital_packet_sink</scope><name>state_t</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>digital_packet_sink</scope><name>WHITE</name></member>
+      <member refid="classdigital__packet__sink_1aedd3c9b8a702b6e9111a53684b81b272" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>WORK_DONE</name></member>
+      <member refid="classdigital__packet__sink_1a8179d7d2507fc81d4cc755c9322649a9" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>~digital_packet_sink</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>digital_packet_sink</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>digital_packet_sink</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__slicer__agc" kind="class" prot="public">
+    <compoundname>atsci_slicer_agc</compoundname>
+    <includes refid="atsci__slicer__agc_8h" local="no">atsci_slicer_agc.h</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classatsci__slicer__agc_1aa73b0cd4349399cc57f1fcbb14e8080f" prot="protected" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float atsci_slicer_agc::REFERENCE</definition>
+        <argsstring></argsstring>
+        <name>REFERENCE</name>
+        <initializer> 1.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__slicer__agc_1a212c9d68fda24b6dcbc90a03b5ec2e8d" prot="protected" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float atsci_slicer_agc::RATE</definition>
+        <argsstring></argsstring>
+        <name>RATE</name>
+        <initializer> 1.0e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsci__slicer__agc_1a690c55e1936f7e0205f28a364ca541ed" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float atsci_slicer_agc::_gain</definition>
+        <argsstring></argsstring>
+        <name>_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__slicer__agc_1ac318e0019a10af4c08cea2a7df35861e" prot="protected" static="no" mutable="no">
+        <type>gr_single_pole_iir&lt; float, float, float &gt;</type>
+        <definition>gr_single_pole_iir&lt;float,float,float&gt; atsci_slicer_agc::dc</definition>
+        <argsstring></argsstring>
+        <name>dc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__slicer__agc_1ad39823f47cff87e98a626937f228e5eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>atsci_slicer_agc::atsci_slicer_agc</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_slicer_agc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__slicer__agc_1af7ff4f74413968155f6118c4418f74b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float atsci_slicer_agc::gain</definition>
+        <argsstring>()</argsstring>
+        <name>gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__slicer__agc_1a7993639d6541f9f9948d6df8e8fd4e0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float atsci_slicer_agc::scale</definition>
+        <argsstring>(float input)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>float</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="45" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Automatic Gain Control class for atsc slicer. </para>    </briefdescription>
+    <detaileddescription>
+<para>Given perfect data, output values will be +/- {7, 5, 3, 1} </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h" bodystart="36" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classatsci__slicer__agc_1a690c55e1936f7e0205f28a364ca541ed" prot="protected" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>_gain</name></member>
+      <member refid="classatsci__slicer__agc_1ad39823f47cff87e98a626937f228e5eb" prot="public" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>atsci_slicer_agc</name></member>
+      <member refid="classatsci__slicer__agc_1ac318e0019a10af4c08cea2a7df35861e" prot="protected" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>dc</name></member>
+      <member refid="classatsci__slicer__agc_1af7ff4f74413968155f6118c4418f74b4" prot="public" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>gain</name></member>
+      <member refid="classatsci__slicer__agc_1a212c9d68fda24b6dcbc90a03b5ec2e8d" prot="protected" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>RATE</name></member>
+      <member refid="classatsci__slicer__agc_1aa73b0cd4349399cc57f1fcbb14e8080f" prot="protected" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>REFERENCE</name></member>
+      <member refid="classatsci__slicer__agc_1a7993639d6541f9f9948d6df8e8fd4e0a" prot="public" virt="non-virtual"><scope>atsci_slicer_agc</scope><name>scale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

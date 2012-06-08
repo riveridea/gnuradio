@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__probe__signal__vf" kind="class" prot="public">
+    <compoundname>gr_probe_signal_vf</compoundname>
+    <includes refid="gr__probe__signal__vf_8h" local="no">gr_probe_signal_vf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__probe__signal__vf_1a46ba41237630bfd27699a3cf07327443" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_probe_signal_vf::d_level</definition>
+        <argsstring></argsstring>
+        <name>d_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__probe__signal__vf_1a8fe0e59a89dec2b8a76f8ca0042399df" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_probe_signal_vf::d_size</definition>
+        <argsstring></argsstring>
+        <name>d_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__probe__signal__vf_1a668c5d1446ad2ded54bd2e932345f1d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__probe__signal__vf_8h_1a63a6b971241e1f0b12add4c45313730b" kindref="member">gr_probe_signal_vf_sptr</ref></type>
+        <definition>GR_CORE_API gr_probe_signal_vf_sptr gr_make_probe_signal_vf</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>gr_make_probe_signal_vf</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__probe__signal__vf_1ab0ae54f256efe6365a7b3b5e35467f23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_probe_signal_vf::gr_probe_signal_vf</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>gr_probe_signal_vf</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__probe__signal__vf_1a7423b7fb1246e6a2591d8253085167f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_probe_signal_vf::~gr_probe_signal_vf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_probe_signal_vf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__signal__vf_1a30c91fe90428cb9e81d8778dfd56bef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_probe_signal_vf::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__signal__vf_1adc81e1ed3f858492f11e769f54212d29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_probe_signal_vf::level</definition>
+        <argsstring>() const </argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sink that allows a sample to be grabbed from Python. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_probe_signal_vf.h" bodystart="40" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr__probe__signal__vf_1a46ba41237630bfd27699a3cf07327443" prot="private" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>d_level</name></member>
+      <member refid="classgr__probe__signal__vf_1a8fe0e59a89dec2b8a76f8ca0042399df" prot="private" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>d_size</name></member>
+      <member refid="classgr__probe__signal__vf_1a668c5d1446ad2ded54bd2e932345f1d7" prot="private" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>gr_make_probe_signal_vf</name></member>
+      <member refid="classgr__probe__signal__vf_1ab0ae54f256efe6365a7b3b5e35467f23" prot="private" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>gr_probe_signal_vf</name></member>
+      <member refid="classgr__probe__signal__vf_1adc81e1ed3f858492f11e769f54212d29" prot="public" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>level</name></member>
+      <member refid="classgr__probe__signal__vf_1a30c91fe90428cb9e81d8778dfd56bef8" prot="public" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>work</name></member>
+      <member refid="classgr__probe__signal__vf_1a7423b7fb1246e6a2591d8253085167f8" prot="public" virt="non-virtual"><scope>gr_probe_signal_vf</scope><name>~gr_probe_signal_vf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

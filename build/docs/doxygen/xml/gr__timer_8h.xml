@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__timer_8h" kind="file">
+    <compoundname>gr_timer.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__types_8h" local="no">gr_types.h</includes>
+    <incdepgraph>
+      <node id="12709">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="12712">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="12713" relation="include">
+        </childnode>
+      </node>
+      <node id="12708">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="12706" relation="include">
+        </childnode>
+        <childnode refid="12709" relation="include">
+        </childnode>
+        <childnode refid="12710" relation="include">
+        </childnode>
+        <childnode refid="12711" relation="include">
+        </childnode>
+        <childnode refid="12712" relation="include">
+        </childnode>
+      </node>
+      <node id="12706">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="12707" relation="include">
+        </childnode>
+      </node>
+      <node id="12711">
+        <label>stddef.h</label>
+      </node>
+      <node id="12705">
+        <label>gr_timer.h</label>
+        <link refid="gr_timer.h"/>
+        <childnode refid="12706" relation="include">
+        </childnode>
+        <childnode refid="12708" relation="include">
+        </childnode>
+      </node>
+      <node id="12710">
+        <label>vector</label>
+      </node>
+      <node id="12707">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="12713">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__timer" prot="public">gr_timer</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gr__timer_8h_1a72c5c11c933a21d559ca3c1eed5753ef" prot="public" static="no" mutable="no">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> typedef <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref>(*</type>
+        <definition>GR_CORE_API typedef void(* gr_timer_hook)(gr_timer *, void *)</definition>
+        <argsstring>)(gr_timer *, void *)</argsstring>
+        <name>gr_timer_hook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_timer.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_timer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__misc_1ga462255ae0a0ae202ef6c88cef0be8ada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_timer_sptr</ref></type>
+        <definition>GR_CORE_API gr_timer_sptr gr_make_timer</definition>
+        <argsstring>(gr_timer_hook, void *)</argsstring>
+        <name>gr_make_timer</name>
+        <param>
+          <type><ref refid="gr__timer_8h_1a72c5c11c933a21d559ca3c1eed5753ef" kindref="member">gr_timer_hook</ref></type>
+        </param>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        </param>
+        <briefdescription>
+<para>create a timeout. </para>        </briefdescription>
+        <detaileddescription>
+<para>gr_timer_hook is called when timer fires. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_timer.h" line="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_timer.h"/>
+  </compounddef>
+</doxygen>

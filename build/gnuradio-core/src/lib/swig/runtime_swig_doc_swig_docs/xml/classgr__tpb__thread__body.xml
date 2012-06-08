@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__tpb__thread__body" kind="class" prot="public">
+    <compoundname>gr_tpb_thread_body</compoundname>
+    <includes refid="gr__tpb__thread__body_8h" local="no">gr_tpb_thread_body.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__tpb__thread__body_1a0e25b80d2de7f9273326e4e704f8f46c" prot="private" static="no" mutable="no">
+        <type><ref refid="classgr__block__executor" kindref="compound">gr_block_executor</ref></type>
+        <definition>gr_block_executor gr_tpb_thread_body::d_exec</definition>
+        <argsstring></argsstring>
+        <name>d_exec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__tpb__thread__body_1ac68ab9c83039dc6bd236ac8ccf7d03bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_tpb_thread_body::gr_tpb_thread_body</definition>
+        <argsstring>(gr_block_sptr block, int max_noutput_items=100000)</argsstring>
+        <name>gr_tpb_thread_body</name>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a0e2b009a3179d6dc1131742e185f910b" kindref="member">gr_block_sptr</ref></type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_noutput_items</declname>
+          <defval>100000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__tpb__thread__body_1a9eea0ce5c185dd3412b4ee5fea0f10b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_tpb_thread_body::~gr_tpb_thread_body</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_tpb_thread_body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The body of each thread-per-block thread. </para>    </briefdescription>
+    <detaileddescription>
+<para>One of these is instantiated in its own thread for each block. The constructor turns into the main loop which returns when the block is done or is interrupted. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_thread_body.h" bodystart="37" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgr__tpb__thread__body_1a0e25b80d2de7f9273326e4e704f8f46c" prot="private" virt="non-virtual"><scope>gr_tpb_thread_body</scope><name>d_exec</name></member>
+      <member refid="classgr__tpb__thread__body_1ac68ab9c83039dc6bd236ac8ccf7d03bb" prot="public" virt="non-virtual"><scope>gr_tpb_thread_body</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__tpb__thread__body_1a9eea0ce5c185dd3412b4ee5fea0f10b4" prot="public" virt="non-virtual"><scope>gr_tpb_thread_body</scope><name>~gr_tpb_thread_body</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

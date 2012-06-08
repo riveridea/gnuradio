@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__top__block" kind="class" prot="public">
+    <compoundname>gr_top_block</compoundname>
+    <basecompoundref refid="classgr__hier__block2" prot="public" virt="non-virtual">gr_hier_block2</basecompoundref>
+    <includes refid="gr__top__block_8h" local="no">gr_top_block.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__top__block_1a3f33cd30fc962bd5834a8087fa8f6003" prot="private" static="no" mutable="no">
+        <type><ref refid="classgr__top__block__impl" kindref="compound">gr_top_block_impl</ref> *</type>
+        <definition>gr_top_block_impl* gr_top_block::d_impl</definition>
+        <argsstring></argsstring>
+        <name>d_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__top__block_1a692327d9e0d7d84ff82fbff3b52d0a88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__runtime__types_8h_1ad0556d746d6d5d0b1cb19e971e4d76f2" kindref="member">gr_top_block_sptr</ref></type>
+        <definition>GR_CORE_API gr_top_block_sptr gr_make_top_block</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>gr_make_top_block</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__top__block_1af671df672a4814a6d559e7b90c6a970e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_top_block::gr_top_block</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>gr_top_block</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__top__block_1acff39e01cdd15bb9acd3ceb25662a1ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_top_block::~gr_top_block</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_top_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1ad5d3d87d373116a181b6e8fb504d71c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::run</definition>
+        <argsstring>(int max_noutput_items=100000)</argsstring>
+        <name>run</name>
+        <param>
+          <type>int</type>
+          <declname>max_noutput_items</declname>
+          <defval>100000</defval>
+        </param>
+        <briefdescription>
+<para>The simple interface to running a flowgraph. </para>        </briefdescription>
+        <detaileddescription>
+<para>Calls <ref refid="classgr__top__block_1aca6ccd03de6aa2b3faa607a789c99c33" kindref="member">start()</ref> then <ref refid="classgr__top__block_1a1f969afd71e0c04afb44e78dc80b0bab" kindref="member">wait()</ref>. Used to run a flowgraph that will stop on its own, or when another thread will call <ref refid="classgr__top__block_1a852891aedd9729fc8d3da1044656f196" kindref="member">stop()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum number of output items allowed for any block in the flowgraph. This passes through to the start function; see that function for more details. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1aca6ccd03de6aa2b3faa607a789c99c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::start</definition>
+        <argsstring>(int max_noutput_items=100000)</argsstring>
+        <name>start</name>
+        <param>
+          <type>int</type>
+          <declname>max_noutput_items</declname>
+          <defval>100000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start the contained flowgraph. Creates one or more threads to execute the flow graph. Returns to the caller once the threads are created. Calling <ref refid="classgr__top__block_1aca6ccd03de6aa2b3faa607a789c99c33" kindref="member">start()</ref> on a top_block that is already started IS an error.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum number of output items allowed for any block in the flowgraph; the noutput_items can always be less than this, but this will cap it as a maximum. Use this to adjust the maximum latency a flowgraph can exhibit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a852891aedd9729fc8d3da1044656f196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop the running flowgraph. Notifies each thread created by the scheduler to shutdown, then returns to caller. Calling <ref refid="classgr__top__block_1a852891aedd9729fc8d3da1044656f196" kindref="member">stop()</ref> on a top_block that is already stopped IS NOT an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a1f969afd71e0c04afb44e78dc80b0bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for a flowgraph to complete. Flowgraphs complete when either (1) all blocks indicate that they are done (typically only when using gr.file_source, or gr.head, or (2) after <ref refid="classgr__top__block_1a852891aedd9729fc8d3da1044656f196" kindref="member">stop()</ref> has been called to request shutdown. Calling wait on a top_block that is not running IS NOT an error (wait returns w/o blocking). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_top_block::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <reimplements refid="classgr__hier__block2_1ac99f0dc1037ec2ca81721da8127c6d25">lock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock a flowgraph in preparation for reconfiguration. When an equal number of calls to <ref refid="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" kindref="member">lock()</ref> and <ref refid="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" kindref="member">unlock()</ref> have occurred, the flowgraph will be reconfigured.</para><para>N.B. <ref refid="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" kindref="member">lock()</ref> and <ref refid="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" kindref="member">unlock()</ref> may not be called from a flowgraph thread (E.g., gr_block::work method) or deadlock will occur when reconfiguration happens. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_top_block::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <reimplements refid="classgr__hier__block2_1a35d938ecc725c7992fb104cb2f321ebf">unlock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock a flowgraph in preparation for reconfiguration. When an equal number of calls to <ref refid="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" kindref="member">lock()</ref> and <ref refid="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" kindref="member">unlock()</ref> have occurred, the flowgraph will be reconfigured.</para><para>N.B. <ref refid="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" kindref="member">lock()</ref> and <ref refid="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" kindref="member">unlock()</ref> may not be called from a flowgraph thread (E.g., gr_block::work method) or deadlock will occur when reconfiguration happens. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1ab6bd46945c9117fb343f4c293cf23990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays flattened flowgraph edges and block connectivity </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a4e2e4e0c40d86e935eb55fcd970d9012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_top_block::max_noutput_items</definition>
+        <argsstring>()</argsstring>
+        <name>max_noutput_items</name>
+        <briefdescription>
+<para>Get the number of max noutput_items in the flowgraph. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a8740634cd4065400167e074f8b63786a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_top_block::set_max_noutput_items</definition>
+        <argsstring>(int nmax)</argsstring>
+        <name>set_max_noutput_items</name>
+        <param>
+          <type>int</type>
+          <declname>nmax</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum number of noutput_items in the flowgraph. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__top__block_1a0dff10c7f8cc62dce414059e6ea0732c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__runtime__types_8h_1ad0556d746d6d5d0b1cb19e971e4d76f2" kindref="member">gr_top_block_sptr</ref></type>
+        <definition>gr_top_block_sptr gr_top_block::to_top_block</definition>
+        <argsstring>()</argsstring>
+        <name>to_top_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Top-level hierarchical block representing a flowgraph. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="486">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="484">
+        <label>gr_hier_block2</label>
+        <link refid="classgr__hier__block2"/>
+        <childnode refid="485" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>gr_top_block</label>
+        <link refid="classgr__top__block"/>
+        <childnode refid="484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="486" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="490">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="488">
+        <label>gr_hier_block2</label>
+        <link refid="classgr__hier__block2"/>
+        <childnode refid="489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="492">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="487">
+        <label>gr_top_block</label>
+        <link refid="classgr__top__block"/>
+        <childnode refid="488" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="489">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="490" relation="public-inheritance">
+        </childnode>
+        <childnode refid="491" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="491">
+        <label>std::string</label>
+        <childnode refid="492" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_top_block.h" bodystart="38" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_top_block</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>color</name></member>
+      <member refid="classgr__hier__block2_1af2eac32d80a8ead56e28835b2dbf5e9f" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>connect</name></member>
+      <member refid="classgr__hier__block2_1a48d8026ae9bd00fc5dddb6940531796d" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>connect</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>d_color</name></member>
+      <member refid="classgr__top__block_1a3f33cd30fc962bd5834a8087fa8f6003" prot="private" virt="non-virtual"><scope>gr_top_block</scope><name>d_impl</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>d_output_signature</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>d_unique_id</name></member>
+      <member refid="classgr__hier__block2_1a3af3d7708f89011dfc398bc16f7222cb" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>disconnect</name></member>
+      <member refid="classgr__hier__block2_1a25407d2027f825dc5395abe3536a4ac1" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>disconnect</name></member>
+      <member refid="classgr__hier__block2_1ad695c24808d24ad09428380fd213306d" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>disconnect_all</name></member>
+      <member refid="classgr__top__block_1ab6bd46945c9117fb343f4c293cf23990" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>dump</name></member>
+      <member refid="classgr__hier__block2_1a0f7b989d0496f41e8c30b822a25eba21" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>flatten</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__hier__block2_1a9f065335f42852256617ccddcf12946e" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_hier_block2</name></member>
+      <member refid="classgr__hier__block2_1a324be02b1e3b00da10ed7b6df86f164f" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_hier_block2</name></member>
+      <member refid="classgr__top__block_1a692327d9e0d7d84ff82fbff3b52d0a88" prot="private" virt="non-virtual"><scope>gr_top_block</scope><name>gr_make_top_block</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__top__block_1af671df672a4814a6d559e7b90c6a970e" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_top_block</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>GREY</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>input_signature</name></member>
+      <member refid="classgr__top__block_1a9f3a470e46e83e4863d3713d1939a965" prot="public" virt="virtual"><scope>gr_top_block</scope><name>lock</name></member>
+      <member refid="classgr__top__block_1a4e2e4e0c40d86e935eb55fcd970d9012" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>max_noutput_items</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>name</name></member>
+      <member refid="classgr__hier__block2_1a39c600cf628c730eba5bd32cb7ccc861" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>opaque_self</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>post</name></member>
+      <member refid="classgr__top__block_1ad5d3d87d373116a181b6e8fb504d71c7" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>run</name></member>
+      <member refid="classgr__hier__block2_1a1106680d50c01b757d0a5af3f6f10681" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>self</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>set_color</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>set_input_signature</name></member>
+      <member refid="classgr__top__block_1a8740634cd4065400167e074f8b63786a" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>set_max_noutput_items</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>set_output_signature</name></member>
+      <member refid="classgr__top__block_1aca6ccd03de6aa2b3faa607a789c99c33" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>start</name></member>
+      <member refid="classgr__top__block_1a852891aedd9729fc8d3da1044656f196" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>stop</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>to_basic_block</name></member>
+      <member refid="classgr__hier__block2_1a133eb3a40da0d6355d85383ad20fd4f7" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>to_hier_block2</name></member>
+      <member refid="classgr__top__block_1a0dff10c7f8cc62dce414059e6ea0732c" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>to_top_block</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>unique_id</name></member>
+      <member refid="classgr__top__block_1a96784ae9c45d0933b9af53eba881eebc" prot="public" virt="virtual"><scope>gr_top_block</scope><name>unlock</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>vcolor</name></member>
+      <member refid="classgr__top__block_1a1f969afd71e0c04afb44e78dc80b0bab" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>wait</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_top_block</scope><name>WHITE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_top_block</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__hier__block2_1a397a3307e074b26716401df03b5be398" prot="public" virt="virtual"><scope>gr_top_block</scope><name>~gr_hier_block2</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgr__top__block_1acff39e01cdd15bb9acd3ceb25662a1ac" prot="public" virt="non-virtual"><scope>gr_top_block</scope><name>~gr_top_block</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

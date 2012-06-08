@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="base_8h" kind="file">
+    <compoundname>base.h</compoundname>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2199">
+        <label>vector</label>
+      </node>
+      <node id="2198">
+        <label>base.h</label>
+        <link refid="base.h"/>
+        <childnode refid="2199" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="base_8h_1ae239e05c27cc307f788a030d7198dbe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dec2base</definition>
+        <argsstring>(unsigned int num, int base, std::vector&lt; int &gt; &amp;s)</argsstring>
+        <name>dec2base</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>change base </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/base.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="base_8h_1a501dfdf816c2a3662587d78ca586f19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dec2bases</definition>
+        <argsstring>(unsigned int num, const std::vector&lt; int &gt; &amp;bases, std::vector&lt; int &gt; &amp;s)</argsstring>
+        <name>dec2bases</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>bases</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/base.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="base_8h_1a17ce537e68639d19d58b2fa9a06da84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int base2dec</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;s, int base)</argsstring>
+        <name>base2dec</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/base.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="base_8h_1a708d644c52f4518ef593168efcf11da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int bases2dec</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;s, const std::vector&lt; int &gt; &amp;bases)</argsstring>
+        <name>bases2dec</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>bases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/base.h" line="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/base.h"/>
+  </compounddef>
+</doxygen>

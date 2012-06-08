@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__ccf__armv7__a" kind="class" prot="public">
+    <compoundname>gr_fir_ccf_armv7_a</compoundname>
+    <includes refid="gr__fir__ccf__armv7__a_8h" local="no">gr_fir_ccf_armv7_a.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__fir__ccf__armv7__a_1a4e679697a947b83692adbbbe9144b01f" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_fir_ccf_armv7_a::d_naligned_taps</definition>
+        <argsstring></argsstring>
+        <name>d_naligned_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fir__ccf__armv7__a_1ad7945cad301667970c5a60fc5438b5a7" prot="protected" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gr_fir_ccf_armv7_a::d_aligned_taps</definition>
+        <argsstring></argsstring>
+        <name>d_aligned_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__ccf__armv7__a_1a93af05791acbaeed93970dfd9ca11531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_armv7_a::gr_fir_ccf_armv7_a</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_ccf_armv7_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__armv7__a_1ae9f1e4c56c46d0f19e50187d532aa936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_armv7_a::gr_fir_ccf_armv7_a</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_ccf_armv7_a</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__armv7__a_1aa279acb5bb2cf89416dd2ed38023bf92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_armv7_a::~gr_fir_ccf_armv7_a</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fir_ccf_armv7_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__armv7__a_1a448c85dfefd3c8d75aa715c2a2204010" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_fir_ccf_armv7_a::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__armv7__a_1a4b307c8b6bb4189b3c7fc084bb3305b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>virtual gr_complex gr_fir_ccf_armv7_a::filter</definition>
+        <argsstring>(const gr_complex input[])</argsstring>
+        <name>filter</name>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>armv7_a using NEON coprocessor version of gr_fir_ccf </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fir_ccf_armv7_a.h" bodystart="29" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgr__fir__ccf__armv7__a_1ad7945cad301667970c5a60fc5438b5a7" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_armv7_a</scope><name>d_aligned_taps</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1a4e679697a947b83692adbbbe9144b01f" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_armv7_a</scope><name>d_naligned_taps</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1a4b307c8b6bb4189b3c7fc084bb3305b3" prot="public" virt="virtual"><scope>gr_fir_ccf_armv7_a</scope><name>filter</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1a93af05791acbaeed93970dfd9ca11531" prot="public" virt="non-virtual"><scope>gr_fir_ccf_armv7_a</scope><name>gr_fir_ccf_armv7_a</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1ae9f1e4c56c46d0f19e50187d532aa936" prot="public" virt="non-virtual"><scope>gr_fir_ccf_armv7_a</scope><name>gr_fir_ccf_armv7_a</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1a448c85dfefd3c8d75aa715c2a2204010" prot="public" virt="virtual"><scope>gr_fir_ccf_armv7_a</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__ccf__armv7__a_1aa279acb5bb2cf89416dd2ed38023bf92" prot="public" virt="non-virtual"><scope>gr_fir_ccf_armv7_a</scope><name>~gr_fir_ccf_armv7_a</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

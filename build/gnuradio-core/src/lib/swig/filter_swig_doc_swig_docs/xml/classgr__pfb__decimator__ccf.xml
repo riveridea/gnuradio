@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__pfb__decimator__ccf" kind="class" prot="public">
+    <compoundname>gr_pfb_decimator_ccf</compoundname>
+    <includes refid="gr__pfb__decimator__ccf_8h" local="no">gr_pfb_decimator_ccf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a9c7c552b7d609e570ea6e1afadad3326" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgr__fir__ccf" kindref="compound">gr_fir_ccf</ref> * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_decimator_ccf::d_filters</definition>
+        <argsstring></argsstring>
+        <name>d_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a1a189cb676113beef09378b5d77f8b0d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_decimator_ccf::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="111" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1ab911cac335677b3ce786dc7df7fb9afe" prot="private" static="no" mutable="no">
+        <type>gri_fft_complex *</type>
+        <definition>gri_fft_complex* gr_pfb_decimator_ccf::d_fft</definition>
+        <argsstring></argsstring>
+        <name>d_fft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="112" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1ad16c96cb7b017a442dbc264ee59f3b45" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_decimator_ccf::d_rate</definition>
+        <argsstring></argsstring>
+        <name>d_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="113" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a5cb4b2142a732b440e3c20633901fa96" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_decimator_ccf::d_chan</definition>
+        <argsstring></argsstring>
+        <name>d_chan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="114" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a5d1529b279c0f30b147a4b9c9efe5bf4" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_decimator_ccf::d_taps_per_filter</definition>
+        <argsstring></argsstring>
+        <name>d_taps_per_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="115" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a714b9292e80a35d2edda288c4aabd49b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_pfb_decimator_ccf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="116" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__decimator__ccf_1a6d00b00fcdf1204b3ed9fbabf741ae4a" prot="private" static="no" mutable="no">
+        <type>gr_complex *</type>
+        <definition>gr_complex* gr_pfb_decimator_ccf::d_rotator</definition>
+        <argsstring></argsstring>
+        <name>d_rotator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__pfb__decimator__ccf_1ab8c247c5c7f1543939a20c984073fcec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__pfb__decimator__ccf_8h_1a44cb4f0fc8fa802b2cbcb362d00b45d1" kindref="member">gr_pfb_decimator_ccf_sptr</ref></type>
+        <definition>GR_CORE_API gr_pfb_decimator_ccf_sptr gr_make_pfb_decimator_ccf</definition>
+        <argsstring>(unsigned int decim, const std::vector&lt; float &gt; &amp;taps, unsigned int channel)</argsstring>
+        <name>gr_make_pfb_decimator_ccf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>decim</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank decimator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>decim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Specifies the decimation rate to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Selects the channel to return [default=0]. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__pfb__decimator__ccf_1aaf9f7756d02f981e6677d5da98d59f5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_decimator_ccf::gr_pfb_decimator_ccf</definition>
+        <argsstring>(unsigned int decim, const std::vector&lt; float &gt; &amp;taps, unsigned int channel)</argsstring>
+        <name>gr_pfb_decimator_ccf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>decim</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank decimator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>decim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Specifies the decimation rate to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Selects the channel to return [default=0]. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__pfb__decimator__ccf_1afc1c2f734735c00dff978247fb4139dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_decimator_ccf::~gr_pfb_decimator_ccf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_pfb_decimator_ccf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__decimator__ccf_1a9eddbddd0ed4c621375ad99e10de7789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_pfb_decimator_ccf::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the filterbank&apos;s filter taps with the new prototype filter <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__decimator__ccf_1a3935f2bfaed6c3e18eba4fdbe07b7aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_pfb_decimator_ccf::print_taps</definition>
+        <argsstring>()</argsstring>
+        <name>print_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print all of the filterbank taps to screen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__decimator__ccf_1a071fd630a3e1eec792172b90028f9359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_pfb_decimator_ccf::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Polyphase filterbank bandpass decimator with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block takes in a signal stream and performs interger down- sampling (decimation) with a polyphase filterbank. The first input is the integer specifying how much to decimate by. The second input is a vector (Python list) of floating-point taps of the prototype filter. The third input specifies the channel to extract. By default, the zeroth channel is used, which is the baseband channel (first Nyquist zone).</para><para>The <emphasis>channel</emphasis> parameter specifies which channel to use since this class is capable of bandpass decimation. Given a complex input stream at a sampling rate of <emphasis>fs</emphasis> and a decimation rate of <emphasis>decim</emphasis>, the input frequency domain is split into <emphasis>decim</emphasis> channels that represent the Nyquist zones. Using the polyphase filterbank, we can select any one of these channels to decimate.</para><para>The output signal will be the basebanded and decimated signal from that channel. This concept is very similar to the PFB channelizer (see <ref refid="classgr__pfb__channelizer__ccf" kindref="compound">gr_pfb_channelizer_ccf</ref>) where only a single channel is extracted at a time.</para><para>The filter&apos;s taps should be based on the sampling rate before decimation.</para><para>For example, using the GNU Radio&apos;s firdes utility to building filters, we build a low-pass filter with a sampling rate of <emphasis>fs</emphasis>, a 3-dB bandwidth of <emphasis>BW</emphasis> and a transition bandwidth of <emphasis>TB</emphasis>. We can also specify the out-of-band attenuation to use, <emphasis>ATT</emphasis>, and the filter window function (a Blackman-harris window in this case). The first input is the gain of the filter, which we specify here as unity.</para><para><bold><emphasis>self._taps = gr.firdes.low_pass_2(1, fs, BW, TB, attenuation_dB=ATT, window=gr.firdes.WIN_BLACKMAN_hARRIS)</emphasis></bold></para><para>The PFB decimator code takes the taps generated above and builds a set of filters. The set contains <emphasis>decim</emphasis> number of filters and each filter contains ceil(taps.size()/decim) number of taps. Each tap from the filter prototype is sequentially inserted into the next filter. When all of the input taps are used, the remaining filters in the filterbank are filled out with 0&apos;s to make sure each filter has the same number of taps.</para><para>The theory behind this block can be found in Chapter 6 of the following book.</para><para><bold><emphasis>f. harris, &quot;Multirate Signal Processing for Communication
+       Systems,&quot; Upper Saddle River, NJ: Prentice Hall, Inc. 2004.</emphasis></bold> </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_decimator_ccf.h" bodystart="97" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classgr__pfb__decimator__ccf_1a5cb4b2142a732b440e3c20633901fa96" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_chan</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1ab911cac335677b3ce786dc7df7fb9afe" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_fft</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a9c7c552b7d609e570ea6e1afadad3326" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_filters</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1ad16c96cb7b017a442dbc264ee59f3b45" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_rate</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a6d00b00fcdf1204b3ed9fbabf741ae4a" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_rotator</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a1a189cb676113beef09378b5d77f8b0d" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_taps</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a5d1529b279c0f30b147a4b9c9efe5bf4" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_taps_per_filter</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a714b9292e80a35d2edda288c4aabd49b" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>d_updated</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1ab8c247c5c7f1543939a20c984073fcec" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>gr_make_pfb_decimator_ccf</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1aaf9f7756d02f981e6677d5da98d59f5f" prot="private" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>gr_pfb_decimator_ccf</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a3935f2bfaed6c3e18eba4fdbe07b7aa4" prot="public" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>print_taps</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a9eddbddd0ed4c621375ad99e10de7789" prot="public" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>set_taps</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1a071fd630a3e1eec792172b90028f9359" prot="public" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>work</name></member>
+      <member refid="classgr__pfb__decimator__ccf_1afc1c2f734735c00dff978247fb4139dc" prot="public" virt="non-virtual"><scope>gr_pfb_decimator_ccf</scope><name>~gr_pfb_decimator_ccf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

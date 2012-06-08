@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__ccc" kind="class" prot="public">
+    <compoundname>gr_fir_ccc</compoundname>
+    <derivedcompoundref refid="classgr__fir__ccc__generic" prot="public" virt="non-virtual">gr_fir_ccc_generic</derivedcompoundref>
+    <includes refid="gr__fir__ccc_8h" local="no">gr_fir_ccc.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__fir__ccc_1a191bcb5edd1e736c2406f6fafc42983c" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_fir_ccc::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__ccc_1afb3111073744213eca8ee8a51d97a144" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccc::gr_fir_ccc</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_ccc</name>
+        <briefdescription>
+<para>construct new FIR with given taps. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that taps must be in forward order, e.g., coefficient 0 is stored in new_taps[0], coefficient 1 is stored in new_taps[1], etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1a0f6a820f9814525b3954c03ce32ca4d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccc::gr_fir_ccc</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>gr_fir_ccc</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1ace7525c76904dbca10f2645f4d3154fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_fir_ccc::~gr_fir_ccc</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fir_ccc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1a95a6b5898d18a3cbcb7cc251a760e880" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>gr_complex</type>
+        <definition>virtual gr_complex gr_fir_ccc::filter</definition>
+        <argsstring>(const gr_complex input[])=0</argsstring>
+        <name>filter</name>
+        <reimplementedby refid="classgr__fir__ccc__generic_1aba03fdc72d47f0d2215f7c9f75ee69c3">filter</reimplementedby>
+        <reimplementedby refid="classgr__fir__ccc__simd_1a17b2d74ca159e843bac053feabcc0ff0">filter</reimplementedby>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have <ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref> valid entries. input[0] .. input[<ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref> - 1] are referenced to compute the output value.</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1a6cdaf407ca693a87c540e2e85fa0b085" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_ccc::filterN</definition>
+        <argsstring>(gr_complex output[], const gr_complex input[], unsigned long n)=0</argsstring>
+        <name>filterN</name>
+        <reimplementedby refid="classgr__fir__ccc__generic_1a541cfb6493f56d55ae2b9af60eef5377">filterN</reimplementedby>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (n - 1 + <ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[n - 1 + <ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1afd45fd2576244f5a2a636f6d26200f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_ccc::filterNdec</definition>
+        <argsstring>(gr_complex output[], const gr_complex input[], unsigned long n, unsigned decimate)=0</argsstring>
+        <name>filterNdec</name>
+        <reimplementedby refid="classgr__fir__ccc__generic_1a1742581cae1640b627d402e89aea17c5">filterNdec</reimplementedby>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>decimate</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values, decimating the input </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (decimate * (n - 1) + <ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[decimate * (n - 1) + <ref refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1a37bd25499586825d8f0ea761097e1e8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_ccc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <reimplementedby refid="classgr__fir__ccc__simd_1a0b22c490cd233744850d5773b4ae27fa">set_taps</reimplementedby>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>install <computeroutput>new_taps</computeroutput> as the current taps. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_fir_ccc::ntaps</definition>
+        <argsstring>() const </argsstring>
+        <name>ntaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>number of taps in filter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="113" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccc_1a92ad95669f1c39b932849f002f92e83e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::vector&lt; gr_complex &gt;</type>
+        <definition>virtual const std::vector&lt;gr_complex&gt; gr_fir_ccc::get_taps</definition>
+        <argsstring>() const </argsstring>
+        <name>get_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current taps </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for FIR with gr_complex input, gr_complex output and gr_complex taps</para><para>This is the abstract class for a Finite Impulse Response filter. </para>    </briefdescription>
+    <detaileddescription>
+<para>The trailing suffix has the form _IOT where I codes the input type, O codes the output type, and T codes the tap type. I,O,T are elements of the set &apos;s&apos; (short), &apos;f&apos; (float), &apos;c&apos; (gr_complex), &apos;i&apos; (int) </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="333">
+        <label>gr_fir_ccc_3dnow</label>
+        <link refid="classgr__fir__ccc__3dnow"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>gr_fir_ccc_generic</label>
+        <link refid="classgr__fir__ccc__generic"/>
+        <childnode refid="330" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="334">
+        <label>gr_fir_ccc_3dnowext</label>
+        <link refid="classgr__fir__ccc__3dnowext"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>gr_fir_ccc_sse</label>
+        <link refid="classgr__fir__ccc__sse"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>gr_fir_ccc</label>
+        <link refid="classgr__fir__ccc"/>
+      </node>
+      <node id="332">
+        <label>gr_fir_ccc_simd</label>
+        <link refid="classgr__fir__ccc__simd"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="336">
+        <label>gr_fir_ccc</label>
+        <link refid="classgr__fir__ccc"/>
+        <childnode refid="337" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="337">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccc.h" bodystart="48" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classgr__fir__ccc_1a191bcb5edd1e736c2406f6fafc42983c" prot="protected" virt="non-virtual"><scope>gr_fir_ccc</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__ccc_1a95a6b5898d18a3cbcb7cc251a760e880" prot="public" virt="pure-virtual"><scope>gr_fir_ccc</scope><name>filter</name></member>
+      <member refid="classgr__fir__ccc_1a6cdaf407ca693a87c540e2e85fa0b085" prot="public" virt="pure-virtual"><scope>gr_fir_ccc</scope><name>filterN</name></member>
+      <member refid="classgr__fir__ccc_1afd45fd2576244f5a2a636f6d26200f60" prot="public" virt="pure-virtual"><scope>gr_fir_ccc</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__ccc_1a92ad95669f1c39b932849f002f92e83e" prot="public" virt="virtual"><scope>gr_fir_ccc</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__ccc_1afb3111073744213eca8ee8a51d97a144" prot="public" virt="non-virtual"><scope>gr_fir_ccc</scope><name>gr_fir_ccc</name></member>
+      <member refid="classgr__fir__ccc_1a0f6a820f9814525b3954c03ce32ca4d5" prot="public" virt="non-virtual"><scope>gr_fir_ccc</scope><name>gr_fir_ccc</name></member>
+      <member refid="classgr__fir__ccc_1ae0b40699b1b84e3c2404ba9a9b2a7e83" prot="public" virt="non-virtual"><scope>gr_fir_ccc</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__ccc_1a37bd25499586825d8f0ea761097e1e8c" prot="public" virt="virtual"><scope>gr_fir_ccc</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__ccc_1ace7525c76904dbca10f2645f4d3154fc" prot="public" virt="virtual"><scope>gr_fir_ccc</scope><name>~gr_fir_ccc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

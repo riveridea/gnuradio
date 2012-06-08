@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gnuradio-noaa
+Description: GNU Radio blocks implementing a NOAA satellite protocols
+Requires: gnuradio-core
+Version: 3.6.1git
+Libs: -L${libdir} -lgnuradio-noaa
+Cflags: -I${includedir}

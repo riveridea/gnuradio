@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__probe__mpsk__snr__est__c" kind="class" prot="public">
+    <compoundname>digital_probe_mpsk_snr_est_c</compoundname>
+    <includes refid="digital__probe__mpsk__snr__est__c_8h" local="no">digital_probe_mpsk_snr_est_c.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1af6406a87a84b00b1404102819387fade" prot="private" static="no" mutable="no">
+        <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+        <definition>snr_est_type_t digital_probe_mpsk_snr_est_c::d_type</definition>
+        <argsstring></argsstring>
+        <name>d_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1adcefeff05bb1013c01545842bfa2a439" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_probe_mpsk_snr_est_c::d_nsamples</definition>
+        <argsstring></argsstring>
+        <name>d_nsamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1a2df058609f790d153ae408729bb9dab1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_probe_mpsk_snr_est_c::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1a5d33a383ff33cf1a19657aac28c0527f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double digital_probe_mpsk_snr_est_c::d_alpha</definition>
+        <argsstring></argsstring>
+        <name>d_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1ad8fd20de6f1aa0db8d1c9c64e791dd1f" prot="private" static="no" mutable="no">
+        <type><ref refid="classdigital__impl__mpsk__snr__est" kindref="compound">digital_impl_mpsk_snr_est</ref> *</type>
+        <definition>digital_impl_mpsk_snr_est* digital_probe_mpsk_snr_est_c::d_snr_est</definition>
+        <argsstring></argsstring>
+        <name>d_snr_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__probe__mpsk__snr__est__c_1ae1463d659de91c351d8ffc5c23e87b70" prot="private" static="no" mutable="no">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t digital_probe_mpsk_snr_est_c::d_key</definition>
+        <argsstring></argsstring>
+        <name>d_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__probe__mpsk__snr__est__c_1aa95f7cd3a056ee6fde44956665067250" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__probe__mpsk__snr__est__c_8h_1afbcc9786901e266e6fefcb1a5e92a212" kindref="member">digital_probe_mpsk_snr_est_c_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_probe_mpsk_snr_est_c_sptr digital_make_probe_mpsk_snr_est_c</definition>
+        <argsstring>(snr_est_type_t type, int msg_nsamples, double alpha)</argsstring>
+        <name>digital_make_probe_mpsk_snr_est_c</name>
+        <param>
+          <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msg_nsamples</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function returning shared pointer of this class</para><para>Parameters:</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of estimator to use <ref refid="digital__impl__mpsk__snr__est_8h_1ref_snr_est_types" kindref="member">snr_est_type_t</ref> for details about the available types. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg_nsamples</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[not implemented yet] after this many samples, a message containing the SNR (key=&apos;snr&apos;) will be sent </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the update rate of internal running average calculations. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1adef3415d883d964e3885400144f7306c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_probe_mpsk_snr_est_c::digital_probe_mpsk_snr_est_c</definition>
+        <argsstring>(snr_est_type_t type, int msg_nsamples, double alpha)</argsstring>
+        <name>digital_probe_mpsk_snr_est_c</name>
+        <param>
+          <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>msg_nsamples</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Private constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1ad7bdb4762dd3fe75e8a648fbfd78b2de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_probe_mpsk_snr_est_c::~digital_probe_mpsk_snr_est_c</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_probe_mpsk_snr_est_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1a37572ee2fca24ba51057486ee91f8456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_probe_mpsk_snr_est_c::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1ab75489b17437568f95c56f8419a840fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double digital_probe_mpsk_snr_est_c::snr</definition>
+        <argsstring>()</argsstring>
+        <name>snr</name>
+        <briefdescription>
+<para>Return the estimated signal-to-noise ratio in decibels. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1a7c916b326792350a0169dfe1ab0a8afe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+        <definition>snr_est_type_t digital_probe_mpsk_snr_est_c::type</definition>
+        <argsstring>() const </argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Return the type of estimator in use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1a44c73c4b2ed290d5e81e91b317ee8a7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_probe_mpsk_snr_est_c::msg_nsample</definition>
+        <argsstring>() const </argsstring>
+        <name>msg_nsample</name>
+        <briefdescription>
+<para>Return how many samples between SNR messages. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1ac3ec88dfad49c85b12e2f63a9be38f89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double digital_probe_mpsk_snr_est_c::alpha</definition>
+        <argsstring>() const </argsstring>
+        <name>alpha</name>
+        <briefdescription>
+<para>Get the running-average coefficient. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1afdbb6ed020fc99d451fe97c1c6df118d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_probe_mpsk_snr_est_c::set_type</definition>
+        <argsstring>(snr_est_type_t t)</argsstring>
+        <name>set_type</name>
+        <param>
+          <type><ref refid="digital__impl__mpsk__snr__est_8h_1ad332265a312e8dfe1584460d8859a853" kindref="member">snr_est_type_t</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Set type of estimator to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1aa4924015f9d62c4eb91f035f4ff5b9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_probe_mpsk_snr_est_c::set_msg_nsample</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_msg_nsample</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of samples between SNR messages. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__probe__mpsk__snr__est__c_1a84120475df9a5a35204577f6ab066d13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_probe_mpsk_snr_est_c::set_alpha</definition>
+        <argsstring>(double alpha)</argsstring>
+        <name>set_alpha</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Set the running-average coefficient. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A probe for computing SNR of a signal. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a probe block (a sink) that can be used to monitor and retrieve estimations of the signal SNR. This probe is designed for use with M-PSK signals especially. The type of estimator is specified as the <computeroutput>type</computeroutput> parameter in the constructor. The estimators tend to trade off performance for accuracy, although experimentation should be done to figure out the right approach for a given implementation. Further, the current set of estimators are designed and proven theoretically under AWGN conditions; some amount of error should be assumed and/or estimated for real channel conditions. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_probe_mpsk_snr_est_c.h" bodystart="51" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1ac3ec88dfad49c85b12e2f63a9be38f89" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>alpha</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a5d33a383ff33cf1a19657aac28c0527f" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_alpha</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a2df058609f790d153ae408729bb9dab1" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_count</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1ae1463d659de91c351d8ffc5c23e87b70" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_key</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1adcefeff05bb1013c01545842bfa2a439" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_nsamples</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1ad8fd20de6f1aa0db8d1c9c64e791dd1f" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_snr_est</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1af6406a87a84b00b1404102819387fade" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>d_type</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1aa95f7cd3a056ee6fde44956665067250" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>digital_make_probe_mpsk_snr_est_c</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1adef3415d883d964e3885400144f7306c" prot="private" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>digital_probe_mpsk_snr_est_c</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a44c73c4b2ed290d5e81e91b317ee8a7e" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>msg_nsample</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a84120475df9a5a35204577f6ab066d13" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>set_alpha</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1aa4924015f9d62c4eb91f035f4ff5b9de" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>set_msg_nsample</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1afdbb6ed020fc99d451fe97c1c6df118d" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>set_type</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1ab75489b17437568f95c56f8419a840fa" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>snr</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a7c916b326792350a0169dfe1ab0a8afe" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>type</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1a37572ee2fca24ba51057486ee91f8456" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>work</name></member>
+      <member refid="classdigital__probe__mpsk__snr__est__c_1ad7bdb4762dd3fe75e8a648fbfd78b2de" prot="public" virt="non-virtual"><scope>digital_probe_mpsk_snr_est_c</scope><name>~digital_probe_mpsk_snr_est_c</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

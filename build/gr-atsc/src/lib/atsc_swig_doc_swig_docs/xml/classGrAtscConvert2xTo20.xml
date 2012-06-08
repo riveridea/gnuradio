@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classGrAtscConvert2xTo20" kind="class" prot="public">
+    <compoundname>GrAtscConvert2xTo20</compoundname>
+    <includes refid="GrAtscConvert2xTo20_8h" local="no">GrAtscConvert2xTo20.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGrAtscConvert2xTo20_1a35c80b39aafdf44bd2eed4287a725819" prot="private" static="no" mutable="no">
+        <type>gr_mmse_fir_interpolator</type>
+        <definition>gr_mmse_fir_interpolator GrAtscConvert2xTo20::d_interp</definition>
+        <argsstring></argsstring>
+        <name>d_interp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrAtscConvert2xTo20_1abfa853cabdc358b1ef81ec76f61e6f16" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GrAtscConvert2xTo20::d_frac_part</definition>
+        <argsstring></argsstring>
+        <name>d_frac_part</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrAtscConvert2xTo20_1a7afe71f1c65e0d8669e53a8fc62431e3" prot="private" static="no" mutable="no">
+        <type>VrSampleIndex</type>
+        <definition>VrSampleIndex GrAtscConvert2xTo20::d_next_input</definition>
+        <argsstring></argsstring>
+        <name>d_next_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1aaf54d633c33eaef0f4483927fb25e2a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscConvert2xTo20::GrAtscConvert2xTo20</definition>
+        <argsstring>()</argsstring>
+        <name>GrAtscConvert2xTo20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1a169b187898192775f95631078c6cb379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscConvert2xTo20::~GrAtscConvert2xTo20</definition>
+        <argsstring>()</argsstring>
+        <name>~GrAtscConvert2xTo20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1a6eda963701120661df9e7d279bc53a57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* GrAtscConvert2xTo20::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1a3ab2a6b37508554f712cf7b878f9a197" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int GrAtscConvert2xTo20::forecast</definition>
+        <argsstring>(VrSampleRange output, VrSampleRange inputs[])</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1a13c25a600f16e6a6b6887f3634ae3785" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int GrAtscConvert2xTo20::work</definition>
+        <argsstring>(VrSampleRange output, void *o[], VrSampleRange inputs[], void *i[])</argsstring>
+        <name>work</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>o</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>i</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1af70bc9e7f0b4a6aa8d3a172fa42ff950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GrAtscConvert2xTo20::pre_initialize</definition>
+        <argsstring>()</argsstring>
+        <name>pre_initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscConvert2xTo20_1ad59f126f8b8894b22305a9d2f7de3457" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GrAtscConvert2xTo20::checkOutputSamplingFrequency</definition>
+        <argsstring>(float)</argsstring>
+        <name>checkOutputSamplingFrequency</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" line="28" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscConvert2xTo20.h" bodystart="28" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classGrAtscConvert2xTo20_1ad59f126f8b8894b22305a9d2f7de3457" prot="public" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>checkOutputSamplingFrequency</name></member>
+      <member refid="classGrAtscConvert2xTo20_1abfa853cabdc358b1ef81ec76f61e6f16" prot="private" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>d_frac_part</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a35c80b39aafdf44bd2eed4287a725819" prot="private" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>d_interp</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a7afe71f1c65e0d8669e53a8fc62431e3" prot="private" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>d_next_input</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a3ab2a6b37508554f712cf7b878f9a197" prot="public" virt="virtual"><scope>GrAtscConvert2xTo20</scope><name>forecast</name></member>
+      <member refid="classGrAtscConvert2xTo20_1aaf54d633c33eaef0f4483927fb25e2a4" prot="public" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>GrAtscConvert2xTo20</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a6eda963701120661df9e7d279bc53a57" prot="public" virt="virtual"><scope>GrAtscConvert2xTo20</scope><name>name</name></member>
+      <member refid="classGrAtscConvert2xTo20_1af70bc9e7f0b4a6aa8d3a172fa42ff950" prot="public" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>pre_initialize</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a13c25a600f16e6a6b6887f3634ae3785" prot="public" virt="virtual"><scope>GrAtscConvert2xTo20</scope><name>work</name></member>
+      <member refid="classGrAtscConvert2xTo20_1a169b187898192775f95631078c6cb379" prot="public" virt="non-virtual"><scope>GrAtscConvert2xTo20</scope><name>~GrAtscConvert2xTo20</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

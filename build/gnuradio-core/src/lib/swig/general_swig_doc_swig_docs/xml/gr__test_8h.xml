@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__test_8h" kind="file">
+    <compoundname>gr_test.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">gr_block.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="gr__test__types_8h" local="yes">gr_test_types.h</includes>
+    <incdepgraph>
+      <node id="842">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="845">
+        <label>gr_test_types.h</label>
+        <link refid="gr__test__types_8h"/>
+      </node>
+      <node id="844">
+        <label>string</label>
+      </node>
+      <node id="841">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="842" relation="include">
+        </childnode>
+      </node>
+      <node id="840">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test.h</label>
+        <link refid="gr_test.h"/>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+      </node>
+      <node id="843">
+        <label>gr_block.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__test" prot="public">gr_test</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr__test" kindref="compound">gr_test</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;gr_test&gt; gr_test_sptr</definition>
+        <argsstring></argsstring>
+        <name>gr_test_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__test_8h_1ad79008b3728760d1802a6b465df9adfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" kindref="member">gr_test_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_test_sptr gr_make_test</definition>
+        <argsstring>(const std::string &amp;name=std::string(&quot;gr_test&quot;), int min_inputs=1, int max_inputs=1, unsigned int sizeof_input_item=1, int min_outputs=1, int max_outputs=1, unsigned int sizeof_output_item=1, unsigned int history=1, unsigned int output_multiple=1, double relative_rate=1.0, bool fixed_rate=true, gr_consume_type_t cons_type=CONSUME_NOUTPUT_ITEMS, gr_produce_type_t prod_type=PRODUCE_NOUTPUT_ITEMS)</argsstring>
+        <name>gr_make_test</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+          <defval>std::string(&quot;gr_test&quot;)</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_inputs</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_inputs</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>sizeof_input_item</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_outputs</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_outputs</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>sizeof_output_item</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>history</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>output_multiple</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>relative_rate</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed_rate</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type><ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref></type>
+          <declname>cons_type</declname>
+          <defval><ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a4091f414fb071161bd0fa54c6879695d" kindref="member">CONSUME_NOUTPUT_ITEMS</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref></type>
+          <declname>prod_type</declname>
+          <defval><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329acc1c979665b05a7393265cb8b834a82b" kindref="member">PRODUCE_NOUTPUT_ITEMS</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2006<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_GR_TEST_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_GR_TEST_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gr__core__api_8h" kindref="compound">gr_core_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gr__test__types_8h" kindref="compound">gr_test_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgr__test" kindref="compound" tooltip="Test class for testing runtime system (setting up buffers and such.)This block does not do any useful...">gr_test</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;gr_test&gt;<sp/><ref refid="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" kindref="member">gr_test_sptr</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>public<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" kindref="member">gr_test_sptr</ref><sp/><ref refid="gr__test_8h_1ad79008b3728760d1802a6b465df9adfb" kindref="member">gr_make_test</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name=std::string(</highlight><highlight class="stringliteral">&quot;gr_test&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_inputs=1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_inputs=1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_input_item=1,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_outputs=1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_outputs=1,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_output_item=1,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>history=1,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_multiple=1,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>relative_rate=1.0,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fixed_rate=</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref><sp/>cons_type=<ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6a4091f414fb071161bd0fa54c6879695d" kindref="member">CONSUME_NOUTPUT_ITEMS</ref>,<sp/><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref><sp/>prod_type=<ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329acc1c979665b05a7393265cb8b834a82b" kindref="member">PRODUCE_NOUTPUT_ITEMS</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classgr__test" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="classgr__test" kindref="compound" tooltip="Test class for testing runtime system (setting up buffers and such.)This block does not do any useful...">gr_test</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_block<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classgr__test_1a63e7ef2d796c5e4afc570b163c8ccd61" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__test_1a63e7ef2d796c5e4afc570b163c8ccd61" kindref="member">~gr_test</ref><sp/>(){}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>general_work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_int<sp/>&amp;ninput_items,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override<sp/>these<sp/>to<sp/>define<sp/>your<sp/>behavior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classgr__test_1a066f8bfd35652cf2f9394bee8e61dc50" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>forecast<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_int<sp/>&amp;ninput_items_required)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>ninputs<sp/>=<sp/>ninput_items_required.size<sp/>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ninputs;<sp/>i++)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ninput_items_required[i]<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((double)noutput_items<sp/>/<sp/>relative_rate())<sp/>+<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)history();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classgr__test_1a5d96333a3756b37fe54a6a3f88866b64" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a5d96333a3756b37fe54a6a3f88866b64" kindref="member" tooltip="Force check topology to return true or false.">set_check_topology</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>check_topology){<sp/>d_check_topology=check_topology;}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classgr__test_1ac9924b05718346c0cf3d231f2a82474b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1ac9924b05718346c0cf3d231f2a82474b" kindref="member" tooltip="Confirm that ninputs and noutputs is an acceptable combination.">check_topology</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ninputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutputs)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>d_check_topology;}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>two<sp/>methods<sp/>provide<sp/>special<sp/>case<sp/>info<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/>*<sp/>scheduler<sp/>in<sp/>the<sp/>event<sp/>that<sp/>a<sp/>block<sp/>has<sp/>a<sp/>fixed<sp/>input<sp/>to<sp/>output</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/>*<sp/>ratio.<sp/><sp/>gr_sync_block,<sp/>gr_sync_decimator<sp/>and<sp/>gr_sync_interpolator</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/>*<sp/>override<sp/>these.<sp/><sp/>If<sp/>you&apos;re<sp/>fixed<sp/>rate,<sp/>subclass<sp/>one<sp/>of<sp/>those.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline lineno="123" refid="classgr__test_1abd560ba788790b052bcdf55c40fe203b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1abd560ba788790b052bcdf55c40fe203b" kindref="member" tooltip="Given ninput samples, return number of output samples that will be produced. N.B. this is only define...">fixed_rate_ninput_to_noutput</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ninput)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((double)ninput/relative_rate());<sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classgr__test_1abb33a7036cbb39bcfeacf22c6352b50b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1abb33a7036cbb39bcfeacf22c6352b50b" kindref="member" tooltip="Given noutput samples, return number of input samples required to produce noutput. N.B. this is only defined if fixed_rate returns true.">fixed_rate_noutput_to_ninput</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput)<sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((double)noutput*relative_rate());<sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classgr__test_1a7aa4753ba5e757786726f7dd29118199" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a7aa4753ba5e757786726f7dd29118199" kindref="member" tooltip="Set if fixed rate should return true. N.B. This is normally a private method but we make it available...">set_fixed_rate_public</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fixed_rate){<sp/>set_fixed_rate(fixed_rate);}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classgr__test_1a0134531834988f75b8c7f64968005516" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a0134531834988f75b8c7f64968005516" kindref="member" tooltip="Set the consume pattern.">set_consume_type</ref><sp/>(<ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref><sp/>cons_type)<sp/>{<sp/>d_consume_type=cons_type;}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classgr__test_1a866d8cbba629307e5e976339048c0234" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a866d8cbba629307e5e976339048c0234" kindref="member" tooltip="Set the consume limit.">set_consume_limit</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>limit)<sp/>{<sp/>d_min_consume=limit;<sp/>d_max_consume=limit;}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classgr__test_1a607096450cf5b6e967f35b5e82d918e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a607096450cf5b6e967f35b5e82d918e0" kindref="member" tooltip="Set the produce pattern.">set_produce_type</ref><sp/>(<ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref><sp/>prod_type)<sp/>{<sp/>d_produce_type=prod_type;}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classgr__test_1ae47866bc4ef06e4cca54d7a015b4532e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1ae47866bc4ef06e4cca54d7a015b4532e" kindref="member" tooltip="Set the produce limit.">set_produce_limit</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>limit)<sp/>{<sp/>d_min_produce=limit;<sp/>d_max_produce=limit;}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="170" refid="classgr__test_1aa3c203116c6bc15fdf7b1c5750562627" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1aa3c203116c6bc15fdf7b1c5750562627" kindref="member">d_sizeof_input_item</ref>;</highlight></codeline>
+<codeline lineno="171" refid="classgr__test_1a861e0e31303892e9acffa5a3be04f9aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a861e0e31303892e9acffa5a3be04f9aa" kindref="member">d_sizeof_output_item</ref>;</highlight></codeline>
+<codeline lineno="172" refid="classgr__test_1ae073453777b26e35d98165c888f73b54" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1ae073453777b26e35d98165c888f73b54" kindref="member">d_check_topology</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classgr__test_1a7ac1f9d9aa0cc701f08da9b4211e5346" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a7ac1f9d9aa0cc701f08da9b4211e5346" kindref="member">d_temp</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classgr__test_1ac2dcb99dc170b465b063624d2082a792" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref><sp/><ref refid="classgr__test_1ac2dcb99dc170b465b063624d2082a792" kindref="member">d_consume_type</ref>;</highlight></codeline>
+<codeline lineno="175" refid="classgr__test_1a80c41a7a262059c6c7b7b3b77bb3203d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a80c41a7a262059c6c7b7b3b77bb3203d" kindref="member">d_min_consume</ref>;</highlight></codeline>
+<codeline lineno="176" refid="classgr__test_1ae069b12d1c283923f1d64176d49a2a88" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1ae069b12d1c283923f1d64176d49a2a88" kindref="member">d_max_consume</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classgr__test_1a51d2a008941c2ff0e0bad38b66a57f87" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref><sp/><ref refid="classgr__test_1a51d2a008941c2ff0e0bad38b66a57f87" kindref="member">d_produce_type</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classgr__test_1ab413d9a967b53cd273e84eacc0392e05" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1ab413d9a967b53cd273e84eacc0392e05" kindref="member">d_min_produce</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classgr__test_1a595d614900bcb35deaaa932823cf1adc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__test_1a595d614900bcb35deaaa932823cf1adc" kindref="member">d_max_produce</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><ref refid="classgr__test" kindref="compound" tooltip="Test class for testing runtime system (setting up buffers and such.)This block does not do any useful...">gr_test</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_inputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_inputs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_input_item,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_outputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_outputs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_output_item,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>history,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_multiple,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>relative_rate,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fixed_rate,<ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref><sp/>cons_type,<sp/><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref><sp/>prod_type);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__test_8h_1a81b0e95fb4d89e2f6e11e685980030c3" kindref="member">gr_test_sptr</ref><sp/><ref refid="gr__test_8h_1ad79008b3728760d1802a6b465df9adfb" kindref="member">gr_make_test</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_inputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_inputs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_input_item,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_outputs,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_outputs,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeof_output_item,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>history,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_multiple,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>relative_rate,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fixed_rate,<ref refid="gr__test__types_8h_1a7e11c1089ad4d0f3c0d4c0cea0281fa6" kindref="member">gr_consume_type_t</ref><sp/>cons_type,<sp/><ref refid="gr__test__types_8h_1afc8b997c194075e5d0d5cb793e829329" kindref="member">gr_produce_type_t</ref><sp/>prod_type);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_GR_TEST_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_test.h"/>
+  </compounddef>
+</doxygen>

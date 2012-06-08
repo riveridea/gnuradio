@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsci__root__raised__cosine_8h" kind="file">
+    <compoundname>atsci_root_raised_cosine.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes local="no">gr_fir_builder.h</includes>
+    <includedby refid="atsci__root__raised__cosine__bandpass_8h" local="no">atsci_root_raised_cosine_bandpass.h</includedby>
+    <incdepgraph>
+      <node id="1175">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="1176" relation="include">
+        </childnode>
+      </node>
+      <node id="1176">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="1177">
+        <label>gr_fir_builder.h</label>
+      </node>
+      <node id="1174">
+        <label>atsci_root_raised_cosine.h</label>
+        <link refid="atsci_root_raised_cosine.h"/>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1179">
+        <label>atsci_root_raised_cosine_bandpass.h</label>
+        <link refid="atsci__root__raised__cosine__bandpass_8h"/>
+      </node>
+      <node id="1178">
+        <label>atsci_root_raised_cosine.h</label>
+        <link refid="atsci_root_raised_cosine.h"/>
+        <childnode refid="1179" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classatsc__root__raised__cosine" prot="public">atsc_root_raised_cosine</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine.h"/>
+  </compounddef>
+</doxygen>

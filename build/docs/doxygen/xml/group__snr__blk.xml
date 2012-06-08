@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="group__snr__blk" kind="group">
+    <compoundname>snr_blk</compoundname>
+    <title>SNR estimators</title>
+    <innerclass refid="classdigital__impl__mpsk__snr__est" prot="public">digital_impl_mpsk_snr_est</innerclass>
+    <innerclass refid="classdigital__impl__mpsk__snr__est__simple" prot="public">digital_impl_mpsk_snr_est_simple</innerclass>
+    <innerclass refid="classdigital__impl__mpsk__snr__est__skew" prot="public">digital_impl_mpsk_snr_est_skew</innerclass>
+    <innerclass refid="classdigital__impl__mpsk__snr__est__m2m4" prot="public">digital_impl_mpsk_snr_est_m2m4</innerclass>
+    <innerclass refid="classdigital__impl__snr__est__m2m4" prot="public">digital_impl_snr_est_m2m4</innerclass>
+    <innerclass refid="classdigital__impl__mpsk__snr__est__svr" prot="public">digital_impl_mpsk_snr_est_svr</innerclass>
+    <innerclass refid="classdigital__mpsk__snr__est__cc" prot="public">digital_mpsk_snr_est_cc</innerclass>
+    <innerclass refid="classdigital__probe__mpsk__snr__est__c" prot="public">digital_probe_mpsk_snr_est_c</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__snr__blk_1gad332265a312e8dfe1584460d8859a853" prot="public" static="no">
+        <name>snr_est_type_t</name>
+        <enumvalue id="group__snr__blk_1ggad332265a312e8dfe1584460d8859a853a744e64b10fa2a4fe25e2e1aa20846cca" prot="public">
+          <name>SNR_EST_SIMPLE</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__snr__blk_1ggad332265a312e8dfe1584460d8859a853aec30ba8b1a8135d53f074d43e882bc98" prot="public">
+          <name>SNR_EST_SKEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__snr__blk_1ggad332265a312e8dfe1584460d8859a853aa64f2dcda2142a1f4912d570372c2c29" prot="public">
+          <name>SNR_EST_M2M4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__snr__blk_1ggad332265a312e8dfe1584460d8859a853afba9d1c8c5268ac8e74931738681a797" prot="public">
+          <name>SNR_EST_SVR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum for the type of SNR estimator to select. </para>        </briefdescription>
+        <detaileddescription>
+<para><anchor id="group__snr__blk_1ref_snr_est_types"/> Below are some ROUGH estimates of what values of SNR each of these types of estimators is good for. In general, these offer a trade-off between accuracy and performance.</para><para><itemizedlist>
+<listitem><para>SNR_EST_SIMPLE: Simple estimator (&gt;= 7 dB) </para></listitem>
+<listitem><para>SNR_EST_SKEW: Skewness-base est (&gt;= 5 dB) </para></listitem>
+<listitem><para>SNR_EST_M2M4: 2nd &amp; 4th moment est (&gt;= 1 dB) </para></listitem>
+<listitem><para>SNR_EST_SVR: SVR-based est (&gt;= 0dB) </para></listitem>
+</itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

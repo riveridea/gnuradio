@@ -1,0 +1,1729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classuhd__usrp__sink" kind="class" prot="public">
+    <compoundname>uhd_usrp_sink</compoundname>
+    <basecompoundref refid="classgr__sync__block" prot="public" virt="virtual">gr_sync_block</basecompoundref>
+    <includes refid="gr__uhd__usrp__sink_8h" local="no">gr_uhd_usrp_sink.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuhd__usrp__sink_1a1e0cbfa31b4fd31df49fadd9d6f12972" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_start_time</definition>
+        <argsstring>(const uhd::time_spec_t &amp;time)=0</argsstring>
+        <name>set_start_time</name>
+        <param>
+          <type>const uhd::time_spec_t &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the start time for outgoing samples. To control when samples are transmitted, set this value before starting the flow graph. The value is cleared after each run. When not specified, the start time will be:<itemizedlist>
+<listitem><para>Immediately for the one channel case</para></listitem><listitem><para>in the near future for multi-channel</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the absolute time for transmission to begin </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a6f13d8afeea4428063b10951160429d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::dict&lt; std::string, std::string &gt;</type>
+        <definition>virtual uhd::dict&lt;std::string, std::string&gt; uhd_usrp_sink::get_usrp_info</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_usrp_info</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns identifying information about this USRP&apos;s configuration. Returns motherboard ID, name, and serial. Returns daughterboard TX ID, subdev name and spec, serial, and antenna. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TX info </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ad56e39eeb231d9f7fa77d1fcb5cd08d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_subdev_spec</definition>
+        <argsstring>(const std::string &amp;spec, size_t mboard=0)=0</argsstring>
+        <name>set_subdev_spec</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>spec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the frontend specification. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subdev spec markup string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a2e7335a9ed637c6b682046ce892d81d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string uhd_usrp_sink::get_subdev_spec</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>get_subdev_spec</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the TX frontend specification. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the frontend specification in use </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1acd5d40ac56616c542112a05038061bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_samp_rate</definition>
+        <argsstring>(double rate)=0</argsstring>
+        <name>set_samp_rate</name>
+        <param>
+          <type>double</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the sample rate for the usrp device. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a new rate in Sps </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ad339acc6fb812b12f0980142e617eda1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double uhd_usrp_sink::get_samp_rate</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_samp_rate</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the sample rate for the usrp device. This is the actual sample rate and may differ from the rate set. <simplesect kind="return"><para>the actual rate in Sps </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a0052216361707d0d6fa2fdda2f906325" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::meta_range_t</type>
+        <definition>virtual uhd::meta_range_t uhd_usrp_sink::get_samp_rates</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_samp_rates</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the possible sample rates for the usrp device. <simplesect kind="return"><para>a range of rates in Sps </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a94db9926133124c7357607d1dc68b1cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::tune_result_t</type>
+        <definition>virtual uhd::tune_result_t uhd_usrp_sink::set_center_freq</definition>
+        <argsstring>(const uhd::tune_request_t tune_request, size_t chan=0)=0</argsstring>
+        <name>set_center_freq</name>
+        <param>
+          <type>const uhd::tune_request_t</type>
+          <declname>tune_request</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tune the usrp device to the desired center frequency. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tune_request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tune request instructions </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a tune result with the actual frequencies </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a279a28c250e2ae657aa9c43b5742c2fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uhd::tune_result_t</type>
+        <definition>uhd::tune_result_t uhd_usrp_sink::set_center_freq</definition>
+        <argsstring>(double freq, size_t chan=0)</argsstring>
+        <name>set_center_freq</name>
+        <param>
+          <type>double</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tune the usrp device to the desired center frequency. This is a wrapper around set center freq so that in this case, the user can pass a single frequency in the call through swig. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the desired frequency in Hz </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a tune result with the actual frequencies </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="194" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a9003a88aa0b9ce1dca1de7f8bb1453fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double uhd_usrp_sink::get_center_freq</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_center_freq</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the center frequency. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the frequency in Hz </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ab460fb65e4673273a17b79f2a6dc2355" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::freq_range_t</type>
+        <definition>virtual uhd::freq_range_t uhd_usrp_sink::get_freq_range</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_freq_range</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the tunable frequency range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the frequency range in Hz </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a6611e1cfc44a895ac0b5824709d6508d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_gain</definition>
+        <argsstring>(double gain, size_t chan=0)=0</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>double</type>
+          <declname>gain</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the gain for the dboard. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gain in dB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1aa97d3da0f684a84d2e706ad3af43c8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_gain</definition>
+        <argsstring>(double gain, const std::string &amp;name, size_t chan=0)=0</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>double</type>
+          <declname>gain</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the named gain on the dboard. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the gain in dB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the gain stage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a7b434a2b8ec451b3309521b19c9e72d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double uhd_usrp_sink::get_gain</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_gain</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the actual dboard gain setting. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the actual gain in dB </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1adcc55eaf96a60df3a84c987308a42d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double uhd_usrp_sink::get_gain</definition>
+        <argsstring>(const std::string &amp;name, size_t chan=0)=0</argsstring>
+        <name>get_gain</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the actual dboard gain setting of named stage. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the gain stage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the actual gain in dB </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ae6b9284d637bb49ca4c3c989cdb58ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_gain_names</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_gain_names</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the actual dboard gain setting of named stage. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the actual gain in dB </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a1b3e6474e3024de546e9d6037a80d18b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::gain_range_t</type>
+        <definition>virtual uhd::gain_range_t uhd_usrp_sink::get_gain_range</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_gain_range</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the settable gain range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the gain range in dB </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a9198f51d75d93226328ce848ec5af9c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::gain_range_t</type>
+        <definition>virtual uhd::gain_range_t uhd_usrp_sink::get_gain_range</definition>
+        <argsstring>(const std::string &amp;name, size_t chan=0)=0</argsstring>
+        <name>get_gain_range</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the settable gain range. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the gain stage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the gain range in dB </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ac208e78a425ffe4291d98605eea2e881" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_antenna</definition>
+        <argsstring>(const std::string &amp;ant, size_t chan=0)=0</argsstring>
+        <name>set_antenna</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ant</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the antenna to use. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the antenna string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a5bc6bdb867cfd47ef1ad6516f9934b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string uhd_usrp_sink::get_antenna</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_antenna</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the antenna in use. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the antenna string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a1718155e42d6558ede5d36005e1f9997" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_antennas</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_antennas</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list of possible antennas. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector of antenna strings </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ac1445763525b010448ce74a95b1fdc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_bandwidth</definition>
+        <argsstring>(double bandwidth, size_t chan=0)=0</argsstring>
+        <name>set_bandwidth</name>
+        <param>
+          <type>double</type>
+          <declname>bandwidth</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the bandpass filter on the RF frontend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filter bandwidth in Hz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a81755e0fa0c475325a1fb5bbde832ffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_dc_offset</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;offset, size_t chan=0)=0</argsstring>
+        <name>set_dc_offset</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set a constant DC offset value. The value is complex to control both I and Q. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the dc offset (1.0 is full-scale) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a0d4895bb75ce3ca07ddcacfcc6a0bd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_iq_balance</definition>
+        <argsstring>(const std::complex&lt; double &gt; &amp;correction, size_t chan=0)=0</argsstring>
+        <name>set_iq_balance</name>
+        <param>
+          <type>const std::complex&lt; double &gt; &amp;</type>
+          <declname>correction</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the RX frontend IQ imbalance correction. Use this to adjust the magnitude and phase of I and Q.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>correction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the complex correction (1.0 is full-scale) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1acf73291f11ecf7da76ca146563c9dc94" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::sensor_value_t</type>
+        <definition>virtual uhd::sensor_value_t uhd_usrp_sink::get_sensor</definition>
+        <argsstring>(const std::string &amp;name, size_t chan=0)=0</argsstring>
+        <name>get_sensor</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an RF frontend sensor value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the sensor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a sensor value object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a2b541d4ce14b533cdb2e8429193690b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_sensor_names</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_sensor_names</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list of possible RF frontend sensor names. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel index 0 to N-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector of sensor names </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a665ae49a72b19e5e13ac4f49b9671e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uhd::sensor_value_t</type>
+        <definition>uhd::sensor_value_t uhd_usrp_sink::get_dboard_sensor</definition>
+        <argsstring>(const std::string &amp;name, size_t chan=0)</argsstring>
+        <name>get_dboard_sensor</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>DEPRECATED use get_sensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="325" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" bodystart="325" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1aa126db611dce103dbcf932f0d286cf0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; uhd_usrp_sink::get_dboard_sensor_names</definition>
+        <argsstring>(size_t chan=0)</argsstring>
+        <name>get_dboard_sensor_names</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>DEPRECATED use get_sensor_names. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="330" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" bodystart="330" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a7119b8c2d8f93a743e4f0da59c4d721a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::sensor_value_t</type>
+        <definition>virtual uhd::sensor_value_t uhd_usrp_sink::get_mboard_sensor</definition>
+        <argsstring>(const std::string &amp;name, size_t mboard=0)=0</argsstring>
+        <name>get_mboard_sensor</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a motherboard sensor value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the sensor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a sensor value object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ab24a053d55855da50d37457fb600f99b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_mboard_sensor_names</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>get_mboard_sensor_names</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list of possible motherboard sensor names. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector of sensor names </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a86089935c4458e23ebada185616aaf44" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_clock_config</definition>
+        <argsstring>(const uhd::clock_config_t &amp;clock_config, size_t mboard=0)=0</argsstring>
+        <name>set_clock_config</name>
+        <param>
+          <type>const uhd::clock_config_t &amp;</type>
+          <declname>clock_config</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the clock configuration. DEPRECATED for set_time/clock_source. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clock_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="355"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a558318ddfa5a2f2e6764e2620a0cfdf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_time_source</definition>
+        <argsstring>(const std::string &amp;source, const size_t mboard=0)=0</argsstring>
+        <name>set_time_source</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the time source for the usrp device. This sets the method of time synchronization, typically a pulse per second or an encoded time. Typical options for source: external, MIMO. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string representing the time source </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to set the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a4b357b395bade251aa81b540f568fa1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string uhd_usrp_sink::get_time_source</definition>
+        <argsstring>(const size_t mboard)=0</argsstring>
+        <name>get_time_source</name>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the currently set time source. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to get the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the string representing the time source </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a0656e461e3bb42861f2b7b1d99732052" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_time_sources</definition>
+        <argsstring>(const size_t mboard)=0</argsstring>
+        <name>get_time_sources</name>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list of possible time sources. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to get the list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector of strings for possible settings </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a8966b2f53afecb1ecba31ce50d28e764" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_clock_source</definition>
+        <argsstring>(const std::string &amp;source, const size_t mboard=0)=0</argsstring>
+        <name>set_clock_source</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the clock source for the usrp device. This sets the source for a 10 Mhz reference clock. Typical options for source: internal, external, MIMO. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string representing the clock source </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to set the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1aa6669e57516b83d046281099e1f6ad85" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string uhd_usrp_sink::get_clock_source</definition>
+        <argsstring>(const size_t mboard)=0</argsstring>
+        <name>get_clock_source</name>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the currently set clock source. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to get the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the string representing the clock source </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a0143393e3a08fc29eb4061affbbb8eb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt;std::string&gt; uhd_usrp_sink::get_clock_sources</definition>
+        <argsstring>(const size_t mboard)=0</argsstring>
+        <name>get_clock_sources</name>
+        <param>
+          <type>const size_t</type>
+          <declname>mboard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a list of possible clock sources. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to get the list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a vector of strings for possible settings </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a2e674663210dca9bce67216cf6338333" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double uhd_usrp_sink::get_clock_rate</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>get_clock_rate</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the master clock rate. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the clock rate in Hz </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1af8a45af16131d200c407178ef3fdd71f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_clock_rate</definition>
+        <argsstring>(double rate, size_t mboard=0)=0</argsstring>
+        <name>set_clock_rate</name>
+        <param>
+          <type>double</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the master clock rate. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new rate in Hz </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a74c75fc2a209184856db674489de748c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::time_spec_t</type>
+        <definition>virtual uhd::time_spec_t uhd_usrp_sink::get_time_now</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>get_time_now</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current time registers. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the current usrp time </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a94c17f7cb9c4279f6b663838a6d38427" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::time_spec_t</type>
+        <definition>virtual uhd::time_spec_t uhd_usrp_sink::get_time_last_pps</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>get_time_last_pps</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the time when the last pps pulse occured. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the current usrp time </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a3ea42eecf9a035f315e03fe51c633cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_time_now</definition>
+        <argsstring>(const uhd::time_spec_t &amp;time_spec, size_t mboard=0)=0</argsstring>
+        <name>set_time_now</name>
+        <param>
+          <type>const uhd::time_spec_t &amp;</type>
+          <declname>time_spec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the time registers immediately. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the motherboard index 0 to M-1 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a517bf350c98a433420d671369a203c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_time_next_pps</definition>
+        <argsstring>(const uhd::time_spec_t &amp;time_spec)=0</argsstring>
+        <name>set_time_next_pps</name>
+        <param>
+          <type>const uhd::time_spec_t &amp;</type>
+          <declname>time_spec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the time registers at the next pps. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new time </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a8129898e21979915fef3ee09e32a584c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_time_unknown_pps</definition>
+        <argsstring>(const uhd::time_spec_t &amp;time_spec)=0</argsstring>
+        <name>set_time_unknown_pps</name>
+        <param>
+          <type>const uhd::time_spec_t &amp;</type>
+          <declname>time_spec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sync the time registers with an unknown pps edge. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new time </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="449"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ae4f0b7e397aabd038630e4aa0cf31e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_command_time</definition>
+        <argsstring>(const uhd::time_spec_t &amp;time_spec, size_t mboard=0)=0</argsstring>
+        <name>set_command_time</name>
+        <param>
+          <type>const uhd::time_spec_t &amp;</type>
+          <declname>time_spec</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the time at which the control commands will take effect.</para><para>A timed command will back-pressure all subsequent timed commands, assuming that the subsequent commands occur within the time-window. If the time spec is late, the command will be activated upon arrival.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_spec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the time at which the next command will activate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to set the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1aa061b5eddeb79223094e43db9eba7d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::clear_command_time</definition>
+        <argsstring>(size_t mboard=0)=0</argsstring>
+        <name>clear_command_time</name>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the command time so future commands are sent ASAP.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to set the config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1ae0cf40878cd7bd7397142026c4313c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::usrp::dboard_iface::sptr</type>
+        <definition>virtual uhd::usrp::dboard_iface::sptr uhd_usrp_sink::get_dboard_iface</definition>
+        <argsstring>(size_t chan=0)=0</argsstring>
+        <name>get_dboard_iface</name>
+        <param>
+          <type>size_t</type>
+          <declname>chan</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get access to the underlying uhd dboard iface object. <simplesect kind="return"><para>the dboard_iface object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="474"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a082318cef2f4e56fc969344cdbcccd09" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uhd::usrp::multi_usrp::sptr</type>
+        <definition>virtual uhd::usrp::multi_usrp::sptr uhd_usrp_sink::get_device</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_device</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get access to the underlying uhd device object. <simplesect kind="return"><para>the multi usrp device object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classuhd__usrp__sink_1a0f9f70e4112c3a57962e66bea17aafe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void uhd_usrp_sink::set_user_register</definition>
+        <argsstring>(const uint8_t addr, const uint32_t data, size_t mboard=0)=0</argsstring>
+        <name>set_user_register</name>
+        <param>
+          <type>const <ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="stdint_8h_1a435d1572bf3f880d55459d9805097f62" kindref="member">uint32_t</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>mboard</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform write on the user configuration register bus. These only exist if the user has implemented custom setting registers in the device FPGA. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit register address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>32-bit register value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mboard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which motherboard to set the user register </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="489"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7093">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="7094" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7090">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="7091" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7091">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="7092" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7089">
+        <label>uhd_usrp_sink</label>
+        <link refid="classuhd__usrp__sink"/>
+        <childnode refid="7090" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7094">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="7092">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="7093" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7099">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="7100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7096">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="7097" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7097">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="7098" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7095">
+        <label>uhd_usrp_sink</label>
+        <link refid="classuhd__usrp__sink"/>
+        <childnode refid="7096" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7101">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="7102" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="7104">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="7100">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="7102">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="7098">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="7099" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7101" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="7103" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="7103">
+        <label>std::string</label>
+        <childnode refid="7104" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-uhd/include/gr_uhd_usrp_sink.h" bodystart="117" bodyend="490"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>check_topology</name></member>
+      <member refid="classuhd__usrp__sink_1aa061b5eddeb79223094e43db9eba7d90" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>clear_command_time</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>d_color</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>d_output_signature</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>fixed_rate</name></member>
+      <member refid="classgr__sync__block_1a0cbbc0ce275498411248e678038710b2" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__sync__block_1adaecb00ae09408c22e46c44d09aad53e" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__sync__block_1a1327e83509baf039aa3c816ea81a8f22" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>forecast</name></member>
+      <member refid="classgr__sync__block_1a56ca60b6bc20a3510f71d961891fa81b" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>general_work</name></member>
+      <member refid="classuhd__usrp__sink_1a5bc6bdb867cfd47ef1ad6516f9934b58" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_antenna</name></member>
+      <member refid="classuhd__usrp__sink_1a1718155e42d6558ede5d36005e1f9997" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_antennas</name></member>
+      <member refid="classuhd__usrp__sink_1a9003a88aa0b9ce1dca1de7f8bb1453fb" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_center_freq</name></member>
+      <member refid="classuhd__usrp__sink_1a2e674663210dca9bce67216cf6338333" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_clock_rate</name></member>
+      <member refid="classuhd__usrp__sink_1aa6669e57516b83d046281099e1f6ad85" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_clock_source</name></member>
+      <member refid="classuhd__usrp__sink_1a0143393e3a08fc29eb4061affbbb8eb4" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_clock_sources</name></member>
+      <member refid="classuhd__usrp__sink_1ae0cf40878cd7bd7397142026c4313c92" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_dboard_iface</name></member>
+      <member refid="classuhd__usrp__sink_1a665ae49a72b19e5e13ac4f49b9671e1f" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>get_dboard_sensor</name></member>
+      <member refid="classuhd__usrp__sink_1aa126db611dce103dbcf932f0d286cf0a" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>get_dboard_sensor_names</name></member>
+      <member refid="classuhd__usrp__sink_1a082318cef2f4e56fc969344cdbcccd09" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_device</name></member>
+      <member refid="classuhd__usrp__sink_1ab460fb65e4673273a17b79f2a6dc2355" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_freq_range</name></member>
+      <member refid="classuhd__usrp__sink_1a7b434a2b8ec451b3309521b19c9e72d4" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_gain</name></member>
+      <member refid="classuhd__usrp__sink_1adcc55eaf96a60df3a84c987308a42d5d" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_gain</name></member>
+      <member refid="classuhd__usrp__sink_1ae6b9284d637bb49ca4c3c989cdb58ca8" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_gain_names</name></member>
+      <member refid="classuhd__usrp__sink_1a1b3e6474e3024de546e9d6037a80d18b" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_gain_range</name></member>
+      <member refid="classuhd__usrp__sink_1a9198f51d75d93226328ce848ec5af9c5" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_gain_range</name></member>
+      <member refid="classuhd__usrp__sink_1a7119b8c2d8f93a743e4f0da59c4d721a" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_mboard_sensor</name></member>
+      <member refid="classuhd__usrp__sink_1ab24a053d55855da50d37457fb600f99b" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_mboard_sensor_names</name></member>
+      <member refid="classuhd__usrp__sink_1ad339acc6fb812b12f0980142e617eda1" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_samp_rate</name></member>
+      <member refid="classuhd__usrp__sink_1a0052216361707d0d6fa2fdda2f906325" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_samp_rates</name></member>
+      <member refid="classuhd__usrp__sink_1acf73291f11ecf7da76ca146563c9dc94" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_sensor</name></member>
+      <member refid="classuhd__usrp__sink_1a2b541d4ce14b533cdb2e8429193690b5" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_sensor_names</name></member>
+      <member refid="classuhd__usrp__sink_1a2e7335a9ed637c6b682046ce892d81d5" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_subdev_spec</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classuhd__usrp__sink_1a94c17f7cb9c4279f6b663838a6d38427" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_time_last_pps</name></member>
+      <member refid="classuhd__usrp__sink_1a74c75fc2a209184856db674489de748c" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_time_now</name></member>
+      <member refid="classuhd__usrp__sink_1a4b357b395bade251aa81b540f568fa1e" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_time_source</name></member>
+      <member refid="classuhd__usrp__sink_1a0656e461e3bb42861f2b7b1d99732052" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_time_sources</name></member>
+      <member refid="classuhd__usrp__sink_1a6f13d8afeea4428063b10951160429d8" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>get_usrp_info</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__sync__block_1a8e8100cc8cafbc89a0cd64fbc2fc4153" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__block_1a832d8dad2dbd38e8e9cfa0b954d37c87" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_alignment</name></member>
+      <member refid="classuhd__usrp__sink_1ac208e78a425ffe4291d98605eea2e881" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_antenna</name></member>
+      <member refid="classuhd__usrp__sink_1ac1445763525b010448ce74a95b1fdc78" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_bandwidth</name></member>
+      <member refid="classuhd__usrp__sink_1a94db9926133124c7357607d1dc68b1cb" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_center_freq</name></member>
+      <member refid="classuhd__usrp__sink_1a279a28c250e2ae657aa9c43b5742c2fa" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_center_freq</name></member>
+      <member refid="classuhd__usrp__sink_1a86089935c4458e23ebada185616aaf44" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_clock_config</name></member>
+      <member refid="classuhd__usrp__sink_1af8a45af16131d200c407178ef3fdd71f" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_clock_rate</name></member>
+      <member refid="classuhd__usrp__sink_1a8966b2f53afecb1ecba31ce50d28e764" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_clock_source</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_color</name></member>
+      <member refid="classuhd__usrp__sink_1ae4f0b7e397aabd038630e4aa0cf31e78" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_command_time</name></member>
+      <member refid="classuhd__usrp__sink_1a81755e0fa0c475325a1fb5bbde832ffe" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_dc_offset</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_fixed_rate</name></member>
+      <member refid="classuhd__usrp__sink_1a6611e1cfc44a895ac0b5824709d6508d" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_gain</name></member>
+      <member refid="classuhd__usrp__sink_1aa97d3da0f684a84d2e706ad3af43c8a0" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_gain</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_input_signature</name></member>
+      <member refid="classuhd__usrp__sink_1a0d4895bb75ce3ca07ddcacfcc6a0bd4c" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_iq_balance</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_relative_rate</name></member>
+      <member refid="classuhd__usrp__sink_1acd5d40ac56616c542112a05038061bd0" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_samp_rate</name></member>
+      <member refid="classuhd__usrp__sink_1a1e0cbfa31b4fd31df49fadd9d6f12972" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_start_time</name></member>
+      <member refid="classuhd__usrp__sink_1ad56e39eeb231d9f7fa77d1fcb5cd08d0" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_subdev_spec</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classuhd__usrp__sink_1a517bf350c98a433420d671369a203c5d" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_time_next_pps</name></member>
+      <member refid="classuhd__usrp__sink_1a3ea42eecf9a035f315e03fe51c633cf4" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_time_now</name></member>
+      <member refid="classuhd__usrp__sink_1a558318ddfa5a2f2e6764e2620a0cfdf6" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_time_source</name></member>
+      <member refid="classuhd__usrp__sink_1a8129898e21979915fef3ee09e32a584c" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_time_unknown_pps</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>set_unaligned</name></member>
+      <member refid="classuhd__usrp__sink_1a0f9f70e4112c3a57962e66bea17aafe7" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>set_user_register</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>WHITE</name></member>
+      <member refid="classgr__sync__block_1a0c523f4285a6eb690f677ee6295ab117" prot="public" virt="pure-virtual"><scope>uhd_usrp_sink</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>uhd_usrp_sink</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>uhd_usrp_sink</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

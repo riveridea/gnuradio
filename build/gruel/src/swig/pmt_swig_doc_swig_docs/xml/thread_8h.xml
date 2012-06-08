@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="thread_8h" kind="file">
+    <compoundname>thread.h</compoundname>
+    <includes refid="api_8h" local="no">gruel/api.h</includes>
+    <includes local="no">boost/thread/thread.hpp</includes>
+    <includes local="no">boost/thread/mutex.hpp</includes>
+    <includes local="no">boost/thread/locks.hpp</includes>
+    <includes local="no">boost/thread/condition_variable.hpp</includes>
+    <includedby refid="msg__queue_8h" local="no">/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_queue.h</includedby>
+    <includedby refid="thread__body__wrapper_8h" local="no">/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_body_wrapper.h</includedby>
+    <includedby refid="thread__group_8h" local="no">/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h</includedby>
+    <incdepgraph>
+      <node id="163">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="165">
+        <label>boost/thread/condition_variable.hpp</label>
+      </node>
+      <node id="160">
+        <label>gruel/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="164">
+        <label>boost/thread/locks.hpp</label>
+      </node>
+      <node id="159">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread.h</label>
+        <link refid="thread.h"/>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="170">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_group.h</label>
+        <link refid="thread__group_8h"/>
+      </node>
+      <node id="169">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread_body_wrapper.h</label>
+        <link refid="thread__body__wrapper_8h"/>
+      </node>
+      <node id="167">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_queue.h</label>
+        <link refid="msg__queue_8h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread.h</label>
+        <link refid="thread.h"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h</label>
+        <link refid="msg__accepter__msgq_8h"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacegruel">gruel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2009,2010,2011<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>along</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>51<sp/>Franklin<sp/>Street,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/>02110-1301<sp/>USA.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_THREAD_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_THREAD_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="api_8h" kindref="compound">gruel/api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/thread/thread.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/thread/mutex.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/thread/locks.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/thread/condition_variable.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gruel<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacegruel_1acf8a10d5cbbe169118cacbc8e8faabf8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespacegruel_1acf8a10d5cbbe169118cacbc8e8faabf8" kindref="member">boost::thread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegruel_1acf8a10d5cbbe169118cacbc8e8faabf8" kindref="member">thread</ref>;</highlight></codeline>
+<codeline lineno="33" refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">boost::mutex</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">mutex</ref>;</highlight></codeline>
+<codeline lineno="34" refid="namespacegruel_1aa66a5d1111433161a2eeff7fd8a425a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespacegruel_1aa66a5d1111433161a2eeff7fd8a425a0" kindref="member">boost::mutex::scoped_lock</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegruel_1aa66a5d1111433161a2eeff7fd8a425a0" kindref="member">scoped_lock</ref>;</highlight></codeline>
+<codeline lineno="35" refid="namespacegruel_1a7f31867c7b47853d55962183d0a4e999" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespacegruel_1a7f31867c7b47853d55962183d0a4e999" kindref="member">boost::condition_variable</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegruel_1a7f31867c7b47853d55962183d0a4e999" kindref="member">condition_variable</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>gruel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_THREAD_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/thread.h"/>
+  </compounddef>
+</doxygen>

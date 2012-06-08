@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__message" kind="class" prot="public">
+    <compoundname>gr_message</compoundname>
+    <includes refid="gr__message_8h" local="no">gr_message.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__message_1aa444922e3f5d39d842201c070da061d0" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__message_8h_1ab9fa82aaeac452af434aac4335d62b3f" kindref="member">gr_message_sptr</ref></type>
+        <definition>gr_message_sptr gr_message::d_next</definition>
+        <argsstring></argsstring>
+        <name>d_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1aad07d3ba176a50cdb7bcb2feedb1e5f8" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_message::d_type</definition>
+        <argsstring></argsstring>
+        <name>d_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1ad5132d3ee1535ccd3e22969b1b979981" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_message::d_arg1</definition>
+        <argsstring></argsstring>
+        <name>d_arg1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1abe13c58a7c50d4ac486b19c8feb316c7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_message::d_arg2</definition>
+        <argsstring></argsstring>
+        <name>d_arg2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1aac4bce6a4699268c79e41e2afa109109" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::d_buf_start</definition>
+        <argsstring></argsstring>
+        <name>d_buf_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1a485fbe892d6d1f31a5a92c2de4787879" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::d_msg_start</definition>
+        <argsstring></argsstring>
+        <name>d_msg_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1aa0a20ab772367fc5b9372e0d7b856a04" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::d_msg_end</definition>
+        <argsstring></argsstring>
+        <name>d_msg_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__message_1a2110c50c09e5f9373c73640f7f0eb137" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::d_buf_end</definition>
+        <argsstring></argsstring>
+        <name>d_buf_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__message_1af043921a9e7cd294c5c2cdac2e97c813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class gr_msg_queue</definition>
+        <argsstring></argsstring>
+        <name>gr_msg_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__message_1a9b8bf12ae34af4cdf1167187d067f77b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__message_8h_1ab9fa82aaeac452af434aac4335d62b3f" kindref="member">gr_message_sptr</ref></type>
+        <definition>GR_CORE_API gr_message_sptr gr_make_message</definition>
+        <argsstring>(long type, double arg1, double arg2, size_t length)</argsstring>
+        <name>gr_make_message</name>
+        <param>
+          <type>long</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>public constructor for <ref refid="classgr__message" kindref="compound">gr_message</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="62"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__message_1afb618d22cc9f9edbda64651171841822" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__message_8h_1ab9fa82aaeac452af434aac4335d62b3f" kindref="member">gr_message_sptr</ref></type>
+        <definition>GR_CORE_API gr_message_sptr gr_make_message_from_string</definition>
+        <argsstring>(const std::string s, long type, double arg1, double arg2)</argsstring>
+        <name>gr_make_message_from_string</name>
+        <param>
+          <type>const std::string</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__message_1a2afc7144c2446153664dd0b86efc4a0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_message::gr_message</definition>
+        <argsstring>(long type, double arg1, double arg2, size_t length)</argsstring>
+        <name>gr_message</name>
+        <param>
+          <type>long</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1addc31097f95ba0bab3aecdf555e3d0d4" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::buf_data</definition>
+        <argsstring>() const </argsstring>
+        <name>buf_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1adf816f5cb677fbbf0b67b35ebb3f8e1f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gr_message::buf_len</definition>
+        <argsstring>() const </argsstring>
+        <name>buf_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__message_1aad815faeaf8018ca426f9255f9a0eca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_message::~gr_message</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a7965642c0c2fb586379550a5884b0ee6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long gr_message::type</definition>
+        <argsstring>() const </argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a34f11c43ca1e2412b1404a14178d3ccb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_message::arg1</definition>
+        <argsstring>() const </argsstring>
+        <name>arg1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a03f6058e5f412cabd793117b5bbf093f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_message::arg2</definition>
+        <argsstring>() const </argsstring>
+        <name>arg2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a820cbc9a5f12eef31bc55256cd7210b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_message::set_type</definition>
+        <argsstring>(long type)</argsstring>
+        <name>set_type</name>
+        <param>
+          <type>long</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1ac5178f4481065285eb4b4bb5f21ada21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_message::set_arg1</definition>
+        <argsstring>(double arg1)</argsstring>
+        <name>set_arg1</name>
+        <param>
+          <type>double</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1ab56c0ea898c120ac37f40bd6d8d838fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_message::set_arg2</definition>
+        <argsstring>(double arg2)</argsstring>
+        <name>set_arg2</name>
+        <param>
+          <type>double</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="81" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1ad8fed3cce61057e489b005feee5a4abe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char* gr_message::msg</definition>
+        <argsstring>() const </argsstring>
+        <name>msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a25185e6826e0998e528c79539186c129" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t gr_message::length</definition>
+        <argsstring>() const </argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__message_1a97279d203ce6717b42929cbcc450f927" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gr_message::to_string</definition>
+        <argsstring>() const </argsstring>
+        <name>to_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message class. </para>    </briefdescription>
+    <detaileddescription>
+<para>The ideas and method names for adjustable message length were lifted from the click modular router &quot;Packet&quot; class. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_message.h" bodystart="48" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classgr__message_1a34f11c43ca1e2412b1404a14178d3ccb" prot="public" virt="non-virtual"><scope>gr_message</scope><name>arg1</name></member>
+      <member refid="classgr__message_1a03f6058e5f412cabd793117b5bbf093f" prot="public" virt="non-virtual"><scope>gr_message</scope><name>arg2</name></member>
+      <member refid="classgr__message_1addc31097f95ba0bab3aecdf555e3d0d4" prot="private" virt="non-virtual"><scope>gr_message</scope><name>buf_data</name></member>
+      <member refid="classgr__message_1adf816f5cb677fbbf0b67b35ebb3f8e1f" prot="private" virt="non-virtual"><scope>gr_message</scope><name>buf_len</name></member>
+      <member refid="classgr__message_1ad5132d3ee1535ccd3e22969b1b979981" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_arg1</name></member>
+      <member refid="classgr__message_1abe13c58a7c50d4ac486b19c8feb316c7" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_arg2</name></member>
+      <member refid="classgr__message_1a2110c50c09e5f9373c73640f7f0eb137" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_buf_end</name></member>
+      <member refid="classgr__message_1aac4bce6a4699268c79e41e2afa109109" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_buf_start</name></member>
+      <member refid="classgr__message_1aa0a20ab772367fc5b9372e0d7b856a04" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_msg_end</name></member>
+      <member refid="classgr__message_1a485fbe892d6d1f31a5a92c2de4787879" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_msg_start</name></member>
+      <member refid="classgr__message_1aa444922e3f5d39d842201c070da061d0" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_next</name></member>
+      <member refid="classgr__message_1aad07d3ba176a50cdb7bcb2feedb1e5f8" prot="private" virt="non-virtual"><scope>gr_message</scope><name>d_type</name></member>
+      <member refid="classgr__message_1a9b8bf12ae34af4cdf1167187d067f77b" prot="private" virt="non-virtual"><scope>gr_message</scope><name>gr_make_message</name></member>
+      <member refid="classgr__message_1afb618d22cc9f9edbda64651171841822" prot="private" virt="non-virtual"><scope>gr_message</scope><name>gr_make_message_from_string</name></member>
+      <member refid="classgr__message_1a2afc7144c2446153664dd0b86efc4a0a" prot="private" virt="non-virtual"><scope>gr_message</scope><name>gr_message</name></member>
+      <member refid="classgr__message_1af043921a9e7cd294c5c2cdac2e97c813" prot="private" virt="non-virtual"><scope>gr_message</scope><name>gr_msg_queue</name></member>
+      <member refid="classgr__message_1a25185e6826e0998e528c79539186c129" prot="public" virt="non-virtual"><scope>gr_message</scope><name>length</name></member>
+      <member refid="classgr__message_1ad8fed3cce61057e489b005feee5a4abe" prot="public" virt="non-virtual"><scope>gr_message</scope><name>msg</name></member>
+      <member refid="classgr__message_1ac5178f4481065285eb4b4bb5f21ada21" prot="public" virt="non-virtual"><scope>gr_message</scope><name>set_arg1</name></member>
+      <member refid="classgr__message_1ab56c0ea898c120ac37f40bd6d8d838fd" prot="public" virt="non-virtual"><scope>gr_message</scope><name>set_arg2</name></member>
+      <member refid="classgr__message_1a820cbc9a5f12eef31bc55256cd7210b8" prot="public" virt="non-virtual"><scope>gr_message</scope><name>set_type</name></member>
+      <member refid="classgr__message_1a97279d203ce6717b42929cbcc450f927" prot="public" virt="non-virtual"><scope>gr_message</scope><name>to_string</name></member>
+      <member refid="classgr__message_1a7965642c0c2fb586379550a5884b0ee6" prot="public" virt="non-virtual"><scope>gr_message</scope><name>type</name></member>
+      <member refid="classgr__message_1aad815faeaf8018ca426f9255f9a0eca2" prot="public" virt="non-virtual"><scope>gr_message</scope><name>~gr_message</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

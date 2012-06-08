@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="rs_8h" kind="file">
+    <compoundname>rs.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <incdepgraph>
+      <node id="15681">
+        <label>rs.h</label>
+        <link refid="rs.h"/>
+        <childnode refid="15682" relation="include">
+        </childnode>
+      </node>
+      <node id="15682">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="15683" relation="include">
+        </childnode>
+      </node>
+      <node id="15683">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rs_8h_1ac91ed521380923edb62c01a1ad650152" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Taltab[]</definition>
+        <argsstring>[]</argsstring>
+        <name>Taltab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="31"/>
+      </memberdef>
+      <memberdef kind="variable" id="rs_8h_1afa58e689b97e42deb51097e890e44f1c" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Tal1tab[]</definition>
+        <argsstring>[]</argsstring>
+        <name>Tal1tab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rs_8h_1a89f3137fe4e17939ea13b6b71da54b08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void encode_rs_char</definition>
+        <argsstring>(void *rs, unsigned char *data, unsigned char *parity)</argsstring>
+        <name>encode_rs_char</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>parity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="8"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a40484c39650cc4ea2099816265a5b9fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> int</type>
+        <definition>GR_CORE_API int decode_rs_char</definition>
+        <argsstring>(void *rs, unsigned char *data, int *eras_pos, int no_eras)</argsstring>
+        <name>decode_rs_char</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>eras_pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no_eras</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1ad9af0bd9c9dfd5e352bcb87a143944a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>GR_CORE_API void* init_rs_char</definition>
+        <argsstring>(unsigned int symsize, unsigned int gfpoly, unsigned int fcr, unsigned int prim, unsigned int nroots)</argsstring>
+        <name>init_rs_char</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>symsize</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>gfpoly</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fcr</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>prim</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nroots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="12"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a88e7ff575a8fa9909e4b4bcfb4273b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void free_rs_char</definition>
+        <argsstring>(void *rs)</argsstring>
+        <name>free_rs_char</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="13"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1aa93acf1f32f77ff08a6c02f67530d5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void encode_rs_int</definition>
+        <argsstring>(void *rs, int *data, int *parity)</argsstring>
+        <name>encode_rs_int</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>parity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a71c277eed94f9018c6f32f1be6159ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> int</type>
+        <definition>GR_CORE_API int decode_rs_int</definition>
+        <argsstring>(void *rs, int *data, int *eras_pos, int no_eras)</argsstring>
+        <name>decode_rs_int</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>eras_pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no_eras</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="17"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a2ff1bb71609154eba1441f2431bc05c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>GR_CORE_API void* init_rs_int</definition>
+        <argsstring>(unsigned int symsize, unsigned int gfpoly, unsigned int fcr, unsigned int prim, unsigned int nroots)</argsstring>
+        <name>init_rs_int</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>symsize</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>gfpoly</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>fcr</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>prim</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nroots</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a06486d76d33b00115144f232cee89836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void free_rs_int</definition>
+        <argsstring>(void *rs)</argsstring>
+        <name>free_rs_int</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>rs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="20"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a913ebc22a2bcd7df5ae6e12b35d0a498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void encode_rs_8</definition>
+        <argsstring>(unsigned char *data, unsigned char *parity)</argsstring>
+        <name>encode_rs_8</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>parity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="rs_8h_1a0e9a98486945beefb90576f93b69ba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> int</type>
+        <definition>GR_CORE_API int decode_rs_8</definition>
+        <argsstring>(unsigned char *data, int *eras_pos, int no_eras)</argsstring>
+        <name>decode_rs_8</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>eras_pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>no_eras</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h" line="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/reed-solomon/rs.h"/>
+  </compounddef>
+</doxygen>

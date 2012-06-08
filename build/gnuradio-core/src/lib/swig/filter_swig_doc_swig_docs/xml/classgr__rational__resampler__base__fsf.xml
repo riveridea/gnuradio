@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__rational__resampler__base__fsf" kind="class" prot="public">
+    <compoundname>gr_rational_resampler_base_fsf</compoundname>
+    <includes refid="gr__rational__resampler__base__fsf_8h" local="no">gr_rational_resampler_base_fsf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1abd6a5d7ae4909232890122998f20a16e" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::d_history</definition>
+        <argsstring></argsstring>
+        <name>d_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1a43bd844ced3c605c683cb5c4d48b51b2" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::d_interpolation</definition>
+        <argsstring></argsstring>
+        <name>d_interpolation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1aa6b8b6685fa775805ae50b9f54f45787" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::d_decimation</definition>
+        <argsstring></argsstring>
+        <name>d_decimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1aeab3ea7b703f3b2ef8af76f413fc1cb7" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::d_ctr</definition>
+        <argsstring></argsstring>
+        <name>d_ctr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1acb17169b4f796b790081bac62d9fa690" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_rational_resampler_base_fsf::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1a996ba0f655aab3b21c31777f453d3100" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_rational_resampler_base_fsf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__rational__resampler__base__fsf_1ac6d11787d23b9bcc7b13d66c5eb73f3d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgr__fir__fsf" kindref="compound">gr_fir_fsf</ref> * &gt;</type>
+        <definition>std::vector&lt;gr_fir_fsf *&gt; gr_rational_resampler_base_fsf::d_firs</definition>
+        <argsstring></argsstring>
+        <name>d_firs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__rational__resampler__base__fsf_1a727525c70f3eb42d1b9d95573d92c3a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__rational__resampler__base__fsf_8h_1a18b6c855505dac9962e7d4932ca768b9" kindref="member">gr_rational_resampler_base_fsf_sptr</ref></type>
+        <definition>GR_CORE_API gr_rational_resampler_base_fsf_sptr gr_make_rational_resampler_base_fsf</definition>
+        <argsstring>(unsigned interpolation, unsigned decimation, const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_make_rational_resampler_base_fsf</name>
+        <param>
+          <type>unsigned</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a3c4b5cbbdff430f3ab556b4ce884bf6a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_rational_resampler_base_fsf::gr_rational_resampler_base_fsf</definition>
+        <argsstring>(unsigned interpolation, unsigned decimation, const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_rational_resampler_base_fsf</name>
+        <param>
+          <type>unsigned</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a FIR filter with the given taps </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a4460982fb557260b9a2a3ba6770d9440" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_rational_resampler_base_fsf::install_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>install_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a78a0ea40b71b56f35c791935856d950d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_rational_resampler_base_fsf::~gr_rational_resampler_base_fsf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_rational_resampler_base_fsf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a93eeb305ceabd3044bd3209f674cbeca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::history</definition>
+        <argsstring>() const </argsstring>
+        <name>history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a67feadbd12c215ae25a185fe8cfcbae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_rational_resampler_base_fsf::set_history</definition>
+        <argsstring>(unsigned history)</argsstring>
+        <name>set_history</name>
+        <param>
+          <type>unsigned</type>
+          <declname>history</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a98466ec73ee291a90cfc8d4ec7ad006c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::interpolation</definition>
+        <argsstring>() const </argsstring>
+        <name>interpolation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a9c84d8afa75bc15a9c18eaf8e56a64d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_rational_resampler_base_fsf::decimation</definition>
+        <argsstring>() const </argsstring>
+        <name>decimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a27664e672ef25624c436caf1f2c8a164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_rational_resampler_base_fsf::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1adad86f397296040fac2c95ed24aba96b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_rational_resampler_base_fsf::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__rational__resampler__base__fsf_1a8f9c3bf7971a49c08bd8956671ba90f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_rational_resampler_base_fsf::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rational Resampling Polyphase FIR filter with float input, short output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_rational_resampler_base_fsf.h" bodystart="48" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classgr__rational__resampler__base__fsf_1aeab3ea7b703f3b2ef8af76f413fc1cb7" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_ctr</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1aa6b8b6685fa775805ae50b9f54f45787" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_decimation</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1ac6d11787d23b9bcc7b13d66c5eb73f3d" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_firs</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1abd6a5d7ae4909232890122998f20a16e" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_history</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a43bd844ced3c605c683cb5c4d48b51b2" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_interpolation</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1acb17169b4f796b790081bac62d9fa690" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_new_taps</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a996ba0f655aab3b21c31777f453d3100" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>d_updated</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a9c84d8afa75bc15a9c18eaf8e56a64d3" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>decimation</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1adad86f397296040fac2c95ed24aba96b" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>forecast</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a8f9c3bf7971a49c08bd8956671ba90f5" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>general_work</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a727525c70f3eb42d1b9d95573d92c3a5" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>gr_make_rational_resampler_base_fsf</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a3c4b5cbbdff430f3ab556b4ce884bf6a" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>gr_rational_resampler_base_fsf</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a93eeb305ceabd3044bd3209f674cbeca" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>history</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a4460982fb557260b9a2a3ba6770d9440" prot="private" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>install_taps</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a98466ec73ee291a90cfc8d4ec7ad006c" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>interpolation</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a67feadbd12c215ae25a185fe8cfcbae7" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>set_history</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a27664e672ef25624c436caf1f2c8a164" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>set_taps</name></member>
+      <member refid="classgr__rational__resampler__base__fsf_1a78a0ea40b71b56f35c791935856d950d" prot="public" virt="non-virtual"><scope>gr_rational_resampler_base_fsf</scope><name>~gr_rational_resampler_base_fsf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

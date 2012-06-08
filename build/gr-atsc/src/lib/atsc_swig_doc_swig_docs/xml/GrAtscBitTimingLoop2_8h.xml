@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="GrAtscBitTimingLoop2_8h" kind="file">
+    <compoundname>GrAtscBitTimingLoop2.h</compoundname>
+    <includes local="no">gr_nco.h</includes>
+    <includes local="no">VrSigProc.h</includes>
+    <includes local="no">VrHistoryProc.h</includes>
+    <includes local="no">VrDecimatingSigProc.h</includes>
+    <includes refid="interleaver__fifo_8h" local="no">interleaver_fifo.h</includes>
+    <includes local="no">gr_single_pole_iir.h</includes>
+    <includes local="no">gr_mmse_fir_interpolator.h</includes>
+    <incdepgraph>
+      <node id="586">
+        <label>VrHistoryProc.h</label>
+      </node>
+      <node id="583">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop2.h</label>
+        <link refid="GrAtscBitTimingLoop2.h"/>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="588">
+        <label>interleaver_fifo.h</label>
+        <link refid="interleaver__fifo_8h"/>
+        <childnode refid="588" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+      </node>
+      <node id="584">
+        <label>gr_nco.h</label>
+      </node>
+      <node id="589">
+        <label>string.h</label>
+      </node>
+      <node id="585">
+        <label>VrSigProc.h</label>
+      </node>
+      <node id="590">
+        <label>gr_single_pole_iir.h</label>
+      </node>
+      <node id="591">
+        <label>gr_mmse_fir_interpolator.h</label>
+      </node>
+      <node id="587">
+        <label>VrDecimatingSigProc.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classGrAtscBitTimingLoop2" prot="public">GrAtscBitTimingLoop2</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2002<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GRATSCBITTIMINGLOOP2_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_GRATSCBITTIMINGLOOP2_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_nco.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;VrSigProc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;VrHistoryProc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;VrDecimatingSigProc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interleaver__fifo_8h" kindref="compound">interleaver_fifo.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_single_pole_iir.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_mmse_fir_interpolator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classGrAtscBitTimingLoop2" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGrAtscBitTimingLoop2" kindref="compound" tooltip="ATSC BitTimingLoop.">GrAtscBitTimingLoop2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>VrDecimatingSigProc&lt;float,float&gt;<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a71bc82a0eb6a9da82db9900ab43eddc5" kindref="member">GrAtscBitTimingLoop2</ref><sp/>();</highlight></codeline>
+<codeline lineno="45" refid="classGrAtscBitTimingLoop2_1a21e0fdb123b99fdab7be8ad0221713b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1a21e0fdb123b99fdab7be8ad0221713b6" kindref="member">~GrAtscBitTimingLoop2</ref><sp/>()<sp/>{<sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classGrAtscBitTimingLoop2_1a999c6c27bb302929aa10a8852491fe92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classGrAtscBitTimingLoop2_1a999c6c27bb302929aa10a8852491fe92" kindref="member">name</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;GrAtscBitTimingLoop2&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1a3ef9c47856d467c7b380246759c1ed7c" kindref="member">forecast</ref><sp/>(VrSampleRange<sp/>output,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VrSampleRange<sp/>inputs[]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1a54b4ac53292c3742a3bba22527818889" kindref="member">work</ref><sp/>(VrSampleRange<sp/>output,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*o[],</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VrSampleRange<sp/>inputs[],<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*i[]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classGrAtscBitTimingLoop2_1af63c097c327749e233e13baf5c05a63b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1af63c097c327749e233e13baf5c05a63b" kindref="member">set_mu</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a_mu)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(0<sp/>&lt;=<sp/>a_mu<sp/>&amp;&amp;<sp/>a_mu<sp/>&lt;=<sp/>1.9);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a3a281800c6428ec60d03a057dd13725f" kindref="member">use_right_p</ref><sp/>=<sp/>a_mu<sp/>&lt;<sp/>1.0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a84248a37bcc602e8bfa2bfe9bb5a03cc" kindref="member">mu</ref><sp/>=<sp/>a_mu<sp/>-<sp/>floor<sp/>(a_mu);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;BTL2:<sp/><sp/>mu:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classGrAtscBitTimingLoop2_1a84248a37bcc602e8bfa2bfe9bb5a03cc" kindref="member">mu</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>use_right_p:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classGrAtscBitTimingLoop2_1a3a281800c6428ec60d03a057dd13725f" kindref="member">use_right_p</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classGrAtscBitTimingLoop2_1aeb1707cc4724022587491438ce4e359b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1aeb1707cc4724022587491438ce4e359b" kindref="member">iType</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classGrAtscBitTimingLoop2_1a49007d4cc21b85d5b02d657c8c9b0004" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1a49007d4cc21b85d5b02d657c8c9b0004" kindref="member">oType</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1aeb1707cc4724022587491438ce4e359b" kindref="member">iType</ref><sp/><ref refid="classGrAtscBitTimingLoop2_1ac6b396df0416b054028f429ff134060b" kindref="member">produce_sample</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1aeb1707cc4724022587491438ce4e359b" kindref="member">iType</ref><sp/>*in,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;index);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGrAtscBitTimingLoop2_1aa5cc8ef9f2aeafb434d7fb1e4cfc4815" kindref="member">filter_error</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>e);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classGrAtscBitTimingLoop2_1a37c2e179e01bb0e311859d965d93aa50" refkind="member"><highlight class="normal"><sp/><sp/>VrSampleIndex<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a37c2e179e01bb0e311859d965d93aa50" kindref="member">next_input</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classGrAtscBitTimingLoop2_1ae71ea907dca20270923017d37d2df3b4" refkind="member"><highlight class="normal"><sp/><sp/>gr_single_pole_iir&lt;float,float,float&gt;<sp/><ref refid="classGrAtscBitTimingLoop2_1ae71ea907dca20270923017d37d2df3b4" kindref="member">dc</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>used<sp/>to<sp/>estimate<sp/>DC<sp/>component</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classGrAtscBitTimingLoop2_1a8cfb827b1b3ce72a6f945cbde5b4226b" refkind="member"><highlight class="normal"><sp/><sp/>gr_mmse_fir_interpolator<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a8cfb827b1b3ce72a6f945cbde5b4226b" kindref="member">intr</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classGrAtscBitTimingLoop2_1a84248a37bcc602e8bfa2bfe9bb5a03cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a84248a37bcc602e8bfa2bfe9bb5a03cc" kindref="member">mu</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fractional<sp/>delay</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classGrAtscBitTimingLoop2_1aff9c6c3667e7c927ec3af5a30d061c44" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1aeb1707cc4724022587491438ce4e359b" kindref="member">iType</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1aff9c6c3667e7c927ec3af5a30d061c44" kindref="member">last_right</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>last<sp/>right<sp/>hand<sp/>sample</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classGrAtscBitTimingLoop2_1a3a281800c6428ec60d03a057dd13725f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrAtscBitTimingLoop2_1a3a281800c6428ec60d03a057dd13725f" kindref="member">use_right_p</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...else<sp/>middle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_GRATSCBITTIMINGLOOP2_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop2.h"/>
+  </compounddef>
+</doxygen>

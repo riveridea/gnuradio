@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classGrAtscViterbiDecoder" kind="class" prot="public">
+    <compoundname>GrAtscViterbiDecoder</compoundname>
+    <includes refid="GrAtscViterbiDecoder_8h" local="no">GrAtscViterbiDecoder.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGrAtscViterbiDecoder_1a51492f305ac40ededa33b8c4a6acbf62" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__viterbi__decoder" kindref="compound">atsci_viterbi_decoder</ref></type>
+        <definition>atsci_viterbi_decoder GrAtscViterbiDecoder::decoder</definition>
+        <argsstring></argsstring>
+        <name>decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrAtscViterbiDecoder_1a1c3e688b73d8aabb07246d55ed07b17c" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GrAtscViterbiDecoder::last_start</definition>
+        <argsstring></argsstring>
+        <name>last_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrAtscViterbiDecoder_1a7234bf93ca5658944f84e3a970277e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscViterbiDecoder::GrAtscViterbiDecoder</definition>
+        <argsstring>()</argsstring>
+        <name>GrAtscViterbiDecoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscViterbiDecoder_1a55280c2dcc240f27222d2fe31367f9aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscViterbiDecoder::~GrAtscViterbiDecoder</definition>
+        <argsstring>()</argsstring>
+        <name>~GrAtscViterbiDecoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscViterbiDecoder_1a7b9b62a2e1e808bcf8dfecb559025070" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* GrAtscViterbiDecoder::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscViterbiDecoder_1a01ce579bb0a7ca1bdc6188cc74dd6e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GrAtscViterbiDecoder::work</definition>
+        <argsstring>(VrSampleRange output, void *o[], VrSampleRange inputs[], void *i[])</argsstring>
+        <name>work</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>o</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>i</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC 12-way interleaved viterbi decoder (<ref refid="classatsc__soft__data__segment" kindref="compound">atsc_soft_data_segment</ref> --&gt; <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="515">
+        <label>interleaver_fifo&lt; unsigned char &gt;</label>
+        <link refid="classinterleaver__fifo"/>
+      </node>
+      <node id="514">
+        <label>atsci_viterbi_decoder</label>
+        <link refid="classatsci__viterbi__decoder"/>
+        <childnode refid="515" relation="usage">
+          <edgelabel>fifo</edgelabel>
+        </childnode>
+        <childnode refid="516" relation="usage">
+          <edgelabel>viterbi</edgelabel>
+        </childnode>
+      </node>
+      <node id="516">
+        <label>atsci_single_viterbi</label>
+        <link refid="classatsci__single__viterbi"/>
+      </node>
+      <node id="513">
+        <label>GrAtscViterbiDecoder</label>
+        <link refid="classGrAtscViterbiDecoder"/>
+        <childnode refid="514" relation="usage">
+          <edgelabel>decoder</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h" bodystart="32" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classGrAtscViterbiDecoder_1a51492f305ac40ededa33b8c4a6acbf62" prot="protected" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>decoder</name></member>
+      <member refid="classGrAtscViterbiDecoder_1a7234bf93ca5658944f84e3a970277e44" prot="public" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>GrAtscViterbiDecoder</name></member>
+      <member refid="classGrAtscViterbiDecoder_1a1c3e688b73d8aabb07246d55ed07b17c" prot="protected" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>last_start</name></member>
+      <member refid="classGrAtscViterbiDecoder_1a7b9b62a2e1e808bcf8dfecb559025070" prot="public" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>name</name></member>
+      <member refid="classGrAtscViterbiDecoder_1a01ce579bb0a7ca1bdc6188cc74dd6e94" prot="public" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>work</name></member>
+      <member refid="classGrAtscViterbiDecoder_1a55280c2dcc240f27222d2fe31367f9aa" prot="public" virt="non-virtual"><scope>GrAtscViterbiDecoder</scope><name>~GrAtscViterbiDecoder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

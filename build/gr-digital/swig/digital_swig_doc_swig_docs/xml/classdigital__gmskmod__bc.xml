@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__gmskmod__bc" kind="class" prot="public">
+    <compoundname>digital_gmskmod_bc</compoundname>
+    <basecompoundref refid="classdigital__cpmmod__bc" prot="public" virt="non-virtual">digital_cpmmod_bc</basecompoundref>
+    <includes refid="digital__gmskmod__bc_8h" local="no">digital_gmskmod_bc.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__gmskmod__bc_1a99fb2f2598806f17b85c3a8b8e920e57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__gmskmod__bc_8h_1af7f580fe7b90256731d280ab06aaed2d" kindref="member">digital_gmskmod_bc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_gmskmod_bc_sptr digital_make_gmskmod_bc</definition>
+        <argsstring>(unsigned samples_per_sym, double bt, unsigned L)</argsstring>
+        <name>digital_make_gmskmod_bc</name>
+        <param>
+          <type>unsigned</type>
+          <declname>samples_per_sym</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bt</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_gmskmod_bc.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__gmskmod__bc_1a0279987142d52d9f8197a337783373ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_gmskmod_bc::digital_gmskmod_bc</definition>
+        <argsstring>(unsigned samples_per_sym, double bt, unsigned L)</argsstring>
+        <name>digital_gmskmod_bc</name>
+        <param>
+          <type>unsigned</type>
+          <declname>samples_per_sym</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bt</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_gmskmod_bc.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GMSK modulator. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples_per_sym</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Samples per symbol. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 3 dB time-bandwidth product. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>L</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the phase duration in symbols. The Gaussian pulse is truncated after L symbols.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The input of this block are symbols from an M-ary alphabet +/-1, +/-3, ..., +/-(M-1). Usually, M = 2 and therefore, the valid inputs are +/-1. The modulator will silently accept any other inputs, though. The output is the phase-modulated signal. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="391">
+        <label>digital_gmskmod_bc</label>
+        <link refid="classdigital__gmskmod__bc"/>
+        <childnode refid="392" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="392">
+        <label>digital_cpmmod_bc</label>
+        <link refid="classdigital__cpmmod__bc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="393">
+        <label>digital_gmskmod_bc</label>
+        <link refid="classdigital__gmskmod__bc"/>
+        <childnode refid="394" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="394">
+        <label>digital_cpmmod_bc</label>
+        <link refid="classdigital__cpmmod__bc"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_gmskmod_bc.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_gmskmod_bc.h" bodystart="54" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classdigital__cpmmod__bc_1aadb14cbaeadc17071047caddda0c17c3" prot="protected" virt="non-virtual"><scope>digital_gmskmod_bc</scope><name>digital_cpmmod_bc</name></member>
+      <member refid="classdigital__gmskmod__bc_1a0279987142d52d9f8197a337783373ad" prot="private" virt="non-virtual"><scope>digital_gmskmod_bc</scope><name>digital_gmskmod_bc</name></member>
+      <member refid="classdigital__gmskmod__bc_1a99fb2f2598806f17b85c3a8b8e920e57" prot="private" virt="non-virtual"><scope>digital_gmskmod_bc</scope><name>digital_make_gmskmod_bc</name></member>
+      <member refid="classdigital__cpmmod__bc_1a7ee3ed441b2e08fedd0bee7362d3b952" prot="public" virt="non-virtual"><scope>digital_gmskmod_bc</scope><name>get_taps</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

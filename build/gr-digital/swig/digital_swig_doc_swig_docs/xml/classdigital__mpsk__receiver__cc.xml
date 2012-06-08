@@ -1,0 +1,1083 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__mpsk__receiver__cc" kind="class" prot="public">
+    <compoundname>digital_mpsk_receiver_cc</compoundname>
+    <includes refid="digital__mpsk__receiver__cc_8h" local="no">digital_mpsk_receiver_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a06a434bec945b670cb9c8f6e119dde64" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::d_M</definition>
+        <argsstring></argsstring>
+        <name>d_M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="262" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a6f0674d06eead7db6d756eb22e2c1fa7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_theta</definition>
+        <argsstring></argsstring>
+        <name>d_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="263" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a8025287ba007f726099b78b4b40850af" prot="private" static="no" mutable="no">
+        <type>unsigned int(digital_mpsk_receiver_cc::*</type>
+        <definition>unsigned int(digital_mpsk_receiver_cc::* digital_mpsk_receiver_cc::d_decision)(gr_complex sample) const </definition>
+        <argsstring>)(gr_complex sample) const </argsstring>
+        <name>d_decision</name>
+        <briefdescription>
+<para>Decision maker function pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the baseband I&amp;Q sample from which to make the decision</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This is a function pointer that is set in the constructor to point to the proper decision function for the specified constellation order.</para><para><simplesect kind="return"><para>index into d_constellation point that is the closest to the recieved sample </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="276" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a1901da131f08202d3e0e3f8c96f92ee9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_mpsk_receiver_cc::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="279" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a812083b1d1625280fbba219f23819fd9" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::d_current_const_point</definition>
+        <argsstring></argsstring>
+        <name>d_current_const_point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="280" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1add271eff679dc091055d936f62650eec" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_mu</definition>
+        <argsstring></argsstring>
+        <name>d_mu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="283" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a59e50584f0ad0ae52357442f0f73abbe" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_gain_mu</definition>
+        <argsstring></argsstring>
+        <name>d_gain_mu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="283" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1aef44e2dc73b9d928f00d88b5f48284ba" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_omega</definition>
+        <argsstring></argsstring>
+        <name>d_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a60299a69e3b27c43eeb3c15af09d0563" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_gain_omega</definition>
+        <argsstring></argsstring>
+        <name>d_gain_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a15c793ce58185df6a6ec0bfc5abc5817" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_omega_rel</definition>
+        <argsstring></argsstring>
+        <name>d_omega_rel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a4ddac85ed8942f13c1a3571cf38633bf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_max_omega</definition>
+        <argsstring></argsstring>
+        <name>d_max_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1ab199d1d03ad587fa78a67021184e7c25" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_min_omega</definition>
+        <argsstring></argsstring>
+        <name>d_min_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a2c2f5268ca87142e907cd12718416ef9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::d_omega_mid</definition>
+        <argsstring></argsstring>
+        <name>d_omega_mid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="284" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a57a4e28f0d35b75ad39f56c5c9ffd75f" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_p_2T</definition>
+        <argsstring></argsstring>
+        <name>d_p_2T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="285" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1accedf3dab56afa1ca1c04638c096499c" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_p_1T</definition>
+        <argsstring></argsstring>
+        <name>d_p_1T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="285" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a260b89e65f3078af22691d765dcc2e52" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_p_0T</definition>
+        <argsstring></argsstring>
+        <name>d_p_0T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="285" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a59f8999c14664ee0b5b1e636ec7a04cb" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_c_2T</definition>
+        <argsstring></argsstring>
+        <name>d_c_2T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="286" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a3635ea61f36f7fc813163bdb6c42e79d" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_c_1T</definition>
+        <argsstring></argsstring>
+        <name>d_c_1T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="286" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1a68a9cf31abd8873688dec8f283a92c0a" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex digital_mpsk_receiver_cc::d_c_0T</definition>
+        <argsstring></argsstring>
+        <name>d_c_0T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="286" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1abc5da883aa256540896affaf11d056aa" prot="private" static="no" mutable="no">
+        <type>float(digital_mpsk_receiver_cc::*</type>
+        <definition>float(digital_mpsk_receiver_cc::* digital_mpsk_receiver_cc::d_phase_error_detector)(gr_complex sample) const </definition>
+        <argsstring>)(gr_complex sample) const </argsstring>
+        <name>d_phase_error_detector</name>
+        <briefdescription>
+<para>Phase error detector function pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the I&amp;Q sample from which to determine the phase error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This is a function pointer that is set in the constructor to point to the proper phase error detector function for the specified constellation order. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="297" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1abc1eb4df78c390897025450140548ede" prot="private" static="no" mutable="no">
+        <type>gri_mmse_fir_interpolator_cc *</type>
+        <definition>gri_mmse_fir_interpolator_cc* digital_mpsk_receiver_cc::d_interp</definition>
+        <argsstring></argsstring>
+        <name>d_interp</name>
+        <briefdescription>
+<para>get interpolated value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="301" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1aaf587107a6ae5f37dc8c4f9351441d65" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::d_dl_idx</definition>
+        <argsstring></argsstring>
+        <name>d_dl_idx</name>
+        <briefdescription>
+<para>index to delay line </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="310" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdigital__mpsk__receiver__cc_1ae54fe24fcc9a95113c6506298e700d8d" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int digital_mpsk_receiver_cc::DLLEN</definition>
+        <argsstring></argsstring>
+        <name>DLLEN</name>
+        <initializer> 8</initializer>
+        <briefdescription>
+<para>delay line length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="304" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a17af191125c67b787ffc8ead032645b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_mpsk_receiver_cc::~digital_mpsk_receiver_cc</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_mpsk_receiver_cc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a75feb942fe43508c987d7e9be20545ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a8ba9e9a543b75b6fe38f7d42d791076a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_mpsk_receiver_cc::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1adc3ddd49441ec8a4e2ebac811febb24e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::modulation_order</definition>
+        <argsstring>() const </argsstring>
+        <name>modulation_order</name>
+        <briefdescription>
+<para>Returns the modulation order (M) currently set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="95" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1aba8d93e7526e0cc1f0b3fc861deb8f90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::theta</definition>
+        <argsstring>() const </argsstring>
+        <name>theta</name>
+        <briefdescription>
+<para>Returns current value of theta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1af9dc8afcc73ab90126eb458a8184e9fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::mu</definition>
+        <argsstring>() const </argsstring>
+        <name>mu</name>
+        <briefdescription>
+<para>Returns current value of mu. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="101" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1aacefc0a2ae7cbbffd0f55c4bff8c3a86" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::omega</definition>
+        <argsstring>() const </argsstring>
+        <name>omega</name>
+        <briefdescription>
+<para>Returns current value of omega. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1ad038f933471d96568d8fec4b3b74c4fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::gain_mu</definition>
+        <argsstring>() const </argsstring>
+        <name>gain_mu</name>
+        <briefdescription>
+<para>Returns mu gain factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a7e031588dbfad49821ccf648cff9fc1c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::gain_omega</definition>
+        <argsstring>() const </argsstring>
+        <name>gain_omega</name>
+        <briefdescription>
+<para>Returns omega gain factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1afc4443709faf8521e908a78b6b3b3259" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::gain_omega_rel</definition>
+        <argsstring>() const </argsstring>
+        <name>gain_omega_rel</name>
+        <briefdescription>
+<para>Returns the relative omega limit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="113" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a80da2b745a4a80e9716f972dc89266d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_modulation_order</definition>
+        <argsstring>(unsigned int M)</argsstring>
+        <name>set_modulation_order</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+<para>Sets the modulation order (M) currently. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a3ce3ea9c4f738f43caa865793bda9766" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_theta</definition>
+        <argsstring>(float theta)</argsstring>
+        <name>set_theta</name>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+<para>Sets value of theta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a8b54df22ac8ab9260a79e5b805d4487e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_mu</definition>
+        <argsstring>(float mu)</argsstring>
+        <name>set_mu</name>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+<para>Sets value of mu. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="122" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1acb44184ada75462c1ebdc3d9a269e697" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_omega</definition>
+        <argsstring>(float omega)</argsstring>
+        <name>set_omega</name>
+        <param>
+          <type>float</type>
+          <declname>omega</declname>
+        </param>
+        <briefdescription>
+<para>Sets value of omega and its min and max values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="125" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1ac570840c538938e1fd8284211a12772b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_gain_mu</definition>
+        <argsstring>(float gain_mu)</argsstring>
+        <name>set_gain_mu</name>
+        <param>
+          <type>float</type>
+          <declname>gain_mu</declname>
+        </param>
+        <briefdescription>
+<para>Sets value for mu gain factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="133" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a1c57b7a442d60b0b757e57657d010492" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_gain_omega</definition>
+        <argsstring>(float gain_omega)</argsstring>
+        <name>set_gain_omega</name>
+        <param>
+          <type>float</type>
+          <declname>gain_omega</declname>
+        </param>
+        <briefdescription>
+<para>Sets value for omega gain factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="136" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a371b785ba6dec71989ec2cd815d2d67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::set_gain_omega_rel</definition>
+        <argsstring>(float omega_rel)</argsstring>
+        <name>set_gain_omega_rel</name>
+        <param>
+          <type>float</type>
+          <declname>omega_rel</declname>
+        </param>
+        <briefdescription>
+<para>Sets the relative omega limit and resets omega min/max values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="139"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1afc5d4d36158f74106692e26b9257d54a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_mpsk_receiver_cc::digital_mpsk_receiver_cc</definition>
+        <argsstring>(unsigned int M, float theta, float loop_bw, float fmin, float fmax, float mu, float gain_mu, float omega, float gain_omega, float omega_rel)</argsstring>
+        <name>digital_mpsk_receiver_cc</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega_rel</declname>
+        </param>
+        <briefdescription>
+<para>Constructor to synchronize incoming M-PSK symbols. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>M</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>modulation order of the M-PSK modulation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any constant phase rotation from the real axis of the constellation </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop_bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Loop bandwidth to set gains of phase/freq tracking loop </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum normalized frequency value the loop can achieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum normalized frequency value the loop can achieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial parameter for the interpolator [0,1] </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gain_mu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gain parameter of the M&amp;M error signal to adjust mu (~0.05) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial value for the number of symbols between samples (~number of samples/symbol) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gain_omega</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gain parameter to adjust omega based on the error (~omega^2/4) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>omega_rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets the maximum (omega*(1+omega_rel)) and minimum (omega*(1+omega_rel)) omega (~0.005)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor also chooses which phase detector and decision maker to use in the work loop based on the value of M. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a680f424d4ad89ee7638b3900443bf53f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::make_constellation</definition>
+        <argsstring>()</argsstring>
+        <name>make_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a9703aa1b873a1a3ec096e479ab3206fe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::mm_sampler</definition>
+        <argsstring>(const gr_complex symbol)</argsstring>
+        <name>mm_sampler</name>
+        <param>
+          <type>const gr_complex</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a0f3116485947f02eab5c13b11e1b003b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::mm_error_tracking</definition>
+        <argsstring>(gr_complex sample)</argsstring>
+        <name>mm_error_tracking</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1ac356f722f41cf8b92d914f31bb017e0f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_mpsk_receiver_cc::phase_error_tracking</definition>
+        <argsstring>(gr_complex sample)</argsstring>
+        <name>phase_error_tracking</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a4f1d9e5b99224cdbb30ff0fd4d5537c4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::phase_error_detector_generic</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_error_detector_generic</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Phase error detector for MPSK modulations. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the I&amp;Q sample from which to determine the phase error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This function determines the phase error for any MPSK signal by creating a set of PSK constellation points and doing a brute-force search to see which point minimizes the Euclidean distance. This point is then used to derotate the sample to the real-axis and a atan (using the fast approximation function) to determine the phase difference between the incoming sample and the real constellation point</para><para>This should be cleaned up and made more efficient.</para><para><simplesect kind="return"><para>the approximated phase error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a884b78416433ea1938e3bf0e89d63237" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::phase_error_detector_bpsk</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_error_detector_bpsk</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Phase error detector for BPSK modulation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the I&amp;Q sample from which to determine the phase error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This function determines the phase error using a simple BPSK phase error detector by multiplying the real and imaginary (the error signal) components together. As the imaginary part goes to 0, so does this error.</para><para><simplesect kind="return"><para>the approximated phase error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1aaee81e5dda9bb32f2985d0075e1e6fa8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_mpsk_receiver_cc::phase_error_detector_qpsk</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_error_detector_qpsk</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Phase error detector for QPSK modulation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the I&amp;Q sample from which to determine the phase error</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This function determines the phase error using the limiter approach in a standard 4th order Costas loop</para><para><simplesect kind="return"><para>the approximated phase error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a002eb8f87f28b26c47ac70c10eabeaa0" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::decision_generic</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>decision_generic</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Decision maker for a generic MPSK constellation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the baseband I&amp;Q sample from which to make the decision</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This decision maker is a generic implementation that does a brute-force search for the constellation point that minimizes the error between it and the incoming signal.</para><para><simplesect kind="return"><para>the index to d_constellation that minimizes the error/ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a6ab51b25cd682f8b7de1ae35a08ffb2e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::decision_bpsk</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>decision_bpsk</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Decision maker for BPSK constellation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the baseband I&amp;Q sample from which to make the decision</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This decision maker is a simple slicer function that makes a decision on the symbol based on its placement on the real axis of greater than 0 or less than 0; the quadrature component is always 0.</para><para><simplesect kind="return"><para>the index to d_constellation that minimizes the error/ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1a1a2024f6dcc2c59ffdd41e43cd509f65" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_mpsk_receiver_cc::decision_qpsk</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>decision_qpsk</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Decision maker for QPSK constellation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the baseband I&amp;Q sample from which to make the decision</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This decision maker is a simple slicer function that makes a decision on the symbol based on its placement versus both axes and returns which quadrant the symbol is in.</para><para><simplesect kind="return"><para>the index to d_constellation that minimizes the error/ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="259"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__mpsk__receiver__cc_1ae6188033017d2ccee7d37246c2b30ff1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_mpsk_receiver_cc::__GR_ATTR_ALIGNED</definition>
+        <argsstring>(8) gr_complex d_dl[2 *DLLEN]</argsstring>
+        <name>__GR_ATTR_ALIGNED</name>
+        <param>
+          <type>8</type>
+        </param>
+        <briefdescription>
+<para>delay line plus some length for overflow protection </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="307"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__mpsk__receiver__cc_1a84300e31072a7fa3324d3cefdf6539ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__mpsk__receiver__cc_8h_1a78d9e614caa784e46560eccf64b1878a" kindref="member">digital_mpsk_receiver_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_mpsk_receiver_cc_sptr digital_make_mpsk_receiver_cc</definition>
+        <argsstring>(unsigned int M, float theta, float loop_bw, float fmin, float fmax, float mu, float gain_mu, float omega, float gain_omega, float omega_rel)</argsstring>
+        <name>digital_make_mpsk_receiver_cc</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>M</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fmax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_mu</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain_omega</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>omega_rel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This block takes care of receiving M-PSK modulated signals through phase, frequency, and symbol synchronization.</para><para>This block takes care of receiving M-PSK modulated signals through phase, frequency, and symbol synchronization. It performs carrier frequency and phase locking as well as symbol timing recovery. It works with (D)BPSK, (D)QPSK, and (D)8PSK as tested currently. It should also work for OQPSK and PI/4 DQPSK. </para>    </briefdescription>
+    <detaileddescription>
+<para>The phase and frequency synchronization are based on a Costas loop that finds the error of the incoming signal point compared to its nearest constellation point. The frequency and phase of the NCO are updated according to this error. There are optimized phase error detectors for BPSK and QPSK, but 8PSK is done using a brute-force computation of the constellation points to find the minimum.</para><para>The symbol synchronization is done using a modified Mueller and Muller circuit from the paper:</para><para>&quot;G. R. Danesfahani, T. G. Jeans, &quot;Optimisation of modified Mueller and Muller algorithm,&quot; Electronics Letters, Vol. 31, no. 13, 22
+ June 1995, pp. 1032 - 1033.&quot;</para><para>This circuit interpolates the downconverted sample (using the NCO developed by the Costas loop) every mu samples, then it finds the sampling error based on this and the past symbols and the decision made on the samples. Like the phase error detector, there are optimized decision algorithms for BPSK and QPKS, but 8PSK uses another brute force computation against all possible symbols. The modifications to the M&amp;M used here reduce self-noise. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_mpsk_receiver_cc.h" bodystart="83" bodyend="318"/>
+    <listofallmembers>
+      <member refid="classdigital__mpsk__receiver__cc_1ae6188033017d2ccee7d37246c2b30ff1" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>__GR_ATTR_ALIGNED</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a68a9cf31abd8873688dec8f283a92c0a" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_c_0T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a3635ea61f36f7fc813163bdb6c42e79d" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_c_1T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a59f8999c14664ee0b5b1e636ec7a04cb" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_c_2T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a1901da131f08202d3e0e3f8c96f92ee9" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_constellation</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a812083b1d1625280fbba219f23819fd9" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_current_const_point</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a8025287ba007f726099b78b4b40850af" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_decision</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1aaf587107a6ae5f37dc8c4f9351441d65" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_dl_idx</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a59e50584f0ad0ae52357442f0f73abbe" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_gain_mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a60299a69e3b27c43eeb3c15af09d0563" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_gain_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1abc1eb4df78c390897025450140548ede" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_interp</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a06a434bec945b670cb9c8f6e119dde64" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_M</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a4ddac85ed8942f13c1a3571cf38633bf" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_max_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1ab199d1d03ad587fa78a67021184e7c25" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_min_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1add271eff679dc091055d936f62650eec" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1aef44e2dc73b9d928f00d88b5f48284ba" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a2c2f5268ca87142e907cd12718416ef9" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_omega_mid</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a15c793ce58185df6a6ec0bfc5abc5817" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_omega_rel</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a260b89e65f3078af22691d765dcc2e52" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_p_0T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1accedf3dab56afa1ca1c04638c096499c" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_p_1T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a57a4e28f0d35b75ad39f56c5c9ffd75f" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_p_2T</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1abc5da883aa256540896affaf11d056aa" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_phase_error_detector</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a6f0674d06eead7db6d756eb22e2c1fa7" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>d_theta</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a6ab51b25cd682f8b7de1ae35a08ffb2e" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>decision_bpsk</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a002eb8f87f28b26c47ac70c10eabeaa0" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>decision_generic</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a1a2024f6dcc2c59ffdd41e43cd509f65" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>decision_qpsk</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a84300e31072a7fa3324d3cefdf6539ff" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>digital_make_mpsk_receiver_cc</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1afc5d4d36158f74106692e26b9257d54a" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>digital_mpsk_receiver_cc</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1ae54fe24fcc9a95113c6506298e700d8d" prot="private" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>DLLEN</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a75feb942fe43508c987d7e9be20545ba" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>forecast</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1ad038f933471d96568d8fec4b3b74c4fc" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>gain_mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a7e031588dbfad49821ccf648cff9fc1c" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>gain_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1afc4443709faf8521e908a78b6b3b3259" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>gain_omega_rel</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a8ba9e9a543b75b6fe38f7d42d791076a" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>general_work</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a680f424d4ad89ee7638b3900443bf53f" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>make_constellation</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a0f3116485947f02eab5c13b11e1b003b" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>mm_error_tracking</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a9703aa1b873a1a3ec096e479ab3206fe" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>mm_sampler</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1adc3ddd49441ec8a4e2ebac811febb24e" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>modulation_order</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1af9dc8afcc73ab90126eb458a8184e9fc" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1aacefc0a2ae7cbbffd0f55c4bff8c3a86" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a884b78416433ea1938e3bf0e89d63237" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>phase_error_detector_bpsk</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a4f1d9e5b99224cdbb30ff0fd4d5537c4" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>phase_error_detector_generic</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1aaee81e5dda9bb32f2985d0075e1e6fa8" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>phase_error_detector_qpsk</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1ac356f722f41cf8b92d914f31bb017e0f" prot="protected" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>phase_error_tracking</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1ac570840c538938e1fd8284211a12772b" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_gain_mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a1c57b7a442d60b0b757e57657d010492" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_gain_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a371b785ba6dec71989ec2cd815d2d67f" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_gain_omega_rel</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a80da2b745a4a80e9716f972dc89266d6" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_modulation_order</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a8b54df22ac8ab9260a79e5b805d4487e" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_mu</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1acb44184ada75462c1ebdc3d9a269e697" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_omega</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a3ce3ea9c4f738f43caa865793bda9766" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>set_theta</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1aba8d93e7526e0cc1f0b3fc861deb8f90" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>theta</name></member>
+      <member refid="classdigital__mpsk__receiver__cc_1a17af191125c67b787ffc8ead032645b3" prot="public" virt="non-virtual"><scope>digital_mpsk_receiver_cc</scope><name>~digital_mpsk_receiver_cc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

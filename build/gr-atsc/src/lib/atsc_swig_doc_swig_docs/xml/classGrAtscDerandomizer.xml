@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classGrAtscDerandomizer" kind="class" prot="public">
+    <compoundname>GrAtscDerandomizer</compoundname>
+    <includes refid="GrAtscDerandomizer_8h" local="no">GrAtscDerandomizer.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGrAtscDerandomizer_1af1b22b07c8b83dc5f65bdd780143fa43" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__randomizer" kindref="compound">atsci_randomizer</ref></type>
+        <definition>atsci_randomizer GrAtscDerandomizer::rand</definition>
+        <argsstring></argsstring>
+        <name>rand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrAtscDerandomizer_1a7037bfc0abeeb0493621ac1c377b15bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscDerandomizer::GrAtscDerandomizer</definition>
+        <argsstring>()</argsstring>
+        <name>GrAtscDerandomizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscDerandomizer_1a434320484a24085a62f95011e6e3124d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscDerandomizer::~GrAtscDerandomizer</definition>
+        <argsstring>()</argsstring>
+        <name>~GrAtscDerandomizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscDerandomizer_1ae8a87fe08e6e9c3c93e9e224cb424a77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* GrAtscDerandomizer::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscDerandomizer_1a788bcdfb4237193ae3f09c1e44132948" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int GrAtscDerandomizer::work</definition>
+        <argsstring>(VrSampleRange output, void *o[], VrSampleRange inputs[], void *i[])</argsstring>
+        <name>work</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>o</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>i</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Derandomize ATSC data (<ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref> --&gt; <ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref>) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="467">
+        <label>GrAtscDerandomizer</label>
+        <link refid="classGrAtscDerandomizer"/>
+        <childnode refid="468" relation="usage">
+          <edgelabel>rand</edgelabel>
+        </childnode>
+      </node>
+      <node id="468">
+        <label>atsci_randomizer</label>
+        <link refid="classatsci__randomizer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h" bodystart="34" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classGrAtscDerandomizer_1a7037bfc0abeeb0493621ac1c377b15bb" prot="public" virt="non-virtual"><scope>GrAtscDerandomizer</scope><name>GrAtscDerandomizer</name></member>
+      <member refid="classGrAtscDerandomizer_1ae8a87fe08e6e9c3c93e9e224cb424a77" prot="public" virt="non-virtual"><scope>GrAtscDerandomizer</scope><name>name</name></member>
+      <member refid="classGrAtscDerandomizer_1af1b22b07c8b83dc5f65bdd780143fa43" prot="protected" virt="non-virtual"><scope>GrAtscDerandomizer</scope><name>rand</name></member>
+      <member refid="classGrAtscDerandomizer_1a788bcdfb4237193ae3f09c1e44132948" prot="public" virt="virtual"><scope>GrAtscDerandomizer</scope><name>work</name></member>
+      <member refid="classGrAtscDerandomizer_1a434320484a24085a62f95011e6e3124d" prot="public" virt="non-virtual"><scope>GrAtscDerandomizer</scope><name>~GrAtscDerandomizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

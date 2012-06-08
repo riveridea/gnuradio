@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__kurtotic__equalizer__cc_8h" kind="file">
+    <compoundname>digital_kurtotic_equalizer_cc.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes refid="gr__adaptive__fir__ccc_8h" local="no">gr_adaptive_fir_ccc.h</includes>
+    <includes refid="gr__math_8h" local="no">gr_math.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="3186">
+        <label>digital_kurtotic_equalizer_cc.h</label>
+        <link refid="digital_kurtotic_equalizer_cc.h"/>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3189" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+      </node>
+      <node id="3197">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="3209">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="3208">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="3207" relation="include">
+        </childnode>
+        <childnode refid="3209" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3217" relation="include">
+        </childnode>
+      </node>
+      <node id="3200">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="3201" relation="include">
+        </childnode>
+      </node>
+      <node id="3212">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="3213" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+      </node>
+      <node id="3192">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3193" relation="include">
+        </childnode>
+      </node>
+      <node id="3207">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3194">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3202" relation="include">
+        </childnode>
+        <childnode refid="3203" relation="include">
+        </childnode>
+        <childnode refid="3204" relation="include">
+        </childnode>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+      </node>
+      <node id="3216">
+        <label>stdexcept</label>
+      </node>
+      <node id="3196">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+      </node>
+      <node id="3211">
+        <label>string</label>
+      </node>
+      <node id="3193">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3194" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3218">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+      </node>
+      <node id="3199">
+        <label>stddef.h</label>
+      </node>
+      <node id="3204">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="3213">
+        <label>limits.h</label>
+      </node>
+      <node id="3210">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3195">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3196" relation="include">
+        </childnode>
+      </node>
+      <node id="3214">
+        <label>wchar.h</label>
+      </node>
+      <node id="3205">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3206" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+      </node>
+      <node id="3198">
+        <label>vector</label>
+      </node>
+      <node id="3219">
+        <label>gr_math.h</label>
+        <link refid="gr__math_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+      </node>
+      <node id="3187">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3203">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="3188">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="3215">
+        <label>iosfwd</label>
+      </node>
+      <node id="3220">
+        <label>iostream</label>
+      </node>
+      <node id="3217">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="3189">
+        <label>gr_adaptive_fir_ccc.h</label>
+        <link refid="gr__adaptive__fir__ccc_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3191" relation="include">
+        </childnode>
+      </node>
+      <node id="3191">
+        <label>gr_sync_decimator.h</label>
+        <link refid="gr__sync__decimator_8h"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3192" relation="include">
+        </childnode>
+      </node>
+      <node id="3202">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+      </node>
+      <node id="3201">
+        <label>complex</label>
+      </node>
+      <node id="3206">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="3207" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__kurtotic__equalizer__cc" prot="public">digital_kurtotic_equalizer_cc</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__kurtotic__equalizer__cc_8h_1a706ba9cd6f659c48f26f894fdf383baf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_kurtotic_equalizer_cc_sptr</ref></type>
+        <definition>DIGITAL_API digital_kurtotic_equalizer_cc_sptr digital_make_kurtotic_equalizer_cc</definition>
+        <argsstring>(int num_taps, float mu)</argsstring>
+        <name>digital_make_kurtotic_equalizer_cc</name>
+        <param>
+          <type>int</type>
+          <declname>num_taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_kurtotic_equalizer_cc.h" line="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_kurtotic_equalizer_cc.h"/>
+  </compounddef>
+</doxygen>

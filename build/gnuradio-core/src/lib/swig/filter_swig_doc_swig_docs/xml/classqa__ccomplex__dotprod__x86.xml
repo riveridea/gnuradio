@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classqa__ccomplex__dotprod__x86" kind="class" prot="public">
+    <compoundname>qa_ccomplex_dotprod_x86</compoundname>
+    <includes refid="qa__ccomplex__dotprod__x86_8h" local="no">qa_ccomplex_dotprod_x86.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classqa__ccomplex__dotprod__x86_1ac886d7c3cc7b98bcf8443e0fdff82008" prot="private" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* qa_ccomplex_dotprod_x86::ccomplex_dotprod_t)(const float *input, const float *taps, unsigned n_2_ccomplex_blocks, float *result)</definition>
+        <argsstring>)(const float *input, const float *taps, unsigned n_2_ccomplex_blocks, float *result)</argsstring>
+        <name>ccomplex_dotprod_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqa__ccomplex__dotprod__x86_1a3eabc0a67c0e573c269e8fd68c581e13" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* qa_ccomplex_dotprod_x86::taps</definition>
+        <argsstring></argsstring>
+        <name>taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqa__ccomplex__dotprod__x86_1ad11e6903ece6487172e5b2f3a644df0a" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* qa_ccomplex_dotprod_x86::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a505998572df3c90f8da956b1987db3d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::setUp</definition>
+        <argsstring>()</argsstring>
+        <name>setUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1af9585d080cf7470917891e69fe240b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::tearDown</definition>
+        <argsstring>()</argsstring>
+        <name>tearDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a7517c567e0a06c7a2ad906b7d902ec88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST_SUITE</definition>
+        <argsstring>(qa_ccomplex_dotprod_x86)</argsstring>
+        <name>CPPUNIT_TEST_SUITE</name>
+        <param>
+          <type><ref refid="classqa__ccomplex__dotprod__x86" kindref="compound">qa_ccomplex_dotprod_x86</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a64df7546fcf74b267442163caef8970c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t1_3dnowext)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t1_3dnowext</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a62244f9a9507fd04753d3930ea18e131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t2_3dnowext)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t2_3dnowext</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ab36ec71079c75bc4e3ca5a0690acbccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t3_3dnowext)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t3_3dnowext</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a2008f35ebcdc6a0a35ca185eb507b764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t1_3dnow)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t1_3dnow</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1aebb2b489c9258d86a3e854ea8400ef3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t2_3dnow)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t2_3dnow</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1af577e0fc61fd417bf10f198a49699a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t3_3dnow)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t3_3dnow</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a7699ddf3c488ed432e2f25539a0dc2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t1_sse)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t1_sse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ab96b675ef4bba4256d92cad036f11b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t2_sse)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t2_sse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1aa2854da50bb0e69ab7b79d4d676c4e02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST</definition>
+        <argsstring>(t3_sse)</argsstring>
+        <name>CPPUNIT_TEST</name>
+        <param>
+          <type>t3_sse</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ad7d67d355f8f2ee84faca1029f743d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qa_ccomplex_dotprod_x86::CPPUNIT_TEST_SUITE_END</definition>
+        <argsstring>()</argsstring>
+        <name>CPPUNIT_TEST_SUITE_END</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a02b101a898f8e1254e71945fd3dc96d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t1_3dnowext</definition>
+        <argsstring>()</argsstring>
+        <name>t1_3dnowext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ad200a9258d86cd51388503ac6ae8cf5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t2_3dnowext</definition>
+        <argsstring>()</argsstring>
+        <name>t2_3dnowext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a8dd1567f50ef519d51911f61a0ed0bee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t3_3dnowext</definition>
+        <argsstring>()</argsstring>
+        <name>t3_3dnowext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a738c49d13913b03a1a93c23766331593" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t1_3dnow</definition>
+        <argsstring>()</argsstring>
+        <name>t1_3dnow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a596f240b95596942b631ad06113c09a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t2_3dnow</definition>
+        <argsstring>()</argsstring>
+        <name>t2_3dnow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a40f1fb8bd326b0d1d8c4867f004daa85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t3_3dnow</definition>
+        <argsstring>()</argsstring>
+        <name>t3_3dnow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ab74f10d94b15b91579a2fd713e193885" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t1_sse</definition>
+        <argsstring>()</argsstring>
+        <name>t1_sse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1afa19372a20a6b35964a4e975c0e1ca10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t2_sse</definition>
+        <argsstring>()</argsstring>
+        <name>t2_sse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ac9afcaa01bdd58086e9f9c5ffa3b32e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t3_sse</definition>
+        <argsstring>()</argsstring>
+        <name>t3_sse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1ad2f749241860dafe6b64c9b8ab738992" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t1_base</definition>
+        <argsstring>(ccomplex_dotprod_t)</argsstring>
+        <name>t1_base</name>
+        <param>
+          <type>ccomplex_dotprod_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a044cda6d0cca0c54d1480335721ab02a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t2_base</definition>
+        <argsstring>(ccomplex_dotprod_t)</argsstring>
+        <name>t2_base</name>
+        <param>
+          <type>ccomplex_dotprod_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1a23e6ae24564acbdc3c5f02f4f9ea9fb1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::t3_base</definition>
+        <argsstring>(ccomplex_dotprod_t)</argsstring>
+        <name>t3_base</name>
+        <param>
+          <type>ccomplex_dotprod_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classqa__ccomplex__dotprod__x86_1adf68364a44850f7d77e4a1e34bdc92f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qa_ccomplex_dotprod_x86::zb</definition>
+        <argsstring>()</argsstring>
+        <name>zb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" line="28" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/qa_ccomplex_dotprod_x86.h" bodystart="28" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classqa__ccomplex__dotprod__x86_1ac886d7c3cc7b98bcf8443e0fdff82008" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>ccomplex_dotprod_t</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a64df7546fcf74b267442163caef8970c" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a62244f9a9507fd04753d3930ea18e131" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ab36ec71079c75bc4e3ca5a0690acbccb" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a2008f35ebcdc6a0a35ca185eb507b764" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1aebb2b489c9258d86a3e854ea8400ef3e" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1af577e0fc61fd417bf10f198a49699a96" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a7699ddf3c488ed432e2f25539a0dc2fd" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ab96b675ef4bba4256d92cad036f11b13" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1aa2854da50bb0e69ab7b79d4d676c4e02" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a7517c567e0a06c7a2ad906b7d902ec88" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST_SUITE</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ad7d67d355f8f2ee84faca1029f743d93" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>CPPUNIT_TEST_SUITE_END</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ad11e6903ece6487172e5b2f3a644df0a" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>input</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a505998572df3c90f8da956b1987db3d9" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>setUp</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a738c49d13913b03a1a93c23766331593" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t1_3dnow</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a02b101a898f8e1254e71945fd3dc96d8" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t1_3dnowext</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ad2f749241860dafe6b64c9b8ab738992" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t1_base</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ab74f10d94b15b91579a2fd713e193885" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t1_sse</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a596f240b95596942b631ad06113c09a3" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t2_3dnow</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ad200a9258d86cd51388503ac6ae8cf5a" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t2_3dnowext</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a044cda6d0cca0c54d1480335721ab02a" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t2_base</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1afa19372a20a6b35964a4e975c0e1ca10" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t2_sse</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a40f1fb8bd326b0d1d8c4867f004daa85" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t3_3dnow</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a8dd1567f50ef519d51911f61a0ed0bee" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t3_3dnowext</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a23e6ae24564acbdc3c5f02f4f9ea9fb1" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t3_base</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1ac9afcaa01bdd58086e9f9c5ffa3b32e8" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>t3_sse</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1a3eabc0a67c0e573c269e8fd68c581e13" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>taps</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1af9585d080cf7470917891e69fe240b8f" prot="public" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>tearDown</name></member>
+      <member refid="classqa__ccomplex__dotprod__x86_1adf68364a44850f7d77e4a1e34bdc92f8" prot="private" virt="non-virtual"><scope>qa_ccomplex_dotprod_x86</scope><name>zb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

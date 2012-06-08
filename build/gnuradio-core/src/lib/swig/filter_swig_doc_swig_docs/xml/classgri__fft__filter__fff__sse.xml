@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__fft__filter__fff__sse" kind="class" prot="public">
+    <compoundname>gri_fft_filter_fff_sse</compoundname>
+    <includes refid="gri__fft__filter__fff__sse_8h" local="no">gri_fft_filter_fff_sse.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1ab6d9e6da96c9cbd1d07b47d07cba9307" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::d_ntaps</definition>
+        <argsstring></argsstring>
+        <name>d_ntaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1a827492aa725993076771a2d4006e1363" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::d_nsamples</definition>
+        <argsstring></argsstring>
+        <name>d_nsamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1a73741365be3cf50bc1bed3ac2d3c02ec" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::d_fftsize</definition>
+        <argsstring></argsstring>
+        <name>d_fftsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1aeb34108e642be817da26116f3aea2a3b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::d_decimation</definition>
+        <argsstring></argsstring>
+        <name>d_decimation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1a4b3fc34431a21529cfc9647c50ae50d5" prot="private" static="no" mutable="no">
+        <type>gri_fft_real_fwd *</type>
+        <definition>gri_fft_real_fwd* gri_fft_filter_fff_sse::d_fwdfft</definition>
+        <argsstring></argsstring>
+        <name>d_fwdfft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1a8dbeddce5abbc8afe20e0dbdc0e50cc8" prot="private" static="no" mutable="no">
+        <type>gri_fft_real_rev *</type>
+        <definition>gri_fft_real_rev* gri_fft_filter_fff_sse::d_invfft</definition>
+        <argsstring></argsstring>
+        <name>d_invfft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1acd1fc22682e8fbaae451501f16af3719" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gri_fft_filter_fff_sse::d_tail</definition>
+        <argsstring></argsstring>
+        <name>d_tail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1ab1c8b12551b5a638214abd3605d61f5e" prot="private" static="no" mutable="no">
+        <type>gr_complex *</type>
+        <definition>gr_complex* gri_fft_filter_fff_sse::d_xformed_taps</definition>
+        <argsstring></argsstring>
+        <name>d_xformed_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__filter__fff__sse_1a15cf599cf70501af7e51d2d18837d678" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gri_fft_filter_fff_sse::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1a371393c2bb983e7c8783ea86f96cc379" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_fft_filter_fff_sse::compute_sizes</definition>
+        <argsstring>(int ntaps)</argsstring>
+        <name>compute_sizes</name>
+        <param>
+          <type>int</type>
+          <declname>ntaps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1a6fccb93ba2057711dda344fe18f7ee7f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::tailsize</definition>
+        <argsstring>() const </argsstring>
+        <name>tailsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1afed7a63caeca71b5ce83169ff266ed6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_fft_filter_fff_sse::gri_fft_filter_fff_sse</definition>
+        <argsstring>(int decimation, const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gri_fft_filter_fff_sse</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>Construct a FFT filter for float vectors with the given taps and decimation rate. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the basic implementation for performing FFT filter for fast convolution in other blocks for floating point vectors (such as <ref refid="classgr__fft__filter__fff" kindref="compound">gr_fft_filter_fff</ref>). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>decimation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimation rate of the filter (int) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter taps (float) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1aa37162dc478ec4389bf4bc2b1a28ee0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_fft_filter_fff_sse::~gri_fft_filter_fff_sse</definition>
+        <argsstring>()</argsstring>
+        <name>~gri_fft_filter_fff_sse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1aaeeeb95f849a6cd8236baba14e4e0e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>Set new taps for the filter. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets new taps and resets the class properties to handle different sizes <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filter taps (float) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__filter__fff__sse_1ad7e83918bbd989dd3f80b1110729998c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_filter_fff_sse::filter</definition>
+        <argsstring>(int nitems, const float *input, float *output)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>int</type>
+          <declname>nitems</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Perform the filter operation. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nitems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of items to produce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector to be filtered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The result of the filter operation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_fft_filter_fff_sse.h" bodystart="33" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classgri__fft__filter__fff__sse_1a371393c2bb983e7c8783ea86f96cc379" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>compute_sizes</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1aeb34108e642be817da26116f3aea2a3b" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_decimation</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a73741365be3cf50bc1bed3ac2d3c02ec" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_fftsize</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a4b3fc34431a21529cfc9647c50ae50d5" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_fwdfft</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a8dbeddce5abbc8afe20e0dbdc0e50cc8" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_invfft</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a15cf599cf70501af7e51d2d18837d678" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_new_taps</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a827492aa725993076771a2d4006e1363" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_nsamples</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1ab6d9e6da96c9cbd1d07b47d07cba9307" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_ntaps</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1acd1fc22682e8fbaae451501f16af3719" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_tail</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1ab1c8b12551b5a638214abd3605d61f5e" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>d_xformed_taps</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1ad7e83918bbd989dd3f80b1110729998c" prot="public" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>filter</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1afed7a63caeca71b5ce83169ff266ed6a" prot="public" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>gri_fft_filter_fff_sse</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1aaeeeb95f849a6cd8236baba14e4e0e96" prot="public" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>set_taps</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1a6fccb93ba2057711dda344fe18f7ee7f" prot="private" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>tailsize</name></member>
+      <member refid="classgri__fft__filter__fff__sse_1aa37162dc478ec4389bf4bc2b1a28ee0f" prot="public" virt="non-virtual"><scope>gri_fft_filter_fff_sse</scope><name>~gri_fft_filter_fff_sse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

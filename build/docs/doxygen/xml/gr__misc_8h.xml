@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__misc_8h" kind="file">
+    <compoundname>gr_misc.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__types_8h" local="no">gr_types.h</includes>
+    <incdepgraph>
+      <node id="8716">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="8719">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="8720" relation="include">
+        </childnode>
+      </node>
+      <node id="8715">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="8713" relation="include">
+        </childnode>
+        <childnode refid="8716" relation="include">
+        </childnode>
+        <childnode refid="8717" relation="include">
+        </childnode>
+        <childnode refid="8718" relation="include">
+        </childnode>
+        <childnode refid="8719" relation="include">
+        </childnode>
+      </node>
+      <node id="8713">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="8714" relation="include">
+        </childnode>
+      </node>
+      <node id="8718">
+        <label>stddef.h</label>
+      </node>
+      <node id="8717">
+        <label>vector</label>
+      </node>
+      <node id="8714">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="8720">
+        <label>complex</label>
+      </node>
+      <node id="8712">
+        <label>gr_misc.h</label>
+        <link refid="gr_misc.h"/>
+        <childnode refid="8713" relation="include">
+        </childnode>
+        <childnode refid="8715" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__misc_8h_1a28799b6e53b0cbd3e73cec248866ecca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> unsigned int</type>
+        <definition>GR_CORE_API unsigned int gr_rounduppow2</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>gr_rounduppow2</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__misc_8h_1a5a28673315841003f842c40aa472d594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void gr_zero_vector</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;v)</argsstring>
+        <name>gr_zero_vector</name>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__misc_8h_1ae9c9543c2c1d461c835b444ce1432ac5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void gr_zero_vector</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;v)</argsstring>
+        <name>gr_zero_vector</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__misc_8h_1a919c0c38bc010707df907f95123bc080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void gr_zero_vector</definition>
+        <argsstring>(std::vector&lt; int &gt; &amp;v)</argsstring>
+        <name>gr_zero_vector</name>
+        <param>
+          <type>std::vector&lt; int &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__misc_8h_1aa25951f6dce6b466ccf6094aaa95201f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>GR_CORE_API void gr_zero_vector</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; &amp;v)</argsstring>
+        <name>gr_zero_vector</name>
+        <param>
+          <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h" line="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_misc.h"/>
+  </compounddef>
+</doxygen>

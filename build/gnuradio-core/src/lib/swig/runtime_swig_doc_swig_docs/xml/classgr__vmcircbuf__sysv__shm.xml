@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vmcircbuf__sysv__shm" kind="class" prot="public">
+    <compoundname>gr_vmcircbuf_sysv_shm</compoundname>
+    <basecompoundref refid="classgr__vmcircbuf" prot="public" virt="non-virtual">gr_vmcircbuf</basecompoundref>
+    <includes refid="gr__vmcircbuf__sysv__shm_8h" local="no">gr_vmcircbuf_sysv_shm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vmcircbuf__sysv__shm_1af800b55ffddff1665436632888532f19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_vmcircbuf_sysv_shm::gr_vmcircbuf_sysv_shm</definition>
+        <argsstring>(int size)</argsstring>
+        <name>gr_vmcircbuf_sysv_shm</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vmcircbuf__sysv__shm_1a4d9e89ddd8872683803f938868b831e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_vmcircbuf_sysv_shm::~gr_vmcircbuf_sysv_shm</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_vmcircbuf_sysv_shm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>concrete class to implement circular buffers with mmap and shm_open </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="544">
+        <label>gr_vmcircbuf</label>
+        <link refid="classgr__vmcircbuf"/>
+      </node>
+      <node id="543">
+        <label>gr_vmcircbuf_sysv_shm</label>
+        <link refid="classgr__vmcircbuf__sysv__shm"/>
+        <childnode refid="544" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="546">
+        <label>gr_vmcircbuf</label>
+        <link refid="classgr__vmcircbuf"/>
+      </node>
+      <node id="545">
+        <label>gr_vmcircbuf_sysv_shm</label>
+        <link refid="classgr__vmcircbuf__sysv__shm"/>
+        <childnode refid="546" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_vmcircbuf_sysv_shm.h" bodystart="33" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classgr__vmcircbuf_1a87e071030553ae4121476de06e48aec4" prot="protected" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>d_base</name></member>
+      <member refid="classgr__vmcircbuf_1a584fb274c233d5dd5f96b017ebf5003d" prot="protected" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>d_size</name></member>
+      <member refid="classgr__vmcircbuf_1abad97351cda0ab091567e78e09fca4ed" prot="protected" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>gr_vmcircbuf</name></member>
+      <member refid="classgr__vmcircbuf__sysv__shm_1af800b55ffddff1665436632888532f19" prot="public" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>gr_vmcircbuf_sysv_shm</name></member>
+      <member refid="classgr__vmcircbuf_1a03d4abaf899703c1b1226083982cae58" prot="public" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>pointer_to_first_copy</name></member>
+      <member refid="classgr__vmcircbuf_1a4f994ddc4c1c45b5eaa28c303af71e61" prot="public" virt="non-virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>pointer_to_second_copy</name></member>
+      <member refid="classgr__vmcircbuf_1ae00d893416c23eb6177c506af8f4f8d2" prot="public" virt="virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>~gr_vmcircbuf</name></member>
+      <member refid="classgr__vmcircbuf__sysv__shm_1a4d9e89ddd8872683803f938868b831e2" prot="public" virt="virtual"><scope>gr_vmcircbuf_sysv_shm</scope><name>~gr_vmcircbuf_sysv_shm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

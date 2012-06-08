@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__bit__timing__loop" kind="class" prot="public">
+    <compoundname>atsc_bit_timing_loop</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="atsc__bit__timing__loop_8h" local="no">atsc_bit_timing_loop.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__bit__timing__loop_1a912645fd3a32dbe81c6f54494e842123" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__sssr" kindref="compound">atsci_sssr</ref></type>
+        <definition>atsci_sssr atsc_bit_timing_loop::d_sssr</definition>
+        <argsstring></argsstring>
+        <name>d_sssr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__bit__timing__loop_1ad938892ed176aa4c64845044449f8229" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__interpolator" kindref="compound">atsci_interpolator</ref></type>
+        <definition>atsci_interpolator atsc_bit_timing_loop::d_interp</definition>
+        <argsstring></argsstring>
+        <name>d_interp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__bit__timing__loop_1af0364ce8290e5c46a5a8a6475d02b5db" prot="protected" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long atsc_bit_timing_loop::d_next_input</definition>
+        <argsstring></argsstring>
+        <name>d_next_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__bit__timing__loop_1a26d797868156d3a5826524e1239614e4" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double atsc_bit_timing_loop::d_rx_clock_to_symbol_freq</definition>
+        <argsstring></argsstring>
+        <name>d_rx_clock_to_symbol_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__bit__timing__loop_1a8c486adf30986c87453ba6bee1a157c0" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsc_bit_timing_loop::d_si</definition>
+        <argsstring></argsstring>
+        <name>d_si</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__bit__timing__loop_1abf4c176537c5c9472ec57e06f6bbcd77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">atsc_bit_timing_loop_sptr</ref></type>
+        <definition>ATSC_API atsc_bit_timing_loop_sptr atsc_make_bit_timing_loop</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_bit_timing_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a6cdec8acf7861a9c1f42968f7f6f191e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_bit_timing_loop::atsc_bit_timing_loop</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_bit_timing_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1aafc2d1f69b23aaa1e66d936ab2995514" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_bit_timing_loop::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1ab498a7e74189eae2c749d4bd67d28d7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a57413dbad3ccd7c06a99c17be4391ff0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>atsc_bit_timing_loop::~atsc_bit_timing_loop</definition>
+        <argsstring>()</argsstring>
+        <name>~atsc_bit_timing_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a49cf7f38cd3b63f255f43d300bf4cfe5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <reimplements refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a">forecast</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+<para>Estimate input requirements given output request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to produce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items_required</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items required on each input stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Given a request to product <computeroutput>noutput_items</computeroutput>, estimate the number of data items required on each input stream. The estimate doesn&apos;t have to be exact, but should be close. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1aed21864e450ec11f50011141b71e2626" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int atsc_bit_timing_loop::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a6609142ff4a9c86541eb03b488660b02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::set_mu</definition>
+        <argsstring>(double a_mu)</argsstring>
+        <name>set_mu</name>
+        <param>
+          <type>double</type>
+          <declname>a_mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a7b1125e67697ddde8ff91fe51bbc442e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::set_no_update</definition>
+        <argsstring>(bool a_no_update)</argsstring>
+        <name>set_no_update</name>
+        <param>
+          <type>bool</type>
+          <declname>a_no_update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1ad9f08a571fadeacdd9c752f0bd0c151a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::set_loop_filter_tap</definition>
+        <argsstring>(double tap)</argsstring>
+        <name>set_loop_filter_tap</name>
+        <param>
+          <type>double</type>
+          <declname>tap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__bit__timing__loop_1a4c9f26080ab7342049b234bdb32d0f6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsc_bit_timing_loop::set_timing_rate</definition>
+        <argsstring>(double rate)</argsstring>
+        <name>set_timing_rate</name>
+        <param>
+          <type>double</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC BitTimingLoop3</para><para>This class accepts a single real input and produces two outputs, the raw symbol (float) and the tag (atsc_syminfo) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="9">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>atsc_bit_timing_loop</label>
+        <link refid="classatsc__bit__timing__loop"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="16">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="22">
+        <label>atsci_interpolator</label>
+        <link refid="classatsci__interpolator"/>
+      </node>
+      <node id="18">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="14">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>atsci_sssr</label>
+        <link refid="classatsci__sssr"/>
+      </node>
+      <node id="12">
+        <label>atsc_bit_timing_loop</label>
+        <link refid="classatsc__bit__timing__loop"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>d_sssr</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>d_interp</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::string</label>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_bit_timing_loop.h" bodystart="44" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>alignment</name></member>
+      <member refid="classatsc__bit__timing__loop_1a6cdec8acf7861a9c1f42968f7f6f191e" prot="private" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>atsc_bit_timing_loop</name></member>
+      <member refid="classatsc__bit__timing__loop_1abf4c176537c5c9472ec57e06f6bbcd77" prot="private" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>atsc_make_bit_timing_loop</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_color</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_input_signature</name></member>
+      <member refid="classatsc__bit__timing__loop_1ad938892ed176aa4c64845044449f8229" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_interp</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_name</name></member>
+      <member refid="classatsc__bit__timing__loop_1af0364ce8290e5c46a5a8a6475d02b5db" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_next_input</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_output_signature</name></member>
+      <member refid="classatsc__bit__timing__loop_1a26d797868156d3a5826524e1239614e4" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_rx_clock_to_symbol_freq</name></member>
+      <member refid="classatsc__bit__timing__loop_1a8c486adf30986c87453ba6bee1a157c0" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_si</name></member>
+      <member refid="classatsc__bit__timing__loop_1a912645fd3a32dbe81c6f54494e842123" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_sssr</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classatsc__bit__timing__loop_1a49cf7f38cd3b63f255f43d300bf4cfe5" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>forecast</name></member>
+      <member refid="classatsc__bit__timing__loop_1aed21864e450ec11f50011141b71e2626" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>relative_rate</name></member>
+      <member refid="classatsc__bit__timing__loop_1ab498a7e74189eae2c749d4bd67d28d7f" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>reset</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_is_unaligned</name></member>
+      <member refid="classatsc__bit__timing__loop_1ad9f08a571fadeacdd9c752f0bd0c151a" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_loop_filter_tap</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_msg_handler</name></member>
+      <member refid="classatsc__bit__timing__loop_1a6609142ff4a9c86541eb03b488660b02" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_mu</name></member>
+      <member refid="classatsc__bit__timing__loop_1a7b1125e67697ddde8ff91fe51bbc442e" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_no_update</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classatsc__bit__timing__loop_1a4c9f26080ab7342049b234bdb32d0f6a" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_timing_rate</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>WHITE</name></member>
+      <member refid="classatsc__bit__timing__loop_1aafc2d1f69b23aaa1e66d936ab2995514" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>WORK_DONE</name></member>
+      <member refid="classatsc__bit__timing__loop_1a57413dbad3ccd7c06a99c17be4391ff0" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>~atsc_bit_timing_loop</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>atsc_bit_timing_loop</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>atsc_bit_timing_loop</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

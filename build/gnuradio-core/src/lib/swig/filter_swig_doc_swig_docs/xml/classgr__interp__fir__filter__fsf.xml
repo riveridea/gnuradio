@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__interp__fir__filter__fsf" kind="class" prot="public">
+    <compoundname>gr_interp_fir_filter_fsf</compoundname>
+    <includes refid="gr__interp__fir__filter__fsf_8h" local="no">gr_interp_fir_filter_fsf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__interp__fir__filter__fsf_1a9e19d552e42f53dd260624a4619c6187" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_interp_fir_filter_fsf::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__interp__fir__filter__fsf_1a07977eb7b84cca862e6888dad012af3d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_interp_fir_filter_fsf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__interp__fir__filter__fsf_1a5c4145855e897d6a6a55773f9840eebc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classgr__fir__fsf" kindref="compound">gr_fir_fsf</ref> * &gt;</type>
+        <definition>std::vector&lt;gr_fir_fsf *&gt; gr_interp_fir_filter_fsf::d_firs</definition>
+        <argsstring></argsstring>
+        <name>d_firs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__interp__fir__filter__fsf_1a709f4a67dd4401cccd275cffa0a1e01e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__interp__fir__filter__fsf_8h_1a154d4d12ed7d36e0e64ab5f82bc9e5ea" kindref="member">gr_interp_fir_filter_fsf_sptr</ref></type>
+        <definition>GR_CORE_API gr_interp_fir_filter_fsf_sptr gr_make_interp_fir_filter_fsf</definition>
+        <argsstring>(unsigned interpolation, const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_make_interp_fir_filter_fsf</name>
+        <param>
+          <type>unsigned</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__interp__fir__filter__fsf_1a71c4ff17bdac6b5b9e9b4dd0dc02d644" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_interp_fir_filter_fsf::gr_interp_fir_filter_fsf</definition>
+        <argsstring>(unsigned interpolation, const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_interp_fir_filter_fsf</name>
+        <param>
+          <type>unsigned</type>
+          <declname>interpolation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a FIR filter with the given taps </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__interp__fir__filter__fsf_1ab6d9929581787cbef8692d54eced4b1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_interp_fir_filter_fsf::install_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>install_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__interp__fir__filter__fsf_1a9da81baef48fb4c29102683afcfc9466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_interp_fir_filter_fsf::~gr_interp_fir_filter_fsf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_interp_fir_filter_fsf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__interp__fir__filter__fsf_1ad0b5232bd743e37ac9225b80a08e1642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_interp_fir_filter_fsf::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__interp__fir__filter__fsf_1a8b68fee21ebbbf63a906e039f33629ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_interp_fir_filter_fsf::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interpolating FIR filter with float input, short output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_interp_fir_filter_fsf.h" bodystart="44" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classgr__interp__fir__filter__fsf_1a5c4145855e897d6a6a55773f9840eebc" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>d_firs</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a9e19d552e42f53dd260624a4619c6187" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>d_new_taps</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a07977eb7b84cca862e6888dad012af3d" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>d_updated</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a71c4ff17bdac6b5b9e9b4dd0dc02d644" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>gr_interp_fir_filter_fsf</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a709f4a67dd4401cccd275cffa0a1e01e" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>gr_make_interp_fir_filter_fsf</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1ab6d9929581787cbef8692d54eced4b1d" prot="private" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>install_taps</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1ad0b5232bd743e37ac9225b80a08e1642" prot="public" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>set_taps</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a8b68fee21ebbbf63a906e039f33629ed" prot="public" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>work</name></member>
+      <member refid="classgr__interp__fir__filter__fsf_1a9da81baef48fb4c29102683afcfc9466" prot="public" virt="non-virtual"><scope>gr_interp_fir_filter_fsf</scope><name>~gr_interp_fir_filter_fsf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

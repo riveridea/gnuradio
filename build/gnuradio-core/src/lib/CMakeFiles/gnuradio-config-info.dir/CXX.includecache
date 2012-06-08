@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../gnuradio-core/src/lib/general/gr_constants.h
+gr_core_api.h
+-
+string
+-
+
+../gnuradio-core/src/lib/general/gr_core_api.h
+gruel/attributes.h
+-
+
+../gruel/src/include/gruel/attributes.h
+
+/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/gnuradio-config-info.cc
+config.h
+-
+gr_constants.h
+-
+boost/program_options.hpp
+-
+iostream
+-
+

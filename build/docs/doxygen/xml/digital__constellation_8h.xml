@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__constellation_8h" kind="file">
+    <compoundname>digital_constellation.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="gr__complex_8h" local="no">gr_complex.h</includes>
+    <includes local="no">boost/enable_shared_from_this.hpp</includes>
+    <includes refid="digital__metric__type_8h" local="no">digital_metric_type.h</includes>
+    <includedby refid="digital__constellation__decoder__cb_8h" local="no">digital_constellation_decoder_cb.h</includedby>
+    <includedby refid="digital__constellation__receiver__cb_8h" local="no">digital_constellation_receiver_cb.h</includedby>
+    <includedby refid="digital__lms__dd__equalizer__cc_8h" local="no">digital_lms_dd_equalizer_cc.h</includedby>
+    <includedby refid="trellis__constellation__metrics__cf_8h" local="no">trellis_constellation_metrics_cf.h</includedby>
+    <incdepgraph>
+      <node id="2620">
+        <label>digital_metric_type.h</label>
+        <link refid="digital__metric__type_8h"/>
+      </node>
+      <node id="2617">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="2618" relation="include">
+        </childnode>
+      </node>
+      <node id="2615">
+        <label>vector</label>
+      </node>
+      <node id="2613">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="2614" relation="include">
+        </childnode>
+      </node>
+      <node id="2619">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="2616">
+        <label>math.h</label>
+      </node>
+      <node id="2614">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2612">
+        <label>digital_constellation.h</label>
+        <link refid="digital_constellation.h"/>
+        <childnode refid="2613" relation="include">
+        </childnode>
+        <childnode refid="2615" relation="include">
+        </childnode>
+        <childnode refid="2616" relation="include">
+        </childnode>
+        <childnode refid="2617" relation="include">
+        </childnode>
+        <childnode refid="2619" relation="include">
+        </childnode>
+        <childnode refid="2620" relation="include">
+        </childnode>
+      </node>
+      <node id="2618">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2624">
+        <label>digital_lms_dd_equalizer_cc.h</label>
+        <link refid="digital__lms__dd__equalizer__cc_8h"/>
+      </node>
+      <node id="2623">
+        <label>digital_constellation_receiver_cb.h</label>
+        <link refid="digital__constellation__receiver__cb_8h"/>
+      </node>
+      <node id="2622">
+        <label>digital_constellation_decoder_cb.h</label>
+        <link refid="digital__constellation__decoder__cb_8h"/>
+      </node>
+      <node id="2621">
+        <label>digital_constellation.h</label>
+        <link refid="digital_constellation.h"/>
+        <childnode refid="2622" relation="include">
+        </childnode>
+        <childnode refid="2623" relation="include">
+        </childnode>
+        <childnode refid="2624" relation="include">
+        </childnode>
+        <childnode refid="2625" relation="include">
+        </childnode>
+      </node>
+      <node id="2625">
+        <label>trellis_constellation_metrics_cf.h</label>
+        <link refid="trellis__constellation__metrics__cf_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdigital__constellation" prot="public">digital_constellation</innerclass>
+    <innerclass refid="classdigital__constellation__calcdist" prot="public">digital_constellation_calcdist</innerclass>
+    <innerclass refid="classdigital__constellation__sector" prot="public">digital_constellation_sector</innerclass>
+    <innerclass refid="classdigital__constellation__rect" prot="public">digital_constellation_rect</innerclass>
+    <innerclass refid="classdigital__constellation__psk" prot="public">digital_constellation_psk</innerclass>
+    <innerclass refid="classdigital__constellation__bpsk" prot="public">digital_constellation_bpsk</innerclass>
+    <innerclass refid="classdigital__constellation__qpsk" prot="public">digital_constellation_qpsk</innerclass>
+    <innerclass refid="classdigital__constellation__dqpsk" prot="public">digital_constellation_dqpsk</innerclass>
+    <innerclass refid="classdigital__constellation__8psk" prot="public">digital_constellation_8psk</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__constellation_8h_1abf3c859675e5255869fae0ad8e34a2db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_calcdist_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_calcdist_sptr digital_make_constellation_calcdist</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; constellation, std::vector&lt; unsigned int &gt; pre_diff_code, unsigned int rotational_symmetry, unsigned int dimensionality)</argsstring>
+        <name>digital_make_constellation_calcdist</name>
+        <param>
+          <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; unsigned int &gt;</type>
+          <declname>pre_diff_code</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>rotational_symmetry</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1ae267ac6d2bb63850f548616be108a7c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_rect_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_rect_sptr digital_make_constellation_rect</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; constellation, std::vector&lt; unsigned int &gt; pre_diff_code, unsigned int rotational_symmetry, unsigned int real_sectors, unsigned int imag_sectors, float width_real_sectors, float width_imag_sectors)</argsstring>
+        <name>digital_make_constellation_rect</name>
+        <param>
+          <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; unsigned int &gt;</type>
+          <declname>pre_diff_code</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>rotational_symmetry</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>real_sectors</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>imag_sectors</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width_real_sectors</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width_imag_sectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1a4fbb16130d249865f8a463dad0181a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_psk_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_psk_sptr digital_make_constellation_psk</definition>
+        <argsstring>(std::vector&lt; gr_complex &gt; constellation, std::vector&lt; unsigned int &gt; pre_diff_code, unsigned int n_sectors)</argsstring>
+        <name>digital_make_constellation_psk</name>
+        <param>
+          <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+          <declname>constellation</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; unsigned int &gt;</type>
+          <declname>pre_diff_code</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n_sectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="288"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1a4f79cded8a760b6f9a20b8eabd1531d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_bpsk_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_bpsk_sptr digital_make_constellation_bpsk</definition>
+        <argsstring>()</argsstring>
+        <name>digital_make_constellation_bpsk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="338"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1a53154e9a1a284cf24be90887fedb1121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_qpsk_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_qpsk_sptr digital_make_constellation_qpsk</definition>
+        <argsstring>()</argsstring>
+        <name>digital_make_constellation_qpsk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="369"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1ae6e2d07e4940cc4854eec7288bc936aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_dqpsk_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_dqpsk_sptr digital_make_constellation_dqpsk</definition>
+        <argsstring>()</argsstring>
+        <name>digital_make_constellation_dqpsk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="400"/>
+      </memberdef>
+      <memberdef kind="function" id="digital__constellation_8h_1a7cefc9e57ed7cab06beadbf0c2ceed39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_constellation_8psk_sptr</ref></type>
+        <definition>DIGITAL_API digital_constellation_8psk_sptr digital_make_constellation_8psk</definition>
+        <argsstring>()</argsstring>
+        <name>digital_make_constellation_8psk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h" line="431"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation.h"/>
+  </compounddef>
+</doxygen>

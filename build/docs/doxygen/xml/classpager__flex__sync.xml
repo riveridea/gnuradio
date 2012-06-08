@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classpager__flex__sync" kind="class" prot="public">
+    <compoundname>pager_flex_sync</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="pager__flex__sync_8h" local="no">pager_flex_sync.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20" prot="private" static="no">
+        <name>state_t</name>
+        <enumvalue id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20a9feec8a12155a4f94725febe76e77295" prot="private">
+          <name>ST_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20a89a616b19e66673a5da458b3a11048d2" prot="private">
+          <name>ST_SYNCING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20ae34cb0f3f336b5d3b71ca2112c5d8630" prot="private">
+          <name>ST_SYNC1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20aa1c88f10857486774617bfd4c7221016" prot="private">
+          <name>ST_SYNC2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20ae241a6ec81081509f76f997c955a76f4" prot="private">
+          <name>ST_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpager__flex__sync_1aa46441b1ad7b68ef20645afafaec116d" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t pager_flex_sync::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1ab2a494e9ddf5e02c9b88bfa0a08ac4bf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_index</definition>
+        <argsstring></argsstring>
+        <name>d_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a3cd2c2f35913557e24edb3e6e4f71ca1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_start</definition>
+        <argsstring></argsstring>
+        <name>d_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a78130a5e9e552cc9bcfb79fd90bcba08" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_center</definition>
+        <argsstring></argsstring>
+        <name>d_center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a8cedeb8634d3a2dfe568f61ef124937a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_end</definition>
+        <argsstring></argsstring>
+        <name>d_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a650d0663e9f2ae02db129214af0a941b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a207a75c5a2329f1b5cc9583e463307fc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_mode</definition>
+        <argsstring></argsstring>
+        <name>d_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1acfba549ea26a63d2e8acfb38fbe3bfd4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_baudrate</definition>
+        <argsstring></argsstring>
+        <name>d_baudrate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1af34994ffb677c63e927bae660654ebc3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_levels</definition>
+        <argsstring></argsstring>
+        <name>d_levels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a4fd4a87fe9358cc18203e7b1392628c3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_spb</definition>
+        <argsstring></argsstring>
+        <name>d_spb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a2591a20d93b81bc7f613656c5ccc71ec" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pager_flex_sync::d_hibit</definition>
+        <argsstring></argsstring>
+        <name>d_hibit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1aa3e82a5c55e9464da2cbe947361f9837" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__types_8h_1ac07cda22882f844c0aa1633d49f1c144" kindref="member">gr_int32</ref></type>
+        <definition>gr_int32 pager_flex_sync::d_fiw</definition>
+        <argsstring></argsstring>
+        <name>d_fiw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a0933c28f73c5896ce26ee8144c1a103d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_frame</definition>
+        <argsstring></argsstring>
+        <name>d_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a1195e7a3dfa49d904d3b222ec894aead" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_cycle</definition>
+        <argsstring></argsstring>
+        <name>d_cycle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1ab60b709ad39b0c5e8eb0373e89d75de3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_unknown1</definition>
+        <argsstring></argsstring>
+        <name>d_unknown1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1abb5624c924df0e8c63f4543db83bbe12" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pager_flex_sync::d_unknown2</definition>
+        <argsstring></argsstring>
+        <name>d_unknown2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a14147383f57e0f0d8ef28e22d78c05d4" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char pager_flex_sync::d_bit_a</definition>
+        <argsstring></argsstring>
+        <name>d_bit_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a4d90564928bd5745b4dee11c8faa2c70" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char pager_flex_sync::d_bit_b</definition>
+        <argsstring></argsstring>
+        <name>d_bit_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="81" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1ac7a35ca16f1180b7083824ca6138e69c" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char pager_flex_sync::d_bit_c</definition>
+        <argsstring></argsstring>
+        <name>d_bit_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a573976d02c264ee5172bdb2115596097" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char pager_flex_sync::d_bit_d</definition>
+        <argsstring></argsstring>
+        <name>d_bit_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a4ca9b64847d945c748ac3074d360d825" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* pager_flex_sync::d_phase_a</definition>
+        <argsstring></argsstring>
+        <name>d_phase_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1af5760bfd9fc45a065e48bb1ae2351a8c" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* pager_flex_sync::d_phase_b</definition>
+        <argsstring></argsstring>
+        <name>d_phase_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1ac06147baf08b01e73458a18990ce6ddd" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* pager_flex_sync::d_phase_c</definition>
+        <argsstring></argsstring>
+        <name>d_phase_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1a1b42e03cc09d5f577a134bee2d52995a" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* pager_flex_sync::d_phase_d</definition>
+        <argsstring></argsstring>
+        <name>d_phase_d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpager__flex__sync_1ab42c85591875b77e681689302829dde0" prot="private" static="no" mutable="no">
+        <type><ref refid="pager__flex__sync_8h_1aec8352e70df9b254fb74b9634edc4ae1" kindref="member">gr_int64_vector</ref></type>
+        <definition>gr_int64_vector pager_flex_sync::d_sync</definition>
+        <argsstring></argsstring>
+        <name>d_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classpager__flex__sync_1a4178399f54c3fc565ff542e1dd2d7aec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="pager__api_8h_1a0466fe431406887375cfa789a185150e" kindref="member">PAGER_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">pager_flex_sync_sptr</ref></type>
+        <definition>PAGER_API pager_flex_sync_sptr pager_make_flex_sync</definition>
+        <argsstring>()</argsstring>
+        <name>pager_make_flex_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpager__flex__sync_1a0ba078d6dda3ae9b5bd7fe41d481f0d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pager_flex_sync::pager_flex_sync</definition>
+        <argsstring>()</argsstring>
+        <name>pager_flex_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a9d19d2186e87cc32297d562e239c309a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::enter_idle</definition>
+        <argsstring>()</argsstring>
+        <name>enter_idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a4f9eb2c1964edc125a21018ce400bd27" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::enter_syncing</definition>
+        <argsstring>()</argsstring>
+        <name>enter_syncing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a4cd14c85000fa79b5de9cf2142a14465" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::enter_sync1</definition>
+        <argsstring>()</argsstring>
+        <name>enter_sync1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a16e42d38978b96327661efccdb154c5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::enter_sync2</definition>
+        <argsstring>()</argsstring>
+        <name>enter_sync2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a6dc37f47653cd80b619caca2f9f427c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::enter_data</definition>
+        <argsstring>()</argsstring>
+        <name>enter_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a061e617a60bcd8836512e5c8f7ecc51e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pager_flex_sync::index_avg</definition>
+        <argsstring>(int start, int end)</argsstring>
+        <name>index_avg</name>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1a2ad76bc8ce502403e37ab0ba5b4c9db0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pager_flex_sync::test_sync</definition>
+        <argsstring>(unsigned char sym)</argsstring>
+        <name>test_sync</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>sym</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1ae7b59ec081f995d0e7ae12b5b1d04389" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pager_flex_sync::output_symbol</definition>
+        <argsstring>(unsigned char sym)</argsstring>
+        <name>output_symbol</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>sym</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpager__flex__sync_1a0276435cb29d29f3e6cddc7d97935ed1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pager_flex_sync::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;inputs_required)</argsstring>
+        <name>forecast</name>
+        <reimplements refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a">forecast</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+<para>Estimate input requirements given output request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to produce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items_required</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items required on each input stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Given a request to product <computeroutput>noutput_items</computeroutput>, estimate the number of data items required on each input stream. The estimate doesn&apos;t have to be exact, but should be close. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classpager__flex__sync_1ae3772cdb03023b695e4ca62df6b8e67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int pager_flex_sync::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>flex sync description </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6666">
+        <label>pager_flex_sync</label>
+        <link refid="classpager__flex__sync"/>
+        <childnode refid="6667" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6669">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="6670" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6667">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="6668" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6670">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="6668">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="6669" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6671">
+        <label>pager_flex_sync</label>
+        <link refid="classpager__flex__sync"/>
+        <childnode refid="6672" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6674">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="6675" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6672">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="6673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6676">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="6677" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="6679">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="6675">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="6677">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="6673">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="6674" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6676" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="6678" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="6678">
+        <label>std::string</label>
+        <childnode refid="6679" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-pager/lib/pager_flex_sync.h" bodystart="39" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>consume_each</name></member>
+      <member refid="classpager__flex__sync_1acfba549ea26a63d2e8acfb38fbe3bfd4" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_baudrate</name></member>
+      <member refid="classpager__flex__sync_1a14147383f57e0f0d8ef28e22d78c05d4" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_bit_a</name></member>
+      <member refid="classpager__flex__sync_1a4d90564928bd5745b4dee11c8faa2c70" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_bit_b</name></member>
+      <member refid="classpager__flex__sync_1ac7a35ca16f1180b7083824ca6138e69c" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_bit_c</name></member>
+      <member refid="classpager__flex__sync_1a573976d02c264ee5172bdb2115596097" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_bit_d</name></member>
+      <member refid="classpager__flex__sync_1a78130a5e9e552cc9bcfb79fd90bcba08" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_center</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_color</name></member>
+      <member refid="classpager__flex__sync_1a650d0663e9f2ae02db129214af0a941b" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_count</name></member>
+      <member refid="classpager__flex__sync_1a1195e7a3dfa49d904d3b222ec894aead" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_cycle</name></member>
+      <member refid="classpager__flex__sync_1a8cedeb8634d3a2dfe568f61ef124937a" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_end</name></member>
+      <member refid="classpager__flex__sync_1aa3e82a5c55e9464da2cbe947361f9837" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_fiw</name></member>
+      <member refid="classpager__flex__sync_1a0933c28f73c5896ce26ee8144c1a103d" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_frame</name></member>
+      <member refid="classpager__flex__sync_1a2591a20d93b81bc7f613656c5ccc71ec" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_hibit</name></member>
+      <member refid="classpager__flex__sync_1ab2a494e9ddf5e02c9b88bfa0a08ac4bf" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_index</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_input_signature</name></member>
+      <member refid="classpager__flex__sync_1af34994ffb677c63e927bae660654ebc3" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_levels</name></member>
+      <member refid="classpager__flex__sync_1a207a75c5a2329f1b5cc9583e463307fc" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_mode</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_output_signature</name></member>
+      <member refid="classpager__flex__sync_1a4ca9b64847d945c748ac3074d360d825" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_phase_a</name></member>
+      <member refid="classpager__flex__sync_1af5760bfd9fc45a065e48bb1ae2351a8c" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_phase_b</name></member>
+      <member refid="classpager__flex__sync_1ac06147baf08b01e73458a18990ce6ddd" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_phase_c</name></member>
+      <member refid="classpager__flex__sync_1a1b42e03cc09d5f577a134bee2d52995a" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_phase_d</name></member>
+      <member refid="classpager__flex__sync_1a4fd4a87fe9358cc18203e7b1392628c3" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_spb</name></member>
+      <member refid="classpager__flex__sync_1a3cd2c2f35913557e24edb3e6e4f71ca1" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_start</name></member>
+      <member refid="classpager__flex__sync_1aa46441b1ad7b68ef20645afafaec116d" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_state</name></member>
+      <member refid="classpager__flex__sync_1ab42c85591875b77e681689302829dde0" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_sync</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_unique_id</name></member>
+      <member refid="classpager__flex__sync_1ab60b709ad39b0c5e8eb0373e89d75de3" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_unknown1</name></member>
+      <member refid="classpager__flex__sync_1abb5624c924df0e8c63f4543db83bbe12" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>d_unknown2</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>detail</name></member>
+      <member refid="classpager__flex__sync_1a6dc37f47653cd80b619caca2f9f427c0" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>enter_data</name></member>
+      <member refid="classpager__flex__sync_1a9d19d2186e87cc32297d562e239c309a" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>enter_idle</name></member>
+      <member refid="classpager__flex__sync_1a4cd14c85000fa79b5de9cf2142a14465" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>enter_sync1</name></member>
+      <member refid="classpager__flex__sync_1a16e42d38978b96327661efccdb154c5a" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>enter_sync2</name></member>
+      <member refid="classpager__flex__sync_1a4f9eb2c1964edc125a21018ce400bd27" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>enter_syncing</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classpager__flex__sync_1a0276435cb29d29f3e6cddc7d97935ed1" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>forecast</name></member>
+      <member refid="classpager__flex__sync_1ae3772cdb03023b695e4ca62df6b8e67d" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>history</name></member>
+      <member refid="classpager__flex__sync_1a061e617a60bcd8836512e5c8f7ecc51e" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>index_avg</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>output_signature</name></member>
+      <member refid="classpager__flex__sync_1ae7b59ec081f995d0e7ae12b5b1d04389" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>output_symbol</name></member>
+      <member refid="classpager__flex__sync_1a0ba078d6dda3ae9b5bd7fe41d481f0d0" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>pager_flex_sync</name></member>
+      <member refid="classpager__flex__sync_1a4178399f54c3fc565ff542e1dd2d7aec" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>pager_make_flex_sync</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>set_unaligned</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20ae241a6ec81081509f76f997c955a76f4" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>ST_DATA</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20a9feec8a12155a4f94725febe76e77295" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>ST_IDLE</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20ae34cb0f3f336b5d3b71ca2112c5d8630" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>ST_SYNC1</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20aa1c88f10857486774617bfd4c7221016" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>ST_SYNC2</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20a89a616b19e66673a5da458b3a11048d2" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>ST_SYNCING</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>start</name></member>
+      <member refid="classpager__flex__sync_1aa5f7fa566bb0e8aef318a729876d8d20" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>state_t</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classpager__flex__sync_1a2ad76bc8ce502403e37ab0ba5b4c9db0" prot="private" virt="non-virtual"><scope>pager_flex_sync</scope><name>test_sync</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>pager_flex_sync</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>pager_flex_sync</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>pager_flex_sync</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

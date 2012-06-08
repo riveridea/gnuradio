@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="structgr__tag__t" kind="struct" prot="public">
+    <compoundname>gr_tag_t</compoundname>
+    <includes refid="gr__tags_8h" local="no">gr_tags.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgr__tag__t_1ab5e07bdef27ed3897075432504885397" prot="public" static="no" mutable="no">
+        <type><ref refid="stdint_8h_1aec6fcb673ff035718c238c8c9d544c47" kindref="member">uint64_t</ref></type>
+        <definition>uint64_t gr_tag_t::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+<para>the item <computeroutput>tag</computeroutput> occurred at (as a uint64_t) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</referencedby>
+        <referencedby refid="structgr__tag__t_1a971b1b8c400262817ea0d69ca622368e" compoundref="gr__tags_8h" startline="43" endline="47">offset_compare</referencedby>
+        <referencedby refid="classtag__sink__demo_1a9b2bb4d41549144ac8eb7f4de5dfbe3a" compoundref="tag__sink__demo_8h" startline="42" endline="65">tag_sink_demo::work</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgr__tag__t_1ad5b16348ee493951e735e3b22bf6195b" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacepmt_1ab4b70d9293452eb74dd07c670e6811fa" kindref="member">pmt::pmt_t</ref></type>
+        <definition>pmt::pmt_t gr_tag_t::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+<para>the key of <computeroutput>tag</computeroutput> (as a PMT symbol) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgr__tag__t_1a4e151f32d9e9ff247749626adec97996" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacepmt_1ab4b70d9293452eb74dd07c670e6811fa" kindref="member">pmt::pmt_t</ref></type>
+        <definition>pmt::pmt_t gr_tag_t::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>the value of <computeroutput>tag</computeroutput> (as a PMT) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</referencedby>
+        <referencedby refid="classtag__sink__demo_1a9b2bb4d41549144ac8eb7f4de5dfbe3a" compoundref="tag__sink__demo_8h" startline="42" endline="65">tag_sink_demo::work</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structgr__tag__t_1a9ad2c66ebe4accf46fea3fb0190ff526" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacepmt_1ab4b70d9293452eb74dd07c670e6811fa" kindref="member">pmt::pmt_t</ref></type>
+        <definition>pmt::pmt_t gr_tag_t::srcid</definition>
+        <argsstring></argsstring>
+        <name>srcid</name>
+        <briefdescription>
+<para>the source ID of <computeroutput>tag</computeroutput> (as a PMT) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" compoundref="gr__block_8h" startline="287" endline="299">gr_block::add_item_tag</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgr__tag__t_1a971b1b8c400262817ea0d69ca622368e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool gr_tag_t::offset_compare</definition>
+        <argsstring>(const gr_tag_t &amp;x, const gr_tag_t &amp;y)</argsstring>
+        <name>offset_compare</name>
+        <param>
+          <type>const <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Comparison function to test which tag, <computeroutput>x</computeroutput> or <computeroutput>y</computeroutput>, came first in time. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="43" bodyend="47"/>
+        <references refid="structgr__tag__t_1ab5e07bdef27ed3897075432504885397" compoundref="gr__tags_8h" startline="31">offset</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" line="28" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tags.h" bodystart="28" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structgr__tag__t_1ad5b16348ee493951e735e3b22bf6195b" prot="public" virt="non-virtual"><scope>gr_tag_t</scope><name>key</name></member>
+      <member refid="structgr__tag__t_1ab5e07bdef27ed3897075432504885397" prot="public" virt="non-virtual"><scope>gr_tag_t</scope><name>offset</name></member>
+      <member refid="structgr__tag__t_1a971b1b8c400262817ea0d69ca622368e" prot="public" virt="non-virtual"><scope>gr_tag_t</scope><name>offset_compare</name></member>
+      <member refid="structgr__tag__t_1a9ad2c66ebe4accf46fea3fb0190ff526" prot="public" virt="non-virtual"><scope>gr_tag_t</scope><name>srcid</name></member>
+      <member refid="structgr__tag__t_1a4e151f32d9e9ff247749626adec97996" prot="public" virt="non-virtual"><scope>gr_tag_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

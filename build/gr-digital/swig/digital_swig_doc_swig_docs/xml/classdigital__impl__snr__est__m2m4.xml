@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__impl__snr__est__m2m4" kind="class" prot="public">
+    <compoundname>digital_impl_snr_est_m2m4</compoundname>
+    <basecompoundref refid="classdigital__impl__mpsk__snr__est" prot="public" virt="non-virtual">digital_impl_mpsk_snr_est</basecompoundref>
+    <includes refid="digital__impl__mpsk__snr__est_8h" local="no">digital_impl_mpsk_snr_est.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__impl__snr__est__m2m4_1a49a1140d06602c5817bcb31090cb1f58" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double digital_impl_snr_est_m2m4::d_y1</definition>
+        <argsstring></argsstring>
+        <name>d_y1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="216" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__impl__snr__est__m2m4_1afc9d87d3a74256848d6e0c4be9a2c76f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double digital_impl_snr_est_m2m4::d_y2</definition>
+        <argsstring></argsstring>
+        <name>d_y2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="216" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__impl__snr__est__m2m4_1ae1390c13dcc7732f1661747ed6eacbb7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double digital_impl_snr_est_m2m4::d_ka</definition>
+        <argsstring></argsstring>
+        <name>d_ka</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="217" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__impl__snr__est__m2m4_1a1bdcad2de96a41a665f1755c0a2927cc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double digital_impl_snr_est_m2m4::d_kw</definition>
+        <argsstring></argsstring>
+        <name>d_kw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="217" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__impl__snr__est__m2m4_1ab40de791ef81075d12d9ff5eba4c3062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_impl_snr_est_m2m4::digital_impl_snr_est_m2m4</definition>
+        <argsstring>(double alpha, double ka, double kw)</argsstring>
+        <name>digital_impl_snr_est_m2m4</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ka</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor</para><para>Parameters: <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the update rate of internal running average calculations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ka</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estimate of the signal kurtosis (1 for PSK) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kw</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estimate of the channel noise kurtosis (2 for AWGN) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__impl__snr__est__m2m4_1aadc719a1217f57f3023b48f06a3ed66b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>digital_impl_snr_est_m2m4::~digital_impl_snr_est_m2m4</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_impl_snr_est_m2m4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="229" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="229" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__impl__snr__est__m2m4_1a621b7d54e234f3f3ddbbea31bfb6b5f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int digital_impl_snr_est_m2m4::update</definition>
+        <argsstring>(int noutput_items, const gr_complex *in)</argsstring>
+        <name>update</name>
+        <reimplements refid="classdigital__impl__mpsk__snr__est_1a7aa10fcd79810905a81b92b244d702ee">update</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>Update the current registers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__impl__snr__est__m2m4_1ab7643fdd46b30bb35f5a7ec0d106c50b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double digital_impl_snr_est_m2m4::snr</definition>
+        <argsstring>()</argsstring>
+        <name>snr</name>
+        <reimplements refid="classdigital__impl__mpsk__snr__est_1a1f7e662d3eb8118bc77cec9b8ff16009">snr</reimplements>
+        <briefdescription>
+<para>Use the register values to compute a new estimate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="233"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SNR Estimator using 2nd and 4th-order moments. </para>    </briefdescription>
+    <detaileddescription>
+<para>An SNR estimator for M-PSK signals that uses 2nd (M2) and 4th (M4) order moments. This estimator uses knowledge of the kurtosis of the signal (k_a) and noise (k_w) to make its estimation. In this case, you can set your own estimations for k_a and k_w, the kurtosis of the signal and noise, to fit this estimation better to your signal and channel conditions.</para><para>A word of warning: this estimator has not been fully tested or proved with any amount of rigor. The estimation for M4 in particular might be ignoring effectf of when k_a and k_w are different. Use this estimator with caution and a copy of the reference on hand.</para><para>The digital_mpsk_snr_est_m2m4 assumes k_a and k_w to simplify the computations for M-PSK and AWGN channels. Use that estimator unless you have a way to guess or estimate these values here.</para><para>Original paper: R. Matzner, &quot;An SNR estimation algorithm for complex baseband
+  signal using higher order statistics,&quot; Facta Universitatis (Nis), no. 6, pp. 41-52, 1993.</para><para>Reference used in derivation: D. R. Pauluzzi and N. C. Beaulieu, &quot;A comparison of SNR
+  estimation techniques for the AWGN channel,&quot; IEEE Trans. Communications, Vol. 48, No. 10, pp. 1681-1691, 2000. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="420">
+        <label>digital_impl_snr_est_m2m4</label>
+        <link refid="classdigital__impl__snr__est__m2m4"/>
+        <childnode refid="421" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>digital_impl_mpsk_snr_est</label>
+        <link refid="classdigital__impl__mpsk__snr__est"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="422">
+        <label>digital_impl_snr_est_m2m4</label>
+        <link refid="classdigital__impl__snr__est__m2m4"/>
+        <childnode refid="423" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>digital_impl_mpsk_snr_est</label>
+        <link refid="classdigital__impl__mpsk__snr__est"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" line="214" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_impl_mpsk_snr_est.h" bodystart="212" bodyend="234"/>
+    <listofallmembers>
+      <member refid="classdigital__impl__mpsk__snr__est_1a5da4c3d305c742ccf1f6d7f8f716fb49" prot="public" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>alpha</name></member>
+      <member refid="classdigital__impl__mpsk__snr__est_1aadd45a1b9e9b751b74750f2eff1fad4e" prot="protected" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_alpha</name></member>
+      <member refid="classdigital__impl__mpsk__snr__est_1a1fdb4b5cacb6a4f22ba7ecf947eb020b" prot="protected" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_beta</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1ae1390c13dcc7732f1661747ed6eacbb7" prot="private" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_ka</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1a1bdcad2de96a41a665f1755c0a2927cc" prot="private" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_kw</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1a49a1140d06602c5817bcb31090cb1f58" prot="private" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_y1</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1afc9d87d3a74256848d6e0c4be9a2c76f" prot="private" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>d_y2</name></member>
+      <member refid="classdigital__impl__mpsk__snr__est_1ad5c23a9988b9799f2043a5b4e941f58d" prot="public" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>digital_impl_mpsk_snr_est</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1ab40de791ef81075d12d9ff5eba4c3062" prot="public" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>digital_impl_snr_est_m2m4</name></member>
+      <member refid="classdigital__impl__mpsk__snr__est_1ac8366c144697e739023787919e30b216" prot="public" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>set_alpha</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1ab7643fdd46b30bb35f5a7ec0d106c50b" prot="public" virt="virtual"><scope>digital_impl_snr_est_m2m4</scope><name>snr</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1a621b7d54e234f3f3ddbbea31bfb6b5f0" prot="public" virt="virtual"><scope>digital_impl_snr_est_m2m4</scope><name>update</name></member>
+      <member refid="classdigital__impl__mpsk__snr__est_1aebff9d543a57671bb2b1051594e77a35" prot="public" virt="virtual"><scope>digital_impl_snr_est_m2m4</scope><name>~digital_impl_mpsk_snr_est</name></member>
+      <member refid="classdigital__impl__snr__est__m2m4_1aadc719a1217f57f3023b48f06a3ed66b" prot="public" virt="non-virtual"><scope>digital_impl_snr_est_m2m4</scope><name>~digital_impl_snr_est_m2m4</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

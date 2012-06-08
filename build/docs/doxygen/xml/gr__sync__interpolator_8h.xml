@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__sync__interpolator_8h" kind="file">
+    <compoundname>gr_sync_interpolator.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__sync__block_8h" local="no">gr_sync_block.h</includes>
+    <includedby refid="gr__pfb__interpolator__ccf_8h" local="no">gr_pfb_interpolator_ccf.h</includedby>
+    <includedby refid="gr__pfb__synthesizer__ccf_8h" local="no">gr_pfb_synthesizer_ccf.h</includedby>
+    <includedby refid="gr__bytes__to__syms_8h" local="no">gr_bytes_to_syms.h</includedby>
+    <includedby refid="gr__complex__to__interleaved__short_8h" local="no">gr_complex_to_interleaved_short.h</includedby>
+    <includedby refid="gr__cpfsk__bc_8h" local="no">gr_cpfsk_bc.h</includedby>
+    <includedby refid="gr__encode__ccsds__27__bb_8h" local="no">gr_encode_ccsds_27_bb.h</includedby>
+    <includedby refid="gr__interleave_8h" local="no">gr_interleave.h</includedby>
+    <includedby refid="gr__repeat_8h" local="no">gr_repeat.h</includedby>
+    <includedby refid="gr__streams__to__stream_8h" local="no">gr_streams_to_stream.h</includedby>
+    <includedby refid="gr__streams__to__vector_8h" local="no">gr_streams_to_vector.h</includedby>
+    <includedby refid="gr__unpack__k__bits__bb_8h" local="no">gr_unpack_k_bits_bb.h</includedby>
+    <includedby refid="gr__vector__map_8h" local="no">gr_vector_map.h</includedby>
+    <includedby refid="gr__vector__to__stream_8h" local="no">gr_vector_to_stream.h</includedby>
+    <includedby refid="gr__vector__to__streams_8h" local="no">gr_vector_to_streams.h</includedby>
+    <includedby refid="atsc__depad_8h" local="no">atsc_depad.h</includedby>
+    <includedby refid="digital__bytes__to__syms_8h" local="no">digital_bytes_to_syms.h</includedby>
+    <includedby refid="digital__ofdm__cyclic__prefixer_8h" local="no">digital_ofdm_cyclic_prefixer.h</includedby>
+    <includedby refid="vocoder__codec2__decode__ps_8h" local="no">vocoder_codec2_decode_ps.h</includedby>
+    <includedby refid="vocoder__cvsd__decode__bs_8h" local="no">vocoder_cvsd_decode_bs.h</includedby>
+    <includedby refid="vocoder__gsm__fr__decode__ps_8h" local="no">vocoder_gsm_fr_decode_ps.h</includedby>
+    <incdepgraph>
+      <node id="12223">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="12235">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="12234">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="12233" relation="include">
+        </childnode>
+        <childnode refid="12235" relation="include">
+        </childnode>
+        <childnode refid="12223" relation="include">
+        </childnode>
+        <childnode refid="12236" relation="include">
+        </childnode>
+        <childnode refid="12227" relation="include">
+        </childnode>
+        <childnode refid="12237" relation="include">
+        </childnode>
+        <childnode refid="12238" relation="include">
+        </childnode>
+        <childnode refid="12241" relation="include">
+        </childnode>
+        <childnode refid="12242" relation="include">
+        </childnode>
+        <childnode refid="12243" relation="include">
+        </childnode>
+      </node>
+      <node id="12215">
+        <label>gr_sync_interpolator.h</label>
+        <link refid="gr_sync_interpolator.h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12218" relation="include">
+        </childnode>
+      </node>
+      <node id="12226">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="12227" relation="include">
+        </childnode>
+      </node>
+      <node id="12238">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="12239" relation="include">
+        </childnode>
+        <childnode refid="12240" relation="include">
+        </childnode>
+      </node>
+      <node id="12218">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12219" relation="include">
+        </childnode>
+      </node>
+      <node id="12233">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="12217" relation="include">
+        </childnode>
+      </node>
+      <node id="12220">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12221" relation="include">
+        </childnode>
+        <childnode refid="12228" relation="include">
+        </childnode>
+        <childnode refid="12229" relation="include">
+        </childnode>
+        <childnode refid="12230" relation="include">
+        </childnode>
+        <childnode refid="12231" relation="include">
+        </childnode>
+        <childnode refid="12237" relation="include">
+        </childnode>
+      </node>
+      <node id="12242">
+        <label>stdexcept</label>
+      </node>
+      <node id="12222">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12223" relation="include">
+        </childnode>
+        <childnode refid="12224" relation="include">
+        </childnode>
+        <childnode refid="12225" relation="include">
+        </childnode>
+        <childnode refid="12226" relation="include">
+        </childnode>
+      </node>
+      <node id="12237">
+        <label>string</label>
+      </node>
+      <node id="12219">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12220" relation="include">
+        </childnode>
+        <childnode refid="12244" relation="include">
+        </childnode>
+      </node>
+      <node id="12216">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="12217" relation="include">
+        </childnode>
+      </node>
+      <node id="12244">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12234" relation="include">
+        </childnode>
+      </node>
+      <node id="12225">
+        <label>stddef.h</label>
+      </node>
+      <node id="12230">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="12239">
+        <label>limits.h</label>
+      </node>
+      <node id="12236">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="12221">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12222" relation="include">
+        </childnode>
+      </node>
+      <node id="12240">
+        <label>wchar.h</label>
+      </node>
+      <node id="12231">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12232" relation="include">
+        </childnode>
+        <childnode refid="12234" relation="include">
+        </childnode>
+      </node>
+      <node id="12224">
+        <label>vector</label>
+      </node>
+      <node id="12229">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="12217">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="12241">
+        <label>iosfwd</label>
+      </node>
+      <node id="12243">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="12228">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12223" relation="include">
+        </childnode>
+      </node>
+      <node id="12227">
+        <label>complex</label>
+      </node>
+      <node id="12232">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="12233" relation="include">
+        </childnode>
+        <childnode refid="12234" relation="include">
+        </childnode>
+        <childnode refid="12223" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12248">
+        <label>gr_bytes_to_syms.h</label>
+        <link refid="gr__bytes__to__syms_8h"/>
+      </node>
+      <node id="12264">
+        <label>vocoder_cvsd_decode_bs.h</label>
+        <link refid="vocoder__cvsd__decode__bs_8h"/>
+      </node>
+      <node id="12250">
+        <label>gr_cpfsk_bc.h</label>
+        <link refid="gr__cpfsk__bc_8h"/>
+      </node>
+      <node id="12255">
+        <label>gr_streams_to_vector.h</label>
+        <link refid="gr__streams__to__vector_8h"/>
+      </node>
+      <node id="12260">
+        <label>atsc_depad.h</label>
+        <link refid="atsc__depad_8h"/>
+      </node>
+      <node id="12257">
+        <label>gr_vector_map.h</label>
+        <link refid="gr__vector__map_8h"/>
+      </node>
+      <node id="12245">
+        <label>gr_sync_interpolator.h</label>
+        <link refid="gr_sync_interpolator.h"/>
+        <childnode refid="12246" relation="include">
+        </childnode>
+        <childnode refid="12247" relation="include">
+        </childnode>
+        <childnode refid="12248" relation="include">
+        </childnode>
+        <childnode refid="12249" relation="include">
+        </childnode>
+        <childnode refid="12250" relation="include">
+        </childnode>
+        <childnode refid="12251" relation="include">
+        </childnode>
+        <childnode refid="12252" relation="include">
+        </childnode>
+        <childnode refid="12253" relation="include">
+        </childnode>
+        <childnode refid="12254" relation="include">
+        </childnode>
+        <childnode refid="12255" relation="include">
+        </childnode>
+        <childnode refid="12256" relation="include">
+        </childnode>
+        <childnode refid="12257" relation="include">
+        </childnode>
+        <childnode refid="12258" relation="include">
+        </childnode>
+        <childnode refid="12259" relation="include">
+        </childnode>
+        <childnode refid="12260" relation="include">
+        </childnode>
+        <childnode refid="12261" relation="include">
+        </childnode>
+        <childnode refid="12262" relation="include">
+        </childnode>
+        <childnode refid="12263" relation="include">
+        </childnode>
+        <childnode refid="12264" relation="include">
+        </childnode>
+        <childnode refid="12265" relation="include">
+        </childnode>
+      </node>
+      <node id="12247">
+        <label>gr_pfb_synthesizer_ccf.h</label>
+        <link refid="gr__pfb__synthesizer__ccf_8h"/>
+      </node>
+      <node id="12252">
+        <label>gr_interleave.h</label>
+        <link refid="gr__interleave_8h"/>
+      </node>
+      <node id="12246">
+        <label>gr_pfb_interpolator_ccf.h</label>
+        <link refid="gr__pfb__interpolator__ccf_8h"/>
+      </node>
+      <node id="12259">
+        <label>gr_vector_to_streams.h</label>
+        <link refid="gr__vector__to__streams_8h"/>
+      </node>
+      <node id="12265">
+        <label>vocoder_gsm_fr_decode_ps.h</label>
+        <link refid="vocoder__gsm__fr__decode__ps_8h"/>
+      </node>
+      <node id="12263">
+        <label>vocoder_codec2_decode_ps.h</label>
+        <link refid="vocoder__codec2__decode__ps_8h"/>
+      </node>
+      <node id="12256">
+        <label>gr_unpack_k_bits_bb.h</label>
+        <link refid="gr__unpack__k__bits__bb_8h"/>
+      </node>
+      <node id="12249">
+        <label>gr_complex_to_interleaved_short.h</label>
+        <link refid="gr__complex__to__interleaved__short_8h"/>
+      </node>
+      <node id="12253">
+        <label>gr_repeat.h</label>
+        <link refid="gr__repeat_8h"/>
+      </node>
+      <node id="12261">
+        <label>digital_bytes_to_syms.h</label>
+        <link refid="digital__bytes__to__syms_8h"/>
+      </node>
+      <node id="12251">
+        <label>gr_encode_ccsds_27_bb.h</label>
+        <link refid="gr__encode__ccsds__27__bb_8h"/>
+      </node>
+      <node id="12258">
+        <label>gr_vector_to_stream.h</label>
+        <link refid="gr__vector__to__stream_8h"/>
+      </node>
+      <node id="12254">
+        <label>gr_streams_to_stream.h</label>
+        <link refid="gr__streams__to__stream_8h"/>
+      </node>
+      <node id="12262">
+        <label>digital_ofdm_cyclic_prefixer.h</label>
+        <link refid="digital__ofdm__cyclic__prefixer_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr__sync__interpolator" prot="public">gr_sync_interpolator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_sync_interpolator.h"/>
+  </compounddef>
+</doxygen>

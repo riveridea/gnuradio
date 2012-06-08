@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__null__source" kind="class" prot="public">
+    <compoundname>gr_null_source</compoundname>
+    <includes refid="gr__null__source_8h" local="no">gr_null_source.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__null__source_1a076e7093b16192fe58ae8c9707843da9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__null__source_8h_1a2e19fd3e9aa7427d74ae83996d73686e" kindref="member">gr_null_source_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_null_source_sptr gr_make_null_source</definition>
+        <argsstring>(size_t sizeof_stream_item)</argsstring>
+        <name>gr_make_null_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_null_source.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__null__source_1ac8a1e01a0eda1d80276b9ce6b49fd073" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_null_source::gr_null_source</definition>
+        <argsstring>(size_t sizeof_stream_item)</argsstring>
+        <name>gr_null_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_null_source.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__null__source_1a36ca59f2abb40dc425232059b28d7c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_null_source::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_null_source.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A source of zeros. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_null_source.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_null_source.h" bodystart="39" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr__null__source_1a076e7093b16192fe58ae8c9707843da9" prot="private" virt="non-virtual"><scope>gr_null_source</scope><name>gr_make_null_source</name></member>
+      <member refid="classgr__null__source_1ac8a1e01a0eda1d80276b9ce6b49fd073" prot="private" virt="non-virtual"><scope>gr_null_source</scope><name>gr_null_source</name></member>
+      <member refid="classgr__null__source_1a36ca59f2abb40dc425232059b28d7c5c" prot="public" virt="virtual"><scope>gr_null_source</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

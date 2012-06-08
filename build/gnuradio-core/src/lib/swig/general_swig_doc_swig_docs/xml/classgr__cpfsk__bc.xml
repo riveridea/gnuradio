@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__cpfsk__bc" kind="class" prot="public">
+    <compoundname>gr_cpfsk_bc</compoundname>
+    <includes refid="gr__cpfsk__bc_8h" local="no">gr_cpfsk_bc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__cpfsk__bc_1a9d2cb096e6c6052c85dff628e3d00875" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_cpfsk_bc::d_samples_per_sym</definition>
+        <argsstring></argsstring>
+        <name>d_samples_per_sym</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__cpfsk__bc_1a8a35b5a57568759b2348b45ae36dd25f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_cpfsk_bc::d_freq</definition>
+        <argsstring></argsstring>
+        <name>d_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__cpfsk__bc_1a722124374b88e7c79a9273bb95af3b76" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_cpfsk_bc::d_ampl</definition>
+        <argsstring></argsstring>
+        <name>d_ampl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__cpfsk__bc_1a20ebcb74c989fe6833b77990d4db10c4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_cpfsk_bc::d_phase</definition>
+        <argsstring></argsstring>
+        <name>d_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__cpfsk__bc_1a54138bec6522303096b64f648305bef5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__cpfsk__bc_8h_1a9bf81da880254601f8b3514bf50aaa91" kindref="member">gr_cpfsk_bc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_cpfsk_bc_sptr gr_make_cpfsk_bc</definition>
+        <argsstring>(float k, float ampl, int samples_per_sym)</argsstring>
+        <name>gr_make_cpfsk_bc</name>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ampl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>samples_per_sym</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__cpfsk__bc_1ad9e7b146fb2cdac7775777d8c4e74020" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_cpfsk_bc::gr_cpfsk_bc</definition>
+        <argsstring>(float k, float ampl, int samples_per_sym)</argsstring>
+        <name>gr_cpfsk_bc</name>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ampl</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>samples_per_sym</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__cpfsk__bc_1a445e65dc97026a329be60f0395f93cbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_cpfsk_bc::~gr_cpfsk_bc</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_cpfsk_bc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__cpfsk__bc_1a1ec1538fb26708df5320997576144591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_cpfsk_bc::set_amplitude</definition>
+        <argsstring>(float amplitude)</argsstring>
+        <name>set_amplitude</name>
+        <param>
+          <type>float</type>
+          <declname>amplitude</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__cpfsk__bc_1ae1eca7f43d663b6ffea78d4018ab594a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_cpfsk_bc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Perform continuous phase 2-level frequency shift keying modulation on an input stream of unpacked bits. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>modulation index </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ampl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output amplitude </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples_per_sym</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output samples per input bit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_cpfsk_bc.h" bodystart="42" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classgr__cpfsk__bc_1a722124374b88e7c79a9273bb95af3b76" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>d_ampl</name></member>
+      <member refid="classgr__cpfsk__bc_1a8a35b5a57568759b2348b45ae36dd25f" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>d_freq</name></member>
+      <member refid="classgr__cpfsk__bc_1a20ebcb74c989fe6833b77990d4db10c4" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>d_phase</name></member>
+      <member refid="classgr__cpfsk__bc_1a9d2cb096e6c6052c85dff628e3d00875" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>d_samples_per_sym</name></member>
+      <member refid="classgr__cpfsk__bc_1ad9e7b146fb2cdac7775777d8c4e74020" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>gr_cpfsk_bc</name></member>
+      <member refid="classgr__cpfsk__bc_1a54138bec6522303096b64f648305bef5" prot="private" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>gr_make_cpfsk_bc</name></member>
+      <member refid="classgr__cpfsk__bc_1a1ec1538fb26708df5320997576144591" prot="public" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>set_amplitude</name></member>
+      <member refid="classgr__cpfsk__bc_1ae1eca7f43d663b6ffea78d4018ab594a" prot="public" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>work</name></member>
+      <member refid="classgr__cpfsk__bc_1a445e65dc97026a329be60f0395f93cbe" prot="public" virt="non-virtual"><scope>gr_cpfsk_bc</scope><name>~gr_cpfsk_bc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

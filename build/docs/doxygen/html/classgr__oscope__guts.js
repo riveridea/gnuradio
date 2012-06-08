@@ -1,0 +1,25 @@
+var classgr__oscope__guts =
+[
+    [ "gr_oscope_guts", "classgr__oscope__guts.html#a1318e79496ef836662d5859753e2b014", null ],
+    [ "~gr_oscope_guts", "classgr__oscope__guts.html#a0a32a61be318c2040ed5657a447c09f7", null ],
+    [ "get_decimation_count", "classgr__oscope__guts.html#a420a6a5a46a04db9ee1dafe0942d97cc", null ],
+    [ "get_samples_per_output_record", "classgr__oscope__guts.html#aac1f07a6e125cf5f1e423801e81d5493", null ],
+    [ "get_trigger_channel", "classgr__oscope__guts.html#a61f072bbae310aed24897cff81e2029c", null ],
+    [ "get_trigger_level", "classgr__oscope__guts.html#a591e96e8914d856cea53ae3711824d1e", null ],
+    [ "get_trigger_mode", "classgr__oscope__guts.html#ab8e705dc8bab64f3f4fc171310ca4734", null ],
+    [ "get_trigger_slope", "classgr__oscope__guts.html#afbeaa19d51d7a01ece5af5a4633253d4", null ],
+    [ "num_channels", "classgr__oscope__guts.html#a990e0908fa15f0587f2c54f1ad0280af", null ],
+    [ "process_sample", "classgr__oscope__guts.html#a36c880bef593417876568a7264bc07c6", null ],
+    [ "sample_rate", "classgr__oscope__guts.html#ab130f9e5eba44e25b47b5f28656f8834", null ],
+    [ "set_decimation_count", "classgr__oscope__guts.html#ae27cbfbaa29983f981294931b416e41a", null ],
+    [ "set_num_channels", "classgr__oscope__guts.html#a9654f8b7445c2111771eefd7e1bd73dd", null ],
+    [ "set_sample_rate", "classgr__oscope__guts.html#ad38ca8cc8ee7de91a69faa310f4f613e", null ],
+    [ "set_trigger_channel", "classgr__oscope__guts.html#af0df18aec7ea9aedfd97bacfd90edcb8", null ],
+    [ "set_trigger_level", "classgr__oscope__guts.html#aad4c3e6cda7b9d6402da682731549f09", null ],
+    [ "set_trigger_level_auto", "classgr__oscope__guts.html#aabd19352da62644f125a91bd620896d9", null ],
+    [ "set_trigger_mode", "classgr__oscope__guts.html#aefd251287cc8553c09442ae73268a75c", null ],
+    [ "set_trigger_slope", "classgr__oscope__guts.html#a1ac643187b1ff94b94b0a47d2992b1a7", null ],
+    [ "set_update_rate", "classgr__oscope__guts.html#a6528e5ffc86fb33a5aee6ac531a26a6c", null ],
+    [ "update_rate", "classgr__oscope__guts.html#aaef013aa2b95f997249b60dcb6670385", null ],
+    [ "MAX_CHANNELS", "classgr__oscope__guts.html#aca17048bc6e1b7b02431d665396bca99", null ]
+];

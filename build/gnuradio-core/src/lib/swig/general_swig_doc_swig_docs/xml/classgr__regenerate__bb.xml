@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__regenerate__bb" kind="class" prot="public">
+    <compoundname>gr_regenerate_bb</compoundname>
+    <includes refid="gr__regenerate__bb_8h" local="no">gr_regenerate_bb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__regenerate__bb_1a92df3bb2bab6578491cebe8dce7b7fc6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_regenerate_bb::d_period</definition>
+        <argsstring></argsstring>
+        <name>d_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__regenerate__bb_1a137833e0726dfe6b9c1e54e3b56ad8e3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_regenerate_bb::d_countdown</definition>
+        <argsstring></argsstring>
+        <name>d_countdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__regenerate__bb_1aa7939871838abafb53e3fdabf2649fda" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_regenerate_bb::d_max_regen</definition>
+        <argsstring></argsstring>
+        <name>d_max_regen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__regenerate__bb_1af5a87bb6cec323c9d655327d4faee673" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_regenerate_bb::d_regen_count</definition>
+        <argsstring></argsstring>
+        <name>d_regen_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__regenerate__bb_1a7ea353bb6eff21c4f040924b1ba21858" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__regenerate__bb_8h_1af8e506b67764d8052c45341fd651a9af" kindref="member">gr_regenerate_bb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_regenerate_bb_sptr gr_make_regenerate_bb</definition>
+        <argsstring>(int period, unsigned int max_regen)</argsstring>
+        <name>gr_make_regenerate_bb</name>
+        <param>
+          <type>int</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_regen</declname>
+        </param>
+        <briefdescription>
+<para>Make a regenerate block. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of samples between regenerations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_regen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of regenerations to perform; if set to ULONG_MAX, it will regenerate continuously. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__regenerate__bb_1a8c3bfda18361b8bbf396d8e82c09f2f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_regenerate_bb::gr_regenerate_bb</definition>
+        <argsstring>(int period, unsigned int max_regen)</argsstring>
+        <name>gr_regenerate_bb</name>
+        <param>
+          <type>int</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>max_regen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__regenerate__bb_1aa11391ce52810d29dea508e2c6871144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_regenerate_bb::set_max_regen</definition>
+        <argsstring>(unsigned int regen)</argsstring>
+        <name>set_max_regen</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>regen</declname>
+        </param>
+        <briefdescription>
+<para>Reset the maximum regeneration count; this will reset the current regen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__regenerate__bb_1a2d793badad5835d93cec00753590340c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_regenerate_bb::set_period</definition>
+        <argsstring>(int period)</argsstring>
+        <name>set_period</name>
+        <param>
+          <type>int</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>Reset the period of regenerations; this will reset the current regen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__regenerate__bb_1ae1825d9c9a2e96b782706748b69ebadb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_regenerate_bb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detect the peak of a signal and repeat every period samples</para><para>If a peak is detected, this block outputs a 1 repeated every period samples until reset by detection of another 1 on the input or stopped after max_regen regenerations have occurred. </para>    </briefdescription>
+    <detaileddescription>
+<para>Note that if max_regen=(-1)/ULONG_MAX then the regeneration will run forever. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_regenerate_bb.h" bodystart="44" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classgr__regenerate__bb_1a137833e0726dfe6b9c1e54e3b56ad8e3" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>d_countdown</name></member>
+      <member refid="classgr__regenerate__bb_1aa7939871838abafb53e3fdabf2649fda" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>d_max_regen</name></member>
+      <member refid="classgr__regenerate__bb_1a92df3bb2bab6578491cebe8dce7b7fc6" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>d_period</name></member>
+      <member refid="classgr__regenerate__bb_1af5a87bb6cec323c9d655327d4faee673" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>d_regen_count</name></member>
+      <member refid="classgr__regenerate__bb_1a7ea353bb6eff21c4f040924b1ba21858" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>gr_make_regenerate_bb</name></member>
+      <member refid="classgr__regenerate__bb_1a8c3bfda18361b8bbf396d8e82c09f2f0" prot="private" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>gr_regenerate_bb</name></member>
+      <member refid="classgr__regenerate__bb_1aa11391ce52810d29dea508e2c6871144" prot="public" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>set_max_regen</name></member>
+      <member refid="classgr__regenerate__bb_1a2d793badad5835d93cec00753590340c" prot="public" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>set_period</name></member>
+      <member refid="classgr__regenerate__bb_1ae1825d9c9a2e96b782706748b69ebadb" prot="public" virt="non-virtual"><scope>gr_regenerate_bb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

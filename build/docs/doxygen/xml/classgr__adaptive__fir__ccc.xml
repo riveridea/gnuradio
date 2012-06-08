@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__adaptive__fir__ccc" kind="class" prot="public">
+    <compoundname>gr_adaptive_fir_ccc</compoundname>
+    <basecompoundref refid="classgr__sync__decimator" prot="public" virt="non-virtual">gr_sync_decimator</basecompoundref>
+    <derivedcompoundref refid="classdigital__cma__equalizer__cc" prot="public" virt="non-virtual">digital_cma_equalizer_cc</derivedcompoundref>
+    <derivedcompoundref refid="classdigital__kurtotic__equalizer__cc" prot="public" virt="non-virtual">digital_kurtotic_equalizer_cc</derivedcompoundref>
+    <derivedcompoundref refid="classdigital__lms__dd__equalizer__cc" prot="public" virt="non-virtual">digital_lms_dd_equalizer_cc</derivedcompoundref>
+    <includes refid="gr__adaptive__fir__ccc_8h" local="no">gr_adaptive_fir_ccc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1ad270334cd3ee265642162f49a7638031" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_adaptive_fir_ccc::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1ad2f940c4f56f94b4456b2b21da8167aa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_adaptive_fir_ccc::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1a994350541adabaa9718a2eec3aa2809f" prot="protected" static="no" mutable="no">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gr_adaptive_fir_ccc::d_error</definition>
+        <argsstring></argsstring>
+        <name>d_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classdigital__cma__equalizer__cc_1a299074f6d312ac2c36c7139df078fc76" compoundref="digital__cma__equalizer__cc_8h" startline="70" endline="74">digital_cma_equalizer_cc::update_tap</referencedby>
+        <referencedby refid="classdigital__lms__dd__equalizer__cc_1aed00b745b5eb8e2f17bd72aab5641192" compoundref="digital__lms__dd__equalizer__cc_8h" startline="95" endline="98">digital_lms_dd_equalizer_cc::update_tap</referencedby>
+        <referencedby refid="classdigital__kurtotic__equalizer__cc_1a4a99ad177cd29cf268cbb17d70ea455a" compoundref="digital__kurtotic__equalizer__cc_8h" startline="99" endline="102">digital_kurtotic_equalizer_cc::update_tap</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1a941d6aec36e0aa1c7def91e1a292d480" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_adaptive_fir_ccc::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <reimplementedby refid="classdigital__lms__dd__equalizer__cc_1a018b8ea424c696cc604872eb89474eac">d_taps</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1aae045dd303aa7363bdae104600d5bad1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>virtual gr_complex gr_adaptive_fir_ccc::error</definition>
+        <argsstring>(const gr_complex &amp;out)=0</argsstring>
+        <name>error</name>
+        <reimplementedby refid="classdigital__cma__equalizer__cc_1aa61284ce4950c180ab1f99fd9c6ef83d">error</reimplementedby>
+        <reimplementedby refid="classdigital__kurtotic__equalizer__cc_1afffe77d4e9aa59ef7b06830faeda3f03">error</reimplementedby>
+        <reimplementedby refid="classdigital__lms__dd__equalizer__cc_1aeff7f61076e6c97458fc1655b77aa08f">error</reimplementedby>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="44"/>
+        <referencedby refid="classdigital__lms__dd__equalizer__cc_1aeff7f61076e6c97458fc1655b77aa08f" compoundref="digital__lms__dd__equalizer__cc_8h" startline="87" endline="93">digital_lms_dd_equalizer_cc::error</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1ab58ea7d9ff7433232d1d6310c2676b48" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_adaptive_fir_ccc::update_tap</definition>
+        <argsstring>(gr_complex &amp;tap, const gr_complex &amp;in)=0</argsstring>
+        <name>update_tap</name>
+        <reimplementedby refid="classdigital__cma__equalizer__cc_1a299074f6d312ac2c36c7139df078fc76">update_tap</reimplementedby>
+        <reimplementedby refid="classdigital__lms__dd__equalizer__cc_1aed00b745b5eb8e2f17bd72aab5641192">update_tap</reimplementedby>
+        <reimplementedby refid="classdigital__kurtotic__equalizer__cc_1a4a99ad177cd29cf268cbb17d70ea455a">update_tap</reimplementedby>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &amp;</type>
+          <declname>tap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1aefad3a5855657a5968a8d977ba018657" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gr_adaptive_fir_ccc::filter</definition>
+        <argsstring>(gr_complex *x)</argsstring>
+        <name>filter</name>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1a2847c3c9102501b405e0edac02dd60b2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_adaptive_fir_ccc::gr_adaptive_fir_ccc</definition>
+        <argsstring>(const char *name, int decimation, const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>gr_adaptive_fir_ccc</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1a6f6d8283d7e725935c8af60901d60e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_adaptive_fir_ccc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1afdce806ea00c81ebfcc9c85d9b5371c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int gr_adaptive_fir_ccc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <reimplements refid="classgr__sync__block_1a0c523f4285a6eb690f677ee6295ab117">work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>just like <ref refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" kindref="member">gr_block::general_work</ref>, only this arranges to call consume_each for you </para>        </briefdescription>
+        <detaileddescription>
+<para>The user must override work to define the signal processing code </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Adaptive FIR filter with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1919">
+        <label>digital_cma_equalizer_cc</label>
+        <link refid="classdigital__cma__equalizer__cc"/>
+        <childnode refid="1912" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1917">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1918" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1914">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="1915" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1913">
+        <label>gr_sync_decimator</label>
+        <link refid="classgr__sync__decimator"/>
+        <childnode refid="1914" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1921">
+        <label>digital_lms_dd_equalizer_cc</label>
+        <link refid="classdigital__lms__dd__equalizer__cc"/>
+        <childnode refid="1912" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1920">
+        <label>digital_kurtotic_equalizer_cc</label>
+        <link refid="classdigital__kurtotic__equalizer__cc"/>
+        <childnode refid="1912" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1915">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1916" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1918">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1912">
+        <label>gr_adaptive_fir_ccc</label>
+        <link refid="classgr__adaptive__fir__ccc"/>
+        <childnode refid="1913" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1916">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1917" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1927">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="1928" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1924">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="1925" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1923">
+        <label>gr_sync_decimator</label>
+        <link refid="classgr__sync__decimator"/>
+        <childnode refid="1924" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1925">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="1926" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1934">
+        <label>std::vector&lt; gr_complex &gt;</label>
+        <childnode refid="1935" relation="usage">
+          <edgelabel>p</edgelabel>
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1929">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="1930" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="1932">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="1928">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="1935">
+        <label>std::complex</label>
+      </node>
+      <node id="1930">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="1922">
+        <label>gr_adaptive_fir_ccc</label>
+        <link refid="classgr__adaptive__fir__ccc"/>
+        <childnode refid="1923" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1933" relation="usage">
+          <edgelabel>d_error</edgelabel>
+        </childnode>
+        <childnode refid="1934" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="1926">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="1927" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1929" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="1931" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="1933">
+        <label>std::complex&lt; float &gt;</label>
+      </node>
+      <node id="1931">
+        <label>std::string</label>
+        <childnode refid="1932" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="33" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_color</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a994350541adabaa9718a2eec3aa2809f" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_error</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_name</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ad270334cd3ee265642162f49a7638031" prot="private" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_new_taps</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_output_signature</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a941d6aec36e0aa1c7def91e1a292d480" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_taps</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_unique_id</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ad2f940c4f56f94b4456b2b21da8167aa" prot="private" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_updated</name></member>
+      <member refid="classgr__sync__decimator_1a285a3292be71f47df2e8f10a779eb752" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>decimation</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>detail</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1aae045dd303aa7363bdae104600d5bad1" prot="protected" virt="pure-virtual"><scope>gr_adaptive_fir_ccc</scope><name>error</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1aefad3a5855657a5968a8d977ba018657" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>filter</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>fixed_rate</name></member>
+      <member refid="classgr__sync__decimator_1a23c657d3c3f0482369648e1916751f6f" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__sync__decimator_1a90041d67e72c64cb4d0f9a29bfbbd776" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__sync__decimator_1a140792c0a9777b6b82eb220cdd424ecd" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>forecast</name></member>
+      <member refid="classgr__sync__decimator_1a3a7d9a6487780922c14cbb76d46a0586" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a2847c3c9102501b405e0edac02dd60b2" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_adaptive_fir_ccc</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__sync__block_1a8e8100cc8cafbc89a0cd64fbc2fc4153" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__block_1a832d8dad2dbd38e8e9cfa0b954d37c87" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__decimator_1a63d1f4367c00048136d0ed383a96975c" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_sync_decimator</name></member>
+      <member refid="classgr__sync__decimator_1ad3871148480f33b75202744974d9241c" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_sync_decimator</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_color</name></member>
+      <member refid="classgr__sync__decimator_1a5ae57c3e625dfaca6487a319c2078a57" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_decimation</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a6f6d8283d7e725935c8af60901d60e15" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_taps</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>unique_id</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ab58ea7d9ff7433232d1d6310c2676b48" prot="protected" virt="pure-virtual"><scope>gr_adaptive_fir_ccc</scope><name>update_tap</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>WHITE</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1afdce806ea00c81ebfcc9c85d9b5371c5" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>gr_adaptive_fir_ccc</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

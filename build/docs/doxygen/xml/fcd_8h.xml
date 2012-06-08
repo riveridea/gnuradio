@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="fcd_8h" kind="file">
+    <compoundname>fcd.h</compoundname>
+    <includes refid="fcd__api_8h" local="no">fcd_api.h</includes>
+    <includes refid="inttypes_8h" local="no">inttypes.h</includes>
+    <incdepgraph>
+      <node id="3861">
+        <label>fcd.h</label>
+        <link refid="fcd.h"/>
+        <childnode refid="3862" relation="include">
+        </childnode>
+        <childnode refid="3864" relation="include">
+        </childnode>
+      </node>
+      <node id="3865">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="3866" relation="include">
+        </childnode>
+        <childnode refid="3867" relation="include">
+        </childnode>
+      </node>
+      <node id="3862">
+        <label>fcd_api.h</label>
+        <link refid="fcd__api_8h"/>
+        <childnode refid="3863" relation="include">
+        </childnode>
+      </node>
+      <node id="3866">
+        <label>limits.h</label>
+      </node>
+      <node id="3867">
+        <label>wchar.h</label>
+      </node>
+      <node id="3863">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="3864">
+        <label>inttypes.h</label>
+        <link refid="inttypes_8h"/>
+        <childnode refid="3865" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structFCD__CAPS__STRUCT" prot="public">FCD_CAPS_STRUCT</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" prot="public" static="no">
+        <name>EXTERN</name>
+        <initializer>extern</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fcd_8h_1ab873c0d7f3599c1a0b12a38013c09795" prot="public" static="no">
+        <name>ASSIGN</name>
+        <param><defname>x</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="33" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" prot="public" static="no">
+        <name>FCD_MODE_ENUM</name>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2a754fac31b653570ba1da3d8a37a5c3e3" prot="public">
+          <name>FCD_MODE_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No FCD detected. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ad7f54f4399ac0fe7f8d30b58a596c99c" prot="public">
+          <name>FCD_MODE_BL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FCD present in bootloader mode. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2ae8c4b40edb1b42f2a0d7a397ac0d3be1" prot="public">
+          <name>FCD_MODE_APP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>FCD present in aplpication mode. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>FCD mode enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fcd_8h_1a2f447e73426bade278c2c9272afad21d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdGetMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdGetMode</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a3c893b4a13fbb185130e402919f3467a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdGetFwVerStr</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>fcdGetFwVerStr</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1af952cab82da4905e3b15583935aeb777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdGetCaps</definition>
+        <argsstring>(FCD_CAPS_STRUCT *fcd_caps)</argsstring>
+        <name>fcdGetCaps</name>
+        <param>
+          <type><ref refid="structFCD__CAPS__STRUCT" kindref="compound">FCD_CAPS_STRUCT</ref> *</type>
+          <declname>fcd_caps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a0902c1e7a172f31703ac196a134c8aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdGetCapsStr</definition>
+        <argsstring>(char *caps_str)</argsstring>
+        <name>fcdGetCapsStr</name>
+        <param>
+          <type>char *</type>
+          <declname>caps_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a96d501ac47b7f0d091f466e2914b6eba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdAppReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdAppReset</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a145b7ec07b4c7331c4ca6992a1155282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdAppSetFreqkHz</definition>
+        <argsstring>(int nFreq)</argsstring>
+        <name>fcdAppSetFreqkHz</name>
+        <param>
+          <type>int</type>
+          <declname>nFreq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a049902ec81b369cd9617e46f15c96226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdAppSetFreq</definition>
+        <argsstring>(int nFreq)</argsstring>
+        <name>fcdAppSetFreq</name>
+        <param>
+          <type>int</type>
+          <declname>nFreq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a80dff772f4c81ab553f2ba184f17bae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdAppSetParam</definition>
+        <argsstring>(uint8_t u8Cmd, uint8_t *pu8Data, uint8_t u8len)</argsstring>
+        <name>fcdAppSetParam</name>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>u8Cmd</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref> *</type>
+          <declname>pu8Data</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>u8len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a91b4f68c70a5889bfe2949116cec01a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdAppGetParam</definition>
+        <argsstring>(uint8_t u8Cmd, uint8_t *pu8Data, uint8_t u8len)</argsstring>
+        <name>fcdAppGetParam</name>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>u8Cmd</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref> *</type>
+          <declname>pu8Data</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1aba7bc1797add20fe3efdf37ced1182c5" kindref="member">uint8_t</ref></type>
+          <declname>u8len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a55cc2c8ac452c9e34f34ee3c5e0c4ba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdBlReset</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdBlReset</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1abd8015a901facac0dc8b8f67b9eebcfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdBlErase</definition>
+        <argsstring>(void)</argsstring>
+        <name>fcdBlErase</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a2271e5c4121a801d4a9688413c0a32fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdBlWriteFirmware</definition>
+        <argsstring>(char *pc, int64_t n64Size)</argsstring>
+        <name>fcdBlWriteFirmware</name>
+        <param>
+          <type>char *</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a414156feea104f8f75b4ed9e3121b2f6" kindref="member">int64_t</ref></type>
+          <declname>n64Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="fcd_8h_1a781c4f8caf8e560f12c636dac210514f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="fcd_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> <ref refid="fcd__api_8h_1ad489a1c52387ece46b65f42f0681814f" kindref="member">FCD_API</ref> <ref refid="fcd_8h_1a8859043a6d9e4116b6585df8d10da1a2" kindref="member">FCD_MODE_ENUM</ref></type>
+        <definition>EXTERN FCD_API FCD_MODE_ENUM fcdBlVerifyFirmware</definition>
+        <argsstring>(char *pc, int64_t n64Size)</argsstring>
+        <name>fcdBlVerifyFirmware</name>
+        <param>
+          <type>char *</type>
+          <declname>pc</declname>
+        </param>
+        <param>
+          <type><ref refid="stdint_8h_1a414156feea104f8f75b4ed9e3121b2f6" kindref="member">int64_t</ref></type>
+          <declname>n64Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-fcd/lib/fcd/fcd.h"/>
+  </compounddef>
+</doxygen>

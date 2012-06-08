@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__deinterleave" kind="class" prot="public">
+    <compoundname>gr_deinterleave</compoundname>
+    <includes refid="gr__deinterleave_8h" local="no">gr_deinterleave.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__deinterleave_1a9ebcc3171b7f2f66fb5981654679d1e1" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_deinterleave::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__deinterleave_1a46d401ab4ac3749d2295eb1d780e71b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__deinterleave_8h_1a912012c5a7e63e02a33b00548322c70d" kindref="member">gr_deinterleave_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_deinterleave_sptr gr_make_deinterleave</definition>
+        <argsstring>(size_t itemsize)</argsstring>
+        <name>gr_make_deinterleave</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__deinterleave_1a16d235cb09a3c92ab1ea8be6d6f4da10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_deinterleave::gr_deinterleave</definition>
+        <argsstring>(size_t itemsize)</argsstring>
+        <name>gr_deinterleave</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__deinterleave_1a90fd734f7c14cff36f5518fb785d455d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_deinterleave::~gr_deinterleave</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_deinterleave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__deinterleave_1aad7ee9c2aa5c10bebb41df3486520734" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_deinterleave::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__deinterleave_1a16d234399562b8d754158c93a6337705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_deinterleave::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>deinterleave a single input into N outputs </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" bodystart="38" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgr__deinterleave_1a16d234399562b8d754158c93a6337705" prot="public" virt="non-virtual"><scope>gr_deinterleave</scope><name>check_topology</name></member>
+      <member refid="classgr__deinterleave_1a9ebcc3171b7f2f66fb5981654679d1e1" prot="private" virt="non-virtual"><scope>gr_deinterleave</scope><name>d_itemsize</name></member>
+      <member refid="classgr__deinterleave_1a16d235cb09a3c92ab1ea8be6d6f4da10" prot="private" virt="non-virtual"><scope>gr_deinterleave</scope><name>gr_deinterleave</name></member>
+      <member refid="classgr__deinterleave_1a46d401ab4ac3749d2295eb1d780e71b1" prot="private" virt="non-virtual"><scope>gr_deinterleave</scope><name>gr_make_deinterleave</name></member>
+      <member refid="classgr__deinterleave_1aad7ee9c2aa5c10bebb41df3486520734" prot="public" virt="non-virtual"><scope>gr_deinterleave</scope><name>work</name></member>
+      <member refid="classgr__deinterleave_1a90fd734f7c14cff36f5518fb785d455d" prot="public" virt="non-virtual"><scope>gr_deinterleave</scope><name>~gr_deinterleave</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

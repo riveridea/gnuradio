@@ -1,0 +1,1104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__pfb__clock__sync__ccf" kind="class" prot="public">
+    <compoundname>gr_pfb_clock_sync_ccf</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="gr__pfb__clock__sync__ccf_8h" local="no">gr_pfb_clock_sync_ccf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a2da20a183b7676dba2e3ca3cfd889a68" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_pfb_clock_sync_ccf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="177" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a283418e5b9dfd093ee4dd4f47ab46ed1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_pfb_clock_sync_ccf::d_sps</definition>
+        <argsstring></argsstring>
+        <name>d_sps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="178" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a4dd56d2797e32eb2c2d7239d2c49d0c1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_pfb_clock_sync_ccf::d_sample_num</definition>
+        <argsstring></argsstring>
+        <name>d_sample_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="179" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a96f65853e9c8d6c726bbca6b069d0577" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_loop_bw</definition>
+        <argsstring></argsstring>
+        <name>d_loop_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="180" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1aaeb627634c3a2463e6a82b616c682eaf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_damping</definition>
+        <argsstring></argsstring>
+        <name>d_damping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="181" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a44cb76a53a0af6177c383f0b97a89cae" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_alpha</definition>
+        <argsstring></argsstring>
+        <name>d_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="182" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a02f2d03a3f2d20f9c57c4f9faa89599f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_beta</definition>
+        <argsstring></argsstring>
+        <name>d_beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="183" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1ac1ba8436d7654c01a532010523bd3ba3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::d_nfilters</definition>
+        <argsstring></argsstring>
+        <name>d_nfilters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="185" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a2d16785dd02b40c48e4b00ddb50b66ac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::d_taps_per_filter</definition>
+        <argsstring></argsstring>
+        <name>d_taps_per_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="186" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a201480924ad29b56249ffe4c5065e4b2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_fir_ccf * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_clock_sync_ccf::d_filters</definition>
+        <argsstring></argsstring>
+        <name>d_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="187" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a84d6966de1a156f2079eccbfc445189b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_fir_ccf * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_clock_sync_ccf::d_diff_filters</definition>
+        <argsstring></argsstring>
+        <name>d_diff_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="188" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a491571a0eba9da9d406d5df17590465c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_clock_sync_ccf::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="189" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a9e7c1d76cd811805e564d64fe1e88959" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_clock_sync_ccf::d_dtaps</definition>
+        <argsstring></argsstring>
+        <name>d_dtaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="190" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a63a0727a7ed38c82845300ba0306802d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_k</definition>
+        <argsstring></argsstring>
+        <name>d_k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="192" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1af5f7c7187b57da36def5971fcbb09ad6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_rate</definition>
+        <argsstring></argsstring>
+        <name>d_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="193" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a07677742cf0175174efe8989d3a777c5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_rate_i</definition>
+        <argsstring></argsstring>
+        <name>d_rate_i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="194" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1accff9a80788229b8d46ca36cbf8145e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_rate_f</definition>
+        <argsstring></argsstring>
+        <name>d_rate_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="195" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a8c0a284e7c826ccac9db37fec3ded4bd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_max_dev</definition>
+        <argsstring></argsstring>
+        <name>d_max_dev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="196" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1ad90ee6c38ec475e354d42cfb267676b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::d_filtnum</definition>
+        <argsstring></argsstring>
+        <name>d_filtnum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="197" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a60e131667bdd08f5a8d20ba7e18af08f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::d_osps</definition>
+        <argsstring></argsstring>
+        <name>d_osps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="198" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1ac0c90fbca03f7dcf2dad5dfd28018534" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::d_error</definition>
+        <argsstring></argsstring>
+        <name>d_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="199" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__clock__sync__ccf_1a01203582ec0c9dcb403ea08d440589a2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::d_out_idx</definition>
+        <argsstring></argsstring>
+        <name>d_out_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="200" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__pfb__clock__sync__ccf_1abb52797da74698ac7e5d01c7771e3002" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_pfb_clock_sync_ccf_sptr</ref></type>
+        <definition>GR_CORE_API gr_pfb_clock_sync_ccf_sptr gr_make_pfb_clock_sync_ccf</definition>
+        <argsstring>(double sps, float loop_bw, const std::vector&lt; float &gt; &amp;taps, unsigned int filter_size, float init_phase, float max_rate_deviation, int osps)</argsstring>
+        <name>gr_make_pfb_clock_sync_ccf</name>
+        <param>
+          <type>double</type>
+          <declname>sps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>filter_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>init_phase</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_rate_deviation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>osps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank timing synchronizer. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(double) The number of samples per symbol in the incoming signal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop_bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) The bandwidth of the control loop; set&apos;s alpha and beta. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector&lt;int&gt;) The filter taps. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(uint) The number of filters in the filterbank (default = 32). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>init_phase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) The initial phase to look at, or which filter to start with (default = 0). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_rate_deviation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Distance from 0 d_rate can get (default = 1.5). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>osps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(int) The number of output samples per symbol (default=1). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="175"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a76d9845af3264a002172e3b95b7a34e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_clock_sync_ccf::gr_pfb_clock_sync_ccf</definition>
+        <argsstring>(double sps, float loop_bw, const std::vector&lt; float &gt; &amp;taps, unsigned int filter_size, float init_phase, float max_rate_deviation, int osps)</argsstring>
+        <name>gr_pfb_clock_sync_ccf</name>
+        <param>
+          <type>double</type>
+          <declname>sps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>filter_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>init_phase</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_rate_deviation</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>osps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank timing synchronizer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a7ad8d3d36b22948f6a47c582b68caec1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::create_diff_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;newtaps, std::vector&lt; float &gt; &amp;difftaps)</argsstring>
+        <name>create_diff_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>newtaps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>difftaps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="213"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1aeb20ba5442828798028632e7387cb60b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_clock_sync_ccf::~gr_pfb_clock_sync_ccf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_pfb_clock_sync_ccf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a3987b6e0316d92aa0a075389a2903f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::update_gains</definition>
+        <argsstring>()</argsstring>
+        <name>update_gains</name>
+        <briefdescription>
+<para>update the system gains from omega and eta </para>        </briefdescription>
+        <detaileddescription>
+<para>This function updates the system gains based on the loop bandwidth and damping factor of the system. These two factors can be set separately through their own set functions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1af82f9103a988dea348d1d63af68b0005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps, std::vector&lt; std::vector&lt; float &gt; &gt; &amp;ourtaps, std::vector&lt; gr_fir_ccf * &gt; &amp;ourfilter)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; float &gt; &gt; &amp;</type>
+          <declname>ourtaps</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gr_fir_ccf * &gt; &amp;</type>
+          <declname>ourfilter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the filterbank&apos;s filter taps with the new prototype filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a46e30bb743cf18b2b27ef34373444e74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_clock_sync_ccf::get_taps</definition>
+        <argsstring>()</argsstring>
+        <name>get_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all of the taps of the matched filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a6f0d94fb10de4908a5f489cb8bdfe0c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_clock_sync_ccf::get_diff_taps</definition>
+        <argsstring>()</argsstring>
+        <name>get_diff_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all of the taps of the derivative filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1adb0fca49248608971fd9f3092a37f355" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_pfb_clock_sync_ccf::get_channel_taps</definition>
+        <argsstring>(int channel)</argsstring>
+        <name>get_channel_taps</name>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the taps of the matched filter for a particular channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1ad7845124baeed3f82dfd5edc67d0ad99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_pfb_clock_sync_ccf::get_diff_channel_taps</definition>
+        <argsstring>(int channel)</argsstring>
+        <name>get_diff_channel_taps</name>
+        <param>
+          <type>int</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the taps in the derivative filter for a particular channel </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a3221f3d010f9ca2202bf15d16d1f248f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gr_pfb_clock_sync_ccf::get_taps_as_string</definition>
+        <argsstring>()</argsstring>
+        <name>get_taps_as_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the taps as a formatted string for printing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a00d8a47f8de1eff32e5757b076d0b794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gr_pfb_clock_sync_ccf::get_diff_taps_as_string</definition>
+        <argsstring>()</argsstring>
+        <name>get_diff_taps_as_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the derivative filter taps as a formatted string for printing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a204b19c1c0cad05fb3bbb043177374f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_loop_bandwidth</definition>
+        <argsstring>(float bw)</argsstring>
+        <name>set_loop_bandwidth</name>
+        <param>
+          <type>float</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+<para>Set the loop bandwidth. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set the loop filter&apos;s bandwidth to <computeroutput>bw</computeroutput>. This should be between 2*pi/200 and 2*pi/100 (in rads/samp). It must also be a positive number.</para><para>When a new damping factor is set, the gains, alpha and beta, of the loop are recalculated by a call to <ref refid="classgr__pfb__clock__sync__ccf_1a3987b6e0316d92aa0a075389a2903f9e" kindref="member">update_gains()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new bandwidth </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a276c9b494c05a27c7cf2de9b48221124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_damping_factor</definition>
+        <argsstring>(float df)</argsstring>
+        <name>set_damping_factor</name>
+        <param>
+          <type>float</type>
+          <declname>df</declname>
+        </param>
+        <briefdescription>
+<para>Set the loop damping factor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set the loop filter&apos;s damping factor to <computeroutput>df</computeroutput>. The damping factor should be sqrt(2)/2.0 for critically damped systems. Set it to anything else only if you know what you are doing. It must be a number between 0 and 1.</para><para>When a new damping factor is set, the gains, alpha and beta, of the loop are recalculated by a call to <ref refid="classgr__pfb__clock__sync__ccf_1a3987b6e0316d92aa0a075389a2903f9e" kindref="member">update_gains()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new damping factor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1aa904057e592c06e98102e0da3299cefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_alpha</definition>
+        <argsstring>(float alpha)</argsstring>
+        <name>set_alpha</name>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Set the loop gain alpha. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set&apos;s the loop filter&apos;s alpha gain parameter.</para><para>This value should really only be set by adjusting the loop bandwidth and damping factor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new alpha gain </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a92f2be1e8f155e2f07b62d9f1cd4f586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_beta</definition>
+        <argsstring>(float beta)</argsstring>
+        <name>set_beta</name>
+        <param>
+          <type>float</type>
+          <declname>beta</declname>
+        </param>
+        <briefdescription>
+<para>Set the loop gain beta. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set&apos;s the loop filter&apos;s beta gain parameter.</para><para>This value should really only be set by adjusting the loop bandwidth and damping factor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>beta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new beta gain </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a4a59f3e3d979f439e6f4eabac7449d77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_clock_sync_ccf::set_max_rate_deviation</definition>
+        <argsstring>(float m)</argsstring>
+        <name>set_max_rate_deviation</name>
+        <param>
+          <type>float</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum deviation from 0 d_rate can have </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="331" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="330" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a4559f952fdc821fb0b14d587f2df99cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::get_loop_bandwidth</definition>
+        <argsstring>() const </argsstring>
+        <name>get_loop_bandwidth</name>
+        <briefdescription>
+<para>Returns the loop bandwidth. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="342"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a6e82915e3647a117bc127dec91597610" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::get_damping_factor</definition>
+        <argsstring>() const </argsstring>
+        <name>get_damping_factor</name>
+        <briefdescription>
+<para>Returns the loop damping factor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1aa7638d0cd4b50ea6c5f1d8d9068145ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::get_alpha</definition>
+        <argsstring>() const </argsstring>
+        <name>get_alpha</name>
+        <briefdescription>
+<para>Returns the loop gain alpha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1aac59ab6abe9e643096508ed0836d1841" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::get_beta</definition>
+        <argsstring>() const </argsstring>
+        <name>get_beta</name>
+        <briefdescription>
+<para>Returns the loop gain beta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a9e908eb650c0dd62d459a1da07f6969b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_pfb_clock_sync_ccf::get_clock_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>get_clock_rate</name>
+        <briefdescription>
+<para>Returns the current clock rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a800350bdaff51a7beb8d651e88087166" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool gr_pfb_clock_sync_ccf::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <reimplements refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b">check_topology</reimplements>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+<para>Confirm that ninputs and noutputs is an acceptable combination. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ninputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input streams connected </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>noutputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output streams connected</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this is a valid configuration for this block.</para></simplesect>
+This function is called by the runtime system whenever the topology changes. Most classes do not need to override this. This check is in addition to the constraints specified by the input and output gr_io_signatures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__clock__sync__ccf_1a9c080fefbd4e1b047bebea3646c3aae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int gr_pfb_clock_sync_ccf::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="372"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Timing synchronizer using polyphase filterbanks. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block performs timing synchronization for PAM signals by minimizing the derivative of the filtered signal, which in turn maximizes the SNR and minimizes ISI.</para><para>This approach works by setting up two filterbanks; one filterbank contains the signal&apos;s pulse shaping matched filter (such as a root raised cosine filter), where each branch of the filterbank contains a different phase of the filter. The second filterbank contains the derivatives of the filters in the first filterbank. Thinking of this in the time domain, the first filterbank contains filters that have a sinc shape to them. We want to align the output signal to be sampled at exactly the peak of the sinc shape. The derivative of the sinc contains a zero at the maximum point of the sinc (sinc(0) = 1, sinc(0)&apos; = 0). Furthermore, the region around the zero point is relatively linear. We make use of this fact to generate the error signal.</para><para>If the signal out of the derivative filters is d_i[n] for the ith filter, and the output of the matched filter is x_i[n], we calculate the error as: e[n] = (Re{x_i[n]} * Re{d_i[n]} + Im{x_i[n]} * Im{d_i[n]}) / 2.0 This equation averages the error in the real and imaginary parts. There are two reasons we multiply by the signal itself. First, if the symbol could be positive or negative going, but we want the error term to always tell us to go in the same direction depending on which side of the zero point we are on. The sign of x_i[n] adjusts the error term to do this. Second, the magnitude of x_i[n] scales the error term depending on the symbol&apos;s amplitude, so larger signals give us a stronger error term because we have more confidence in that symbol&apos;s value. Using the magnitude of x_i[n] instead of just the sign is especially good for signals with low SNR.</para><para>The error signal, e[n], gives us a value proportional to how far away from the zero point we are in the derivative signal. We want to drive this value to zero, so we set up a second order loop. We have two variables for this loop; d_k is the filter number in the filterbank we are on and d_rate is the rate which we travel through the filters in the steady state. That is, due to the natural clock differences between the transmitter and receiver, d_rate represents that difference and would traverse the filter phase paths to keep the receiver locked. Thinking of this as a second-order PLL, the d_rate is the frequency and d_k is the phase. So we update d_rate and d_k using the standard loop equations based on two error signals, d_alpha and d_beta. We have these two values set based on each other for a critically damped system, so in the block constructor, we just ask for &quot;gain,&quot; which is d_alpha while d_beta is equal to (gain^2)/4.</para><para>The block&apos;s parameters are:</para><para><itemizedlist>
+<listitem><para><computeroutput>sps:</computeroutput> The clock sync block needs to know the number of samples per symbol, because it defaults to return a single point representing the symbol. The sps can be any positive real number and does not need to be an integer.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>loop_bw:</computeroutput> The loop bandwidth is used to set the gain of the inner control loop (see: <ulink url="http://gnuradio.squarespace.com/blog/2011/8/13/control-loop-gain-values.html">http://gnuradio.squarespace.com/blog/2011/8/13/control-loop-gain-values.html</ulink>). This should be set small (a value of around 2pi/100 is suggested in that blog post as the step size for the number of radians around the unit circle to move relative to the error).</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>taps:</computeroutput> One of the most important parameters for this block is the taps of the filter. One of the benefits of this algorithm is that you can put the matched filter in here as the taps, so you get both the matched filter and sample timing correction in one go. So create your normal matched filter. For a typical digital modulation, this is a root raised cosine filter. The number of taps of this filter is based on how long you expect the channel to be; that is, how many symbols do you want to combine to get the current symbols energy back (there&apos;s probably a better way of stating that). It&apos;s usually 5 to 10 or so. That gives you your filter, but now we need to think about it as a filter with different phase profiles in each filter. So take this number of taps and multiply it by the number of filters. This is the number you would use to create your prototype filter. When you use this in the PFB filerbank, it segments these taps into the filterbanks in such a way that each bank now represents the filter at different phases, equally spaced at 2pi/N, where N is the number of filters.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>filter_size</computeroutput> (default=32): The number of filters can also be set and defaults to 32. With 32 filters, you get a good enough resolution in the phase to produce very small, almost unnoticeable, ISI. Going to 64 filters can reduce this more, but after that there is very little gained for the extra complexity.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>init_phase</computeroutput> (default=0): The initial phase is another settable parameter and refers to the filter path the algorithm initially looks at (i.e., d_k starts at init_phase). This value defaults to zero, but it might be useful to start at a different phase offset, such as the mid-point of the filters.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>max_rate_deviation</computeroutput> (default=1.5): The next parameter is the max_rate_devitation, which defaults to 1.5. This is how far we allow d_rate to swing, positive or negative, from 0. Constraining the rate can help keep the algorithm from walking too far away to lock during times when there is no signal.</para></listitem>
+</itemizedlist>
+<itemizedlist>
+<listitem><para><computeroutput>osps</computeroutput> (default=1): The osps is the number of output samples per symbol. By default, the algorithm produces 1 sample per symbol, sampled at the exact sample value. This osps value was added to better work with equalizers, which do a better job of modeling the channel if they have 2 samps/sym. </para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4665">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4666" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4663">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4664" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4662">
+        <label>gr_pfb_clock_sync_ccf</label>
+        <link refid="classgr__pfb__clock__sync__ccf"/>
+        <childnode refid="4663" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4666">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4664">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4665" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4670">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4671" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4668">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4669" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4672">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="4673" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="4667">
+        <label>gr_pfb_clock_sync_ccf</label>
+        <link refid="classgr__pfb__clock__sync__ccf"/>
+        <childnode refid="4668" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4675">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="4671">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4673">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="4669">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4670" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4672" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="4674" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4674">
+        <label>std::string</label>
+        <childnode refid="4675" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" line="155" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_clock_sync_ccf.h" bodystart="154" bodyend="373"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>BLACK</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a800350bdaff51a7beb8d651e88087166" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>consume_each</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a7ad8d3d36b22948f6a47c582b68caec1" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>create_diff_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a44cb76a53a0af6177c383f0b97a89cae" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_alpha</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a02f2d03a3f2d20f9c57c4f9faa89599f" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_beta</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_color</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1aaeb627634c3a2463e6a82b616c682eaf" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_damping</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a84d6966de1a156f2079eccbfc445189b" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_diff_filters</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a9e7c1d76cd811805e564d64fe1e88959" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_dtaps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1ac0c90fbca03f7dcf2dad5dfd28018534" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_error</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a201480924ad29b56249ffe4c5065e4b2" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_filters</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1ad90ee6c38ec475e354d42cfb267676b4" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_filtnum</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_input_signature</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a63a0727a7ed38c82845300ba0306802d" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_k</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a96f65853e9c8d6c726bbca6b069d0577" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_loop_bw</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a8c0a284e7c826ccac9db37fec3ded4bd" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_max_dev</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_name</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1ac1ba8436d7654c01a532010523bd3ba3" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_nfilters</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a60e131667bdd08f5a8d20ba7e18af08f" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_osps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a01203582ec0c9dcb403ea08d440589a2" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_out_idx</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_output_signature</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1af5f7c7187b57da36def5971fcbb09ad6" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_rate</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1accff9a80788229b8d46ca36cbf8145e3" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_rate_f</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a07677742cf0175174efe8989d3a777c5" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_rate_i</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a4dd56d2797e32eb2c2d7239d2c49d0c1" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_sample_num</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a283418e5b9dfd093ee4dd4f47ab46ed1" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_sps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a491571a0eba9da9d406d5df17590465c" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a2d16785dd02b40c48e4b00ddb50b66ac" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_taps_per_filter</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_unique_id</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a2da20a183b7676dba2e3ca3cfd889a68" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>d_updated</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>forecast</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a9c080fefbd4e1b047bebea3646c3aae0" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>general_work</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1aa7638d0cd4b50ea6c5f1d8d9068145ed" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_alpha</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1aac59ab6abe9e643096508ed0836d1841" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_beta</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1adb0fca49248608971fd9f3092a37f355" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_channel_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a9e908eb650c0dd62d459a1da07f6969b" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_clock_rate</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a6e82915e3647a117bc127dec91597610" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_damping_factor</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1ad7845124baeed3f82dfd5edc67d0ad99" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_diff_channel_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a6f0d94fb10de4908a5f489cb8bdfe0c9" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_diff_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a00d8a47f8de1eff32e5757b076d0b794" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_diff_taps_as_string</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a4559f952fdc821fb0b14d587f2df99cf" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_loop_bandwidth</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a46e30bb743cf18b2b27ef34373444e74" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_taps</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a3221f3d010f9ca2202bf15d16d1f248f" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>get_taps_as_string</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1abb52797da74698ac7e5d01c7771e3002" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_make_pfb_clock_sync_ccf</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a76d9845af3264a002172e3b95b7a34e3" prot="private" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_pfb_clock_sync_ccf</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_alignment</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1aa904057e592c06e98102e0da3299cefa" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_alpha</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a92f2be1e8f155e2f07b62d9f1cd4f586" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_beta</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_color</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a276c9b494c05a27c7cf2de9b48221124" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_damping_factor</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a204b19c1c0cad05fb3bbb043177374f5" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_loop_bandwidth</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a4a59f3e3d979f439e6f4eabac7449d77" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_max_rate_deviation</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1af82f9103a988dea348d1d63af68b0005" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_taps</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>unique_id</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1a3987b6e0316d92aa0a075389a2903f9e" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>update_gains</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__clock__sync__ccf_1aeb20ba5442828798028632e7387cb60b" prot="public" virt="non-virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>~gr_pfb_clock_sync_ccf</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>gr_pfb_clock_sync_ccf</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

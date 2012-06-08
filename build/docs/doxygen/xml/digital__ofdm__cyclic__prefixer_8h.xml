@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__ofdm__cyclic__prefixer_8h" kind="file">
+    <compoundname>digital_ofdm_cyclic_prefixer.h</compoundname>
+    <includes refid="digital__api_8h" local="no">digital_api.h</includes>
+    <includes refid="gr__sync__interpolator_8h" local="no">gr_sync_interpolator.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="3378">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="3390">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="3389">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3390" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+        <childnode refid="3391" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+        <childnode refid="3393" relation="include">
+        </childnode>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+      </node>
+      <node id="3371">
+        <label>gr_sync_interpolator.h</label>
+        <link refid="gr__sync__interpolator_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3373" relation="include">
+        </childnode>
+      </node>
+      <node id="3381">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="3382" relation="include">
+        </childnode>
+      </node>
+      <node id="3393">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="3394" relation="include">
+        </childnode>
+        <childnode refid="3395" relation="include">
+        </childnode>
+      </node>
+      <node id="3373">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3374" relation="include">
+        </childnode>
+      </node>
+      <node id="3388">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="3370" relation="include">
+        </childnode>
+      </node>
+      <node id="3375">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3376" relation="include">
+        </childnode>
+        <childnode refid="3383" relation="include">
+        </childnode>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3385" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+      </node>
+      <node id="3397">
+        <label>stdexcept</label>
+      </node>
+      <node id="3377">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+        <childnode refid="3379" relation="include">
+        </childnode>
+        <childnode refid="3380" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+      </node>
+      <node id="3392">
+        <label>string</label>
+      </node>
+      <node id="3374">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3375" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+      </node>
+      <node id="3372">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="3370" relation="include">
+        </childnode>
+      </node>
+      <node id="3399">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3380">
+        <label>stddef.h</label>
+      </node>
+      <node id="3385">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="3394">
+        <label>limits.h</label>
+      </node>
+      <node id="3391">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3376">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3377" relation="include">
+        </childnode>
+      </node>
+      <node id="3395">
+        <label>wchar.h</label>
+      </node>
+      <node id="3386">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3379">
+        <label>vector</label>
+      </node>
+      <node id="3369">
+        <label>digital_api.h</label>
+        <link refid="digital__api_8h"/>
+        <childnode refid="3370" relation="include">
+        </childnode>
+      </node>
+      <node id="3384">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="3370">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="3396">
+        <label>iosfwd</label>
+      </node>
+      <node id="3398">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="3383">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+      </node>
+      <node id="3382">
+        <label>complex</label>
+      </node>
+      <node id="3400">
+        <label>stdio.h</label>
+      </node>
+      <node id="3368">
+        <label>digital_ofdm_cyclic_prefixer.h</label>
+        <link refid="digital_ofdm_cyclic_prefixer.h"/>
+        <childnode refid="3369" relation="include">
+        </childnode>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+      </node>
+      <node id="3387">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdigital__ofdm__cyclic__prefixer" prot="public">digital_ofdm_cyclic_prefixer</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="digital__ofdm__cyclic__prefixer_8h_1a417ec1cba63f7a26f41c1c2183c6a93c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" kindref="member">DIGITAL_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">digital_ofdm_cyclic_prefixer_sptr</ref></type>
+        <definition>DIGITAL_API digital_ofdm_cyclic_prefixer_sptr digital_make_ofdm_cyclic_prefixer</definition>
+        <argsstring>(size_t input_size, size_t output_size)</argsstring>
+        <name>digital_make_ofdm_cyclic_prefixer</name>
+        <param>
+          <type>size_t</type>
+          <declname>input_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_cyclic_prefixer.h" line="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_cyclic_prefixer.h"/>
+  </compounddef>
+</doxygen>

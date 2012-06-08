@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__vco_8h" kind="file">
+    <compoundname>gr_vco.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">gr_sincos.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">gr_complex.h</includes>
+    <incdepgraph>
+      <node id="878">
+        <label>gr_sincos.h</label>
+      </node>
+      <node id="879">
+        <label>cmath</label>
+      </node>
+      <node id="880">
+        <label>gr_complex.h</label>
+      </node>
+      <node id="877">
+        <label>vector</label>
+      </node>
+      <node id="876">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h</label>
+        <link refid="gr_vco.h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__vco" prot="public">gr_vco</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2005<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GR_VCO_H_</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_GR_VCO_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_sincos.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">//FIXME<sp/><sp/>Eventually<sp/>generalize<sp/>this<sp/>to<sp/>fixed<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>o_type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>i_type&gt;</highlight></codeline>
+<codeline lineno="39" refid="classgr__vco" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgr__vco" kindref="compound" tooltip="base class template for Voltage Controlled Oscillator (VCO)">gr_vco</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classgr__vco_1a9cf6ab94f646564983f350a69baa8e53" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__vco_1a9cf6ab94f646564983f350a69baa8e53" kindref="member">gr_vco</ref><sp/>()<sp/>:<sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classgr__vco_1ac44432708e327dde927a5eed71cea7e5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1ac44432708e327dde927a5eed71cea7e5" kindref="member">~gr_vco</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>radians</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classgr__vco_1ac0f4048f34ed88f1c32e16a1c5d89f12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1ac0f4048f34ed88f1c32e16a1c5d89f12" kindref="member">set_phase</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angle)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>=<sp/>angle;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classgr__vco_1a9369c68b68aa73498cd23d74cdfc5f99" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a9369c68b68aa73498cd23d74cdfc5f99" kindref="member">adjust_phase</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>delta_phase)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>+=<sp/>delta_phase;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fabs<sp/>(<ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref>)<sp/>&gt;<sp/>M_PI){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>&gt;<sp/>M_PI)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>-=<sp/>2*M_PI;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>&lt;<sp/>-M_PI)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref><sp/>+=<sp/>2*M_PI;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classgr__vco_1a38f19c7a8f164c011041a18e242112d8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a38f19c7a8f164c011041a18e242112d8" kindref="member">get_phase</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>sin<sp/>and<sp/>cos<sp/>for<sp/>current<sp/>phase<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a8fa1bae038a73276062fdae2b92fff89" kindref="member">sincos</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sinx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cosx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>cos<sp/>or<sp/>sin<sp/>for<sp/>current<sp/>phase<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" kindref="member">cos</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" kindref="member">std::cos</ref><sp/>(<ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="69" refid="classgr__vco_1a2458956261a471194fcfa3594848bb3f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a2458956261a471194fcfa3594848bb3f" kindref="member">sin</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a2458956261a471194fcfa3594848bb3f" kindref="member">std::sin</ref><sp/>(<ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>a<sp/>block<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" kindref="member">cos</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ampl<sp/>=<sp/>1.0);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75" refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" kindref="member">d_phase</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>o_type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>i_type&gt;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classgr__vco_1a8fa1bae038a73276062fdae2b92fff89" refkind="member"><highlight class="normal"><ref refid="classgr__vco_1a8fa1bae038a73276062fdae2b92fff89" kindref="member">gr_vco&lt;o_type,i_type&gt;::sincos</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sinx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cosx)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>gr_sincosf<sp/>(d_phase,<sp/>sinx,<sp/>cosx);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>o_type,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>i_type&gt;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classgr__vco_1a2a686b0a311611167414e7747a67cabf" refkind="member"><highlight class="normal"><ref refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" kindref="member">gr_vco&lt;o_type,i_type&gt;::cos</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ampl)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>noutput_items;<sp/>i++){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>output[i]<sp/>=<sp/>cos()<sp/>*<sp/>ampl;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>adjust_phase(input[i]<sp/>*<sp/>k);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_GR_VCO_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h"/>
+  </compounddef>
+</doxygen>

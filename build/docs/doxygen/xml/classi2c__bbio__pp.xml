@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classi2c__bbio__pp" kind="class" prot="public">
+    <compoundname>i2c_bbio_pp</compoundname>
+    <basecompoundref refid="classi2c__bbio" prot="public" virt="non-virtual">i2c_bbio</basecompoundref>
+    <includes refid="i2c__bbio__pp_8h" local="no">i2c_bbio_pp.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi2c__bbio__pp_1a693e86567006854c4cff477da13494ee" prot="private" static="no" mutable="no">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">ppio_sptr</ref></type>
+        <definition>ppio_sptr i2c_bbio_pp::d_pp</definition>
+        <argsstring></argsstring>
+        <name>d_pp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classi2c__bbio__pp_1ab2f092c8777dd59526af925385fcad29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">i2c_bbio_sptr</ref></type>
+        <definition>GR_CORE_API i2c_bbio_sptr make_i2c_bbio_pp</definition>
+        <argsstring>(ppio_sptr pp)</argsstring>
+        <name>make_i2c_bbio_pp</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">ppio_sptr</ref></type>
+          <declname>pp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classi2c__bbio__pp_1afe5c4a88f0a3d905a678acc22c4c7f4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>i2c_bbio_pp::i2c_bbio_pp</definition>
+        <argsstring>(ppio_sptr pp)</argsstring>
+        <name>i2c_bbio_pp</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">ppio_sptr</ref></type>
+          <declname>pp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi2c__bbio__pp_1afa9830679ddb385644f304c1f7de004c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio_pp::set_scl</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>set_scl</name>
+        <reimplements refid="classi2c__bbio_1af11eabf1af55eb5403482b5787fe8f2b">set_scl</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio__pp_1a5567fac14054ae3741110ef457795de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio_pp::set_sda</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>set_sda</name>
+        <reimplements refid="classi2c__bbio_1a37ce10af9ef6d40b779ce4a654123200">set_sda</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio__pp_1aac9bc017a05e86aa772abb7396207f7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool i2c_bbio_pp::get_sda</definition>
+        <argsstring>()</argsstring>
+        <name>get_sda</name>
+        <reimplements refid="classi2c__bbio_1adbd6acc7a68f92f5c81b90ff4d38e2ec">get_sda</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio__pp_1a25510872738004a6324c0643c4a69f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio_pp::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <reimplements refid="classi2c__bbio_1a0432778fbcf4b007eb7d039a70c33649">lock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio__pp_1aa01b986d0e95999537ee2d5f173dbfed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio_pp::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <reimplements refid="classi2c__bbio_1a7f2832711975b08251bf63e522c88fd8">unlock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>concrete class that bit bangs eval board <ref refid="classi2c" kindref="compound">i2c</ref> bus using parallel port </para>    </briefdescription>
+    <detaileddescription>
+<para>This class talks to the <ref refid="classi2c" kindref="compound">i2c</ref> bus on the microtune eval board using the parallel port. This works for both the 4937 and 4702 boards. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6047">
+        <label>i2c_bbio_pp</label>
+        <link refid="classi2c__bbio__pp"/>
+        <childnode refid="6048" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6048">
+        <label>i2c_bbio</label>
+        <link refid="classi2c__bbio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6049">
+        <label>i2c_bbio_pp</label>
+        <link refid="classi2c__bbio__pp"/>
+        <childnode refid="6050" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6050">
+        <label>i2c_bbio</label>
+        <link refid="classi2c__bbio"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio_pp.h" bodystart="37" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classi2c__bbio__pp_1a693e86567006854c4cff477da13494ee" prot="private" virt="non-virtual"><scope>i2c_bbio_pp</scope><name>d_pp</name></member>
+      <member refid="classi2c__bbio__pp_1aac9bc017a05e86aa772abb7396207f7e" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>get_sda</name></member>
+      <member refid="classi2c__bbio_1a2aa01d1b7b5d69a1f5aea3392c948c9d" prot="public" virt="non-virtual"><scope>i2c_bbio_pp</scope><name>i2c_bbio</name></member>
+      <member refid="classi2c__bbio__pp_1afe5c4a88f0a3d905a678acc22c4c7f4f" prot="private" virt="non-virtual"><scope>i2c_bbio_pp</scope><name>i2c_bbio_pp</name></member>
+      <member refid="classi2c__bbio__pp_1a25510872738004a6324c0643c4a69f28" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>lock</name></member>
+      <member refid="classi2c__bbio__pp_1ab2f092c8777dd59526af925385fcad29" prot="private" virt="non-virtual"><scope>i2c_bbio_pp</scope><name>make_i2c_bbio_pp</name></member>
+      <member refid="classi2c__bbio__pp_1afa9830679ddb385644f304c1f7de004c" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>set_scl</name></member>
+      <member refid="classi2c__bbio__pp_1a5567fac14054ae3741110ef457795de5" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>set_sda</name></member>
+      <member refid="classi2c__bbio__pp_1aa01b986d0e95999537ee2d5f173dbfed" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>unlock</name></member>
+      <member refid="classi2c__bbio_1a7f16201391950e11847c90f3d188764d" prot="public" virt="virtual"><scope>i2c_bbio_pp</scope><name>~i2c_bbio</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

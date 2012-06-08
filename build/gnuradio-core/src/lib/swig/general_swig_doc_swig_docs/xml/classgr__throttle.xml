@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__throttle" kind="class" prot="public">
+    <compoundname>gr_throttle</compoundname>
+    <includes refid="gr__throttle_8h" local="no">gr_throttle.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr__throttle_1a79d14ac9a845d4630dc034e0c4843cb3" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr__throttle" kindref="compound">gr_throttle</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;gr_throttle&gt; gr_throttle::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_throttle.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_throttle.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__throttle_1ad743b39168b05108d5fd7e5398b4e32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr_throttle::set_sample_rate</definition>
+        <argsstring>(double rate)=0</argsstring>
+        <name>set_sample_rate</name>
+        <param>
+          <type>double</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the sample rate in samples per second. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_throttle.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>throttle flow of samples such that the average rate does not exceed samples_per_sec.</para><para>input: one stream of itemsize; output: one stream of itemsize </para>    </briefdescription>
+    <detaileddescription>
+<para>N.B. this should only be used in GUI apps where there is no other rate limiting block. It is not intended nor effective at precisely controlling the rate of samples. That should be controlled by a source or sink tied to sample clock. E.g., a USRP or audio card. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_throttle.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_throttle.h" bodystart="39" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classgr__throttle_1ad743b39168b05108d5fd7e5398b4e32a" prot="public" virt="pure-virtual"><scope>gr_throttle</scope><name>set_sample_rate</name></member>
+      <member refid="classgr__throttle_1a79d14ac9a845d4630dc034e0c4843cb3" prot="public" virt="non-virtual"><scope>gr_throttle</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

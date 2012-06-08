@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__error__handler_8h" kind="file">
+    <compoundname>gr_error_handler.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cstdio</includes>
+    <incdepgraph>
+      <node id="7070">
+        <label>stdarg.h</label>
+      </node>
+      <node id="7071">
+        <label>string</label>
+      </node>
+      <node id="7068">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="7069" relation="include">
+        </childnode>
+      </node>
+      <node id="7072">
+        <label>cstdio</label>
+      </node>
+      <node id="7069">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="7067">
+        <label>gr_error_handler.h</label>
+        <link refid="gr_error_handler.h"/>
+        <childnode refid="7068" relation="include">
+        </childnode>
+        <childnode refid="7070" relation="include">
+        </childnode>
+        <childnode refid="7071" relation="include">
+        </childnode>
+        <childnode refid="7072" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__error__handler" prot="public">gr_error_handler</innerclass>
+    <innerclass refid="classgr__base__error__handler" prot="public">gr_base_error_handler</innerclass>
+    <innerclass refid="classgr__file__error__handler" prot="public">gr_file_error_handler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h"/>
+  </compounddef>
+</doxygen>

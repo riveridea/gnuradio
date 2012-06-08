@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fft__filter__ccc" kind="class" prot="public">
+    <compoundname>gr_fft_filter_ccc</compoundname>
+    <includes refid="gr__fft__filter__ccc_8h" local="no">gr_fft_filter_ccc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__fft__filter__ccc_1ab459e172c36757165aca57eaddedcc26" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_fft_filter_ccc::d_nsamples</definition>
+        <argsstring></argsstring>
+        <name>d_nsamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fft__filter__ccc_1a130619b32853dfff944d23ed7f5a1dcd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_fft_filter_ccc::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fft__filter__ccc_1a918114c7d4fc65845d9c2967d10644fa" prot="private" static="no" mutable="no">
+        <type><ref refid="classgri__fft__filter__ccc__generic" kindref="compound">gri_fft_filter_ccc_generic</ref> *</type>
+        <definition>gri_fft_filter_ccc_generic* gr_fft_filter_ccc::d_filter</definition>
+        <argsstring></argsstring>
+        <name>d_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fft__filter__ccc_1a0ab689b47200dfaba1f86d101192e2ba" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_fft_filter_ccc::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__fft__filter__ccc_1abc0f28bfc16c5f65462bfe86834d6c80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__fft__filter__ccc_8h_1a16cdebfe90d7631a3cdfe07ac6061b16" kindref="member">gr_fft_filter_ccc_sptr</ref></type>
+        <definition>GR_CORE_API gr_fft_filter_ccc_sptr gr_make_fft_filter_ccc</definition>
+        <argsstring>(int decimation, const std::vector&lt; gr_complex &gt; &amp;taps, int nthreads)</argsstring>
+        <name>gr_make_fft_filter_ccc</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nthreads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1a8792eb1b19c32fc2949454f0ca099518" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fft_filter_ccc::gr_fft_filter_ccc</definition>
+        <argsstring>(int decimation, const std::vector&lt; gr_complex &gt; &amp;taps, int nthreads=1)</argsstring>
+        <name>gr_fft_filter_ccc</name>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nthreads</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a FFT filter with the given taps</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>decimation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&gt;= 1 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>complex filter taps </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nthreads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of threads for the FFT to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1ad2189b0e29caa4cdf870673809d927af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fft_filter_ccc::~gr_fft_filter_ccc</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fft_filter_ccc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1a9e2b3183adc5662a6407a4c2d9845db5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_fft_filter_ccc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1a063b85c12b0dd9269fd2bb8183386f1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_fft_filter_ccc::taps</definition>
+        <argsstring>() const </argsstring>
+        <name>taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1a614e6f170ec262c391b92aa5c6dbfd37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_fft_filter_ccc::set_nthreads</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_nthreads</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Set number of threads to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1aed2a8a12f64f9a959f8790629e2af837" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_fft_filter_ccc::nthreads</definition>
+        <argsstring>() const </argsstring>
+        <name>nthreads</name>
+        <briefdescription>
+<para>Get number of threads being used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fft__filter__ccc_1abd58d53cb31556211a6f12e9608229a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_fft_filter_ccc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fast FFT filter with gr_complex input, gr_complex output and gr_complex taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_fft_filter_ccc.h" bodystart="41" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classgr__fft__filter__ccc_1a918114c7d4fc65845d9c2967d10644fa" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>d_filter</name></member>
+      <member refid="classgr__fft__filter__ccc_1a0ab689b47200dfaba1f86d101192e2ba" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>d_new_taps</name></member>
+      <member refid="classgr__fft__filter__ccc_1ab459e172c36757165aca57eaddedcc26" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>d_nsamples</name></member>
+      <member refid="classgr__fft__filter__ccc_1a130619b32853dfff944d23ed7f5a1dcd" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>d_updated</name></member>
+      <member refid="classgr__fft__filter__ccc_1a8792eb1b19c32fc2949454f0ca099518" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>gr_fft_filter_ccc</name></member>
+      <member refid="classgr__fft__filter__ccc_1abc0f28bfc16c5f65462bfe86834d6c80" prot="private" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>gr_make_fft_filter_ccc</name></member>
+      <member refid="classgr__fft__filter__ccc_1aed2a8a12f64f9a959f8790629e2af837" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>nthreads</name></member>
+      <member refid="classgr__fft__filter__ccc_1a614e6f170ec262c391b92aa5c6dbfd37" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>set_nthreads</name></member>
+      <member refid="classgr__fft__filter__ccc_1a9e2b3183adc5662a6407a4c2d9845db5" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>set_taps</name></member>
+      <member refid="classgr__fft__filter__ccc_1a063b85c12b0dd9269fd2bb8183386f1f" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>taps</name></member>
+      <member refid="classgr__fft__filter__ccc_1abd58d53cb31556211a6f12e9608229a4" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>work</name></member>
+      <member refid="classgr__fft__filter__ccc_1ad2189b0e29caa4cdf870673809d927af" prot="public" virt="non-virtual"><scope>gr_fft_filter_ccc</scope><name>~gr_fft_filter_ccc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

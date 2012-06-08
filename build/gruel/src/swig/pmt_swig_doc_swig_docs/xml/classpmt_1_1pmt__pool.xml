@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classpmt_1_1pmt__pool" kind="class" prot="public">
+    <compoundname>pmt::pmt_pool</compoundname>
+    <includes refid="pmt__pool_8h" local="no">pmt_pool.h</includes>
+    <innerclass refid="structpmt_1_1pmt__pool_1_1item" prot="private">pmt::pmt_pool::item</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classpmt_1_1pmt__pool_1ae25db6fe4b61c6ec132a27587515da3a" prot="private" static="no">
+        <type>boost::unique_lock&lt; boost::mutex &gt;</type>
+        <definition>typedef boost::unique_lock&lt;boost::mutex&gt; pmt::pmt_pool::scoped_lock</definition>
+        <argsstring></argsstring>
+        <name>scoped_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1aea1e807c8c9cbba167cadf22703b16df" prot="private" static="no" mutable="yes">
+        <type>boost::mutex</type>
+        <definition>boost::mutex pmt::pmt_pool::d_mutex</definition>
+        <argsstring></argsstring>
+        <name>d_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1ad1ccc0fef31cd7de3f9f39c88c726df7" prot="private" static="no" mutable="no">
+        <type>boost::condition_variable</type>
+        <definition>boost::condition_variable pmt::pmt_pool::d_cond</definition>
+        <argsstring></argsstring>
+        <name>d_cond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1a9630af69a9463f83e38e6e7b8aa4f7cb" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pmt::pmt_pool::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1aa0da06f5a95ca83893e959ac2576970b" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pmt::pmt_pool::d_alignment</definition>
+        <argsstring></argsstring>
+        <name>d_alignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1aacf60132c116bbadf058459ec9226d3a" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pmt::pmt_pool::d_allocation_size</definition>
+        <argsstring></argsstring>
+        <name>d_allocation_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1a4d4ed68e4fa5cd9d85c76878efc386e6" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pmt::pmt_pool::d_max_items</definition>
+        <argsstring></argsstring>
+        <name>d_max_items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1af1dab689d6d70944ad6e99979ff89c48" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t pmt::pmt_pool::d_n_items</definition>
+        <argsstring></argsstring>
+        <name>d_n_items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1a2d51bdb5a75269e18ecf8e77ad4e117c" prot="private" static="no" mutable="no">
+        <type>item *</type>
+        <definition>item* pmt::pmt_pool::d_freelist</definition>
+        <argsstring></argsstring>
+        <name>d_freelist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpmt_1_1pmt__pool_1ad5dd3f85bc1a2d66b5d7be0fa8f2f566" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; char * &gt;</type>
+        <definition>std::vector&lt;char *&gt; pmt::pmt_pool::d_allocations</definition>
+        <argsstring></argsstring>
+        <name>d_allocations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpmt_1_1pmt__pool_1a9438fef8d93d9db926150a2f2aac717c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pmt::pmt_pool::pmt_pool</definition>
+        <argsstring>(size_t itemsize, size_t alignment=16, size_t allocation_size=4096, size_t max_items=0)</argsstring>
+        <name>pmt_pool</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>alignment</declname>
+          <defval>16</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>allocation_size</declname>
+          <defval>4096</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max_items</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size in bytes of the items to be allocated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alignment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>alignment in bytes of all objects to be allocated (must be power-of-2). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>allocation_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to allocate at a time from the underlying allocator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the maximum number of items to allocate. If this number is exceeded, the allocate blocks. 0 implies no limit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__pool_1ab41003391d80e2c7568bbb6929f1d449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pmt::pmt_pool::~pmt_pool</definition>
+        <argsstring>()</argsstring>
+        <name>~pmt_pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__pool_1a4da3bad0784c073f0c7770629dbc75e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* pmt::pmt_pool::malloc</definition>
+        <argsstring>()</argsstring>
+        <name>malloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__pool_1a0d02de719662f1ea9b14f78f0fd5c28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pmt::pmt_pool::free</definition>
+        <argsstring>(void *p)</argsstring>
+        <name>free</name>
+        <param>
+          <type>void *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>very simple thread-safe fixed-size allocation pool </para>    </briefdescription>
+    <detaileddescription>
+<para>FIXME may want to go to global allocation with per-thread free list. This would eliminate virtually all lock contention. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/pmt_pool.h" bodystart="37" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classpmt_1_1pmt__pool_1aa0da06f5a95ca83893e959ac2576970b" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_alignment</name></member>
+      <member refid="classpmt_1_1pmt__pool_1aacf60132c116bbadf058459ec9226d3a" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_allocation_size</name></member>
+      <member refid="classpmt_1_1pmt__pool_1ad5dd3f85bc1a2d66b5d7be0fa8f2f566" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_allocations</name></member>
+      <member refid="classpmt_1_1pmt__pool_1ad1ccc0fef31cd7de3f9f39c88c726df7" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_cond</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a2d51bdb5a75269e18ecf8e77ad4e117c" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_freelist</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a9630af69a9463f83e38e6e7b8aa4f7cb" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_itemsize</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a4d4ed68e4fa5cd9d85c76878efc386e6" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_max_items</name></member>
+      <member refid="classpmt_1_1pmt__pool_1aea1e807c8c9cbba167cadf22703b16df" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_mutex</name></member>
+      <member refid="classpmt_1_1pmt__pool_1af1dab689d6d70944ad6e99979ff89c48" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>d_n_items</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a0d02de719662f1ea9b14f78f0fd5c28e" prot="public" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>free</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a4da3bad0784c073f0c7770629dbc75e2" prot="public" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>malloc</name></member>
+      <member refid="classpmt_1_1pmt__pool_1a9438fef8d93d9db926150a2f2aac717c" prot="public" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>pmt_pool</name></member>
+      <member refid="classpmt_1_1pmt__pool_1ae25db6fe4b61c6ec132a27587515da3a" prot="private" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>scoped_lock</name></member>
+      <member refid="classpmt_1_1pmt__pool_1ab41003391d80e2c7568bbb6929f1d449" prot="public" virt="non-virtual"><scope>pmt::pmt_pool</scope><name>~pmt_pool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

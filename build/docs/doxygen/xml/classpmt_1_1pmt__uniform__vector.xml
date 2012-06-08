@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classpmt_1_1pmt__uniform__vector" kind="class" prot="public">
+    <compoundname>pmt::pmt_uniform_vector</compoundname>
+    <basecompoundref refid="classpmt_1_1pmt__base" prot="public" virt="non-virtual">pmt::pmt_base</basecompoundref>
+    <includes refid="pmt__int_8h" local="no">pmt_int.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpmt_1_1pmt__uniform__vector_1a44fa81cc943dffec4108d1d8f555db94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool pmt::pmt_uniform_vector::is_uniform_vector</definition>
+        <argsstring>() const </argsstring>
+        <name>is_uniform_vector</name>
+        <reimplements refid="classpmt_1_1pmt__base_1aaff320f8281bb2dfb72e4ff775fe94ff">is_uniform_vector</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="237" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" bodystart="237" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__uniform__vector_1aff6942616b0085dbae617e105faa2c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>virtual const void* pmt::pmt_uniform_vector::uniform_elements</definition>
+        <argsstring>(size_t &amp;len)=0</argsstring>
+        <name>uniform_elements</name>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__uniform__vector_1ac9f4432fc635ae9abafaf91a627e8295" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>virtual void* pmt::pmt_uniform_vector::uniform_writable_elements</definition>
+        <argsstring>(size_t &amp;len)=0</argsstring>
+        <name>uniform_writable_elements</name>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classpmt_1_1pmt__uniform__vector_1ab5dc6a0b4207d9fa105eaa93c6024585" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t pmt::pmt_uniform_vector::length</definition>
+        <argsstring>() const =0</argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6782">
+        <label>pmt::pmt_uniform_vector</label>
+        <link refid="classpmt_1_1pmt__uniform__vector"/>
+        <childnode refid="6783" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6783">
+        <label>pmt::pmt_base</label>
+        <link refid="classpmt_1_1pmt__base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6784">
+        <label>pmt::pmt_uniform_vector</label>
+        <link refid="classpmt_1_1pmt__uniform__vector"/>
+        <childnode refid="6785" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6785">
+        <label>pmt::pmt_base</label>
+        <link refid="classpmt_1_1pmt__base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" line="235" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/lib/pmt/pmt_int.h" bodystart="234" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classpmt_1_1pmt__base_1ad14131bcf9939d78fd055307b22b34a0" prot="public" virt="non-virtual"><scope>pmt::pmt_uniform_vector</scope><name>intrusive_ptr_add_ref</name></member>
+      <member refid="classpmt_1_1pmt__base_1ae5f9ec3f2c0186fd836bd1051c7e948b" prot="public" virt="non-virtual"><scope>pmt::pmt_uniform_vector</scope><name>intrusive_ptr_release</name></member>
+      <member refid="classpmt_1_1pmt__base_1af1a16273129c7e31a8873e9879e995ff" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_any</name></member>
+      <member refid="classpmt_1_1pmt__base_1acce054c38ee92cb49bef760fb7621704" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_bool</name></member>
+      <member refid="classpmt_1_1pmt__base_1a5ae741d577edbd66da313c226bc26a1c" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_c32vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1acf014f08d1f06e9168ea927af13da352" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_c64vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a93c50b7d418c2c9d71cc30bf264c4c44" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_complex</name></member>
+      <member refid="classpmt_1_1pmt__base_1a5e2441d796e3ddb96713e15fd1d57dc9" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_dict</name></member>
+      <member refid="classpmt_1_1pmt__base_1ae8151a525f95a0aa12f6c09fb08c6cd2" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_f32vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a54b38c62576063fd55aea8da92321fa0" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_f64vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1ac1aa81fa7956cddfc80b029f38874145" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_integer</name></member>
+      <member refid="classpmt_1_1pmt__base_1aeeaec02afc92a9ab4fd95a03a343fae0" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_null</name></member>
+      <member refid="classpmt_1_1pmt__base_1ad4cd08395e74e43d22c3405699b37ca1" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_number</name></member>
+      <member refid="classpmt_1_1pmt__base_1a6058ee91e0e942e41291d5a3fd18c6d7" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_pair</name></member>
+      <member refid="classpmt_1_1pmt__base_1a7c33d8d6c5ae19a31e08fd3f85c5b279" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_real</name></member>
+      <member refid="classpmt_1_1pmt__base_1a73b6d62d4e459094f84319cc1ce36e50" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_s16vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a9d39b5f8b98c327b1df53219949614de" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_s32vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a3f0c9e55ddbe967b9ecb46a4f30f870e" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_s64vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a07ea51fc2968b9ff9082b89a68cb8f3c" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_s8vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1aaf1ba049291b375a914dfeb0a737ad2d" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_symbol</name></member>
+      <member refid="classpmt_1_1pmt__base_1a70d1c172fd050fe2e6637b07f928865c" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_tuple</name></member>
+      <member refid="classpmt_1_1pmt__base_1af4316ee343e16e917f99c85fc001139a" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_u16vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a2992bf34a4ab6e4ed3497b5d5a54c42d" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_u32vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a7c7c92574489ceadce08ebe68f32c911" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_u64vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1ad12192fd601fffb8d4bdb7177d774939" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_u8vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a5a9d078157bc92e533b0ff924612977b" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_uint64</name></member>
+      <member refid="classpmt_1_1pmt__uniform__vector_1a44fa81cc943dffec4108d1d8f555db94" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_uniform_vector</name></member>
+      <member refid="classpmt_1_1pmt__base_1a9ecc28037b25bde6ee4c28512b6882ac" prot="public" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>is_vector</name></member>
+      <member refid="classpmt_1_1pmt__uniform__vector_1ab5dc6a0b4207d9fa105eaa93c6024585" prot="public" virt="pure-virtual"><scope>pmt::pmt_uniform_vector</scope><name>length</name></member>
+      <member refid="classpmt_1_1pmt__base_1acb5606470e7b2b0c43baa93c2473ae86" prot="protected" virt="non-virtual"><scope>pmt::pmt_uniform_vector</scope><name>pmt_base</name></member>
+      <member refid="classpmt_1_1pmt__uniform__vector_1aff6942616b0085dbae617e105faa2c03" prot="public" virt="pure-virtual"><scope>pmt::pmt_uniform_vector</scope><name>uniform_elements</name></member>
+      <member refid="classpmt_1_1pmt__uniform__vector_1ac9f4432fc635ae9abafaf91a627e8295" prot="public" virt="pure-virtual"><scope>pmt::pmt_uniform_vector</scope><name>uniform_writable_elements</name></member>
+      <member refid="classpmt_1_1pmt__base_1a4d7b3c26d77b8d316d01d8661e5a4c13" prot="protected" virt="virtual"><scope>pmt::pmt_uniform_vector</scope><name>~pmt_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

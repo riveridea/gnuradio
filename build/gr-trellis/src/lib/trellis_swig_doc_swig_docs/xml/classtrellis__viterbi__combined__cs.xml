@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classtrellis__viterbi__combined__cs" kind="class" prot="public">
+    <compoundname>trellis_viterbi_combined_cs</compoundname>
+    <includes refid="trellis__viterbi__combined__cs_8h" local="no">trellis_viterbi_combined_cs.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1ae2e15baebd166b12731ae7c67594ba03" prot="private" static="no" mutable="no">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_viterbi_combined_cs::d_FSM</definition>
+        <argsstring></argsstring>
+        <name>d_FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1ac6afcf9a02633b24eb4d5fa03a7c6e22" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::d_K</definition>
+        <argsstring></argsstring>
+        <name>d_K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1a63af8d72239074deb21203adb7b9070a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::d_S0</definition>
+        <argsstring></argsstring>
+        <name>d_S0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1add253f362219bceae5653f986397990c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::d_SK</definition>
+        <argsstring></argsstring>
+        <name>d_SK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1a99915e3ef7a11096216b356fe58048e9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::d_D</definition>
+        <argsstring></argsstring>
+        <name>d_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1a127398ca112b01170b22dfbe080194a0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; trellis_viterbi_combined_cs::d_TABLE</definition>
+        <argsstring></argsstring>
+        <name>d_TABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__viterbi__combined__cs_1a367a771efa711632a186c0a616a8e6c7" prot="private" static="no" mutable="no">
+        <type>trellis_metric_type_t</type>
+        <definition>trellis_metric_type_t trellis_viterbi_combined_cs::d_TYPE</definition>
+        <argsstring></argsstring>
+        <name>d_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtrellis__viterbi__combined__cs_1add43254a62969f65757af737407d3ab4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref> <ref refid="trellis__viterbi__combined__cs_8h_1adaccf4d4536b026d965ee6711903f65f" kindref="member">trellis_viterbi_combined_cs_sptr</ref></type>
+        <definition>TRELLIS_API trellis_viterbi_combined_cs_sptr trellis_make_viterbi_combined_cs</definition>
+        <argsstring>(const fsm &amp;FSM, int K, int S0, int SK, int D, const std::vector&lt; gr_complex &gt; &amp;TABLE, trellis_metric_type_t TYPE)</argsstring>
+        <name>trellis_make_viterbi_combined_cs</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a2f29b6193497de45d026d8e3635b2273" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>trellis_viterbi_combined_cs::trellis_viterbi_combined_cs</definition>
+        <argsstring>(const fsm &amp;FSM, int K, int S0, int SK, int D, const std::vector&lt; gr_complex &gt; &amp;TABLE, trellis_metric_type_t TYPE)</argsstring>
+        <name>trellis_viterbi_combined_cs</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type>trellis_metric_type_t</type>
+          <declname>TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a98f18caeb23ee4ca446048853c169272" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_viterbi_combined_cs::FSM</definition>
+        <argsstring>() const </argsstring>
+        <name>FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1aabb221a43ff1733591414bfe9d094dd6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::K</definition>
+        <argsstring>() const </argsstring>
+        <name>K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a261d7e02b1d9b9acbace89ad2eb6137f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::S0</definition>
+        <argsstring>() const </argsstring>
+        <name>S0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1ac840414cef4466c982aeee47fdcbb607" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::SK</definition>
+        <argsstring>() const </argsstring>
+        <name>SK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1abba0caaa67f2d2796824418a731cad18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::D</definition>
+        <argsstring>() const </argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a74673ad9084d502b73ffbd37c8461860" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; trellis_viterbi_combined_cs::TABLE</definition>
+        <argsstring>() const </argsstring>
+        <name>TABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a87b4b05bf5f78fde0e165845aa38badb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>trellis_metric_type_t</type>
+        <definition>trellis_metric_type_t trellis_viterbi_combined_cs::TYPE</definition>
+        <argsstring>() const </argsstring>
+        <name>TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a747967ab7e202513bd592cd9a4c473e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void trellis_viterbi_combined_cs::set_TABLE</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;table)</argsstring>
+        <name>set_TABLE</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a459ee45050460a20825e57f62ea12fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void trellis_viterbi_combined_cs::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__viterbi__combined__cs_1a3ba4e43457c9ecfefd61c753dab56041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_viterbi_combined_cs::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_viterbi_combined_cs.h" bodystart="50" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classtrellis__viterbi__combined__cs_1abba0caaa67f2d2796824418a731cad18" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>D</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a99915e3ef7a11096216b356fe58048e9" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_D</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1ae2e15baebd166b12731ae7c67594ba03" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_FSM</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1ac6afcf9a02633b24eb4d5fa03a7c6e22" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_K</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a63af8d72239074deb21203adb7b9070a" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_S0</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1add253f362219bceae5653f986397990c" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_SK</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a127398ca112b01170b22dfbe080194a0" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_TABLE</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a367a771efa711632a186c0a616a8e6c7" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>d_TYPE</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a459ee45050460a20825e57f62ea12fdf" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>forecast</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a98f18caeb23ee4ca446048853c169272" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>FSM</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a3ba4e43457c9ecfefd61c753dab56041" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>general_work</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1aabb221a43ff1733591414bfe9d094dd6" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>K</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a261d7e02b1d9b9acbace89ad2eb6137f" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>S0</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a747967ab7e202513bd592cd9a4c473e3" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>set_TABLE</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1ac840414cef4466c982aeee47fdcbb607" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>SK</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a74673ad9084d502b73ffbd37c8461860" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>TABLE</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1add43254a62969f65757af737407d3ab4" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>trellis_make_viterbi_combined_cs</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a2f29b6193497de45d026d8e3635b2273" prot="private" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>trellis_viterbi_combined_cs</name></member>
+      <member refid="classtrellis__viterbi__combined__cs_1a87b4b05bf5f78fde0e165845aa38badb" prot="public" virt="non-virtual"><scope>trellis_viterbi_combined_cs</scope><name>TYPE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

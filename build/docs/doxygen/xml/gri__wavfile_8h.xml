@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gri__wavfile_8h" kind="file">
+    <compoundname>gri_wavfile.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">cstdio</includes>
+    <incdepgraph>
+      <node id="13906">
+        <label>gri_wavfile.h</label>
+        <link refid="gri_wavfile.h"/>
+        <childnode refid="13907" relation="include">
+        </childnode>
+        <childnode refid="13909" relation="include">
+        </childnode>
+      </node>
+      <node id="13907">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13908" relation="include">
+        </childnode>
+      </node>
+      <node id="13909">
+        <label>cstdio</label>
+      </node>
+      <node id="13908">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gri__wavfile_8h_1a4049ce9c5f244b2af799636158c84191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>short int</type>
+        <definition>short int gri_wav_read_sample</definition>
+        <argsstring>(FILE *fp, int bytes_per_sample)</argsstring>
+        <name>gri_wav_read_sample</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytes_per_sample</declname>
+        </param>
+        <briefdescription>
+<para>Read one sample from an open WAV file at the current position. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes care of endianness. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gri_wavfile.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="gri__wavfile_8h_1a457a6b5e6e4934144dcc6e580f9addd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gri_wavheader_write</definition>
+        <argsstring>(FILE *fp, unsigned int sample_rate, int nchans, int bytes_per_sample)</argsstring>
+        <name>gri_wavheader_write</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>sample_rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nchans</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytes_per_sample</declname>
+        </param>
+        <briefdescription>
+<para>Write a valid RIFF file header. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: Some header values are kept blank because they&apos;re usually not known a-priori (file and chunk lengths). Use <ref refid="gri__wavfile_8h_1a61f4b77f1e9185a281ec473f8a078a26" kindref="member">gri_wavheader_complete()</ref> to fill these in. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gri_wavfile.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="gri__wavfile_8h_1a5359e09acd4dd5538da95b74f3824845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_wav_write_sample</definition>
+        <argsstring>(FILE *fp, short int sample, int bytes_per_sample)</argsstring>
+        <name>gri_wav_write_sample</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>short int</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytes_per_sample</declname>
+        </param>
+        <briefdescription>
+<para>Write one sample to an open WAV file at the current position. </para>        </briefdescription>
+        <detaileddescription>
+<para>Takes care of endianness. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gri_wavfile.h" line="86"/>
+      </memberdef>
+      <memberdef kind="function" id="gri__wavfile_8h_1a61f4b77f1e9185a281ec473f8a078a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gri_wavheader_complete</definition>
+        <argsstring>(FILE *fp, unsigned int byte_count)</argsstring>
+        <name>gri_wavheader_complete</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>byte_count</declname>
+        </param>
+        <briefdescription>
+<para>Complete a WAV header. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: The stream position is changed during this function. If anything needs to be written to the WAV file after calling this function (which shouldn&apos;t happen), you need to fseek() to the end of the file (or whereever).</para><para><computeroutput>fp</computeroutput> File pointer to an open WAV file with a blank header <computeroutput>byte_count</computeroutput> Length of all samples written to the file in bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gri_wavfile.h" line="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gri_wavfile.h"/>
+  </compounddef>
+</doxygen>

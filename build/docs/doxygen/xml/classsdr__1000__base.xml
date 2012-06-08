@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classsdr__1000__base" kind="class" prot="public">
+    <compoundname>sdr_1000_base</compoundname>
+    <includes refid="sdr__1000_8h" local="no">sdr_1000.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsdr__1000__base_1a2cbe6241e60ec44c9739933072ad7c06" prot="private" static="no" mutable="no">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">ppio_sptr</ref></type>
+        <definition>ppio_sptr sdr_1000_base::d_ppio</definition>
+        <argsstring></argsstring>
+        <name>d_ppio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdr__1000__base_1a72eb8c7d4fee1476c74ddf3f8f86e526" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdr_1000_base::d_shadow[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>d_shadow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdr__1000__base_1ad9d824020763381619dd5c1494f59c7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdr_1000_base::sdr_1000_base</definition>
+        <argsstring>(int which_pp)</argsstring>
+        <name>sdr_1000_base</name>
+        <param>
+          <type>int</type>
+          <declname>which_pp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdr__1000__base_1aaf4fcd961174c0c6e9ee9db3a572eff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdr_1000_base::~sdr_1000_base</definition>
+        <argsstring>()</argsstring>
+        <name>~sdr_1000_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdr__1000__base_1a16a9792827a09371572ac2e220585284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sdr_1000_base::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdr__1000__base_1a0af9778aaaef749fc963acd7cda0f608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sdr_1000_base::write_latch</definition>
+        <argsstring>(int which, int value, int mask)</argsstring>
+        <name>write_latch</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Very low level interface to SDR 1000 xcvr hardware. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>sdr_1000.py for a higher level interface. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/sdr_1000.h" bodystart="40" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classsdr__1000__base_1a2cbe6241e60ec44c9739933072ad7c06" prot="private" virt="non-virtual"><scope>sdr_1000_base</scope><name>d_ppio</name></member>
+      <member refid="classsdr__1000__base_1a72eb8c7d4fee1476c74ddf3f8f86e526" prot="private" virt="non-virtual"><scope>sdr_1000_base</scope><name>d_shadow</name></member>
+      <member refid="classsdr__1000__base_1a16a9792827a09371572ac2e220585284" prot="public" virt="non-virtual"><scope>sdr_1000_base</scope><name>reset</name></member>
+      <member refid="classsdr__1000__base_1ad9d824020763381619dd5c1494f59c7b" prot="public" virt="non-virtual"><scope>sdr_1000_base</scope><name>sdr_1000_base</name></member>
+      <member refid="classsdr__1000__base_1a0af9778aaaef749fc963acd7cda0f608" prot="public" virt="non-virtual"><scope>sdr_1000_base</scope><name>write_latch</name></member>
+      <member refid="classsdr__1000__base_1aaf4fcd961174c0c6e9ee9db3a572eff5" prot="public" virt="non-virtual"><scope>sdr_1000_base</scope><name>~sdr_1000_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

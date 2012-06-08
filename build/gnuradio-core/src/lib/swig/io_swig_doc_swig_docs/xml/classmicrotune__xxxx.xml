@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classmicrotune__xxxx" kind="class" prot="public">
+    <compoundname>microtune_xxxx</compoundname>
+    <derivedcompoundref refid="classmicrotune__4702" prot="public" virt="non-virtual">microtune_4702</derivedcompoundref>
+    <derivedcompoundref refid="classmicrotune__4937" prot="public" virt="non-virtual">microtune_4937</derivedcompoundref>
+    <includes refid="microtune__xxxx_8h" local="no">microtune_xxxx.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmicrotune__xxxx_1a0b1644c14ab5ad28eeb29301cceb68ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>microtune_xxxx::microtune_xxxx</definition>
+        <argsstring>()</argsstring>
+        <name>microtune_xxxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classmicrotune__xxxx_1af1dd4385969182a435cc3f0d254503df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual microtune_xxxx::~microtune_xxxx</definition>
+        <argsstring>()</argsstring>
+        <name>~microtune_xxxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classmicrotune__xxxx_1a76ecad84f1f57ce34585056b18ac8d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool microtune_xxxx::set_RF_freq</definition>
+        <argsstring>(double freq, double *actual_freq)=0</argsstring>
+        <name>set_RF_freq</name>
+        <reimplementedby refid="classmicrotune__4937_1a27894b05227f59b707e321a02a51abfc">set_RF_freq</reimplementedby>
+        <reimplementedby refid="classmicrotune__4702_1aa55a60d3d2cf8d8ef30f701fcf8edff2">set_RF_freq</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>actual_freq</declname>
+        </param>
+        <briefdescription>
+<para>select RF frequency to be tuned to output frequency. <computeroutput>freq</computeroutput> is the requested frequency in Hz, <computeroutput>actual_freq</computeroutput> is set to the actual frequency tuned. It takes about 100 ms for the PLL to settle. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true iff sucessful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classmicrotune__xxxx_1a7cf6ff57a511f70662f02f303dcef0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double microtune_xxxx::set_RF_freq</definition>
+        <argsstring>(double freq)</argsstring>
+        <name>set_RF_freq</name>
+        <param>
+          <type>double</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classmicrotune__xxxx_1a28ce9c429b571c70a7fa41dd07d11b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool microtune_xxxx::pll_locked_p</definition>
+        <argsstring>()=0</argsstring>
+        <name>pll_locked_p</name>
+        <reimplementedby refid="classmicrotune__4937_1a0f5ec2bcbbf7120900ce12c87d15dc95">pll_locked_p</reimplementedby>
+        <reimplementedby refid="classmicrotune__4702_1a096b82e283df729ea282f8ceaaca55b7">pll_locked_p</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true iff PLL is locked </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classmicrotune__xxxx_1ad2f4da6893763446700314258495d8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double microtune_xxxx::get_output_freq</definition>
+        <argsstring>()=0</argsstring>
+        <name>get_output_freq</name>
+        <reimplementedby refid="classmicrotune__4937_1a02613c15713ccb19805140c1911e4443">get_output_freq</reimplementedby>
+        <reimplementedby refid="classmicrotune__4702_1af39ce035b569a357df81e8b460998d47">get_output_freq</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the output frequency (IF center freq) of the tuner in Hz. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>abstract class for controlling microtune {4937,4702} tuner modules </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="515">
+        <label>microtune_xxxx</label>
+        <link refid="classmicrotune__xxxx"/>
+      </node>
+      <node id="517">
+        <label>microtune_4937</label>
+        <link refid="classmicrotune__4937"/>
+        <childnode refid="515" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>microtune_4702</label>
+        <link refid="classmicrotune__4702"/>
+        <childnode refid="515" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/microtune_xxxx.h" bodystart="36" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classmicrotune__xxxx_1ad2f4da6893763446700314258495d8cc" prot="public" virt="pure-virtual"><scope>microtune_xxxx</scope><name>get_output_freq</name></member>
+      <member refid="classmicrotune__xxxx_1a0b1644c14ab5ad28eeb29301cceb68ff" prot="public" virt="non-virtual"><scope>microtune_xxxx</scope><name>microtune_xxxx</name></member>
+      <member refid="classmicrotune__xxxx_1a28ce9c429b571c70a7fa41dd07d11b9a" prot="public" virt="pure-virtual"><scope>microtune_xxxx</scope><name>pll_locked_p</name></member>
+      <member refid="classmicrotune__xxxx_1a76ecad84f1f57ce34585056b18ac8d99" prot="public" virt="pure-virtual"><scope>microtune_xxxx</scope><name>set_RF_freq</name></member>
+      <member refid="classmicrotune__xxxx_1a7cf6ff57a511f70662f02f303dcef0e1" prot="public" virt="non-virtual"><scope>microtune_xxxx</scope><name>set_RF_freq</name></member>
+      <member refid="classmicrotune__xxxx_1af1dd4385969182a435cc3f0d254503df" prot="public" virt="virtual"><scope>microtune_xxxx</scope><name>~microtune_xxxx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

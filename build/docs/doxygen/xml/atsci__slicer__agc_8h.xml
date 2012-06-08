@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsci__slicer__agc_8h" kind="file">
+    <compoundname>atsci_slicer_agc.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="gr__single__pole__iir_8h" local="no">gr_single_pole_iir.h</includes>
+    <incdepgraph>
+      <node id="1199">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="1200" relation="include">
+        </childnode>
+      </node>
+      <node id="1198">
+        <label>stdexcept</label>
+      </node>
+      <node id="1197">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="1194" relation="include">
+        </childnode>
+      </node>
+      <node id="1192">
+        <label>atsci_slicer_agc.h</label>
+        <link refid="atsci_slicer_agc.h"/>
+        <childnode refid="1193" relation="include">
+        </childnode>
+        <childnode refid="1195" relation="include">
+        </childnode>
+        <childnode refid="1196" relation="include">
+        </childnode>
+      </node>
+      <node id="1193">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="1194" relation="include">
+        </childnode>
+      </node>
+      <node id="1195">
+        <label>math.h</label>
+      </node>
+      <node id="1194">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="1200">
+        <label>complex</label>
+      </node>
+      <node id="1196">
+        <label>gr_single_pole_iir.h</label>
+        <link refid="gr__single__pole__iir_8h"/>
+        <childnode refid="1197" relation="include">
+        </childnode>
+        <childnode refid="1198" relation="include">
+        </childnode>
+        <childnode refid="1199" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classatsci__slicer__agc" prot="public">atsci_slicer_agc</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_slicer_agc.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__fft__real__fwd" kind="class" prot="public">
+    <compoundname>gri_fft_real_fwd</compoundname>
+    <includes refid="gri__fft_8h" local="no">gri_fft.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgri__fft__real__fwd_1a3d6ad094e2547786ca95705489a09e0b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_real_fwd::d_fft_size</definition>
+        <argsstring></argsstring>
+        <name>d_fft_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__real__fwd_1a815e65fc70667bf5e9291b1cb82d0fcf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_fft_real_fwd::d_nthreads</definition>
+        <argsstring></argsstring>
+        <name>d_nthreads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__real__fwd_1a5959f5d76b1e193a6356b566ec29f3c6" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gri_fft_real_fwd::d_inbuf</definition>
+        <argsstring></argsstring>
+        <name>d_inbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="108" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__real__fwd_1ab4c95467d930e8b8f2a8e54354a43062" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+        <definition>gr_complex* gri_fft_real_fwd::d_outbuf</definition>
+        <argsstring></argsstring>
+        <name>d_outbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="109" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fft__real__fwd_1a3851fee1d6b13cc686cd32c32b47b3a9" prot="private" static="no" mutable="no">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+        <definition>void* gri_fft_real_fwd::d_plan</definition>
+        <argsstring></argsstring>
+        <name>d_plan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__fft__real__fwd_1a4af493df8f21144fa5fbef7f8f2da50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_fft_real_fwd::gri_fft_real_fwd</definition>
+        <argsstring>(int fft_size, int nthreads=1)</argsstring>
+        <name>gri_fft_real_fwd</name>
+        <param>
+          <type>int</type>
+          <declname>fft_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nthreads</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1ad81e614d6d2a06446f98ba2cc5119953" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gri_fft_real_fwd::~gri_fft_real_fwd</definition>
+        <argsstring>()</argsstring>
+        <name>~gri_fft_real_fwd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1a02c2b74514a0e5af2d80c998d1b6ebfb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float *</type>
+        <definition>float* gri_fft_real_fwd::get_inbuf</definition>
+        <argsstring>() const </argsstring>
+        <name>get_inbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1a24c3d8f208545484f2393f987962a292" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> *</type>
+        <definition>gr_complex* gri_fft_real_fwd::get_outbuf</definition>
+        <argsstring>() const </argsstring>
+        <name>get_outbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="122" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1acd26944e3a1b8e8721389d04226b160b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_real_fwd::inbuf_length</definition>
+        <argsstring>() const </argsstring>
+        <name>inbuf_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="124" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1a5371a75180e9b5502562981e9086c536" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_real_fwd::outbuf_length</definition>
+        <argsstring>() const </argsstring>
+        <name>outbuf_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="125" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1aac743064f82210e5c6b2caeeeac58aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_fft_real_fwd::set_nthreads</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_nthreads</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the number of threads to use for caclulation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1a2706c03d1c66a0468658961e2163b6fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gri_fft_real_fwd::nthreads</definition>
+        <argsstring>() const </argsstring>
+        <name>nthreads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of threads being used by FFTW </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="135" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fft__real__fwd_1ad58c1984ecd7cf119577e6e1f9e6cfaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_fft_real_fwd::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>compute FFT. The input comes from inbuf, the output is placed in outbuf. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FFT: real in, complex out. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" line="105" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_fft.h" bodystart="105" bodyend="141"/>
+    <listofallmembers>
+      <member refid="classgri__fft__real__fwd_1a3d6ad094e2547786ca95705489a09e0b" prot="private" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>d_fft_size</name></member>
+      <member refid="classgri__fft__real__fwd_1a5959f5d76b1e193a6356b566ec29f3c6" prot="private" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>d_inbuf</name></member>
+      <member refid="classgri__fft__real__fwd_1a815e65fc70667bf5e9291b1cb82d0fcf" prot="private" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>d_nthreads</name></member>
+      <member refid="classgri__fft__real__fwd_1ab4c95467d930e8b8f2a8e54354a43062" prot="private" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>d_outbuf</name></member>
+      <member refid="classgri__fft__real__fwd_1a3851fee1d6b13cc686cd32c32b47b3a9" prot="private" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>d_plan</name></member>
+      <member refid="classgri__fft__real__fwd_1ad58c1984ecd7cf119577e6e1f9e6cfaa" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>execute</name></member>
+      <member refid="classgri__fft__real__fwd_1a02c2b74514a0e5af2d80c998d1b6ebfb" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>get_inbuf</name></member>
+      <member refid="classgri__fft__real__fwd_1a24c3d8f208545484f2393f987962a292" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>get_outbuf</name></member>
+      <member refid="classgri__fft__real__fwd_1a4af493df8f21144fa5fbef7f8f2da50c" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>gri_fft_real_fwd</name></member>
+      <member refid="classgri__fft__real__fwd_1acd26944e3a1b8e8721389d04226b160b" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>inbuf_length</name></member>
+      <member refid="classgri__fft__real__fwd_1a2706c03d1c66a0468658961e2163b6fa" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>nthreads</name></member>
+      <member refid="classgri__fft__real__fwd_1a5371a75180e9b5502562981e9086c536" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>outbuf_length</name></member>
+      <member refid="classgri__fft__real__fwd_1aac743064f82210e5c6b2caeeeac58aca" prot="public" virt="non-virtual"><scope>gri_fft_real_fwd</scope><name>set_nthreads</name></member>
+      <member refid="classgri__fft__real__fwd_1ad81e614d6d2a06446f98ba2cc5119953" prot="public" virt="virtual"><scope>gri_fft_real_fwd</scope><name>~gri_fft_real_fwd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

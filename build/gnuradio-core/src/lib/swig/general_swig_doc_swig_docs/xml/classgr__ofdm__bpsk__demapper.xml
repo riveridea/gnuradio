@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__ofdm__bpsk__demapper" kind="class" prot="public">
+    <compoundname>gr_ofdm_bpsk_demapper</compoundname>
+    <includes refid="gr__ofdm__bpsk__demapper_8h" local="no">gr_ofdm_bpsk_demapper.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__ofdm__bpsk__demapper_1a359915eb66d4b29d9d4a376a98202f8a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_ofdm_bpsk_demapper::d_occupied_carriers</definition>
+        <argsstring></argsstring>
+        <name>d_occupied_carriers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__ofdm__bpsk__demapper_1a0ef89fe4069f164189c339852d41c54b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_ofdm_bpsk_demapper::d_byte_offset</definition>
+        <argsstring></argsstring>
+        <name>d_byte_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__ofdm__bpsk__demapper_1a2fddf06f70d080d3425840e9467909d1" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_ofdm_bpsk_demapper::d_partial_byte</definition>
+        <argsstring></argsstring>
+        <name>d_partial_byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__ofdm__bpsk__demapper_1abcb6626e1cd073df870e2c1ea51ca686" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__ofdm__bpsk__demapper_8h_1ac8b84174f85f508aa3623dbbe2a33c48" kindref="member">gr_ofdm_bpsk_demapper_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_ofdm_bpsk_demapper_sptr gr_make_ofdm_bpsk_demapper</definition>
+        <argsstring>(unsigned int occupied_carriers)</argsstring>
+        <name>gr_make_ofdm_bpsk_demapper</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>occupied_carriers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__ofdm__bpsk__demapper_1abfc475a9539e72111077f7a39eab8a44" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_ofdm_bpsk_demapper::gr_ofdm_bpsk_demapper</definition>
+        <argsstring>(unsigned int occupied_carriers)</argsstring>
+        <name>gr_ofdm_bpsk_demapper</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>occupied_carriers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__ofdm__bpsk__demapper_1a5a20e2ebaa88f25738e90ae195dfaf7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_ofdm_bpsk_demapper::slicer</definition>
+        <argsstring>(gr_complex x)</argsstring>
+        <name>slicer</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__ofdm__bpsk__demapper_1a58efb6bc018a061abc96283b1826ab54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_ofdm_bpsk_demapper::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__ofdm__bpsk__demapper_1a782e0f73169620e30e6218e7e3b3a217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_ofdm_bpsk_demapper::~gr_ofdm_bpsk_demapper</definition>
+        <argsstring>(void)</argsstring>
+        <name>~gr_ofdm_bpsk_demapper</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__ofdm__bpsk__demapper_1af28eba9918dd660914bd1af7c14cfd7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_ofdm_bpsk_demapper::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>take a vector of complex constellation points in from an FFT and demodulate to a stream of bits. Simple BPSK version. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_ofdm_bpsk_demapper.h" bodystart="43" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classgr__ofdm__bpsk__demapper_1a0ef89fe4069f164189c339852d41c54b" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>d_byte_offset</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1a359915eb66d4b29d9d4a376a98202f8a" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>d_occupied_carriers</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1a2fddf06f70d080d3425840e9467909d1" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>d_partial_byte</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1a58efb6bc018a061abc96283b1826ab54" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>forecast</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1af28eba9918dd660914bd1af7c14cfd7b" prot="public" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>general_work</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1abcb6626e1cd073df870e2c1ea51ca686" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>gr_make_ofdm_bpsk_demapper</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1abfc475a9539e72111077f7a39eab8a44" prot="protected" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>gr_ofdm_bpsk_demapper</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1a5a20e2ebaa88f25738e90ae195dfaf7f" prot="private" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>slicer</name></member>
+      <member refid="classgr__ofdm__bpsk__demapper_1a782e0f73169620e30e6218e7e3b3a217" prot="public" virt="non-virtual"><scope>gr_ofdm_bpsk_demapper</scope><name>~gr_ofdm_bpsk_demapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

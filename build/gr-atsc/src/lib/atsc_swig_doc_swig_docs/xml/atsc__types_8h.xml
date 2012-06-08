@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsc__types_8h" kind="file">
+    <compoundname>atsc_types.h</compoundname>
+    <includes refid="atsc__consts_8h" local="no">atsc_consts.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">cassert</includes>
+    <includedby refid="atsc__ds__to__softds_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_ds_to_softds.h</includedby>
+    <includedby refid="atsc__field__sync__demux_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h</includedby>
+    <includedby refid="atsc__field__sync__mux_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h</includedby>
+    <includedby refid="atsci__data__interleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_data_interleaver.h</includedby>
+    <includedby refid="atsci__randomizer_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h</includedby>
+    <includedby refid="atsci__reed__solomon_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_reed_solomon.h</includedby>
+    <includedby refid="atsci__trellis__encoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_trellis_encoder.h</includedby>
+    <includedby refid="atsci__viterbi__decoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_viterbi_decoder.h</includedby>
+    <includedby refid="GrAtscDataSegToSoftDataSeg_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDataSegToSoftDataSeg.h</includedby>
+    <includedby refid="GrAtscDeinterleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDeinterleaver.h</includedby>
+    <includedby refid="GrAtscDerandomizer_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h</includedby>
+    <includedby refid="GrAtscFieldSyncDemux_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncDemux.h</includedby>
+    <includedby refid="GrAtscFieldSyncMux_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncMux.h</includedby>
+    <includedby refid="GrAtscInterleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscInterleaver.h</includedby>
+    <includedby refid="GrAtscRandomizer_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRandomizer.h</includedby>
+    <includedby refid="GrAtscRSDecoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRSDecoder.h</includedby>
+    <includedby refid="GrAtscRSEncoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRSEncoder.h</includedby>
+    <includedby refid="GrAtscSymbolMapper_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscSymbolMapper.h</includedby>
+    <incdepgraph>
+      <node id="265">
+        <label>cassert</label>
+      </node>
+      <node id="262">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h</label>
+        <link refid="atsc_types.h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>atsc_consts.h</label>
+        <link refid="atsc__consts_8h"/>
+      </node>
+      <node id="264">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="267">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_ds_to_softds.h</label>
+        <link refid="atsc__ds__to__softds_8h"/>
+      </node>
+      <node id="290">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscTrellisEncoder.h</label>
+        <link refid="GrAtscTrellisEncoder_8h"/>
+      </node>
+      <node id="288">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_trellis_encoder.h</label>
+        <link refid="atsci__trellis__encoder_8h"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_reed_solomon.h</label>
+        <link refid="qa__atsci__reed__solomon_8h"/>
+      </node>
+      <node id="286">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRSEncoder.h</label>
+        <link refid="GrAtscRSEncoder_8h"/>
+      </node>
+      <node id="293">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h</label>
+        <link refid="atsc__viterbi__decoder_8h"/>
+      </node>
+      <node id="281">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_randomizer.h</label>
+        <link refid="qa__atsci__randomizer_8h"/>
+      </node>
+      <node id="268">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h</label>
+        <link refid="atsc__field__sync__demux_8h"/>
+      </node>
+      <node id="282">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_reed_solomon.h</label>
+        <link refid="atsci__reed__solomon_8h"/>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscSymbolMapper.h</label>
+        <link refid="GrAtscSymbolMapper_8h"/>
+      </node>
+      <node id="295">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_viterbi_decoder.h</label>
+        <link refid="qa__atsci__viterbi__decoder_8h"/>
+      </node>
+      <node id="283">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h</label>
+        <link refid="atsc__rs__decoder_8h"/>
+      </node>
+      <node id="278">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_randomizer.h</label>
+        <link refid="atsc__randomizer_8h"/>
+      </node>
+      <node id="270">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_data_interleaver.h</label>
+        <link refid="atsci__data__interleaver_8h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_randomizer.h</label>
+        <link refid="atsci__randomizer_8h"/>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h</label>
+        <link refid="atsc_types.h"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_trellis_encoder.h</label>
+        <link refid="atsc__trellis__encoder_8h"/>
+      </node>
+      <node id="279">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDerandomizer.h</label>
+        <link refid="GrAtscDerandomizer_8h"/>
+      </node>
+      <node id="291">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_trellis_encoder.h</label>
+        <link refid="qa__atsci__trellis__encoder_8h"/>
+      </node>
+      <node id="284">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_encoder.h</label>
+        <link refid="atsc__rs__encoder_8h"/>
+      </node>
+      <node id="285">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRSDecoder.h</label>
+        <link refid="GrAtscRSDecoder_8h"/>
+      </node>
+      <node id="272">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_interleaver.h</label>
+        <link refid="atsc__interleaver_8h"/>
+      </node>
+      <node id="298">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncMux.h</label>
+        <link refid="GrAtscFieldSyncMux_8h"/>
+      </node>
+      <node id="292">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_viterbi_decoder.h</label>
+        <link refid="atsci__viterbi__decoder_8h"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_data_interleaver.h</label>
+        <link refid="qa__atsci__data__interleaver_8h"/>
+      </node>
+      <node id="296">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDataSegToSoftDataSeg.h</label>
+        <link refid="GrAtscDataSegToSoftDataSeg_8h"/>
+      </node>
+      <node id="273">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDeinterleaver.h</label>
+        <link refid="GrAtscDeinterleaver_8h"/>
+      </node>
+      <node id="274">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscInterleaver.h</label>
+        <link refid="GrAtscInterleaver_8h"/>
+      </node>
+      <node id="269">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_mux.h</label>
+        <link refid="atsc__field__sync__mux_8h"/>
+      </node>
+      <node id="294">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h</label>
+        <link refid="GrAtscViterbiDecoder_8h"/>
+      </node>
+      <node id="280">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscRandomizer.h</label>
+        <link refid="GrAtscRandomizer_8h"/>
+      </node>
+      <node id="271">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h</label>
+        <link refid="atsc__deinterleaver_8h"/>
+      </node>
+      <node id="277">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_derandomizer.h</label>
+        <link refid="atsc__derandomizer_8h"/>
+      </node>
+      <node id="297">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncDemux.h</label>
+        <link refid="GrAtscFieldSyncDemux_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classplinfo" prot="public">plinfo</innerclass>
+    <innerclass refid="classatsc__mpeg__packet" prot="public">atsc_mpeg_packet</innerclass>
+    <innerclass refid="classatsc__mpeg__packet__no__sync" prot="public">atsc_mpeg_packet_no_sync</innerclass>
+    <innerclass refid="classatsc__mpeg__packet__rs__encoded" prot="public">atsc_mpeg_packet_rs_encoded</innerclass>
+    <innerclass refid="classatsc__data__segment" prot="public">atsc_data_segment</innerclass>
+    <innerclass refid="classatsc__soft__data__segment" prot="public">atsc_soft_data_segment</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2001,2006<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ATSC_TYPES_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_ATSC_TYPES_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsc__consts_8h" kindref="compound">atsc_consts.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classplinfo" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classplinfo_1a0e97b5f98e1cb344abd5c41806ab707e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classplinfo_1a0e97b5f98e1cb344abd5c41806ab707e" kindref="member">plinfo</ref><sp/>()<sp/>:<sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>(0),<sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>(0)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>accessors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" kindref="member">field_sync1_p</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1ae2e21079493045786f5abd39292b8438" kindref="member">fl_field_sync1</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="43" refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" kindref="member">field_sync2_p</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" kindref="member">fl_field_sync2</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="classplinfo_1a7a56c55909014f80814dd326464d7922" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a7a56c55909014f80814dd326464d7922" kindref="member">field_sync_p</ref><sp/>()</highlight><highlight class="keyword"><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a18300b4d2fead86bce9a07aa16ce7761" kindref="member">field_sync1_p</ref><sp/>()<sp/>||<sp/><ref refid="classplinfo_1a904e79ef01df225b807b619f9a6064fa" kindref="member">field_sync2_p</ref><sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classplinfo_1af4a0c397d755e80e394305393e71164c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1af4a0c397d755e80e394305393e71164c" kindref="member">regular_seg_p</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" kindref="member">fl_regular_seg</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classplinfo_1af2a97fde4b955f80d649704d7bc31050" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1af2a97fde4b955f80d649704d7bc31050" kindref="member">in_field1_p</ref><sp/>()</highlight><highlight class="keyword"><sp/><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" kindref="member">fl_field2</ref>)<sp/>==<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="49" refid="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a30c11e0ad5ec6f691e2a84ad661f6782" kindref="member">in_field2_p</ref><sp/>()</highlight><highlight class="keyword"><sp/><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" kindref="member">fl_field2</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a4b1db59b81ec09ed2fe5b422f569ddd3" kindref="member">first_regular_seg_p</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1a4bd64848947619d4817872309c47814e" kindref="member">fl_first_regular_seg</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a5fd0ba5f9c7dc741c074bdc629651d5c" kindref="member">transport_error_p</ref><sp/>()</highlight><highlight class="keyword"><sp/><sp/><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;<sp/><ref refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" kindref="member">fl_transport_error</ref>)<sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" kindref="member">segno</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="56" refid="classplinfo_1a02b25069563db6d9fabc3fcfeb1f8cfd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a02b25069563db6d9fabc3fcfeb1f8cfd" kindref="member">flags</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1ad186ced5afd703e8b2d9050529922486" kindref="member">set_field_sync1</ref><sp/>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>=<sp/><ref refid="classplinfo_1ae2e21079493045786f5abd39292b8438" kindref="member">fl_field_sync1</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a9d96111b514998189bfca10f6f33ac8d" kindref="member">set_field_sync2</ref><sp/>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>=<sp/><ref refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" kindref="member">fl_field_sync2</ref><sp/>|<sp/><ref refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" kindref="member">fl_field2</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classplinfo_1a615c5375f70e40637093c10027001233" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a615c5375f70e40637093c10027001233" kindref="member">set_regular_seg</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>field2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" kindref="member">segno</ref>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>assert<sp/>(0<sp/>&lt;=<sp/>segno<sp/>&amp;&amp;<sp/>segno<sp/>&lt;<sp/>ATSC_DSEGS_PER_FIELD);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>=<sp/><ref refid="classplinfo_1ac563cec97e64bbe0e62b30ad0ae6ff3b" kindref="member">segno</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>=<sp/><ref refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" kindref="member">fl_regular_seg</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(segno<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>|=<sp/><ref refid="classplinfo_1a4bd64848947619d4817872309c47814e" kindref="member">fl_first_regular_seg</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(segno<sp/>&gt;=<sp/>ATSC_DSEGS_PER_FIELD)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>|=<sp/><ref refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" kindref="member">fl_transport_error</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(field2)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>|=<sp/><ref refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" kindref="member">fl_field2</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1ab8d8940b47977a87c45f43f74f9307dd" kindref="member">set_transport_error</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>error){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>|=<sp/><ref refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" kindref="member">fl_transport_error</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;=<sp/>~<ref refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" kindref="member">fl_transport_error</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a98ba1771e81afc67b91061e2ff75a98c" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>==<sp/>other.<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;&amp;<sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>==<sp/>other.<ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a264ff6d9b8d4c56ca1be980d73afb65d" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>==<sp/>other.<ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref><sp/>&amp;&amp;<sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref><sp/>==<sp/>other.<ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1a01ea3fce8eb54cdf7f20197f14c05aec" kindref="member">delay</ref><sp/>(<ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>&amp;out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>&amp;in,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nsegs_of_delay);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classplinfo_1ad5aa65fd17fd5f72ae791cad72079393" kindref="member">sanity_check</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/>&amp;in);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114" refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aeb30858d8f4ff27ae8e609bad64ae01d" kindref="member">_flags</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bitmask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1adfc5aa3d68e7d81299ce774ff3d08f93" kindref="member">_segno</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>segment<sp/>number<sp/>[0,311]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>these<sp/>three<sp/>are<sp/>mutually<sp/>exclusive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>a<sp/>regular<sp/>data<sp/>segment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1a37debcf201a535eacd07dfa184ae7229" kindref="member">fl_regular_seg</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0001;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>a<sp/>field<sp/>sync<sp/>segment,<sp/>for<sp/>1st<sp/>half<sp/>of<sp/>a<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classplinfo_1ae2e21079493045786f5abd39292b8438" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1ae2e21079493045786f5abd39292b8438" kindref="member">fl_field_sync1</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0002;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>a<sp/>field<sp/>sync<sp/>segment,<sp/>for<sp/>2nd<sp/>half<sp/>of<sp/>a<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1a07c74a60a76912485b923b3eb20943df" kindref="member">fl_field_sync2</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0004;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>bit<sp/>is<sp/>on<sp/>ONLY<sp/>when<sp/>fl_regular_seg<sp/>is<sp/>set<sp/>AND<sp/>when<sp/>this<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>first<sp/>regular<sp/>data<sp/>segment<sp/>AFTER<sp/>a<sp/>field<sp/>sync<sp/>segment.<sp/><sp/>This</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>segment<sp/>causes<sp/>various<sp/>processing<sp/>modules<sp/>to<sp/>reset.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classplinfo_1a4bd64848947619d4817872309c47814e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1a4bd64848947619d4817872309c47814e" kindref="member">fl_first_regular_seg</ref><sp/><sp/><sp/><sp/>=<sp/>0x0008;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>field<sp/>are<sp/>we<sp/>in?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1aa99a1eea30cfa550e7813299a32b5d24" kindref="member">fl_field2</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0010;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>else<sp/>field<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>bit<sp/>is<sp/>set<sp/>when<sp/>Reed-Solomon<sp/>decoding<sp/>detects<sp/>an<sp/>error<sp/>that<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can&apos;t<sp/>correct.<sp/><sp/>Note<sp/>that<sp/>other<sp/>error<sp/>detection<sp/>(e.g.<sp/>Viterbi)<sp/>do<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>it,<sp/>since<sp/>Reed-Solomon<sp/>will<sp/>correct<sp/>many<sp/>of<sp/>those.<sp/><sp/>This<sp/>bit<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>copied<sp/>into<sp/>the<sp/>final<sp/>Transport<sp/>Stream<sp/>packet<sp/>so<sp/>that<sp/>MPEG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>software<sp/>can<sp/>see<sp/>that<sp/>the<sp/>188-byte<sp/>data<sp/>segment<sp/>has<sp/>been<sp/>corrupted.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classplinfo_1acc6d33113f98fa4a97fdc79097374e8a" kindref="member">fl_transport_error</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0020;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classatsc__mpeg__packet" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="146" refid="classatsc__mpeg__packet_1afd3f737d45dc2e6659e07877fdffcad7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet_1afd3f737d45dc2e6659e07877fdffcad7" kindref="member">NPAD</ref><sp/><sp/>=<sp/>68;</highlight></codeline>
+<codeline lineno="147" refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>[ATSC_MPEG_DATA_LENGTH<sp/>+<sp/>1];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>byte<sp/>is<sp/>sync</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classatsc__mpeg__packet_1a07b00dd8356e9633c6f70c58e6eda9f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet_1a07b00dd8356e9633c6f70c58e6eda9f8" kindref="member">_pad_</ref>[<ref refid="classatsc__mpeg__packet_1afd3f737d45dc2e6659e07877fdffcad7" kindref="member">NPAD</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pad<sp/>to<sp/>power<sp/>of<sp/>2<sp/>(256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classatsc__mpeg__packet_1a115130fcb66db6e6c3301a34ed4a38de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet_1a115130fcb66db6e6c3301a34ed4a38de" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classatsc__mpeg__packet_1abe73509ae654ab41a7aac3a086c31a88" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet_1abe73509ae654ab41a7aac3a086c31a88" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet" kindref="compound">atsc_mpeg_packet</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet_1a5f337bfa37931af59593e7849754eae2" kindref="member">data</ref>))<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classatsc__mpeg__packet__no__sync" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="162" refid="classatsc__mpeg__packet__no__sync_1a393ec84d51d4c98efc2a688336d4d1b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync_1a393ec84d51d4c98efc2a688336d4d1b4" kindref="member">NPAD</ref><sp/>=<sp/>65;</highlight></codeline>
+<codeline lineno="163" refid="classatsc__mpeg__packet__no__sync_1ae18cc04ef1be8f1b11578661a8f4e861" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__mpeg__packet__no__sync_1ae18cc04ef1be8f1b11578661a8f4e861" kindref="member">pli</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>[ATSC_MPEG_DATA_LENGTH];</highlight></codeline>
+<codeline lineno="165" refid="classatsc__mpeg__packet__no__sync_1afa659646110b87bca0c43c0e9cabc73d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync_1afa659646110b87bca0c43c0e9cabc73d" kindref="member">_pad_</ref>[<ref refid="classatsc__mpeg__packet__no__sync_1a393ec84d51d4c98efc2a688336d4d1b4" kindref="member">NPAD</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pad<sp/>to<sp/>power<sp/>of<sp/>2<sp/>(256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classatsc__mpeg__packet__no__sync_1a7c54b9ca840a5f8df198227cb2ecf49e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync_1a7c54b9ca840a5f8df198227cb2ecf49e" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classatsc__mpeg__packet__no__sync_1a8dc0c0d1759b1aeaef17c379c0efaede" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync_1a8dc0c0d1759b1aeaef17c379c0efaede" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" kindref="member">data</ref>))<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classatsc__mpeg__packet__rs__encoded" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179" refid="classatsc__mpeg__packet__rs__encoded_1ae1b96863f7b9ed1a0ef37ff30f27d4ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1ae1b96863f7b9ed1a0ef37ff30f27d4ce" kindref="member">NPAD</ref><sp/>=<sp/>45;</highlight></codeline>
+<codeline lineno="180" refid="classatsc__mpeg__packet__rs__encoded_1a091680d664d756bb6a30be11d89f6c27" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1a091680d664d756bb6a30be11d89f6c27" kindref="member">pli</ref>;</highlight></codeline>
+<codeline lineno="181" refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>[ATSC_MPEG_RS_ENCODED_LENGTH];</highlight></codeline>
+<codeline lineno="182" refid="classatsc__mpeg__packet__rs__encoded_1a8798d6090c58da375bd0d1397929f99c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1a8798d6090c58da375bd0d1397929f99c" kindref="member">_pad_</ref>[<ref refid="classatsc__mpeg__packet__rs__encoded_1ae1b96863f7b9ed1a0ef37ff30f27d4ce" kindref="member">NPAD</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pad<sp/>to<sp/>power<sp/>of<sp/>2<sp/>(256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="classatsc__mpeg__packet__rs__encoded_1a64e7142f5b8c41147a6ef6d5e22c2a7d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1a64e7142f5b8c41147a6ef6d5e22c2a7d" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="classatsc__mpeg__packet__rs__encoded_1a6799e5f5807a4e7b15c5e44f9801f187" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded_1a6799e5f5807a4e7b15c5e44f9801f187" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(std::memcmp<sp/>(<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__mpeg__packet__rs__encoded_1a77900cdc6f42cec4a2fa2085eeb83817" kindref="member">data</ref>))<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classatsc__data__segment" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="199" refid="classatsc__data__segment_1a15f7b58a4a862c75fe17f4d577ad6dc6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment_1a15f7b58a4a862c75fe17f4d577ad6dc6" kindref="member">NPAD</ref><sp/>=<sp/>188;</highlight></codeline>
+<codeline lineno="200" refid="classatsc__data__segment_1a31369d18aa8ceddef2d8dba6ae49270b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__data__segment_1a31369d18aa8ceddef2d8dba6ae49270b" kindref="member">pli</ref>;</highlight></codeline>
+<codeline lineno="201" refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>[ATSC_DATA_SEGMENT_LENGTH];</highlight></codeline>
+<codeline lineno="202" refid="classatsc__data__segment_1a83030e56cdb86eef15c54e06c141dd07" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment_1a83030e56cdb86eef15c54e06c141dd07" kindref="member">_pad_</ref>[<ref refid="classatsc__data__segment_1a15f7b58a4a862c75fe17f4d577ad6dc6" kindref="member">NPAD</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pad<sp/>to<sp/>power<sp/>of<sp/>2<sp/>(1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classatsc__data__segment_1ad91516653ff27d0bcb62073e0132e3dd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment_1ad91516653ff27d0bcb62073e0132e3dd" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::memcmp<sp/>(<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="classatsc__data__segment_1ab472d01ab9ac61e662aacced1f2ee385" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment_1ab472d01ab9ac61e662aacced1f2ee385" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(std::memcmp<sp/>(<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>))<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="classatsc__soft__data__segment" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__soft__data__segment" kindref="compound">atsc_soft_data_segment</ref><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="222" refid="classatsc__soft__data__segment_1a29d98a273b5f16988a53cbd8187eb327" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classatsc__soft__data__segment_1a29d98a273b5f16988a53cbd8187eb327" kindref="member">NPAD</ref><sp/>=<sp/>764;</highlight></codeline>
+<codeline lineno="223" refid="classatsc__soft__data__segment_1a0cf2dec6ab57118c9bdfb6c0f4b95315" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classplinfo" kindref="compound" tooltip="pipeline info that flows with data">plinfo</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__soft__data__segment_1a0cf2dec6ab57118c9bdfb6c0f4b95315" kindref="member">pli</ref>;</highlight></codeline>
+<codeline lineno="224" refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" kindref="member">data</ref>[ATSC_DATA_SEGMENT_LENGTH];</highlight></codeline>
+<codeline lineno="225" refid="classatsc__soft__data__segment_1adb9d6dd28134ef314f46087b9733a6e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classatsc__soft__data__segment_1adb9d6dd28134ef314f46087b9733a6e8" kindref="member">_pad_</ref>[<ref refid="classatsc__soft__data__segment_1a29d98a273b5f16988a53cbd8187eb327" kindref="member">NPAD</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pad<sp/>to<sp/>power<sp/>of<sp/>2<sp/>(4096)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overload<sp/>equality<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classatsc__soft__data__segment_1a1627aeaf2e0ee0d8c6550ee69b809bbe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__soft__data__segment_1a1627aeaf2e0ee0d8c6550ee69b809bbe" kindref="member">operator== </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::memcmp<sp/>(<ref refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" kindref="member">data</ref>))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classatsc__soft__data__segment_1ad00cd1b7a371cc5fc915317da2305f2e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classatsc__soft__data__segment_1ad00cd1b7a371cc5fc915317da2305f2e" kindref="member">operator!= </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classatsc__data__segment" kindref="compound" tooltip="contains 832 3 bit symbols. The low 3 bits in the byte hold the symbol.">atsc_data_segment</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(std::memcmp<sp/>(<ref refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" kindref="member">data</ref>,<sp/>other.<ref refid="classatsc__data__segment_1a0e69748597bd4a2bf6d0586a3502df52" kindref="member">data</ref>,<sp/>sizeof<sp/>(<ref refid="classatsc__soft__data__segment_1a3c3086ac5410a7bf553c1d515700cfa0" kindref="member">data</ref>))<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_ATSC_TYPES_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__peak__detector2__fb" kind="class" prot="public">
+    <compoundname>gr_peak_detector2_fb</compoundname>
+    <includes refid="gr__peak__detector2__fb_8h" local="no">gr_peak_detector2_fb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1ae4e85a503852c6e254e71857a4f84d61" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::d_threshold_factor_rise</definition>
+        <argsstring></argsstring>
+        <name>d_threshold_factor_rise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1adfe15f6876449810ff5eb6457d4663d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_peak_detector2_fb::d_look_ahead</definition>
+        <argsstring></argsstring>
+        <name>d_look_ahead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1a9e210037a1889548b879c472401ea882" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_peak_detector2_fb::d_look_ahead_remaining</definition>
+        <argsstring></argsstring>
+        <name>d_look_ahead_remaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1a850568923e6d3357fea654fbd3deb61a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_peak_detector2_fb::d_peak_ind</definition>
+        <argsstring></argsstring>
+        <name>d_peak_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1addd3dbf6d09c42286b577a9d8de344b8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::d_peak_val</definition>
+        <argsstring></argsstring>
+        <name>d_peak_val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1a5185beb42aad1bc3c3137919705ddf55" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::d_alpha</definition>
+        <argsstring></argsstring>
+        <name>d_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1a0c4567c2533d3e08e6b820d3ce9c5000" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::d_avg</definition>
+        <argsstring></argsstring>
+        <name>d_avg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__peak__detector2__fb_1ac01770fa5d69673140ce0c73fd8771ea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_peak_detector2_fb::d_found</definition>
+        <argsstring></argsstring>
+        <name>d_found</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__peak__detector2__fb_1ac619c347cd14865a34b9e0fa0ded30f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__peak__detector2__fb_8h_1a050e91313218c4063c079cbec217e1d8" kindref="member">gr_peak_detector2_fb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_peak_detector2_fb_sptr gr_make_peak_detector2_fb</definition>
+        <argsstring>(float threshold_factor_rise, int look_ahead, float alpha)</argsstring>
+        <name>gr_make_peak_detector2_fb</name>
+        <param>
+          <type>float</type>
+          <declname>threshold_factor_rise</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1a86c392aaed09c2ef3e8cf20fe01be216" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_peak_detector2_fb::gr_peak_detector2_fb</definition>
+        <argsstring>(float threshold_factor_rise, int look_ahead, float alpha)</argsstring>
+        <name>gr_peak_detector2_fb</name>
+        <param>
+          <type>float</type>
+          <declname>threshold_factor_rise</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>look_ahead</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1ae0ef9660f6a6ca4a689298df284e9d2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_peak_detector2_fb::set_threshold_factor_rise</definition>
+        <argsstring>(float thr)</argsstring>
+        <name>set_threshold_factor_rise</name>
+        <param>
+          <type>float</type>
+          <declname>thr</declname>
+        </param>
+        <briefdescription>
+<para>Set the threshold factor value for the rise time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new threshold factor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1a5d5c149b7d93137e3e1b981e82f9291b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_peak_detector2_fb::set_look_ahead</definition>
+        <argsstring>(int look)</argsstring>
+        <name>set_look_ahead</name>
+        <param>
+          <type>int</type>
+          <declname>look</declname>
+        </param>
+        <briefdescription>
+<para>Set the look-ahead factor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>look</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new look-ahead factor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="80" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1ac19060f3c2eb37be0e10b1376d41ccfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_peak_detector2_fb::set_alpha</definition>
+        <argsstring>(int alpha)</argsstring>
+        <name>set_alpha</name>
+        <param>
+          <type>int</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Set the running average alpha. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new alpha for running average </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1a940f84e654a357264fe994244e458a7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::threshold_factor_rise</definition>
+        <argsstring>()</argsstring>
+        <name>threshold_factor_rise</name>
+        <briefdescription>
+<para>Get the threshold factor value for the rise time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>threshold factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1ab53ab96a2a75922a2f156d48da260ff7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_peak_detector2_fb::look_ahead</definition>
+        <argsstring>()</argsstring>
+        <name>look_ahead</name>
+        <briefdescription>
+<para>Get the look-ahead factor value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>look-ahead factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="95" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1a3a7e28f5cc25d8a5977b37f83e00129e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_peak_detector2_fb::alpha</definition>
+        <argsstring>()</argsstring>
+        <name>alpha</name>
+        <briefdescription>
+<para>Get the alpha value of the running average. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>alpha </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="100" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__peak__detector2__fb_1aa6958e3f5fa05b60b899d79ff6e9d21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_peak_detector2_fb::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detect the peak of a signal</para><para>If a peak is detected, this block outputs a 1, or it outputs 0&apos;s. A separate debug output may be connected, to view the internal EWMA described below. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threshold_factor_rise</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold factor determins when a peak is present. An EWMA average of the signal is calculated and when the value of the signal goes over threshold_factor_rise*average, we call the peak. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>look_ahead</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The look-ahead value is used when the threshold is found to locate the peak within this range. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gain value of a single-pole moving average filter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_peak_detector2_fb.h" bodystart="53" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classgr__peak__detector2__fb_1a3a7e28f5cc25d8a5977b37f83e00129e" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>alpha</name></member>
+      <member refid="classgr__peak__detector2__fb_1a5185beb42aad1bc3c3137919705ddf55" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_alpha</name></member>
+      <member refid="classgr__peak__detector2__fb_1a0c4567c2533d3e08e6b820d3ce9c5000" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_avg</name></member>
+      <member refid="classgr__peak__detector2__fb_1ac01770fa5d69673140ce0c73fd8771ea" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_found</name></member>
+      <member refid="classgr__peak__detector2__fb_1adfe15f6876449810ff5eb6457d4663d7" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_look_ahead</name></member>
+      <member refid="classgr__peak__detector2__fb_1a9e210037a1889548b879c472401ea882" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_look_ahead_remaining</name></member>
+      <member refid="classgr__peak__detector2__fb_1a850568923e6d3357fea654fbd3deb61a" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_peak_ind</name></member>
+      <member refid="classgr__peak__detector2__fb_1addd3dbf6d09c42286b577a9d8de344b8" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_peak_val</name></member>
+      <member refid="classgr__peak__detector2__fb_1ae4e85a503852c6e254e71857a4f84d61" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>d_threshold_factor_rise</name></member>
+      <member refid="classgr__peak__detector2__fb_1ac619c347cd14865a34b9e0fa0ded30f1" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>gr_make_peak_detector2_fb</name></member>
+      <member refid="classgr__peak__detector2__fb_1a86c392aaed09c2ef3e8cf20fe01be216" prot="private" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>gr_peak_detector2_fb</name></member>
+      <member refid="classgr__peak__detector2__fb_1ab53ab96a2a75922a2f156d48da260ff7" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>look_ahead</name></member>
+      <member refid="classgr__peak__detector2__fb_1ac19060f3c2eb37be0e10b1376d41ccfe" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>set_alpha</name></member>
+      <member refid="classgr__peak__detector2__fb_1a5d5c149b7d93137e3e1b981e82f9291b" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>set_look_ahead</name></member>
+      <member refid="classgr__peak__detector2__fb_1ae0ef9660f6a6ca4a689298df284e9d2c" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>set_threshold_factor_rise</name></member>
+      <member refid="classgr__peak__detector2__fb_1a940f84e654a357264fe994244e458a7f" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>threshold_factor_rise</name></member>
+      <member refid="classgr__peak__detector2__fb_1aa6958e3f5fa05b60b899d79ff6e9d21f" prot="public" virt="non-virtual"><scope>gr_peak_detector2_fb</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

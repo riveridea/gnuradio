@@ -84,6 +84,9 @@ IFF_TAP		= 0x0002   # tunnel ethernet frames
 IFF_NO_PI	= 0x1000   # don't pass extra packet info
 IFF_ONE_QUEUE	= 0x2000   # beats me ;)
 
+CLUSTER_HEAD    = 0x0001   # cluster head
+CLUSTER_NODE    = 0x0002   # cluster node
+
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
     
@@ -103,7 +106,7 @@ def open_tun_interface(tun_device_filename):
 #class my_top_block(gr.top_block):
 class my_top_block(grc_wxgui.top_block_gui):
 
-    def __init__(self, mod_class, demod_class,
+    def __init__(self, node_type, mod_class, demod_class,
                  rx_callback, options):
 
         #gr.top_block.__init__(self)
@@ -112,6 +115,9 @@ class my_top_block(grc_wxgui.top_block_gui):
         grc_wxgui.top_block_gui.__init__(self, title="My Top Block")
         _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
         self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+
+	# is this node the sub node or head?
+        self._node_type = node_type
 
         # Get the modulation's bits_per_symbol
         args = mod_class.extract_kwargs_from_options(options)
@@ -178,6 +184,34 @@ class my_top_block(grc_wxgui.top_block_gui):
         self.sink.set_freq(target_freq)
         self.source.set_freq(target_freq)
         
+# ////////////////////////////////////////////////////////////////////
+#                           Round Robin Control State Machine
+# ////////////////////////////////////////////////////////////////////
+class ctrl_st_machine(object):
+    """
+    In the state machine, the cluster head will collaborate with the 
+    cluster nodes which act as sensors to collect the sensing data
+    from the radio environments, in a round robin manner
+
+    Also, on the cluster node, the mode switching between the communcation
+    and sening mode is controlled by this state machine.
+
+    The synchonization among the cluster is performed based on the referenced
+    GPS time. 
+    """
+    
+    def __init__(self, node_type):
+        self.node_type = node_type
+
+    def process_payload(self):
+        if self.node_type == "head":
+            print "head"
+        elif self.node_type == "node":
+            print "node"
+        else:
+            print "error"
+        
+        return 1
 
 # ////////////////////////////////////////////////////////////////////
 #                           Carrier Sense MAC
@@ -195,10 +229,11 @@ class cs_mac(object):
     this is just an example.
     """
 
-    def __init__(self, tun_fd, verbose=False):
+    def __init__(self, csm, tun_fd, verbose=False):
         self.tun_fd = tun_fd       # file descriptor for TUN/TAP interface
         self.verbose = verbose
         self.tb = None             # top block (access to PHY)
+        self.csm = csm             # state machine for round robin control
 
     def set_top_block(self, tb):
         self.tb = tb
@@ -213,7 +248,8 @@ class cs_mac(object):
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
-            os.write(self.tun_fd, payload)
+            if self.csm.process_payload(payload) == 1:
+                os.write(self.tun_fd, payload)
 
     def main_loop(self):
         """
@@ -252,6 +288,10 @@ def main():
     mods = digital.modulation_utils.type_1_mods()
     demods = digital.modulation_utils.type_1_demods()
 
+    node_types = {}
+    node_types["head"] = "head"
+    node_types["node"] = "node"
+
     parser = OptionParser (option_class=eng_option, conflict_handler="resolve")
     expert_grp = parser.add_option_group("Expert")
     parser.add_option("-m", "--modulation", type="choice", choices=mods.keys(),
@@ -266,6 +306,10 @@ def main():
                           help="set carrier detect threshold (dB) [default=%default]")
     expert_grp.add_option("","--tun-device-filename", default="/dev/net/tun",
                           help="path to tun device file [default=%default]")
+    parser.add_option("", "--node-type", type="choice", choices=node_types.keys(),
+                          default="node",
+                          help="Select node type from: %s [default=%%default]"
+                                % (', '.join(node_types.keys()),))
 
     transmit_path.add_options(parser, expert_grp)
     receive_path.add_options(parser, expert_grp)
@@ -295,11 +339,15 @@ def main():
         realtime = False
         print "Note: failed to enable realtime scheduling"
 
+    # instantiate the Control State Machine
+    csm = ctrl_st_machine(node_types[options.node_type])
+
     # instantiate the MAC
-    mac = cs_mac(tun_fd, verbose=True)
+    mac = cs_mac(csm, tun_fd, verbose=True)
 
     # build the graph (PHY)
-    tb = my_top_block(mods[options.modulation],
+    tb = my_top_block(node_types[options.node_type],
+                      mods[options.modulation],
                       demods[options.modulation],
                       mac.phy_rx_callback,
                       options)

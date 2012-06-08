@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__tpb__detail_8h" kind="file">
+    <compoundname>gr_tpb_detail.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="thread_8h" local="no">gruel/thread.h</includes>
+    <includes local="no">deque</includes>
+    <includes refid="pmt_8h" local="no">gruel/pmt.h</includes>
+    <includedby refid="gr__block__detail_8h" local="no">gr_block_detail.h</includedby>
+    <incdepgraph>
+      <node id="12791">
+        <label>boost/thread/mutex.hpp</label>
+      </node>
+      <node id="12793">
+        <label>boost/thread/condition_variable.hpp</label>
+      </node>
+      <node id="12797">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="12796">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="12795">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="12789" relation="include">
+        </childnode>
+        <childnode refid="12796" relation="include">
+        </childnode>
+        <childnode refid="12797" relation="include">
+        </childnode>
+        <childnode refid="12798" relation="include">
+        </childnode>
+        <childnode refid="12799" relation="include">
+        </childnode>
+        <childnode refid="12800" relation="include">
+        </childnode>
+        <childnode refid="12801" relation="include">
+        </childnode>
+        <childnode refid="12804" relation="include">
+        </childnode>
+        <childnode refid="12805" relation="include">
+        </childnode>
+        <childnode refid="12806" relation="include">
+        </childnode>
+      </node>
+      <node id="12801">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="12802" relation="include">
+        </childnode>
+        <childnode refid="12803" relation="include">
+        </childnode>
+      </node>
+      <node id="12789">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="12787" relation="include">
+        </childnode>
+      </node>
+      <node id="12805">
+        <label>stdexcept</label>
+      </node>
+      <node id="12790">
+        <label>boost/thread/thread.hpp</label>
+      </node>
+      <node id="12800">
+        <label>string</label>
+      </node>
+      <node id="12785">
+        <label>gr_tpb_detail.h</label>
+        <link refid="gr_tpb_detail.h"/>
+        <childnode refid="12786" relation="include">
+        </childnode>
+        <childnode refid="12788" relation="include">
+        </childnode>
+        <childnode refid="12794" relation="include">
+        </childnode>
+        <childnode refid="12795" relation="include">
+        </childnode>
+      </node>
+      <node id="12786">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="12787" relation="include">
+        </childnode>
+      </node>
+      <node id="12802">
+        <label>limits.h</label>
+      </node>
+      <node id="12798">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="12803">
+        <label>wchar.h</label>
+      </node>
+      <node id="12792">
+        <label>boost/thread/locks.hpp</label>
+      </node>
+      <node id="12788">
+        <label>gruel/thread.h</label>
+        <link refid="thread_8h"/>
+        <childnode refid="12789" relation="include">
+        </childnode>
+        <childnode refid="12790" relation="include">
+        </childnode>
+        <childnode refid="12791" relation="include">
+        </childnode>
+        <childnode refid="12792" relation="include">
+        </childnode>
+        <childnode refid="12793" relation="include">
+        </childnode>
+      </node>
+      <node id="12787">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="12804">
+        <label>iosfwd</label>
+      </node>
+      <node id="12794">
+        <label>deque</label>
+      </node>
+      <node id="12806">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="12799">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12809">
+        <label>gr_tpb_thread_body.h</label>
+        <link refid="gr__tpb__thread__body_8h"/>
+      </node>
+      <node id="12807">
+        <label>gr_tpb_detail.h</label>
+        <link refid="gr_tpb_detail.h"/>
+        <childnode refid="12808" relation="include">
+        </childnode>
+      </node>
+      <node id="12808">
+        <label>gr_block_detail.h</label>
+        <link refid="gr__block__detail_8h"/>
+        <childnode refid="12809" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgr__tpb__detail" prot="public">gr_tpb_detail</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_tpb_detail.h"/>
+  </compounddef>
+</doxygen>

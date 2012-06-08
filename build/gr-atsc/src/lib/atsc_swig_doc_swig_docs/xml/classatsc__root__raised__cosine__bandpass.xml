@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__root__raised__cosine__bandpass" kind="class" prot="public">
+    <compoundname>atsc_root_raised_cosine_bandpass</compoundname>
+    <basecompoundref refid="classatsc__root__raised__cosine" prot="public" virt="non-virtual">atsc_root_raised_cosine</basecompoundref>
+    <includes refid="atsci__root__raised__cosine__bandpass_8h" local="no">atsci_root_raised_cosine_bandpass.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__root__raised__cosine__bandpass_1a91fcc8cf31ed05573951a93726915346" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double atsc_root_raised_cosine_bandpass::_center_freq</definition>
+        <argsstring></argsstring>
+        <name>_center_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__root__raised__cosine__bandpass_1ad2679456f966c68cae94e455522164cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>atsc_root_raised_cosine_bandpass::atsc_root_raised_cosine_bandpass</definition>
+        <argsstring>(double center_freq)</argsstring>
+        <name>atsc_root_raised_cosine_bandpass</name>
+        <param>
+          <type>double</type>
+          <declname>center_freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" line="31" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__root__raised__cosine__bandpass_1ad10d59f2b69c5df33a835f373775ae30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>virtual std::vector&lt;float&gt; atsc_root_raised_cosine_bandpass::taps</definition>
+        <argsstring>(double sampling_freq)</argsstring>
+        <name>taps</name>
+        <reimplements refid="classatsc__root__raised__cosine_1a573df09fc4adb36ba37f954c4002fb14">taps</reimplements>
+        <param>
+          <type>double</type>
+          <declname>sampling_freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>atsc_root_raised_cosine</label>
+        <link refid="classatsc__root__raised__cosine"/>
+      </node>
+      <node id="47">
+        <label>atsc_root_raised_cosine_bandpass</label>
+        <link refid="classatsc__root__raised__cosine__bandpass"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="50">
+        <label>atsc_root_raised_cosine</label>
+        <link refid="classatsc__root__raised__cosine"/>
+      </node>
+      <node id="49">
+        <label>atsc_root_raised_cosine_bandpass</label>
+        <link refid="classatsc__root__raised__cosine__bandpass"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" line="29" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_root_raised_cosine_bandpass.h" bodystart="28" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classatsc__root__raised__cosine__bandpass_1a91fcc8cf31ed05573951a93726915346" prot="protected" virt="non-virtual"><scope>atsc_root_raised_cosine_bandpass</scope><name>_center_freq</name></member>
+      <member refid="classatsc__root__raised__cosine__bandpass_1ad2679456f966c68cae94e455522164cf" prot="public" virt="non-virtual"><scope>atsc_root_raised_cosine_bandpass</scope><name>atsc_root_raised_cosine_bandpass</name></member>
+      <member refid="classatsc__root__raised__cosine__bandpass_1ad10d59f2b69c5df33a835f373775ae30" prot="public" virt="virtual"><scope>atsc_root_raised_cosine_bandpass</scope><name>taps</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__channel__model_8h" kind="file">
+    <compoundname>gr_channel_model.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__top__block_8h" local="no">gr_top_block.h</includes>
+    <includes refid="gr__fractional__interpolator__cc_8h" local="no">gr_fractional_interpolator_cc.h</includes>
+    <includes local="no">gr_sig_source_c.h</includes>
+    <includes local="no">gr_fir_filter_ccc.h</includes>
+    <includes local="no">gr_add_cc.h</includes>
+    <includes local="no">gr_noise_source_c.h</includes>
+    <includes refid="gr__multiply__cc_8h" local="no">gr_multiply_cc.h</includes>
+    <incdepgraph>
+      <node id="5531">
+        <label>gr_hier_block2.h</label>
+        <link refid="gr__hier__block2_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5535">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="5563">
+        <label>gr_multiply_cc.h</label>
+        <link refid="gr__multiply__cc_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+      </node>
+      <node id="5561">
+        <label>gr_add_cc.h</label>
+      </node>
+      <node id="5547">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="5546">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5547" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+      </node>
+      <node id="5560">
+        <label>gr_fir_filter_ccc.h</label>
+      </node>
+      <node id="5538">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="5539" relation="include">
+        </childnode>
+      </node>
+      <node id="5550">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+      </node>
+      <node id="5564">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+      </node>
+      <node id="5545">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="5529" relation="include">
+        </childnode>
+      </node>
+      <node id="5532">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+      </node>
+      <node id="5559">
+        <label>gr_sig_source_c.h</label>
+      </node>
+      <node id="5554">
+        <label>stdexcept</label>
+      </node>
+      <node id="5534">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+      </node>
+      <node id="5549">
+        <label>string</label>
+      </node>
+      <node id="5530">
+        <label>gr_top_block.h</label>
+        <link refid="gr__top__block_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5531" relation="include">
+        </childnode>
+      </node>
+      <node id="5557">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5558" relation="include">
+        </childnode>
+      </node>
+      <node id="5556">
+        <label>gr_fractional_interpolator_cc.h</label>
+        <link refid="gr__fractional__interpolator__cc_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+      </node>
+      <node id="5528">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="5529" relation="include">
+        </childnode>
+      </node>
+      <node id="5558">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+      </node>
+      <node id="5537">
+        <label>stddef.h</label>
+      </node>
+      <node id="5542">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="5551">
+        <label>limits.h</label>
+      </node>
+      <node id="5548">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="5562">
+        <label>gr_noise_source_c.h</label>
+      </node>
+      <node id="5533">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5534" relation="include">
+        </childnode>
+      </node>
+      <node id="5552">
+        <label>wchar.h</label>
+      </node>
+      <node id="5527">
+        <label>gr_channel_model.h</label>
+        <link refid="gr_channel_model.h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5561" relation="include">
+        </childnode>
+        <childnode refid="5562" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+      </node>
+      <node id="5543">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+      </node>
+      <node id="5536">
+        <label>vector</label>
+      </node>
+      <node id="5541">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="5529">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="5553">
+        <label>iosfwd</label>
+      </node>
+      <node id="5555">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="5540">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+      </node>
+      <node id="5539">
+        <label>complex</label>
+      </node>
+      <node id="5544">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__channel__model" prot="public">gr_channel_model</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__channel__model_8h_1a8599284e527e7c0100a2ab5aa526edf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_channel_model_sptr</ref></type>
+        <definition>GR_CORE_API gr_channel_model_sptr gr_make_channel_model</definition>
+        <argsstring>(double noise_voltage=0.0, double frequency_offset=0.0, double epsilon=1.0, const std::vector&lt; gr_complex &gt; &amp;taps=std::vector&lt; gr_complex &gt;(1, 1), double noise_seed=3021)</argsstring>
+        <name>gr_make_channel_model</name>
+        <param>
+          <type>double</type>
+          <declname>noise_voltage</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frequency_offset</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt; &amp;</type>
+          <declname>taps</declname>
+          <defval>std::vector&lt; <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref> &gt;(1, 1)</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>noise_seed</declname>
+          <defval>3021</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/hier/gr_channel_model.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/hier/gr_channel_model.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__agc2__cc" kind="class" prot="public">
+    <compoundname>gri_agc2_cc</compoundname>
+    <derivedcompoundref refid="classgr__agc2__cc" prot="public" virt="non-virtual">gr_agc2_cc</derivedcompoundref>
+    <includes refid="gri__agc2__cc_8h" local="no">gri_agc2_cc.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgri__agc2__cc_1a788fb3f95c84611e63612d23d568ef12" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_agc2_cc::_attack_rate</definition>
+        <argsstring></argsstring>
+        <name>_attack_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__agc2__cc_1a7e9bc91e5b7139147f5e3cf05514bb8a" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_agc2_cc::_decay_rate</definition>
+        <argsstring></argsstring>
+        <name>_decay_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__agc2__cc_1afedbdaaae8b0398a5bce7c826ee971bc" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_agc2_cc::_reference</definition>
+        <argsstring></argsstring>
+        <name>_reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__agc2__cc_1a458e0f3624fada7de409285bc4a16ba9" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_agc2_cc::_gain</definition>
+        <argsstring></argsstring>
+        <name>_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__agc2__cc_1a4e8a334937f39a7844f49d13d7b7c7ce" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_agc2_cc::_max_gain</definition>
+        <argsstring></argsstring>
+        <name>_max_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__agc2__cc_1aa9b3989197681d146b32ff1a4bc995ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gri_agc2_cc::gri_agc2_cc</definition>
+        <argsstring>(float attack_rate=1e-1, float decay_rate=1e-2, float reference=1.0, float gain=1.0, float max_gain=0.0)</argsstring>
+        <name>gri_agc2_cc</name>
+        <param>
+          <type>float</type>
+          <declname>attack_rate</declname>
+          <defval>1e-1</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>decay_rate</declname>
+          <defval>1e-2</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>reference</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_gain</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a9779995f8b978301f3d8b3de3be52049" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gri_agc2_cc::decay_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>decay_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a4996c777b5d4f7df997046e48228710c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gri_agc2_cc::attack_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>attack_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1ad7b129a57fff9b8f2974bbb9ec5c9ee4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gri_agc2_cc::reference</definition>
+        <argsstring>() const </argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a72006985b1547b093173035c4072e4ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gri_agc2_cc::gain</definition>
+        <argsstring>() const </argsstring>
+        <name>gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a36d3140ac98f030cca50b74bc218111e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gri_agc2_cc::max_gain</definition>
+        <argsstring>() const </argsstring>
+        <name>max_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a3bf819a9eb77d2c5ab825c0f5605bcad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::set_decay_rate</definition>
+        <argsstring>(float rate)</argsstring>
+        <name>set_decay_rate</name>
+        <param>
+          <type>float</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a0cfe25f7e50db7a1b84c97600eda4059" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::set_attack_rate</definition>
+        <argsstring>(float rate)</argsstring>
+        <name>set_attack_rate</name>
+        <param>
+          <type>float</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1af55399565c7f0ae9eb65db1ffd456d32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::set_reference</definition>
+        <argsstring>(float reference)</argsstring>
+        <name>set_reference</name>
+        <param>
+          <type>float</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1abad4ab13d1cd016f3d298947ef137fea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::set_gain</definition>
+        <argsstring>(float gain)</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1ade06ca7a97d859668f51c10449b0b727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::set_max_gain</definition>
+        <argsstring>(float max_gain)</argsstring>
+        <name>set_max_gain</name>
+        <param>
+          <type>float</type>
+          <declname>max_gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1ad2fda74489ea47d76a13743ac8eb62fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gri_agc2_cc::scale</definition>
+        <argsstring>(gr_complex input)</argsstring>
+        <name>scale</name>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="54" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__agc2__cc_1a5bbf86a6d29d43aa163599048ef3ab96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_agc2_cc::scaleN</definition>
+        <argsstring>(gr_complex output[], const gr_complex input[], unsigned n)</argsstring>
+        <name>scaleN</name>
+        <param>
+          <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const <ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="78" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>high performance Automatic Gain Control class </para>    </briefdescription>
+    <detaileddescription>
+<para>For Power the absolute value of the complex number is used. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="5979">
+        <label>gri_agc2_cc</label>
+        <link refid="classgri__agc2__cc"/>
+      </node>
+      <node id="5980">
+        <label>gr_agc2_cc</label>
+        <link refid="classgr__agc2__cc"/>
+        <childnode refid="5979" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gri_agc2_cc.h" bodystart="34" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classgri__agc2__cc_1a788fb3f95c84611e63612d23d568ef12" prot="protected" virt="non-virtual"><scope>gri_agc2_cc</scope><name>_attack_rate</name></member>
+      <member refid="classgri__agc2__cc_1a7e9bc91e5b7139147f5e3cf05514bb8a" prot="protected" virt="non-virtual"><scope>gri_agc2_cc</scope><name>_decay_rate</name></member>
+      <member refid="classgri__agc2__cc_1a458e0f3624fada7de409285bc4a16ba9" prot="protected" virt="non-virtual"><scope>gri_agc2_cc</scope><name>_gain</name></member>
+      <member refid="classgri__agc2__cc_1a4e8a334937f39a7844f49d13d7b7c7ce" prot="protected" virt="non-virtual"><scope>gri_agc2_cc</scope><name>_max_gain</name></member>
+      <member refid="classgri__agc2__cc_1afedbdaaae8b0398a5bce7c826ee971bc" prot="protected" virt="non-virtual"><scope>gri_agc2_cc</scope><name>_reference</name></member>
+      <member refid="classgri__agc2__cc_1a4996c777b5d4f7df997046e48228710c" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>attack_rate</name></member>
+      <member refid="classgri__agc2__cc_1a9779995f8b978301f3d8b3de3be52049" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>decay_rate</name></member>
+      <member refid="classgri__agc2__cc_1a72006985b1547b093173035c4072e4ff" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>gain</name></member>
+      <member refid="classgri__agc2__cc_1aa9b3989197681d146b32ff1a4bc995ba" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>gri_agc2_cc</name></member>
+      <member refid="classgri__agc2__cc_1a36d3140ac98f030cca50b74bc218111e" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>max_gain</name></member>
+      <member refid="classgri__agc2__cc_1ad7b129a57fff9b8f2974bbb9ec5c9ee4" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>reference</name></member>
+      <member refid="classgri__agc2__cc_1ad2fda74489ea47d76a13743ac8eb62fc" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>scale</name></member>
+      <member refid="classgri__agc2__cc_1a5bbf86a6d29d43aa163599048ef3ab96" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>scaleN</name></member>
+      <member refid="classgri__agc2__cc_1a0cfe25f7e50db7a1b84c97600eda4059" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>set_attack_rate</name></member>
+      <member refid="classgri__agc2__cc_1a3bf819a9eb77d2c5ab825c0f5605bcad" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>set_decay_rate</name></member>
+      <member refid="classgri__agc2__cc_1abad4ab13d1cd016f3d298947ef137fea" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>set_gain</name></member>
+      <member refid="classgri__agc2__cc_1ade06ca7a97d859668f51c10449b0b727" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>set_max_gain</name></member>
+      <member refid="classgri__agc2__cc_1af55399565c7f0ae9eb65db1ffd456d32" prot="public" virt="non-virtual"><scope>gri_agc2_cc</scope><name>set_reference</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

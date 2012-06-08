@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__mpeg__packet__no__sync" kind="class" prot="public">
+    <compoundname>atsc_mpeg_packet_no_sync</compoundname>
+    <includes refid="atsc__types_8h" local="no">atsc_types.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classatsc__mpeg__packet__no__sync_1a393ec84d51d4c98efc2a688336d4d1b4" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsc_mpeg_packet_no_sync::NPAD</definition>
+        <argsstring></argsstring>
+        <name>NPAD</name>
+        <initializer> 65</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="162" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classatsc__mpeg__packet__no__sync_1ae18cc04ef1be8f1b11578661a8f4e861" prot="public" static="no" mutable="no">
+        <type><ref refid="classplinfo" kindref="compound">plinfo</ref></type>
+        <definition>plinfo atsc_mpeg_packet_no_sync::pli</definition>
+        <argsstring></argsstring>
+        <name>pli</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="163" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsc_mpeg_packet_no_sync::data[ATSC_MPEG_DATA_LENGTH]</definition>
+        <argsstring>[ATSC_MPEG_DATA_LENGTH]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="164" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__mpeg__packet__no__sync_1afa659646110b87bca0c43c0e9cabc73d" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsc_mpeg_packet_no_sync::_pad_[NPAD]</definition>
+        <argsstring>[NPAD]</argsstring>
+        <name>_pad_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="165" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__mpeg__packet__no__sync_1a7c54b9ca840a5f8df198227cb2ecf49e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool atsc_mpeg_packet_no_sync::operator==</definition>
+        <argsstring>(const atsc_mpeg_packet_no_sync &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="168" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__mpeg__packet__no__sync_1a8dc0c0d1759b1aeaef17c379c0efaede" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool atsc_mpeg_packet_no_sync::operator!=</definition>
+        <argsstring>(const atsc_mpeg_packet_no_sync &amp;other) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="172" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="172" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>atsc_mpeg_packet_no_sync</label>
+        <link refid="classatsc__mpeg__packet__no__sync"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>pli</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>plinfo</label>
+        <link refid="classplinfo"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" line="160" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_types.h" bodystart="160" bodyend="175"/>
+    <listofallmembers>
+      <member refid="classatsc__mpeg__packet__no__sync_1afa659646110b87bca0c43c0e9cabc73d" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>_pad_</name></member>
+      <member refid="classatsc__mpeg__packet__no__sync_1a09d37809b53e331578bc888216603ac6" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>data</name></member>
+      <member refid="classatsc__mpeg__packet__no__sync_1a393ec84d51d4c98efc2a688336d4d1b4" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>NPAD</name></member>
+      <member refid="classatsc__mpeg__packet__no__sync_1a8dc0c0d1759b1aeaef17c379c0efaede" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>operator!=</name></member>
+      <member refid="classatsc__mpeg__packet__no__sync_1a7c54b9ca840a5f8df198227cb2ecf49e" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>operator==</name></member>
+      <member refid="classatsc__mpeg__packet__no__sync_1ae18cc04ef1be8f1b11578661a8f4e861" prot="public" virt="non-virtual"><scope>atsc_mpeg_packet_no_sync</scope><name>pli</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

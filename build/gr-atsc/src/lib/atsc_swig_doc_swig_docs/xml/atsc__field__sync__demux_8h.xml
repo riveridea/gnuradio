@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="atsc__field__sync__demux_8h" kind="file">
+    <compoundname>atsc_field_sync_demux.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <includes local="no">gr_block.h</includes>
+    <includes refid="atsc__types_8h" local="no">atsc_types.h</includes>
+    <incdepgraph>
+      <node id="167">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="172">
+        <label>cassert</label>
+      </node>
+      <node id="165">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h</label>
+        <link refid="atsc_field_sync_demux.h"/>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>atsc_types.h</label>
+        <link refid="atsc__types_8h"/>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>gr_block.h</label>
+      </node>
+      <node id="170">
+        <label>atsc_consts.h</label>
+        <link refid="atsc__consts_8h"/>
+      </node>
+      <node id="171">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classatsc__field__sync__demux" prot="public">atsc_field_sync_demux</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classatsc__field__sync__demux" kindref="compound">atsc_field_sync_demux</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;atsc_field_sync_demux&gt; atsc_field_sync_demux_sptr</definition>
+        <argsstring></argsstring>
+        <name>atsc_field_sync_demux_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="atsc__field__sync__demux_8h_1a2d4ddecb7df8709c613d5651721290ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" kindref="member">atsc_field_sync_demux_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_field_sync_demux_sptr atsc_make_field_sync_demux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_field_sync_demux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2006<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_ATSC_FIELD_SYNC_DEMUX_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_ATSC_FIELD_SYNC_DEMUX_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsc__api_8h" kindref="compound">atsc_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="atsc__types_8h" kindref="compound">atsc_types.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classatsc__field__sync__demux" kindref="compound" tooltip="ATSC Field Sync Demux.">atsc_field_sync_demux</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;atsc_field_sync_demux&gt;<sp/><ref refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" kindref="member">atsc_field_sync_demux_sptr</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref><sp/><ref refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" kindref="member">atsc_field_sync_demux_sptr</ref><sp/><ref refid="atsc__field__sync__demux_8h_1a2d4ddecb7df8709c613d5651721290ee" kindref="member">atsc_make_field_sync_demux</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classatsc__field__sync__demux" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref><sp/><ref refid="classatsc__field__sync__demux" kindref="compound" tooltip="ATSC Field Sync Demux.">atsc_field_sync_demux</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_block</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref><sp/><ref refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" kindref="member">atsc_field_sync_demux_sptr</ref><sp/><ref refid="atsc__field__sync__demux_8h_1a2d4ddecb7df8709c613d5651721290ee" kindref="member">atsc_make_field_sync_demux</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classatsc__field__sync__demux" kindref="compound" tooltip="ATSC Field Sync Demux.">atsc_field_sync_demux</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>forecast<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,<sp/>gr_vector_int<sp/>&amp;ninput_items_required);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>general_work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_int<sp/>&amp;ninput_items,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classatsc__field__sync__demux_1a4a20abcc8ee472b2ab5b714a10fa29f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classatsc__field__sync__demux_1a4a20abcc8ee472b2ab5b714a10fa29f7" kindref="member">reset</ref>()<sp/>{<sp/></highlight><highlight class="comment">/*<sp/>nop<sp/>*/</highlight><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63" refid="classatsc__field__sync__demux_1ae01b323e53d21c33c7e27e3f17e9a478" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1ae01b323e53d21c33c7e27e3f17e9a478" kindref="member">d_locked</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classatsc__field__sync__demux_1aaec8ad9c4fee4fb61fcc4e5836d4fab2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1aaec8ad9c4fee4fb61fcc4e5836d4fab2" kindref="member">d_in_field2</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classatsc__field__sync__demux_1a52961039616d1c1bdffff8f245363e10" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1a52961039616d1c1bdffff8f245363e10" kindref="member">d_segment_number</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classatsc__field__sync__demux_1a5ad079b5fabcc163ae0bd736cd5f04f2" refkind="member"><highlight class="normal"><sp/><sp/>gr_uint64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1a5ad079b5fabcc163ae0bd736cd5f04f2" kindref="member">d_next_input</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classatsc__field__sync__demux_1a1de3e41fcd13549137c50f8a0fb3d9a4" refkind="member"><highlight class="normal"><sp/><sp/>gr_uint64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1a1de3e41fcd13549137c50f8a0fb3d9a4" kindref="member">d_lost_index</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>diagnostic<sp/>fluff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classatsc__field__sync__demux_1a41ca09e1ed39ceb8328c4c7a1edbc63b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classatsc__field__sync__demux_1a41ca09e1ed39ceb8328c4c7a1edbc63b" kindref="member">d_inputs0_index</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>inputs[0].index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classatsc__field__sync__demux_1aece4f23f31b9b9699791ff1995c55bb2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1aece4f23f31b9b9699791ff1995c55bb2" kindref="member">d_inputs0_size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>inputs[0].size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classatsc__field__sync__demux_1a71fd8be5da34dc59354805f0352ffe6f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classatsc__field__sync__demux_1a71fd8be5da34dc59354805f0352ffe6f" kindref="member">d_consume</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_ATSC_FIELD_SYNC_DEMUX_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h"/>
+  </compounddef>
+</doxygen>

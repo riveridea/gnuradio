@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classvocoder__gsm__fr__decode__ps" kind="class" prot="public">
+    <compoundname>vocoder_gsm_fr_decode_ps</compoundname>
+    <includes refid="vocoder__gsm__fr__decode__ps_8h" local="no">vocoder_gsm_fr_decode_ps.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classvocoder__gsm__fr__decode__ps_1aacbf82e3b771a44d9fa38b0ad506a459" prot="private" static="no" mutable="no">
+        <type>struct gsm_state *</type>
+        <definition>struct gsm_state* vocoder_gsm_fr_decode_ps::d_gsm</definition>
+        <argsstring></argsstring>
+        <name>d_gsm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classvocoder__gsm__fr__decode__ps_1a330878cba05bb6c4da64b7eed537084d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" kindref="member">vocoder_gsm_fr_decode_ps_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT vocoder_gsm_fr_decode_ps_sptr vocoder_make_gsm_fr_decode_ps</definition>
+        <argsstring>()</argsstring>
+        <name>vocoder_make_gsm_fr_decode_ps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classvocoder__gsm__fr__decode__ps_1a9a8a2cbfc8ef74c4ef52f94a3261a2d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vocoder_gsm_fr_decode_ps::vocoder_gsm_fr_decode_ps</definition>
+        <argsstring>()</argsstring>
+        <name>vocoder_gsm_fr_decode_ps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classvocoder__gsm__fr__decode__ps_1a4242ba147f7f6789f92d05c77c583c55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>vocoder_gsm_fr_decode_ps::~vocoder_gsm_fr_decode_ps</definition>
+        <argsstring>()</argsstring>
+        <name>~vocoder_gsm_fr_decode_ps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classvocoder__gsm__fr__decode__ps_1a2bb544b4d77e4d5dabe80f2f2644ffb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int vocoder_gsm_fr_decode_ps::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GSM 06.10 Full Rate Vocoder Decoder. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" bodystart="38" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classvocoder__gsm__fr__decode__ps_1aacbf82e3b771a44d9fa38b0ad506a459" prot="private" virt="non-virtual"><scope>vocoder_gsm_fr_decode_ps</scope><name>d_gsm</name></member>
+      <member refid="classvocoder__gsm__fr__decode__ps_1a9a8a2cbfc8ef74c4ef52f94a3261a2d1" prot="private" virt="non-virtual"><scope>vocoder_gsm_fr_decode_ps</scope><name>vocoder_gsm_fr_decode_ps</name></member>
+      <member refid="classvocoder__gsm__fr__decode__ps_1a330878cba05bb6c4da64b7eed537084d" prot="private" virt="non-virtual"><scope>vocoder_gsm_fr_decode_ps</scope><name>vocoder_make_gsm_fr_decode_ps</name></member>
+      <member refid="classvocoder__gsm__fr__decode__ps_1a2bb544b4d77e4d5dabe80f2f2644ffb3" prot="public" virt="non-virtual"><scope>vocoder_gsm_fr_decode_ps</scope><name>work</name></member>
+      <member refid="classvocoder__gsm__fr__decode__ps_1a4242ba147f7f6789f92d05c77c583c55" prot="public" virt="non-virtual"><scope>vocoder_gsm_fr_decode_ps</scope><name>~vocoder_gsm_fr_decode_ps</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

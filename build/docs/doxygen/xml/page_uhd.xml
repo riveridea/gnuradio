@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="page_uhd" kind="page">
+    <compoundname>page_uhd</compoundname>
+    <title>UHD Interface</title>
+    <detaileddescription>
+<sect1 id="page_vocoder_1Introduction">
+<title>Introduction</title>
+<para>This is the GNU Radio UHD package. It is the interface to the UHD library to connect to and send and receive data between the Ettus Research, LLC product line. To use the UHD blocks, the Python namespaces is in gnuradio.uhd, which would be normally imported as:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>from<sp/>gnuradio<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>uhd</highlight></codeline>
+</programlisting></para><para>The relevant blocks are listed in the <ref refid="group__uhd__blk" kindref="compound">UHD Interface</ref> group.</para><para>A quick listing of the details can be found in Python after importing by using:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>help(uhd)</highlight></codeline>
+</programlisting></para></sect1>
+<sect1 id="page_uhd_1External">
+<title>Documentation</title>
+<para>Ettus Research keeps the comprehensive documentation to the underlying UHD driver, which can be found:</para><para><ulink url="http://files.ettus.com/uhd_docs/manual/html/">http://files.ettus.com/uhd_docs/manual/html/</ulink></para><para>The UHD Doxygen page is located:</para><para><ulink url="http://files.ettus.com/uhd_docs/doxygen/html/index.html">http://files.ettus.com/uhd_docs/doxygen/html/index.html</ulink></para></sect1>
+<sect1 id="page_uhd_1Typical">
+<title>Setup</title>
+<para>A typical option parser setup for a UHD device looks like</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser<sp/>=<sp/>OptionParser(option_class=eng_option)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;-a&quot;,<sp/>&quot;--args&quot;,<sp/>type=&quot;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&quot;,<sp/>default=&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;UHD<sp/>device<sp/>address<sp/>args<sp/>,<sp/>[default=%default]&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;&quot;,<sp/>&quot;--spec&quot;,<sp/>type=&quot;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&quot;,<sp/>default=None,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;Subdevice<sp/>of<sp/>UHD<sp/>device<sp/>where<sp/>appropriate&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;-A&quot;,<sp/>&quot;--antenna&quot;,<sp/>type=&quot;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&quot;,<sp/>default=None,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;select<sp/>Rx<sp/>Antenna<sp/>where<sp/>appropriate&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;-s&quot;,<sp/>&quot;--samp-rate&quot;,<sp/>type=&quot;eng_float&quot;,<sp/>default=1e6,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;set<sp/>sample<sp/>rate<sp/>(bandwidth)<sp/>[default=%default]&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;-f&quot;,<sp/>&quot;--freq&quot;,<sp/>type=&quot;eng_float&quot;,<sp/>default=None,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;set<sp/>frequency<sp/>to<sp/>FREQ&quot;,<sp/>metavar=&quot;FREQ&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_option(&quot;-g&quot;,<sp/>&quot;--gain&quot;,<sp/>type=&quot;eng_float&quot;,<sp/>default=None,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=&quot;set<sp/>gain<sp/>in<sp/>dB<sp/>(default<sp/>is<sp/>midpoint)&quot;)</highlight></codeline>
+</programlisting></para><para>To use these options to create a UHD source object:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u<sp/>=<sp/>uhd.usrp_source(device_addr=options.args,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>io_type=uhd.io_type.COMPLEX_FLOAT32,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_channels=1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_samp_rate(options.samp_rate)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>if<sp/>no<sp/>gain<sp/>was<sp/>specified,<sp/>use<sp/>the<sp/>mid-point<sp/>in<sp/>dB</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>options.gain<sp/>is<sp/>None:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.get_gain_range()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.gain<sp/>=<sp/>float(g.start()+g.stop())/2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_gain(options.gain,<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>Set<sp/>the<sp/>center<sp/>frequency</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_center_freq(options.freq,<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>Set<sp/>the<sp/>subdevice<sp/>spec</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(options.spec):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_subdev_spec(options.spec,<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>#<sp/>Set<sp/>the<sp/>antenna</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(options.antenna):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_antenna(options.antenna,<sp/>0)</highlight></codeline>
+</programlisting></para><para>Frequently, your application may need a sample rate that is not supported by the UHD device. If you have extra CPU power to spare, you can easily set the sample rate you want, then ask the device what the actual sample rate set was. Then, you can easily create an arbitrary resampler to take care of the difference.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.set_samp_rate(options.samp_rate)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>desired_rate<sp/>=<sp/>options.samp_rate</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>actual_rate<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.u.get_samp_rate()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>resample<sp/>=<sp/>desired_rate<sp/>/<sp/>actual_rate</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>Use<sp/>the<sp/>blks2<sp/>version<sp/>and<sp/>pass<sp/>only<sp/>the<sp/>resample<sp/>factor.</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>This<sp/>block<sp/>builds<sp/>a<sp/>half-band<sp/>filter<sp/>for<sp/>you</highlight></codeline>
+<codeline><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.resampler<sp/>=<sp/>blks2.pfb_arb_resampler_ccf(resample)</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

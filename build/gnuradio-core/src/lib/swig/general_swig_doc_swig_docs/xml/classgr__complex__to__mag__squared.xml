@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__complex__to__mag__squared" kind="class" prot="public">
+    <compoundname>gr_complex_to_mag_squared</compoundname>
+    <includes refid="gr__complex__to__xxx_8h" local="no">gr_complex_to_xxx.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__complex__to__mag__squared_1a52f9939f88abe13a3c56135526e971cc" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_complex_to_mag_squared::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="134" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__complex__to__mag__squared_1afc7007508f9bd87bc6fb70edaffaba75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="gr__complex__to__xxx_8h_1a1bddeb30a7396eccac0630bbc78b99fa" kindref="member">gr_complex_to_mag_squared_sptr</ref></type>
+        <definition>GR_CORE_API gr_complex_to_mag_squared_sptr gr_make_complex_to_mag_squared</definition>
+        <argsstring>(unsigned int vlen)</argsstring>
+        <name>gr_make_complex_to_mag_squared</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="131"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__complex__to__mag__squared_1ac4a47310c124fe3f2dd994fcb411c197" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_complex_to_mag_squared::gr_complex_to_mag_squared</definition>
+        <argsstring>(unsigned int vlen)</argsstring>
+        <name>gr_complex_to_mag_squared</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="132"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__complex__to__mag__squared_1a645066575d20f8b4b0ad047e977780af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_complex_to_mag_squared::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>complex in, magnitude squared out (float) </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector len (default 1) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="130" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" bodystart="129" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classgr__complex__to__mag__squared_1a52f9939f88abe13a3c56135526e971cc" prot="private" virt="non-virtual"><scope>gr_complex_to_mag_squared</scope><name>d_vlen</name></member>
+      <member refid="classgr__complex__to__mag__squared_1ac4a47310c124fe3f2dd994fcb411c197" prot="private" virt="non-virtual"><scope>gr_complex_to_mag_squared</scope><name>gr_complex_to_mag_squared</name></member>
+      <member refid="classgr__complex__to__mag__squared_1afc7007508f9bd87bc6fb70edaffaba75" prot="private" virt="non-virtual"><scope>gr_complex_to_mag_squared</scope><name>gr_make_complex_to_mag_squared</name></member>
+      <member refid="classgr__complex__to__mag__squared_1a645066575d20f8b4b0ad047e977780af" prot="public" virt="virtual"><scope>gr_complex_to_mag_squared</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="interleaver__fifo_8h" kind="file">
+    <compoundname>interleaver_fifo.h</compoundname>
+    <includes refid="interleaver__fifo_8h" local="no">interleaver_fifo.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="atsci__viterbi__decoder_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_viterbi_decoder.h</includedby>
+    <includedby refid="convolutional__interleaver_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h</includedby>
+    <includedby refid="GrAtscBitTimingLoop_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop.h</includedby>
+    <includedby refid="GrAtscBitTimingLoop2_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop2.h</includedby>
+    <includedby refid="interleaver__fifo_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/interleaver_fifo.h</includedby>
+    <includedby refid="qa__interleaver__fifo_8h" local="no">/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_interleaver_fifo.h</includedby>
+    <incdepgraph>
+      <node id="770">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/interleaver_fifo.h</label>
+        <link refid="interleaver_fifo.h"/>
+        <childnode refid="770" relation="include">
+        </childnode>
+        <childnode refid="771" relation="include">
+        </childnode>
+      </node>
+      <node id="771">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="777">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h</label>
+        <link refid="convolutional__interleaver_8h"/>
+        <childnode refid="778" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_viterbi_decoder.h</label>
+        <link refid="atsc__viterbi__decoder_8h"/>
+      </node>
+      <node id="785">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop.h</label>
+        <link refid="GrAtscBitTimingLoop_8h"/>
+      </node>
+      <node id="786">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscBitTimingLoop2.h</label>
+        <link refid="GrAtscBitTimingLoop2_8h"/>
+      </node>
+      <node id="772">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/interleaver_fifo.h</label>
+        <link refid="interleaver_fifo.h"/>
+        <childnode refid="773" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+        <childnode refid="787" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_viterbi_decoder.h</label>
+        <link refid="qa__atsci__viterbi__decoder_8h"/>
+      </node>
+      <node id="778">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_data_interleaver.h</label>
+        <link refid="atsci__data__interleaver_8h"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+        <childnode refid="783" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_interleaver_fifo.h</label>
+        <link refid="qa__interleaver__fifo_8h"/>
+      </node>
+      <node id="784">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_convolutional_interleaver.h</label>
+        <link refid="qa__convolutional__interleaver_8h"/>
+      </node>
+      <node id="780">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_interleaver.h</label>
+        <link refid="atsc__interleaver_8h"/>
+      </node>
+      <node id="773">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_viterbi_decoder.h</label>
+        <link refid="atsci__viterbi__decoder_8h"/>
+        <childnode refid="774" relation="include">
+        </childnode>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="776" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/qa_atsci_data_interleaver.h</label>
+        <link refid="qa__atsci__data__interleaver_8h"/>
+      </node>
+      <node id="781">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscDeinterleaver.h</label>
+        <link refid="GrAtscDeinterleaver_8h"/>
+      </node>
+      <node id="782">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscInterleaver.h</label>
+        <link refid="GrAtscInterleaver_8h"/>
+      </node>
+      <node id="775">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscViterbiDecoder.h</label>
+        <link refid="GrAtscViterbiDecoder_8h"/>
+      </node>
+      <node id="779">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h</label>
+        <link refid="atsc__deinterleaver_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classinterleaver__fifo" prot="public">interleaver_fifo</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2002<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_INTERLEAVER_FIFO_H_</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_INTERLEAVER_FIFO_H_</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interleaver__fifo_8h" kindref="compound">interleaver_fifo.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="35" refid="classinterleaver__fifo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classinterleaver__fifo" kindref="compound" tooltip="template class for interleaver fifo">interleaver_fifo</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classinterleaver__fifo_1ace8c31c468f50b876e85d3bc387257e0" kindref="member">interleaver_fifo</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="classinterleaver__fifo_1aaed4a2790d6b33fc0a8d62fad012ec1c" kindref="member">~interleaver_fifo</ref><sp/>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classinterleaver__fifo_1a36aea44c80151e5db4d2b5c50fc92d9d" kindref="member" tooltip="reset interleaver (flushes contents and resets commutator)">reset</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classinterleaver__fifo_1a98443cb6dde8d17a05fe6fd942730d05" refkind="member"><highlight class="normal"><sp/><sp/>symbol_type<sp/><ref refid="classinterleaver__fifo_1a98443cb6dde8d17a05fe6fd942730d05" kindref="member" tooltip="stuff a symbol into the fifo and return the oldest">stuff</ref><sp/>(symbol_type<sp/>input){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classinterleaver__fifo_1a96d69eb181f317f98e4fc630837ef47a" kindref="member">m_size</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>symbol_type<sp/>retval<sp/>=<sp/><ref refid="classinterleaver__fifo_1a36c5d30b31ffb5815efcb38d71d8939f" kindref="member">m_fifo</ref>[<ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref>];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinterleaver__fifo_1a36c5d30b31ffb5815efcb38d71d8939f" kindref="member">m_fifo</ref>[<ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref>]<sp/>=<sp/>input;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref>++;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref><sp/>&gt;=<sp/><ref refid="classinterleaver__fifo_1a96d69eb181f317f98e4fc630837ef47a" kindref="member">m_size</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59" refid="classinterleaver__fifo_1a96d69eb181f317f98e4fc630837ef47a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classinterleaver__fifo_1a96d69eb181f317f98e4fc630837ef47a" kindref="member">m_size</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classinterleaver__fifo_1a95b82dc991e92357b1d3e7058aeed18a" kindref="member">m_position</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classinterleaver__fifo_1a36c5d30b31ffb5815efcb38d71d8939f" refkind="member"><highlight class="normal"><sp/><sp/>symbol_type<sp/><sp/><sp/>*<ref refid="classinterleaver__fifo_1a36c5d30b31ffb5815efcb38d71d8939f" kindref="member">m_fifo</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="65" refid="classinterleaver__fifo_1ace8c31c468f50b876e85d3bc387257e0" refkind="member"><highlight class="normal"><ref refid="classinterleaver__fifo_1ace8c31c468f50b876e85d3bc387257e0" kindref="member">interleaver_fifo&lt;symbol_type&gt;::interleaver_fifo</ref><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>m_size<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>m_position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>m_fifo<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>symbol_type[size];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>memset<sp/>(m_fifo,<sp/>0,<sp/>m_size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(symbol_type));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;</highlight></codeline>
+<codeline lineno="74" refid="classinterleaver__fifo_1aaed4a2790d6b33fc0a8d62fad012ec1c" refkind="member"><highlight class="normal"><ref refid="classinterleaver__fifo_1aaed4a2790d6b33fc0a8d62fad012ec1c" kindref="member">interleaver_fifo&lt;symbol_type&gt;::~interleaver_fifo</ref><sp/>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>m_fifo;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>symbol_type&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classinterleaver__fifo_1a36aea44c80151e5db4d2b5c50fc92d9d" refkind="member"><highlight class="normal"><ref refid="classinterleaver__fifo_1a36aea44c80151e5db4d2b5c50fc92d9d" kindref="member" tooltip="reset interleaver (flushes contents and resets commutator)">interleaver_fifo&lt;symbol_type&gt;::reset</ref><sp/>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>m_position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>memset<sp/>(m_fifo,<sp/>0,<sp/>m_size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(symbol_type));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_INTERLEAVER_FIFO_H_<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/interleaver_fifo.h"/>
+  </compounddef>
+</doxygen>

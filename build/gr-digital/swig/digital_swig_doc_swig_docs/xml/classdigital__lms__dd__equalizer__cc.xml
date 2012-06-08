@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__lms__dd__equalizer__cc" kind="class" prot="public">
+    <compoundname>digital_lms_dd_equalizer_cc</compoundname>
+    <includes refid="digital__lms__dd__equalizer__cc_8h" local="no">digital_lms_dd_equalizer_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__lms__dd__equalizer__cc_1a6560a738300b1180d19bd6178eaacc42" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_lms_dd_equalizer_cc::d_mu</definition>
+        <argsstring></argsstring>
+        <name>d_mu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__lms__dd__equalizer__cc_1a018b8ea424c696cc604872eb89474eac" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_lms_dd_equalizer_cc::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__lms__dd__equalizer__cc_1afacb4a2e609e345b5e0a03b380f43205" prot="private" static="no" mutable="no">
+        <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+        <definition>digital_constellation_sptr digital_lms_dd_equalizer_cc::d_cnst</definition>
+        <argsstring></argsstring>
+        <name>d_cnst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__lms__dd__equalizer__cc_1acee38d596bb716381ce61732984b248a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__lms__dd__equalizer__cc_8h_1aa1df6895b80d336a1089e3ab8fac08b1" kindref="member">digital_lms_dd_equalizer_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_lms_dd_equalizer_cc_sptr digital_make_lms_dd_equalizer_cc</definition>
+        <argsstring>(int num_taps, float mu, int sps, digital_constellation_sptr cnst)</argsstring>
+        <name>digital_make_lms_dd_equalizer_cc</name>
+        <param>
+          <type>int</type>
+          <declname>num_taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sps</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>cnst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__lms__dd__equalizer__cc_1ae6a8f2ba66dfc0aebb72c5bce71d0aa3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_lms_dd_equalizer_cc::digital_lms_dd_equalizer_cc</definition>
+        <argsstring>(int num_taps, float mu, int sps, digital_constellation_sptr cnst)</argsstring>
+        <name>digital_lms_dd_equalizer_cc</name>
+        <param>
+          <type>int</type>
+          <declname>num_taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sps</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>cnst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdigital__lms__dd__equalizer__cc_1aeff7f61076e6c97458fc1655b77aa08f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>gr_complex</type>
+        <definition>virtual gr_complex digital_lms_dd_equalizer_cc::error</definition>
+        <argsstring>(const gr_complex &amp;out)</argsstring>
+        <name>error</name>
+        <param>
+          <type>const gr_complex &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__lms__dd__equalizer__cc_1aed00b745b5eb8e2f17bd72aab5641192" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void digital_lms_dd_equalizer_cc::update_tap</definition>
+        <argsstring>(gr_complex &amp;tap, const gr_complex &amp;in)</argsstring>
+        <name>update_tap</name>
+        <param>
+          <type>gr_complex &amp;</type>
+          <declname>tap</declname>
+        </param>
+        <param>
+          <type>const gr_complex &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="96" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__lms__dd__equalizer__cc_1a40f5a28db71f57497f41d5af4ccab7fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_lms_dd_equalizer_cc::get_gain</definition>
+        <argsstring>()</argsstring>
+        <name>get_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="102" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__lms__dd__equalizer__cc_1a6b3917e69eedfd9effcae25a6a0d1c06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_lms_dd_equalizer_cc::set_gain</definition>
+        <argsstring>(float mu)</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="106" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Least-Mean-Square Decision Directed Equalizer (complex in/out)</para><para>This block implements an LMS-based decision-directed equalizer. It uses a set of weights, w, to correlate against the inputs, u, and a decisions is then made from this output. The error in the decision is used to update teh weight vector. </para>    </briefdescription>
+    <detaileddescription>
+<para>y[n] = conj(w[n]) u[n] d[n] = decision(y[n]) e[n] = d[n] - y[n] w[n+1] = w[n] + mu u[n] conj(e[n])</para><para>Where mu is a gain value (between 0 and 1 and usualy small, around 0.001 - 0.01.</para><para>This block uses the <ref refid="classdigital__constellation" kindref="compound">digital_constellation</ref> object for making the decision from y[n]. Create the constellation object for whatever constellation is to be used and pass in the object. In Python, you can use something like: self.constellation = digital.constellation_qpsk() To create a QPSK constellation (see the <ref refid="classdigital__constellation" kindref="compound">digital_constellation</ref> block for more details as to what constellations are available or how to create your own). You then pass the object to this block as an sptr, or using &quot;self.constellation.base()&quot;.</para><para>The theory for this algorithm can be found in Chapter 9 of: S. Haykin, Adaptive Filter Theory, Upper Saddle River, NJ: Prentice Hall, 1996. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_lms_dd_equalizer_cc.h" bodystart="70" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classdigital__lms__dd__equalizer__cc_1afacb4a2e609e345b5e0a03b380f43205" prot="private" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>d_cnst</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1a6560a738300b1180d19bd6178eaacc42" prot="private" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>d_mu</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1a018b8ea424c696cc604872eb89474eac" prot="private" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>d_taps</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1ae6a8f2ba66dfc0aebb72c5bce71d0aa3" prot="private" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>digital_lms_dd_equalizer_cc</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1acee38d596bb716381ce61732984b248a" prot="private" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>digital_make_lms_dd_equalizer_cc</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1aeff7f61076e6c97458fc1655b77aa08f" prot="protected" virt="virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>error</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1a40f5a28db71f57497f41d5af4ccab7fc" prot="public" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>get_gain</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1a6b3917e69eedfd9effcae25a6a0d1c06" prot="public" virt="non-virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>set_gain</name></member>
+      <member refid="classdigital__lms__dd__equalizer__cc_1aed00b745b5eb8e2f17bd72aab5641192" prot="protected" virt="virtual"><scope>digital_lms_dd_equalizer_cc</scope><name>update_tap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classtrellis__encoder__si" kind="class" prot="public">
+    <compoundname>trellis_encoder_si</compoundname>
+    <includes refid="trellis__encoder__si_8h" local="no">trellis_encoder_si.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtrellis__encoder__si_1a564e4d915a1f403e71ea8a36c6dc569e" prot="private" static="no" mutable="no">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_encoder_si::d_FSM</definition>
+        <argsstring></argsstring>
+        <name>d_FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__encoder__si_1ad3f2fefe0fc6f8540e9b1833a5be31e5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_encoder_si::d_ST</definition>
+        <argsstring></argsstring>
+        <name>d_ST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtrellis__encoder__si_1a8b45592b3e3eef3659b4421970b7ed78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="trellis__api_8h_1a127b54fd15c5829a93039ece2d5467b0" kindref="member">TRELLIS_API</ref> <ref refid="trellis__encoder__si_8h_1a86b5e39249a00853a92eb66e4b16a89e" kindref="member">trellis_encoder_si_sptr</ref></type>
+        <definition>TRELLIS_API trellis_encoder_si_sptr trellis_make_encoder_si</definition>
+        <argsstring>(const fsm &amp;FSM, int ST)</argsstring>
+        <name>trellis_make_encoder_si</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtrellis__encoder__si_1af2c6fb0af8d039e584ef47a478413bd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>trellis_encoder_si::trellis_encoder_si</definition>
+        <argsstring>(const fsm &amp;FSM, int ST)</argsstring>
+        <name>trellis_encoder_si</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrellis__encoder__si_1a9d7489e7e3cb6b66afc810ed033e877b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_encoder_si::FSM</definition>
+        <argsstring>() const </argsstring>
+        <name>FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__encoder__si_1a2e5aeacef3813483a81a5b3c36bbf954" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_encoder_si::ST</definition>
+        <argsstring>() const </argsstring>
+        <name>ST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__encoder__si_1a0aaef6b5466c7fea9cc4a989d2a80b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_encoder_si::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convolutional encoder. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gr-trellis/src/lib/trellis_encoder_si.h" bodystart="41" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classtrellis__encoder__si_1a564e4d915a1f403e71ea8a36c6dc569e" prot="private" virt="non-virtual"><scope>trellis_encoder_si</scope><name>d_FSM</name></member>
+      <member refid="classtrellis__encoder__si_1ad3f2fefe0fc6f8540e9b1833a5be31e5" prot="private" virt="non-virtual"><scope>trellis_encoder_si</scope><name>d_ST</name></member>
+      <member refid="classtrellis__encoder__si_1a9d7489e7e3cb6b66afc810ed033e877b" prot="public" virt="non-virtual"><scope>trellis_encoder_si</scope><name>FSM</name></member>
+      <member refid="classtrellis__encoder__si_1a2e5aeacef3813483a81a5b3c36bbf954" prot="public" virt="non-virtual"><scope>trellis_encoder_si</scope><name>ST</name></member>
+      <member refid="classtrellis__encoder__si_1af2c6fb0af8d039e584ef47a478413bd4" prot="private" virt="non-virtual"><scope>trellis_encoder_si</scope><name>trellis_encoder_si</name></member>
+      <member refid="classtrellis__encoder__si_1a8b45592b3e3eef3659b4421970b7ed78" prot="private" virt="non-virtual"><scope>trellis_encoder_si</scope><name>trellis_make_encoder_si</name></member>
+      <member refid="classtrellis__encoder__si_1a0aaef6b5466c7fea9cc4a989d2a80b9f" prot="public" virt="non-virtual"><scope>trellis_encoder_si</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

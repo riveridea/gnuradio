@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__udp__source" kind="class" prot="public">
+    <compoundname>gr_udp_source</compoundname>
+    <includes refid="gr__udp__source_8h" local="no">gr_udp_source.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__udp__source_1a6a62691be95dc137e01f9c39425b7cca" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_udp_source::d_itemsize</definition>
+        <argsstring></argsstring>
+        <name>d_itemsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1a64878baf7f0a835853565f4501f1343a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_udp_source::d_payload_size</definition>
+        <argsstring></argsstring>
+        <name>d_payload_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1aaf49a3a84e77c4cca6a922726733f4a5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_udp_source::d_eof</definition>
+        <argsstring></argsstring>
+        <name>d_eof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1a5dce0b657cebc5ca32d7223a002a9a21" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_udp_source::d_wait</definition>
+        <argsstring></argsstring>
+        <name>d_wait</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1a25c0abc2487b16feff53289de0bffab5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_udp_source::d_socket</definition>
+        <argsstring></argsstring>
+        <name>d_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1aadb2e08acdc56d5096e46b63417dccd3" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* gr_udp_source::d_temp_buff</definition>
+        <argsstring></argsstring>
+        <name>d_temp_buff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1a3928d88469d338d47968e33012ba4829" prot="private" static="no" mutable="no">
+        <type>ssize_t</type>
+        <definition>ssize_t gr_udp_source::d_residual</definition>
+        <argsstring></argsstring>
+        <name>d_residual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__udp__source_1a6c29a15199e5a70a3e7232e9721d89cf" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_udp_source::d_temp_offset</definition>
+        <argsstring></argsstring>
+        <name>d_temp_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__udp__source_1acfc9ee0685b2d9611c8d83217c952c58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__udp__source_8h_1a7dbaa9063a6fe66d00fa029023bf5aa3" kindref="member">gr_udp_source_sptr</ref></type>
+        <definition>GR_CORE_API gr_udp_source_sptr gr_make_udp_source</definition>
+        <argsstring>(size_t itemsize, const char *host, unsigned short port, int payload_size, bool eof, bool wait)</argsstring>
+        <name>gr_make_udp_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>payload_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>eof</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__udp__source_1a4f7b03a64114ef0004be5fcab74f2d4a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_udp_source::gr_udp_source</definition>
+        <argsstring>(size_t itemsize, const char *host, unsigned short port, int payload_size, bool eof, bool wait)</argsstring>
+        <name>gr_udp_source</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>payload_size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>eof</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>wait</declname>
+        </param>
+        <briefdescription>
+<para>UDP Source Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size (in bytes) of the item datatype </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>host</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name or IP address of the receiving host; can be NULL, None, or &quot;0.0.0.0&quot; to allow reading from any interface on the host </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number on which to receive data; use 0 to have the system assign an unused port number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UDP payload size by default set to 1472 = (1500 MTU - (8 byte UDP header) - (20 byte IP header)) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interpret zero-length packet as EOF (default: true) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wait for data if not immediately available (default: true) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__udp__source_1aff679a619371a151f8f037eb8c206bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_udp_source::~gr_udp_source</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_udp_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__udp__source_1a09db2251d1f7406889104fb1e8aac0a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_udp_source::payload_size</definition>
+        <argsstring>()</argsstring>
+        <name>payload_size</name>
+        <briefdescription>
+<para>return the PAYLOAD_SIZE of the socket </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="97" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__udp__source_1af5ca78922df30db9890f92e8ffc158f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_udp_source::get_port</definition>
+        <argsstring>()</argsstring>
+        <name>get_port</name>
+        <briefdescription>
+<para>return the port number of the socket </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__udp__source_1aafcc18df4c9ed93551dde48cce610f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_udp_source::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read stream from an UDP socket. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemsize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size (in bytes) of the item datatype </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>host</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name or IP address of the receiving host; can be NULL, None, or &quot;0.0.0.0&quot; to allow reading from any interface on the host </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port number on which to receive data; use 0 to have the system assign an unused port number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UDP payload size by default set to 1472 = (1500 MTU - (8 byte UDP header) - (20 byte IP header)) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interpret zero-length packet as EOF (default: true) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wait for data if not immediately available (default: true) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_udp_source.h" bodystart="56" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classgr__udp__source_1aaf49a3a84e77c4cca6a922726733f4a5" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_eof</name></member>
+      <member refid="classgr__udp__source_1a6a62691be95dc137e01f9c39425b7cca" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_itemsize</name></member>
+      <member refid="classgr__udp__source_1a64878baf7f0a835853565f4501f1343a" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_payload_size</name></member>
+      <member refid="classgr__udp__source_1a3928d88469d338d47968e33012ba4829" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_residual</name></member>
+      <member refid="classgr__udp__source_1a25c0abc2487b16feff53289de0bffab5" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_socket</name></member>
+      <member refid="classgr__udp__source_1aadb2e08acdc56d5096e46b63417dccd3" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_temp_buff</name></member>
+      <member refid="classgr__udp__source_1a6c29a15199e5a70a3e7232e9721d89cf" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_temp_offset</name></member>
+      <member refid="classgr__udp__source_1a5dce0b657cebc5ca32d7223a002a9a21" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>d_wait</name></member>
+      <member refid="classgr__udp__source_1af5ca78922df30db9890f92e8ffc158f2" prot="public" virt="non-virtual"><scope>gr_udp_source</scope><name>get_port</name></member>
+      <member refid="classgr__udp__source_1acfc9ee0685b2d9611c8d83217c952c58" prot="private" virt="non-virtual"><scope>gr_udp_source</scope><name>gr_make_udp_source</name></member>
+      <member refid="classgr__udp__source_1a4f7b03a64114ef0004be5fcab74f2d4a" prot="protected" virt="non-virtual"><scope>gr_udp_source</scope><name>gr_udp_source</name></member>
+      <member refid="classgr__udp__source_1a09db2251d1f7406889104fb1e8aac0a0" prot="public" virt="non-virtual"><scope>gr_udp_source</scope><name>payload_size</name></member>
+      <member refid="classgr__udp__source_1aafcc18df4c9ed93551dde48cce610f4e" prot="public" virt="non-virtual"><scope>gr_udp_source</scope><name>work</name></member>
+      <member refid="classgr__udp__source_1aff679a619371a151f8f037eb8c206bb5" prot="public" virt="non-virtual"><scope>gr_udp_source</scope><name>~gr_udp_source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

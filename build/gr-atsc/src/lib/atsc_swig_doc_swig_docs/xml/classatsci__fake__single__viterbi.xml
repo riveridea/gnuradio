@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__fake__single__viterbi" kind="class" prot="public">
+    <compoundname>atsci_fake_single_viterbi</compoundname>
+    <includes refid="atsci__fake__single__viterbi_8h" local="no">atsci_fake_single_viterbi.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsci__fake__single__viterbi_1af624f840b980cc6dacf3f5f1364eb666" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsci_fake_single_viterbi::post_coder_state</definition>
+        <argsstring></argsstring>
+        <name>post_coder_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__fake__single__viterbi_1a9c1b92168236f33bfbabb538cde43005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_fake_single_viterbi::atsci_fake_single_viterbi</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_fake_single_viterbi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fake__single__viterbi_1ae0f2cc15e2890dd4ccc33948719922d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char atsci_fake_single_viterbi::decode</definition>
+        <argsstring>(float input)</argsstring>
+        <name>decode</name>
+        <param>
+          <type>float</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>INPUT</computeroutput> ideally takes on the values +/- 1,3,5,7 return is decoded dibit in the range [0, 3] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fake__single__viterbi_1a424671467069e18884d296b870d05d0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsci_fake_single_viterbi::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fake__single__viterbi_1ab2ad12d4669f55ff35e53696761519da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsci_fake_single_viterbi::delay</definition>
+        <argsstring>()</argsstring>
+        <name>delay</name>
+        <briefdescription>
+<para>internal delay of decoder </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>single channel viterbi decoder </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fake_single_viterbi.h" bodystart="31" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classatsci__fake__single__viterbi_1a9c1b92168236f33bfbabb538cde43005" prot="public" virt="non-virtual"><scope>atsci_fake_single_viterbi</scope><name>atsci_fake_single_viterbi</name></member>
+      <member refid="classatsci__fake__single__viterbi_1ae0f2cc15e2890dd4ccc33948719922d2" prot="public" virt="non-virtual"><scope>atsci_fake_single_viterbi</scope><name>decode</name></member>
+      <member refid="classatsci__fake__single__viterbi_1ab2ad12d4669f55ff35e53696761519da" prot="public" virt="non-virtual"><scope>atsci_fake_single_viterbi</scope><name>delay</name></member>
+      <member refid="classatsci__fake__single__viterbi_1af624f840b980cc6dacf3f5f1364eb666" prot="protected" virt="non-virtual"><scope>atsci_fake_single_viterbi</scope><name>post_coder_state</name></member>
+      <member refid="classatsci__fake__single__viterbi_1a424671467069e18884d296b870d05d0b" prot="public" virt="non-virtual"><scope>atsci_fake_single_viterbi</scope><name>reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

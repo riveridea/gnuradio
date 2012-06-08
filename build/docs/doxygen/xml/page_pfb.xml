@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="page_pfb" kind="page">
+    <compoundname>page_pfb</compoundname>
+    <title>Polyphase Filterbanks</title>
+    <detaileddescription>
+<sect1 id="page_vocoder_1Introduction">
+<title>Introduction</title>
+<para>Polyphase filterbanks (PFB) are a very powerful set of filtering tools that can efficiently perform many multi-rate signal processing tasks. GNU Radio has a set of polyphase filterbank blocks to be used in all sorts of applications. These blocks and their documentation can be found in <ref refid="group__pfb__blk" kindref="compound">Polyphase Filterbank</ref>.</para></sect1>
+<sect1 id="page_qtgui_1Usage">
+<title>Usage</title>
+<para>See the documentation for the individual blocks for details about what they can do and how they should be used. Furthermore, there are examples for these blocks in <bold>gnuradio-examples/python/pfb</bold>.</para><para>The main issue when using the PFB blocks is defining the prototype filter, which is passed to all of the blocks as a vector of <computeroutput>taps</computeroutput>. The taps from the prototype filter which get partitioned among the <computeroutput>N</computeroutput> channels of the channelizer.</para><para>An example of creating a set of filter taps for a PFB channelizer is found on line 49 of <bold>gnuradio-examples/python/pfb/channelizer.py</bold> and reproduced below. Notice that the sample rate is the sample rate at the input to the channelizer while the bandwidth and transition width are defined for the channel bandwidths. This makes a fairly long filter that is then split up between the <computeroutput>N</computeroutput> channels of the PFB.</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._fs<sp/>=<sp/>9000<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>input<sp/>sample<sp/>rate</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._M<sp/>=<sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Number<sp/>of<sp/>channels<sp/>to<sp/>channelize</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._taps<sp/>=<sp/>gr.firdes.low_pass_2(1,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._fs,<sp/>475.50,<sp/>50,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attenuation_dB=100,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window=gr.firdes.WIN_BLACKMAN_hARRIS)</highlight></codeline>
+</programlisting></para><para>In this example, the signal into the channelizer is sampled at 9 ksps (complex, so 9 kHz of bandwidth). The filter uses 9 channels, so each output channel will have a bandwidth and sample rate of 1 kHz. We want to pass most of the channel, so we define the channel bandwidth to be a low pass filter with a bandwidth of 475.5 Hz and a transition bandwidth of 50 Hz, but we have defined this using a sample rate of the original 9 kHz. The prototype filter has 819 taps to be divided up between the 9 channels, so each channel uses 91 taps. This is probably over-kill for a channelizer, and we could reduce the amount of taps per channel to a couple of dozen with no ill effects.</para><para>The basic rule when defining a set of taps for a PFB block is to think about the filter running at the highest rate it will see while the bandwidth is defined for the size of the channels. In the channelizer case, the highest rate is defined as the rate of the incoming signal, but in other PFB blocks, this is not so obvious.</para><para>Two very useful blocks to use are the arbitrary resampler and the clock synchronizer (for PAM signals). These PFBs are defined with a set number of filters based on the fidelity required from them, not the rate changes. By default, the <computeroutput>filter_size</computeroutput> is set to 32 for these blocks, which is a reasonable default for most tasks. Because the PFB uses this number of filters in the filterbank, the maximum rate of the bank is defined from this (see the theory of a polyphase interpolator for a justification of this). So the prototype filter is defined to use a sample rate of <computeroutput>filter_size</computeroutput> times the signal&apos;s sampling rate.</para><para>A helpful wrapper for the arbitrary resampler is found in <bold>gnuradio-core/src/python/gnuradio/blks2impl/pfb_arb_resampler.py</bold>, which is exposed in Python as <bold>blks2.pfb_arb_resampler_ccf</bold> and <bold>blks2.pfb_arb_resampler_fff</bold>. This block is set up so that the user only needs to pass it the real number <computeroutput>rate</computeroutput> as the resampling rate. With just this information, this hierarchical block automatically creates a filter that fully passes the signal bandwidth being resampled but does not pass any out-of-band noise. See the code for this block for details of how the filter is constructed.</para><para>Of course, a user can create his or her own taps and use them in the arbitrary resampler for more specific requirements. Some of the UHD examples (<bold>gr-uhd/examples</bold>) use this ability to create a received matched filter or channel filter that also resamples the signal.</para></sect1>
+<sect1 id="page_pfb_1Examples">
+<title>Examples</title>
+<para>The following is an example of the using the channelizer. It creates the appropriate filter to channelizer 9 channels out of an original signal that is 9000 Hz wide, so each output channel is now 1000 Hz. The code then plots the PSD of the original signal to see the signals in the origina spectrum and then makes 9 plots for each of the channels.</para><para>NOTE: you need the Scipy and Matplotlib Python modules installed to run this example.</para><para><programlisting><codeline><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Copyright<sp/>2009<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>gnuradio<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>gr,<sp/>blks2</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys,<sp/>time</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>scipy</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>scipy<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>fftpack</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>ImportError:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Program<sp/>requires<sp/>scipy<sp/>(see:<sp/>www.scipy.org).&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sys.exit(1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pylab</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pylab<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>mlab</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>ImportError:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Program<sp/>requires<sp/>matplotlib<sp/>(see:<sp/>matplotlib.sourceforge.net).&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sys.exit(1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">pfb_top_block(gr.top_block):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr.top_block.__init__(self)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self._N<sp/>=<sp/>2000000<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>number<sp/>of<sp/>samples<sp/>to<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self._fs<sp/>=<sp/>9000<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>initial<sp/>sampling<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self._M<sp/>=<sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Number<sp/>of<sp/>channels<sp/>to<sp/>channelize</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>set<sp/>of<sp/>taps<sp/>for<sp/>the<sp/>PFB<sp/>channelizer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self._taps<sp/>=<sp/>gr.firdes.low_pass_2(1,<sp/>self._fs,<sp/>475.50,<sp/>50,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attenuation_dB=100,<sp/>window=gr.firdes.WIN_BLACKMAN_hARRIS)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Calculate<sp/>the<sp/>number<sp/>of<sp/>taps<sp/>per<sp/>channel<sp/>for<sp/>our<sp/>own<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tpc<sp/>=<sp/>scipy.ceil(float(len(self._taps))<sp/>/<sp/><sp/>float(self._M))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>taps:<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/>len(self._taps)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>channels:<sp/>&quot;</highlight><highlight class="normal">,<sp/>self._M</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Taps<sp/>per<sp/>channel:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/>tpc</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>set<sp/>of<sp/>signals<sp/>at<sp/>different<sp/>frequencies</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/>freqs<sp/>lists<sp/>the<sp/>frequencies<sp/>of<sp/>the<sp/>signals<sp/>that<sp/>get<sp/>stored</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/>in<sp/>the<sp/>list<sp/>&quot;signals&quot;,<sp/>which<sp/>then<sp/>get<sp/>summed<sp/>together</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.signals<sp/>=<sp/>list()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.add<sp/>=<sp/>gr.add_cc()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>freqs<sp/>=<sp/>[-4070,<sp/>-3050,<sp/>-2030,<sp/>-1010,<sp/>10,<sp/>1020,<sp/>2040,<sp/>3060,<sp/>4080]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>xrange(len(freqs)):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.signals.append(gr.sig_source_c(self._fs,<sp/>gr.GR_SIN_WAVE,<sp/>freqs[i],<sp/>1))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.connect(self.signals[i],<sp/>(self.add,i))</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.head<sp/>=<sp/>gr.head(gr.sizeof_gr_complex,<sp/>self._N)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Construct<sp/>the<sp/>channelizer<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.pfb<sp/>=<sp/>blks2.pfb_channelizer_ccf(self._M,<sp/>self._taps,<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Construct<sp/>a<sp/>vector<sp/>sink<sp/>for<sp/>the<sp/>input<sp/>signal<sp/>to<sp/>the<sp/>channelizer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.snk_i<sp/>=<sp/>gr.vector_sink_c()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Connect<sp/>the<sp/>blocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.connect(self.add,<sp/>self.head,<sp/>self.pfb)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.connect(self.add,<sp/>self.snk_i)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Use<sp/>this<sp/>to<sp/>play<sp/>with<sp/>the<sp/>channel<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#self.pfb.set_channel_map([5,6,7,8,0,1,2,3,4])</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>vector<sp/>sink<sp/>for<sp/>each<sp/>of<sp/>M<sp/>output<sp/>channels<sp/>of<sp/>the<sp/>filter<sp/>and<sp/>connect<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.snks<sp/>=<sp/>list()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>xrange(self._M):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.snks.append(gr.vector_sink_c())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.connect((self.pfb,<sp/>i),<sp/>self.snks[i])</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="aadvark_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>():</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tstart<sp/>=<sp/>time.time()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tb<sp/>=<sp/>pfb_top_block()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tb.run()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tend<sp/>=<sp/>time.time()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">print</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Run<sp/>time:<sp/>%f&quot;</highlight><highlight class="normal"><sp/>%<sp/>(tend<sp/>-<sp/>tstart)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fig_in<sp/>=<sp/>pylab.figure(1,<sp/>figsize=(16,9),<sp/>facecolor=</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fig1<sp/>=<sp/>pylab.figure(2,<sp/>figsize=(16,9),<sp/>facecolor=</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fig2<sp/>=<sp/>pylab.figure(3,<sp/>figsize=(16,9),<sp/>facecolor=</highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ns<sp/>=<sp/>1000</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ne<sp/>=<sp/>10000</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fftlen<sp/>=<sp/>8192</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>winfunc<sp/>=<sp/>scipy.blackman</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fs<sp/>=<sp/>tb._fs</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Plot<sp/>the<sp/>input<sp/>signal<sp/>on<sp/>its<sp/>own<sp/>figure</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/>=<sp/>tb.snk_i.data()[Ns:Ne]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f<sp/>=<sp/>fig_in.add_subplot(2,<sp/>1,<sp/>1)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X,freq<sp/>=<sp/>mlab.psd(d,<sp/>NFFT=fftlen,<sp/>noverlap=fftlen/4,<sp/>Fs=fs,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>d:<sp/>d*winfunc(fftlen),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale_by_freq=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X_in<sp/>=<sp/>10.0*scipy.log10(abs(X))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_in<sp/>=<sp/>scipy.arange(-fs/2.0,<sp/>fs/2.0,<sp/>fs/float(X_in.size))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pin_f<sp/>=<sp/>spin_f.plot(f_in,<sp/>X_in,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f.set_xlim([<ref refid="core__algorithms_8h_1a8ee42a5dd83886e7ad61d451d5a32956" kindref="member">min</ref>(f_in),<sp/>max(f_in)+1])</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f.set_ylim([-200.0,<sp/>50.0])</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f.set_title(</highlight><highlight class="stringliteral">&quot;Input<sp/>Signal&quot;</highlight><highlight class="normal">,<sp/>weight=</highlight><highlight class="stringliteral">&quot;bold&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f.set_xlabel(</highlight><highlight class="stringliteral">&quot;Frequency<sp/>(Hz)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_f.set_ylabel(</highlight><highlight class="stringliteral">&quot;Power<sp/>(dBW)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ts<sp/>=<sp/>1.0/fs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tmax<sp/>=<sp/>len(d)*Ts</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_in<sp/>=<sp/>scipy.arange(0,<sp/>Tmax,<sp/>Ts)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x_in<sp/>=<sp/>scipy.array(d)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_t<sp/>=<sp/>fig_in.add_subplot(2,<sp/>1,<sp/>2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pin_t<sp/>=<sp/>spin_t.plot(t_in,<sp/>x_in.real,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pin_t<sp/>=<sp/>spin_t.plot(t_in,<sp/>x_in.imag,<sp/></highlight><highlight class="stringliteral">&quot;</highlight><highlight class="stringliteral">r&quot;)</highlight></codeline>
+<codeline><highlight class="stringliteral"></highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_t.set_xlabel(</highlight><highlight class="stringliteral">&quot;Time<sp/>(s)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spin_t.set_ylabel(</highlight><highlight class="stringliteral">&quot;Amplitude&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ncols<sp/>=<sp/>int(scipy.floor(scipy.sqrt(tb._M)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Nrows<sp/>=<sp/>int(scipy.floor(tb._M<sp/>/<sp/>Ncols))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(tb._M<sp/>%<sp/>Ncols<sp/>!=<sp/>0):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Nrows<sp/>+=<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Plot<sp/>each<sp/>of<sp/>the<sp/>channels<sp/>outputs.<sp/>Frequencies<sp/>on<sp/>Figure<sp/>2<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>time<sp/>signals<sp/>on<sp/>Figure<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fs_o<sp/>=<sp/>tb._fs<sp/>/<sp/>tb._M</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ts_o<sp/>=<sp/>1.0/fs_o</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tmax_o<sp/>=<sp/>len(d)*Ts_o</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>xrange(len(tb.snks)):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>remove<sp/>issues<sp/>with<sp/>the<sp/>transients<sp/>at<sp/>the<sp/>beginning</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>also<sp/>remove<sp/>some<sp/>corruption<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/>this<sp/>is<sp/>a<sp/>bug,<sp/>probably<sp/>due<sp/>to<sp/>the<sp/>corner<sp/>cases</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d<sp/>=<sp/>tb.snks[i].data()[Ns:Ne]</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f<sp/>=<sp/>fig1.add_subplot(Nrows,<sp/>Ncols,<sp/>1+i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X,freq<sp/>=<sp/>mlab.psd(d,<sp/>NFFT=fftlen,<sp/>noverlap=fftlen/4,<sp/>Fs=fs_o,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>d:<sp/>d*winfunc(fftlen),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale_by_freq=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X_o<sp/>=<sp/>10.0*scipy.log10(abs(X))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_o<sp/>=<sp/>scipy.arange(-fs_o/2.0,<sp/>fs_o/2.0,<sp/>fs_o/float(X_o.size))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p2_f<sp/>=<sp/>sp1_f.plot(f_o,<sp/>X_o,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f.set_xlim([<ref refid="core__algorithms_8h_1a8ee42a5dd83886e7ad61d451d5a32956" kindref="member">min</ref>(f_o),<sp/>max(f_o)+1])</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f.set_ylim([-200.0,<sp/>50.0])</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f.set_title((</highlight><highlight class="stringliteral">&quot;Channel<sp/>%d&quot;</highlight><highlight class="normal"><sp/>%<sp/>i),<sp/>weight=</highlight><highlight class="stringliteral">&quot;bold&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f.set_xlabel(</highlight><highlight class="stringliteral">&quot;Frequency<sp/>(Hz)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp1_f.set_ylabel(</highlight><highlight class="stringliteral">&quot;Power<sp/>(dBW)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x_o<sp/>=<sp/>scipy.array(d)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_o<sp/>=<sp/>scipy.arange(0,<sp/>Tmax_o,<sp/>Ts_o)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o<sp/>=<sp/>fig2.add_subplot(Nrows,<sp/>Ncols,<sp/>1+i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p2_o<sp/>=<sp/>sp2_o.plot(t_o,<sp/>x_o.real,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p2_o<sp/>=<sp/>sp2_o.plot(t_o,<sp/>x_o.imag,<sp/></highlight><highlight class="stringliteral">&quot;</highlight><highlight class="stringliteral">r&quot;)</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o.set_xlim([<ref refid="core__algorithms_8h_1a8ee42a5dd83886e7ad61d451d5a32956" kindref="member">min</ref>(t_o),<sp/>max(t_o)+1])</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o.set_ylim([-2,<sp/>2])</highlight></codeline>
+<codeline><highlight class="stringliteral"></highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o.set_title((</highlight><highlight class="stringliteral">&quot;Channel<sp/>%d&quot;</highlight><highlight class="normal"><sp/>%<sp/>i),<sp/>weight=</highlight><highlight class="stringliteral">&quot;bold&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o.set_xlabel(</highlight><highlight class="stringliteral">&quot;Time<sp/>(s)&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sp2_o.set_ylabel(</highlight><highlight class="stringliteral">&quot;Amplitude&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pylab.show()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="aadvark_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>KeyboardInterrupt:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

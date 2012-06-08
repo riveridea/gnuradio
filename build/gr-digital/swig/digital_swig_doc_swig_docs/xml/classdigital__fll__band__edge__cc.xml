@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__fll__band__edge__cc" kind="class" prot="public">
+    <compoundname>digital_fll_band_edge_cc</compoundname>
+    <includes refid="digital__fll__band__edge__cc_8h" local="no">digital_fll_band_edge_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1aa257a1712886ca42599ad89e2a45a782" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_fll_band_edge_cc::d_sps</definition>
+        <argsstring></argsstring>
+        <name>d_sps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1a4d8fcde3cb381546c6c9d5d63bab5098" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float digital_fll_band_edge_cc::d_rolloff</definition>
+        <argsstring></argsstring>
+        <name>d_rolloff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="105" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1a1eaada85b01b468b566295a5cac60fac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_fll_band_edge_cc::d_filter_size</definition>
+        <argsstring></argsstring>
+        <name>d_filter_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1a3a95eba897f26e5a8d85df20f6d6da64" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_fll_band_edge_cc::d_taps_lower</definition>
+        <argsstring></argsstring>
+        <name>d_taps_lower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="108" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1a38e73c0da37f5294bbce687d96c7c9c9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; digital_fll_band_edge_cc::d_taps_upper</definition>
+        <argsstring></argsstring>
+        <name>d_taps_upper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="109" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__fll__band__edge__cc_1a99365e74a1a812a2103b017adf2c9956" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool digital_fll_band_edge_cc::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__fll__band__edge__cc_1a47343f460ab71f33e8bf5574e65ff546" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__fll__band__edge__cc_8h_1a0d55f0e4504ac73586a70ea61e89393b" kindref="member">digital_fll_band_edge_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_fll_band_edge_cc_sptr digital_make_fll_band_edge_cc</definition>
+        <argsstring>(float samps_per_sym, float rolloff, int filter_size, float bandwidth)</argsstring>
+        <name>digital_make_fll_band_edge_cc</name>
+        <param>
+          <type>float</type>
+          <declname>samps_per_sym</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rolloff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filter_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bandwidth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the FLL <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samps_per_sym</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Number of samples per symbol of signal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rolloff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Rolloff factor of signal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(int) Size (in taps) of the filter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Loop bandwidth </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a9108d05cbb2bc69aa87577daacfb27d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_fll_band_edge_cc::digital_fll_band_edge_cc</definition>
+        <argsstring>(float samps_per_sym, float rolloff, int filter_size, float bandwidth)</argsstring>
+        <name>digital_fll_band_edge_cc</name>
+        <param>
+          <type>float</type>
+          <declname>samps_per_sym</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rolloff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filter_size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bandwidth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the FLL <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samps_per_sym</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) number of samples per symbol </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rolloff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Rolloff (excess bandwidth) of signal filter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(int) number of filter taps to generate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Loop bandwidth </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1adff25f647b1c4b2df941fd28c330c314" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_fll_band_edge_cc::design_filter</definition>
+        <argsstring>(float samps_per_sym, float rolloff, int filter_size)</argsstring>
+        <name>design_filter</name>
+        <param>
+          <type>float</type>
+          <declname>samps_per_sym</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rolloff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>filter_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Design the band-edge filter based on the number of samples per symbol, filter rolloff factor, and the filter size</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samps_per_sym</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Number of samples per symbol of signal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rolloff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) Rolloff factor of signal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(int) Size (in taps) of the filter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="130"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a004a5fc17c872e79441c45d8f6d04ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_fll_band_edge_cc::~digital_fll_band_edge_cc</definition>
+        <argsstring>()</argsstring>
+        <name>~digital_fll_band_edge_cc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a715ad2b58ed72215e9c18dded5e795fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_fll_band_edge_cc::set_samples_per_symbol</definition>
+        <argsstring>(float sps)</argsstring>
+        <name>set_samples_per_symbol</name>
+        <param>
+          <type>float</type>
+          <declname>sps</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of samples per symbol. </para>        </briefdescription>
+        <detaileddescription>
+<para>Set&apos;s the number of samples per symbol the system should use. This value is uesd to calculate the filter taps and will force a recalculation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new samples per symbol </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a21e095d982156aa20d6520c3a727792f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_fll_band_edge_cc::set_rolloff</definition>
+        <argsstring>(float rolloff)</argsstring>
+        <name>set_rolloff</name>
+        <param>
+          <type>float</type>
+          <declname>rolloff</declname>
+        </param>
+        <briefdescription>
+<para>Set the rolloff factor of the shaping filter. </para>        </briefdescription>
+        <detaileddescription>
+<para>This sets the rolloff factor that is used in the pulse shaping filter and is used to calculate the filter taps. Changing this will force a recalculation of the filter taps.</para><para>This should be the same value that is used in the transmitter&apos;s pulse shaping filter. It must be between 0 and 1 and is usually between 0.2 and 0.5 (where 0.22 and 0.35 are commonly used values).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rolloff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) new shaping filter rolloff factor [0,1] </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1aa8636daf360b3d8d568706cd91bcba0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_fll_band_edge_cc::set_filter_size</definition>
+        <argsstring>(int filter_size)</argsstring>
+        <name>set_filter_size</name>
+        <param>
+          <type>int</type>
+          <declname>filter_size</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of taps in the filter. </para>        </briefdescription>
+        <detaileddescription>
+<para>This sets the number of taps in the band-edge filters. Setting this will force a recalculation of the filter taps.</para><para>This should be about the same number of taps used in the transmitter&apos;s shaping filter and also not very large. A large number of taps will result in a large delay between input and frequency estimation, and so will not be as accurate. Between 30 and 70 taps is usual.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filter_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) number of taps in the filters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a10c4485e9ae99eca54c836c05068fb62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_fll_band_edge_cc::get_samples_per_symbol</definition>
+        <argsstring>() const </argsstring>
+        <name>get_samples_per_symbol</name>
+        <briefdescription>
+<para>Returns the number of sampler per symbol used for the filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1ac914d2310cd29063274ba9084bb2dbc1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_fll_band_edge_cc::get_rolloff</definition>
+        <argsstring>() const </argsstring>
+        <name>get_rolloff</name>
+        <briefdescription>
+<para>Returns the rolloff factor used for the filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a68f0652ab400187d89279ef48a06e581" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_fll_band_edge_cc::get_filter_size</definition>
+        <argsstring>() const </argsstring>
+        <name>get_filter_size</name>
+        <briefdescription>
+<para>Returns the number of taps of the filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1acadafb1a31af91565c94c0d579337a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_fll_band_edge_cc::print_taps</definition>
+        <argsstring>()</argsstring>
+        <name>print_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the taps to screen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__fll__band__edge__cc_1a6d0ec877c1e1f201a4127c6050938902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_fll_band_edge_cc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="211"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Frequency Lock Loop using band-edge filters. </para>    </briefdescription>
+    <detaileddescription>
+<para>The frequency lock loop derives a band-edge filter that covers the upper and lower bandwidths of a digitally-modulated signal. The bandwidth range is determined by the excess bandwidth (e.g., rolloff factor) of the modulated signal. The placement in frequency of the band-edges is determined by the oversampling ratio (number of samples per symbol) and the excess bandwidth. The size of the filters should be fairly large so as to average over a number of symbols.</para><para>The FLL works by filtering the upper and lower band edges into x_u(t) and x_l(t), respectively. These are combined to form cc(t) = x_u(t) + x_l(t) and ss(t) = x_u(t) - x_l(t). Combining these to form the signal e(t) = Re{cc(t) \times ss(t)^*} (where ^* is the complex conjugate) provides an error signal at the DC term that is directly proportional to the carrier frequency. We then make a second-order loop using the error signal that is the running average of e(t).</para><para>In practice, the above equation can be simplified by just comparing the absolute value squared of the output of both filters: abs(x_l(t))^2 - abs(x_u(t))^2 = norm(x_l(t)) - norm(x_u(t)).</para><para>In theory, the band-edge filter is the derivative of the matched filter in frequency, (H_be(f) = frac{H(f)}{df}). In practice, this comes down to a quarter sine wave at the point of the matched filter&apos;s rolloff (if it&apos;s a raised-cosine, the derivative of a cosine is a sine). Extend this sine by another quarter wave to make a half wave around the band-edges is equivalent in time to the sum of two sinc functions. The baseband filter fot the band edges is therefore derived from this sum of sincs. The band edge filters are then just the baseband signal modulated to the correct place in frequency. All of these calculations are done in the &apos;design_filter&apos; function.</para><para>Note: We use FIR filters here because the filters have to have a flat phase response over the entire frequency range to allow their comparisons to be valid.</para><para>It is very important that the band edge filters be the derivatives of the pulse shaping filter, and that they be linear phase. Otherwise, the variance of the error will be very large. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_fll_band_edge_cc.h" bodystart="89" bodyend="212"/>
+    <listofallmembers>
+      <member refid="classdigital__fll__band__edge__cc_1a1eaada85b01b468b566295a5cac60fac" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_filter_size</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a4d8fcde3cb381546c6c9d5d63bab5098" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_rolloff</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1aa257a1712886ca42599ad89e2a45a782" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_sps</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a3a95eba897f26e5a8d85df20f6d6da64" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_taps_lower</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a38e73c0da37f5294bbce687d96c7c9c9" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_taps_upper</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a99365e74a1a812a2103b017adf2c9956" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>d_updated</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1adff25f647b1c4b2df941fd28c330c314" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>design_filter</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a9108d05cbb2bc69aa87577daacfb27d9" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>digital_fll_band_edge_cc</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a47343f460ab71f33e8bf5574e65ff546" prot="private" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>digital_make_fll_band_edge_cc</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a68f0652ab400187d89279ef48a06e581" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>get_filter_size</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1ac914d2310cd29063274ba9084bb2dbc1" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>get_rolloff</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a10c4485e9ae99eca54c836c05068fb62" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>get_samples_per_symbol</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1acadafb1a31af91565c94c0d579337a45" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>print_taps</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1aa8636daf360b3d8d568706cd91bcba0b" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>set_filter_size</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a21e095d982156aa20d6520c3a727792f" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>set_rolloff</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a715ad2b58ed72215e9c18dded5e795fd" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>set_samples_per_symbol</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a6d0ec877c1e1f201a4127c6050938902" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>work</name></member>
+      <member refid="classdigital__fll__band__edge__cc_1a004a5fc17c872e79441c45d8f6d04ef9" prot="public" virt="non-virtual"><scope>digital_fll_band_edge_cc</scope><name>~digital_fll_band_edge_cc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

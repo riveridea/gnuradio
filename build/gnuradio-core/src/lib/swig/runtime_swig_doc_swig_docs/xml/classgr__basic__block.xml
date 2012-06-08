@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__basic__block" kind="class" prot="public">
+    <compoundname>gr_basic_block</compoundname>
+    <basecompoundref refid="classgr__msg__accepter" prot="public" virt="non-virtual">gr_msg_accepter</basecompoundref>
+    <derivedcompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</derivedcompoundref>
+    <derivedcompoundref refid="classgr__hier__block2" prot="public" virt="non-virtual">gr_hier_block2</derivedcompoundref>
+    <includes refid="gr__basic__block_8h" local="no">gr_basic_block.h</includes>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" static="no">
+        <name>vcolor</name>
+        <enumvalue id="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected">
+          <name>WHITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected">
+          <name>GREY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected">
+          <name>BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classgr__basic__block_1afac0c8ae7c8c0ab7c8e915caad153797" prot="private" static="no">
+        <type>boost::function&lt; void(pmt::pmt_t)&gt;</type>
+        <definition>typedef boost::function&lt;void(pmt::pmt_t)&gt; gr_basic_block::msg_handler_t</definition>
+        <argsstring></argsstring>
+        <name>msg_handler_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__basic__block_1a22296d45e0c532da5753112c125435e3" prot="private" static="no" mutable="no">
+        <type>msg_handler_t</type>
+        <definition>msg_handler_t gr_basic_block::d_msg_handler</definition>
+        <argsstring></argsstring>
+        <name>d_msg_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class gr_flowgraph</definition>
+        <argsstring></argsstring>
+        <name>gr_flowgraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class gr_flat_flowgraph</definition>
+        <argsstring></argsstring>
+        <name>gr_flat_flowgraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class gr_tpb_thread_body</definition>
+        <argsstring></argsstring>
+        <name>gr_tpb_thread_body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string gr_basic_block::d_name</definition>
+        <argsstring></argsstring>
+        <name>d_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" static="no" mutable="no">
+        <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+        <definition>gr_io_signature_sptr gr_basic_block::d_input_signature</definition>
+        <argsstring></argsstring>
+        <name>d_input_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" static="no" mutable="no">
+        <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+        <definition>gr_io_signature_sptr gr_basic_block::d_output_signature</definition>
+        <argsstring></argsstring>
+        <name>d_output_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_basic_block::d_unique_id</definition>
+        <argsstring></argsstring>
+        <name>d_unique_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" static="no" mutable="no">
+        <type><ref refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" kindref="member">vcolor</ref></type>
+        <definition>vcolor gr_basic_block::d_color</definition>
+        <argsstring></argsstring>
+        <name>d_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__basic__block_1a030200df9a92ff9fcb6bd2be038414c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_basic_block::dispatch_msg</definition>
+        <argsstring>(pmt::pmt_t msg)</argsstring>
+        <name>dispatch_msg</name>
+        <param>
+          <type>pmt::pmt_t</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_basic_block::gr_basic_block</definition>
+        <argsstring>(void)</argsstring>
+        <name>gr_basic_block</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="77" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_basic_block::gr_basic_block</definition>
+        <argsstring>(const std::string &amp;name, gr_io_signature_sptr input_signature, gr_io_signature_sptr output_signature)</argsstring>
+        <name>gr_basic_block</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>input_signature</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>output_signature</declname>
+        </param>
+        <briefdescription>
+<para>Protected constructor prevents instantiation by non-derived classes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_basic_block::set_input_signature</definition>
+        <argsstring>(gr_io_signature_sptr iosig)</argsstring>
+        <name>set_input_signature</name>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>iosig</declname>
+        </param>
+        <briefdescription>
+<para>may only be called during constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_basic_block::set_output_signature</definition>
+        <argsstring>(gr_io_signature_sptr iosig)</argsstring>
+        <name>set_output_signature</name>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>iosig</declname>
+        </param>
+        <briefdescription>
+<para>may only be called during constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="90" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_basic_block::set_color</definition>
+        <argsstring>(vcolor color)</argsstring>
+        <name>set_color</name>
+        <param>
+          <type><ref refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" kindref="member">vcolor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Allow the flowgraph to set for sorting and partitioning. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="97" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" kindref="member">vcolor</ref></type>
+        <definition>vcolor gr_basic_block::color</definition>
+        <argsstring>() const </argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_basic_block::~gr_basic_block</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_basic_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long gr_basic_block::unique_id</definition>
+        <argsstring>() const </argsstring>
+        <name>unique_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="102" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gr_basic_block::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="103" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+        <definition>gr_io_signature_sptr gr_basic_block::input_signature</definition>
+        <argsstring>() const </argsstring>
+        <name>input_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="104" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+        <definition>gr_io_signature_sptr gr_basic_block::output_signature</definition>
+        <argsstring>() const </argsstring>
+        <name>output_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="105" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__runtime__types_8h_1a23ef33c86a39e7aefe87abcb2c7bede5" kindref="member">gr_basic_block_sptr</ref></type>
+        <definition>gr_basic_block_sptr gr_basic_block::to_basic_block</definition>
+        <argsstring>()</argsstring>
+        <name>to_basic_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_basic_block::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+<para>Confirm that ninputs and noutputs is an acceptable combination. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ninputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input streams connected </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>noutputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output streams connected</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this is a valid configuration for this block.</para></simplesect>
+This function is called by the runtime system whenever the topology changes. Most classes do not need to override this. This check is in addition to the constraints specified by the input and output gr_io_signatures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void gr_basic_block::set_msg_handler</definition>
+        <argsstring>(T msg_handler)</argsstring>
+        <name>set_msg_handler</name>
+        <param>
+          <type>T</type>
+          <declname>msg_handler</declname>
+        </param>
+        <briefdescription>
+<para>Set the callback that is fired when messages are available. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>msg_handler</computeroutput> can be any kind of function pointer or function object that has the signature: <preformatted>
+    void msg_handler(pmt::pmt msg);
+ </preformatted></para><para>(You may want to use boost::bind to massage your callable into the correct form. See gr_nop.{h,cc} for an example that sets up a class method as the callback.)</para><para>Blocks that desire to handle messages must call this method in their constructors to register the handler that will be invoked when messages are available.</para><para>If the block inherits from <ref refid="classgr__block" kindref="compound">gr_block</ref>, the runtime system will ensure that msg_handler is called in a thread-safe manner, such that work and msg_handler will never be called concurrently. This allows msg_handler to update state variables without having to worry about thread-safety issues with work, general_work or another invocation of msg_handler.</para><para>If the block inherits from <ref refid="classgr__hier__block2" kindref="compound">gr_hier_block2</ref>, the runtime system will ensure that no reentrant calls are made to msg_handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="149" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The abstract base class for all signal processing blocks.</para><para>Basic blocks are the bare abstraction of an entity that has a name, a set of inputs and outputs, and a message queue. These are never instantiated directly; rather, this is the abstract parent class of both gr_hier_block, which is a recursive container, and <ref refid="classgr__block" kindref="compound">gr_block</ref>, which implements actual signal processing functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="318">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="320">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>gr_sync_decimator</label>
+        <link refid="classgr__sync__decimator"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="317" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>gr_hier_block2</label>
+        <link refid="classgr__hier__block2"/>
+        <childnode refid="317" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>gr_sync_interpolator</label>
+        <link refid="classgr__sync__interpolator"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>gr_top_block</label>
+        <link refid="classgr__top__block"/>
+        <childnode refid="323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="318" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="326">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="328">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="325">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="326" relation="public-inheritance">
+        </childnode>
+        <childnode refid="327" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="327">
+        <label>std::string</label>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_basic_block.h" bodystart="45" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_basic_block</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>color</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>d_color</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>d_input_signature</name></member>
+      <member refid="classgr__basic__block_1a22296d45e0c532da5753112c125435e3" prot="private" virt="non-virtual"><scope>gr_basic_block</scope><name>d_msg_handler</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>d_output_signature</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>d_unique_id</name></member>
+      <member refid="classgr__basic__block_1a030200df9a92ff9fcb6bd2be038414c6" prot="private" virt="non-virtual"><scope>gr_basic_block</scope><name>dispatch_msg</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>GREY</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>input_signature</name></member>
+      <member refid="classgr__basic__block_1afac0c8ae7c8c0ab7c8e915caad153797" prot="private" virt="non-virtual"><scope>gr_basic_block</scope><name>msg_handler_t</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>name</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>post</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>set_color</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>set_input_signature</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>set_output_signature</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>to_basic_block</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_basic_block</scope><name>WHITE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_basic_block</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_basic_block</scope><name>~gr_msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

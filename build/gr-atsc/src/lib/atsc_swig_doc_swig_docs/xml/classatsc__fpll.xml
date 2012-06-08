@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__fpll" kind="class" prot="public">
+    <compoundname>atsc_fpll</compoundname>
+    <includes refid="atsc__fpll_8h" local="no">atsc_fpll.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__fpll_1a9b68a94310ab5cbac70d12f9426643c2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double atsc_fpll::initial_freq</definition>
+        <argsstring></argsstring>
+        <name>initial_freq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1a39ded48af6b35c3999cad3f8e49aee6d" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double atsc_fpll::initial_phase</definition>
+        <argsstring></argsstring>
+        <name>initial_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1a97fadd7142101e744ec79503d6147d89" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool atsc_fpll::debug_no_update</definition>
+        <argsstring></argsstring>
+        <name>debug_no_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1a86eb0d132cb9b27682d354824d532759" prot="protected" static="no" mutable="no">
+        <type>gr_nco&lt; float, float &gt;</type>
+        <definition>gr_nco&lt;float,float&gt; atsc_fpll::nco</definition>
+        <argsstring></argsstring>
+        <name>nco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1ae68827d82cbcef8354122355b0f933ca" prot="protected" static="no" mutable="no">
+        <type>gri_agc_ff</type>
+        <definition>gri_agc_ff atsc_fpll::agc</definition>
+        <argsstring></argsstring>
+        <name>agc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1a091e43d4369e27403ce90b179df8afac" prot="protected" static="no" mutable="no">
+        <type>gr_single_pole_iir&lt; float, float, float &gt;</type>
+        <definition>gr_single_pole_iir&lt;float,float,float&gt; atsc_fpll::afci</definition>
+        <argsstring></argsstring>
+        <name>afci</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__fpll_1a984af3d4142815e17ee5b1b3b56afefb" prot="protected" static="no" mutable="no">
+        <type>gr_single_pole_iir&lt; float, float, float &gt;</type>
+        <definition>gr_single_pole_iir&lt;float,float,float&gt; atsc_fpll::afcq</definition>
+        <argsstring></argsstring>
+        <name>afcq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__fpll_1a2c4fbd8547dbaddb16c75c2d0818d32e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__fpll_8h_1a6f11fbfc40dafe36be4e0d83075fd956" kindref="member">atsc_fpll_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_fpll_sptr atsc_make_fpll</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_fpll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__fpll_1aa2c74adbc6a3847efa98b0e3c06236e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_fpll::atsc_fpll</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_fpll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__fpll_1a360eb1a8a3bf0846da3d6bdec90e4f74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_fpll::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__fpll_1aa758dbb37153272f201bb971a4a3fbbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_fpll::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__fpll_1a2dea86a424245734329c470bcd9276c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_fpll::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC FPLL (2nd Version)</para><para>A/D --&gt; GrFIRfilterFFF ----&gt; <ref refid="classGrAtscFPLL" kindref="compound">GrAtscFPLL</ref> ----&gt; </para>    </briefdescription>
+    <detaileddescription>
+<para>We use GrFIRfilterFFF to bandpass filter the signal of interest.</para><para>This class accepts a single real input and produces a single real output </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_fpll.h" bodystart="49" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classatsc__fpll_1a091e43d4369e27403ce90b179df8afac" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>afci</name></member>
+      <member refid="classatsc__fpll_1a984af3d4142815e17ee5b1b3b56afefb" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>afcq</name></member>
+      <member refid="classatsc__fpll_1ae68827d82cbcef8354122355b0f933ca" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>agc</name></member>
+      <member refid="classatsc__fpll_1aa2c74adbc6a3847efa98b0e3c06236e0" prot="private" virt="non-virtual"><scope>atsc_fpll</scope><name>atsc_fpll</name></member>
+      <member refid="classatsc__fpll_1a2c4fbd8547dbaddb16c75c2d0818d32e" prot="private" virt="non-virtual"><scope>atsc_fpll</scope><name>atsc_make_fpll</name></member>
+      <member refid="classatsc__fpll_1a97fadd7142101e744ec79503d6147d89" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>debug_no_update</name></member>
+      <member refid="classatsc__fpll_1a9b68a94310ab5cbac70d12f9426643c2" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>initial_freq</name></member>
+      <member refid="classatsc__fpll_1a39ded48af6b35c3999cad3f8e49aee6d" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>initial_phase</name></member>
+      <member refid="classatsc__fpll_1a2dea86a424245734329c470bcd9276c4" prot="public" virt="non-virtual"><scope>atsc_fpll</scope><name>initialize</name></member>
+      <member refid="classatsc__fpll_1a86eb0d132cb9b27682d354824d532759" prot="protected" virt="non-virtual"><scope>atsc_fpll</scope><name>nco</name></member>
+      <member refid="classatsc__fpll_1aa758dbb37153272f201bb971a4a3fbbc" prot="public" virt="non-virtual"><scope>atsc_fpll</scope><name>reset</name></member>
+      <member refid="classatsc__fpll_1a360eb1a8a3bf0846da3d6bdec90e4f74" prot="public" virt="non-virtual"><scope>atsc_fpll</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

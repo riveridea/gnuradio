@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__constellation__decoder__cb" kind="class" prot="public">
+    <compoundname>digital_constellation_decoder_cb</compoundname>
+    <includes refid="digital__constellation__decoder__cb_8h" local="no">digital_constellation_decoder_cb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__constellation__decoder__cb_1a78b8d6bc2b80626b77ed6b258be1ad0e" prot="private" static="no" mutable="no">
+        <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+        <definition>digital_constellation_sptr digital_constellation_decoder_cb::d_constellation</definition>
+        <argsstring></argsstring>
+        <name>d_constellation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__constellation__decoder__cb_1a1d071ad75e0702354162bdb57ca1af89" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int digital_constellation_decoder_cb::d_dim</definition>
+        <argsstring></argsstring>
+        <name>d_dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__constellation__decoder__cb_1acc14dc9379e52cfd11d100586bae90ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__constellation__decoder__cb_8h_1ac029b7658df7c6e25f22e3ea5b9bdd30" kindref="member">digital_constellation_decoder_cb_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_constellation_decoder_cb_sptr digital_make_constellation_decoder_cb</definition>
+        <argsstring>(digital_constellation_sptr constellation)</argsstring>
+        <name>digital_make_constellation_decoder_cb</name>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>constellation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__constellation__decoder__cb_1a34d12f3277ac31ff40a719332535db6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_constellation_decoder_cb::digital_constellation_decoder_cb</definition>
+        <argsstring>(digital_constellation_sptr constellation)</argsstring>
+        <name>digital_constellation_decoder_cb</name>
+        <param>
+          <type><ref refid="digital__constellation_8h_1a91522da9012baccbab89a768b6fb6e42" kindref="member">digital_constellation_sptr</ref></type>
+          <declname>constellation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__constellation__decoder__cb_1a4758a9db6586f143e48f80a36c655a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_constellation_decoder_cb::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__constellation__decoder__cb_1a90f4b2c5b2202ccf22cb884420636335" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_constellation_decoder_cb::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Constellation Decoder. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_constellation_decoder_cb.h" bodystart="43" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classdigital__constellation__decoder__cb_1a78b8d6bc2b80626b77ed6b258be1ad0e" prot="private" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>d_constellation</name></member>
+      <member refid="classdigital__constellation__decoder__cb_1a1d071ad75e0702354162bdb57ca1af89" prot="private" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>d_dim</name></member>
+      <member refid="classdigital__constellation__decoder__cb_1a34d12f3277ac31ff40a719332535db6d" prot="private" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>digital_constellation_decoder_cb</name></member>
+      <member refid="classdigital__constellation__decoder__cb_1acc14dc9379e52cfd11d100586bae90ae" prot="private" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>digital_make_constellation_decoder_cb</name></member>
+      <member refid="classdigital__constellation__decoder__cb_1a4758a9db6586f143e48f80a36c655a3f" prot="public" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>forecast</name></member>
+      <member refid="classdigital__constellation__decoder__cb_1a90f4b2c5b2202ccf22cb884420636335" prot="public" virt="non-virtual"><scope>digital_constellation_decoder_cb</scope><name>general_work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

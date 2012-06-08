@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="qtgui__util_8h" kind="file">
+    <compoundname>qtgui_util.h</compoundname>
+    <includes local="no">qevent.h</includes>
+    <includes refid="gr__qtgui__api_8h" local="no">gr_qtgui_api.h</includes>
+    <includes local="no">qwt_plot_picker.h</includes>
+    <includes local="no">qwt_picker_machine.h</includes>
+    <incdepgraph>
+      <node id="15661">
+        <label>gr_qtgui_api.h</label>
+        <link refid="gr__qtgui__api_8h"/>
+        <childnode refid="15662" relation="include">
+        </childnode>
+      </node>
+      <node id="15662">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="15660">
+        <label>qevent.h</label>
+      </node>
+      <node id="15664">
+        <label>qwt_picker_machine.h</label>
+      </node>
+      <node id="15659">
+        <label>qtgui_util.h</label>
+        <link refid="qtgui_util.h"/>
+        <childnode refid="15660" relation="include">
+        </childnode>
+        <childnode refid="15661" relation="include">
+        </childnode>
+        <childnode refid="15663" relation="include">
+        </childnode>
+        <childnode refid="15664" relation="include">
+        </childnode>
+      </node>
+      <node id="15663">
+        <label>qwt_plot_picker.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classQwtDblClickPlotPicker" prot="public">QwtDblClickPlotPicker</innerclass>
+    <innerclass refid="classQwtPickerDblClickPointMachine" prot="public">QwtPickerDblClickPointMachine</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_util.h"/>
+  </compounddef>
+</doxygen>

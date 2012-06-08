@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classtrellis__siso__f" kind="class" prot="public">
+    <compoundname>trellis_siso_f</compoundname>
+    <includes refid="trellis__siso__f_8h" local="no">trellis_siso_f.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtrellis__siso__f_1ad335ecc44508ab11337c6ed19bf934eb" prot="private" static="no" mutable="no">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_siso_f::d_FSM</definition>
+        <argsstring></argsstring>
+        <name>d_FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1aefd5419607f651c8da31a52ca827692f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_siso_f::d_K</definition>
+        <argsstring></argsstring>
+        <name>d_K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1ae17d7267b0f11b4db912dc1853cd0bf6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_siso_f::d_S0</definition>
+        <argsstring></argsstring>
+        <name>d_S0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1af59d460e05e33ac6022d74e7a5abb749" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int trellis_siso_f::d_SK</definition>
+        <argsstring></argsstring>
+        <name>d_SK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1ae38c5512eec06a466da4496f2489a5b5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool trellis_siso_f::d_POSTI</definition>
+        <argsstring></argsstring>
+        <name>d_POSTI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1a35cb5c4079721bc8b2512814013456ba" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool trellis_siso_f::d_POSTO</definition>
+        <argsstring></argsstring>
+        <name>d_POSTO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtrellis__siso__f_1a9022319cc6679abb2f390879d9ca9574" prot="private" static="no" mutable="no">
+        <type><ref refid="siso__type_8h_1ae9796e8d4233b80431bb2c59b916c0d8" kindref="member">trellis_siso_type_t</ref></type>
+        <definition>trellis_siso_type_t trellis_siso_f::d_SISO_TYPE</definition>
+        <argsstring></argsstring>
+        <name>d_SISO_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtrellis__siso__f_1a7d06064ad56e6fed5b8b4c956d3269c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="trellis__siso__f_8h_1a35c281fe8d4486a64a11f72c84a51e51" kindref="member">trellis_siso_f_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT trellis_siso_f_sptr trellis_make_siso_f</definition>
+        <argsstring>(const fsm &amp;FSM, int K, int S0, int SK, bool POSTI, bool POSTO, trellis_siso_type_t d_SISO_TYPE)</argsstring>
+        <name>trellis_make_siso_f</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTI</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTO</declname>
+        </param>
+        <param>
+          <type><ref refid="siso__type_8h_1ae9796e8d4233b80431bb2c59b916c0d8" kindref="member">trellis_siso_type_t</ref></type>
+          <declname>d_SISO_TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtrellis__siso__f_1a0e12ed38de1f9bf5d844e7b49c04528f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>trellis_siso_f::trellis_siso_f</definition>
+        <argsstring>(const fsm &amp;FSM, int K, int S0, int SK, bool POSTI, bool POSTO, trellis_siso_type_t d_SISO_TYPE)</argsstring>
+        <name>trellis_siso_f</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTI</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTO</declname>
+        </param>
+        <param>
+          <type><ref refid="siso__type_8h_1ae9796e8d4233b80431bb2c59b916c0d8" kindref="member">trellis_siso_type_t</ref></type>
+          <declname>d_SISO_TYPE</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrellis__siso__f_1aab4237b6e77b3177c3d353a5d552029e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfsm" kindref="compound">fsm</ref></type>
+        <definition>fsm trellis_siso_f::FSM</definition>
+        <argsstring>() const </argsstring>
+        <name>FSM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1a4c1f8495a7526c6374f6f051b0912921" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_siso_f::K</definition>
+        <argsstring>() const </argsstring>
+        <name>K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1a3b5d4fea5fea5accf525dd079fabe25c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_siso_f::S0</definition>
+        <argsstring>() const </argsstring>
+        <name>S0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1adf64c3c0f7fee9a88016a3a8c221e25b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_siso_f::SK</definition>
+        <argsstring>() const </argsstring>
+        <name>SK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1ae185e1e650ed93719e046ae83e43b03c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool trellis_siso_f::POSTI</definition>
+        <argsstring>() const </argsstring>
+        <name>POSTI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="86" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1a1c0e95c589eb6432eadabbbd7a380769" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool trellis_siso_f::POSTO</definition>
+        <argsstring>() const </argsstring>
+        <name>POSTO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="87" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1a85789bd1e53ece369d260fe7a3e9306c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="siso__type_8h_1ae9796e8d4233b80431bb2c59b916c0d8" kindref="member">trellis_siso_type_t</ref></type>
+        <definition>trellis_siso_type_t trellis_siso_f::SISO_TYPE</definition>
+        <argsstring>() const </argsstring>
+        <name>SISO_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="88" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1aa5366683a88d6a1394e59cf6312ac911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void trellis_siso_f::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrellis__siso__f_1a1312072636318076e83af3172dcb3bb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int trellis_siso_f::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/trellis_siso_f.h" bodystart="49" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classtrellis__siso__f_1ad335ecc44508ab11337c6ed19bf934eb" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_FSM</name></member>
+      <member refid="classtrellis__siso__f_1aefd5419607f651c8da31a52ca827692f" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_K</name></member>
+      <member refid="classtrellis__siso__f_1ae38c5512eec06a466da4496f2489a5b5" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_POSTI</name></member>
+      <member refid="classtrellis__siso__f_1a35cb5c4079721bc8b2512814013456ba" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_POSTO</name></member>
+      <member refid="classtrellis__siso__f_1ae17d7267b0f11b4db912dc1853cd0bf6" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_S0</name></member>
+      <member refid="classtrellis__siso__f_1a9022319cc6679abb2f390879d9ca9574" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_SISO_TYPE</name></member>
+      <member refid="classtrellis__siso__f_1af59d460e05e33ac6022d74e7a5abb749" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>d_SK</name></member>
+      <member refid="classtrellis__siso__f_1aa5366683a88d6a1394e59cf6312ac911" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>forecast</name></member>
+      <member refid="classtrellis__siso__f_1aab4237b6e77b3177c3d353a5d552029e" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>FSM</name></member>
+      <member refid="classtrellis__siso__f_1a1312072636318076e83af3172dcb3bb0" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>general_work</name></member>
+      <member refid="classtrellis__siso__f_1a4c1f8495a7526c6374f6f051b0912921" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>K</name></member>
+      <member refid="classtrellis__siso__f_1ae185e1e650ed93719e046ae83e43b03c" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>POSTI</name></member>
+      <member refid="classtrellis__siso__f_1a1c0e95c589eb6432eadabbbd7a380769" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>POSTO</name></member>
+      <member refid="classtrellis__siso__f_1a3b5d4fea5fea5accf525dd079fabe25c" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>S0</name></member>
+      <member refid="classtrellis__siso__f_1a85789bd1e53ece369d260fe7a3e9306c" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>SISO_TYPE</name></member>
+      <member refid="classtrellis__siso__f_1adf64c3c0f7fee9a88016a3a8c221e25b" prot="public" virt="non-virtual"><scope>trellis_siso_f</scope><name>SK</name></member>
+      <member refid="classtrellis__siso__f_1a7d06064ad56e6fed5b8b4c956d3269c4" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>trellis_make_siso_f</name></member>
+      <member refid="classtrellis__siso__f_1a0e12ed38de1f9bf5d844e7b49c04528f" prot="private" virt="non-virtual"><scope>trellis_siso_f</scope><name>trellis_siso_f</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

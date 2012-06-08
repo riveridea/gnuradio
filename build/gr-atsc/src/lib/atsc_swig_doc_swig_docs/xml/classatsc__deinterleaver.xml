@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__deinterleaver" kind="class" prot="public">
+    <compoundname>atsc_deinterleaver</compoundname>
+    <includes refid="atsc__deinterleaver_8h" local="no">atsc_deinterleaver.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsc__deinterleaver_1a0706d2e06b0ae3fe4e3c09cbdc9837bd" prot="private" static="no" mutable="no">
+        <type><ref refid="classatsci__data__deinterleaver" kindref="compound">atsci_data_deinterleaver</ref></type>
+        <definition>atsci_data_deinterleaver atsc_deinterleaver::d_deinterleaver</definition>
+        <argsstring></argsstring>
+        <name>d_deinterleaver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__deinterleaver_1a76aff2cb4da3fc1a6d76729a3b4dfbbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__deinterleaver_8h_1a285d7c3e8c861f940bbfe9e5baeaff1b" kindref="member">atsc_deinterleaver_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_deinterleaver_sptr atsc_make_deinterleaver</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_deinterleaver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__deinterleaver_1ab5b6aa218e9392b90f8e6eb504d32b28" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_deinterleaver::atsc_deinterleaver</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_deinterleaver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__deinterleaver_1ae01197be40ce099c432be542a185a0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_deinterleaver::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__deinterleaver_1ad6886f20b6a4745fd456bcacd13e14ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_deinterleaver::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Deinterleave RS encoded ATSC data ( <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref> --&gt; <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>)</para><para>input: <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>; output: <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_deinterleaver.h" bodystart="40" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classatsc__deinterleaver_1ab5b6aa218e9392b90f8e6eb504d32b28" prot="private" virt="non-virtual"><scope>atsc_deinterleaver</scope><name>atsc_deinterleaver</name></member>
+      <member refid="classatsc__deinterleaver_1a76aff2cb4da3fc1a6d76729a3b4dfbbd" prot="private" virt="non-virtual"><scope>atsc_deinterleaver</scope><name>atsc_make_deinterleaver</name></member>
+      <member refid="classatsc__deinterleaver_1a0706d2e06b0ae3fe4e3c09cbdc9837bd" prot="private" virt="non-virtual"><scope>atsc_deinterleaver</scope><name>d_deinterleaver</name></member>
+      <member refid="classatsc__deinterleaver_1ad6886f20b6a4745fd456bcacd13e14ab" prot="public" virt="non-virtual"><scope>atsc_deinterleaver</scope><name>reset</name></member>
+      <member refid="classatsc__deinterleaver_1ae01197be40ce099c432be542a185a0df" prot="public" virt="non-virtual"><scope>atsc_deinterleaver</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

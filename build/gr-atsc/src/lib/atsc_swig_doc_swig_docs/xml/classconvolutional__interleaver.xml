@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classconvolutional__interleaver" kind="class" prot="public">
+    <compoundname>convolutional_interleaver</compoundname>
+    <includes refid="convolutional__interleaver_8h" local="no">convolutional_interleaver.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>symbol_type</declname>
+        <defname>symbol_type</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int convolutional_interleaver&lt; symbol_type &gt;::m_commutator</definition>
+        <argsstring></argsstring>
+        <name>m_commutator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classconvolutional__interleaver_1a0e5b1c5a67032ce5ec79291e8bc957d1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int convolutional_interleaver&lt; symbol_type &gt;::m_nbanks</definition>
+        <argsstring></argsstring>
+        <name>m_nbanks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classconvolutional__interleaver_1a64583ae8484756fba1845db8adee1bc7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int convolutional_interleaver&lt; symbol_type &gt;::m_fifo_size_incr</definition>
+        <argsstring></argsstring>
+        <name>m_fifo_size_incr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classconvolutional__interleaver_1a361938024041b40e650ff6ad3492d0d7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classinterleaver__fifo" kindref="compound">interleaver_fifo</ref>&lt; symbol_type &gt; * &gt;</type>
+        <definition>std::vector&lt;interleaver_fifo&lt;symbol_type&gt; *&gt; convolutional_interleaver&lt; symbol_type &gt;::m_fifo</definition>
+        <argsstring></argsstring>
+        <name>m_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classconvolutional__interleaver_1ac01f306da38de29b1282f1e5cc5e51c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>convolutional_interleaver&lt; symbol_type &gt;::convolutional_interleaver</definition>
+        <argsstring>(bool interleave_p, int nbanks, int fifo_size_incr)</argsstring>
+        <name>convolutional_interleaver</name>
+        <param>
+          <type>bool</type>
+          <declname>interleave_p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nbanks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fifo_size_incr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="70" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1a4fb48a3b97910049994ea2be0bc91c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>convolutional_interleaver&lt; symbol_type &gt;::~convolutional_interleaver</definition>
+        <argsstring>()</argsstring>
+        <name>~convolutional_interleaver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="95" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1a758195fcfe60037184a30e39e718126a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void convolutional_interleaver&lt; symbol_type &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>reset interleaver (flushes contents and resets commutator) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="102" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1ad47cdb2855d94872bea06fec637b82eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void convolutional_interleaver&lt; symbol_type &gt;::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <briefdescription>
+<para>sync interleaver (resets commutator, but doesn&apos;t flush fifos) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1a95147618a994510cdc46db6f0ee23e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int convolutional_interleaver&lt; symbol_type &gt;::end_to_end_delay</definition>
+        <argsstring>()</argsstring>
+        <name>end_to_end_delay</name>
+        <briefdescription>
+<para>return end to end delay in symbols (delay through concatenated interleaver / deinterleaver) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>symbol_type</type>
+        <definition>symbol_type convolutional_interleaver&lt; symbol_type &gt;::transform</definition>
+        <argsstring>(symbol_type input)</argsstring>
+        <name>transform</name>
+        <param>
+          <type>symbol_type</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>transform a single symbol </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classconvolutional__interleaver_1afe0e221849f0feb4796f620e1858231b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void convolutional_interleaver&lt; symbol_type &gt;::transform</definition>
+        <argsstring>(symbol_type *out, const symbol_type *in, int nsymbols)</argsstring>
+        <name>transform</name>
+        <param>
+          <type>symbol_type *</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const symbol_type *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nsymbols</declname>
+        </param>
+        <briefdescription>
+<para>transform a bunch of symbols </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="117" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>template class for generic convolutional interleaver </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="401">
+        <label>convolutional_interleaver&lt; symbol_type &gt;</label>
+        <link refid="classconvolutional__interleaver"/>
+        <childnode refid="402" relation="usage">
+          <edgelabel>m_fifo</edgelabel>
+        </childnode>
+      </node>
+      <node id="402">
+        <label>std::vector&lt; interleaver_fifo&lt; symbol_type &gt; * &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/convolutional_interleaver.h" bodystart="35" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classconvolutional__interleaver_1ac01f306da38de29b1282f1e5cc5e51c7" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>convolutional_interleaver</name></member>
+      <member refid="classconvolutional__interleaver_1a95147618a994510cdc46db6f0ee23e27" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>end_to_end_delay</name></member>
+      <member refid="classconvolutional__interleaver_1a0ad9833447e269c5e527c4bfdf6ec252" prot="protected" virt="non-virtual"><scope>convolutional_interleaver</scope><name>m_commutator</name></member>
+      <member refid="classconvolutional__interleaver_1a361938024041b40e650ff6ad3492d0d7" prot="protected" virt="non-virtual"><scope>convolutional_interleaver</scope><name>m_fifo</name></member>
+      <member refid="classconvolutional__interleaver_1a64583ae8484756fba1845db8adee1bc7" prot="protected" virt="non-virtual"><scope>convolutional_interleaver</scope><name>m_fifo_size_incr</name></member>
+      <member refid="classconvolutional__interleaver_1a0e5b1c5a67032ce5ec79291e8bc957d1" prot="protected" virt="non-virtual"><scope>convolutional_interleaver</scope><name>m_nbanks</name></member>
+      <member refid="classconvolutional__interleaver_1a758195fcfe60037184a30e39e718126a" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>reset</name></member>
+      <member refid="classconvolutional__interleaver_1ad47cdb2855d94872bea06fec637b82eb" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>sync</name></member>
+      <member refid="classconvolutional__interleaver_1af49e21b50b9b59f0faf0d08d447dd67a" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>transform</name></member>
+      <member refid="classconvolutional__interleaver_1afe0e221849f0feb4796f620e1858231b" prot="public" virt="non-virtual"><scope>convolutional_interleaver</scope><name>transform</name></member>
+      <member refid="classconvolutional__interleaver_1a4fb48a3b97910049994ea2be0bc91c40" prot="public" virt="virtual"><scope>convolutional_interleaver</scope><name>~convolutional_interleaver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

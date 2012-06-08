@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__rs__decoder" kind="class" prot="public">
+    <compoundname>atsc_rs_decoder</compoundname>
+    <includes refid="atsc__rs__decoder_8h" local="no">atsc_rs_decoder.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsc__rs__decoder_1a80960e45dab1511e4808e8287e511a71" prot="private" static="no" mutable="no">
+        <type><ref refid="classatsci__reed__solomon" kindref="compound">atsci_reed_solomon</ref></type>
+        <definition>atsci_reed_solomon atsc_rs_decoder::d_rs_decoder</definition>
+        <argsstring></argsstring>
+        <name>d_rs_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__rs__decoder_1a7d332b65ef5de37e379c63e9d6a441ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__rs__decoder_8h_1a0fc1eac2632dfa23615a918ebc37b841" kindref="member">atsc_rs_decoder_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_rs_decoder_sptr atsc_make_rs_decoder</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_rs_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__rs__decoder_1a295cad53150dd1fbbc60e11df6464234" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_rs_decoder::atsc_rs_decoder</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_rs_decoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__rs__decoder_1a0ccb49956a2c5891e3df64a6a6378635" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_rs_decoder::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__rs__decoder_1a71be6629083d9e66091f51a4e8cac98c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_rs_decoder::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reed-Solomon decoder for ATSC</para><para>input: <ref refid="classatsc__mpeg__packet__rs__encoded" kindref="compound">atsc_mpeg_packet_rs_encoded</ref>; output: <ref refid="classatsc__mpeg__packet__no__sync" kindref="compound">atsc_mpeg_packet_no_sync</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_rs_decoder.h" bodystart="40" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classatsc__rs__decoder_1a7d332b65ef5de37e379c63e9d6a441ed" prot="private" virt="non-virtual"><scope>atsc_rs_decoder</scope><name>atsc_make_rs_decoder</name></member>
+      <member refid="classatsc__rs__decoder_1a295cad53150dd1fbbc60e11df6464234" prot="private" virt="non-virtual"><scope>atsc_rs_decoder</scope><name>atsc_rs_decoder</name></member>
+      <member refid="classatsc__rs__decoder_1a80960e45dab1511e4808e8287e511a71" prot="private" virt="non-virtual"><scope>atsc_rs_decoder</scope><name>d_rs_decoder</name></member>
+      <member refid="classatsc__rs__decoder_1a71be6629083d9e66091f51a4e8cac98c" prot="public" virt="non-virtual"><scope>atsc_rs_decoder</scope><name>reset</name></member>
+      <member refid="classatsc__rs__decoder_1a0ccb49956a2c5891e3df64a6a6378635" prot="public" virt="non-virtual"><scope>atsc_rs_decoder</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsci__fs__checker__naive" kind="class" prot="public">
+    <compoundname>atsci_fs_checker_naive</compoundname>
+    <basecompoundref refid="classatsci__fs__checker" prot="public" virt="non-virtual">atsci_fs_checker</basecompoundref>
+    <includes refid="atsci__fs__checker__naive_8h" local="no">atsci_fs_checker_naive.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1ad630b0df461d7307275c43ea19851cb8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_fs_checker_naive::SRSIZE</definition>
+        <argsstring></argsstring>
+        <name>SRSIZE</name>
+        <initializer> 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a5576f0dbf06ff1acbc18eef53a1cc08c" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_fs_checker_naive::OFFSET_511</definition>
+        <argsstring></argsstring>
+        <name>OFFSET_511</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a628053da71a87ba87e4ec416be345c88" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_fs_checker_naive::LENGTH_511</definition>
+        <argsstring></argsstring>
+        <name>LENGTH_511</name>
+        <initializer> 511 + 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a892924f399bcff9a9cdb3a62ef3b1b8a" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_fs_checker_naive::OFFSET_2ND_63</definition>
+        <argsstring></argsstring>
+        <name>OFFSET_2ND_63</name>
+        <initializer> 578</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a4c2e2f3c1f7dd6a8649327556f4f2e44" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int atsci_fs_checker_naive::LENGTH_2ND_63</definition>
+        <argsstring></argsstring>
+        <name>LENGTH_2ND_63</name>
+        <initializer> 63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1ad127d19dbb82faa31afb3d69a0111b54" prot="private" static="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_fs_checker_naive::s_511[LENGTH_511]</definition>
+        <argsstring>[LENGTH_511]</argsstring>
+        <name>s_511</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a0052ea7321e9f542b88f1f8d48570c42" prot="private" static="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_fs_checker_naive::s_63[LENGTH_2ND_63]</definition>
+        <argsstring>[LENGTH_2ND_63]</argsstring>
+        <name>s_63</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1ac476745cc63e96f6b271a4db9da4e3be" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsci_fs_checker_naive::d_index</definition>
+        <argsstring></argsstring>
+        <name>d_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a9b831f32fc53763da162b19f747d9a8c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float atsci_fs_checker_naive::d_sample_sr[SRSIZE]</definition>
+        <argsstring>[SRSIZE]</argsstring>
+        <name>d_sample_sr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1af0fe8764f32258a92544282fa594d675" prot="private" static="no" mutable="no">
+        <type><ref refid="structatsc_1_1syminfo" kindref="compound">atsc::syminfo</ref></type>
+        <definition>atsc::syminfo atsci_fs_checker_naive::d_tag_sr[SRSIZE]</definition>
+        <argsstring>[SRSIZE]</argsstring>
+        <name>d_tag_sr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1ae280d1f42ffc802f22cc972fcebe93a2" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char atsci_fs_checker_naive::d_bit_sr[SRSIZE]</definition>
+        <argsstring>[SRSIZE]</argsstring>
+        <name>d_bit_sr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1a899136e0858b7a873902796d6d126be8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsci_fs_checker_naive::d_field_num</definition>
+        <argsstring></argsstring>
+        <name>d_field_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsci__fs__checker__naive_1ad694383d082106818898cc4b5a8898f4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsci_fs_checker_naive::d_segment_num</definition>
+        <argsstring></argsstring>
+        <name>d_segment_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a1e04c78b67bd33c7e06288f2a2f17a1d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int atsci_fs_checker_naive::wrap</definition>
+        <argsstring>(int index)</argsstring>
+        <name>wrap</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1ac998223c59641213a75adaf61ef4f332" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int atsci_fs_checker_naive::incr</definition>
+        <argsstring>(int index)</argsstring>
+        <name>incr</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a7e6e154d5cca15dc5dacf7df52a0342e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int atsci_fs_checker_naive::decr</definition>
+        <argsstring>(int index)</argsstring>
+        <name>decr</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a70440dc1f399385579a877f9d5c14b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_fs_checker_naive::atsci_fs_checker_naive</definition>
+        <argsstring>()</argsstring>
+        <name>atsci_fs_checker_naive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a376ab60951d90087502b0f330541ad43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsci_fs_checker_naive::~atsci_fs_checker_naive</definition>
+        <argsstring>()</argsstring>
+        <name>~atsci_fs_checker_naive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a5b1d57432945874baa43624bd07f2d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void atsci_fs_checker_naive::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <reimplements refid="classatsci__fs__checker_1a288226c4f2a57a161e84bf4de935169e">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1ad17bd92ef8fc404335894be3c002ed25" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void atsci_fs_checker_naive::filter</definition>
+        <argsstring>(float input_sample, atsc::syminfo input_tag, float *output_sample, atsc::syminfo *output_tag)</argsstring>
+        <name>filter</name>
+        <reimplements refid="classatsci__fs__checker_1a6770714d6b09f8c4bb9facd51814e67c">filter</reimplements>
+        <param>
+          <type>float</type>
+          <declname>input_sample</declname>
+        </param>
+        <param>
+          <type><ref refid="structatsc_1_1syminfo" kindref="compound">atsc::syminfo</ref></type>
+          <declname>input_tag</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>output_sample</declname>
+        </param>
+        <param>
+          <type><ref refid="structatsc_1_1syminfo" kindref="compound">atsc::syminfo</ref> *</type>
+          <declname>output_tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsci__fs__checker__naive_1a7e475c0f8a58abc4603ab9196220a876" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int atsci_fs_checker_naive::delay</definition>
+        <argsstring>() const </argsstring>
+        <name>delay</name>
+        <reimplements refid="classatsci__fs__checker_1aa9acc7f6ad5fb19e8ffb599b9c959a34">delay</reimplements>
+        <briefdescription>
+<para>return delay in samples from input to output </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Naive concrete implementation of field sync checker. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="347">
+        <label>atsci_fs_checker_naive</label>
+        <link refid="classatsci__fs__checker__naive"/>
+        <childnode refid="348" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="348">
+        <label>atsci_fs_checker</label>
+        <link refid="classatsci__fs__checker"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="349">
+        <label>atsci_fs_checker_naive</label>
+        <link refid="classatsci__fs__checker__naive"/>
+        <childnode refid="350" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>atsci_fs_checker</label>
+        <link refid="classatsci__fs__checker"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsci_fs_checker_naive.h" bodystart="32" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classatsci__fs__checker_1af6dc8b2ac60bfa16b7c0a76cf850d032" prot="public" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>atsci_fs_checker</name></member>
+      <member refid="classatsci__fs__checker__naive_1a70440dc1f399385579a877f9d5c14b24" prot="public" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>atsci_fs_checker_naive</name></member>
+      <member refid="classatsci__fs__checker__naive_1ae280d1f42ffc802f22cc972fcebe93a2" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_bit_sr</name></member>
+      <member refid="classatsci__fs__checker__naive_1a899136e0858b7a873902796d6d126be8" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_field_num</name></member>
+      <member refid="classatsci__fs__checker__naive_1ac476745cc63e96f6b271a4db9da4e3be" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_index</name></member>
+      <member refid="classatsci__fs__checker__naive_1a9b831f32fc53763da162b19f747d9a8c" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_sample_sr</name></member>
+      <member refid="classatsci__fs__checker__naive_1ad694383d082106818898cc4b5a8898f4" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_segment_num</name></member>
+      <member refid="classatsci__fs__checker__naive_1af0fe8764f32258a92544282fa594d675" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>d_tag_sr</name></member>
+      <member refid="classatsci__fs__checker__naive_1a7e6e154d5cca15dc5dacf7df52a0342e" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>decr</name></member>
+      <member refid="classatsci__fs__checker__naive_1a7e475c0f8a58abc4603ab9196220a876" prot="public" virt="virtual"><scope>atsci_fs_checker_naive</scope><name>delay</name></member>
+      <member refid="classatsci__fs__checker__naive_1ad17bd92ef8fc404335894be3c002ed25" prot="public" virt="virtual"><scope>atsci_fs_checker_naive</scope><name>filter</name></member>
+      <member refid="classatsci__fs__checker__naive_1ac998223c59641213a75adaf61ef4f332" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>incr</name></member>
+      <member refid="classatsci__fs__checker__naive_1a4c2e2f3c1f7dd6a8649327556f4f2e44" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>LENGTH_2ND_63</name></member>
+      <member refid="classatsci__fs__checker__naive_1a628053da71a87ba87e4ec416be345c88" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>LENGTH_511</name></member>
+      <member refid="classatsci__fs__checker__naive_1a892924f399bcff9a9cdb3a62ef3b1b8a" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>OFFSET_2ND_63</name></member>
+      <member refid="classatsci__fs__checker__naive_1a5576f0dbf06ff1acbc18eef53a1cc08c" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>OFFSET_511</name></member>
+      <member refid="classatsci__fs__checker__naive_1a5b1d57432945874baa43624bd07f2d70" prot="public" virt="virtual"><scope>atsci_fs_checker_naive</scope><name>reset</name></member>
+      <member refid="classatsci__fs__checker__naive_1ad127d19dbb82faa31afb3d69a0111b54" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>s_511</name></member>
+      <member refid="classatsci__fs__checker__naive_1a0052ea7321e9f542b88f1f8d48570c42" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>s_63</name></member>
+      <member refid="classatsci__fs__checker__naive_1ad630b0df461d7307275c43ea19851cb8" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>SRSIZE</name></member>
+      <member refid="classatsci__fs__checker__naive_1a1e04c78b67bd33c7e06288f2a2f17a1d" prot="private" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>wrap</name></member>
+      <member refid="classatsci__fs__checker_1a61ce2227deb80a8d6921851171842c71" prot="public" virt="pure-virtual"><scope>atsci_fs_checker_naive</scope><name>~atsci_fs_checker</name></member>
+      <member refid="classatsci__fs__checker__naive_1a376ab60951d90087502b0f330541ad43" prot="public" virt="non-virtual"><scope>atsci_fs_checker_naive</scope><name>~atsci_fs_checker_naive</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

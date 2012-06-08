@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__adaptive__fir__ccc" kind="class" prot="public">
+    <compoundname>gr_adaptive_fir_ccc</compoundname>
+    <includes refid="gr__adaptive__fir__ccc_8h" local="no">gr_adaptive_fir_ccc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1ad270334cd3ee265642162f49a7638031" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_adaptive_fir_ccc::d_new_taps</definition>
+        <argsstring></argsstring>
+        <name>d_new_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1ad2f940c4f56f94b4456b2b21da8167aa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_adaptive_fir_ccc::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1a994350541adabaa9718a2eec3aa2809f" prot="protected" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex gr_adaptive_fir_ccc::d_error</definition>
+        <argsstring></argsstring>
+        <name>d_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__adaptive__fir__ccc_1a941d6aec36e0aa1c7def91e1a292d480" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_adaptive_fir_ccc::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1aae045dd303aa7363bdae104600d5bad1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>gr_complex</type>
+        <definition>virtual gr_complex gr_adaptive_fir_ccc::error</definition>
+        <argsstring>(const gr_complex &amp;out)=0</argsstring>
+        <name>error</name>
+        <param>
+          <type>const gr_complex &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1ab58ea7d9ff7433232d1d6310c2676b48" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void gr_adaptive_fir_ccc::update_tap</definition>
+        <argsstring>(gr_complex &amp;tap, const gr_complex &amp;in)=0</argsstring>
+        <name>update_tap</name>
+        <param>
+          <type>gr_complex &amp;</type>
+          <declname>tap</declname>
+        </param>
+        <param>
+          <type>const gr_complex &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1aefad3a5855657a5968a8d977ba018657" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex gr_adaptive_fir_ccc::filter</definition>
+        <argsstring>(gr_complex *x)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>gr_complex *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1a2847c3c9102501b405e0edac02dd60b2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_adaptive_fir_ccc::gr_adaptive_fir_ccc</definition>
+        <argsstring>(const char *name, int decimation, const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>gr_adaptive_fir_ccc</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>decimation</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1a6f6d8283d7e725935c8af60901d60e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_adaptive_fir_ccc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__adaptive__fir__ccc_1afdce806ea00c81ebfcc9c85d9b5371c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_adaptive_fir_ccc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Adaptive FIR filter with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="314">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="313">
+        <label>gr_adaptive_fir_ccc</label>
+        <link refid="classgr__adaptive__fir__ccc"/>
+        <childnode refid="314" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_adaptive_fir_ccc.h" bodystart="33" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr__adaptive__fir__ccc_1a994350541adabaa9718a2eec3aa2809f" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_error</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ad270334cd3ee265642162f49a7638031" prot="private" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_new_taps</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a941d6aec36e0aa1c7def91e1a292d480" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_taps</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ad2f940c4f56f94b4456b2b21da8167aa" prot="private" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>d_updated</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1aae045dd303aa7363bdae104600d5bad1" prot="protected" virt="pure-virtual"><scope>gr_adaptive_fir_ccc</scope><name>error</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1aefad3a5855657a5968a8d977ba018657" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>filter</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a2847c3c9102501b405e0edac02dd60b2" prot="protected" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>gr_adaptive_fir_ccc</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1a6f6d8283d7e725935c8af60901d60e15" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>set_taps</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1ab58ea7d9ff7433232d1d6310c2676b48" prot="protected" virt="pure-virtual"><scope>gr_adaptive_fir_ccc</scope><name>update_tap</name></member>
+      <member refid="classgr__adaptive__fir__ccc_1afdce806ea00c81ebfcc9c85d9b5371c5" prot="public" virt="non-virtual"><scope>gr_adaptive_fir_ccc</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__error__handler" kind="class" prot="public">
+    <compoundname>gr_error_handler</compoundname>
+    <derivedcompoundref refid="classgr__base__error__handler" prot="public" virt="non-virtual">gr_base_error_handler</derivedcompoundref>
+    <includes refid="gr__error__handler_8h" local="no">gr_error_handler.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" prot="public" static="no">
+        <name>seriousness</name>
+        <enumvalue id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaaf2613c91e295a944236e694eea2f7ca6" prot="public">
+          <name>ERR_DEBUG</name>
+          <initializer> 0x00000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaabebeb9dbe633da9c50a0902441f1701b" prot="public">
+          <name>ERR_MESSAGE</name>
+          <initializer> 0x00010000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaae35feb98cb5bb81ea6f6480303d0a244" prot="public">
+          <name>ERR_WARNING</name>
+          <initializer> 0x00020000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaa8fc839c5a7b9e526dfe0ea74ea76cee6" prot="public">
+          <name>ERR_ERROR</name>
+          <initializer> 0x00030000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaa567eab71fc3a3062831f231488a0b386" prot="public">
+          <name>ERR_FATAL</name>
+          <initializer> 0x00040000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" bodystart="57" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__error__handler_1aef940a2933bda5a698a7dd9ccca4c161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_error_handler::gr_error_handler</definition>
+        <argsstring>()</argsstring>
+        <name>gr_error_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a8f822abe127d2a9a5632325d0e8fe078" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_error_handler::~gr_error_handler</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_error_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1afa1961db0bbabc7c60eead7fb7504077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::message</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>message</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a13d50e7ef1b43188e251d81848b2df5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::warning</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>warning</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1ab003d40bd2e62c0752cf360fd108a5e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::error</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>error</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a56fbba06b32920561658b754061ab9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::fatal</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>fatal</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a60a7f3f86de1a2666d6b8095474922aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int gr_error_handler::nwarnings</definition>
+        <argsstring>() const =0</argsstring>
+        <name>nwarnings</name>
+        <reimplementedby refid="classgr__base__error__handler_1a7567f2ef1370cb0f71d2ea204fd16968">nwarnings</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a9edfd01115f49e5d49d620d279662ac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int gr_error_handler::nerrors</definition>
+        <argsstring>() const =0</argsstring>
+        <name>nerrors</name>
+        <reimplementedby refid="classgr__base__error__handler_1a828a9e2ea41d6e6a6a5f46f2097a67c7">nerrors</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a0117862e4ecd8b796350d28d4c1d6b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_error_handler::reset_counts</definition>
+        <argsstring>()=0</argsstring>
+        <name>reset_counts</name>
+        <reimplementedby refid="classgr__base__error__handler_1a6d7cc692da78d6eeece40d0733e3998a">reset_counts</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1ab92f420c36ee81721c93115cbc0b9938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::verror</definition>
+        <argsstring>(seriousness s, const char *format, va_list)</argsstring>
+        <name>verror</name>
+        <param>
+          <type><ref refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" kindref="member">seriousness</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a59378e1e8cce6bd5ffb3590fe12df812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_error_handler::verror_text</definition>
+        <argsstring>(seriousness s, const std::string &amp;text)</argsstring>
+        <name>verror_text</name>
+        <param>
+          <type><ref refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" kindref="member">seriousness</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr__error__handler_1a23a930caa56e666171dd5c79ecdf00a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr__error__handler" kindref="compound">gr_error_handler</ref> *</type>
+        <definition>static gr_error_handler* gr_error_handler::default_handler</definition>
+        <argsstring>()</argsstring>
+        <name>default_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a57157a2f0c10e34c3933f20dd57d9dac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr__error__handler" kindref="compound">gr_error_handler</ref> *</type>
+        <definition>static gr_error_handler* gr_error_handler::silent_handler</definition>
+        <argsstring>()</argsstring>
+        <name>silent_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a173154f51a05111cd2b72fd4e587d7ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool gr_error_handler::has_default_handler</definition>
+        <argsstring>()</argsstring>
+        <name>has_default_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a7f14a22e361763884a85fcc28b3972fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>static void gr_error_handler::set_default_handler</definition>
+        <argsstring>(gr_error_handler *errh)</argsstring>
+        <name>set_default_handler</name>
+        <param>
+          <type><ref refid="classgr__error__handler" kindref="compound">gr_error_handler</ref> *</type>
+          <declname>errh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__error__handler_1a35313fe01713794db3970c27cff1a58e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_error_handler::count_error</definition>
+        <argsstring>(seriousness s)=0</argsstring>
+        <name>count_error</name>
+        <reimplementedby refid="classgr__base__error__handler_1a840a56a5d19b2269ea9328ba54bd4236">count_error</reimplementedby>
+        <param>
+          <type><ref refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" kindref="member">seriousness</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1a8bcabeeba9939e944ea1d167ffdb0a46" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_error_handler::handle_text</definition>
+        <argsstring>(seriousness s, const std::string &amp;str)=0</argsstring>
+        <name>handle_text</name>
+        <reimplementedby refid="classgr__file__error__handler_1a33c5f483575745e97b03949207741cb0">handle_text</reimplementedby>
+        <param>
+          <type><ref refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" kindref="member">seriousness</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__error__handler_1ae59af4baa3c0e92e2fbaa30243a73a7d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string gr_error_handler::make_text</definition>
+        <argsstring>(seriousness s, const char *format, va_list)</argsstring>
+        <name>make_text</name>
+        <param>
+          <type><ref refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" kindref="member">seriousness</ref></type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>abstract error handler </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3245">
+        <label>gr_file_error_handler</label>
+        <link refid="classgr__file__error__handler"/>
+        <childnode refid="3244" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3244">
+        <label>gr_base_error_handler</label>
+        <link refid="classgr__base__error__handler"/>
+        <childnode refid="3243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3243">
+        <label>gr_error_handler</label>
+        <link refid="classgr__error__handler"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_error_handler.h" bodystart="55" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classgr__error__handler_1a35313fe01713794db3970c27cff1a58e" prot="protected" virt="pure-virtual"><scope>gr_error_handler</scope><name>count_error</name></member>
+      <member refid="classgr__error__handler_1a23a930caa56e666171dd5c79ecdf00a7" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>default_handler</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaaf2613c91e295a944236e694eea2f7ca6" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>ERR_DEBUG</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaa8fc839c5a7b9e526dfe0ea74ea76cee6" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>ERR_ERROR</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaa567eab71fc3a3062831f231488a0b386" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>ERR_FATAL</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaabebeb9dbe633da9c50a0902441f1701b" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>ERR_MESSAGE</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aaae35feb98cb5bb81ea6f6480303d0a244" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>ERR_WARNING</name></member>
+      <member refid="classgr__error__handler_1ab003d40bd2e62c0752cf360fd108a5e2" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>error</name></member>
+      <member refid="classgr__error__handler_1a56fbba06b32920561658b754061ab9e8" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>fatal</name></member>
+      <member refid="classgr__error__handler_1aef940a2933bda5a698a7dd9ccca4c161" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>gr_error_handler</name></member>
+      <member refid="classgr__error__handler_1a8bcabeeba9939e944ea1d167ffdb0a46" prot="protected" virt="pure-virtual"><scope>gr_error_handler</scope><name>handle_text</name></member>
+      <member refid="classgr__error__handler_1a173154f51a05111cd2b72fd4e587d7ba" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>has_default_handler</name></member>
+      <member refid="classgr__error__handler_1ae59af4baa3c0e92e2fbaa30243a73a7d" prot="protected" virt="non-virtual"><scope>gr_error_handler</scope><name>make_text</name></member>
+      <member refid="classgr__error__handler_1afa1961db0bbabc7c60eead7fb7504077" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>message</name></member>
+      <member refid="classgr__error__handler_1a9edfd01115f49e5d49d620d279662ac0" prot="public" virt="pure-virtual"><scope>gr_error_handler</scope><name>nerrors</name></member>
+      <member refid="classgr__error__handler_1a60a7f3f86de1a2666d6b8095474922aa" prot="public" virt="pure-virtual"><scope>gr_error_handler</scope><name>nwarnings</name></member>
+      <member refid="classgr__error__handler_1a0117862e4ecd8b796350d28d4c1d6b61" prot="public" virt="pure-virtual"><scope>gr_error_handler</scope><name>reset_counts</name></member>
+      <member refid="classgr__error__handler_1a485e1ab1ea6506d983adbdf609fdc7aa" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>seriousness</name></member>
+      <member refid="classgr__error__handler_1a7f14a22e361763884a85fcc28b3972fa" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>set_default_handler</name></member>
+      <member refid="classgr__error__handler_1a57157a2f0c10e34c3933f20dd57d9dac" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>silent_handler</name></member>
+      <member refid="classgr__error__handler_1ab92f420c36ee81721c93115cbc0b9938" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>verror</name></member>
+      <member refid="classgr__error__handler_1a59378e1e8cce6bd5ffb3590fe12df812" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>verror_text</name></member>
+      <member refid="classgr__error__handler_1a13d50e7ef1b43188e251d81848b2df5a" prot="public" virt="non-virtual"><scope>gr_error_handler</scope><name>warning</name></member>
+      <member refid="classgr__error__handler_1a8f822abe127d2a9a5632325d0e8fe078" prot="public" virt="virtual"><scope>gr_error_handler</scope><name>~gr_error_handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

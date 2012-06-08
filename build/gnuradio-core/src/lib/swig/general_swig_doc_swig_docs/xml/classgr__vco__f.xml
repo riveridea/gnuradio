@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vco__f" kind="class" prot="public">
+    <compoundname>gr_vco_f</compoundname>
+    <includes refid="gr__vco__f_8h" local="no">gr_vco_f.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__vco__f_1a8059950e1120a944805cd4249de86171" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_vco_f::d_sampling_rate</definition>
+        <argsstring></argsstring>
+        <name>d_sampling_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vco__f_1a89b31b772edfba595203c05cb967c85e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_vco_f::d_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>d_sensitivity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vco__f_1aed314dff51b49453d839a54df6654978" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_vco_f::d_amplitude</definition>
+        <argsstring></argsstring>
+        <name>d_amplitude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vco__f_1ac72a0f86a185544c066d8c0d751d022c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_vco_f::d_k</definition>
+        <argsstring></argsstring>
+        <name>d_k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vco__f_1a7fbef02f58f478262a291a8dcb32fb84" prot="private" static="no" mutable="no">
+        <type><ref refid="classgr__fxpt__vco" kindref="compound">gr_fxpt_vco</ref></type>
+        <definition>gr_fxpt_vco gr_vco_f::d_vco</definition>
+        <argsstring></argsstring>
+        <name>d_vco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__vco__f_1a734d28b93c65263d899f27fe856febb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__vco__f_8h_1a0060de89654ff5e9b0480a9ceed183b7" kindref="member">gr_vco_f_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_vco_f_sptr gr_make_vco_f</definition>
+        <argsstring>(double sampling_rate, double sensitivity, double amplitude)</argsstring>
+        <name>gr_make_vco_f</name>
+        <param>
+          <type>double</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sensitivity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>amplitude</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__vco__f_1ad2572814f3847dfa9dbf19fff557c5cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_vco_f::gr_vco_f</definition>
+        <argsstring>(double sampling_rate, double sensitivity, double amplitude)</argsstring>
+        <name>gr_vco_f</name>
+        <param>
+          <type>double</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sensitivity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>amplitude</declname>
+        </param>
+        <briefdescription>
+<para>VCO - Voltage controlled oscillator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampling_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sampling rate (Hz) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>units are radians/sec/volt </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amplitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output amplitude </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vco__f_1a638acd7f483c0bf401c1f413072a5a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_vco_f::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>VCO - Voltage controlled oscillator</para><para>input: float stream of control voltages; output: float oscillator output. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h" bodystart="49" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classgr__vco__f_1aed314dff51b49453d839a54df6654978" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>d_amplitude</name></member>
+      <member refid="classgr__vco__f_1ac72a0f86a185544c066d8c0d751d022c" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>d_k</name></member>
+      <member refid="classgr__vco__f_1a8059950e1120a944805cd4249de86171" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>d_sampling_rate</name></member>
+      <member refid="classgr__vco__f_1a89b31b772edfba595203c05cb967c85e" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>d_sensitivity</name></member>
+      <member refid="classgr__vco__f_1a7fbef02f58f478262a291a8dcb32fb84" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>d_vco</name></member>
+      <member refid="classgr__vco__f_1a734d28b93c65263d899f27fe856febb6" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>gr_make_vco_f</name></member>
+      <member refid="classgr__vco__f_1ad2572814f3847dfa9dbf19fff557c5cb" prot="private" virt="non-virtual"><scope>gr_vco_f</scope><name>gr_vco_f</name></member>
+      <member refid="classgr__vco__f_1a638acd7f483c0bf401c1f413072a5a38" prot="public" virt="non-virtual"><scope>gr_vco_f</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

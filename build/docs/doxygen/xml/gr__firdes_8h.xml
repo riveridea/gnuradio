@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__firdes_8h" kind="file">
+    <compoundname>gr_firdes.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
+    <includes refid="gr__complex_8h" local="no">gr_complex.h</includes>
+    <includedby refid="qtgui__sink__c_8h" local="no">qtgui_sink_c.h</includedby>
+    <includedby refid="qtgui__sink__f_8h" local="no">qtgui_sink_f.h</includedby>
+    <includedby refid="qtgui__time__sink__c_8h" local="no">qtgui_time_sink_c.h</includedby>
+    <includedby refid="qtgui__time__sink__f_8h" local="no">qtgui_time_sink_f.h</includedby>
+    <incdepgraph>
+      <node id="7585">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="7586" relation="include">
+        </childnode>
+      </node>
+      <node id="7584">
+        <label>cmath</label>
+      </node>
+      <node id="7581">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="7582" relation="include">
+        </childnode>
+      </node>
+      <node id="7583">
+        <label>vector</label>
+      </node>
+      <node id="7582">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="7586">
+        <label>complex</label>
+      </node>
+      <node id="7580">
+        <label>gr_firdes.h</label>
+        <link refid="gr_firdes.h"/>
+        <childnode refid="7581" relation="include">
+        </childnode>
+        <childnode refid="7583" relation="include">
+        </childnode>
+        <childnode refid="7584" relation="include">
+        </childnode>
+        <childnode refid="7585" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7588">
+        <label>qtgui_sink_c.h</label>
+        <link refid="qtgui__sink__c_8h"/>
+      </node>
+      <node id="7589">
+        <label>qtgui_sink_f.h</label>
+        <link refid="qtgui__sink__f_8h"/>
+      </node>
+      <node id="7591">
+        <label>qtgui_time_sink_f.h</label>
+        <link refid="qtgui__time__sink__f_8h"/>
+      </node>
+      <node id="7590">
+        <label>qtgui_time_sink_c.h</label>
+        <link refid="qtgui__time__sink__c_8h"/>
+      </node>
+      <node id="7587">
+        <label>gr_firdes.h</label>
+        <link refid="gr_firdes.h"/>
+        <childnode refid="7588" relation="include">
+        </childnode>
+        <childnode refid="7589" relation="include">
+        </childnode>
+        <childnode refid="7590" relation="include">
+        </childnode>
+        <childnode refid="7591" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr__firdes" prot="public">gr_firdes</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_firdes.h"/>
+  </compounddef>
+</doxygen>

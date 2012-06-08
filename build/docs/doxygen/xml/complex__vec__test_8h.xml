@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="complex__vec__test_8h" kind="file">
+    <compoundname>complex_vec_test.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">complex</includes>
+    <incdepgraph>
+      <node id="2315">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="2316" relation="include">
+        </childnode>
+      </node>
+      <node id="2317">
+        <label>vector</label>
+      </node>
+      <node id="2314">
+        <label>complex_vec_test.h</label>
+        <link refid="complex_vec_test.h"/>
+        <childnode refid="2315" relation="include">
+        </childnode>
+        <childnode refid="2317" relation="include">
+        </childnode>
+        <childnode refid="2318" relation="include">
+        </childnode>
+      </node>
+      <node id="2316">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2318">
+        <label>complex</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="complex__vec__test_8h_1a8793811369edeff8a4364f954df8b4b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; std::complex&lt; float &gt; &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;std::complex&lt;float&gt; &gt; complex_vec_test0</definition>
+        <argsstring>()</argsstring>
+        <name>complex_vec_test0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="6"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1adcc26f41d85978751d7773375aeeff41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; std::complex&lt; float &gt; &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;std::complex&lt;float&gt; &gt; complex_vec_test1</definition>
+        <argsstring>(const std::vector&lt; std::complex&lt; float &gt; &gt; &amp;input)</argsstring>
+        <name>complex_vec_test1</name>
+        <param>
+          <type>const std::vector&lt; std::complex&lt; float &gt; &gt; &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1a120e42b41cf2623486a0bfd5190ce73f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::complex&lt; float &gt;</type>
+        <definition>GR_CORE_API std::complex&lt;float&gt; complex_scalar_test0</definition>
+        <argsstring>()</argsstring>
+        <name>complex_scalar_test0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="12"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1a18ce15d13a49fc6e005420f2171a97f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::complex&lt; float &gt;</type>
+        <definition>GR_CORE_API std::complex&lt;float&gt; complex_scalar_test1</definition>
+        <argsstring>(std::complex&lt; float &gt; input)</argsstring>
+        <name>complex_scalar_test1</name>
+        <param>
+          <type>std::complex&lt; float &gt;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1a558f816d1478cd776af740107fca0f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; int &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;int&gt; int_vec_test0</definition>
+        <argsstring>()</argsstring>
+        <name>int_vec_test0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="18"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1a23b7dc53d28cd1d27508d56fefe8605d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; int &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;int&gt; int_vec_test1</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;input)</argsstring>
+        <name>int_vec_test1</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="21"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1a9eb4bb13e0a3312f9f3ca4190e169ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; float &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;float&gt; float_vec_test0</definition>
+        <argsstring>()</argsstring>
+        <name>float_vec_test0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="complex__vec__test_8h_1af96d3683fbb4eff4b5e9b0ade5106022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> std::vector&lt; float &gt;</type>
+        <definition>GR_CORE_API std::vector&lt;float&gt; float_vec_test1</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;input)</argsstring>
+        <name>float_vec_test1</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h" line="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/complex_vec_test.h"/>
+  </compounddef>
+</doxygen>

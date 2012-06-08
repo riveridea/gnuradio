@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classppio__ppdev" kind="class" prot="public">
+    <compoundname>ppio_ppdev</compoundname>
+    <basecompoundref refid="classppio" prot="public" virt="non-virtual">ppio</basecompoundref>
+    <includes refid="ppio__ppdev_8h" local="no">ppio_ppdev.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classppio__ppdev_1aaa9f131d480138fecb74c770334f56cc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ppio_ppdev::d_fd</definition>
+        <argsstring></argsstring>
+        <name>d_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classppio__ppdev_1a4991112889740928017e236e26fb7ff1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="ppio__ppdev_8h_1a57a1ba889c541a17c085711433302345" kindref="member">ppio_ppdev_sptr</ref></type>
+        <definition>GR_CORE_API ppio_ppdev_sptr make_ppio_ppdev</definition>
+        <argsstring>(int which=0)</argsstring>
+        <name>make_ppio_ppdev</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classppio__ppdev_1ae94c102b50e216bbfb6db70b6ec58598" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ppio_ppdev::ppio_ppdev</definition>
+        <argsstring>(int which=0)</argsstring>
+        <name>ppio_ppdev</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classppio__ppdev_1a804cab4a8ebf3d2e49dea94b44bf1cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ppio_ppdev::~ppio_ppdev</definition>
+        <argsstring>()</argsstring>
+        <name>~ppio_ppdev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1a7303b2279a02db0bcb485dab386b640b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ppio_ppdev::write_data</definition>
+        <argsstring>(unsigned char v)</argsstring>
+        <name>write_data</name>
+        <reimplements refid="classppio_1a35cafb679f12d1ee4e72383c7d82eadb">write_data</reimplements>
+        <param>
+          <type>unsigned char</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1a79cc41fcdd43f2c65bd20217f507632a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>virtual unsigned char ppio_ppdev::read_data</definition>
+        <argsstring>()</argsstring>
+        <name>read_data</name>
+        <reimplements refid="classppio_1aa76eb2623018ed97ebe9a0e46c60cfde">read_data</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1aa1e1a66f1efedf56195ed4a18ad27113" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ppio_ppdev::write_control</definition>
+        <argsstring>(unsigned char v)</argsstring>
+        <name>write_control</name>
+        <reimplements refid="classppio_1a1dbabe3d613baf632c3e079b1c0e1848">write_control</reimplements>
+        <param>
+          <type>unsigned char</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1abcd6afdca56482867f12c890506743ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>virtual unsigned char ppio_ppdev::read_control</definition>
+        <argsstring>()</argsstring>
+        <name>read_control</name>
+        <reimplements refid="classppio_1a3ec1bc57bba53e91783ca32081e22caa">read_control</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1ad87e7b99a14501b0834e45cd1bb03453" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>virtual unsigned char ppio_ppdev::read_status</definition>
+        <argsstring>()</argsstring>
+        <name>read_status</name>
+        <reimplements refid="classppio_1a40c74d33c7e195fd81a41f6926e12e63">read_status</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1a2230f4530631107dbd13883b22319d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ppio_ppdev::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <reimplements refid="classppio_1a194e2b6c44cb5ddeada3560f6dd09400">lock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classppio__ppdev_1a429862740dae7a70caea3f4f94b3b87d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ppio_ppdev::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <reimplements refid="classppio_1a2e03adcebd0c137b80e440aa50a46676">unlock</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>access to parallel port bits using the linux ppdev interface </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="574">
+        <label>ppio_ppdev</label>
+        <link refid="classppio__ppdev"/>
+        <childnode refid="575" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>ppio</label>
+        <link refid="classppio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="576">
+        <label>ppio_ppdev</label>
+        <link refid="classppio__ppdev"/>
+        <childnode refid="577" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>ppio</label>
+        <link refid="classppio"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/ppio_ppdev.h" bodystart="37" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classppio__ppdev_1aaa9f131d480138fecb74c770334f56cc" prot="private" virt="non-virtual"><scope>ppio_ppdev</scope><name>d_fd</name></member>
+      <member refid="classppio__ppdev_1a2230f4530631107dbd13883b22319d1e" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>lock</name></member>
+      <member refid="classppio__ppdev_1a4991112889740928017e236e26fb7ff1" prot="private" virt="non-virtual"><scope>ppio_ppdev</scope><name>make_ppio_ppdev</name></member>
+      <member refid="classppio_1aa627ada4f30aeb0d3d2b3e9bb8a5c1b9" prot="public" virt="non-virtual"><scope>ppio_ppdev</scope><name>ppio</name></member>
+      <member refid="classppio__ppdev_1ae94c102b50e216bbfb6db70b6ec58598" prot="private" virt="non-virtual"><scope>ppio_ppdev</scope><name>ppio_ppdev</name></member>
+      <member refid="classppio__ppdev_1abcd6afdca56482867f12c890506743ef" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>read_control</name></member>
+      <member refid="classppio__ppdev_1a79cc41fcdd43f2c65bd20217f507632a" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>read_data</name></member>
+      <member refid="classppio__ppdev_1ad87e7b99a14501b0834e45cd1bb03453" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>read_status</name></member>
+      <member refid="classppio__ppdev_1a429862740dae7a70caea3f4f94b3b87d" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>unlock</name></member>
+      <member refid="classppio__ppdev_1aa1e1a66f1efedf56195ed4a18ad27113" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>write_control</name></member>
+      <member refid="classppio__ppdev_1a7303b2279a02db0bcb485dab386b640b" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>write_data</name></member>
+      <member refid="classppio_1a1d3111c127703f3c971990ebde2b5911" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>~ppio</name></member>
+      <member refid="classppio__ppdev_1a804cab4a8ebf3d2e49dea94b44bf1cea" prot="public" virt="virtual"><scope>ppio_ppdev</scope><name>~ppio_ppdev</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

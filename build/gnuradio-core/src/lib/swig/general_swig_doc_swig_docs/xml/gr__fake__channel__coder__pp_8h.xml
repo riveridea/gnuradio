@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__fake__channel__coder__pp_8h" kind="file">
+    <compoundname>gr_fake_channel_coder_pp.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">gr_sync_block.h</includes>
+    <incdepgraph>
+      <node id="372">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="373">
+        <label>gr_sync_block.h</label>
+      </node>
+      <node id="371">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="372" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h</label>
+        <link refid="gr_fake_channel_coder_pp.h"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__fake__channel__encoder__pp" prot="public">gr_fake_channel_encoder_pp</innerclass>
+    <innerclass refid="classgr__fake__channel__decoder__pp" prot="public">gr_fake_channel_decoder_pp</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr__fake__channel__encoder__pp" kindref="compound">gr_fake_channel_encoder_pp</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;gr_fake_channel_encoder_pp&gt; gr_fake_channel_encoder_pp_sptr</definition>
+        <argsstring></argsstring>
+        <name>gr_fake_channel_encoder_pp_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr__fake__channel__decoder__pp" kindref="compound">gr_fake_channel_decoder_pp</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;gr_fake_channel_decoder_pp&gt; gr_fake_channel_decoder_pp_sptr</definition>
+        <argsstring></argsstring>
+        <name>gr_fake_channel_decoder_pp_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__fake__channel__coder__pp_8h_1afc86a527a66c4b1a4ddccc40f406c38a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" kindref="member">gr_fake_channel_encoder_pp_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_fake_channel_encoder_pp_sptr gr_make_fake_channel_encoder_pp</definition>
+        <argsstring>(int input_vlen, int output_vlen)</argsstring>
+        <name>gr_make_fake_channel_encoder_pp</name>
+        <param>
+          <type>int</type>
+          <declname>input_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="33"/>
+      </memberdef>
+      <memberdef kind="function" id="gr__fake__channel__coder__pp_8h_1a065f8e4a8debac0aed93506f2d10039f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" kindref="member">gr_fake_channel_decoder_pp_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_fake_channel_decoder_pp_sptr gr_make_fake_channel_decoder_pp</definition>
+        <argsstring>(int input_vlen, int output_vlen)</argsstring>
+        <name>gr_make_fake_channel_decoder_pp</name>
+        <param>
+          <type>int</type>
+          <declname>input_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2005<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_GR_FAKE_CHANNEL_CODER_PP_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_GR_FAKE_CHANNEL_CODER_PP_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gr__core__api_8h" kindref="compound">gr_core_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_sync_block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgr__fake__channel__encoder__pp" kindref="compound" tooltip="pad packet with alternating 1,0 pattern.input: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_encoder_pp</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;gr_fake_channel_encoder_pp&gt;<sp/><ref refid="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" kindref="member">gr_fake_channel_encoder_pp_sptr</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" kindref="member">gr_fake_channel_encoder_pp_sptr</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="gr__fake__channel__coder__pp_8h_1afc86a527a66c4b1a4ddccc40f406c38a" kindref="member">gr_make_fake_channel_encoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classgr__fake__channel__encoder__pp" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="classgr__fake__channel__encoder__pp" kindref="compound" tooltip="pad packet with alternating 1,0 pattern.input: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_encoder_pp</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_sync_block</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>d_input_vlen;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>d_output_vlen;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classgr__fake__channel__encoder__pp" kindref="compound" tooltip="pad packet with alternating 1,0 pattern.input: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_encoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__fake__channel__coder__pp_8h_1a9aef349795a47eecad880062b4dc7b0c" kindref="member">gr_fake_channel_encoder_pp_sptr</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gr__fake__channel__coder__pp_8h_1afc86a527a66c4b1a4ddccc40f406c38a" kindref="member">gr_make_fake_channel_encoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>~<ref refid="classgr__fake__channel__encoder__pp" kindref="compound" tooltip="pad packet with alternating 1,0 pattern.input: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_encoder_pp</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgr__fake__channel__decoder__pp" kindref="compound" tooltip="remove fake padding from packetinput: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_decoder_pp</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;gr_fake_channel_decoder_pp&gt;<sp/><ref refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" kindref="member">gr_fake_channel_decoder_pp_sptr</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" kindref="member">gr_fake_channel_decoder_pp_sptr</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="gr__fake__channel__coder__pp_8h_1a065f8e4a8debac0aed93506f2d10039f" kindref="member">gr_make_fake_channel_decoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classgr__fake__channel__decoder__pp" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="classgr__fake__channel__decoder__pp" kindref="compound" tooltip="remove fake padding from packetinput: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_decoder_pp</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_sync_block</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>d_input_vlen;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>d_output_vlen;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="classgr__fake__channel__decoder__pp" kindref="compound" tooltip="remove fake padding from packetinput: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_decoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" kindref="member">gr_fake_channel_decoder_pp_sptr</ref></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gr__fake__channel__coder__pp_8h_1a065f8e4a8debac0aed93506f2d10039f" kindref="member">gr_make_fake_channel_decoder_pp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>input_vlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_vlen);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>~<ref refid="classgr__fake__channel__decoder__pp" kindref="compound" tooltip="remove fake padding from packetinput: stream of byte vectors; output: stream of byte vectors...">gr_fake_channel_decoder_pp</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_GR_FAKE_CHANNEL_CODER_PP_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__complex__to__real" kind="class" prot="public">
+    <compoundname>gr_complex_to_real</compoundname>
+    <includes refid="gr__complex__to__xxx_8h" local="no">gr_complex_to_xxx.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__complex__to__real_1aafacbc6508c2a9565dd4be0e581c2aa0" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_complex_to_real::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__complex__to__real_1af113fd8331ebeae18ccae3e348a55132" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="gr__complex__to__xxx_8h_1a4e43f65f06249312672a414af76daf42" kindref="member">gr_complex_to_real_sptr</ref></type>
+        <definition>GR_CORE_API gr_complex_to_real_sptr gr_make_complex_to_real</definition>
+        <argsstring>(unsigned int vlen)</argsstring>
+        <name>gr_make_complex_to_real</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__complex__to__real_1aca2e1b8b53211cc88231ad8d7853cfc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_complex_to_real::gr_complex_to_real</definition>
+        <argsstring>(unsigned int vlen)</argsstring>
+        <name>gr_complex_to_real</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__complex__to__real_1a804c2165002e6694cd9c2f4fe223cade" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_complex_to_real::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>complex in, real out (float) </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector len (default 1) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_complex_to_xxx.h" bodystart="74" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classgr__complex__to__real_1aafacbc6508c2a9565dd4be0e581c2aa0" prot="private" virt="non-virtual"><scope>gr_complex_to_real</scope><name>d_vlen</name></member>
+      <member refid="classgr__complex__to__real_1aca2e1b8b53211cc88231ad8d7853cfc0" prot="private" virt="non-virtual"><scope>gr_complex_to_real</scope><name>gr_complex_to_real</name></member>
+      <member refid="classgr__complex__to__real_1af113fd8331ebeae18ccae3e348a55132" prot="private" virt="non-virtual"><scope>gr_complex_to_real</scope><name>gr_make_complex_to_real</name></member>
+      <member refid="classgr__complex__to__real_1a804c2165002e6694cd9c2f4fe223cade" prot="public" virt="virtual"><scope>gr_complex_to_real</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classGrAtscFieldSyncCorrelator" kind="class" prot="public">
+    <compoundname>GrAtscFieldSyncCorrelator</compoundname>
+    <includes refid="GrAtscFieldSyncCorrelator_8h" local="no">GrAtscFieldSyncCorrelator.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGrAtscFieldSyncCorrelator_1a21a11fa50d796a10bf10fbb60c330060" prot="protected" static="no" mutable="no">
+        <type><ref refid="classatsci__fs__correlator" kindref="compound">atsci_fs_correlator</ref> *</type>
+        <definition>atsci_fs_correlator* GrAtscFieldSyncCorrelator::d_fsc</definition>
+        <argsstring></argsstring>
+        <name>d_fsc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrAtscFieldSyncCorrelator_1ac8c9ce33c60c4f02c96830d4c81e9e87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscFieldSyncCorrelator::GrAtscFieldSyncCorrelator</definition>
+        <argsstring>()</argsstring>
+        <name>GrAtscFieldSyncCorrelator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncCorrelator_1a8292db51645d6d09092c6de44075b65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GrAtscFieldSyncCorrelator::~GrAtscFieldSyncCorrelator</definition>
+        <argsstring>()</argsstring>
+        <name>~GrAtscFieldSyncCorrelator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncCorrelator_1a33709476710f91039b7dbc526ee0efa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* GrAtscFieldSyncCorrelator::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrAtscFieldSyncCorrelator_1ab5fb86a53037a56bb82d8831081cc38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GrAtscFieldSyncCorrelator::work</definition>
+        <argsstring>(VrSampleRange output, void *o[], VrSampleRange inputs[], void *i[])</argsstring>
+        <name>work</name>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>o</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>VrSampleRange</type>
+          <declname>inputs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>i</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC field sync correlator (float --&gt; float,float) </para>    </briefdescription>
+    <detaileddescription>
+<para>first output is delayed version of input. second output is set of tags, one-for-one with first output.</para><para>tag values are defined in <ref refid="atsci__sync__tag_8h" kindref="compound">atsci_sync_tag.h</ref> </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="477">
+        <label>atsci_fs_correlator</label>
+        <link refid="classatsci__fs__correlator"/>
+      </node>
+      <node id="476">
+        <label>GrAtscFieldSyncCorrelator</label>
+        <link refid="classGrAtscFieldSyncCorrelator"/>
+        <childnode refid="477" relation="usage">
+          <edgelabel>d_fsc</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/GrAtscFieldSyncCorrelator.h" bodystart="39" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classGrAtscFieldSyncCorrelator_1a21a11fa50d796a10bf10fbb60c330060" prot="protected" virt="non-virtual"><scope>GrAtscFieldSyncCorrelator</scope><name>d_fsc</name></member>
+      <member refid="classGrAtscFieldSyncCorrelator_1ac8c9ce33c60c4f02c96830d4c81e9e87" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncCorrelator</scope><name>GrAtscFieldSyncCorrelator</name></member>
+      <member refid="classGrAtscFieldSyncCorrelator_1a33709476710f91039b7dbc526ee0efa3" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncCorrelator</scope><name>name</name></member>
+      <member refid="classGrAtscFieldSyncCorrelator_1ab5fb86a53037a56bb82d8831081cc38d" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncCorrelator</scope><name>work</name></member>
+      <member refid="classGrAtscFieldSyncCorrelator_1a8292db51645d6d09092c6de44075b65e" prot="public" virt="non-virtual"><scope>GrAtscFieldSyncCorrelator</scope><name>~GrAtscFieldSyncCorrelator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

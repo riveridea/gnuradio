@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__ccf__generic" kind="class" prot="public">
+    <compoundname>gr_fir_ccf_generic</compoundname>
+    <basecompoundref refid="classgr__fir__ccf" prot="public" virt="non-virtual">gr_fir_ccf</basecompoundref>
+    <derivedcompoundref refid="classgr__fir__ccf__armv7__a" prot="public" virt="non-virtual">gr_fir_ccf_armv7_a</derivedcompoundref>
+    <derivedcompoundref refid="classgr__fir__ccf__simd" prot="public" virt="non-virtual">gr_fir_ccf_simd</derivedcompoundref>
+    <includes refid="gr__fir__ccf__generic_8h" local="no">gr_fir_ccf_generic.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__ccf__generic_1aa73fecc18b02a5ad506342c7ef284f36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_generic::gr_fir_ccf_generic</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_ccf_generic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__generic_1a012c8d0043999db86aaf5d45fde4d506" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_ccf_generic::gr_fir_ccf_generic</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_ccf_generic</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__generic_1aa3965e06fadc82c0ffde8949842b6088" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>gr_complex</type>
+        <definition>virtual gr_complex gr_fir_ccf_generic::filter</definition>
+        <argsstring>(const gr_complex input[])</argsstring>
+        <name>filter</name>
+        <reimplements refid="classgr__fir__ccf_1a71c4c6b0140a1d5361ba775cf71bb797">filter</reimplements>
+        <reimplementedby refid="classgr__fir__ccf__armv7__a_1a4b307c8b6bb4189b3c7fc084bb3305b3">filter</reimplementedby>
+        <reimplementedby refid="classgr__fir__ccf__simd_1a8acdb63d025f11d8f028565c68f03bc0">filter</reimplementedby>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have <ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref> valid entries. input[0] .. input[<ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref> - 1] are referenced to compute the output value.</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__generic_1ad06a6a9c87cfd7c20f0b0746f46fa28c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_ccf_generic::filterN</definition>
+        <argsstring>(gr_complex output[], const gr_complex input[], unsigned long n)</argsstring>
+        <name>filterN</name>
+        <reimplements refid="classgr__fir__ccf_1ad5cf87431f23dd0a3aed215b10ea70fa">filterN</reimplements>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (n - 1 + <ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[n - 1 + <ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__ccf__generic_1a05e2e78319edd5f5a8902b9b09c45756" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_ccf_generic::filterNdec</definition>
+        <argsstring>(gr_complex output[], const gr_complex input[], unsigned long n, unsigned decimate)</argsstring>
+        <name>filterNdec</name>
+        <reimplements refid="classgr__fir__ccf_1a493142da6b8c3a91c413aae1d0e9975c">filterNdec</reimplements>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const gr_complex</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>decimate</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values, decimating the input </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (decimate * (n - 1) + <ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[decimate * (n - 1) + <ref refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Concrete class for generic implementation of FIR with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+<para>The trailing suffix has the form _IOT where I codes the input type, O codes the output type, and T codes the tap type. I,O,T are elements of the set &apos;s&apos; (short), &apos;f&apos; (float), &apos;c&apos; (gr_complex), &apos;i&apos; (int) </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="415">
+        <label>gr_fir_ccf_simd</label>
+        <link refid="classgr__fir__ccf__simd"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>gr_fir_ccf_sse</label>
+        <link refid="classgr__fir__ccf__sse"/>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>gr_fir_ccf</label>
+        <link refid="classgr__fir__ccf"/>
+      </node>
+      <node id="412">
+        <label>gr_fir_ccf_generic</label>
+        <link refid="classgr__fir__ccf__generic"/>
+        <childnode refid="413" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>gr_fir_ccf_armv7_a</label>
+        <link refid="classgr__fir__ccf__armv7__a"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>gr_fir_ccf_3dnow</label>
+        <link refid="classgr__fir__ccf__3dnow"/>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="420">
+        <label>std::vector&lt; float &gt;</label>
+      </node>
+      <node id="419">
+        <label>gr_fir_ccf</label>
+        <link refid="classgr__fir__ccf"/>
+        <childnode refid="420" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="418">
+        <label>gr_fir_ccf_generic</label>
+        <link refid="classgr__fir__ccf__generic"/>
+        <childnode refid="419" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_ccf_generic.h" bodystart="36" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classgr__fir__ccf_1a9af107e829a86398e5f607702840806a" prot="protected" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__ccf__generic_1aa3965e06fadc82c0ffde8949842b6088" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>filter</name></member>
+      <member refid="classgr__fir__ccf__generic_1ad06a6a9c87cfd7c20f0b0746f46fa28c" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>filterN</name></member>
+      <member refid="classgr__fir__ccf__generic_1a05e2e78319edd5f5a8902b9b09c45756" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__ccf_1ab1ed3d65aaa985e7032fd5e9243537d1" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__ccf_1aa48a9accdb4deced4b5b04061a8961df" prot="public" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>gr_fir_ccf</name></member>
+      <member refid="classgr__fir__ccf_1a9d5ba21009ff25164b8fdf08d0c8c7e3" prot="public" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>gr_fir_ccf</name></member>
+      <member refid="classgr__fir__ccf__generic_1aa73fecc18b02a5ad506342c7ef284f36" prot="public" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>gr_fir_ccf_generic</name></member>
+      <member refid="classgr__fir__ccf__generic_1a012c8d0043999db86aaf5d45fde4d506" prot="public" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>gr_fir_ccf_generic</name></member>
+      <member refid="classgr__fir__ccf_1a03fb8ba5795cd467c6bd6314ac4a4d78" prot="public" virt="non-virtual"><scope>gr_fir_ccf_generic</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__ccf_1afaa800d2c0901730c37101bdfff9386d" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__ccf_1a1823367b810356281a5e87efa1b57d8f" prot="public" virt="virtual"><scope>gr_fir_ccf_generic</scope><name>~gr_fir_ccf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

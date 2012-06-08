@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__integrate__ss" kind="class" prot="public">
+    <compoundname>gr_integrate_ss</compoundname>
+    <includes refid="gr__integrate__ss_8h" local="no">gr_integrate_ss.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__integrate__ss_1a3cae44c2d025caed44372f232afd6d23" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_integrate_ss::d_decim</definition>
+        <argsstring></argsstring>
+        <name>d_decim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__integrate__ss_1a623acb6bd3e45fface693f0de7f6711b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_integrate_ss::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__integrate__ss_1a754f58d58e7d64a57d109cf3380ef4bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__integrate__ss_8h_1addcd340f237fa91b517e09068a5c5eab" kindref="member">gr_integrate_ss_sptr</ref></type>
+        <definition>GR_CORE_API gr_integrate_ss_sptr gr_make_integrate_ss</definition>
+        <argsstring>(int decim)</argsstring>
+        <name>gr_make_integrate_ss</name>
+        <param>
+          <type>int</type>
+          <declname>decim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__integrate__ss_1ab548ea37a3c976ca86a0ea602cbcf313" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_integrate_ss::gr_integrate_ss</definition>
+        <argsstring>(int decim)</argsstring>
+        <name>gr_integrate_ss</name>
+        <param>
+          <type>int</type>
+          <declname>decim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__integrate__ss_1ab54f0c0bbf37c5a6e086018c7707d9a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_integrate_ss::~gr_integrate_ss</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_integrate_ss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__integrate__ss_1a262d545d53acd93a6eca295cd5695b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_integrate_ss::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output = sum(input[0]...input[n])</para><para>Integrate successive samples in input stream and decimate </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_integrate_ss.h" bodystart="43" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classgr__integrate__ss_1a623acb6bd3e45fface693f0de7f6711b" prot="private" virt="non-virtual"><scope>gr_integrate_ss</scope><name>d_count</name></member>
+      <member refid="classgr__integrate__ss_1a3cae44c2d025caed44372f232afd6d23" prot="private" virt="non-virtual"><scope>gr_integrate_ss</scope><name>d_decim</name></member>
+      <member refid="classgr__integrate__ss_1ab548ea37a3c976ca86a0ea602cbcf313" prot="private" virt="non-virtual"><scope>gr_integrate_ss</scope><name>gr_integrate_ss</name></member>
+      <member refid="classgr__integrate__ss_1a754f58d58e7d64a57d109cf3380ef4bd" prot="private" virt="non-virtual"><scope>gr_integrate_ss</scope><name>gr_make_integrate_ss</name></member>
+      <member refid="classgr__integrate__ss_1a262d545d53acd93a6eca295cd5695b0a" prot="public" virt="non-virtual"><scope>gr_integrate_ss</scope><name>work</name></member>
+      <member refid="classgr__integrate__ss_1ab54f0c0bbf37c5a6e086018c7707d9a5" prot="public" virt="non-virtual"><scope>gr_integrate_ss</scope><name>~gr_integrate_ss</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

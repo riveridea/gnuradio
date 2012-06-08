@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__iir" kind="class" prot="public">
+    <compoundname>gri_iir</compoundname>
+    <includes refid="gri__iir_8h" local="no">gri_iir.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>i_type</declname>
+        <defname>i_type</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>o_type</declname>
+        <defname>o_type</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>tap_type</declname>
+        <defname>tap_type</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgri__iir_1aadd595c780fc6b2ee50c7c8b3eb5eea3" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; tap_type &gt;</type>
+        <definition>std::vector&lt;tap_type&gt; gri_iir&lt; i_type, o_type, tap_type &gt;::d_fftaps</definition>
+        <argsstring></argsstring>
+        <name>d_fftaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="114" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__iir_1ae270ca4360515fbd80cf9ad513b96f24" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; tap_type &gt;</type>
+        <definition>std::vector&lt;tap_type&gt; gri_iir&lt; i_type, o_type, tap_type &gt;::d_fbtaps</definition>
+        <argsstring></argsstring>
+        <name>d_fbtaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="115" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__iir_1af7e5eba6e33011c68e168a1b75ed2baa" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_iir&lt; i_type, o_type, tap_type &gt;::d_latest_n</definition>
+        <argsstring></argsstring>
+        <name>d_latest_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="116" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__iir_1a325cbd21166ec28dc27ca0feccef7b38" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_iir&lt; i_type, o_type, tap_type &gt;::d_latest_m</definition>
+        <argsstring></argsstring>
+        <name>d_latest_m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__iir_1a566a5d039cf32bb27a750b123e8dae7a" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; tap_type &gt;</type>
+        <definition>std::vector&lt;tap_type&gt; gri_iir&lt; i_type, o_type, tap_type &gt;::d_prev_output</definition>
+        <argsstring></argsstring>
+        <name>d_prev_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="118" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__iir_1aac5a985051761be98d5753f5a1542003" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; i_type &gt;</type>
+        <definition>std::vector&lt;i_type&gt; gri_iir&lt; i_type, o_type, tap_type &gt;::d_prev_input</definition>
+        <argsstring></argsstring>
+        <name>d_prev_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="119" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__iir_1a79ac3f84ffeb3c6190b249a639b0f2ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gri_iir&lt; i_type, o_type, tap_type &gt;::gri_iir</definition>
+        <argsstring>(const std::vector&lt; tap_type &gt; &amp;fftaps, const std::vector&lt; tap_type &gt; &amp;fbtaps)</argsstring>
+        <name>gri_iir</name>
+        <param>
+          <type>const std::vector&lt; tap_type &gt; &amp;</type>
+          <declname>fftaps</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; tap_type &gt; &amp;</type>
+          <declname>fbtaps</declname>
+        </param>
+        <exceptions> throw (std::invalid_argument)</exceptions>
+        <briefdescription>
+<para>Construct an IIR with the given taps. </para>        </briefdescription>
+        <detaileddescription>
+<para>This filter uses the Direct Form I implementation, where <computeroutput>fftaps</computeroutput> contains the feed-forward taps, and <computeroutput>fbtaps</computeroutput> the feedback ones.</para><para><computeroutput>fftaps</computeroutput> and <computeroutput>fbtaps</computeroutput> must have equal numbers of taps</para><para>The input and output satisfy a difference equation of the form</para><para><formula id="0">\[ y[n] - \sum_{k=1}^{M} a_k y[n-k] = \sum_{k=0}^{N} b_k x[n-k] \]</formula></para><para>with the corresponding rational system function</para><para><formula id="1">\[ H(z) = \frac{\sum_{k=0}^{N} b_k z^{-k}}{1 - \sum_{k=1}^{M} a_k z^{-k}} \]</formula></para><para>Note that some texts define the system function with a + in the denominator. If you&apos;re using that convention, you&apos;ll need to negate the feedback taps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1a9e7ea537a27b610aa96ba407be82831d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gri_iir&lt; i_type, o_type, tap_type &gt;::gri_iir</definition>
+        <argsstring>()</argsstring>
+        <name>gri_iir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1a50545f86e1ab90ef36893d3a2b81fb2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gri_iir&lt; i_type, o_type, tap_type &gt;::~gri_iir</definition>
+        <argsstring>()</argsstring>
+        <name>~gri_iir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1adb60d3d25c5fce9278d8f2cd5e3c74cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>o_type</type>
+        <definition>o_type gri_iir&lt; i_type, o_type, tap_type &gt;::filter</definition>
+        <argsstring>(const i_type input)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>const i_type</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="128" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1aef452a0ffbc9d9040b08d58d0bbe0589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_iir&lt; i_type, o_type, tap_type &gt;::filter_n</definition>
+        <argsstring>(o_type output[], const i_type input[], long n)</argsstring>
+        <name>filter_n</name>
+        <param>
+          <type>o_type</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const i_type</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values. <computeroutput>input</computeroutput> must have N valid entries. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="168" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1a82e9ff44853cc878f317b5405e786038" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gri_iir&lt; i_type, o_type, tap_type &gt;::ntaps_ff</definition>
+        <argsstring>() const </argsstring>
+        <name>ntaps_ff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>number of taps in filter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1afe39444b015e40596401bc98c613264b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gri_iir&lt; i_type, o_type, tap_type &gt;::ntaps_fb</definition>
+        <argsstring>() const </argsstring>
+        <name>ntaps_fb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__iir_1abbc8febf2bccd566121688c66b0b0326" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_iir&lt; i_type, o_type, tap_type &gt;::set_taps</definition>
+        <argsstring>(const std::vector&lt; tap_type &gt; &amp;fftaps, const std::vector&lt; tap_type &gt; &amp;fbtaps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; tap_type &gt; &amp;</type>
+          <declname>fftaps</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; tap_type &gt; &amp;</type>
+          <declname>fbtaps</declname>
+        </param>
+        <exceptions> throw (std::invalid_argument)</exceptions>
+        <briefdescription>
+<para>install new taps. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="90" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>base class template for Infinite Impulse Response filter (IIR) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="826">
+        <label>gri_iir&lt; i_type, o_type, tap_type &gt;</label>
+        <link refid="classgri__iir"/>
+        <childnode refid="827" relation="usage">
+          <edgelabel>d_fftaps</edgelabel>
+          <edgelabel>d_prev_output</edgelabel>
+          <edgelabel>d_fbtaps</edgelabel>
+        </childnode>
+        <childnode refid="829" relation="usage">
+          <edgelabel>d_prev_input</edgelabel>
+        </childnode>
+      </node>
+      <node id="828">
+        <label>tap_type</label>
+      </node>
+      <node id="827">
+        <label>std::vector&lt; tap_type &gt;</label>
+        <childnode refid="828" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="829">
+        <label>std::vector&lt; i_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_iir.h" bodystart="34" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classgri__iir_1ae270ca4360515fbd80cf9ad513b96f24" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_fbtaps</name></member>
+      <member refid="classgri__iir_1aadd595c780fc6b2ee50c7c8b3eb5eea3" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_fftaps</name></member>
+      <member refid="classgri__iir_1a325cbd21166ec28dc27ca0feccef7b38" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_latest_m</name></member>
+      <member refid="classgri__iir_1af7e5eba6e33011c68e168a1b75ed2baa" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_latest_n</name></member>
+      <member refid="classgri__iir_1aac5a985051761be98d5753f5a1542003" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_prev_input</name></member>
+      <member refid="classgri__iir_1a566a5d039cf32bb27a750b123e8dae7a" prot="protected" virt="non-virtual"><scope>gri_iir</scope><name>d_prev_output</name></member>
+      <member refid="classgri__iir_1adb60d3d25c5fce9278d8f2cd5e3c74cb" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>filter</name></member>
+      <member refid="classgri__iir_1aef452a0ffbc9d9040b08d58d0bbe0589" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>filter_n</name></member>
+      <member refid="classgri__iir_1a79ac3f84ffeb3c6190b249a639b0f2ca" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>gri_iir</name></member>
+      <member refid="classgri__iir_1a9e7ea537a27b610aa96ba407be82831d" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>gri_iir</name></member>
+      <member refid="classgri__iir_1afe39444b015e40596401bc98c613264b" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>ntaps_fb</name></member>
+      <member refid="classgri__iir_1a82e9ff44853cc878f317b5405e786038" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>ntaps_ff</name></member>
+      <member refid="classgri__iir_1abbc8febf2bccd566121688c66b0b0326" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>set_taps</name></member>
+      <member refid="classgri__iir_1a50545f86e1ab90ef36893d3a2b81fb2f" prot="public" virt="non-virtual"><scope>gri_iir</scope><name>~gri_iir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

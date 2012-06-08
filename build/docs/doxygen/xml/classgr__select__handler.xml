@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__select__handler" kind="class" prot="public">
+    <compoundname>gr_select_handler</compoundname>
+    <includes refid="gr__select__handler_8h" local="no">gr_select_handler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__select__handler_1a61df97e55110ce36f6d7f89865d9b61b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_select_handler::d_fd</definition>
+        <argsstring></argsstring>
+        <name>d_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__select__handler_1acd6f81769629190cdbfbe15e2dbedc75" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_select_handler::gr_select_handler</definition>
+        <argsstring>(int file_descriptor)</argsstring>
+        <name>gr_select_handler</name>
+        <param>
+          <type>int</type>
+          <declname>file_descriptor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__select__handler_1a9b80622ea03a3e6bf0fea745645b210c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_select_handler::~gr_select_handler</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_select_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1a1855395f405a0ffd429ccd5aac7f98e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_select_handler::fd</definition>
+        <argsstring>() const </argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1a956166f072ade292b3f074a2817b7583" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_select_handler::file_descriptor</definition>
+        <argsstring>() const </argsstring>
+        <name>file_descriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1a724b67b0348d179a73c470ae7af362fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_select_handler::handle_read</definition>
+        <argsstring>()=0</argsstring>
+        <name>handle_read</name>
+        <briefdescription>
+<para>Called when file_descriptor is readable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Called when the dispatcher detects that file_descriptor can be read without blocking. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1a63f2969f8e586f52b89c67ecfbe33173" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gr_select_handler::handle_write</definition>
+        <argsstring>()=0</argsstring>
+        <name>handle_write</name>
+        <briefdescription>
+<para>Called when file_descriptor is writable. </para>        </briefdescription>
+        <detaileddescription>
+<para>Called when dispatcher detects that file descriptor can be written without blocking. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1aa7ee5d26f4e0ebf6966eadf8f180cd86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_select_handler::readable</definition>
+        <argsstring>()</argsstring>
+        <name>readable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called each time around the dispatcher loop to determine whether this handler&apos;s file descriptor should be added to the list on which read events can occur. The default method returns true, indicating that by default, all handlers are interested in read events. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__select__handler_1a3d0294e3233c547a06b13ba107643045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_select_handler::writable</definition>
+        <argsstring>()</argsstring>
+        <name>writable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called each time around the dispatcher loop to determine whether this handler&apos;s file descriptor should be added to the list on which write events can occur. The default method returns true, indicating that by default, all handlers are interested in write events. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="82" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract handler for select based notification. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classgr__dispatcher" kindref="compound">gr_dispatcher</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_select_handler.h" bodystart="39" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classgr__select__handler_1a61df97e55110ce36f6d7f89865d9b61b" prot="private" virt="non-virtual"><scope>gr_select_handler</scope><name>d_fd</name></member>
+      <member refid="classgr__select__handler_1a1855395f405a0ffd429ccd5aac7f98e8" prot="public" virt="non-virtual"><scope>gr_select_handler</scope><name>fd</name></member>
+      <member refid="classgr__select__handler_1a956166f072ade292b3f074a2817b7583" prot="public" virt="non-virtual"><scope>gr_select_handler</scope><name>file_descriptor</name></member>
+      <member refid="classgr__select__handler_1acd6f81769629190cdbfbe15e2dbedc75" prot="protected" virt="non-virtual"><scope>gr_select_handler</scope><name>gr_select_handler</name></member>
+      <member refid="classgr__select__handler_1a724b67b0348d179a73c470ae7af362fe" prot="public" virt="pure-virtual"><scope>gr_select_handler</scope><name>handle_read</name></member>
+      <member refid="classgr__select__handler_1a63f2969f8e586f52b89c67ecfbe33173" prot="public" virt="pure-virtual"><scope>gr_select_handler</scope><name>handle_write</name></member>
+      <member refid="classgr__select__handler_1aa7ee5d26f4e0ebf6966eadf8f180cd86" prot="public" virt="virtual"><scope>gr_select_handler</scope><name>readable</name></member>
+      <member refid="classgr__select__handler_1a3d0294e3233c547a06b13ba107643045" prot="public" virt="virtual"><scope>gr_select_handler</scope><name>writable</name></member>
+      <member refid="classgr__select__handler_1a9b80622ea03a3e6bf0fea745645b210c" prot="public" virt="virtual"><scope>gr_select_handler</scope><name>~gr_select_handler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

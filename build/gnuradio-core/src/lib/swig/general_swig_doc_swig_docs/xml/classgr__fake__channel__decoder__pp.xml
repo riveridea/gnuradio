@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fake__channel__decoder__pp" kind="class" prot="public">
+    <compoundname>gr_fake_channel_decoder_pp</compoundname>
+    <includes refid="gr__fake__channel__coder__pp_8h" local="no">gr_fake_channel_coder_pp.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__fake__channel__decoder__pp_1a0d6f412f2aa58cd73f54cc92296dc0af" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_fake_channel_decoder_pp::d_input_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_input_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__fake__channel__decoder__pp_1af4127567b9f04b2ff602728b6661cb03" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_fake_channel_decoder_pp::d_output_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_output_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__fake__channel__decoder__pp_1aa0abbe726fa6f71c7435dfc86ed9baaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fake_channel_decoder_pp::gr_fake_channel_decoder_pp</definition>
+        <argsstring>(int input_vlen, int output_vlen)</argsstring>
+        <name>gr_fake_channel_decoder_pp</name>
+        <param>
+          <type>int</type>
+          <declname>input_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__fake__channel__decoder__pp_1a065f8e4a8debac0aed93506f2d10039f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__fake__channel__coder__pp_8h_1a5f741edb9da62146093da3fd879ad24d" kindref="member">gr_fake_channel_decoder_pp_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_fake_channel_decoder_pp_sptr gr_make_fake_channel_decoder_pp</definition>
+        <argsstring>(int input_vlen, int output_vlen)</argsstring>
+        <name>gr_make_fake_channel_decoder_pp</name>
+        <param>
+          <type>int</type>
+          <declname>input_vlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fake__channel__decoder__pp_1a4c2a8eabb20252b77b1f47adf648f57c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_fake_channel_decoder_pp::~gr_fake_channel_decoder_pp</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_fake_channel_decoder_pp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fake__channel__decoder__pp_1ab44af8238e807878ff6a6bd0108eb37c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_fake_channel_decoder_pp::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>remove fake padding from packet</para><para>input: stream of byte vectors; output: stream of byte vectors </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fake_channel_coder_pp.h" bodystart="73" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classgr__fake__channel__decoder__pp_1a0d6f412f2aa58cd73f54cc92296dc0af" prot="private" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>d_input_vlen</name></member>
+      <member refid="classgr__fake__channel__decoder__pp_1af4127567b9f04b2ff602728b6661cb03" prot="private" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>d_output_vlen</name></member>
+      <member refid="classgr__fake__channel__decoder__pp_1aa0abbe726fa6f71c7435dfc86ed9baaa" prot="private" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>gr_fake_channel_decoder_pp</name></member>
+      <member refid="classgr__fake__channel__decoder__pp_1a065f8e4a8debac0aed93506f2d10039f" prot="private" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>gr_make_fake_channel_decoder_pp</name></member>
+      <member refid="classgr__fake__channel__decoder__pp_1ab44af8238e807878ff6a6bd0108eb37c" prot="public" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>work</name></member>
+      <member refid="classgr__fake__channel__decoder__pp_1a4c2a8eabb20252b77b1f47adf648f57c" prot="public" virt="non-virtual"><scope>gr_fake_channel_decoder_pp</scope><name>~gr_fake_channel_decoder_pp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

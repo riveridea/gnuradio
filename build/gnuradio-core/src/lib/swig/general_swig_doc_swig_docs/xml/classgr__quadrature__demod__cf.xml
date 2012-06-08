@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__quadrature__demod__cf" kind="class" prot="public">
+    <compoundname>gr_quadrature_demod_cf</compoundname>
+    <includes refid="gr__quadrature__demod__cf_8h" local="no">gr_quadrature_demod_cf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__quadrature__demod__cf_1ada47769946b33a6fea70ccdf71065014" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_quadrature_demod_cf::d_gain</definition>
+        <argsstring></argsstring>
+        <name>d_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__quadrature__demod__cf_1a5d7856f1814c1f862844044f51f57288" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__quadrature__demod__cf_8h_1ab4f452edab79dca221075166a175867a" kindref="member">gr_quadrature_demod_cf_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_quadrature_demod_cf_sptr gr_make_quadrature_demod_cf</definition>
+        <argsstring>(float gain)</argsstring>
+        <name>gr_make_quadrature_demod_cf</name>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__quadrature__demod__cf_1ad35fe6a445fcf7b9e28cf79e975b3f7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_quadrature_demod_cf::gr_quadrature_demod_cf</definition>
+        <argsstring>(float gain)</argsstring>
+        <name>gr_quadrature_demod_cf</name>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__quadrature__demod__cf_1afe3c5b16463b640cd9dfb109c2996fd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_quadrature_demod_cf::set_gain</definition>
+        <argsstring>(float gain)</argsstring>
+        <name>set_gain</name>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__quadrature__demod__cf_1a15b385f703f584b097a876272d0b61ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_quadrature_demod_cf::gain</definition>
+        <argsstring>() const </argsstring>
+        <name>gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__quadrature__demod__cf_1af31d20b8fd5b5ed9fd76a0db3d0494d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_quadrature_demod_cf::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>quadrature demodulator: complex in, float out</para><para>This can be used to demod FM, FSK, GMSK, etc. The input is complex baseband. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_quadrature_demod_cf.h" bodystart="40" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr__quadrature__demod__cf_1ada47769946b33a6fea70ccdf71065014" prot="private" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>d_gain</name></member>
+      <member refid="classgr__quadrature__demod__cf_1a15b385f703f584b097a876272d0b61ec" prot="public" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>gain</name></member>
+      <member refid="classgr__quadrature__demod__cf_1a5d7856f1814c1f862844044f51f57288" prot="private" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>gr_make_quadrature_demod_cf</name></member>
+      <member refid="classgr__quadrature__demod__cf_1ad35fe6a445fcf7b9e28cf79e975b3f7d" prot="private" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>gr_quadrature_demod_cf</name></member>
+      <member refid="classgr__quadrature__demod__cf_1afe3c5b16463b640cd9dfb109c2996fd5" prot="public" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>set_gain</name></member>
+      <member refid="classgr__quadrature__demod__cf_1af31d20b8fd5b5ed9fd76a0db3d0494d9" prot="public" virt="non-virtual"><scope>gr_quadrature_demod_cf</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

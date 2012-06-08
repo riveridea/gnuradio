@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__chunks__to__symbols__bc" kind="class" prot="public">
+    <compoundname>gr_chunks_to_symbols_bc</compoundname>
+    <includes refid="gr__chunks__to__symbols__bc_8h" local="no">gr_chunks_to_symbols_bc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__chunks__to__symbols__bc_1a8190c2bf62782a37c9fd50205585016b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_chunks_to_symbols_bc::d_D</definition>
+        <argsstring></argsstring>
+        <name>d_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__chunks__to__symbols__bc_1a263b2701f465cf93a274762e5be854e4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_chunks_to_symbols_bc::d_symbol_table</definition>
+        <argsstring></argsstring>
+        <name>d_symbol_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__chunks__to__symbols__bc_1ad7963ac28044b2bcf56e25709afd2c77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__chunks__to__symbols__bc_8h_1a08a014fa9f6e0094ce04cb20a2656874" kindref="member">gr_chunks_to_symbols_bc_sptr</ref></type>
+        <definition>GR_CORE_API gr_chunks_to_symbols_bc_sptr gr_make_chunks_to_symbols_bc</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;symbol_table, const int D)</argsstring>
+        <name>gr_make_chunks_to_symbols_bc</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>symbol_table</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__chunks__to__symbols__bc_1acf5b882e0ec393cf90f090b67f37b973" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_chunks_to_symbols_bc::gr_chunks_to_symbols_bc</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;symbol_table, const int D=1)</argsstring>
+        <name>gr_chunks_to_symbols_bc</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>symbol_table</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>D</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__chunks__to__symbols__bc_1ace167d5a04c4891f97d04540e5728f0e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_chunks_to_symbols_bc::D</definition>
+        <argsstring>() const </argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__chunks__to__symbols__bc_1a0fe38120c1ad8f75914173d99132063f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr_chunks_to_symbols_bc::symbol_table</definition>
+        <argsstring>() const </argsstring>
+        <name>symbol_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__chunks__to__symbols__bc_1a7cb11f20f8faa9917ff2c5e30d6073c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_chunks_to_symbols_bc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__chunks__to__symbols__bc_1a920ba2d9d2e19eb23abca959990f526a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_chunks_to_symbols_bc::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Map a stream of symbol indexes (unpacked bytes or shorts) to stream of float or complex onstellation points.in <computeroutput>D</computeroutput> dimensions (<computeroutput>D</computeroutput> = 1 by default)</para><para>input: stream of unsigned char; output: stream of gr_complex. </para>    </briefdescription>
+    <detaileddescription>
+<para>out[n D + k] = symbol_table[in[n] D + k], k=0,1,...,D-1</para><para>The combination of gr_packed_to_unpacked_XX followed by gr_chunks_to_symbols_XY handles the general case of mapping from a stream of bytes or shorts into arbitrary float or complex symbols.</para><para><simplesect kind="see"><para><ref refid="classgr__packed__to__unpacked__bb" kindref="compound">gr_packed_to_unpacked_bb</ref>, <ref refid="classgr__unpacked__to__packed__bb" kindref="compound">gr_unpacked_to_packed_bb</ref>, </para><simplesectsep/><para><ref refid="classgr__packed__to__unpacked__ss" kindref="compound">gr_packed_to_unpacked_ss</ref>, <ref refid="classgr__unpacked__to__packed__ss" kindref="compound">gr_unpacked_to_packed_ss</ref>, </para><simplesectsep/><para><ref refid="classgr__chunks__to__symbols__bf" kindref="compound">gr_chunks_to_symbols_bf</ref>, <ref refid="classgr__chunks__to__symbols__bc" kindref="compound">gr_chunks_to_symbols_bc</ref>. </para><simplesectsep/><para><ref refid="classgr__chunks__to__symbols__sf" kindref="compound">gr_chunks_to_symbols_sf</ref>, <ref refid="classgr__chunks__to__symbols__sc" kindref="compound">gr_chunks_to_symbols_sc</ref>. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_chunks_to_symbols_bc.h" bodystart="55" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classgr__chunks__to__symbols__bc_1a920ba2d9d2e19eb23abca959990f526a" prot="public" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>check_topology</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1ace167d5a04c4891f97d04540e5728f0e" prot="public" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>D</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1a8190c2bf62782a37c9fd50205585016b" prot="private" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>d_D</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1a263b2701f465cf93a274762e5be854e4" prot="private" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>d_symbol_table</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1acf5b882e0ec393cf90f090b67f37b973" prot="private" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>gr_chunks_to_symbols_bc</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1ad7963ac28044b2bcf56e25709afd2c77" prot="private" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>gr_make_chunks_to_symbols_bc</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1a0fe38120c1ad8f75914173d99132063f" prot="public" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>symbol_table</name></member>
+      <member refid="classgr__chunks__to__symbols__bc_1a7cb11f20f8faa9917ff2c5e30d6073c7" prot="public" virt="non-virtual"><scope>gr_chunks_to_symbols_bc</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

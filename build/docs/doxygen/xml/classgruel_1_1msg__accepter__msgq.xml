@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgruel_1_1msg__accepter__msgq" kind="class" prot="public">
+    <compoundname>gruel::msg_accepter_msgq</compoundname>
+    <basecompoundref refid="classgruel_1_1msg__accepter" prot="public" virt="non-virtual">gruel::msg_accepter</basecompoundref>
+    <includes refid="msg__accepter__msgq_8h" local="no">msg_accepter_msgq.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgruel_1_1msg__accepter__msgq_1a0ae3596cf5812af141f315d8471e00b6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">msg_queue_sptr</ref></type>
+        <definition>msg_queue_sptr gruel::msg_accepter_msgq::d_msg_queue</definition>
+        <argsstring></argsstring>
+        <name>d_msg_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgruel_1_1msg__accepter__msgq_1a90a18724f389e03e454d993b313c980f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gruel::msg_accepter_msgq::msg_accepter_msgq</definition>
+        <argsstring>(msg_queue_sptr msgq)</argsstring>
+        <name>msg_accepter_msgq</name>
+        <param>
+          <type><ref refid="classboost_1_1shared__ptr" kindref="compound">msg_queue_sptr</ref></type>
+          <declname>msgq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1msg__accepter__msgq_1a8e293ae91b452c44bd3dd312c9881f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gruel::msg_accepter_msgq::~msg_accepter_msgq</definition>
+        <argsstring>()</argsstring>
+        <name>~msg_accepter_msgq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1msg__accepter__msgq_1a51cf8cbbe261984c04c50a98674ebbc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void gruel::msg_accepter_msgq::post</definition>
+        <argsstring>(pmt::pmt_t msg)</argsstring>
+        <name>post</name>
+        <reimplements refid="classgruel_1_1msg__accepter_1aeb9ddb2c5007f74e13a3ac4884ebe88c">post</reimplements>
+        <param>
+          <type><ref refid="namespacepmt_1ab4b70d9293452eb74dd07c670e6811fa" kindref="member">pmt::pmt_t</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>send <computeroutput>msg</computeroutput> to <computeroutput><ref refid="classgruel_1_1msg__accepter" kindref="compound">msg_accepter</ref></computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para>Sending a message is an asynchronous operation. The <computeroutput>post</computeroutput> call will not wait for the message either to arrive at the destination or to be received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgruel_1_1msg__accepter__msgq_1aaa41856b7a1c553c12bb78ef86eee5aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">msg_queue_sptr</ref></type>
+        <definition>msg_queue_sptr gruel::msg_accepter_msgq::msg_queue</definition>
+        <argsstring>() const </argsstring>
+        <name>msg_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Concrete class that accepts messages and inserts them into a message queue. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6544">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="6543">
+        <label>gruel::msg_accepter_msgq</label>
+        <link refid="classgruel_1_1msg__accepter__msgq"/>
+        <childnode refid="6544" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6546">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="6545">
+        <label>gruel::msg_accepter_msgq</label>
+        <link refid="classgruel_1_1msg__accepter__msgq"/>
+        <childnode refid="6546" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6547" relation="usage">
+          <edgelabel>d_msg_queue</edgelabel>
+        </childnode>
+      </node>
+      <node id="6547">
+        <label>boost::shared_ptr&lt; msg_queue &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="6548" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="6548">
+        <label>gruel::msg_queue</label>
+        <link refid="classgruel_1_1msg__queue"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/msg_accepter_msgq.h" bodystart="34" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classgruel_1_1msg__accepter__msgq_1a0ae3596cf5812af141f315d8471e00b6" prot="protected" virt="non-virtual"><scope>gruel::msg_accepter_msgq</scope><name>d_msg_queue</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>gruel::msg_accepter_msgq</scope><name>msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter__msgq_1a90a18724f389e03e454d993b313c980f" prot="public" virt="non-virtual"><scope>gruel::msg_accepter_msgq</scope><name>msg_accepter_msgq</name></member>
+      <member refid="classgruel_1_1msg__accepter__msgq_1aaa41856b7a1c553c12bb78ef86eee5aa" prot="public" virt="non-virtual"><scope>gruel::msg_accepter_msgq</scope><name>msg_queue</name></member>
+      <member refid="classgruel_1_1msg__accepter__msgq_1a51cf8cbbe261984c04c50a98674ebbc4" prot="public" virt="virtual"><scope>gruel::msg_accepter_msgq</scope><name>post</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>gruel::msg_accepter_msgq</scope><name>~msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter__msgq_1a8e293ae91b452c44bd3dd312c9881f26" prot="public" virt="non-virtual"><scope>gruel::msg_accepter_msgq</scope><name>~msg_accepter_msgq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

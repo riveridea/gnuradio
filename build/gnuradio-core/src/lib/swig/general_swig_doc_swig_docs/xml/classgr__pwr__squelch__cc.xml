@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__pwr__squelch__cc" kind="class" prot="public">
+    <compoundname>gr_pwr_squelch_cc</compoundname>
+    <basecompoundref refid="classgr__squelch__base__cc" prot="public" virt="non-virtual">gr_squelch_base_cc</basecompoundref>
+    <includes refid="gr__pwr__squelch__cc_8h" local="no">gr_pwr_squelch_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__pwr__squelch__cc_1af5c36bb1d59add9144a9c690179a9e64" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_pwr_squelch_cc::d_threshold</definition>
+        <argsstring></argsstring>
+        <name>d_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pwr__squelch__cc_1a70f48840a097239961d3d73017976cf4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_pwr_squelch_cc::d_pwr</definition>
+        <argsstring></argsstring>
+        <name>d_pwr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pwr__squelch__cc_1a66d9faad4ecbab1d47bfd8ce01ea679a" prot="private" static="no" mutable="no">
+        <type>gr_single_pole_iir&lt; double, double, double &gt;</type>
+        <definition>gr_single_pole_iir&lt;double,double,double&gt; gr_pwr_squelch_cc::d_iir</definition>
+        <argsstring></argsstring>
+        <name>d_iir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__pwr__squelch__cc_1adbec7f9325eb159b4d4c79cf4e5f8599" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__pwr__squelch__cc_8h_1a6f9cdb2facf7dac5269edb70033e666c" kindref="member">gr_pwr_squelch_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_pwr_squelch_cc_sptr gr_make_pwr_squelch_cc</definition>
+        <argsstring>(double db, double alpha, int ramp, bool gate)</argsstring>
+        <name>gr_make_pwr_squelch_cc</name>
+        <param>
+          <type>double</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ramp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>gate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a3cec817286f9235ae8cbe1da531ade27" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pwr_squelch_cc::gr_pwr_squelch_cc</definition>
+        <argsstring>(double db, double alpha, int ramp, bool gate)</argsstring>
+        <name>gr_pwr_squelch_cc</name>
+        <param>
+          <type>double</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ramp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>gate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a79f6fb13cb0d93c2faf35f2b3879c8dd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_pwr_squelch_cc::update_state</definition>
+        <argsstring>(const gr_complex &amp;in)</argsstring>
+        <name>update_state</name>
+        <reimplements refid="classgr__squelch__base__cc_1abfd6f465a2c52de7da1fe5e4293877dd">update_state</reimplements>
+        <param>
+          <type>const gr_complex &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a77a8947bcc06fb2051a9cf1d25193b5d" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_pwr_squelch_cc::mute</definition>
+        <argsstring>() const </argsstring>
+        <name>mute</name>
+        <reimplements refid="classgr__squelch__base__cc_1a0aed8cb09a725dedcdc69bb3b298f283">mute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a1e897c3b5d3eb3d262c91746d625e243" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr_pwr_squelch_cc::squelch_range</definition>
+        <argsstring>() const </argsstring>
+        <name>squelch_range</name>
+        <reimplements refid="classgr__squelch__base__cc_1aa057da566cf1cd38fb991f7bfa0e2a89">squelch_range</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a6098303364b0cd8967069c58d1287e56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_pwr_squelch_cc::threshold</definition>
+        <argsstring>() const </argsstring>
+        <name>threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1a199a7d1bc0723d2019618b411feb7e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_pwr_squelch_cc::set_threshold</definition>
+        <argsstring>(double db)</argsstring>
+        <name>set_threshold</name>
+        <param>
+          <type>double</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pwr__squelch__cc_1ab71484602f26be8baeba220aaff1c5cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_pwr_squelch_cc::set_alpha</definition>
+        <argsstring>(double alpha)</argsstring>
+        <name>set_alpha</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>gate or zero output when input power below threshold </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="530">
+        <label>gr_pwr_squelch_cc</label>
+        <link refid="classgr__pwr__squelch__cc"/>
+        <childnode refid="531" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="531">
+        <label>gr_squelch_base_cc</label>
+        <link refid="classgr__squelch__base__cc"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="532">
+        <label>gr_pwr_squelch_cc</label>
+        <link refid="classgr__pwr__squelch__cc"/>
+        <childnode refid="533" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="533">
+        <label>gr_squelch_base_cc</label>
+        <link refid="classgr__squelch__base__cc"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_pwr_squelch_cc.h" bodystart="41" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classgr__pwr__squelch__cc_1a66d9faad4ecbab1d47bfd8ce01ea679a" prot="private" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>d_iir</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a70f48840a097239961d3d73017976cf4" prot="private" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>d_pwr</name></member>
+      <member refid="classgr__pwr__squelch__cc_1af5c36bb1d59add9144a9c690179a9e64" prot="private" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>d_threshold</name></member>
+      <member refid="classgr__squelch__base__cc_1aac453abc028ae38e941375e90c426d6d" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>gate</name></member>
+      <member refid="classgr__squelch__base__cc_1a0b4c46b6b18b013fac914094b99e23d3" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>general_work</name></member>
+      <member refid="classgr__pwr__squelch__cc_1adbec7f9325eb159b4d4c79cf4e5f8599" prot="private" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>gr_make_pwr_squelch_cc</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a3cec817286f9235ae8cbe1da531ade27" prot="private" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>gr_pwr_squelch_cc</name></member>
+      <member refid="classgr__squelch__base__cc_1a88d6244e55ba1c0a0af750097ac9a2a3" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>gr_squelch_base_cc</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a77a8947bcc06fb2051a9cf1d25193b5d" prot="protected" virt="virtual"><scope>gr_pwr_squelch_cc</scope><name>mute</name></member>
+      <member refid="classgr__squelch__base__cc_1a75e246fbe7392ab6ada53fc7154a29b1" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>ramp</name></member>
+      <member refid="classgr__pwr__squelch__cc_1ab71484602f26be8baeba220aaff1c5cc" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>set_alpha</name></member>
+      <member refid="classgr__squelch__base__cc_1ab3de9b306f78de0ce46c736a33b9f50f" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>set_gate</name></member>
+      <member refid="classgr__squelch__base__cc_1a4fbf6731c6fc6f0768e395a7e57695f7" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>set_ramp</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a199a7d1bc0723d2019618b411feb7e1f" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>set_threshold</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a1e897c3b5d3eb3d262c91746d625e243" prot="public" virt="virtual"><scope>gr_pwr_squelch_cc</scope><name>squelch_range</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a6098303364b0cd8967069c58d1287e56" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>threshold</name></member>
+      <member refid="classgr__squelch__base__cc_1aee62d8c2fa75b77d1e7580c28d999849" prot="public" virt="non-virtual"><scope>gr_pwr_squelch_cc</scope><name>unmuted</name></member>
+      <member refid="classgr__pwr__squelch__cc_1a79f6fb13cb0d93c2faf35f2b3879c8dd" prot="protected" virt="virtual"><scope>gr_pwr_squelch_cc</scope><name>update_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vco" kind="class" prot="public">
+    <compoundname>gr_vco</compoundname>
+    <includes refid="gr__vco_8h" local="no">gr_vco.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class o_type</type>
+      </param>
+      <param>
+        <type>class i_type</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_vco&lt; o_type, i_type &gt;::d_phase</definition>
+        <argsstring></argsstring>
+        <name>d_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classgr__vco_1a9369c68b68aa73498cd23d74cdfc5f99" compoundref="gr__vco_8h" startline="50" endline="60">gr_vco&lt; o_type, i_type &gt;::adjust_phase</referencedby>
+        <referencedby refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" compoundref="gr__vco_8h" startline="68" endline="68">gr_vco&lt; o_type, i_type &gt;::cos</referencedby>
+        <referencedby refid="classgr__vco_1a38f19c7a8f164c011041a18e242112d8" compoundref="gr__vco_8h" startline="62" endline="62">gr_vco&lt; o_type, i_type &gt;::get_phase</referencedby>
+        <referencedby refid="classgr__vco_1ac0f4048f34ed88f1c32e16a1c5d89f12" compoundref="gr__vco_8h" startline="46" endline="48">gr_vco&lt; o_type, i_type &gt;::set_phase</referencedby>
+        <referencedby refid="classgr__vco_1a2458956261a471194fcfa3594848bb3f" compoundref="gr__vco_8h" startline="69" endline="69">gr_vco&lt; o_type, i_type &gt;::sin</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vco_1a9cf6ab94f646564983f350a69baa8e53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_vco&lt; o_type, i_type &gt;::gr_vco</definition>
+        <argsstring>()</argsstring>
+        <name>gr_vco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1ac44432708e327dde927a5eed71cea7e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual gr_vco&lt; o_type, i_type &gt;::~gr_vco</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_vco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1ac0f4048f34ed88f1c32e16a1c5d89f12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_vco&lt; o_type, i_type &gt;::set_phase</definition>
+        <argsstring>(double angle)</argsstring>
+        <name>set_phase</name>
+        <param>
+          <type>double</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="46" bodyend="48"/>
+        <references refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" compoundref="gr__vco_8h" startline="75">gr_vco&lt; o_type, i_type &gt;::d_phase</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a9369c68b68aa73498cd23d74cdfc5f99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_vco&lt; o_type, i_type &gt;::adjust_phase</definition>
+        <argsstring>(double delta_phase)</argsstring>
+        <name>adjust_phase</name>
+        <param>
+          <type>double</type>
+          <declname>delta_phase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="50" bodyend="60"/>
+        <references refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" compoundref="gr__vco_8h" startline="75">gr_vco&lt; o_type, i_type &gt;::d_phase</references>
+        <references refid="volk_2cmake_2msvc_2config_8h_1ae71449b1cc6e6250b91f539153a7a0d3" compoundref="volk_2cmake_2msvc_2config_8h" startline="42">M_PI</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a38f19c7a8f164c011041a18e242112d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_vco&lt; o_type, i_type &gt;::get_phase</definition>
+        <argsstring>() const </argsstring>
+        <name>get_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="62" bodyend="62"/>
+        <references refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" compoundref="gr__vco_8h" startline="75">gr_vco&lt; o_type, i_type &gt;::d_phase</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a8fa1bae038a73276062fdae2b92fff89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_vco&lt; o_type, i_type &gt;::sincos</definition>
+        <argsstring>(float *sinx, float *cosx) const </argsstring>
+        <name>sincos</name>
+        <param>
+          <type>float *</type>
+          <declname>sinx</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>cosx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="80" bodyend="83"/>
+        <references refid="gr__sincos_8h_1a1dc176e41c01ddbfc65cbed71f238cfc">gr_sincosf</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_vco&lt; o_type, i_type &gt;::cos</definition>
+        <argsstring>() const </argsstring>
+        <name>cos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="68" bodyend="68"/>
+        <references refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" compoundref="gr__vco_8h" startline="75">gr_vco&lt; o_type, i_type &gt;::d_phase</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a2458956261a471194fcfa3594848bb3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_vco&lt; o_type, i_type &gt;::sin</definition>
+        <argsstring>() const </argsstring>
+        <name>sin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="69" bodyend="69"/>
+        <references refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" compoundref="gr__vco_8h" startline="75">gr_vco&lt; o_type, i_type &gt;::d_phase</references>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vco_1a2a686b0a311611167414e7747a67cabf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_vco&lt; o_type, i_type &gt;::cos</definition>
+        <argsstring>(float *output, const float *input, int noutput_items, double k, double ampl=1.0)</argsstring>
+        <name>cos</name>
+        <param>
+          <type>float *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ampl</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="87" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>base class template for Voltage Controlled Oscillator (VCO) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco.h" bodystart="39" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classgr__vco_1a9369c68b68aa73498cd23d74cdfc5f99" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>adjust_phase</name></member>
+      <member refid="classgr__vco_1a58b8420209f0c315278e5d5feaefa5fa" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>cos</name></member>
+      <member refid="classgr__vco_1a2a686b0a311611167414e7747a67cabf" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>cos</name></member>
+      <member refid="classgr__vco_1a0d1b9fc482a8c6d701c0382b799fe11a" prot="protected" virt="non-virtual"><scope>gr_vco</scope><name>d_phase</name></member>
+      <member refid="classgr__vco_1a38f19c7a8f164c011041a18e242112d8" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>get_phase</name></member>
+      <member refid="classgr__vco_1a9cf6ab94f646564983f350a69baa8e53" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>gr_vco</name></member>
+      <member refid="classgr__vco_1ac0f4048f34ed88f1c32e16a1c5d89f12" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>set_phase</name></member>
+      <member refid="classgr__vco_1a2458956261a471194fcfa3594848bb3f" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>sin</name></member>
+      <member refid="classgr__vco_1a8fa1bae038a73276062fdae2b92fff89" prot="public" virt="non-virtual"><scope>gr_vco</scope><name>sincos</name></member>
+      <member refid="classgr__vco_1ac44432708e327dde927a5eed71cea7e5" prot="public" virt="virtual"><scope>gr_vco</scope><name>~gr_vco</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

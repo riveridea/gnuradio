@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__head" kind="class" prot="public">
+    <compoundname>gr_head</compoundname>
+    <includes refid="gr__head_8h" local="no">gr_head.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__head_1a8e99166edf49b4f39687e766857ef774" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long gr_head::d_nitems</definition>
+        <argsstring></argsstring>
+        <name>d_nitems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__head_1a7fb5400f2a23e8d397b3c27ae030f5b4" prot="private" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long gr_head::d_ncopied_items</definition>
+        <argsstring></argsstring>
+        <name>d_ncopied_items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__head_1a33eb756de50ce488e62c6e588b60eb78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__head_8h_1a71a848b2c17d1926d2ef9e54b489bae1" kindref="member">gr_head_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_head_sptr gr_make_head</definition>
+        <argsstring>(size_t sizeof_stream_item, unsigned long long nitems)</argsstring>
+        <name>gr_make_head</name>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>nitems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__head_1aab1259cfcd9318205aae6989b7ec9107" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_head::gr_head</definition>
+        <argsstring>(size_t sizeof_stream_item, unsigned long long nitems)</argsstring>
+        <name>gr_head</name>
+        <param>
+          <type>size_t</type>
+          <declname>sizeof_stream_item</declname>
+        </param>
+        <param>
+          <type>unsigned long long</type>
+          <declname>nitems</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__head_1ad65f2f3ec6ebebf03248450235d8e74d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_head::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__head_1aad358bebb4764e8c62264f1f5b8014c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_head::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>copies the first N items to the output then signals done</para><para>Useful for building test cases </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" bodystart="40" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr__head_1a7fb5400f2a23e8d397b3c27ae030f5b4" prot="private" virt="non-virtual"><scope>gr_head</scope><name>d_ncopied_items</name></member>
+      <member refid="classgr__head_1a8e99166edf49b4f39687e766857ef774" prot="private" virt="non-virtual"><scope>gr_head</scope><name>d_nitems</name></member>
+      <member refid="classgr__head_1aab1259cfcd9318205aae6989b7ec9107" prot="private" virt="non-virtual"><scope>gr_head</scope><name>gr_head</name></member>
+      <member refid="classgr__head_1a33eb756de50ce488e62c6e588b60eb78" prot="private" virt="non-virtual"><scope>gr_head</scope><name>gr_make_head</name></member>
+      <member refid="classgr__head_1aad358bebb4764e8c62264f1f5b8014c0" prot="public" virt="non-virtual"><scope>gr_head</scope><name>reset</name></member>
+      <member refid="classgr__head_1ad65f2f3ec6ebebf03248450235d8e74d" prot="public" virt="non-virtual"><scope>gr_head</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

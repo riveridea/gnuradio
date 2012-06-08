@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__oscope__sink__f" kind="class" prot="public">
+    <compoundname>gr_oscope_sink_f</compoundname>
+    <basecompoundref refid="classgr__oscope__sink__x" prot="public" virt="non-virtual">gr_oscope_sink_x</basecompoundref>
+    <includes refid="gr__oscope__sink__f_8h" local="no">gr_oscope_sink_f.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__oscope__sink__f_1a3997791b32988d50b352d40fa8dfe4e4" prot="private" static="no" mutable="no">
+        <type>gr_msg_queue_sptr</type>
+        <definition>gr_msg_queue_sptr gr_oscope_sink_f::d_msgq</definition>
+        <argsstring></argsstring>
+        <name>d_msgq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__oscope__sink__f_1abbf973abbc9e41263c005204e62fd3e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__oscope__sink__f_8h_1a6754755e1c39533cfd4953a3cbab6f45" kindref="member">gr_oscope_sink_f_sptr</ref></type>
+        <definition>GR_CORE_API gr_oscope_sink_f_sptr gr_make_oscope_sink_f</definition>
+        <argsstring>(double sampling_rate, gr_msg_queue_sptr msgq)</argsstring>
+        <name>gr_make_oscope_sink_f</name>
+        <param>
+          <type>double</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <param>
+          <type>gr_msg_queue_sptr</type>
+          <declname>msgq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__oscope__sink__f_1a45f3e2f5424730057277bd127ebbdfc4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_sink_f::gr_oscope_sink_f</definition>
+        <argsstring>(double sampling_rate, gr_msg_queue_sptr msgq)</argsstring>
+        <name>gr_oscope_sink_f</name>
+        <param>
+          <type>double</type>
+          <declname>sampling_rate</declname>
+        </param>
+        <param>
+          <type>gr_msg_queue_sptr</type>
+          <declname>msgq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__oscope__sink__f_1a4820a57d516521c5f5a17da704d0bd84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_oscope_sink_f::~gr_oscope_sink_f</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_oscope_sink_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__f_1af0b95b06b9e7560234a6fb32e38e3f55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_oscope_sink_f::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__oscope__sink__f_1ad582fbbee425a55d70a53db401d26e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_oscope_sink_f::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Building block for python oscilloscope module.</para><para>Accepts multiple float streams. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="333">
+        <label>gr_oscope_sink_f</label>
+        <link refid="classgr__oscope__sink__f"/>
+        <childnode refid="334" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="334">
+        <label>gr_oscope_sink_x</label>
+        <link refid="classgr__oscope__sink__x"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="337">
+        <label>gr_oscope_guts</label>
+        <link refid="classgr__oscope__guts"/>
+      </node>
+      <node id="335">
+        <label>gr_oscope_sink_f</label>
+        <link refid="classgr__oscope__sink__f"/>
+        <childnode refid="336" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="336">
+        <label>gr_oscope_sink_x</label>
+        <link refid="classgr__oscope__sink__x"/>
+        <childnode refid="337" relation="usage">
+          <edgelabel>d_guts</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_oscope_sink_f.h" bodystart="42" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr__oscope__sink__f_1ad582fbbee425a55d70a53db401d26e6f" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>check_topology</name></member>
+      <member refid="classgr__oscope__sink__x_1acf158a1d3fe024bc67f1af47dc5c0d7c" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>d_guts</name></member>
+      <member refid="classgr__oscope__sink__f_1a3997791b32988d50b352d40fa8dfe4e4" prot="private" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>d_msgq</name></member>
+      <member refid="classgr__oscope__sink__x_1a4497ab7216f56cb9b95621a480301328" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>d_sampling_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a9b7672044dafd9723e75a033f16d8818" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_decimation_count</name></member>
+      <member refid="classgr__oscope__sink__x_1a1150e5177f62755c639c2a60067bad4b" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_samples_per_output_record</name></member>
+      <member refid="classgr__oscope__sink__x_1aa4925a7202147e2a481e35dd83451dce" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_trigger_channel</name></member>
+      <member refid="classgr__oscope__sink__x_1afc1ccf53b16ac11d42b8500f4afe2a1f" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_trigger_level</name></member>
+      <member refid="classgr__oscope__sink__x_1ab6c31bf8b672de84edc98cd971502edb" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_trigger_mode</name></member>
+      <member refid="classgr__oscope__sink__x_1a4eabd73733c1f3abb5c411e37a851837" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>get_trigger_slope</name></member>
+      <member refid="classgr__oscope__sink__f_1abbf973abbc9e41263c005204e62fd3e4" prot="private" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>gr_make_oscope_sink_f</name></member>
+      <member refid="classgr__oscope__sink__f_1a45f3e2f5424730057277bd127ebbdfc4" prot="private" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>gr_oscope_sink_f</name></member>
+      <member refid="classgr__oscope__sink__x_1a3b5f42aa9d79d5ed2506cf11810c1405" prot="protected" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>gr_oscope_sink_x</name></member>
+      <member refid="classgr__oscope__sink__x_1a529708ff61d3c66840be2722ac3b379d" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>num_channels</name></member>
+      <member refid="classgr__oscope__sink__x_1a16b30720f2d9baae14aa723639def521" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>sample_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a16a3b6e4b7c028b0303043cbb562cb31" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_decimation_count</name></member>
+      <member refid="classgr__oscope__sink__x_1a1ffade6dfc4c9902c9bfbbf19629bb2c" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_num_channels</name></member>
+      <member refid="classgr__oscope__sink__x_1a3d973f5912f631a21c04336808008ef4" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_sample_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a55e2ba4ce16782be63dc3e87fc6a5119" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_trigger_channel</name></member>
+      <member refid="classgr__oscope__sink__x_1ac081ec1b3910da257d41307acb799c11" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_trigger_level</name></member>
+      <member refid="classgr__oscope__sink__x_1a15c77b82bb13ddd320cfe80f3c4fc721" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_trigger_level_auto</name></member>
+      <member refid="classgr__oscope__sink__x_1a7e90e706010f4db7a45a181bc3707753" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_trigger_mode</name></member>
+      <member refid="classgr__oscope__sink__x_1ae218ffc2d928920a228917952b976e50" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_trigger_slope</name></member>
+      <member refid="classgr__oscope__sink__x_1ac3a5d8d328ba1db2cd9913f2f0ac6029" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>set_update_rate</name></member>
+      <member refid="classgr__oscope__sink__x_1a32b7adcf5e17ecf358af7ce78988398d" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>update_rate</name></member>
+      <member refid="classgr__oscope__sink__f_1af0b95b06b9e7560234a6fb32e38e3f55" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>work</name></member>
+      <member refid="classgr__oscope__sink__f_1a4820a57d516521c5f5a17da704d0bd84" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>~gr_oscope_sink_f</name></member>
+      <member refid="classgr__oscope__sink__x_1ad995f3288e3855eebbc0ebe8df0bbb9b" prot="public" virt="non-virtual"><scope>gr_oscope_sink_f</scope><name>~gr_oscope_sink_x</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

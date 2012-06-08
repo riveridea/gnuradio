@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gnuradio-digital
+Description: GNU Radio blocks for digital communications
+Requires: gnuradio-core
+Version: 3.6.1git
+Libs: -L${libdir} -lgnuradio-digital
+Cflags: -I${includedir}

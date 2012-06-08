@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__deinterleave_8h" kind="file">
+    <compoundname>gr_deinterleave.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__sync__decimator_8h" local="no">gr_sync_decimator.h</includes>
+    <incdepgraph>
+      <node id="6812">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="6824">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="6823">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="6822" relation="include">
+        </childnode>
+        <childnode refid="6824" relation="include">
+        </childnode>
+        <childnode refid="6812" relation="include">
+        </childnode>
+        <childnode refid="6825" relation="include">
+        </childnode>
+        <childnode refid="6816" relation="include">
+        </childnode>
+        <childnode refid="6826" relation="include">
+        </childnode>
+        <childnode refid="6827" relation="include">
+        </childnode>
+        <childnode refid="6830" relation="include">
+        </childnode>
+        <childnode refid="6831" relation="include">
+        </childnode>
+        <childnode refid="6832" relation="include">
+        </childnode>
+      </node>
+      <node id="6815">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="6816" relation="include">
+        </childnode>
+      </node>
+      <node id="6827">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="6828" relation="include">
+        </childnode>
+        <childnode refid="6829" relation="include">
+        </childnode>
+      </node>
+      <node id="6807">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6808" relation="include">
+        </childnode>
+      </node>
+      <node id="6822">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="6805" relation="include">
+        </childnode>
+      </node>
+      <node id="6809">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6810" relation="include">
+        </childnode>
+        <childnode refid="6817" relation="include">
+        </childnode>
+        <childnode refid="6818" relation="include">
+        </childnode>
+        <childnode refid="6819" relation="include">
+        </childnode>
+        <childnode refid="6820" relation="include">
+        </childnode>
+        <childnode refid="6826" relation="include">
+        </childnode>
+      </node>
+      <node id="6831">
+        <label>stdexcept</label>
+      </node>
+      <node id="6811">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6812" relation="include">
+        </childnode>
+        <childnode refid="6813" relation="include">
+        </childnode>
+        <childnode refid="6814" relation="include">
+        </childnode>
+        <childnode refid="6815" relation="include">
+        </childnode>
+      </node>
+      <node id="6826">
+        <label>string</label>
+      </node>
+      <node id="6808">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6809" relation="include">
+        </childnode>
+        <childnode refid="6833" relation="include">
+        </childnode>
+      </node>
+      <node id="6804">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="6805" relation="include">
+        </childnode>
+      </node>
+      <node id="6833">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6823" relation="include">
+        </childnode>
+      </node>
+      <node id="6814">
+        <label>stddef.h</label>
+      </node>
+      <node id="6819">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="6828">
+        <label>limits.h</label>
+      </node>
+      <node id="6825">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="6810">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6811" relation="include">
+        </childnode>
+      </node>
+      <node id="6829">
+        <label>wchar.h</label>
+      </node>
+      <node id="6820">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6821" relation="include">
+        </childnode>
+        <childnode refid="6823" relation="include">
+        </childnode>
+      </node>
+      <node id="6813">
+        <label>vector</label>
+      </node>
+      <node id="6818">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="6805">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="6830">
+        <label>iosfwd</label>
+      </node>
+      <node id="6803">
+        <label>gr_deinterleave.h</label>
+        <link refid="gr_deinterleave.h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6806" relation="include">
+        </childnode>
+      </node>
+      <node id="6832">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="6806">
+        <label>gr_sync_decimator.h</label>
+        <link refid="gr__sync__decimator_8h"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6807" relation="include">
+        </childnode>
+      </node>
+      <node id="6817">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="6804" relation="include">
+        </childnode>
+        <childnode refid="6812" relation="include">
+        </childnode>
+      </node>
+      <node id="6816">
+        <label>complex</label>
+      </node>
+      <node id="6821">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="6822" relation="include">
+        </childnode>
+        <childnode refid="6823" relation="include">
+        </childnode>
+        <childnode refid="6812" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr__deinterleave" prot="public">gr_deinterleave</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gr__deinterleave_8h_1a8c5d4438ee02d7b5addda94e263694ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_deinterleave_sptr</ref></type>
+        <definition>GR_CORE_API gr_deinterleave_sptr gr_make_deinterleave</definition>
+        <argsstring>(size_t itemsize)</argsstring>
+        <name>gr_make_deinterleave</name>
+        <param>
+          <type>size_t</type>
+          <declname>itemsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_deinterleave.h"/>
+  </compounddef>
+</doxygen>

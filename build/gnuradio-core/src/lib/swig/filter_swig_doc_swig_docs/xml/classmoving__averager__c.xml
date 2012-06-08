@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classmoving__averager__c" kind="class" prot="public">
+    <compoundname>moving_averager_c</compoundname>
+    <includes refid="gr__dc__blocker__cc_8h" local="no">gr_dc_blocker_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmoving__averager__c_1af391127da4bd0feb77366076c49fa5b0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int moving_averager_c::d_length</definition>
+        <argsstring></argsstring>
+        <name>d_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoving__averager__c_1acee53dadd792906a41df4d131d036862" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex moving_averager_c::d_out</definition>
+        <argsstring></argsstring>
+        <name>d_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoving__averager__c_1a6fbd81cb8897bb0d0cac6e87dbe353ce" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex moving_averager_c::d_out_d1</definition>
+        <argsstring></argsstring>
+        <name>d_out_d1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoving__averager__c_1acacf00ef5534b2ef039e543e5e1fe5ee" prot="private" static="no" mutable="no">
+        <type>gr_complex</type>
+        <definition>gr_complex moving_averager_c::d_out_d2</definition>
+        <argsstring></argsstring>
+        <name>d_out_d2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmoving__averager__c_1a53b8334040f1b6c98aadf2e446995030" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; gr_complex &gt;</type>
+        <definition>std::deque&lt;gr_complex&gt; moving_averager_c::d_delay_line</definition>
+        <argsstring></argsstring>
+        <name>d_delay_line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmoving__averager__c_1ac166a656425ad0765d58086626ea7e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>moving_averager_c::moving_averager_c</definition>
+        <argsstring>(int D)</argsstring>
+        <name>moving_averager_c</name>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoving__averager__c_1a687d7977134b1a340ad083a210efe057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>moving_averager_c::~moving_averager_c</definition>
+        <argsstring>()</argsstring>
+        <name>~moving_averager_c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoving__averager__c_1a6d0a34c9069bdcb51e3a34b3f9372cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex moving_averager_c::filter</definition>
+        <argsstring>(gr_complex x)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classmoving__averager__c_1a0528e7eb081e114c6a1ec4ef2a3cca72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex moving_averager_c::delayed_sig</definition>
+        <argsstring>()</argsstring>
+        <name>delayed_sig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" line="32" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_dc_blocker_cc.h" bodystart="31" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classmoving__averager__c_1a53b8334040f1b6c98aadf2e446995030" prot="private" virt="non-virtual"><scope>moving_averager_c</scope><name>d_delay_line</name></member>
+      <member refid="classmoving__averager__c_1af391127da4bd0feb77366076c49fa5b0" prot="private" virt="non-virtual"><scope>moving_averager_c</scope><name>d_length</name></member>
+      <member refid="classmoving__averager__c_1acee53dadd792906a41df4d131d036862" prot="private" virt="non-virtual"><scope>moving_averager_c</scope><name>d_out</name></member>
+      <member refid="classmoving__averager__c_1a6fbd81cb8897bb0d0cac6e87dbe353ce" prot="private" virt="non-virtual"><scope>moving_averager_c</scope><name>d_out_d1</name></member>
+      <member refid="classmoving__averager__c_1acacf00ef5534b2ef039e543e5e1fe5ee" prot="private" virt="non-virtual"><scope>moving_averager_c</scope><name>d_out_d2</name></member>
+      <member refid="classmoving__averager__c_1a0528e7eb081e114c6a1ec4ef2a3cca72" prot="public" virt="non-virtual"><scope>moving_averager_c</scope><name>delayed_sig</name></member>
+      <member refid="classmoving__averager__c_1a6d0a34c9069bdcb51e3a34b3f9372cb2" prot="public" virt="non-virtual"><scope>moving_averager_c</scope><name>filter</name></member>
+      <member refid="classmoving__averager__c_1ac166a656425ad0765d58086626ea7e86" prot="public" virt="non-virtual"><scope>moving_averager_c</scope><name>moving_averager_c</name></member>
+      <member refid="classmoving__averager__c_1a687d7977134b1a340ad083a210efe057" prot="public" virt="non-virtual"><scope>moving_averager_c</scope><name>~moving_averager_c</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

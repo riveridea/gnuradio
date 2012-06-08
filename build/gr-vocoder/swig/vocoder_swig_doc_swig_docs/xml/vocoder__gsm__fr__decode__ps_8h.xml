@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="vocoder__gsm__fr__decode__ps_8h" kind="file">
+    <compoundname>vocoder_gsm_fr_decode_ps.h</compoundname>
+    <includes refid="vocoder__api_8h" local="no">vocoder_api.h</includes>
+    <includes local="no">gr_sync_interpolator.h</includes>
+    <incdepgraph>
+      <node id="81">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="82">
+        <label>gr_sync_interpolator.h</label>
+      </node>
+      <node id="80">
+        <label>vocoder_api.h</label>
+        <link refid="vocoder__api_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h</label>
+        <link refid="vocoder_gsm_fr_decode_ps.h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classvocoder__gsm__fr__decode__ps" prot="public">vocoder_gsm_fr_decode_ps</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classvocoder__gsm__fr__decode__ps" kindref="compound">vocoder_gsm_fr_decode_ps</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;vocoder_gsm_fr_decode_ps&gt; vocoder_gsm_fr_decode_ps_sptr</definition>
+        <argsstring></argsstring>
+        <name>vocoder_gsm_fr_decode_ps_sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vocoder__gsm__fr__decode__ps_8h_1a330878cba05bb6c4da64b7eed537084d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__GR_ATTR_IMPORT <ref refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" kindref="member">vocoder_gsm_fr_decode_ps_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT vocoder_gsm_fr_decode_ps_sptr vocoder_make_gsm_fr_decode_ps</definition>
+        <argsstring>()</argsstring>
+        <name>vocoder_make_gsm_fr_decode_ps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h" line="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2005,2011<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_VOCODER_GSM_FR_DECODE_PS_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_VOCODER_GSM_FR_DECODE_PS_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="vocoder__api_8h" kindref="compound">vocoder_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_sync_interpolator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classvocoder__gsm__fr__decode__ps" kindref="compound" tooltip="GSM 06.10 Full Rate Vocoder Decoder.">vocoder_gsm_fr_decode_ps</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;vocoder_gsm_fr_decode_ps&gt;<sp/><ref refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" kindref="member">vocoder_gsm_fr_decode_ps_sptr</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="vocoder__api_8h_1a8a56d8b0d26cf75df04dcad9064a0aeb" kindref="member">VOCODER_API</ref><sp/><ref refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" kindref="member">vocoder_gsm_fr_decode_ps_sptr</ref><sp/><ref refid="vocoder__gsm__fr__decode__ps_8h_1a330878cba05bb6c4da64b7eed537084d" kindref="member">vocoder_make_gsm_fr_decode_ps</ref><sp/>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classvocoder__gsm__fr__decode__ps" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="vocoder__api_8h_1a8a56d8b0d26cf75df04dcad9064a0aeb" kindref="member">VOCODER_API</ref><sp/><ref refid="classvocoder__gsm__fr__decode__ps" kindref="compound" tooltip="GSM 06.10 Full Rate Vocoder Decoder.">vocoder_gsm_fr_decode_ps</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr_sync_interpolator<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gsm_state<sp/><sp/><sp/><sp/><sp/><sp/>*d_gsm;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="vocoder__api_8h_1a8a56d8b0d26cf75df04dcad9064a0aeb" kindref="member">VOCODER_API</ref><sp/><ref refid="vocoder__gsm__fr__decode__ps_8h_1a024b45a8931a8128d9debbd3796c3bb9" kindref="member">vocoder_gsm_fr_decode_ps_sptr</ref><sp/><ref refid="vocoder__gsm__fr__decode__ps_8h_1a330878cba05bb6c4da64b7eed537084d" kindref="member">vocoder_make_gsm_fr_decode_ps</ref><sp/>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="classvocoder__gsm__fr__decode__ps" kindref="compound" tooltip="GSM 06.10 Full Rate Vocoder Decoder.">vocoder_gsm_fr_decode_ps</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>~<ref refid="classvocoder__gsm__fr__decode__ps" kindref="compound" tooltip="GSM 06.10 Full Rate Vocoder Decoder.">vocoder_gsm_fr_decode_ps</ref><sp/>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>work<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_VOCODER_GSM_FR_DECODE_PS_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/include/vocoder_gsm_fr_decode_ps.h"/>
+  </compounddef>
+</doxygen>

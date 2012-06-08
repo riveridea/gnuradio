@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="comedi__source__s_8h" kind="file">
+    <compoundname>comedi_source_s.h</compoundname>
+    <includes refid="gr__sync__block_8h" local="no">gr_sync_block.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">comedilib.h</includes>
+    <includes local="no">stdexcept</includes>
+    <incdepgraph>
+      <node id="2279">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="2291">
+        <label>boost/intrusive_ptr.hpp</label>
+      </node>
+      <node id="2290">
+        <label>gruel/pmt.h</label>
+        <link refid="pmt_8h"/>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2292" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+        <childnode refid="2298" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+      </node>
+      <node id="2282">
+        <label>gr_complex.h</label>
+        <link refid="gr__complex_8h"/>
+        <childnode refid="2283" relation="include">
+        </childnode>
+      </node>
+      <node id="2294">
+        <label>stdint.h</label>
+        <link refid="stdint_8h"/>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>gr_sync_block.h</label>
+        <link refid="gr__sync__block_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+      </node>
+      <node id="2289">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="2274" relation="include">
+        </childnode>
+      </node>
+      <node id="2276">
+        <label>gr_basic_block.h</label>
+        <link refid="gr__basic__block_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+      </node>
+      <node id="2298">
+        <label>stdexcept</label>
+      </node>
+      <node id="2278">
+        <label>gr_types.h</label>
+        <link refid="gr__types_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2282" relation="include">
+        </childnode>
+      </node>
+      <node id="2293">
+        <label>string</label>
+      </node>
+      <node id="2275">
+        <label>gr_block.h</label>
+        <link refid="gr__block_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2300" relation="include">
+        </childnode>
+      </node>
+      <node id="2301">
+        <label>comedilib.h</label>
+      </node>
+      <node id="2273">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="2274" relation="include">
+        </childnode>
+      </node>
+      <node id="2300">
+        <label>gr_tags.h</label>
+        <link refid="gr__tags_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+      </node>
+      <node id="2281">
+        <label>stddef.h</label>
+      </node>
+      <node id="2271">
+        <label>comedi_source_s.h</label>
+        <link refid="comedi_source_s.h"/>
+        <childnode refid="2272" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+        <childnode refid="2301" relation="include">
+        </childnode>
+        <childnode refid="2298" relation="include">
+        </childnode>
+      </node>
+      <node id="2286">
+        <label>boost/function.hpp</label>
+      </node>
+      <node id="2295">
+        <label>limits.h</label>
+      </node>
+      <node id="2292">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="2277">
+        <label>gr_runtime_types.h</label>
+        <link refid="gr__runtime__types_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+      </node>
+      <node id="2296">
+        <label>wchar.h</label>
+      </node>
+      <node id="2287">
+        <label>gr_msg_accepter.h</label>
+        <link refid="gr__msg__accepter_8h"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+      </node>
+      <node id="2280">
+        <label>vector</label>
+      </node>
+      <node id="2285">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="2274">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2297">
+        <label>iosfwd</label>
+      </node>
+      <node id="2299">
+        <label>gruel/pmt_sugar.h</label>
+        <link refid="pmt__sugar_8h"/>
+      </node>
+      <node id="2284">
+        <label>gr_sptr_magic.h</label>
+        <link refid="gr__sptr__magic_8h_source"/>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+      </node>
+      <node id="2283">
+        <label>complex</label>
+      </node>
+      <node id="2288">
+        <label>gruel/msg_accepter.h</label>
+        <link refid="msg__accepter_8h"/>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcomedi__source__s" prot="public">comedi_source_s</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="comedi__source__s_8h_1a50c1bec557b16f3cf9f5b34326d1ca5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classboost_1_1shared__ptr" kindref="compound">comedi_source_s_sptr</ref></type>
+        <definition>comedi_source_s_sptr comedi_make_source_s</definition>
+        <argsstring>(int sampling_freq, const std::string dev=&quot;/dev/comedi0&quot;)</argsstring>
+        <name>comedi_make_source_s</name>
+        <param>
+          <type>int</type>
+          <declname>sampling_freq</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>dev</declname>
+          <defval>&quot;/dev/comedi0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>make a COMEDI source. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampling_freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sampling rate in Hz </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>COMEDI device name, e.g., &quot;/dev/comedi0&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-comedi/src/comedi_source_s.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-comedi/src/comedi_source_s.h"/>
+  </compounddef>
+</doxygen>

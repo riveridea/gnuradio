@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classi2c__bbio" kind="class" prot="public">
+    <compoundname>i2c_bbio</compoundname>
+    <derivedcompoundref refid="classi2c__bbio__pp" prot="public" virt="non-virtual">i2c_bbio_pp</derivedcompoundref>
+    <includes refid="i2c__bbio_8h" local="no">i2c_bbio.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi2c__bbio_1a2aa01d1b7b5d69a1f5aea3392c948c9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>i2c_bbio::i2c_bbio</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_bbio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1a7f16201391950e11847c90f3d188764d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual i2c_bbio::~i2c_bbio</definition>
+        <argsstring>()</argsstring>
+        <name>~i2c_bbio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1af11eabf1af55eb5403482b5787fe8f2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio::set_scl</definition>
+        <argsstring>(bool state)=0</argsstring>
+        <name>set_scl</name>
+        <reimplementedby refid="classi2c__bbio__pp_1afa9830679ddb385644f304c1f7de004c">set_scl</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1a37ce10af9ef6d40b779ce4a654123200" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio::set_sda</definition>
+        <argsstring>(bool state)=0</argsstring>
+        <name>set_sda</name>
+        <reimplementedby refid="classi2c__bbio__pp_1a5567fac14054ae3741110ef457795de5">set_sda</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1adbd6acc7a68f92f5c81b90ff4d38e2ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool i2c_bbio::get_sda</definition>
+        <argsstring>()=0</argsstring>
+        <name>get_sda</name>
+        <reimplementedby refid="classi2c__bbio__pp_1aac9bc017a05e86aa772abb7396207f7e">get_sda</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1a0432778fbcf4b007eb7d039a70c33649" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio::lock</definition>
+        <argsstring>()=0</argsstring>
+        <name>lock</name>
+        <reimplementedby refid="classi2c__bbio__pp_1a25510872738004a6324c0643c4a69f28">lock</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classi2c__bbio_1a7f2832711975b08251bf63e522c88fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>virtual void i2c_bbio::unlock</definition>
+        <argsstring>()=0</argsstring>
+        <name>unlock</name>
+        <reimplementedby refid="classi2c__bbio__pp_1aa01b986d0e95999537ee2d5f173dbfed">unlock</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>abstract class that implements bit banging i/o for <ref refid="classi2c" kindref="compound">i2c</ref> bus. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6045">
+        <label>i2c_bbio_pp</label>
+        <link refid="classi2c__bbio__pp"/>
+        <childnode refid="6044" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6044">
+        <label>i2c_bbio</label>
+        <link refid="classi2c__bbio"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" line="37" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c_bbio.h" bodystart="37" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classi2c__bbio_1adbd6acc7a68f92f5c81b90ff4d38e2ec" prot="public" virt="pure-virtual"><scope>i2c_bbio</scope><name>get_sda</name></member>
+      <member refid="classi2c__bbio_1a2aa01d1b7b5d69a1f5aea3392c948c9d" prot="public" virt="non-virtual"><scope>i2c_bbio</scope><name>i2c_bbio</name></member>
+      <member refid="classi2c__bbio_1a0432778fbcf4b007eb7d039a70c33649" prot="public" virt="pure-virtual"><scope>i2c_bbio</scope><name>lock</name></member>
+      <member refid="classi2c__bbio_1af11eabf1af55eb5403482b5787fe8f2b" prot="public" virt="pure-virtual"><scope>i2c_bbio</scope><name>set_scl</name></member>
+      <member refid="classi2c__bbio_1a37ce10af9ef6d40b779ce4a654123200" prot="public" virt="pure-virtual"><scope>i2c_bbio</scope><name>set_sda</name></member>
+      <member refid="classi2c__bbio_1a7f2832711975b08251bf63e522c88fd8" prot="public" virt="pure-virtual"><scope>i2c_bbio</scope><name>unlock</name></member>
+      <member refid="classi2c__bbio_1a7f16201391950e11847c90f3d188764d" prot="public" virt="virtual"><scope>i2c_bbio</scope><name>~i2c_bbio</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

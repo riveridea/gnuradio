@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__fir__filter__with__buffer__fcc" kind="class" prot="public">
+    <compoundname>gri_fir_filter_with_buffer_fcc</compoundname>
+    <includes refid="gri__fir__filter__with__buffer__fcc_8h" local="no">gri_fir_filter_with_buffer_fcc.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgri__fir__filter__with__buffer__fcc_1a2a3df559df595a34b4f69afcd8df85c6" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gri_fir_filter_with_buffer_fcc::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fir__filter__with__buffer__fcc_1a13bcf40edeebabee9515f89b58b2cbe3" prot="protected" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* gri_fir_filter_with_buffer_fcc::d_buffer</definition>
+        <argsstring></argsstring>
+        <name>d_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__fir__filter__with__buffer__fcc_1a48ffbc59adbf767d58fb6b0b23c91726" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gri_fir_filter_with_buffer_fcc::d_idx</definition>
+        <argsstring></argsstring>
+        <name>d_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1acdbc711ffd4fd6e81f76e304d7554f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_fir_filter_with_buffer_fcc::gri_fir_filter_with_buffer_fcc</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>gri_fir_filter_with_buffer_fcc</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>construct new FIR with given taps. </para>        </briefdescription>
+        <detaileddescription>
+<para>Note that taps must be in forward order, e.g., coefficient 0 is stored in new_taps[0], coefficient 1 is stored in new_taps[1], etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a1ff9725cd3fb9501829b8001f997056e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_fir_filter_with_buffer_fcc::~gri_fir_filter_with_buffer_fcc</definition>
+        <argsstring>()</argsstring>
+        <name>~gri_fir_filter_with_buffer_fcc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1adba52bff2c853adae92b24a937bec5e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex gri_fir_filter_with_buffer_fcc::filter</definition>
+        <argsstring>(float input)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>float</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> is a single input value of the filter type</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a8549fc981f06be5ae38bbd623ec9fbf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex</type>
+        <definition>gr_complex gri_fir_filter_with_buffer_fcc::filter</definition>
+        <argsstring>(const float input[], unsigned long dec)</argsstring>
+        <name>filter</name>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>dec</declname>
+        </param>
+        <briefdescription>
+<para>compute a single output value; designed for decimating filters. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> is a single input value of the filter type. The value of dec is the decimating value of the filter, so input[] must have dec valid values. The filter pushes dec number of items onto the circ. buffer before computing a single output.</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1ab28ff543cbaaecb482f69c2f9433996a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_fir_filter_with_buffer_fcc::filterN</definition>
+        <argsstring>(gr_complex output[], const float input[], unsigned long n)</argsstring>
+        <name>filterN</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (n - 1 + <ref refid="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[n - 1 + <ref refid="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a0e72fbf46b84b7470f2d763c8165173a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_fir_filter_with_buffer_fcc::filterNdec</definition>
+        <argsstring>(gr_complex output[], const float input[], unsigned long n, unsigned long decimate)</argsstring>
+        <name>filterNdec</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>decimate</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values, decimating the input </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (decimate * (n - 1) + <ref refid="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[decimate * (n - 1) + <ref refid="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a1d84fa10ae82dede63d16d290c8cbbaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gri_fir_filter_with_buffer_fcc::set_taps</definition>
+        <argsstring>(const std::vector&lt; gr_complex &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; gr_complex &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+<para>install <computeroutput>new_taps</computeroutput> as the current taps. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gri_fir_filter_with_buffer_fcc::ntaps</definition>
+        <argsstring>() const </argsstring>
+        <name>ntaps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>number of taps in filter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="121" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__fir__filter__with__buffer__fcc_1a3e774b41b300fff7db6f6ace146d2b0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; gr_complex &gt;</type>
+        <definition>const std::vector&lt;gr_complex&gt; gri_fir_filter_with_buffer_fcc::get_taps</definition>
+        <argsstring>() const </argsstring>
+        <name>get_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current taps </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="127" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="126" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>FIR with internal buffer for float input, gr_complex output and gr_complex taps. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="813">
+        <label>std::vector&lt; gr_complex &gt;</label>
+      </node>
+      <node id="812">
+        <label>gri_fir_filter_with_buffer_fcc</label>
+        <link refid="classgri__fir__filter__with__buffer__fcc"/>
+        <childnode refid="813" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gri_fir_filter_with_buffer_fcc.h" bodystart="46" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a13bcf40edeebabee9515f89b58b2cbe3" prot="protected" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>d_buffer</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a48ffbc59adbf767d58fb6b0b23c91726" prot="protected" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>d_idx</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a2a3df559df595a34b4f69afcd8df85c6" prot="protected" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>d_taps</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1adba52bff2c853adae92b24a937bec5e6" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>filter</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a8549fc981f06be5ae38bbd623ec9fbf4" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>filter</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1ab28ff543cbaaecb482f69c2f9433996a" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>filterN</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a0e72fbf46b84b7470f2d763c8165173a" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>filterNdec</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a3e774b41b300fff7db6f6ace146d2b0f" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>get_taps</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1acdbc711ffd4fd6e81f76e304d7554f54" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>gri_fir_filter_with_buffer_fcc</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a312d13225c0de51f61b26602d751ac9e" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>ntaps</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a1d84fa10ae82dede63d16d290c8cbbaa" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>set_taps</name></member>
+      <member refid="classgri__fir__filter__with__buffer__fcc_1a1ff9725cd3fb9501829b8001f997056e" prot="public" virt="non-virtual"><scope>gri_fir_filter_with_buffer_fcc</scope><name>~gri_fir_filter_with_buffer_fcc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

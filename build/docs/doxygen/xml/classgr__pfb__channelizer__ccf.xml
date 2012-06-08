@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__pfb__channelizer__ccf" kind="class" prot="public">
+    <compoundname>gr_pfb_channelizer_ccf</compoundname>
+    <basecompoundref refid="classgr__block" prot="public" virt="non-virtual">gr_block</basecompoundref>
+    <includes refid="gr__pfb__channelizer__ccf_8h" local="no">gr_pfb_channelizer_ccf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a76942213f7d3d8fcaa4ff25c2826f150" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_pfb_channelizer_ccf::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="140" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a546f00e03b55cb15c506a051a4e410b3" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_channelizer_ccf::d_numchans</definition>
+        <argsstring></argsstring>
+        <name>d_numchans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="141" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a37531af8569e0a3c4729dc8827f3de41" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_pfb_channelizer_ccf::d_oversample_rate</definition>
+        <argsstring></argsstring>
+        <name>d_oversample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="142" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a4959863cf5468c19257291038d32c158" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_fir_ccf * &gt;</type>
+        <definition>std::vector&lt;gr_fir_ccf*&gt; gr_pfb_channelizer_ccf::d_filters</definition>
+        <argsstring></argsstring>
+        <name>d_filters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="143" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a679c7984d4b2b81fa5aceca697bf6633" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt;float&gt; &gt; gr_pfb_channelizer_ccf::d_taps</definition>
+        <argsstring></argsstring>
+        <name>d_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="144" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a04496ee7dabeaa40ab557c1799c1a9a1" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_pfb_channelizer_ccf::d_taps_per_filter</definition>
+        <argsstring></argsstring>
+        <name>d_taps_per_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="145" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1aca3d8b09ada120e12b421dbe06d1569e" prot="private" static="no" mutable="no">
+        <type><ref refid="classgri__fft__complex" kindref="compound">gri_fft_complex</ref> *</type>
+        <definition>gri_fft_complex* gr_pfb_channelizer_ccf::d_fft</definition>
+        <argsstring></argsstring>
+        <name>d_fft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="146" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a3c2138caa80a146608e46eef119d4450" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* gr_pfb_channelizer_ccf::d_idxlut</definition>
+        <argsstring></argsstring>
+        <name>d_idxlut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="147" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1ab65e6fe4e03462020dc6a856231a7f4b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_channelizer_ccf::d_rate_ratio</definition>
+        <argsstring></argsstring>
+        <name>d_rate_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="148" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1ae4433a5fa8652679710bbc5c62f51ce3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_pfb_channelizer_ccf::d_output_multiple</definition>
+        <argsstring></argsstring>
+        <name>d_output_multiple</name>
+        <reimplements refid="classgr__block_1ae5a0a035811331b83e572e8785207eb3">d_output_multiple</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="149" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a2d32c2d8ced7c5c3c5033f0ceafb09d1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr_pfb_channelizer_ccf::d_channel_map</definition>
+        <argsstring></argsstring>
+        <name>d_channel_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="150" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__pfb__channelizer__ccf_1a64dca2bdbff9a28b40546cd284780754" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">gruel::mutex</ref></type>
+        <definition>gruel::mutex gr_pfb_channelizer_ccf::d_mutex</definition>
+        <argsstring></argsstring>
+        <name>d_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="151" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__pfb__channelizer__ccf_1acd00d74862c4c21c6d5e1baca9967f70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_pfb_channelizer_ccf_sptr</ref></type>
+        <definition>GR_CORE_API gr_pfb_channelizer_ccf_sptr gr_make_pfb_channelizer_ccf</definition>
+        <argsstring>(unsigned int numchans, const std::vector&lt; float &gt; &amp;taps, float oversample_rate)</argsstring>
+        <name>gr_make_pfb_channelizer_ccf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numchans</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oversample_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank decimator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numchans</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Specifies the number of channels <emphasis>M</emphasis> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oversample_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) The over sampling rate is the ratio of the the actual output sampling rate to the normal output sampling rate. It must be rationally related to the number of channels as N/i for i in [1,N], which gives an outputsample rate of [fs/N, fs] where fs is the input sample rate and N is the number of channels.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+For example, for 6 channels with fs = 6000 Hz, the normal rate is 6000/6 = 1000 Hz. Allowable oversampling rates are 6/6, 6/5, 6/4, 6/3, 6/2, and 6/1 where the output sample rate of a 6/1 oversample ratio is 6000 Hz, or 6 times the normal 1000 Hz. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1a2295635dc641da6abfa6530cf39722b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_channelizer_ccf::gr_pfb_channelizer_ccf</definition>
+        <argsstring>(unsigned int numchans, const std::vector&lt; float &gt; &amp;taps, float oversample_rate)</argsstring>
+        <name>gr_pfb_channelizer_ccf</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numchans</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oversample_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build the polyphase filterbank decimator. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numchans</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(unsigned integer) Specifies the number of channels <emphasis>M</emphasis> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oversample_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(float) The output over sampling rate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="161"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1a25b8a4dfdc76343c59ce6ea0e992cd98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_pfb_channelizer_ccf::~gr_pfb_channelizer_ccf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_pfb_channelizer_ccf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1ac04a9e2ffc2815d12dc528174c7d9b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_channelizer_ccf::set_taps</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>set_taps</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the filterbank&apos;s filter taps with the new prototype filter <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>taps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(vector/list of floats) The prototype filter to populate the filterbank. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1a1a399210c8b4fcb23b4a6226e2c790f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_channelizer_ccf::print_taps</definition>
+        <argsstring>()</argsstring>
+        <name>print_taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print all of the filterbank taps to screen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1a147683e1e0e5fd26dd11f9b945cd647b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;float&gt; &gt; gr_pfb_channelizer_ccf::taps</definition>
+        <argsstring>() const </argsstring>
+        <name>taps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a vector&lt;vector&lt;&gt;&gt; of the filterbank taps </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1ae8ec7b7f5d2cd705fb5c2ff1e665bd65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gr_pfb_channelizer_ccf::set_channel_map</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;map)</argsstring>
+        <name>set_channel_map</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the channel map. Channels are numbers as:</para><para>N/2+1 | ... | N-1 | 0 | 1 | 2 | ... | N/2 &lt;------------------- 0 --------------------&gt; freq</para><para>So output stream 0 comes from channel 0, etc. Setting a new channel map allows the user to specify which channel in frequency he/she wants to got to which output stream.</para><para>The map should have the same number of elements as the number of output connections from the block. The minimum value of the map is 0 (for the 0th channel) and the maximum number is N-1 where N is the number of channels.</para><para>We specify M as the number of output connections made where M &lt;= N, so only M out of N channels are driven to an output stream. The number of items in the channel map should be at least M long. If there are more channels specified, any value in the map over M-1 will be ignored. If the size of the map is less than M the behavior is unknown (we don&apos;t wish to check every entry into the work function).</para><para>This means that if the channelizer is splitting the signal up into N channels but only M channels are specified in the map (where M &lt;= N), then M output streams must be connected and the map and the channel numbers used must be less than N-1. Output channel number can be reused, too. By default, the map is [0...M-1] with M = N. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1aed66580726739c2d5d10c261e52ca814" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr_pfb_channelizer_ccf::channel_map</definition>
+        <argsstring>() const </argsstring>
+        <name>channel_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the current channel map. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__pfb__channelizer__ccf_1a0e6a3d7ca55379a57877462595e2eab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int gr_pfb_channelizer_ccf::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <reimplements refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197">general_work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Polyphase filterbank channelizer with gr_complex input, gr_complex output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+<para>This block takes in complex inputs and channelizes it to <emphasis>M</emphasis> channels of equal bandwidth. Each of the resulting channels is decimated to the new rate that is the input sampling rate <emphasis>fs</emphasis> divided by the number of channels, <emphasis>M</emphasis>.</para><para>The PFB channelizer code takes the taps generated above and builds a set of filters. The set contains <emphasis>M</emphasis> number of filters and each filter contains ceil(taps.size()/decim) number of taps. Each tap from the filter prototype is sequentially inserted into the next filter. When all of the input taps are used, the remaining filters in the filterbank are filled out with 0&apos;s to make sure each filter has the same number of taps.</para><para>Each filter operates using the gr_fir filter classs of GNU Radio, which takes the input stream at <emphasis>i</emphasis> and performs the inner product calculation to <emphasis>i+(n-1)</emphasis> where <emphasis>n</emphasis> is the number of filter taps. To efficiently handle this in the GNU Radio structure, each filter input must come from its own input stream. So the channelizer must be provided with <emphasis>M</emphasis> streams where the input stream has been deinterleaved. This is most easily done using the <ref refid="classgr__stream__to__streams" kindref="compound">gr_stream_to_streams</ref> block.</para><para>The output is then produced as a vector, where index <emphasis>i</emphasis> in the vector is the next sample from the <emphasis>i</emphasis>th channel. This is most easily handled by sending the output to a <ref refid="classgr__vector__to__streams" kindref="compound">gr_vector_to_streams</ref> block to handle the conversion and passing <emphasis>M</emphasis> streams out.</para><para>The input and output formatting is done using a hier_block2 called pfb_channelizer_ccf. This can take in a single stream and outputs <emphasis>M</emphasis> streams based on the behavior described above.</para><para>The filter&apos;s taps should be based on the input sampling rate.</para><para>For example, using the GNU Radio&apos;s firdes utility to building filters, we build a low-pass filter with a sampling rate of <emphasis>fs</emphasis>, a 3-dB bandwidth of <emphasis>BW</emphasis> and a transition bandwidth of <emphasis>TB</emphasis>. We can also specify the out-of-band attenuation to use, <emphasis>ATT</emphasis>, and the filter window function (a Blackman-harris window in this case). The first input is the gain of the filter, which we specify here as unity.</para><para><bold><emphasis>self._taps = gr.firdes.low_pass_2(1, fs, BW, TB, attenuation_dB=ATT, window=gr.firdes.WIN_BLACKMAN_hARRIS)</emphasis></bold></para><para>The filter output can also be overs ampled. The over sampling rate is the ratio of the the actual output sampling rate to the normal output sampling rate. It must be rationally related to the number of channels as N/i for i in [1,N], which gives an outputsample rate of [fs/N, fs] where fs is the input sample rate and N is the number of channels.</para><para>For example, for 6 channels with fs = 6000 Hz, the normal rate is 6000/6 = 1000 Hz. Allowable oversampling rates are 6/6, 6/5, 6/4, 6/3, 6/2, and 6/1 where the output sample rate of a 6/1 oversample ratio is 6000 Hz, or 6 times the normal 1000 Hz. A rate of 6/5 = 1.2, so the output rate would be 1200 Hz.</para><para>The theory behind this block can be found in Chapter 6 of the following book.</para><para><bold><emphasis>f. harris, &quot;Multirate Signal Processing for Communication
+       Systems,&quot; Upper Saddle River, NJ: Prentice Hall, Inc. 2004.</emphasis></bold> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="4651">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4652" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4649">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4650" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4652">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4648">
+        <label>gr_pfb_channelizer_ccf</label>
+        <link refid="classgr__pfb__channelizer__ccf"/>
+        <childnode refid="4649" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4650">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4651" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4656">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="4657" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4654">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="4655" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4658">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="4659" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="4661">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="4657">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="4653">
+        <label>gr_pfb_channelizer_ccf</label>
+        <link refid="classgr__pfb__channelizer__ccf"/>
+        <childnode refid="4654" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4659">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="4655">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="4656" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4658" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="4660" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4660">
+        <label>std::string</label>
+        <childnode refid="4661" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" line="117" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gr_pfb_channelizer_ccf.h" bodystart="116" bodyend="224"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>BLACK</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1aed66580726739c2d5d10c261e52ca814" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>channel_map</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>consume_each</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a2d32c2d8ced7c5c3c5033f0ceafb09d1" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_channel_map</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_color</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1aca3d8b09ada120e12b421dbe06d1569e" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_fft</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a4959863cf5468c19257291038d32c158" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_filters</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a3c2138caa80a146608e46eef119d4450" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_idxlut</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_input_signature</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a64dca2bdbff9a28b40546cd284780754" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_mutex</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_name</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a546f00e03b55cb15c506a051a4e410b3" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_numchans</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1ae4433a5fa8652679710bbc5c62f51ce3" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_output_signature</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a37531af8569e0a3c4729dc8827f3de41" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_oversample_rate</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1ab65e6fe4e03462020dc6a856231a7f4b" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_rate_ratio</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a679c7984d4b2b81fa5aceca697bf6633" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_taps</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a04496ee7dabeaa40ab557c1799c1a9a1" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_taps_per_filter</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_unique_id</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a76942213f7d3d8fcaa4ff25c2826f150" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>d_updated</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>forecast</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a0e6a3d7ca55379a57877462595e2eab4" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1acd00d74862c4c21c6d5e1baca9967f70" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_make_pfb_channelizer_ccf</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a2295635dc641da6abfa6530cf39722b7" prot="private" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_pfb_channelizer_ccf</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>is_unaligned</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>post</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a1a399210c8b4fcb23b4a6226e2c790f6" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>print_taps</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_alignment</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1ae8ec7b7f5d2cd705fb5c2ff1e665bd65" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_channel_map</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1ac04a9e2ffc2815d12dc528174c7d9b5f" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_taps</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a147683e1e0e5fd26dd11f9b945cd647b" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>taps</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgr__pfb__channelizer__ccf_1a25b8a4dfdc76343c59ce6ea0e992cd98" prot="public" virt="non-virtual"><scope>gr_pfb_channelizer_ccf</scope><name>~gr_pfb_channelizer_ccf</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>gr_pfb_channelizer_ccf</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

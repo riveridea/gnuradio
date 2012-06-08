@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__threshold__ff" kind="class" prot="public">
+    <compoundname>gr_threshold_ff</compoundname>
+    <includes refid="gr__threshold__ff_8h" local="no">gr_threshold_ff.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__threshold__ff_1af0fe6b62881582632733d06f3ef3a1e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_threshold_ff::d_lo</definition>
+        <argsstring></argsstring>
+        <name>d_lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__threshold__ff_1a7a2e8cf233148683d886f0ac92d7a82c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_threshold_ff::d_hi</definition>
+        <argsstring></argsstring>
+        <name>d_hi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__threshold__ff_1a42b4372acf5bb7e0cf354832908c1f85" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_threshold_ff::d_last_state</definition>
+        <argsstring></argsstring>
+        <name>d_last_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__threshold__ff_1a91cafee380bcd8d30b18aef7b129ea48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__threshold__ff_8h_1a76b68fec9e7cf4f7fec830e7151cf148" kindref="member">gr_threshold_ff_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_threshold_ff_sptr gr_make_threshold_ff</definition>
+        <argsstring>(float lo, float hi, float initial_state)</argsstring>
+        <name>gr_make_threshold_ff</name>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initial_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__threshold__ff_1a0dce73bb5bfb77c1d1a0c50e77d9499c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_threshold_ff::gr_threshold_ff</definition>
+        <argsstring>(float lo, float hi, float initial_state)</argsstring>
+        <name>gr_threshold_ff</name>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>initial_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__threshold__ff_1a77c3a5a49f23d5a8b87a8ca4aa9d41f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_threshold_ff::lo</definition>
+        <argsstring>() const </argsstring>
+        <name>lo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1a9cee87fd72eff2597ecce2e92b3517dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_threshold_ff::set_lo</definition>
+        <argsstring>(float lo)</argsstring>
+        <name>set_lo</name>
+        <param>
+          <type>float</type>
+          <declname>lo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1abb7f705aa73fcf2ff4a92eb403348c2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_threshold_ff::hi</definition>
+        <argsstring>() const </argsstring>
+        <name>hi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1ac63ad3e1b905be86d52038ff6d4b9f4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_threshold_ff::set_hi</definition>
+        <argsstring>(float hi)</argsstring>
+        <name>set_hi</name>
+        <param>
+          <type>float</type>
+          <declname>hi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1a8b94f78cf4a382879efc16a10a5a5b31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_threshold_ff::last_state</definition>
+        <argsstring>() const </argsstring>
+        <name>last_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1af5f0d309f329902fd15027b3ccc12122" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_threshold_ff::set_last_state</definition>
+        <argsstring>(float last_state)</argsstring>
+        <name>set_last_state</name>
+        <param>
+          <type>float</type>
+          <declname>last_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__threshold__ff_1a9fead626060c2e6c3485c3dabfbf2c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_threshold_ff::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Please fix my documentation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_threshold_ff.h" bodystart="38" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classgr__threshold__ff_1a7a2e8cf233148683d886f0ac92d7a82c" prot="private" virt="non-virtual"><scope>gr_threshold_ff</scope><name>d_hi</name></member>
+      <member refid="classgr__threshold__ff_1a42b4372acf5bb7e0cf354832908c1f85" prot="private" virt="non-virtual"><scope>gr_threshold_ff</scope><name>d_last_state</name></member>
+      <member refid="classgr__threshold__ff_1af0fe6b62881582632733d06f3ef3a1e3" prot="private" virt="non-virtual"><scope>gr_threshold_ff</scope><name>d_lo</name></member>
+      <member refid="classgr__threshold__ff_1a91cafee380bcd8d30b18aef7b129ea48" prot="private" virt="non-virtual"><scope>gr_threshold_ff</scope><name>gr_make_threshold_ff</name></member>
+      <member refid="classgr__threshold__ff_1a0dce73bb5bfb77c1d1a0c50e77d9499c" prot="private" virt="non-virtual"><scope>gr_threshold_ff</scope><name>gr_threshold_ff</name></member>
+      <member refid="classgr__threshold__ff_1abb7f705aa73fcf2ff4a92eb403348c2b" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>hi</name></member>
+      <member refid="classgr__threshold__ff_1a8b94f78cf4a382879efc16a10a5a5b31" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>last_state</name></member>
+      <member refid="classgr__threshold__ff_1a77c3a5a49f23d5a8b87a8ca4aa9d41f9" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>lo</name></member>
+      <member refid="classgr__threshold__ff_1ac63ad3e1b905be86d52038ff6d4b9f4f" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>set_hi</name></member>
+      <member refid="classgr__threshold__ff_1af5f0d309f329902fd15027b3ccc12122" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>set_last_state</name></member>
+      <member refid="classgr__threshold__ff_1a9cee87fd72eff2597ecce2e92b3517dc" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>set_lo</name></member>
+      <member refid="classgr__threshold__ff_1a9fead626060c2e6c3485c3dabfbf2c52" prot="public" virt="non-virtual"><scope>gr_threshold_ff</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

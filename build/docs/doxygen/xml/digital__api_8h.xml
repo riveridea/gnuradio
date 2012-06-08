@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="digital__api_8h" kind="file">
+    <compoundname>digital_api.h</compoundname>
+    <includes refid="attributes_8h" local="no">gruel/attributes.h</includes>
+    <includedby refid="digital__additive__scrambler__bb_8h" local="no">digital_additive_scrambler_bb.h</includedby>
+    <includedby refid="digital__binary__slicer__fb_8h" local="no">digital_binary_slicer_fb.h</includedby>
+    <includedby refid="digital__bytes__to__syms_8h" local="no">digital_bytes_to_syms.h</includedby>
+    <includedby refid="digital__clock__recovery__mm__cc_8h" local="no">digital_clock_recovery_mm_cc.h</includedby>
+    <includedby refid="digital__clock__recovery__mm__ff_8h" local="no">digital_clock_recovery_mm_ff.h</includedby>
+    <includedby refid="digital__cma__equalizer__cc_8h" local="no">digital_cma_equalizer_cc.h</includedby>
+    <includedby refid="digital__constellation_8h" local="no">digital_constellation.h</includedby>
+    <includedby refid="digital__constellation__decoder__cb_8h" local="no">digital_constellation_decoder_cb.h</includedby>
+    <includedby refid="digital__constellation__receiver__cb_8h" local="no">digital_constellation_receiver_cb.h</includedby>
+    <includedby refid="digital__correlate__access__code__bb_8h" local="no">digital_correlate_access_code_bb.h</includedby>
+    <includedby refid="digital__correlate__access__code__tag__bb_8h" local="no">digital_correlate_access_code_tag_bb.h</includedby>
+    <includedby refid="digital__costas__loop__cc_8h" local="no">digital_costas_loop_cc.h</includedby>
+    <includedby refid="digital__cpmmod__bc_8h" local="no">digital_cpmmod_bc.h</includedby>
+    <includedby refid="digital__crc32_8h" local="no">digital_crc32.h</includedby>
+    <includedby refid="digital__descrambler__bb_8h" local="no">digital_descrambler_bb.h</includedby>
+    <includedby refid="digital__diff__decoder__bb_8h" local="no">digital_diff_decoder_bb.h</includedby>
+    <includedby refid="digital__diff__encoder__bb_8h" local="no">digital_diff_encoder_bb.h</includedby>
+    <includedby refid="digital__diff__phasor__cc_8h" local="no">digital_diff_phasor_cc.h</includedby>
+    <includedby refid="digital__fll__band__edge__cc_8h" local="no">digital_fll_band_edge_cc.h</includedby>
+    <includedby refid="digital__framer__sink__1_8h" local="no">digital_framer_sink_1.h</includedby>
+    <includedby refid="digital__glfsr__source__b_8h" local="no">digital_glfsr_source_b.h</includedby>
+    <includedby refid="digital__glfsr__source__f_8h" local="no">digital_glfsr_source_f.h</includedby>
+    <includedby refid="digital__gmskmod__bc_8h" local="no">digital_gmskmod_bc.h</includedby>
+    <includedby refid="digital__impl__glfsr_8h" local="no">digital_impl_glfsr.h</includedby>
+    <includedby refid="digital__impl__mpsk__snr__est_8h" local="no">digital_impl_mpsk_snr_est.h</includedby>
+    <includedby refid="digital__kurtotic__equalizer__cc_8h" local="no">digital_kurtotic_equalizer_cc.h</includedby>
+    <includedby refid="digital__lms__dd__equalizer__cc_8h" local="no">digital_lms_dd_equalizer_cc.h</includedby>
+    <includedby refid="digital__map__bb_8h" local="no">digital_map_bb.h</includedby>
+    <includedby refid="digital__mpsk__receiver__cc_8h" local="no">digital_mpsk_receiver_cc.h</includedby>
+    <includedby refid="digital__mpsk__snr__est__cc_8h" local="no">digital_mpsk_snr_est_cc.h</includedby>
+    <includedby refid="digital__ofdm__cyclic__prefixer_8h" local="no">digital_ofdm_cyclic_prefixer.h</includedby>
+    <includedby refid="digital__ofdm__frame__acquisition_8h" local="no">digital_ofdm_frame_acquisition.h</includedby>
+    <includedby refid="digital__ofdm__frame__sink_8h" local="no">digital_ofdm_frame_sink.h</includedby>
+    <includedby refid="digital__ofdm__insert__preamble_8h" local="no">digital_ofdm_insert_preamble.h</includedby>
+    <includedby refid="digital__ofdm__mapper__bcv_8h" local="no">digital_ofdm_mapper_bcv.h</includedby>
+    <includedby refid="digital__ofdm__sampler_8h" local="no">digital_ofdm_sampler.h</includedby>
+    <includedby refid="digital__packet__sink_8h" local="no">digital_packet_sink.h</includedby>
+    <includedby refid="digital__pfb__clock__sync__ccf_8h" local="no">digital_pfb_clock_sync_ccf.h</includedby>
+    <includedby refid="digital__pfb__clock__sync__fff_8h" local="no">digital_pfb_clock_sync_fff.h</includedby>
+    <includedby refid="digital__pn__correlator__cc_8h" local="no">digital_pn_correlator_cc.h</includedby>
+    <includedby refid="digital__probe__density__b_8h" local="no">digital_probe_density_b.h</includedby>
+    <includedby refid="digital__probe__mpsk__snr__est__c_8h" local="no">digital_probe_mpsk_snr_est_c.h</includedby>
+    <includedby refid="digital__scrambler__bb_8h" local="no">digital_scrambler_bb.h</includedby>
+    <includedby refid="digital__simple__framer_8h" local="no">digital_simple_framer.h</includedby>
+    <incdepgraph>
+      <node id="2398">
+        <label>digital_api.h</label>
+        <link refid="digital_api.h"/>
+        <childnode refid="2399" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2438">
+        <label>digital_ofdm_sampler.h</label>
+        <link refid="digital__ofdm__sampler_8h"/>
+      </node>
+      <node id="2430">
+        <label>digital_kurtotic_equalizer_cc.h</label>
+        <link refid="digital__kurtotic__equalizer__cc_8h"/>
+      </node>
+      <node id="2421">
+        <label>digital_diff_phasor_cc.h</label>
+        <link refid="digital__diff__phasor__cc_8h"/>
+      </node>
+      <node id="2429">
+        <label>digital_probe_mpsk_snr_est_c.h</label>
+        <link refid="digital__probe__mpsk__snr__est__c_8h"/>
+      </node>
+      <node id="2405">
+        <label>digital_clock_recovery_mm_ff.h</label>
+        <link refid="digital__clock__recovery__mm__ff_8h"/>
+      </node>
+      <node id="2406">
+        <label>digital_cma_equalizer_cc.h</label>
+        <link refid="digital__cma__equalizer__cc_8h"/>
+      </node>
+      <node id="2416">
+        <label>digital_gmskmod_bc.h</label>
+        <link refid="digital__gmskmod__bc_8h"/>
+      </node>
+      <node id="2436">
+        <label>digital_ofdm_insert_preamble.h</label>
+        <link refid="digital__ofdm__insert__preamble_8h"/>
+      </node>
+      <node id="2418">
+        <label>digital_descrambler_bb.h</label>
+        <link refid="digital__descrambler__bb_8h"/>
+      </node>
+      <node id="2415">
+        <label>digital_cpmmod_bc.h</label>
+        <link refid="digital__cpmmod__bc_8h"/>
+        <childnode refid="2416" relation="include">
+        </childnode>
+      </node>
+      <node id="2437">
+        <label>digital_ofdm_mapper_bcv.h</label>
+        <link refid="digital__ofdm__mapper__bcv_8h"/>
+      </node>
+      <node id="2414">
+        <label>digital_costas_loop_cc.h</label>
+        <link refid="digital__costas__loop__cc_8h"/>
+      </node>
+      <node id="2440">
+        <label>digital_pfb_clock_sync_ccf.h</label>
+        <link refid="digital__pfb__clock__sync__ccf_8h"/>
+      </node>
+      <node id="2423">
+        <label>digital_framer_sink_1.h</label>
+        <link refid="digital__framer__sink__1_8h"/>
+      </node>
+      <node id="2420">
+        <label>digital_diff_encoder_bb.h</label>
+        <link refid="digital__diff__encoder__bb_8h"/>
+      </node>
+      <node id="2431">
+        <label>digital_map_bb.h</label>
+        <link refid="digital__map__bb_8h"/>
+      </node>
+      <node id="2424">
+        <label>digital_glfsr_source_b.h</label>
+        <link refid="digital__glfsr__source__b_8h"/>
+      </node>
+      <node id="2425">
+        <label>digital_glfsr_source_f.h</label>
+        <link refid="digital__glfsr__source__f_8h"/>
+      </node>
+      <node id="2435">
+        <label>digital_ofdm_frame_sink.h</label>
+        <link refid="digital__ofdm__frame__sink_8h"/>
+      </node>
+      <node id="2412">
+        <label>digital_correlate_access_code_bb.h</label>
+        <link refid="digital__correlate__access__code__bb_8h"/>
+      </node>
+      <node id="2442">
+        <label>digital_pn_correlator_cc.h</label>
+        <link refid="digital__pn__correlator__cc_8h"/>
+      </node>
+      <node id="2401">
+        <label>digital_additive_scrambler_bb.h</label>
+        <link refid="digital__additive__scrambler__bb_8h"/>
+      </node>
+      <node id="2413">
+        <label>digital_correlate_access_code_tag_bb.h</label>
+        <link refid="digital__correlate__access__code__tag__bb_8h"/>
+      </node>
+      <node id="2428">
+        <label>digital_mpsk_snr_est_cc.h</label>
+        <link refid="digital__mpsk__snr__est__cc_8h"/>
+      </node>
+      <node id="2443">
+        <label>digital_probe_density_b.h</label>
+        <link refid="digital__probe__density__b_8h"/>
+      </node>
+      <node id="2410">
+        <label>digital_lms_dd_equalizer_cc.h</label>
+        <link refid="digital__lms__dd__equalizer__cc_8h"/>
+      </node>
+      <node id="2404">
+        <label>digital_clock_recovery_mm_cc.h</label>
+        <link refid="digital__clock__recovery__mm__cc_8h"/>
+      </node>
+      <node id="2417">
+        <label>digital_crc32.h</label>
+        <link refid="digital__crc32_8h"/>
+      </node>
+      <node id="2402">
+        <label>digital_binary_slicer_fb.h</label>
+        <link refid="digital__binary__slicer__fb_8h"/>
+      </node>
+      <node id="2403">
+        <label>digital_bytes_to_syms.h</label>
+        <link refid="digital__bytes__to__syms_8h"/>
+      </node>
+      <node id="2432">
+        <label>digital_mpsk_receiver_cc.h</label>
+        <link refid="digital__mpsk__receiver__cc_8h"/>
+      </node>
+      <node id="2409">
+        <label>digital_constellation_receiver_cb.h</label>
+        <link refid="digital__constellation__receiver__cb_8h"/>
+      </node>
+      <node id="2408">
+        <label>digital_constellation_decoder_cb.h</label>
+        <link refid="digital__constellation__decoder__cb_8h"/>
+      </node>
+      <node id="2400">
+        <label>digital_api.h</label>
+        <link refid="digital_api.h"/>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2420" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2416" relation="include">
+        </childnode>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2443" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2444" relation="include">
+        </childnode>
+        <childnode refid="2445" relation="include">
+        </childnode>
+      </node>
+      <node id="2419">
+        <label>digital_diff_decoder_bb.h</label>
+        <link refid="digital__diff__decoder__bb_8h"/>
+      </node>
+      <node id="2407">
+        <label>digital_constellation.h</label>
+        <link refid="digital__constellation_8h"/>
+        <childnode refid="2408" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+      </node>
+      <node id="2422">
+        <label>digital_fll_band_edge_cc.h</label>
+        <link refid="digital__fll__band__edge__cc_8h"/>
+      </node>
+      <node id="2441">
+        <label>digital_pfb_clock_sync_fff.h</label>
+        <link refid="digital__pfb__clock__sync__fff_8h"/>
+      </node>
+      <node id="2411">
+        <label>trellis_constellation_metrics_cf.h</label>
+        <link refid="trellis__constellation__metrics__cf_8h"/>
+      </node>
+      <node id="2426">
+        <label>digital_impl_glfsr.h</label>
+        <link refid="digital__impl__glfsr_8h"/>
+      </node>
+      <node id="2427">
+        <label>digital_impl_mpsk_snr_est.h</label>
+        <link refid="digital__impl__mpsk__snr__est_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+      </node>
+      <node id="2439">
+        <label>digital_packet_sink.h</label>
+        <link refid="digital__packet__sink_8h"/>
+      </node>
+      <node id="2444">
+        <label>digital_scrambler_bb.h</label>
+        <link refid="digital__scrambler__bb_8h"/>
+      </node>
+      <node id="2434">
+        <label>digital_ofdm_frame_acquisition.h</label>
+        <link refid="digital__ofdm__frame__acquisition_8h"/>
+      </node>
+      <node id="2433">
+        <label>digital_ofdm_cyclic_prefixer.h</label>
+        <link refid="digital__ofdm__cyclic__prefixer_8h"/>
+      </node>
+      <node id="2445">
+        <label>digital_simple_framer.h</label>
+        <link refid="digital__simple__framer_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="digital__api_8h_1ae14969f36ec69051c4b2f13a0db7e9ba" prot="public" static="no">
+        <name>DIGITAL_API</name>
+        <initializer><ref refid="attributes_8h_1a17b9cb3c185c92af4799ec9b0a38f3c1" kindref="member">__GR_ATTR_IMPORT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_api.h" line="30" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_api.h"/>
+  </compounddef>
+</doxygen>

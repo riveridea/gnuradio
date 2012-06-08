@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__keep__one__in__n" kind="class" prot="public">
+    <compoundname>gr_keep_one_in_n</compoundname>
+    <includes refid="gr__keep__one__in__n_8h" local="no">gr_keep_one_in_n.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__keep__one__in__n_1a864e5f4e683596d485cc390c92103d07" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_keep_one_in_n::d_n</definition>
+        <argsstring></argsstring>
+        <name>d_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__keep__one__in__n_1aa9950d70cc3a9cac59f6f70d33ddc91e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_keep_one_in_n::d_count</definition>
+        <argsstring></argsstring>
+        <name>d_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__keep__one__in__n_1ae7dbbdffbe74fc3808c22112ca0012f6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_keep_one_in_n::d_decim_rate</definition>
+        <argsstring></argsstring>
+        <name>d_decim_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__keep__one__in__n_1ac0e80d32182928a2f893adcf759d3cbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__keep__one__in__n_8h_1ab487a84240131430297570dd29c5dbea" kindref="member">gr_keep_one_in_n_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_keep_one_in_n_sptr gr_make_keep_one_in_n</definition>
+        <argsstring>(size_t item_size, int n)</argsstring>
+        <name>gr_make_keep_one_in_n</name>
+        <param>
+          <type>size_t</type>
+          <declname>item_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__keep__one__in__n_1a5e7b40f9af7ea668d7df71146c0160c2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_keep_one_in_n::gr_keep_one_in_n</definition>
+        <argsstring>(size_t item_size, int n)</argsstring>
+        <name>gr_keep_one_in_n</name>
+        <param>
+          <type>size_t</type>
+          <declname>item_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__keep__one__in__n_1ab57aecd5051ea7dfbba9d15a91441acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_keep_one_in_n::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__keep__one__in__n_1a18e80e05b8866661ac5e18f022b2347a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_keep_one_in_n::set_n</definition>
+        <argsstring>(int n)</argsstring>
+        <name>set_n</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>decimate a stream, keeping one item out of every n. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_keep_one_in_n.h" bodystart="40" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classgr__keep__one__in__n_1aa9950d70cc3a9cac59f6f70d33ddc91e" prot="private" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>d_count</name></member>
+      <member refid="classgr__keep__one__in__n_1ae7dbbdffbe74fc3808c22112ca0012f6" prot="private" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>d_decim_rate</name></member>
+      <member refid="classgr__keep__one__in__n_1a864e5f4e683596d485cc390c92103d07" prot="private" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>d_n</name></member>
+      <member refid="classgr__keep__one__in__n_1ab57aecd5051ea7dfbba9d15a91441acd" prot="public" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>general_work</name></member>
+      <member refid="classgr__keep__one__in__n_1a5e7b40f9af7ea668d7df71146c0160c2" prot="protected" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>gr_keep_one_in_n</name></member>
+      <member refid="classgr__keep__one__in__n_1ac0e80d32182928a2f893adcf759d3cbe" prot="private" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>gr_make_keep_one_in_n</name></member>
+      <member refid="classgr__keep__one__in__n_1a18e80e05b8866661ac5e18f022b2347a" prot="public" virt="non-virtual"><scope>gr_keep_one_in_n</scope><name>set_n</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

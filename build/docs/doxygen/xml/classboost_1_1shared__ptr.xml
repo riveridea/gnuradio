@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classboost_1_1shared__ptr" kind="class" prot="public">
+    <compoundname>boost::shared_ptr</compoundname>
+    <includes refid="shared__ptr__docstub_8h" local="no">shared_ptr_docstub.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classboost_1_1shared__ptr_1adc6bf1a33855e1647c88084a4df0c463" prot="public" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* boost::shared_ptr&lt; T &gt;::px</definition>
+        <argsstring></argsstring>
+        <name>px</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/docs/doxygen/other/shared_ptr_docstub.h" line="19" bodyfile="/home/alexzh/gr_alex/gnuradio/docs/doxygen/other/shared_ptr_docstub.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classboost_1_1shared__ptr" kindref="compound">shared_ptr</ref> documentation stub </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>This isn&apos;t the real <ref refid="classboost_1_1shared__ptr" kindref="compound">shared_ptr</ref> template. It&apos;s just enough to get doxygen to draw pretty collaboration diagrams.</para></simplesect>
+An enhanced relative of scoped_ptr with reference counted copy semantics. The object pointed to is deleted when the last <ref refid="classboost_1_1shared__ptr" kindref="compound">shared_ptr</ref> pointing to it is destroyed or reset. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="6923">
+        <label>T</label>
+      </node>
+      <node id="6922">
+        <label>boost::shared_ptr&lt; T &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="6923" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/docs/doxygen/other/shared_ptr_docstub.h" line="16" bodyfile="/home/alexzh/gr_alex/gnuradio/docs/doxygen/other/shared_ptr_docstub.h" bodystart="15" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classboost_1_1shared__ptr_1adc6bf1a33855e1647c88084a4df0c463" prot="public" virt="non-virtual"><scope>boost::shared_ptr</scope><name>px</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="private_8h" kind="file">
+    <compoundname>private.h</compoundname>
+    <includes refid="proto_8h" local="yes">proto.h</includes>
+    <includes refid="unproto_8h" local="yes">unproto.h</includes>
+    <incdepgraph>
+      <node id="15494">
+        <label>private.h</label>
+        <link refid="private.h"/>
+        <childnode refid="15495" relation="include">
+        </childnode>
+        <childnode refid="15496" relation="include">
+        </childnode>
+      </node>
+      <node id="15495">
+        <label>proto.h</label>
+        <link refid="proto_8h"/>
+      </node>
+      <node id="15496">
+        <label>unproto.h</label>
+        <link refid="unproto_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structgsm__state" prot="public">gsm_state</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="private_8h_1a2fa940c1267fae76795f705cc556b0f0" prot="public" static="no">
+        <name>MIN_WORD</name>
+        <initializer>(-32767 - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1a95b015e2f596dc86ea9220be04427e1a" prot="public" static="no">
+        <name>MAX_WORD</name>
+        <initializer>32767</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1a204b73676d9cb29d21954544c2a2ec2e" prot="public" static="no">
+        <name>MIN_LONGWORD</name>
+        <initializer>(-2147483647 - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1a179af0a2ae7d7583a3781c293cea3920" prot="public" static="no">
+        <name>MAX_LONGWORD</name>
+        <initializer>2147483647</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1a64d7068b4ebbaf4894d4d5c623cccccb" prot="public" static="no">
+        <name>SASR</name>
+        <param><defname>x</defname></param>
+        <param><defname>by</defname></param>
+        <initializer>((x) &gt;= 0 ? (x) &gt;&gt; (by) : (~(-((x) + 1) &gt;&gt; (by))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1aa4d86688429aed425f008927764ea20c" prot="public" static="no">
+        <name>GSM_MULT_R</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>/* <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> b, !(a == b == <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref>) */	\
+	(<ref refid="private_8h_1a64d7068b4ebbaf4894d4d5c623cccccb" kindref="member">SASR</ref>( ((<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(a) * (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(b) + 16384), 15 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1aa21be7fd61a8647d29436b831911be77" prot="public" static="no">
+        <name>GSM_MULT</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>/* <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> b, !(a == b == <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref>) */	\
+	(<ref refid="private_8h_1a64d7068b4ebbaf4894d4d5c623cccccb" kindref="member">SASR</ref>( ((<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(a) * (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(b)), 15 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="96" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1ac22f1e4ee1a58768558db0ddba1759e9" prot="public" static="no">
+        <name>GSM_L_MULT</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>/* <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> b */	\
+	(((<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(a) * (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(b)) &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="99" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1ac3f89b3f0b5ee8897c591cfb57a7c525" prot="public" static="no">
+        <name>GSM_L_ADD</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>( (a) &lt;  0 ? ( (b) &gt;= 0 ? (a) + (b)	\
+		 : (utmp = (<ref refid="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" kindref="member">ulongword</ref>)-((a) + 1) + (<ref refid="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" kindref="member">ulongword</ref>)-((b) + 1)) \
+		   &gt;= <ref refid="private_8h_1a179af0a2ae7d7583a3781c293cea3920" kindref="member">MAX_LONGWORD</ref> ? <ref refid="private_8h_1a204b73676d9cb29d21954544c2a2ec2e" kindref="member">MIN_LONGWORD</ref> : -(<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)utmp-2 )   \
+	: ((b) &lt;= 0 ? (a) + (b)   \
+	          : (utmp = (<ref refid="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" kindref="member">ulongword</ref>)(a) + (<ref refid="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" kindref="member">ulongword</ref>)(b)) &gt;= <ref refid="private_8h_1a179af0a2ae7d7583a3781c293cea3920" kindref="member">MAX_LONGWORD</ref> \
+		    ? <ref refid="private_8h_1a179af0a2ae7d7583a3781c293cea3920" kindref="member">MAX_LONGWORD</ref> : utmp))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="107" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1ae73445525bf00124947db74af97d5cfa" prot="public" static="no">
+        <name>GSM_ADD</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((<ref refid="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" kindref="member">ulongword</ref>)((ltmp = (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(a) + (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(b)) - <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref>) &gt; \
+		<ref refid="private_8h_1a95b015e2f596dc86ea9220be04427e1a" kindref="member">MAX_WORD</ref> - <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref> ? (ltmp &gt; 0 ? <ref refid="private_8h_1a95b015e2f596dc86ea9220be04427e1a" kindref="member">MAX_WORD</ref> : <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref>) : ltmp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="118" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1a39c5cc100b3b275ed8a988ae1db7952c" prot="public" static="no">
+        <name>GSM_SUB</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((ltmp = (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(a) - (<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)(b)) &gt;= <ref refid="private_8h_1a95b015e2f596dc86ea9220be04427e1a" kindref="member">MAX_WORD</ref> \
+	? <ref refid="private_8h_1a95b015e2f596dc86ea9220be04427e1a" kindref="member">MAX_WORD</ref> : ltmp &lt;= <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref> ? <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref> : ltmp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="122" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="private_8h_1aa750e3948eb6c3e365125d5f6fafeefc" prot="public" static="no">
+        <name>GSM_ABS</name>
+        <param><defname>a</defname></param>
+        <initializer>((a) &lt; 0 ? ((a) == <ref refid="private_8h_1a2fa940c1267fae76795f705cc556b0f0" kindref="member">MIN_WORD</ref> ? <ref refid="private_8h_1a95b015e2f596dc86ea9220be04427e1a" kindref="member">MAX_WORD</ref> : -(a)) : (a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="124" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" prot="public" static="no">
+        <type>short</type>
+        <definition>typedef short word</definition>
+        <argsstring></argsstring>
+        <name>word</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="12" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" prot="public" static="no">
+        <type>long</type>
+        <definition>typedef long longword</definition>
+        <argsstring></argsstring>
+        <name>longword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="13" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="private_8h_1a42fa576a6a3b73c1efc32ab91d176300" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short uword</definition>
+        <argsstring></argsstring>
+        <name>uword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="15" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="private_8h_1a7d075b9a054f8232a8f69c2b78565ed7" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long ulongword</definition>
+        <argsstring></argsstring>
+        <name>ulongword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="16" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="private_8h_1ae3fc921472ffc5d78a2f142b3de60991" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_A[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="238"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a2e32d379457ac9c5b0f3dbb4a112eb26" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_B[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="238"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a736d6204e752f0bbcd8c99029b414e8f" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_MIC[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_MIC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="238"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a77b849e20f8dcc5892a91c9a3481533f" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_MAC[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_MAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="238"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a80e78362bdf032b8ebeb69b752718b46" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_INVA[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_INVA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="239"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1aa5df5702d214c82c44f0765986b0ee93" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_DLB[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>gsm_DLB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="240"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a6cdbc9d2268f3dd38960fdc8cba52397" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_QLB[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>gsm_QLB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="240"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1ab2447c1844cf6a3dc59859dbcf7c045c" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_H[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>gsm_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="241"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a54dfa167128de244f544b9f8dccab105" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_NRFAC[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_NRFAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="242"/>
+      </memberdef>
+      <memberdef kind="variable" id="private_8h_1a8378b35b9bbb45f31789c5f29b5b12ef" prot="public" static="no" mutable="no">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref></type>
+        <definition>word gsm_FAC[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>gsm_FAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="243"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="private_8h_1ac67970ab417bc9dc42ce06046c67f10f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> gsm_mult</type>
+        <definition>word gsm_sub P</definition>
+        <argsstring>((word a, word b))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> b)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="62"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1ade0d52c7817374a879de75306e222a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> gsm_div</type>
+        <definition>word gsm_div P</definition>
+        <argsstring>((word num, word denum))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> num, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> denum)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="66"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1afb5032262693133e71563ecc9880cc74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> gsm_L_add</type>
+        <definition>longword gsm_L_sub P</definition>
+        <argsstring>((longword a, longword b))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> a, <ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> b)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="69"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a6da216a39efc8b8b7fd85160c413aeeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> gsm_abs</type>
+        <definition>word gsm_abs P</definition>
+        <argsstring>((word a))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1af621b21c24fa75457df32315c11adaf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> gsm_norm</type>
+        <definition>word gsm_norm P</definition>
+        <argsstring>((longword a))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> a)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a454d12af4490de31ae5e524f37d6af0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> gsm_L_asl</type>
+        <definition>longword gsm_L_asr P</definition>
+        <argsstring>((longword a, int n))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> a, int n)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1ad3f13048fb6f1ba3342625f4fcc5083f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> gsm_asl</type>
+        <definition>word gsm_asr P</definition>
+        <argsstring>((word a, int n))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> a, int n)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="79"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1abd38d82df08be58c191e66b4beb3becd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Coder</type>
+        <definition>void Gsm_Coder P</definition>
+        <argsstring>((struct gsm_state *S, word *s, word *LARc, word *Nc, word *bc, word *Mc, word *xmaxc, word *xMc))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *s, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *LARc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Nc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *bc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Mc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xmaxc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMc)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a37287862300db796e7c641ccfc6bf501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Long_Term_Predictor</type>
+        <definition>void Gsm_Long_Term_Predictor P</definition>
+        <argsstring>((struct gsm_state *S, word *d, word *dp, word *e, word *dpp, word *Nc, word *bc))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *d, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *dp, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *e, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *dpp, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Nc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *bc)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="160"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1adf14fd5dc653b42a4d87096867564077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_LPC_Analysis</type>
+        <definition>void Gsm_LPC_Analysis P</definition>
+        <argsstring>((struct gsm_state *S, word *s, word *LARc))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *s, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *LARc)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="165"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1aefd57b0d6e49764756bc831d252af6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Preprocess</type>
+        <definition>void Gsm_Preprocess P</definition>
+        <argsstring>((struct gsm_state *S, word *s, word *so))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *s, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *so)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="169"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a9e97fc4d63bef57290a0b230d8cc4462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Encoding</type>
+        <definition>void Gsm_Encoding P</definition>
+        <argsstring>((struct gsm_state *S, word *e, word *ep, word *xmaxc, word *Mc, word *xMc))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *e, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *ep, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xmaxc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Mc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMc)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="177"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1adfce06f468fe4d78e8d12ee66bb509c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Short_Term_Analysis_Filter</type>
+        <definition>void Gsm_Short_Term_Analysis_Filter P</definition>
+        <argsstring>((struct gsm_state *S, word *LARc, word *d))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *LARc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *d)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="182"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a5cbd8cc6bd0e63ac70a105619cb8120a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Decoder</type>
+        <definition>void Gsm_Decoder P</definition>
+        <argsstring>((struct gsm_state *S, word *LARcr, word *Ncr, word *bcr, word *Mcr, word *xmaxcr, word *xMcr, word *s))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *LARcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Ncr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *bcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Mcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xmaxcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *s)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="192"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1abae6dcdafe616d7f0e0caff8b23dbcde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Decoding</type>
+        <definition>void Gsm_Decoding P</definition>
+        <argsstring>((struct gsm_state *S, wordxmaxcr, word	Mcr, word *xMcr, word *erp))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, wordxmaxcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref>	Mcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *erp)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="199"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a7b3dd2860c2dd43602cbbe5484eafbb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Long_Term_Synthesis_Filtering</type>
+        <definition>void Gsm_Long_Term_Synthesis_Filtering P</definition>
+        <argsstring>((struct gsm_state *S, word	Ncr, word	bcr, word *erp, word *drp))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref>	Ncr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref>	bcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *erp, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *drp)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="206"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1ab5622225343e293558a58afea8ff95cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_RPE_Decoding</type>
+        <definition>void Gsm_RPE_Decoding P</definition>
+        <argsstring>((struct gsm_state *S, word xmaxcr, word Mcr, word *xMcr, word *erp))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> xmaxcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> Mcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *erp)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="213"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a84fd67277b0999813386cbc9ad8dcdb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_RPE_Encoding</type>
+        <definition>void Gsm_RPE_Encoding P</definition>
+        <argsstring>((struct gsm_state *S, word *e, word *xmaxc, word *Mc, word *xMc))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *e, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xmaxc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *Mc, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *xMc)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="220"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1ad9aaae0d09de63c504daef62fba99704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Short_Term_Synthesis_Filter</type>
+        <definition>void Gsm_Short_Term_Synthesis_Filter P</definition>
+        <argsstring>((struct gsm_state *S, word *LARcr, word *drp, word *s))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(struct <ref refid="structgsm__state" kindref="compound">gsm_state</ref> *S, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *LARcr, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *drp, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *s)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="226"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a87748a265733cb70aaedc635740bbd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> Gsm_Update_of_reconstructed_short_time_residual_signal</type>
+        <definition>void Gsm_Update_of_reconstructed_short_time_residual_signal P</definition>
+        <argsstring>((word *dpp, word *ep, word *dp))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(<ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *dpp, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *ep, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *dp)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="231"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a3c40b01627bc0a59f113930c72f14225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> gsm_debug_words</type>
+        <definition>void gsm_debug_words P</definition>
+        <argsstring>((char *name, int, int, word *))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(char *<ref refid="volk_8tmpl_8h_1ace3ce91bc48f67ffceaeed6831ee2c57" kindref="member">name</ref>, int, int, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="259"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a39a82b4c04c0524a55ef7e5a04f82ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> gsm_debug_longwords</type>
+        <definition>void gsm_debug_longwords P</definition>
+        <argsstring>((char *name, int, int, longword *))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(char *<ref refid="volk_8tmpl_8h_1ace3ce91bc48f67ffceaeed6831ee2c57" kindref="member">name</ref>, int, int, <ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="260"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1a971c91d9942cfc449c53347e841cc36f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> gsm_debug_longword</type>
+        <definition>void gsm_debug_longword P</definition>
+        <argsstring>((char *name, longword))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(char *<ref refid="volk_8tmpl_8h_1ace3ce91bc48f67ffceaeed6831ee2c57" kindref="member">name</ref>, <ref refid="private_8h_1ad3ef77e8cb87b87f867389469fd7d4fa" kindref="member">longword</ref>)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="261"/>
+      </memberdef>
+      <memberdef kind="function" id="private_8h_1ad5c6fd3bbe58eed13a3feae013b81f87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> gsm_debug_word</type>
+        <definition>void gsm_debug_word P</definition>
+        <argsstring>((char *name, word))</argsstring>
+        <name>P</name>
+        <param>
+          <type>(char *<ref refid="volk_8tmpl_8h_1ace3ce91bc48f67ffceaeed6831ee2c57" kindref="member">name</ref>, <ref refid="private_8h_1a0b023cbb2bf7d034c2269d58d7455ac8" kindref="member">word</ref>)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h" line="262"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-vocoder/lib/gsm/private.h"/>
+  </compounddef>
+</doxygen>

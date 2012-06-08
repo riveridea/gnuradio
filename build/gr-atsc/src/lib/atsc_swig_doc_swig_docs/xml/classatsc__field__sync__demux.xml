@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classatsc__field__sync__demux" kind="class" prot="public">
+    <compoundname>atsc_field_sync_demux</compoundname>
+    <includes refid="atsc__field__sync__demux_8h" local="no">atsc_field_sync_demux.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1ae01b323e53d21c33c7e27e3f17e9a478" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool atsc_field_sync_demux::d_locked</definition>
+        <argsstring></argsstring>
+        <name>d_locked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1aaec8ad9c4fee4fb61fcc4e5836d4fab2" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool atsc_field_sync_demux::d_in_field2</definition>
+        <argsstring></argsstring>
+        <name>d_in_field2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="64" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1a52961039616d1c1bdffff8f245363e10" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsc_field_sync_demux::d_segment_number</definition>
+        <argsstring></argsstring>
+        <name>d_segment_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1a5ad079b5fabcc163ae0bd736cd5f04f2" prot="protected" static="no" mutable="no">
+        <type>gr_uint64</type>
+        <definition>gr_uint64 atsc_field_sync_demux::d_next_input</definition>
+        <argsstring></argsstring>
+        <name>d_next_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1a1de3e41fcd13549137c50f8a0fb3d9a4" prot="protected" static="no" mutable="no">
+        <type>gr_uint64</type>
+        <definition>gr_uint64 atsc_field_sync_demux::d_lost_index</definition>
+        <argsstring></argsstring>
+        <name>d_lost_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1a41ca09e1ed39ceb8328c4c7a1edbc63b" prot="protected" static="no" mutable="no">
+        <type>unsigned long long</type>
+        <definition>unsigned long long atsc_field_sync_demux::d_inputs0_index</definition>
+        <argsstring></argsstring>
+        <name>d_inputs0_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="69" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1aece4f23f31b9b9699791ff1995c55bb2" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long atsc_field_sync_demux::d_inputs0_size</definition>
+        <argsstring></argsstring>
+        <name>d_inputs0_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classatsc__field__sync__demux_1a71fd8be5da34dc59354805f0352ffe6f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int atsc_field_sync_demux::d_consume</definition>
+        <argsstring></argsstring>
+        <name>d_consume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classatsc__field__sync__demux_1a2d4ddecb7df8709c613d5651721290ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="atsc__field__sync__demux_8h_1a95e8ed9188be20f8da1bba57093b3412" kindref="member">atsc_field_sync_demux_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT atsc_field_sync_demux_sptr atsc_make_field_sync_demux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_make_field_sync_demux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classatsc__field__sync__demux_1ac62404c8a0dfe0535f800c40b6414a37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>atsc_field_sync_demux::atsc_field_sync_demux</definition>
+        <argsstring>()</argsstring>
+        <name>atsc_field_sync_demux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classatsc__field__sync__demux_1a41ffe7b7aeb261498556e4c582966af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_field_sync_demux::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__field__sync__demux_1a74ff628ec577bc4343db4f59732f5d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_field_sync_demux::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__field__sync__demux_1a808b737c3cd1628c0fa2930c970fa51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int atsc_field_sync_demux::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classatsc__field__sync__demux_1a4a20abcc8ee472b2ab5b714a10fa29f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void atsc_field_sync_demux::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ATSC Field Sync Demux. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class accepts 1 stream of floats (data), and 1 stream of tags (syminfo). * It outputs one stream of <ref refid="classatsc__soft__data__segment" kindref="compound">atsc_soft_data_segment</ref> packets </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/atsc_field_sync_demux.h" bodystart="41" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classatsc__field__sync__demux_1ac62404c8a0dfe0535f800c40b6414a37" prot="private" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>atsc_field_sync_demux</name></member>
+      <member refid="classatsc__field__sync__demux_1a2d4ddecb7df8709c613d5651721290ee" prot="private" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>atsc_make_field_sync_demux</name></member>
+      <member refid="classatsc__field__sync__demux_1a71fd8be5da34dc59354805f0352ffe6f" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_consume</name></member>
+      <member refid="classatsc__field__sync__demux_1aaec8ad9c4fee4fb61fcc4e5836d4fab2" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_in_field2</name></member>
+      <member refid="classatsc__field__sync__demux_1a41ca09e1ed39ceb8328c4c7a1edbc63b" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_inputs0_index</name></member>
+      <member refid="classatsc__field__sync__demux_1aece4f23f31b9b9699791ff1995c55bb2" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_inputs0_size</name></member>
+      <member refid="classatsc__field__sync__demux_1ae01b323e53d21c33c7e27e3f17e9a478" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_locked</name></member>
+      <member refid="classatsc__field__sync__demux_1a1de3e41fcd13549137c50f8a0fb3d9a4" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_lost_index</name></member>
+      <member refid="classatsc__field__sync__demux_1a5ad079b5fabcc163ae0bd736cd5f04f2" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_next_input</name></member>
+      <member refid="classatsc__field__sync__demux_1a52961039616d1c1bdffff8f245363e10" prot="protected" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>d_segment_number</name></member>
+      <member refid="classatsc__field__sync__demux_1a41ffe7b7aeb261498556e4c582966af9" prot="public" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>forecast</name></member>
+      <member refid="classatsc__field__sync__demux_1a74ff628ec577bc4343db4f59732f5d29" prot="public" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>general_work</name></member>
+      <member refid="classatsc__field__sync__demux_1a4a20abcc8ee472b2ab5b714a10fa29f7" prot="public" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>reset</name></member>
+      <member refid="classatsc__field__sync__demux_1a808b737c3cd1628c0fa2930c970fa51e" prot="public" virt="non-virtual"><scope>atsc_field_sync_demux</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

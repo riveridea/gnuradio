@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="sys__pri_8h" kind="file">
+    <compoundname>sys_pri.h</compoundname>
+    <includes refid="gruel_2src_2include_2gruel_2api_8h" local="no">gruel/api.h</includes>
+    <includes refid="realtime_8h" local="no">gruel/realtime.h</includes>
+    <incdepgraph>
+      <node id="16138">
+        <label>gruel/api.h</label>
+        <link refid="gruel_2src_2include_2gruel_2api_8h"/>
+        <childnode refid="16139" relation="include">
+        </childnode>
+      </node>
+      <node id="16141">
+        <label>stdexcept</label>
+      </node>
+      <node id="16140">
+        <label>gruel/realtime.h</label>
+        <link refid="realtime_8h"/>
+        <childnode refid="16138" relation="include">
+        </childnode>
+        <childnode refid="16141" relation="include">
+        </childnode>
+      </node>
+      <node id="16137">
+        <label>sys_pri.h</label>
+        <link refid="sys_pri.h"/>
+        <childnode refid="16138" relation="include">
+        </childnode>
+        <childnode refid="16140" relation="include">
+        </childnode>
+      </node>
+      <node id="16139">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structgruel_1_1sys__pri" prot="public">gruel::sys_pri</innerclass>
+    <innernamespace refid="namespacegruel">gruel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/sys_pri.h"/>
+  </compounddef>
+</doxygen>

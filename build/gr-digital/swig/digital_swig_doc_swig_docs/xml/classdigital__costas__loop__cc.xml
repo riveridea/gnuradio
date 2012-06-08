@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classdigital__costas__loop__cc" kind="class" prot="public">
+    <compoundname>digital_costas_loop_cc</compoundname>
+    <includes refid="digital__costas__loop__cc_8h" local="no">digital_costas_loop_cc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdigital__costas__loop__cc_1a89c84a9e278adc685cadbb40a2caa124" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int digital_costas_loop_cc::d_order</definition>
+        <argsstring></argsstring>
+        <name>d_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdigital__costas__loop__cc_1a4c48938a4a46b10b58989c7df2a7338d" prot="private" static="no" mutable="no">
+        <type>float(digital_costas_loop_cc::*</type>
+        <definition>float(digital_costas_loop_cc::* digital_costas_loop_cc::d_phase_detector)(gr_complex sample) const </definition>
+        <argsstring>)(gr_complex sample) const </argsstring>
+        <name>d_phase_detector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="108" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdigital__costas__loop__cc_1ada903074e51decba312a3e12b7e8fc36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="digital__costas__loop__cc_8h_1add7f8dd2436787c7026f12979d7ba039" kindref="member">digital_costas_loop_cc_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT digital_costas_loop_cc_sptr digital_make_costas_loop_cc</definition>
+        <argsstring>(float loop_bw, int order)</argsstring>
+        <name>digital_make_costas_loop_cc</name>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <exceptions> throw (std::invalid_argument)</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdigital__costas__loop__cc_1aeb162d15848410adb4856a674f8abc6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>digital_costas_loop_cc::digital_costas_loop_cc</definition>
+        <argsstring>(float loop_bw, int order)</argsstring>
+        <name>digital_costas_loop_cc</name>
+        <param>
+          <type>float</type>
+          <declname>loop_bw</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <exceptions> throw (std::invalid_argument)</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__costas__loop__cc_1a0f10608600b48cf3dbd1585ac06a4b96" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_costas_loop_cc::phase_detector_8</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_detector_8</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>the phase detector circuit for 8th-order PSK loops </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>complex sample </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the phase error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__costas__loop__cc_1aaf47154134867cebf9b923bf7d8e8603" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_costas_loop_cc::phase_detector_4</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_detector_4</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>the phase detector circuit for fourth-order loops </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>complex sample </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the phase error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__costas__loop__cc_1aa54e0499ba10638705fc078fbf7246cb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float digital_costas_loop_cc::phase_detector_2</definition>
+        <argsstring>(gr_complex sample) const </argsstring>
+        <name>phase_detector_2</name>
+        <param>
+          <type>gr_complex</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>the phase detector circuit for second-order loops </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a complex sample </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the phase error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdigital__costas__loop__cc_1a4a9af6756e030322a5a7c5a882fd7aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int digital_costas_loop_cc::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Carrier tracking PLL for QPSK</para><para>input: complex; output: complex <linebreak/>
+The Costas loop can have two output streams: stream 1 is the baseband I and Q; stream 2 is the normalized frequency of the loop. </para>    </briefdescription>
+    <detaileddescription>
+<para><computeroutput>order</computeroutput> must be 2, 4, or 8. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_costas_loop_cc.h" bodystart="78" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classdigital__costas__loop__cc_1a89c84a9e278adc685cadbb40a2caa124" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>d_order</name></member>
+      <member refid="classdigital__costas__loop__cc_1a4c48938a4a46b10b58989c7df2a7338d" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>d_phase_detector</name></member>
+      <member refid="classdigital__costas__loop__cc_1aeb162d15848410adb4856a674f8abc6d" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>digital_costas_loop_cc</name></member>
+      <member refid="classdigital__costas__loop__cc_1ada903074e51decba312a3e12b7e8fc36" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>digital_make_costas_loop_cc</name></member>
+      <member refid="classdigital__costas__loop__cc_1aa54e0499ba10638705fc078fbf7246cb" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>phase_detector_2</name></member>
+      <member refid="classdigital__costas__loop__cc_1aaf47154134867cebf9b923bf7d8e8603" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>phase_detector_4</name></member>
+      <member refid="classdigital__costas__loop__cc_1a0f10608600b48cf3dbd1585ac06a4b96" prot="private" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>phase_detector_8</name></member>
+      <member refid="classdigital__costas__loop__cc_1a4a9af6756e030322a5a7c5a882fd7aff" prot="public" virt="non-virtual"><scope>digital_costas_loop_cc</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

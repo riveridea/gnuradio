@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="core__algorithms_8h" kind="file">
+    <compoundname>core_algorithms.h</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">vector</includes>
+    <includes refid="digital__metric__type_8h" local="yes">digital_metric_type.h</includes>
+    <includes refid="fsm_8h" local="yes">fsm.h</includes>
+    <includes refid="interleaver_8h" local="yes">interleaver.h</includes>
+    <includedby refid="trellis__siso__combined__f_8h" local="yes">trellis_siso_combined_f.h</includedby>
+    <includedby refid="trellis__siso__f_8h" local="yes">trellis_siso_f.h</includedby>
+    <incdepgraph>
+      <node id="2339">
+        <label>digital_metric_type.h</label>
+        <link refid="digital__metric__type_8h"/>
+      </node>
+      <node id="2337">
+        <label>cmath</label>
+      </node>
+      <node id="2344">
+        <label>interleaver.h</label>
+        <link refid="interleaver_8h"/>
+        <childnode refid="2341" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2340">
+        <label>fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="2341" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+        <childnode refid="2343" relation="include">
+        </childnode>
+      </node>
+      <node id="2338">
+        <label>vector</label>
+      </node>
+      <node id="2336">
+        <label>core_algorithms.h</label>
+        <link refid="core_algorithms.h"/>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+        <childnode refid="2339" relation="include">
+        </childnode>
+        <childnode refid="2340" relation="include">
+        </childnode>
+        <childnode refid="2344" relation="include">
+        </childnode>
+      </node>
+      <node id="2341">
+        <label>trellis_api.h</label>
+        <link refid="trellis__api_8h"/>
+        <childnode refid="2342" relation="include">
+        </childnode>
+      </node>
+      <node id="2342">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2343">
+        <label>iosfwd</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2346">
+        <label>trellis_siso_combined_f.h</label>
+        <link refid="trellis__siso__combined__f_8h"/>
+      </node>
+      <node id="2345">
+        <label>core_algorithms.h</label>
+        <link refid="core_algorithms.h"/>
+        <childnode refid="2346" relation="include">
+        </childnode>
+        <childnode refid="2347" relation="include">
+        </childnode>
+      </node>
+      <node id="2347">
+        <label>trellis_siso_f.h</label>
+        <link refid="trellis__siso__f_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="core__algorithms_8h_1a8ee42a5dd83886e7ad61d451d5a32956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float min</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>min</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1aeaa130a10446a9df57d9a8c3df3609dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float min_star</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>min_star</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="35"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1ac8fe5f61de2cd52149621ebc9ec6cebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void viterbi_algorithm</definition>
+        <argsstring>(int I, int S, int O, const std::vector&lt; int &gt; &amp;NS, const std::vector&lt; int &gt; &amp;OS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PI, int K, int S0, int SK, const float *in, T *out)</argsstring>
+        <name>viterbi_algorithm</name>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>NS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>OS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PI</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="46"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1a5bf2a8e1a8e33329eb3ee83e66549be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Ti</type>
+          </param>
+          <param>
+            <type>class To</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void viterbi_algorithm_combined</definition>
+        <argsstring>(int I, int S, int O, const std::vector&lt; int &gt; &amp;NS, const std::vector&lt; int &gt; &amp;OS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PI, int K, int S0, int SK, int D, const std::vector&lt; Ti &gt; &amp;TABLE, trellis_metric_type_t TYPE, const Ti *in, To *out)</argsstring>
+        <name>viterbi_algorithm_combined</name>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>NS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>OS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PI</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; Ti &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__metric__type_8h_1a730999483daebb08342eb009b2c77ad1" kindref="member">trellis_metric_type_t</ref></type>
+          <declname>TYPE</declname>
+        </param>
+        <param>
+          <type>const Ti *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>To *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1a7bf8321f8d0a3ac7234ed55ceab69ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void siso_algorithm</definition>
+        <argsstring>(int I, int S, int O, const std::vector&lt; int &gt; &amp;NS, const std::vector&lt; int &gt; &amp;OS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PI, int K, int S0, int SK, bool POSTI, bool POSTO, float(*p2mymin)(float, float), const float *priori, const float *prioro, float *post)</argsstring>
+        <name>siso_algorithm</name>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>NS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>OS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PI</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTI</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTO</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>priori</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>prioro</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>post</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1aabdff6b3dae1bb3ef0cd940c21b33bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void siso_algorithm_combined</definition>
+        <argsstring>(int I, int S, int O, const std::vector&lt; int &gt; &amp;NS, const std::vector&lt; int &gt; &amp;OS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PS, const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;PI, int K, int S0, int SK, bool POSTI, bool POSTO, float(*p2mymin)(float, float), int D, const std::vector&lt; T &gt; &amp;TABLE, trellis_metric_type_t TYPE, const float *priori, const T *observations, float *post)</argsstring>
+        <name>siso_algorithm_combined</name>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>O</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>NS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>OS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PS</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;</type>
+          <declname>PI</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>K</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>S0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SK</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTI</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>POSTO</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__metric__type_8h_1a730999483daebb08342eb009b2c77ad1" kindref="member">trellis_metric_type_t</ref></type>
+          <declname>TYPE</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>priori</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>observations</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>post</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="91"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1aae8a8b5aa50a3c5916c42f3b0bde33ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sccc_decoder</definition>
+        <argsstring>(const fsm &amp;FSMo, int STo0, int SToK, const fsm &amp;FSMi, int STi0, int STiK, const interleaver &amp;INTERLEAVER, int blocklength, int iterations, float(*p2mymin)(float, float), const float *iprioro, T *data)</argsstring>
+        <name>sccc_decoder</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSMo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STo0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SToK</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSMi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STi0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STiK</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classinterleaver" kindref="compound">interleaver</ref> &amp;</type>
+          <declname>INTERLEAVER</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocklength</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>iprioro</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="101"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1a0bd16c54c564ca06d6651db616ac3383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Ti</type>
+          </param>
+          <param>
+            <type>class To</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void sccc_decoder_combined</definition>
+        <argsstring>(const fsm &amp;FSMo, int STo0, int SToK, const fsm &amp;FSMi, int STi0, int STiK, const interleaver &amp;INTERLEAVER, int blocklength, int iterations, float(*p2mymin)(float, float), int D, const std::vector&lt; Ti &gt; &amp;TABLE, trellis_metric_type_t METRIC_TYPE, float scaling, const Ti *observations, To *data)</argsstring>
+        <name>sccc_decoder_combined</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSMo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STo0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>SToK</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSMi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STi0</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>STiK</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classinterleaver" kindref="compound">interleaver</ref> &amp;</type>
+          <declname>INTERLEAVER</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocklength</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; Ti &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__metric__type_8h_1a730999483daebb08342eb009b2c77ad1" kindref="member">trellis_metric_type_t</ref></type>
+          <declname>METRIC_TYPE</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaling</declname>
+        </param>
+        <param>
+          <type>const Ti *</type>
+          <declname>observations</declname>
+        </param>
+        <param>
+          <type>To *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="114"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1ac4d4d6df572a86446e1aa137a0ccf5f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pccc_decoder</definition>
+        <argsstring>(const fsm &amp;FSM1, int ST10, int ST1K, const fsm &amp;FSM2, int ST20, int ST2K, const interleaver &amp;INTERLEAVER, int blocklength, int iterations, float(*p2mymin)(float, float), const float *cprioro, T *data)</argsstring>
+        <name>pccc_decoder</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST10</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST1K</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST20</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST2K</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classinterleaver" kindref="compound">interleaver</ref> &amp;</type>
+          <declname>INTERLEAVER</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocklength</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>cprioro</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="core__algorithms_8h_1ae98fcc16657be84269a48d14cc71d440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Ti</type>
+          </param>
+          <param>
+            <type>class To</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void pccc_decoder_combined</definition>
+        <argsstring>(const fsm &amp;FSM1, int ST10, int ST1K, const fsm &amp;FSM2, int ST20, int ST2K, const interleaver &amp;INTERLEAVER, int blocklength, int iterations, float(*p2mymin)(float, float), int D, const std::vector&lt; Ti &gt; &amp;TABLE, trellis_metric_type_t METRIC_TYPE, float scaling, const Ti *observations, To *data)</argsstring>
+        <name>pccc_decoder_combined</name>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST10</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST1K</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classfsm" kindref="compound">fsm</ref> &amp;</type>
+          <declname>FSM2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST20</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ST2K</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classinterleaver" kindref="compound">interleaver</ref> &amp;</type>
+          <declname>INTERLEAVER</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blocklength</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iterations</declname>
+        </param>
+        <param>
+          <type>float(*)(float, float)</type>
+          <declname>p2mymin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>D</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; Ti &gt; &amp;</type>
+          <declname>TABLE</declname>
+        </param>
+        <param>
+          <type><ref refid="digital__metric__type_8h_1a730999483daebb08342eb009b2c77ad1" kindref="member">trellis_metric_type_t</ref></type>
+          <declname>METRIC_TYPE</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scaling</declname>
+        </param>
+        <param>
+          <type>const Ti *</type>
+          <declname>observations</declname>
+        </param>
+        <param>
+          <type>To *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h" line="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-trellis/src/lib/core_algorithms.h"/>
+  </compounddef>
+</doxygen>

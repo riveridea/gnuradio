@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="high__res__timer_8h" kind="file">
+    <compoundname>high_res_timer.h</compoundname>
+    <includes local="no">boost/date_time/posix_time/posix_time.hpp</includes>
+    <includedby refid="qtgui__sink__c_8h" local="no">qtgui_sink_c.h</includedby>
+    <incdepgraph>
+      <node id="13919">
+        <label>boost/date_time/posix_time/posix_time.hpp</label>
+      </node>
+      <node id="13918">
+        <label>high_res_timer.h</label>
+        <link refid="high_res_timer.h"/>
+        <childnode refid="13919" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13921">
+        <label>qtgui_sink_c.h</label>
+        <link refid="qtgui__sink__c_8h"/>
+      </node>
+      <node id="13920">
+        <label>high_res_timer.h</label>
+        <link refid="high_res_timer.h"/>
+        <childnode refid="13921" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacegruel">gruel</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="high__res__timer_8h_1af9a39368daf1b5d33e09340831ea3a4f" prot="public" static="no">
+        <name>GRUEL_HRT_USE_MICROSEC_CLOCK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/high_res_timer.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/high_res_timer.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gruel/src/include/gruel/high_res_timer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__block" kind="class" prot="public">
+    <compoundname>gr_block</compoundname>
+    <basecompoundref refid="classgr__basic__block" prot="public" virt="non-virtual">gr_basic_block</basecompoundref>
+    <derivedcompoundref refid="classgr__sync__block" prot="public" virt="non-virtual">gr_sync_block</derivedcompoundref>
+    <includes refid="gr__block_8h" local="no">gr_block.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classgr__block_1a73e3bff4471ca7f32637a7e162f0f4fb" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="classgr__block_1a73e3bff4471ca7f32637a7e162f0f4fba248a1e0554813ce26007ff5ec1530392" prot="public">
+          <name>WORK_CALLED_PRODUCE</name>
+          <initializer> -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__block_1a73e3bff4471ca7f32637a7e162f0f4fba221c2211857dcee81fb2bbb97fe6b223" prot="public">
+          <name>WORK_DONE</name>
+          <initializer> -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Magic return values from general_work. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="enum" id="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" static="no">
+        <name>tag_propagation_policy_t</name>
+        <enumvalue id="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public">
+          <name>TPP_DONT</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public">
+          <name>TPP_ALL_TO_ALL</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public">
+          <name>TPP_ONE_TO_ONE</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="68" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__block_1ae5a0a035811331b83e572e8785207eb3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_block::d_output_multiple</definition>
+        <argsstring></argsstring>
+        <name>d_output_multiple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="258" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a8b67af5f3db734eba2c7972b858e55f6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_block::d_output_multiple_set</definition>
+        <argsstring></argsstring>
+        <name>d_output_multiple_set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="259" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a2d2252f159886b64cb52e7a263f3ce09" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_block::d_unaligned</definition>
+        <argsstring></argsstring>
+        <name>d_unaligned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="260" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a579e7cbcc02f9db11c7ffe6083f8056d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_block::d_is_unaligned</definition>
+        <argsstring></argsstring>
+        <name>d_is_unaligned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="261" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a8e2ad5db873956f11d10eb5e164c9128" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_block::d_relative_rate</definition>
+        <argsstring></argsstring>
+        <name>d_relative_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="262" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1ae66707cfaf4c1c13a34b5db5d379daf8" prot="private" static="no" mutable="no">
+        <type><ref refid="gr__runtime__types_8h_1a266b71d5326cf891d9ea95b621cb5b15" kindref="member">gr_block_detail_sptr</ref></type>
+        <definition>gr_block_detail_sptr gr_block::d_detail</definition>
+        <argsstring></argsstring>
+        <name>d_detail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="263" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1accaf03643e4d906bc65381e987b9b9e1" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_block::d_history</definition>
+        <argsstring></argsstring>
+        <name>d_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="264" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a08313191c1ffa6eabe7019145eedba56" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_block::d_fixed_rate</definition>
+        <argsstring></argsstring>
+        <name>d_fixed_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="265" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__block_1a63ff5bc706f29177bf6315683ebd230e" prot="private" static="no" mutable="no">
+        <type><ref refid="classgr__block_1a32561c88f124ea07881879fe79840f61" kindref="member">tag_propagation_policy_t</ref></type>
+        <definition>tag_propagation_policy_t gr_block::d_tag_propagation_policy</definition>
+        <argsstring></argsstring>
+        <name>d_tag_propagation_policy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="266" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_block::~gr_block</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned gr_block::history</definition>
+        <argsstring>() const </argsstring>
+        <name>history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assume block computes y_i = f(x_i, x_i-1, x_i-2, x_i-3...) History is the number of x_i&apos;s that are examined to produce one y_i. This comes in handy for FIR filters, where we use history to ensure that our input contains the appropriate &quot;history&quot; for the filter. History should be equal to the number of filter taps. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="83" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_history</definition>
+        <argsstring>(unsigned history)</argsstring>
+        <name>set_history</name>
+        <param>
+          <type>unsigned</type>
+          <declname>history</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="84" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_block::fixed_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>fixed_rate</name>
+        <briefdescription>
+<para>Return true if this block has a fixed input to output rate. </para>        </briefdescription>
+        <detaileddescription>
+<para>If true, then fixed_rate_in_to_out and fixed_rate_out_to_in may be called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_block::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <reimplementedby refid="classgr__sync__decimator_1a140792c0a9777b6b82eb220cdd424ecd">forecast</reimplementedby>
+        <reimplementedby refid="classgr__sync__block_1a1327e83509baf039aa3c816ea81a8f22">forecast</reimplementedby>
+        <reimplementedby refid="classgr__sync__interpolator_1a81ef017ef4ec17d0808cd1c0e2ceb803">forecast</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+<para>Estimate input requirements given output request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to produce </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items_required</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items required on each input stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Given a request to product <computeroutput>noutput_items</computeroutput>, estimate the number of data items required on each input stream. The estimate doesn&apos;t have to be exact, but should be close. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int gr_block::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)=0</argsstring>
+        <name>general_work</name>
+        <reimplementedby refid="classgr__sync__decimator_1a3a7d9a6487780922c14cbb76d46a0586">general_work</reimplementedby>
+        <reimplementedby refid="classgr__sync__block_1a56ca60b6bc20a3510f71d961891fa81b">general_work</reimplementedby>
+        <reimplementedby refid="classgr__sync__interpolator_1a49cd2967b214ead14270d97dab932301">general_work</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1ab02d0a829d67d39e3ac3163016d3a8be" kindref="member">gr_vector_int</ref> &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>compute output items from input items </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noutput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of output items to write on each output stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ninput_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of input items available on each input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the input items, one entry per input stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector of pointers to the output items, one entry per output stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of items actually written to each output stream, or -1 on EOF. It is OK to return a value less than noutput_items. -1 &lt;= return value &lt;= noutput_items</para></simplesect>
+general_work must call consume or consume_each to indicate how many items were consumed on each input stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_block::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>Called to enable drivers, etc for i/o devices. </para>        </briefdescription>
+        <detaileddescription>
+<para>This allows a block to enable an associated driver to begin transfering data just before we start to execute the scheduler. The end result is that this reduces latency in the pipeline when dealing with audio devices, usrps, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool gr_block::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Called to disable drivers, etc for i/o devices. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_output_multiple</definition>
+        <argsstring>(int multiple)</argsstring>
+        <name>set_output_multiple</name>
+        <param>
+          <type>int</type>
+          <declname>multiple</declname>
+        </param>
+        <briefdescription>
+<para>Constrain the noutput_items argument passed to forecast and general_work. </para>        </briefdescription>
+        <detaileddescription>
+<para>set_output_multiple causes the scheduler to ensure that the noutput_items argument passed to forecast and general_work will be an integer multiple of <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>multiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value of output multiple is 1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_block::output_multiple</definition>
+        <argsstring>() const </argsstring>
+        <name>output_multiple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="154" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_block::output_multiple_set</definition>
+        <argsstring>() const </argsstring>
+        <name>output_multiple_set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="155" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_alignment</definition>
+        <argsstring>(int multiple)</argsstring>
+        <name>set_alignment</name>
+        <param>
+          <type>int</type>
+          <declname>multiple</declname>
+        </param>
+        <briefdescription>
+<para>Constrains buffers to work on a set item alignment (for SIMD) </para>        </briefdescription>
+        <detaileddescription>
+<para>set_alignment_multiple causes the scheduler to ensure that the noutput_items argument passed to forecast and general_work will be an integer multiple of <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>multiple</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value is 1.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This control is similar to the output_multiple setting, except that if the number of items passed to the block is less than the output_multiple, this value is ignored and the block can produce like normal. The d_unaligned value is set to the number of items the block is off by. In the next call to general_work, the noutput_items is set to d_unaligned or less until d_unaligned==0. The buffers are now aligned again and the aligned calls can be performed again. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_block::alignment</definition>
+        <argsstring>() const </argsstring>
+        <name>alignment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="174" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_unaligned</definition>
+        <argsstring>(int na)</argsstring>
+        <name>set_unaligned</name>
+        <param>
+          <type>int</type>
+          <declname>na</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_block::unaligned</definition>
+        <argsstring>() const </argsstring>
+        <name>unaligned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="177" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_is_unaligned</definition>
+        <argsstring>(bool u)</argsstring>
+        <name>set_is_unaligned</name>
+        <param>
+          <type>bool</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_block::is_unaligned</definition>
+        <argsstring>() const </argsstring>
+        <name>is_unaligned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="179" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::consume</definition>
+        <argsstring>(int which_input, int how_many_items)</argsstring>
+        <name>consume</name>
+        <param>
+          <type>int</type>
+          <declname>which_input</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>how_many_items</declname>
+        </param>
+        <briefdescription>
+<para>Tell the scheduler <computeroutput>how_many_items</computeroutput> of input stream <computeroutput>which_input</computeroutput> were consumed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::consume_each</definition>
+        <argsstring>(int how_many_items)</argsstring>
+        <name>consume_each</name>
+        <param>
+          <type>int</type>
+          <declname>how_many_items</declname>
+        </param>
+        <briefdescription>
+<para>Tell the scheduler <computeroutput>how_many_items</computeroutput> were consumed on each input stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::produce</definition>
+        <argsstring>(int which_output, int how_many_items)</argsstring>
+        <name>produce</name>
+        <param>
+          <type>int</type>
+          <declname>which_output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>how_many_items</declname>
+        </param>
+        <briefdescription>
+<para>Tell the scheduler <computeroutput>how_many_items</computeroutput> were produced on output stream <computeroutput>which_output</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the block&apos;s general_work method calls produce, <computeroutput>general_work</computeroutput> must return WORK_CALLED_PRODUCE. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_relative_rate</definition>
+        <argsstring>(double relative_rate)</argsstring>
+        <name>set_relative_rate</name>
+        <param>
+          <type>double</type>
+          <declname>relative_rate</declname>
+        </param>
+        <briefdescription>
+<para>Set the approximate output rate / input rate. </para>        </briefdescription>
+        <detaileddescription>
+<para>Provide a hint to the buffer allocator and scheduler. The default relative_rate is 1.0</para><para>decimators have relative_rates &lt; 1.0 interpolators have relative_rates &gt; 1.0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_block::relative_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>relative_rate</name>
+        <briefdescription>
+<para>return the approximate output rate / input rate </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="212" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="212" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_block::fixed_rate_ninput_to_noutput</definition>
+        <argsstring>(int ninput)</argsstring>
+        <name>fixed_rate_ninput_to_noutput</name>
+        <reimplementedby refid="classgr__sync__block_1a0cbbc0ce275498411248e678038710b2">fixed_rate_ninput_to_noutput</reimplementedby>
+        <reimplementedby refid="classgr__sync__decimator_1a23c657d3c3f0482369648e1916751f6f">fixed_rate_ninput_to_noutput</reimplementedby>
+        <reimplementedby refid="classgr__sync__interpolator_1a943227c6134e71a7867a66977b414533">fixed_rate_ninput_to_noutput</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>ninput</declname>
+        </param>
+        <briefdescription>
+<para>Given ninput samples, return number of output samples that will be produced. N.B. this is only defined if fixed_rate returns true. Generally speaking, you don&apos;t need to override this. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_block::fixed_rate_noutput_to_ninput</definition>
+        <argsstring>(int noutput)</argsstring>
+        <name>fixed_rate_noutput_to_ninput</name>
+        <reimplementedby refid="classgr__sync__block_1adaecb00ae09408c22e46c44d09aad53e">fixed_rate_noutput_to_ninput</reimplementedby>
+        <reimplementedby refid="classgr__sync__decimator_1a90041d67e72c64cb4d0f9a29bfbbd776">fixed_rate_noutput_to_ninput</reimplementedby>
+        <reimplementedby refid="classgr__sync__interpolator_1a03961e37cf520668a87f53762e638b9f">fixed_rate_noutput_to_ninput</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>noutput</declname>
+        </param>
+        <briefdescription>
+<para>Given noutput samples, return number of input samples required to produce noutput. N.B. this is only defined if fixed_rate returns true. Generally speaking, you don&apos;t need to override this. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_block::nitems_read</definition>
+        <argsstring>(unsigned int which_input)</argsstring>
+        <name>nitems_read</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_input</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of items read on input stream which_input. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t gr_block::nitems_written</definition>
+        <argsstring>(unsigned int which_output)</argsstring>
+        <name>nitems_written</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_output</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of items written on output stream which_output. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr__block_1a32561c88f124ea07881879fe79840f61" kindref="member">tag_propagation_policy_t</ref></type>
+        <definition>tag_propagation_policy_t gr_block::tag_propagation_policy</definition>
+        <argsstring>()</argsstring>
+        <name>tag_propagation_policy</name>
+        <briefdescription>
+<para>Asks for the policy used by the scheduler to moved tags downstream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_tag_propagation_policy</definition>
+        <argsstring>(tag_propagation_policy_t p)</argsstring>
+        <name>set_tag_propagation_policy</name>
+        <param>
+          <type><ref refid="classgr__block_1a32561c88f124ea07881879fe79840f61" kindref="member">tag_propagation_policy_t</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Set the policy by the scheduler to determine how tags are moved downstream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="gr__runtime__types_8h_1a266b71d5326cf891d9ea95b621cb5b15" kindref="member">gr_block_detail_sptr</ref></type>
+        <definition>gr_block_detail_sptr gr_block::detail</definition>
+        <argsstring>() const </argsstring>
+        <name>detail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="352" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="352" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_detail</definition>
+        <argsstring>(gr_block_detail_sptr detail)</argsstring>
+        <name>set_detail</name>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a266b71d5326cf891d9ea95b621cb5b15" kindref="member">gr_block_detail_sptr</ref></type>
+          <declname>detail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="353" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="353" bodyend="353"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_block::gr_block</definition>
+        <argsstring>(void)</argsstring>
+        <name>gr_block</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="269" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="269" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_block::gr_block</definition>
+        <argsstring>(const std::string &amp;name, gr_io_signature_sptr input_signature, gr_io_signature_sptr output_signature)</argsstring>
+        <name>gr_block</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>input_signature</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__runtime__types_8h_1a17582361e91523de033c893f29cae653" kindref="member">gr_io_signature_sptr</ref></type>
+          <declname>output_signature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::set_fixed_rate</definition>
+        <argsstring>(bool fixed_rate)</argsstring>
+        <name>set_fixed_rate</name>
+        <param>
+          <type>bool</type>
+          <declname>fixed_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="274" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="274" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::add_item_tag</definition>
+        <argsstring>(unsigned int which_output, uint64_t abs_offset, const pmt::pmt_t &amp;key, const pmt::pmt_t &amp;value, const pmt::pmt_t &amp;srcid=pmt::PMT_F)</argsstring>
+        <name>add_item_tag</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_output</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>abs_offset</declname>
+        </param>
+        <param>
+          <type>const pmt::pmt_t &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const pmt::pmt_t &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const pmt::pmt_t &amp;</type>
+          <declname>srcid</declname>
+          <defval>pmt::PMT_F</defval>
+        </param>
+        <briefdescription>
+<para>Adds a new tag onto the given output buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>which_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer of which output stream to attach the tag </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a uint64 number of the absolute item number assicated with the tag. Can get from nitems_written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag key as a PMT symbol </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any PMT holding any value for the given key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>optional source ID specifier; defaults to PMT_F </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="292" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="287" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::add_item_tag</definition>
+        <argsstring>(unsigned int which_output, const gr_tag_t &amp;tag)</argsstring>
+        <name>add_item_tag</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_output</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &amp;</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new tag onto the given output buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>which_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer of which output stream to attach the tag </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag object to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::get_tags_in_range</definition>
+        <argsstring>(std::vector&lt; gr_tag_t &gt; &amp;v, unsigned int which_input, uint64_t abs_start, uint64_t abs_end)</argsstring>
+        <name>get_tags_in_range</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_input</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>abs_start</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>abs_end</declname>
+        </param>
+        <briefdescription>
+<para>Given a [start,end), returns a vector of all tags in the range. </para>        </briefdescription>
+        <detaileddescription>
+<para>Range of counts is from start to end-1.</para><para>Tags are tuples of: (item count, source id, key, value)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector reference to return tags into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>which_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer of which input stream to pull from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a uint64 count of the start of the range of interest </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a uint64 count of the end of the range of interest </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_block::get_tags_in_range</definition>
+        <argsstring>(std::vector&lt; gr_tag_t &gt; &amp;v, unsigned int which_input, uint64_t abs_start, uint64_t abs_end, const pmt::pmt_t &amp;key)</argsstring>
+        <name>get_tags_in_range</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structgr__tag__t" kindref="compound">gr_tag_t</ref> &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>which_input</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>abs_start</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>abs_end</declname>
+        </param>
+        <param>
+          <type>const pmt::pmt_t &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Given a [start,end), returns a vector of all tags in the range with a given key. </para>        </briefdescription>
+        <detaileddescription>
+<para>Range of counts is from start to end-1.</para><para>Tags are tuples of: (item count, source id, key, value)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a vector reference to return tags into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>which_input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an integer of which input stream to pull from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a uint64 count of the start of the range of interest </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abs_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a uint64 count of the end of the range of interest </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a PMT symbol key to filter only tags of this key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="346"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The abstract base class for all &apos;terminal&apos; processing blocks.</para><para>A signal processing flow is constructed by creating a tree of hierarchical blocks, which at any level may also contain terminal nodes that actually implement signal processing functions. This is the base class for all such leaf nodes. </para>    </briefdescription>
+    <detaileddescription>
+<para>Blocks have a set of input streams and output streams. The input_signature and output_signature define the number of input streams and output streams respectively, and the type of the data items in each stream.</para><para>Although blocks may consume data on each input stream at a different rate, all outputs streams must produce data at the same rate. That rate may be different from any of the input rates.</para><para>User derived blocks override two methods, forecast and general_work, to implement their signal processing behavior. forecast is called by the system scheduler to determine how many items are required on each input stream in order to produce a given number of output items.</para><para>general_work is called to perform the signal processing in the block. It reads the input items and writes the output items. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="331">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="332">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>gr_sync_decimator</label>
+        <link refid="classgr__sync__decimator"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="330" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="334">
+        <label>gr_sync_interpolator</label>
+        <link refid="classgr__sync__interpolator"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="337">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+      </node>
+      <node id="335">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="336" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="339">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="336">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="337" relation="public-inheritance">
+        </childnode>
+        <childnode refid="338" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="338">
+        <label>std::string</label>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_block.h" bodystart="58" bodyend="354"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>gr_block</scope><name>alignment</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>gr_block</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>gr_block</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>gr_block</scope><name>consume_each</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>d_color</name></member>
+      <member refid="classgr__block_1ae66707cfaf4c1c13a34b5db5d379daf8" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_detail</name></member>
+      <member refid="classgr__block_1a08313191c1ffa6eabe7019145eedba56" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_fixed_rate</name></member>
+      <member refid="classgr__block_1accaf03643e4d906bc65381e987b9b9e1" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_history</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>d_input_signature</name></member>
+      <member refid="classgr__block_1a579e7cbcc02f9db11c7ffe6083f8056d" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>d_name</name></member>
+      <member refid="classgr__block_1ae5a0a035811331b83e572e8785207eb3" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_output_multiple</name></member>
+      <member refid="classgr__block_1a8b67af5f3db734eba2c7972b858e55f6" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>d_output_signature</name></member>
+      <member refid="classgr__block_1a8e2ad5db873956f11d10eb5e164c9128" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_relative_rate</name></member>
+      <member refid="classgr__block_1a63ff5bc706f29177bf6315683ebd230e" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a2d2252f159886b64cb52e7a263f3ce09" prot="private" virt="non-virtual"><scope>gr_block</scope><name>d_unaligned</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>gr_block</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>gr_block</scope><name>fixed_rate</name></member>
+      <member refid="classgr__block_1a4f17bec4407904b31d45f0d8e78c4683" prot="public" virt="virtual"><scope>gr_block</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__block_1a196ae6a4f9a3d0abed3428d2b765a133" prot="public" virt="virtual"><scope>gr_block</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__block_1aa1f2518b5c97126bb015adb9e2027f4a" prot="public" virt="virtual"><scope>gr_block</scope><name>forecast</name></member>
+      <member refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" prot="public" virt="pure-virtual"><scope>gr_block</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>gr_block</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>gr_block</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>gr_block</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>gr_block</scope><name>is_unaligned</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>gr_block</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>gr_block</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>gr_block</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>gr_block</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>gr_block</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>gr_block</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="non-virtual"><scope>gr_block</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>gr_block</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>gr_block</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>gr_block</scope><name>set_unaligned</name></member>
+      <member refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f" prot="public" virt="virtual"><scope>gr_block</scope><name>start</name></member>
+      <member refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1" prot="public" virt="virtual"><scope>gr_block</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>gr_block</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>gr_block</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>gr_block</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>gr_block</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>gr_block</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>gr_block</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>gr_block</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>gr_block</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>gr_block</scope><name>WHITE</name></member>
+      <member refid="classgr__block_1a73e3bff4471ca7f32637a7e162f0f4fba248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>gr_block</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1a73e3bff4471ca7f32637a7e162f0f4fba221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>gr_block</scope><name>WORK_DONE</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>gr_block</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>gr_block</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>gr_block</scope><name>~gr_msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

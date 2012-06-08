@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__probe__avg__mag__sqrd__cf" kind="class" prot="public">
+    <compoundname>gr_probe_avg_mag_sqrd_cf</compoundname>
+    <includes refid="gr__probe__avg__mag__sqrd__cf_8h" local="no">gr_probe_avg_mag_sqrd_cf.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__probe__avg__mag__sqrd__cf_1af1ce7a04e15472b2043f87a25af54f1d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_probe_avg_mag_sqrd_cf::d_threshold</definition>
+        <argsstring></argsstring>
+        <name>d_threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__probe__avg__mag__sqrd__cf_1a78f1e547ac59483cc63a5b2b30d39664" prot="private" static="no" mutable="no">
+        <type>gr_single_pole_iir&lt; double, double, double &gt;</type>
+        <definition>gr_single_pole_iir&lt;double,double,double&gt; gr_probe_avg_mag_sqrd_cf::d_iir</definition>
+        <argsstring></argsstring>
+        <name>d_iir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__probe__avg__mag__sqrd__cf_1a213cd163b960e679263789150cec285a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_probe_avg_mag_sqrd_cf::d_unmuted</definition>
+        <argsstring></argsstring>
+        <name>d_unmuted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__probe__avg__mag__sqrd__cf_1aeef7b529fbfb5a329526d53e6626a70f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr_probe_avg_mag_sqrd_cf::d_level</definition>
+        <argsstring></argsstring>
+        <name>d_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__probe__avg__mag__sqrd__cf_1ad275a4b554afbd066c7373032692a718" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__probe__avg__mag__sqrd__cf_8h_1a7e9ff8f58c799bc9f6c8cac566380aa4" kindref="member">gr_probe_avg_mag_sqrd_cf_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_probe_avg_mag_sqrd_cf_sptr gr_make_probe_avg_mag_sqrd_cf</definition>
+        <argsstring>(double threshold_db, double alpha)</argsstring>
+        <name>gr_make_probe_avg_mag_sqrd_cf</name>
+        <param>
+          <type>double</type>
+          <declname>threshold_db</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1a0edf02c718256b0a59c38fc9de5f2225" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_probe_avg_mag_sqrd_cf::gr_probe_avg_mag_sqrd_cf</definition>
+        <argsstring>(double threshold_db, double alpha)</argsstring>
+        <name>gr_probe_avg_mag_sqrd_cf</name>
+        <param>
+          <type>double</type>
+          <declname>threshold_db</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1af550354cc81b47a1225d83761b472edd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_probe_avg_mag_sqrd_cf::~gr_probe_avg_mag_sqrd_cf</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_probe_avg_mag_sqrd_cf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1ae64e63b6c5132a8904cf10688c9e29f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_probe_avg_mag_sqrd_cf::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1ab8d2699993b2de1ae399532f636ccbaa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_probe_avg_mag_sqrd_cf::unmuted</definition>
+        <argsstring>() const </argsstring>
+        <name>unmuted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1a087d2145efcd7355675dee8d442d40f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_probe_avg_mag_sqrd_cf::level</definition>
+        <argsstring>() const </argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1a5bb55d9824f880ee3d2a818c47059310" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double gr_probe_avg_mag_sqrd_cf::threshold</definition>
+        <argsstring>() const </argsstring>
+        <name>threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1a44965bec0c94c7397495453482c188a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_probe_avg_mag_sqrd_cf::set_alpha</definition>
+        <argsstring>(double alpha)</argsstring>
+        <name>set_alpha</name>
+        <param>
+          <type>double</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__probe__avg__mag__sqrd__cf_1a373de466f29510c65d7a8d5ed9a0d0f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_probe_avg_mag_sqrd_cf::set_threshold</definition>
+        <argsstring>(double decibels)</argsstring>
+        <name>set_threshold</name>
+        <param>
+          <type>double</type>
+          <declname>decibels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>compute avg magnitude squared.</para><para>input: gr_complex output: gr_float </para>    </briefdescription>
+    <detaileddescription>
+<para>Compute a running average of the magnitude squared of the the input. The level and indication as to whether the level exceeds threshold can be retrieved with the level and unmuted accessors. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_probe_avg_mag_sqrd_cf.h" bodystart="47" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a78f1e547ac59483cc63a5b2b30d39664" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>d_iir</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1aeef7b529fbfb5a329526d53e6626a70f" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>d_level</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1af1ce7a04e15472b2043f87a25af54f1d" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>d_threshold</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a213cd163b960e679263789150cec285a" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>d_unmuted</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1ad275a4b554afbd066c7373032692a718" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>gr_make_probe_avg_mag_sqrd_cf</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a0edf02c718256b0a59c38fc9de5f2225" prot="private" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>gr_probe_avg_mag_sqrd_cf</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a087d2145efcd7355675dee8d442d40f6" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>level</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a44965bec0c94c7397495453482c188a5" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>set_alpha</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a373de466f29510c65d7a8d5ed9a0d0f6" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>set_threshold</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1a5bb55d9824f880ee3d2a818c47059310" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>threshold</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1ab8d2699993b2de1ae399532f636ccbaa" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>unmuted</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1ae64e63b6c5132a8904cf10688c9e29f8" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>work</name></member>
+      <member refid="classgr__probe__avg__mag__sqrd__cf_1af550354cc81b47a1225d83761b472edd" prot="public" virt="non-virtual"><scope>gr_probe_avg_mag_sqrd_cf</scope><name>~gr_probe_avg_mag_sqrd_cf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

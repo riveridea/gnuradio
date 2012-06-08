@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="create__atsci__fs__checker_8h" kind="file">
+    <compoundname>create_atsci_fs_checker.h</compoundname>
+    <includes refid="atsc__api_8h" local="no">atsc_api.h</includes>
+    <incdepgraph>
+      <node id="2353">
+        <label>atsc_api.h</label>
+        <link refid="atsc__api_8h"/>
+        <childnode refid="2354" relation="include">
+        </childnode>
+      </node>
+      <node id="2354">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="2352">
+        <label>create_atsci_fs_checker.h</label>
+        <link refid="create_atsci_fs_checker.h"/>
+        <childnode refid="2353" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="create__atsci__fs__checker_8h_1ad79793906cd1980420d7b8184239da73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="atsc__api_8h_1a5c987bdbab9053a0d6650b8035e8662a" kindref="member">ATSC_API</ref> <ref refid="classatsci__fs__checker" kindref="compound">atsci_fs_checker</ref> *</type>
+        <definition>ATSC_API atsci_fs_checker* create_atsci_fs_checker</definition>
+        <argsstring>()</argsstring>
+        <name>create_atsci_fs_checker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory that creates appropriate <ref refid="classatsci__fs__checker" kindref="compound">atsci_fs_checker</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/create_atsci_fs_checker.h" line="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-atsc/src/lib/create_atsci_fs_checker.h"/>
+  </compounddef>
+</doxygen>

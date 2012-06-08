@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__framer__sink__1" kind="class" prot="public">
+    <compoundname>gr_framer_sink_1</compoundname>
+    <includes refid="gr__framer__sink__1_8h" local="no">gr_framer_sink_1.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5" prot="private" static="no">
+        <name>state_t</name>
+        <enumvalue id="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5a18980da74091d7606800733809999d68" prot="private">
+          <name>STATE_SYNC_SEARCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5a8a1d44caf47c80e401e53f816e38c8f0" prot="private">
+          <name>STATE_HAVE_SYNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5ade85c63534acd5bae13ac66ed373f7ca" prot="private">
+          <name>STATE_HAVE_HEADER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgr__framer__sink__1_1ab98bbd750b3117f0695411700536e501" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_framer_sink_1::MAX_PKT_LEN</definition>
+        <argsstring></argsstring>
+        <name>MAX_PKT_LEN</name>
+        <initializer> 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a7376ea50cefa284a38b02bf0463df26c" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_framer_sink_1::HEADERBITLEN</definition>
+        <argsstring></argsstring>
+        <name>HEADERBITLEN</name>
+        <initializer> 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a31d3f555a9d3e701ee4e686fb8d40835" prot="private" static="no" mutable="no">
+        <type>gr_msg_queue_sptr</type>
+        <definition>gr_msg_queue_sptr gr_framer_sink_1::d_target_queue</definition>
+        <argsstring></argsstring>
+        <name>d_target_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a9a95faa547b2527ad2f297b5f5edded1" prot="private" static="no" mutable="no">
+        <type>state_t</type>
+        <definition>state_t gr_framer_sink_1::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a68d3bcf694490492753a0255d8d17587" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_framer_sink_1::d_header</definition>
+        <argsstring></argsstring>
+        <name>d_header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a8d44021b0705aaf6f0deab1ac736e47a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::d_headerbitlen_cnt</definition>
+        <argsstring></argsstring>
+        <name>d_headerbitlen_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1ab579a6461992ce31ea22ea2058b38d31" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_framer_sink_1::d_packet[MAX_PKT_LEN]</definition>
+        <argsstring>[MAX_PKT_LEN]</argsstring>
+        <name>d_packet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a21e5f7c835f10675f3391d1dc89e1ccc" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char gr_framer_sink_1::d_packet_byte</definition>
+        <argsstring></argsstring>
+        <name>d_packet_byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a2fae9d88521b7a540b3128e8295378f6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::d_packet_byte_index</definition>
+        <argsstring></argsstring>
+        <name>d_packet_byte_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1aaa99c8a5424ed11ca3a0e64a854adcb6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::d_packetlen</definition>
+        <argsstring></argsstring>
+        <name>d_packetlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1a369923ed54f4c0f66a86d462143518ba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::d_packet_whitener_offset</definition>
+        <argsstring></argsstring>
+        <name>d_packet_whitener_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__framer__sink__1_1aed78672f5f2935d7cb279c34d8280b60" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::d_packetlen_cnt</definition>
+        <argsstring></argsstring>
+        <name>d_packetlen_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__framer__sink__1_1a8ba58366362770dc6583ad4878bf4991" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__framer__sink__1_8h_1af11ff898bf072b3ebd4b5ea03005a4c6" kindref="member">gr_framer_sink_1_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_framer_sink_1_sptr gr_make_framer_sink_1</definition>
+        <argsstring>(gr_msg_queue_sptr target_queue)</argsstring>
+        <name>gr_make_framer_sink_1</name>
+        <param>
+          <type>gr_msg_queue_sptr</type>
+          <declname>target_queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__framer__sink__1_1a8462ea2bad2d49086220c2b5eb894805" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_framer_sink_1::gr_framer_sink_1</definition>
+        <argsstring>(gr_msg_queue_sptr target_queue)</argsstring>
+        <name>gr_framer_sink_1</name>
+        <param>
+          <type>gr_msg_queue_sptr</type>
+          <declname>target_queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1ae6506c6d757bfee229e2caf7eeaef1dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_framer_sink_1::enter_search</definition>
+        <argsstring>()</argsstring>
+        <name>enter_search</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1ae4c482a3ab679642356620f0c216465b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_framer_sink_1::enter_have_sync</definition>
+        <argsstring>()</argsstring>
+        <name>enter_have_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1ad4215dba4e9dcff8b7ed24615b334875" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_framer_sink_1::enter_have_header</definition>
+        <argsstring>(int payload_len, int whitener_offset)</argsstring>
+        <name>enter_have_header</name>
+        <param>
+          <type>int</type>
+          <declname>payload_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>whitener_offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1a25b0dab75810602a2f50e734aa2da66b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_framer_sink_1::header_ok</definition>
+        <argsstring>()</argsstring>
+        <name>header_ok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1a797381f43858bf0745cc268442ef39b4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_framer_sink_1::header_payload</definition>
+        <argsstring>(int *len, int *offset)</argsstring>
+        <name>header_payload</name>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="90" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__framer__sink__1_1a0be4776f164eaf5a7593b2fc773d7991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_framer_sink_1::~gr_framer_sink_1</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_framer_sink_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__framer__sink__1_1aec0600ab0fbe296c5dc83f9ad39a4344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_framer_sink_1::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Given a stream of bits and access_code flags, assemble packets.</para><para>input: stream of bytes from gr_correlate_access_code_bb output: none. Pushes assembled packet into target queue. </para>    </briefdescription>
+    <detaileddescription>
+<para>The framer expects a fixed length header of 2 16-bit shorts containing the payload length, followed by the payload. If the 2 16-bit shorts are not identical, this packet is ignored. Better algs are welcome.</para><para>The input data consists of bytes that have two bits used. Bit 0, the LSB, contains the data bit. Bit 1 if set, indicates that the corresponding bit is the the first bit of the packet. That is, this bit is the first one after the access code. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_framer_sink_1.h" bodystart="54" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classgr__framer__sink__1_1a68d3bcf694490492753a0255d8d17587" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_header</name></member>
+      <member refid="classgr__framer__sink__1_1a8d44021b0705aaf6f0deab1ac736e47a" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_headerbitlen_cnt</name></member>
+      <member refid="classgr__framer__sink__1_1ab579a6461992ce31ea22ea2058b38d31" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packet</name></member>
+      <member refid="classgr__framer__sink__1_1a21e5f7c835f10675f3391d1dc89e1ccc" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packet_byte</name></member>
+      <member refid="classgr__framer__sink__1_1a2fae9d88521b7a540b3128e8295378f6" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packet_byte_index</name></member>
+      <member refid="classgr__framer__sink__1_1a369923ed54f4c0f66a86d462143518ba" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packet_whitener_offset</name></member>
+      <member refid="classgr__framer__sink__1_1aaa99c8a5424ed11ca3a0e64a854adcb6" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packetlen</name></member>
+      <member refid="classgr__framer__sink__1_1aed78672f5f2935d7cb279c34d8280b60" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_packetlen_cnt</name></member>
+      <member refid="classgr__framer__sink__1_1a9a95faa547b2527ad2f297b5f5edded1" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_state</name></member>
+      <member refid="classgr__framer__sink__1_1a31d3f555a9d3e701ee4e686fb8d40835" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>d_target_queue</name></member>
+      <member refid="classgr__framer__sink__1_1ad4215dba4e9dcff8b7ed24615b334875" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>enter_have_header</name></member>
+      <member refid="classgr__framer__sink__1_1ae4c482a3ab679642356620f0c216465b" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>enter_have_sync</name></member>
+      <member refid="classgr__framer__sink__1_1ae6506c6d757bfee229e2caf7eeaef1dc" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>enter_search</name></member>
+      <member refid="classgr__framer__sink__1_1a8462ea2bad2d49086220c2b5eb894805" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>gr_framer_sink_1</name></member>
+      <member refid="classgr__framer__sink__1_1a8ba58366362770dc6583ad4878bf4991" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>gr_make_framer_sink_1</name></member>
+      <member refid="classgr__framer__sink__1_1a25b0dab75810602a2f50e734aa2da66b" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>header_ok</name></member>
+      <member refid="classgr__framer__sink__1_1a797381f43858bf0745cc268442ef39b4" prot="protected" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>header_payload</name></member>
+      <member refid="classgr__framer__sink__1_1a7376ea50cefa284a38b02bf0463df26c" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>HEADERBITLEN</name></member>
+      <member refid="classgr__framer__sink__1_1ab98bbd750b3117f0695411700536e501" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>MAX_PKT_LEN</name></member>
+      <member refid="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5ade85c63534acd5bae13ac66ed373f7ca" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>STATE_HAVE_HEADER</name></member>
+      <member refid="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5a8a1d44caf47c80e401e53f816e38c8f0" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>STATE_HAVE_SYNC</name></member>
+      <member refid="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5a18980da74091d7606800733809999d68" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>STATE_SYNC_SEARCH</name></member>
+      <member refid="classgr__framer__sink__1_1a9a3b6f52daefc6064941c0c2ffdbc4d5" prot="private" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>state_t</name></member>
+      <member refid="classgr__framer__sink__1_1aec0600ab0fbe296c5dc83f9ad39a4344" prot="public" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>work</name></member>
+      <member refid="classgr__framer__sink__1_1a0be4776f164eaf5a7593b2fc773d7991" prot="public" virt="non-virtual"><scope>gr_framer_sink_1</scope><name>~gr_framer_sink_1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

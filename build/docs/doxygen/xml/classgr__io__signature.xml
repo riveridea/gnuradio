@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__io__signature" kind="class" prot="public">
+    <compoundname>gr_io_signature</compoundname>
+    <includes refid="gr__io__signature_8h" local="no">gr_io_signature.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__io__signature_1a48141e7cdc3cb3978efbb286c605b539" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_io_signature::d_min_streams</definition>
+        <argsstring></argsstring>
+        <name>d_min_streams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__io__signature_1ad6606b5e021a69ff0b85ce06a6973feb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_io_signature::d_max_streams</definition>
+        <argsstring></argsstring>
+        <name>d_max_streams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="93" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__io__signature_1af37938af5ad637ceda114ea4719646ba" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr_io_signature::d_sizeof_stream_item</definition>
+        <argsstring></argsstring>
+        <name>d_sizeof_stream_item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="94" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgr__io__signature_1a8d29b9fc7bfec08832c5852afdecb1a9" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int gr_io_signature::IO_INFINITE</definition>
+        <argsstring></argsstring>
+        <name>IO_INFINITE</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__io__signature_1ac3a7686096f23e6a18cdc24f29303683" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_io_signature::gr_io_signature</definition>
+        <argsstring>(int min_streams, int max_streams, const std::vector&lt; int &gt; &amp;sizeof_stream_items)</argsstring>
+        <name>gr_io_signature</name>
+        <param>
+          <type>int</type>
+          <declname>min_streams</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_streams</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>sizeof_stream_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__io__signature_1ae5b9cf375fcb66b7c874e9defaf8a8cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="classboost_1_1shared__ptr" kindref="compound">gr_io_signature_sptr</ref></type>
+        <definition>GR_CORE_API gr_io_signature_sptr gr_make_io_signaturev</definition>
+        <argsstring>(int min_streams, int max_streams, const std::vector&lt; int &gt; &amp;sizeof_stream_items)</argsstring>
+        <name>gr_make_io_signaturev</name>
+        <param>
+          <type>int</type>
+          <declname>min_streams</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_streams</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>sizeof_stream_items</declname>
+        </param>
+        <briefdescription>
+<para>Create an i/o signature. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min_streams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify minimum number of streams (&gt;= 0) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_streams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify maximum number of streams (&gt;= min_streams or -1 -&gt; infinite) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeof_stream_items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify the size of the items in the streams</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If there are more streams than there are entries in sizeof_stream_items, the value of the last entry in sizeof_stream_items is used for the missing values. sizeof_stream_items must contain at least 1 entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__io__signature_1a12776009a6a97dfd40d9227505a60de4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_io_signature::~gr_io_signature</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_io_signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__io__signature_1aa8d00e9ef1c575fb82f23ad91b7eeed5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_io_signature::min_streams</definition>
+        <argsstring>() const </argsstring>
+        <name>min_streams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="110" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__io__signature_1ad3b8ee26c7fb72eecf84b932f775dfd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_io_signature::max_streams</definition>
+        <argsstring>() const </argsstring>
+        <name>max_streams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="111" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__io__signature_1ab834e2514693dbf9780265af15295efe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_io_signature::sizeof_stream_item</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>sizeof_stream_item</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__io__signature_1abc83a822adb84f8ea2cccce70a7c3ba4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; gr_io_signature::sizeof_stream_items</definition>
+        <argsstring>() const </argsstring>
+        <name>sizeof_stream_items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>i/o signature for input and output ports. </para>    </briefdescription>
+    <detaileddescription>
+<para>misc </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" line="91" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/runtime/gr_io_signature.h" bodystart="91" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classgr__io__signature_1ad6606b5e021a69ff0b85ce06a6973feb" prot="private" virt="non-virtual"><scope>gr_io_signature</scope><name>d_max_streams</name></member>
+      <member refid="classgr__io__signature_1a48141e7cdc3cb3978efbb286c605b539" prot="private" virt="non-virtual"><scope>gr_io_signature</scope><name>d_min_streams</name></member>
+      <member refid="classgr__io__signature_1af37938af5ad637ceda114ea4719646ba" prot="private" virt="non-virtual"><scope>gr_io_signature</scope><name>d_sizeof_stream_item</name></member>
+      <member refid="classgr__io__signature_1ac3a7686096f23e6a18cdc24f29303683" prot="private" virt="non-virtual"><scope>gr_io_signature</scope><name>gr_io_signature</name></member>
+      <member refid="classgr__io__signature_1ae5b9cf375fcb66b7c874e9defaf8a8cb" prot="private" virt="non-virtual"><scope>gr_io_signature</scope><name>gr_make_io_signaturev</name></member>
+      <member refid="classgr__io__signature_1a8d29b9fc7bfec08832c5852afdecb1a9" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>IO_INFINITE</name></member>
+      <member refid="classgr__io__signature_1ad3b8ee26c7fb72eecf84b932f775dfd2" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>max_streams</name></member>
+      <member refid="classgr__io__signature_1aa8d00e9ef1c575fb82f23ad91b7eeed5" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>min_streams</name></member>
+      <member refid="classgr__io__signature_1ab834e2514693dbf9780265af15295efe" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>sizeof_stream_item</name></member>
+      <member refid="classgr__io__signature_1abc83a822adb84f8ea2cccce70a7c3ba4" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>sizeof_stream_items</name></member>
+      <member refid="classgr__io__signature_1a12776009a6a97dfd40d9227505a60de4" prot="public" virt="non-virtual"><scope>gr_io_signature</scope><name>~gr_io_signature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

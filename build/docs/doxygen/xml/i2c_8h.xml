@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="i2c_8h" kind="file">
+    <compoundname>i2c.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes local="no">boost/shared_ptr.hpp</includes>
+    <includedby refid="i2c__bitbang_8h" local="no">i2c_bitbang.h</includedby>
+    <incdepgraph>
+      <node id="13925">
+        <label>boost/shared_ptr.hpp</label>
+      </node>
+      <node id="13923">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="13924" relation="include">
+        </childnode>
+      </node>
+      <node id="13924">
+        <label>gruel/attributes.h</label>
+        <link refid="attributes_8h"/>
+      </node>
+      <node id="13922">
+        <label>i2c.h</label>
+        <link refid="i2c.h"/>
+        <childnode refid="13923" relation="include">
+        </childnode>
+        <childnode refid="13925" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13927">
+        <label>i2c_bitbang.h</label>
+        <link refid="i2c__bitbang_8h"/>
+      </node>
+      <node id="13926">
+        <label>i2c.h</label>
+        <link refid="i2c.h"/>
+        <childnode refid="13927" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classi2c" prot="public">i2c</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/i2c.h"/>
+  </compounddef>
+</doxygen>

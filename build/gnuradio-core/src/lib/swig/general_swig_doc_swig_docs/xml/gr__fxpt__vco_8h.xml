@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gr__fxpt__vco_8h" kind="file">
+    <compoundname>gr_fxpt_vco.h</compoundname>
+    <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
+    <includes refid="gr__fxpt_8h" local="no">gr_fxpt.h</includes>
+    <includes local="no">gr_complex.h</includes>
+    <includedby refid="gr__vco__f_8h" local="no">/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h</includedby>
+    <incdepgraph>
+      <node id="469">
+        <label>gruel/attributes.h</label>
+      </node>
+      <node id="468">
+        <label>gr_core_api.h</label>
+        <link refid="gr__core__api_8h"/>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>gr_complex.h</label>
+      </node>
+      <node id="471">
+        <label>gr_types.h</label>
+      </node>
+      <node id="470">
+        <label>gr_fxpt.h</label>
+        <link refid="gr__fxpt_8h"/>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt_vco.h</label>
+        <link refid="gr_fxpt_vco.h"/>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="474">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_vco_f.h</label>
+        <link refid="gr__vco__f_8h"/>
+      </node>
+      <node id="473">
+        <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt_vco.h</label>
+        <link refid="gr_fxpt_vco.h"/>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr__fxpt__vco" prot="public">gr_fxpt_vco</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2002,2004,2005<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>Radio<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>GNU<sp/>Radio;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_GR_FXPT_VCO_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_GR_FXPT_VCO_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gr__core__api_8h" kindref="compound">gr_core_api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gr__fxpt_8h" kindref="compound">gr_fxpt.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gr_complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classgr__fxpt__vco" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="classgr__fxpt__vco" kindref="compound" tooltip="Voltage Controlled Oscillator (VCO)">gr_fxpt_vco</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>gr_int32<sp/><sp/><sp/><sp/><sp/><sp/>d_phase;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classgr__fxpt__vco_1a4e860d580836619158f008077dfc2880" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__fxpt__vco_1a4e860d580836619158f008077dfc2880" kindref="member">gr_fxpt_vco</ref><sp/>()<sp/>:<sp/>d_phase<sp/>(0)<sp/>{}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classgr__fxpt__vco_1a32615938fbf63671a723c367d9920e0a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classgr__fxpt__vco_1a32615938fbf63671a723c367d9920e0a" kindref="member">~gr_fxpt_vco</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>radians</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classgr__fxpt__vco_1a8aeadf8f5afddec7ffb5e969b8c4e1b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt__vco_1a8aeadf8f5afddec7ffb5e969b8c4e1b5" kindref="member">set_phase</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>d_phase<sp/>=<sp/><ref refid="classgr__fxpt_1a8cf5f6942dd8db09072fb711d09b4820" kindref="member">gr_fxpt::float_to_fixed</ref><sp/>(angle);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classgr__fxpt__vco_1aacf093027fc95da11b86802e409ef3cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt__vco_1aacf093027fc95da11b86802e409ef3cf" kindref="member">adjust_phase</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta_phase)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>d_phase<sp/>+=<sp/><ref refid="classgr__fxpt_1a8cf5f6942dd8db09072fb711d09b4820" kindref="member">gr_fxpt::float_to_fixed</ref><sp/>(delta_phase);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classgr__fxpt__vco_1af2a50adafe9c40aa2534c5618551e33c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt__vco_1af2a50adafe9c40aa2534c5618551e33c" kindref="member">get_phase</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt_1a4b89af0770b5c4751f52224976514c20" kindref="member">gr_fxpt::fixed_to_float</ref><sp/>(d_phase);<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>sin<sp/>and<sp/>cos<sp/>for<sp/>current<sp/>phase<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classgr__fxpt__vco_1a443c10e81f1722ab5364ead0b1612d3e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sincos<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*sinx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*cosx)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="54"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>*sinx<sp/>=<sp/><ref refid="classgr__fxpt_1a26312e3f31f6d7a6ae4810c05f30979a" kindref="member" tooltip="Given a fixed point angle x, return float sine (x)">gr_fxpt::sin</ref><sp/>(d_phase);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>*cosx<sp/>=<sp/><ref refid="classgr__fxpt_1a61861c9e4535e05a567a96a2551430a9" kindref="member">gr_fxpt::cos</ref><sp/>(d_phase);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>a<sp/>block<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classgr__fxpt__vco_1add26607d8252aa8633bfcf5e6514b8df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cos<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>k,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ampl<sp/>=<sp/>1.0)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>noutput_items;<sp/>i++){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output[i]<sp/>=<sp/>(float)(<ref refid="classgr__fxpt_1a61861c9e4535e05a567a96a2551430a9" kindref="member">gr_fxpt::cos</ref><sp/>(d_phase)<sp/>*<sp/>ampl);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>adjust_phase(input[i]<sp/>*<sp/>k);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>cos<sp/>or<sp/>sin<sp/>for<sp/>current<sp/>phase<sp/>angle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classgr__fxpt__vco_1a28535e3ca22a805bc8e949124aa466be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt__vco_1a28535e3ca22a805bc8e949124aa466be" kindref="member">cos</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt_1a61861c9e4535e05a567a96a2551430a9" kindref="member">gr_fxpt::cos</ref><sp/>(d_phase);<sp/>}</highlight></codeline>
+<codeline lineno="70" refid="classgr__fxpt__vco_1a63370377ded71e47cde223b3a8f2a3c1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt__vco_1a63370377ded71e47cde223b3a8f2a3c1" kindref="member">sin</ref><sp/>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgr__fxpt_1a26312e3f31f6d7a6ae4810c05f30979a" kindref="member" tooltip="Given a fixed point angle x, return float sine (x)">gr_fxpt::sin</ref><sp/>(d_phase);<sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_GR_FXPT_VCO_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_fxpt_vco.h"/>
+  </compounddef>
+</doxygen>

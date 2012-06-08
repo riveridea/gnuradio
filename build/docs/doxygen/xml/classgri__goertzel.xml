@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgri__goertzel" kind="class" prot="public">
+    <compoundname>gri_goertzel</compoundname>
+    <includes refid="gri__goertzel_8h" local="no">gri_goertzel.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgri__goertzel_1a51d1ba3bb5a30679fb81f43befac6530" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_goertzel::d_d1</definition>
+        <argsstring></argsstring>
+        <name>d_d1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__goertzel_1af693a69d3f55fd0505508216c5ac239b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_goertzel::d_d2</definition>
+        <argsstring></argsstring>
+        <name>d_d2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__goertzel_1adc35c03289682e1a397a38f0deeb05b4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_goertzel::d_wr</definition>
+        <argsstring></argsstring>
+        <name>d_wr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__goertzel_1a1e96cf50c74ca0e2076fa8e8126d7e7b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gri_goertzel::d_wi</definition>
+        <argsstring></argsstring>
+        <name>d_wi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__goertzel_1abfd84a4f8d5ee2c679bc201cd25d3c9a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_goertzel::d_len</definition>
+        <argsstring></argsstring>
+        <name>d_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgri__goertzel_1a17758455f2168a29ea4d6f3d869e72a1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gri_goertzel::d_processed</definition>
+        <argsstring></argsstring>
+        <name>d_processed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgri__goertzel_1abb2bad35613053e168e8eb55e227cd81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gri_goertzel::gri_goertzel</definition>
+        <argsstring>()</argsstring>
+        <name>gri_goertzel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1ac1ec7700d39f466878a5397f157f5167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gri_goertzel::gri_goertzel</definition>
+        <argsstring>(int rate, int len, float freq)</argsstring>
+        <name>gri_goertzel</name>
+        <param>
+          <type>int</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1afc9d6f9d42e33601cdc4c0b5ae517994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_goertzel::gri_setparms</definition>
+        <argsstring>(int rate, int len, float freq)</argsstring>
+        <name>gri_setparms</name>
+        <param>
+          <type>int</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1a769715ae35410dc37917d2729d2fbf2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gri_goertzel::batch</definition>
+        <argsstring>(float *in)</argsstring>
+        <name>batch</name>
+        <param>
+          <type>float *</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1a44f79dbf29b56ad28158ac848ef23984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref></type>
+        <definition>void gri_goertzel::input</definition>
+        <argsstring>(const float &amp;in)</argsstring>
+        <name>input</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1ae92df59b08801b3d0c800a22288172aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gr__complex_8h_1aec4bfe41433369afae9327f1b0bc9109" kindref="member">gr_complex</ref></type>
+        <definition>gr_complex gri_goertzel::output</definition>
+        <argsstring>()</argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classgri__goertzel_1ae1dfaba30b30496337f2ed83ec57c21c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gri_goertzel::ready</definition>
+        <argsstring>() const </argsstring>
+        <name>ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implements Goertzel single-bin DFT calculation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" line="34" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/gri_goertzel.h" bodystart="33" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgri__goertzel_1a769715ae35410dc37917d2729d2fbf2a" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>batch</name></member>
+      <member refid="classgri__goertzel_1a51d1ba3bb5a30679fb81f43befac6530" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_d1</name></member>
+      <member refid="classgri__goertzel_1af693a69d3f55fd0505508216c5ac239b" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_d2</name></member>
+      <member refid="classgri__goertzel_1abfd84a4f8d5ee2c679bc201cd25d3c9a" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_len</name></member>
+      <member refid="classgri__goertzel_1a17758455f2168a29ea4d6f3d869e72a1" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_processed</name></member>
+      <member refid="classgri__goertzel_1a1e96cf50c74ca0e2076fa8e8126d7e7b" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_wi</name></member>
+      <member refid="classgri__goertzel_1adc35c03289682e1a397a38f0deeb05b4" prot="private" virt="non-virtual"><scope>gri_goertzel</scope><name>d_wr</name></member>
+      <member refid="classgri__goertzel_1abb2bad35613053e168e8eb55e227cd81" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>gri_goertzel</name></member>
+      <member refid="classgri__goertzel_1ac1ec7700d39f466878a5397f157f5167" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>gri_goertzel</name></member>
+      <member refid="classgri__goertzel_1afc9d6f9d42e33601cdc4c0b5ae517994" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>gri_setparms</name></member>
+      <member refid="classgri__goertzel_1a44f79dbf29b56ad28158ac848ef23984" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>input</name></member>
+      <member refid="classgri__goertzel_1ae92df59b08801b3d0c800a22288172aa" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>output</name></member>
+      <member refid="classgri__goertzel_1ae1dfaba30b30496337f2ed83ec57c21c" prot="public" virt="non-virtual"><scope>gri_goertzel</scope><name>ready</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

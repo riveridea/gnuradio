@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__fir__fsf__generic" kind="class" prot="public">
+    <compoundname>gr_fir_fsf_generic</compoundname>
+    <basecompoundref refid="classgr__fir__fsf" prot="public" virt="non-virtual">gr_fir_fsf</basecompoundref>
+    <derivedcompoundref refid="classgr__fir__fsf__simd" prot="public" virt="non-virtual">gr_fir_fsf_simd</derivedcompoundref>
+    <includes refid="gr__fir__fsf__generic_8h" local="no">gr_fir_fsf_generic.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__fir__fsf__generic_1ad54060741ad9661759d6d24acc548f0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fsf_generic::gr_fir_fsf_generic</definition>
+        <argsstring>()</argsstring>
+        <name>gr_fir_fsf_generic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__generic_1aae20245aa49bd786ec8e49e128aaaa40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_fir_fsf_generic::gr_fir_fsf_generic</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;taps)</argsstring>
+        <name>gr_fir_fsf_generic</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>taps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__generic_1a8a88649387d44e24b3c2ab7033087f82" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>short</type>
+        <definition>virtual short gr_fir_fsf_generic::filter</definition>
+        <argsstring>(const float input[])</argsstring>
+        <name>filter</name>
+        <reimplements refid="classgr__fir__fsf_1a72d4b9fb5669d54e826b506a288c3b12">filter</reimplements>
+        <reimplementedby refid="classgr__fir__fsf__simd_1a9b221f60ff010490358eed5e39bc9673">filter</reimplementedby>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>compute a single output value. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> valid entries. input[0] .. input[<ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> - 1] are referenced to compute the output value.</para><para><simplesect kind="return"><para>the filtered input value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__generic_1a5a22acd8dae47ae1bc008198ffa68b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_fsf_generic::filterN</definition>
+        <argsstring>(short output[], const float input[], unsigned long n)</argsstring>
+        <name>filterN</name>
+        <reimplements refid="classgr__fir__fsf_1a40b807639ff338eea553e9cfbe5b7852">filterN</reimplements>
+        <param>
+          <type>short</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values. </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (n - 1 + <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[n - 1 + <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__fir__fsf__generic_1a4893ed68bbc23906e76e5094b50ffbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void gr_fir_fsf_generic::filterNdec</definition>
+        <argsstring>(short output[], const float input[], unsigned long n, unsigned decimate)</argsstring>
+        <name>filterNdec</name>
+        <reimplements refid="classgr__fir__fsf_1abaa7da67d2c6484fcbf5c509b21794ed">filterNdec</reimplements>
+        <param>
+          <type>short</type>
+          <declname>output</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>input</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>decimate</declname>
+        </param>
+        <briefdescription>
+<para>compute an array of N output values, decimating the input </para>        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>input</computeroutput> must have (decimate * (n - 1) + <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref>) valid entries. input[0] .. input[decimate * (n - 1) + <ref refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" kindref="member">ntaps()</ref> - 1] are referenced to compute the output values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Concrete class for generic implementation of FIR with float input, short output and float taps. </para>    </briefdescription>
+    <detaileddescription>
+<para>The trailing suffix has the form _IOT where I codes the input type, O codes the output type, and T codes the tap type. I,O,T are elements of the set &apos;s&apos; (short), &apos;f&apos; (float), &apos;c&apos; (gr_complex), &apos;i&apos; (int) </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="583">
+        <label>gr_fir_fsf_simd</label>
+        <link refid="classgr__fir__fsf__simd"/>
+        <childnode refid="581" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="582">
+        <label>gr_fir_fsf</label>
+        <link refid="classgr__fir__fsf"/>
+      </node>
+      <node id="585">
+        <label>gr_fir_fsf_sse</label>
+        <link refid="classgr__fir__fsf__sse"/>
+        <childnode refid="583" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="581">
+        <label>gr_fir_fsf_generic</label>
+        <link refid="classgr__fir__fsf__generic"/>
+        <childnode refid="582" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="584">
+        <label>gr_fir_fsf_3dnow</label>
+        <link refid="classgr__fir__fsf__3dnow"/>
+        <childnode refid="583" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="588">
+        <label>std::vector&lt; float &gt;</label>
+      </node>
+      <node id="587">
+        <label>gr_fir_fsf</label>
+        <link refid="classgr__fir__fsf"/>
+        <childnode refid="588" relation="usage">
+          <edgelabel>d_taps</edgelabel>
+        </childnode>
+      </node>
+      <node id="586">
+        <label>gr_fir_fsf_generic</label>
+        <link refid="classgr__fir__fsf__generic"/>
+        <childnode refid="587" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/filter/gr_fir_fsf_generic.h" bodystart="36" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classgr__fir__fsf_1a4cd04bb59ee2ab71a3b470ead188d101" prot="protected" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>d_taps</name></member>
+      <member refid="classgr__fir__fsf__generic_1a8a88649387d44e24b3c2ab7033087f82" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>filter</name></member>
+      <member refid="classgr__fir__fsf__generic_1a5a22acd8dae47ae1bc008198ffa68b5e" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>filterN</name></member>
+      <member refid="classgr__fir__fsf__generic_1a4893ed68bbc23906e76e5094b50ffbbf" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>filterNdec</name></member>
+      <member refid="classgr__fir__fsf_1ae6dcb8e0d14dd3fe98459f76d1b329c9" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>get_taps</name></member>
+      <member refid="classgr__fir__fsf_1af2b781c4ecca64a3a5315dfe6e10a62f" prot="public" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>gr_fir_fsf</name></member>
+      <member refid="classgr__fir__fsf_1a58226fbee4ba0994918afe687343f548" prot="public" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>gr_fir_fsf</name></member>
+      <member refid="classgr__fir__fsf__generic_1ad54060741ad9661759d6d24acc548f0d" prot="public" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>gr_fir_fsf_generic</name></member>
+      <member refid="classgr__fir__fsf__generic_1aae20245aa49bd786ec8e49e128aaaa40" prot="public" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>gr_fir_fsf_generic</name></member>
+      <member refid="classgr__fir__fsf_1a695ea61ff30c7b9c196571834002da46" prot="public" virt="non-virtual"><scope>gr_fir_fsf_generic</scope><name>ntaps</name></member>
+      <member refid="classgr__fir__fsf_1adc6959598abe050fe195c2202fc6c521" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>set_taps</name></member>
+      <member refid="classgr__fir__fsf_1a711d702cf671f00754acd74813d38c4d" prot="public" virt="virtual"><scope>gr_fir_fsf_generic</scope><name>~gr_fir_fsf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="structxmm__regs" kind="struct" prot="public">
+    <compoundname>xmm_regs</compoundname>
+    <includes refid="sse__debug_8h" local="no">sse_debug.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxmm__regs_1a01cdb8eaf4bb98b1ab0f8e85ddaf832c" prot="public" static="no" mutable="no">
+        <type>union <ref refid="unionxmm__register" kindref="compound">xmm_register</ref></type>
+        <definition>union xmm_register xmm_regs::xmm[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>xmm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/sse_debug.h" line="36" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/sse_debug.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1241">
+        <label>xmm_regs</label>
+        <link refid="structxmm__regs"/>
+        <childnode refid="1242" relation="usage">
+          <edgelabel>xmm</edgelabel>
+        </childnode>
+      </node>
+      <node id="1242">
+        <label>xmm_register</label>
+        <link refid="unionxmm__register"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/sse_debug.h" line="35" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/filter/sse_debug.h" bodystart="35" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structxmm__regs_1a01cdb8eaf4bb98b1ab0f8e85ddaf832c" prot="public" virt="non-virtual"><scope>xmm_regs</scope><name>xmm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

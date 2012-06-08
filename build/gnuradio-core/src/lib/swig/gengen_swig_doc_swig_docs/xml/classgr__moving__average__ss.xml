@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__moving__average__ss" kind="class" prot="public">
+    <compoundname>gr_moving_average_ss</compoundname>
+    <includes refid="gr__moving__average__ss_8h" local="no">gr_moving_average_ss.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__moving__average__ss_1ae519068714c88f56a6680ccce4163a09" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_moving_average_ss::d_length</definition>
+        <argsstring></argsstring>
+        <name>d_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__moving__average__ss_1a9d0ed99a13f9a3eb7695fe0e0dc13dbb" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short gr_moving_average_ss::d_scale</definition>
+        <argsstring></argsstring>
+        <name>d_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__moving__average__ss_1a72ebaa3971037f7b2c627328e4ccc907" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_moving_average_ss::d_max_iter</definition>
+        <argsstring></argsstring>
+        <name>d_max_iter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__moving__average__ss_1aa2dfadc1eddf05d2f00eb63551de4414" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_moving_average_ss::d_new_length</definition>
+        <argsstring></argsstring>
+        <name>d_new_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__moving__average__ss_1aab34c7c91b2fcb025636ace0d6dbbea9" prot="private" static="no" mutable="no">
+        <type>short</type>
+        <definition>short gr_moving_average_ss::d_new_scale</definition>
+        <argsstring></argsstring>
+        <name>d_new_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__moving__average__ss_1a93c50fb9a11dbc6dfc3b877127fbf268" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_moving_average_ss::d_updated</definition>
+        <argsstring></argsstring>
+        <name>d_updated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__moving__average__ss_1a7174e264d54e4497682d32d121cfdf1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__moving__average__ss_8h_1af3e0a92134fcd183d1071c6932c7d1bc" kindref="member">gr_moving_average_ss_sptr</ref></type>
+        <definition>GR_CORE_API gr_moving_average_ss_sptr gr_make_moving_average_ss</definition>
+        <argsstring>(int length, short scale, int max_iter)</argsstring>
+        <name>gr_make_moving_average_ss</name>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_iter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__moving__average__ss_1a403043063eee15cdc028705ee5753515" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_moving_average_ss::gr_moving_average_ss</definition>
+        <argsstring>(int length, short scale, int max_iter=4096)</argsstring>
+        <name>gr_moving_average_ss</name>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_iter</declname>
+          <defval>4096</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__moving__average__ss_1a4a7b4e09b87f7d7e8c217ae516fb880d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_moving_average_ss::~gr_moving_average_ss</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_moving_average_ss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__moving__average__ss_1a5c40010acc612478071ff5d2ab865eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_moving_average_ss::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__moving__average__ss_1a3037d5332746782270197297a293346d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_moving_average_ss::length</definition>
+        <argsstring>() const </argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__moving__average__ss_1a1f3a3f4dab5343cb0b42126fd16be68e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>short</type>
+        <definition>short gr_moving_average_ss::scale</definition>
+        <argsstring>() const </argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__moving__average__ss_1a519bef59e95c813670a968a6e9ec773b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_moving_average_ss::set_length_and_scale</definition>
+        <argsstring>(int length, short scale)</argsstring>
+        <name>set_length_and_scale</name>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output is the moving sum of the last N samples, scaled by the scale factor</para><para>max_iter limits how long we go without flushing the accumulator This is necessary to avoid numerical instability for float and complex. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_moving_average_ss.h" bodystart="44" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classgr__moving__average__ss_1ae519068714c88f56a6680ccce4163a09" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_length</name></member>
+      <member refid="classgr__moving__average__ss_1a72ebaa3971037f7b2c627328e4ccc907" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_max_iter</name></member>
+      <member refid="classgr__moving__average__ss_1aa2dfadc1eddf05d2f00eb63551de4414" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_new_length</name></member>
+      <member refid="classgr__moving__average__ss_1aab34c7c91b2fcb025636ace0d6dbbea9" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_new_scale</name></member>
+      <member refid="classgr__moving__average__ss_1a9d0ed99a13f9a3eb7695fe0e0dc13dbb" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_scale</name></member>
+      <member refid="classgr__moving__average__ss_1a93c50fb9a11dbc6dfc3b877127fbf268" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>d_updated</name></member>
+      <member refid="classgr__moving__average__ss_1a7174e264d54e4497682d32d121cfdf1f" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>gr_make_moving_average_ss</name></member>
+      <member refid="classgr__moving__average__ss_1a403043063eee15cdc028705ee5753515" prot="private" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>gr_moving_average_ss</name></member>
+      <member refid="classgr__moving__average__ss_1a3037d5332746782270197297a293346d" prot="public" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>length</name></member>
+      <member refid="classgr__moving__average__ss_1a1f3a3f4dab5343cb0b42126fd16be68e" prot="public" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>scale</name></member>
+      <member refid="classgr__moving__average__ss_1a519bef59e95c813670a968a6e9ec773b" prot="public" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>set_length_and_scale</name></member>
+      <member refid="classgr__moving__average__ss_1a5c40010acc612478071ff5d2ab865eb7" prot="public" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>work</name></member>
+      <member refid="classgr__moving__average__ss_1a4a7b4e09b87f7d7e8c217ae516fb880d" prot="public" virt="non-virtual"><scope>gr_moving_average_ss</scope><name>~gr_moving_average_ss</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

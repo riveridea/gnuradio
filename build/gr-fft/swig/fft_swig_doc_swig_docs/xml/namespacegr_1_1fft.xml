@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="namespacegr_1_1fft" kind="namespace">
+    <compoundname>gr::fft</compoundname>
+    <innerclass refid="classgr_1_1fft_1_1planner" prot="public">gr::fft::planner</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1fft__complex" prot="public">gr::fft::fft_complex</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1fft__real__fwd" prot="public">gr::fft::fft_real_fwd</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1fft__real__rev" prot="public">gr::fft::fft_real_rev</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1fft__vcc" prot="public">gr::fft::fft_vcc</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1fft__vfc" prot="public">gr::fft::fft_vfc</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1goertzel" prot="public">gr::fft::goertzel</innerclass>
+    <innerclass refid="classgr_1_1fft_1_1goertzel__fc" prot="public">gr::fft::goertzel_fc</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegr_1_1fft_1aed377e21f08468899326b3ba9ec6a9f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gr_complex *</type>
+        <definition>gr_complex* gr::fft::malloc_complex</definition>
+        <argsstring>(int size)</argsstring>
+        <name>malloc_complex</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for allocating complex fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fft/include/fft/fft.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegr_1_1fft_1a5962d4b2265c01199a9cb75de626f56f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float* gr::fft::malloc_float</definition>
+        <argsstring>(int size)</argsstring>
+        <name>malloc_float</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for allocating float fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fft/include/fft/fft.h" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegr_1_1fft_1ae16db89c845b1652114e19938769a340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::fft::free</definition>
+        <argsstring>(void *b)</argsstring>
+        <name>free</name>
+        <param>
+          <type>void *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for freeing fft buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-fft/include/fft/fft.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-fft/include/fft/fft.h" line="35"/>
+  </compounddef>
+</doxygen>

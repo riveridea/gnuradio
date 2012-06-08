@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__wavfile__source" kind="class" prot="public">
+    <compoundname>gr_wavfile_source</compoundname>
+    <includes refid="gr__wavfile__source_8h" local="no">gr_wavfile_source.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__wavfile__source_1a0dd9e32b89d342736748601dcb320ea1" prot="private" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* gr_wavfile_source::d_fp</definition>
+        <argsstring></argsstring>
+        <name>d_fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a575c260623be1554032733bfa3d20254" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_wavfile_source::d_repeat</definition>
+        <argsstring></argsstring>
+        <name>d_repeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="53" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a9156bb2efaf3b7f30183a714f77fbf2b" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_wavfile_source::d_sample_rate</definition>
+        <argsstring></argsstring>
+        <name>d_sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a0ab030b9f22214e9e5222320a13c1d3d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_wavfile_source::d_nchans</definition>
+        <argsstring></argsstring>
+        <name>d_nchans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a6e5dab0cf3a5e140b0edcbfe9e5c48b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_wavfile_source::d_bytes_per_sample</definition>
+        <argsstring></argsstring>
+        <name>d_bytes_per_sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1ad5b692fd65c67ac81d16fa32594367b1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_wavfile_source::d_first_sample_pos</definition>
+        <argsstring></argsstring>
+        <name>d_first_sample_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a10fb85a1abeba8474e785bb826846c18" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_wavfile_source::d_samples_per_chan</definition>
+        <argsstring></argsstring>
+        <name>d_samples_per_chan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a02e085e128e98ef5613b1732091f94b3" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gr_wavfile_source::d_sample_idx</definition>
+        <argsstring></argsstring>
+        <name>d_sample_idx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1af589154243b0a9deb508ac85648d60d8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_wavfile_source::d_normalize_shift</definition>
+        <argsstring></argsstring>
+        <name>d_normalize_shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="61" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__wavfile__source_1a6146607fa96f7c100e64db4b1d40e115" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_wavfile_source::d_normalize_fac</definition>
+        <argsstring></argsstring>
+        <name>d_normalize_fac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="62" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__wavfile__source_1a639ff916c357d4f969be972fe053b1e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__wavfile__source_8h_1aea250e7b1d81134c38eac83386b2a2f9" kindref="member">gr_wavfile_source_sptr</ref></type>
+        <definition>GR_CORE_API gr_wavfile_source_sptr gr_make_wavfile_source</definition>
+        <argsstring>(const char *filename, bool repeat)</argsstring>
+        <name>gr_make_wavfile_source</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__wavfile__source_1a2bf8a47b99ecc56f55c94b8c41a18db5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_wavfile_source::gr_wavfile_source</definition>
+        <argsstring>(const char *filename, bool repeat)</argsstring>
+        <name>gr_wavfile_source</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__wavfile__source_1a08ace33483cc929f66a51b62fa774b04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr_wavfile_source::convert_to_float</definition>
+        <argsstring>(short int sample)</argsstring>
+        <name>convert_to_float</name>
+        <param>
+          <type>short int</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+<para>Convert an integer sample value to a float value within [-1;1]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__wavfile__source_1a27f6016605f5d89ebb79c04ac8086315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_wavfile_source::~gr_wavfile_source</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_wavfile_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__wavfile__source_1a222de96b0c15ba344a17f1b37f6d38f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_wavfile_source::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__wavfile__source_1a57ca32ca943d17f86287ad41f4b2baa5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_wavfile_source::sample_rate</definition>
+        <argsstring>() const </argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+<para>Read the sample rate as specified in the wav file header. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__wavfile__source_1ad0f364a65212fa443b56a23328061908" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_wavfile_source::bits_per_sample</definition>
+        <argsstring>() const </argsstring>
+        <name>bits_per_sample</name>
+        <briefdescription>
+<para>Return the number of bits per sample as specified in the wav file header. Only 8 or 16 bit are supported here. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="85" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__wavfile__source_1a80561ba64ab0c3e9e8840a48a0276b83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_wavfile_source::channels</definition>
+        <argsstring>() const </argsstring>
+        <name>channels</name>
+        <briefdescription>
+<para>Return the number of channels in the wav file as specified in the wav file header. This is also the max number of outputs you can have. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read stream from a Microsoft PCM (.wav) file, output floats. </para>    </briefdescription>
+    <detaileddescription>
+<para>Unless otherwise called, values are within [-1;1]. Check <ref refid="classgr__wavfile__source_1a639ff916c357d4f969be972fe053b1e4" kindref="member">gr_make_wavfile_source()</ref> for extra info. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/io/gr_wavfile_source.h" bodystart="45" bodyend="93"/>
+    <listofallmembers>
+      <member refid="classgr__wavfile__source_1ad0f364a65212fa443b56a23328061908" prot="public" virt="non-virtual"><scope>gr_wavfile_source</scope><name>bits_per_sample</name></member>
+      <member refid="classgr__wavfile__source_1a80561ba64ab0c3e9e8840a48a0276b83" prot="public" virt="non-virtual"><scope>gr_wavfile_source</scope><name>channels</name></member>
+      <member refid="classgr__wavfile__source_1a08ace33483cc929f66a51b62fa774b04" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>convert_to_float</name></member>
+      <member refid="classgr__wavfile__source_1a6e5dab0cf3a5e140b0edcbfe9e5c48b2" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_bytes_per_sample</name></member>
+      <member refid="classgr__wavfile__source_1ad5b692fd65c67ac81d16fa32594367b1" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_first_sample_pos</name></member>
+      <member refid="classgr__wavfile__source_1a0dd9e32b89d342736748601dcb320ea1" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_fp</name></member>
+      <member refid="classgr__wavfile__source_1a0ab030b9f22214e9e5222320a13c1d3d" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_nchans</name></member>
+      <member refid="classgr__wavfile__source_1a6146607fa96f7c100e64db4b1d40e115" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_normalize_fac</name></member>
+      <member refid="classgr__wavfile__source_1af589154243b0a9deb508ac85648d60d8" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_normalize_shift</name></member>
+      <member refid="classgr__wavfile__source_1a575c260623be1554032733bfa3d20254" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_repeat</name></member>
+      <member refid="classgr__wavfile__source_1a02e085e128e98ef5613b1732091f94b3" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_sample_idx</name></member>
+      <member refid="classgr__wavfile__source_1a9156bb2efaf3b7f30183a714f77fbf2b" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_sample_rate</name></member>
+      <member refid="classgr__wavfile__source_1a10fb85a1abeba8474e785bb826846c18" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>d_samples_per_chan</name></member>
+      <member refid="classgr__wavfile__source_1a639ff916c357d4f969be972fe053b1e4" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>gr_make_wavfile_source</name></member>
+      <member refid="classgr__wavfile__source_1a2bf8a47b99ecc56f55c94b8c41a18db5" prot="private" virt="non-virtual"><scope>gr_wavfile_source</scope><name>gr_wavfile_source</name></member>
+      <member refid="classgr__wavfile__source_1a57ca32ca943d17f86287ad41f4b2baa5" prot="public" virt="non-virtual"><scope>gr_wavfile_source</scope><name>sample_rate</name></member>
+      <member refid="classgr__wavfile__source_1a222de96b0c15ba344a17f1b37f6d38f6" prot="public" virt="non-virtual"><scope>gr_wavfile_source</scope><name>work</name></member>
+      <member refid="classgr__wavfile__source_1a27f6016605f5d89ebb79c04ac8086315" prot="public" virt="non-virtual"><scope>gr_wavfile_source</scope><name>~gr_wavfile_source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

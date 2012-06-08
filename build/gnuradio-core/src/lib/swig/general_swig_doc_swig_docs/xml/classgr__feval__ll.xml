@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__feval__ll" kind="class" prot="public">
+    <compoundname>gr_feval_ll</compoundname>
+    <includes refid="gr__feval_8h" local="no">gr_feval.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgr__feval__ll_1ae578c33481520dfb2575162e6c75ec68" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>virtual long gr_feval_ll::eval</definition>
+        <argsstring>(long x)</argsstring>
+        <name>eval</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>override this to define the function </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" line="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__feval__ll_1a32b51f998cbe43d83030551798f39205" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>gr_feval_ll::gr_feval_ll</definition>
+        <argsstring>()</argsstring>
+        <name>gr_feval_ll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" line="106" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__feval__ll_1a464e3afea06a99c3a6b96b2b1aea2c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual gr_feval_ll::~gr_feval_ll</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_feval_ll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__feval__ll_1a37308551196d95bd21e9023838c4e598" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>virtual long gr_feval_ll::calleval</definition>
+        <argsstring>(long x)</argsstring>
+        <name>calleval</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" line="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>base class for evaluating a function: long -&gt; long</para><para>This class is designed to be subclassed in Python or C++ and is callable from both places. It uses SWIG&apos;s &quot;director&quot; feature to implement the magic. It&apos;s slow. Don&apos;t use it in a performance critical path. </para>    </briefdescription>
+    <detaileddescription>
+<para>Override eval to define the behavior. Use calleval to invoke eval (this kludge is required to allow a python specific &quot;shim&quot; to be inserted. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" line="98" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_feval.h" bodystart="97" bodyend="110"/>
+    <listofallmembers>
+      <member refid="classgr__feval__ll_1a37308551196d95bd21e9023838c4e598" prot="public" virt="virtual"><scope>gr_feval_ll</scope><name>calleval</name></member>
+      <member refid="classgr__feval__ll_1ae578c33481520dfb2575162e6c75ec68" prot="protected" virt="virtual"><scope>gr_feval_ll</scope><name>eval</name></member>
+      <member refid="classgr__feval__ll_1a32b51f998cbe43d83030551798f39205" prot="public" virt="non-virtual"><scope>gr_feval_ll</scope><name>gr_feval_ll</name></member>
+      <member refid="classgr__feval__ll_1a464e3afea06a99c3a6b96b2b1aea2c2e" prot="public" virt="virtual"><scope>gr_feval_ll</scope><name>~gr_feval_ll</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__align__on__samplenumbers__ss" kind="class" prot="public">
+    <compoundname>gr_align_on_samplenumbers_ss</compoundname>
+    <includes refid="gr__align__on__samplenumbers__ss_8h" local="no">gr_align_on_samplenumbers_ss.h</includes>
+    <innerclass refid="classgr__align__on__samplenumbers__ss_1_1align__state" prot="private">gr_align_on_samplenumbers_ss::align_state</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1a3087b073e49f301d88e950e834e29de5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_align_on_samplenumbers_ss::d_align_interval</definition>
+        <argsstring></argsstring>
+        <name>d_align_interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1ac1d782f378afd87a00df050ab2d83a20" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_align_on_samplenumbers_ss::d_sample_counter</definition>
+        <argsstring></argsstring>
+        <name>d_sample_counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="57" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1a95fcff314a1daf045125190bf65f03ab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_align_on_samplenumbers_ss::d_nchan</definition>
+        <argsstring></argsstring>
+        <name>d_nchan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="58" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1a6c057838148dcede352a243ad0f8dd30" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_align_on_samplenumbers_ss::d_in_presync</definition>
+        <argsstring></argsstring>
+        <name>d_in_presync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="59" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1abc74bd95e7141ae1b0fc7346b663a75b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_align_on_samplenumbers_ss::d_ninputs</definition>
+        <argsstring></argsstring>
+        <name>d_ninputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="60" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__align__on__samplenumbers__ss_1a9c5a2d01950bb864bbc27b15e9bc1f35" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; align_state &gt;</type>
+        <definition>std::vector&lt;align_state&gt; gr_align_on_samplenumbers_ss::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="74" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__align__on__samplenumbers__ss_1ac02c802afc3e8b2f6cb7d9516b5da38e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="gr__align__on__samplenumbers__ss_8h_1a05de7b794ba89885e0db61bdb08f6aae" kindref="member">gr_align_on_samplenumbers_ss_sptr</ref></type>
+        <definition>GR_CORE_API gr_align_on_samplenumbers_ss_sptr gr_make_align_on_samplenumbers_ss</definition>
+        <argsstring>(int nchan, int align_interval)</argsstring>
+        <name>gr_make_align_on_samplenumbers_ss</name>
+        <param>
+          <type>int</type>
+          <declname>nchan</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align_interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="76"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__align__on__samplenumbers__ss_1a278f09c220ee4826c5e8067cdf8b0a43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_align_on_samplenumbers_ss::gr_align_on_samplenumbers_ss</definition>
+        <argsstring>(int nchan, int align_interval)</argsstring>
+        <name>gr_align_on_samplenumbers_ss</name>
+        <param>
+          <type>int</type>
+          <declname>nchan</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>align_interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__align__on__samplenumbers__ss_1af05b1ccaa31195e895689592f9861463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_align_on_samplenumbers_ss::~gr_align_on_samplenumbers_ss</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_align_on_samplenumbers_ss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__align__on__samplenumbers__ss_1af649e20f007f54c089a406839e0878ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_align_on_samplenumbers_ss::check_topology</definition>
+        <argsstring>(int ninputs, int noutputs)</argsstring>
+        <name>check_topology</name>
+        <param>
+          <type>int</type>
+          <declname>ninputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>noutputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__align__on__samplenumbers__ss_1a0ae31942c98cd81ab111d9f1c6d6f194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_align_on_samplenumbers_ss::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__align__on__samplenumbers__ss_1abb17a646f937035331c48072b7ca5ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_align_on_samplenumbers_ss::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_align_on_samplenumbers_ss.h" bodystart="54" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classgr__align__on__samplenumbers__ss_1af649e20f007f54c089a406839e0878ff" prot="public" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>check_topology</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a3087b073e49f301d88e950e834e29de5" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_align_interval</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a6c057838148dcede352a243ad0f8dd30" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_in_presync</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a95fcff314a1daf045125190bf65f03ab" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_nchan</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1abc74bd95e7141ae1b0fc7346b663a75b" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_ninputs</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1ac1d782f378afd87a00df050ab2d83a20" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_sample_counter</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a9c5a2d01950bb864bbc27b15e9bc1f35" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>d_state</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a0ae31942c98cd81ab111d9f1c6d6f194" prot="public" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>forecast</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1abb17a646f937035331c48072b7ca5ee3" prot="public" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>general_work</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1a278f09c220ee4826c5e8067cdf8b0a43" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>gr_align_on_samplenumbers_ss</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1ac02c802afc3e8b2f6cb7d9516b5da38e" prot="private" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>gr_make_align_on_samplenumbers_ss</name></member>
+      <member refid="classgr__align__on__samplenumbers__ss_1af05b1ccaa31195e895689592f9861463" prot="public" virt="non-virtual"><scope>gr_align_on_samplenumbers_ss</scope><name>~gr_align_on_samplenumbers_ss</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classqtgui__time__sink__f" kind="class" prot="public">
+    <compoundname>qtgui_time_sink_f</compoundname>
+    <includes refid="qtgui__time__sink__f_8h" local="no">qtgui_time_sink_f.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1ac030253dce817e9fdb7f422f96a9754a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qtgui_time_sink_f::d_size</definition>
+        <argsstring></argsstring>
+        <name>d_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="65" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a338812a0be0206af9acbe8336eb9b1cb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qtgui_time_sink_f::d_bandwidth</definition>
+        <argsstring></argsstring>
+        <name>d_bandwidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="66" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a9bf09895aad66ca7a30276eace2b7543" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qtgui_time_sink_f::d_name</definition>
+        <argsstring></argsstring>
+        <name>d_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a7916308bbe7eccd079bb2829d644e09f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qtgui_time_sink_f::d_nconnections</definition>
+        <argsstring></argsstring>
+        <name>d_nconnections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="68" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1ac6adff3b9e3355764e9698876da5c4a3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qtgui_time_sink_f::d_index</definition>
+        <argsstring></argsstring>
+        <name>d_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="70" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a5fffbae381f1718469f0ccfbe02a4635" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double * &gt;</type>
+        <definition>std::vector&lt;double*&gt; qtgui_time_sink_f::d_residbufs</definition>
+        <argsstring></argsstring>
+        <name>d_residbufs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="71" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a71079b1cbdc5089296068cf7fc5a621b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qtgui_time_sink_f::d_update_time</definition>
+        <argsstring></argsstring>
+        <name>d_update_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a943133707b8a37da08613a42f55fa904" prot="private" static="no" mutable="no">
+        <type>QWidget *</type>
+        <definition>QWidget* qtgui_time_sink_f::d_parent</definition>
+        <argsstring></argsstring>
+        <name>d_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="75" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a7b53b70c77a8371164ee894fdb8904a2" prot="private" static="no" mutable="no">
+        <type>TimeDisplayForm *</type>
+        <definition>TimeDisplayForm* qtgui_time_sink_f::d_main_gui</definition>
+        <argsstring></argsstring>
+        <name>d_main_gui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="76" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a289c80a146e1d7beffc19b47949a8cdc" prot="private" static="no" mutable="no">
+        <type>gruel::high_res_timer_type</type>
+        <definition>gruel::high_res_timer_type qtgui_time_sink_f::d_current_time</definition>
+        <argsstring></argsstring>
+        <name>d_current_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="78" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a4d16565b145f15b92b816c6d16d098bb" prot="private" static="no" mutable="no">
+        <type>gruel::high_res_timer_type</type>
+        <definition>gruel::high_res_timer_type qtgui_time_sink_f::d_last_time</definition>
+        <argsstring></argsstring>
+        <name>d_last_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="79" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classqtgui__time__sink__f_1a9b4ba7f686fcad42fc4028721d434ef6" prot="public" static="no" mutable="no">
+        <type>QApplication *</type>
+        <definition>QApplication* qtgui_time_sink_f::d_qApplication</definition>
+        <argsstring></argsstring>
+        <name>d_qApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="92" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classqtgui__time__sink__f_1a760e61bd8bc83b47a9c85f45ec97174c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="qtgui__time__sink__f_8h_1a40cea2149f665f9508b132502699cd10" kindref="member">qtgui_time_sink_f_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT qtgui_time_sink_f_sptr qtgui_make_time_sink_f</definition>
+        <argsstring>(int size, double bw, const std::string &amp;name, int nconnections, QWidget *parent)</argsstring>
+        <name>qtgui_make_time_sink_f</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bw</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nconnections</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a3f80c8a3ae05ebfcd2e11f05ca0b3cf3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qtgui_time_sink_f::qtgui_time_sink_f</definition>
+        <argsstring>(int size, double bw, const std::string &amp;name, int nconnections, QWidget *parent=NULL)</argsstring>
+        <name>qtgui_time_sink_f</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bw</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nconnections</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a3a801fcd4a595c6b7a4387626f651def" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a41467b9e8c22ee15f42f90349be79016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qtgui_time_sink_f::~qtgui_time_sink_f</definition>
+        <argsstring>()</argsstring>
+        <name>~qtgui_time_sink_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1ae9920f351591adf3276f05c89b1c3d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::exec_</definition>
+        <argsstring>()</argsstring>
+        <name>exec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a24aa72f725165f3860d5439499210d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QWidget *</type>
+        <definition>QWidget* qtgui_time_sink_f::qwidget</definition>
+        <argsstring>()</argsstring>
+        <name>qwidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a1f7a5d6fd035b64ae297e688dc8d2359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PyObject *</type>
+        <definition>PyObject* qtgui_time_sink_f::pyqwidget</definition>
+        <argsstring>()</argsstring>
+        <name>pyqwidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1a199478d81f5f11272b5c34891172e848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::set_time_domain_axis</definition>
+        <argsstring>(double min, double max)</argsstring>
+        <name>set_time_domain_axis</name>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1aa2839efacfd4dc7c6ef95af1ce07f2cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::set_update_time</definition>
+        <argsstring>(double t)</argsstring>
+        <name>set_update_time</name>
+        <param>
+          <type>double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1ae91784262c1cf7e852f0a9f1005e64f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::set_title</definition>
+        <argsstring>(int which, const std::string &amp;title)</argsstring>
+        <name>set_title</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1ae9431c445e2b032c48875d9d3cf70225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qtgui_time_sink_f::set_color</definition>
+        <argsstring>(int which, const std::string &amp;color)</argsstring>
+        <name>set_color</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classqtgui__time__sink__f_1ae5d496385fc9db0090eb772f0c8f3d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int qtgui_time_sink_f::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A graphical sink to display multiple signals in time.</para><para>This is a QT-based graphical sink the takes set of a float streams and plots them in the time domain. Each signal is plotted with a different color, and the <emphasis>set_title</emphasis> and <emphasis>set_color</emphasis> functions can be used to change the lable and color for a given input number. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-qtgui/include/qtgui_time_sink_f.h" bodystart="51" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classqtgui__time__sink__f_1a338812a0be0206af9acbe8336eb9b1cb" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_bandwidth</name></member>
+      <member refid="classqtgui__time__sink__f_1a289c80a146e1d7beffc19b47949a8cdc" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_current_time</name></member>
+      <member refid="classqtgui__time__sink__f_1ac6adff3b9e3355764e9698876da5c4a3" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_index</name></member>
+      <member refid="classqtgui__time__sink__f_1a4d16565b145f15b92b816c6d16d098bb" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_last_time</name></member>
+      <member refid="classqtgui__time__sink__f_1a7b53b70c77a8371164ee894fdb8904a2" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_main_gui</name></member>
+      <member refid="classqtgui__time__sink__f_1a9bf09895aad66ca7a30276eace2b7543" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_name</name></member>
+      <member refid="classqtgui__time__sink__f_1a7916308bbe7eccd079bb2829d644e09f" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_nconnections</name></member>
+      <member refid="classqtgui__time__sink__f_1a943133707b8a37da08613a42f55fa904" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_parent</name></member>
+      <member refid="classqtgui__time__sink__f_1a9b4ba7f686fcad42fc4028721d434ef6" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_qApplication</name></member>
+      <member refid="classqtgui__time__sink__f_1a5fffbae381f1718469f0ccfbe02a4635" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_residbufs</name></member>
+      <member refid="classqtgui__time__sink__f_1ac030253dce817e9fdb7f422f96a9754a" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_size</name></member>
+      <member refid="classqtgui__time__sink__f_1a71079b1cbdc5089296068cf7fc5a621b" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>d_update_time</name></member>
+      <member refid="classqtgui__time__sink__f_1ae9920f351591adf3276f05c89b1c3d8e" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>exec_</name></member>
+      <member refid="classqtgui__time__sink__f_1a3a801fcd4a595c6b7a4387626f651def" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>initialize</name></member>
+      <member refid="classqtgui__time__sink__f_1a1f7a5d6fd035b64ae297e688dc8d2359" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>pyqwidget</name></member>
+      <member refid="classqtgui__time__sink__f_1a760e61bd8bc83b47a9c85f45ec97174c" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>qtgui_make_time_sink_f</name></member>
+      <member refid="classqtgui__time__sink__f_1a3f80c8a3ae05ebfcd2e11f05ca0b3cf3" prot="private" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>qtgui_time_sink_f</name></member>
+      <member refid="classqtgui__time__sink__f_1a24aa72f725165f3860d5439499210d5f" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>qwidget</name></member>
+      <member refid="classqtgui__time__sink__f_1ae9431c445e2b032c48875d9d3cf70225" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>set_color</name></member>
+      <member refid="classqtgui__time__sink__f_1a199478d81f5f11272b5c34891172e848" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>set_time_domain_axis</name></member>
+      <member refid="classqtgui__time__sink__f_1ae91784262c1cf7e852f0a9f1005e64f9" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>set_title</name></member>
+      <member refid="classqtgui__time__sink__f_1aa2839efacfd4dc7c6ef95af1ce07f2cc" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>set_update_time</name></member>
+      <member refid="classqtgui__time__sink__f_1ae5d496385fc9db0090eb772f0c8f3d46" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>work</name></member>
+      <member refid="classqtgui__time__sink__f_1a41467b9e8c22ee15f42f90349be79016" prot="public" virt="non-virtual"><scope>qtgui_time_sink_f</scope><name>~qtgui_time_sink_f</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

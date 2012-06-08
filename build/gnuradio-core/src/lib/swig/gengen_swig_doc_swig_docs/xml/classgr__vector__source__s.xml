@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__vector__source__s" kind="class" prot="public">
+    <compoundname>gr_vector_source_s</compoundname>
+    <includes refid="gr__vector__source__s_8h" local="no">gr_vector_source_s.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__vector__source__s_1a685bdaa94148129d7899120cb8ee7c1d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; short &gt;</type>
+        <definition>std::vector&lt;short&gt; gr_vector_source_s::d_data</definition>
+        <argsstring></argsstring>
+        <name>d_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vector__source__s_1a97df8280811861bbc7034e4044409845" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_vector_source_s::d_repeat</definition>
+        <argsstring></argsstring>
+        <name>d_repeat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vector__source__s_1af0312bcf8d5fcad6495b1b4fbe9609b4" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_vector_source_s::d_offset</definition>
+        <argsstring></argsstring>
+        <name>d_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__vector__source__s_1abd7d7408f542bddf53e58cde6f3f510b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr_vector_source_s::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__vector__source__s_1a2af7e8ec4d806f9091a670bce9bb3239" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend GR_CORE_API <ref refid="gr__vector__source__s_8h_1a0f75c96e7eb59f9e25dece8bc3f683d0" kindref="member">gr_vector_source_s_sptr</ref></type>
+        <definition>GR_CORE_API gr_vector_source_s_sptr gr_make_vector_source_s</definition>
+        <argsstring>(const std::vector&lt; short &gt; &amp;data, bool repeat, int vlen)</argsstring>
+        <name>gr_make_vector_source_s</name>
+        <param>
+          <type>const std::vector&lt; short &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__vector__source__s_1a6392e499db3ddae33d5b401e91659e4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_vector_source_s::gr_vector_source_s</definition>
+        <argsstring>(const std::vector&lt; short &gt; &amp;data, bool repeat, int vlen)</argsstring>
+        <name>gr_vector_source_s</name>
+        <param>
+          <type>const std::vector&lt; short &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__vector__source__s_1a6e02608e6c4411781eab6778a9cdb270" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_vector_source_s::rewind</definition>
+        <argsstring>()</argsstring>
+        <name>rewind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__vector__source__s_1a3afd83adb786857a217d0e857902fc0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_vector_source_s::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>source of short&apos;s that gets its data from a vector </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="39" bodyfile="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" bodystart="39" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgr__vector__source__s_1a685bdaa94148129d7899120cb8ee7c1d" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>d_data</name></member>
+      <member refid="classgr__vector__source__s_1af0312bcf8d5fcad6495b1b4fbe9609b4" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>d_offset</name></member>
+      <member refid="classgr__vector__source__s_1a97df8280811861bbc7034e4044409845" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>d_repeat</name></member>
+      <member refid="classgr__vector__source__s_1abd7d7408f542bddf53e58cde6f3f510b" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>d_vlen</name></member>
+      <member refid="classgr__vector__source__s_1a2af7e8ec4d806f9091a670bce9bb3239" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>gr_make_vector_source_s</name></member>
+      <member refid="classgr__vector__source__s_1a6392e499db3ddae33d5b401e91659e4a" prot="private" virt="non-virtual"><scope>gr_vector_source_s</scope><name>gr_vector_source_s</name></member>
+      <member refid="classgr__vector__source__s_1a6e02608e6c4411781eab6778a9cdb270" prot="public" virt="non-virtual"><scope>gr_vector_source_s</scope><name>rewind</name></member>
+      <member refid="classgr__vector__source__s_1a3afd83adb786857a217d0e857902fc0b" prot="public" virt="virtual"><scope>gr_vector_source_s</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

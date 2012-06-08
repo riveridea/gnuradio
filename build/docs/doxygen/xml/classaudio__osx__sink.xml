@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classaudio__osx__sink" kind="class" prot="public">
+    <compoundname>audio_osx_sink</compoundname>
+    <basecompoundref refid="classaudio__sink" prot="public" virt="non-virtual">audio_sink</basecompoundref>
+    <includes refid="audio__osx__sink_8h" local="no">audio_osx_sink.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classaudio__osx__sink_1af243ef7c8e6544eee1943d4abe877079" prot="private" static="no" mutable="no">
+        <type>Float64</type>
+        <definition>Float64 audio_osx_sink::d_sample_rate</definition>
+        <argsstring></argsstring>
+        <name>d_sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1a7ca86e6494014a4a9aa9f4889f9c908e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int audio_osx_sink::d_channel_config</definition>
+        <argsstring></argsstring>
+        <name>d_channel_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1ab92d483526f9c4def30eac55bfd4b4a6" prot="private" static="no" mutable="no">
+        <type>UInt32</type>
+        <definition>UInt32 audio_osx_sink::d_n_channels</definition>
+        <argsstring></argsstring>
+        <name>d_n_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1ad6aeaead0d6662c1e15d14f9158f1f3e" prot="private" static="no" mutable="no">
+        <type>UInt32</type>
+        <definition>UInt32 audio_osx_sink::d_queueSampleCount</definition>
+        <argsstring></argsstring>
+        <name>d_queueSampleCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1ab3206bd98d727262779c35b64f9bdf9d" prot="private" static="no" mutable="no">
+        <type>UInt32</type>
+        <definition>UInt32 audio_osx_sink::d_max_sample_count</definition>
+        <argsstring></argsstring>
+        <name>d_max_sample_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="45" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1a52bb447cf02762a34c23a2db1e45308a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool audio_osx_sink::d_do_block</definition>
+        <argsstring></argsstring>
+        <name>d_do_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="46" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1a3216a62234611df1fb2debab45e49fc1" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegruel_1a16a913898c1d7f7a8ee459eb7ace413d" kindref="member">gruel::mutex</ref> *</type>
+        <definition>gruel::mutex* audio_osx_sink::d_internal</definition>
+        <argsstring></argsstring>
+        <name>d_internal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="47" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1a4ed870571af9a6c7b37e7eab3b7ba3e0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegruel_1a7f31867c7b47853d55962183d0a4e999" kindref="member">gruel::condition_variable</ref> *</type>
+        <definition>gruel::condition_variable* audio_osx_sink::d_cond_data</definition>
+        <argsstring></argsstring>
+        <name>d_cond_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="48" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1afc5dc7dd2a9f9a4efe07602a6065934c" prot="private" static="no" mutable="no">
+        <type><ref refid="classcircular__buffer" kindref="compound">circular_buffer</ref>&lt; float &gt; **</type>
+        <definition>circular_buffer&lt;float&gt;** audio_osx_sink::d_buffers</definition>
+        <argsstring></argsstring>
+        <name>d_buffers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaudio__osx__sink_1a38fa83b8d176bf14b1db0ad2b77b7466" prot="private" static="no" mutable="no">
+        <type>AudioUnit</type>
+        <definition>AudioUnit audio_osx_sink::d_OutputAU</definition>
+        <argsstring></argsstring>
+        <name>d_OutputAU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classaudio__osx__sink_1abb21a07565b78ce7a861d3c8ee4c4db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>audio_osx_sink::audio_osx_sink</definition>
+        <argsstring>(int sample_rate=44100, const std::string device_name=&quot;2&quot;, bool do_block=true, int channel_config=-1, int max_sample_count=-1)</argsstring>
+        <name>audio_osx_sink</name>
+        <param>
+          <type>int</type>
+          <declname>sample_rate</declname>
+          <defval>44100</defval>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>device_name</declname>
+          <defval>&quot;2&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>do_block</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>channel_config</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_sample_count</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classaudio__osx__sink_1aa62867a778efec48976d1537bcb48a9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>audio_osx_sink::~audio_osx_sink</definition>
+        <argsstring>()</argsstring>
+        <name>~audio_osx_sink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classaudio__osx__sink_1a53164060127827d69af2c1298fddb156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool audio_osx_sink::IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classaudio__osx__sink_1af4004bd08b0577701983ba0e2029bd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool audio_osx_sink::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <reimplements refid="classgr__block_1a49ea94a86f3199f23563bb837633ea1f">start</reimplements>
+        <briefdescription>
+<para>Called to enable drivers, etc for i/o devices. </para>        </briefdescription>
+        <detaileddescription>
+<para>This allows a block to enable an associated driver to begin transfering data just before we start to execute the scheduler. The end result is that this reduces latency in the pipeline when dealing with audio devices, usrps, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classaudio__osx__sink_1af57ebe4d74be578d0357e9a7171eb785" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool audio_osx_sink::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <reimplements refid="classgr__block_1a53c2c89c037e4e393b75414d605e36b1">stop</reimplements>
+        <briefdescription>
+<para>Called to disable drivers, etc for i/o devices. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classaudio__osx__sink_1a38c0585e65251d0f5b399751ebf36d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int audio_osx_sink::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <reimplements refid="classgr__sync__block_1a0c523f4285a6eb690f677ee6295ab117">work</reimplements>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1a9852a3d906d823cb70eb9c29e7f2a43d" kindref="member">gr_vector_const_void_star</ref> &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type><ref refid="gr__types_8h_1acd3f499576e769966ea44554b359d949" kindref="member">gr_vector_void_star</ref> &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+<para>just like <ref refid="classgr__block_1a137b93d87dc83bbdb6369d33f4ea8197" kindref="member">gr_block::general_work</ref>, only this arranges to call consume_each for you </para>        </briefdescription>
+        <detaileddescription>
+<para>The user must override work to define the signal processing code </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classaudio__osx__sink_1aaea70a58aecab20554267e07c59d3897" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>OSStatus</type>
+        <definition>static OSStatus audio_osx_sink::AUOutputCallback</definition>
+        <argsstring>(void *inRefCon, AudioUnitRenderActionFlags *ioActionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData)</argsstring>
+        <name>AUOutputCallback</name>
+        <param>
+          <type><ref refid="volk_8tmpl_8h_1a8dc2b7da310a28e667530ba0e8ca4cc4" kindref="member">void</ref> *</type>
+          <declname>inRefCon</declname>
+        </param>
+        <param>
+          <type>AudioUnitRenderActionFlags *</type>
+          <declname>ioActionFlags</declname>
+        </param>
+        <param>
+          <type>const AudioTimeStamp *</type>
+          <declname>inTimeStamp</declname>
+        </param>
+        <param>
+          <type>UInt32</type>
+          <declname>inBusNumber</declname>
+        </param>
+        <param>
+          <type>UInt32</type>
+          <declname>inNumberFrames</declname>
+        </param>
+        <param>
+          <type>AudioBufferList *</type>
+          <declname>ioData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>audio sink using OSX</para><para>input signature is one or two streams of floats. Input samples must be in the range [-1,1]. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="493">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="494" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="490">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="491">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="492" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="489">
+        <label>audio_sink</label>
+        <link refid="classaudio__sink"/>
+        <childnode refid="490" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>audio_osx_sink</label>
+        <link refid="classaudio__osx__sink"/>
+        <childnode refid="489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="492">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="493" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="500">
+        <label>gr_msg_accepter</label>
+        <link refid="classgr__msg__accepter"/>
+        <childnode refid="501" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="497">
+        <label>gr_sync_block</label>
+        <link refid="classgr__sync__block"/>
+        <childnode refid="498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="498">
+        <label>gr_block</label>
+        <link refid="classgr__block"/>
+        <childnode refid="499" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="502">
+        <label>boost::shared_ptr&lt; gr_io_signature &gt;</label>
+        <link refid="classboost_1_1shared__ptr"/>
+        <childnode refid="503" relation="usage">
+          <edgelabel>px</edgelabel>
+        </childnode>
+      </node>
+      <node id="505">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="501">
+        <label>gruel::msg_accepter</label>
+        <link refid="classgruel_1_1msg__accepter"/>
+      </node>
+      <node id="496">
+        <label>audio_sink</label>
+        <link refid="classaudio__sink"/>
+        <childnode refid="497" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>gr_io_signature</label>
+        <link refid="classgr__io__signature"/>
+      </node>
+      <node id="495">
+        <label>audio_osx_sink</label>
+        <link refid="classaudio__osx__sink"/>
+        <childnode refid="496" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>gr_basic_block</label>
+        <link refid="classgr__basic__block"/>
+        <childnode refid="500" relation="public-inheritance">
+        </childnode>
+        <childnode refid="502" relation="usage">
+          <edgelabel>d_input_signature</edgelabel>
+          <edgelabel>d_output_signature</edgelabel>
+        </childnode>
+        <childnode refid="504" relation="usage">
+          <edgelabel>d_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="504">
+        <label>std::string</label>
+        <childnode refid="505" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" line="40" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-audio/lib/osx/audio_osx_sink.h" bodystart="40" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classgr__block_1a7578dece9d597abe61db91aae8a0df83" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1ac8ef6a9b0086e00d80f10ccc8a7df321" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>add_item_tag</name></member>
+      <member refid="classgr__block_1a0ac966add9d0c994aa06c61d30ef8335" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>alignment</name></member>
+      <member refid="classaudio__osx__sink_1abb21a07565b78ce7a861d3c8ee4c4db0" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>audio_osx_sink</name></member>
+      <member refid="classaudio__osx__sink_1aaea70a58aecab20554267e07c59d3897" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>AUOutputCallback</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da0abd1c82699481ffa502e5bb8d7bdaec" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>BLACK</name></member>
+      <member refid="classgr__basic__block_1a50a714df9c3ce8c03854a09ac84e589b" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>check_topology</name></member>
+      <member refid="classgr__basic__block_1a1cedb1704b6c00977c681b378ede384c" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>color</name></member>
+      <member refid="classgr__block_1ac76b4c53af762a819bca003d5b5cb4d1" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>consume</name></member>
+      <member refid="classgr__block_1a64e9a2096975841b72ff3c1662d27df9" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>consume_each</name></member>
+      <member refid="classaudio__osx__sink_1afc5dc7dd2a9f9a4efe07602a6065934c" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_buffers</name></member>
+      <member refid="classaudio__osx__sink_1a7ca86e6494014a4a9aa9f4889f9c908e" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_channel_config</name></member>
+      <member refid="classgr__basic__block_1a7fb7e692e3b98a82410b396ef263bb41" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_color</name></member>
+      <member refid="classaudio__osx__sink_1a4ed870571af9a6c7b37e7eab3b7ba3e0" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_cond_data</name></member>
+      <member refid="classaudio__osx__sink_1a52bb447cf02762a34c23a2db1e45308a" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_do_block</name></member>
+      <member refid="classgr__basic__block_1a2c8da0c28bbbfb0e759278c9b9459e96" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_input_signature</name></member>
+      <member refid="classaudio__osx__sink_1a3216a62234611df1fb2debab45e49fc1" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_internal</name></member>
+      <member refid="classaudio__osx__sink_1ab3206bd98d727262779c35b64f9bdf9d" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_max_sample_count</name></member>
+      <member refid="classaudio__osx__sink_1ab92d483526f9c4def30eac55bfd4b4a6" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_n_channels</name></member>
+      <member refid="classgr__basic__block_1afd352cc073ef28012d4d079a863f5401" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_name</name></member>
+      <member refid="classgr__basic__block_1a76d64ed7a79566e3310306ae6f194d75" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_output_signature</name></member>
+      <member refid="classaudio__osx__sink_1a38fa83b8d176bf14b1db0ad2b77b7466" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_OutputAU</name></member>
+      <member refid="classaudio__osx__sink_1ad6aeaead0d6662c1e15d14f9158f1f3e" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_queueSampleCount</name></member>
+      <member refid="classaudio__osx__sink_1af243ef7c8e6544eee1943d4abe877079" prot="private" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_sample_rate</name></member>
+      <member refid="classgr__basic__block_1a0d2999c04f47327f93dd7def5dc704f8" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>d_unique_id</name></member>
+      <member refid="classgr__block_1afb276858409ac55d62fca1c87d7d4083" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>detail</name></member>
+      <member refid="classgr__block_1ab4eeb29440f674815ab3b44b4fb0c34d" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>fixed_rate</name></member>
+      <member refid="classgr__sync__block_1a0cbbc0ce275498411248e678038710b2" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>fixed_rate_ninput_to_noutput</name></member>
+      <member refid="classgr__sync__block_1adaecb00ae09408c22e46c44d09aad53e" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>fixed_rate_noutput_to_ninput</name></member>
+      <member refid="classgr__sync__block_1a1327e83509baf039aa3c816ea81a8f22" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>forecast</name></member>
+      <member refid="classgr__sync__block_1a56ca60b6bc20a3510f71d961891fa81b" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>general_work</name></member>
+      <member refid="classgr__block_1a54f69c4cd5ef5b05ac58d0128256def1" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__block_1ab2650baa0c05713fc04664e69dde565d" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>get_tags_in_range</name></member>
+      <member refid="classgr__basic__block_1a84d1e93b57e52efb18a5aa90a3eaf2db" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__basic__block_1a1183eee484f58953a2fed4c792e46245" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_basic_block</name></member>
+      <member refid="classgr__block_1ac94442f2da43c516ce4b8d3eb15fc316" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__block_1a268510acce1f94c0a60c5273f4948641" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_block</name></member>
+      <member refid="classgr__basic__block_1a69b41e361328cea911d69e1ec0bc50ff" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_flat_flowgraph</name></member>
+      <member refid="classgr__basic__block_1adf5bf4523d6dd698aa770e3da8f2b30d" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_flowgraph</name></member>
+      <member refid="classgr__msg__accepter_1a0482adcd6e89d2a441c8768737b68c21" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_msg_accepter</name></member>
+      <member refid="classgr__sync__block_1a8e8100cc8cafbc89a0cd64fbc2fc4153" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__sync__block_1a832d8dad2dbd38e8e9cfa0b954d37c87" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_sync_block</name></member>
+      <member refid="classgr__basic__block_1affab9e232776d20a9b3772f545559611" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>gr_tpb_thread_body</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3daa6cce7ec34a3f9cf917e545a743dc89f" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>GREY</name></member>
+      <member refid="classgr__block_1ad3b305a663f4b5b5c4e17070d00f05d9" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>history</name></member>
+      <member refid="classgr__basic__block_1a58f6d05e85931200f3771d3e50741281" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>input_signature</name></member>
+      <member refid="classgr__block_1a1e7452c9abae22f1e5591a6132ca6a2a" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>is_unaligned</name></member>
+      <member refid="classaudio__osx__sink_1a53164060127827d69af2c1298fddb156" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>IsRunning</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a501f4d98d2f933c64d00a766f26b0280" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>msg_accepter</name></member>
+      <member refid="classgr__basic__block_1aa12a20d8b8eab341da935530d29299d2" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>name</name></member>
+      <member refid="classgr__block_1a6ecd7d572bcde020949502875dfa737e" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>nitems_read</name></member>
+      <member refid="classgr__block_1a476660b94dd365f8b59075fdbcb79cd2" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>nitems_written</name></member>
+      <member refid="classgr__block_1ade8590e9cba9ccfe1b870be46b1416c2" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>output_multiple</name></member>
+      <member refid="classgr__block_1a245374fe2959e13f0b4311c5bcf4a7f7" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>output_multiple_set</name></member>
+      <member refid="classgr__basic__block_1add68b96f012dfe352700b4fd1c3a184a" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>output_signature</name></member>
+      <member refid="classgr__msg__accepter_1a18aa82b4055d3908a4a7d71b05009d8d" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>post</name></member>
+      <member refid="classgr__block_1a7617c4eac84059b96d1a4da40c6d542c" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>produce</name></member>
+      <member refid="classgr__block_1aa9df8c4d3fb92bde98900831546f8b97" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>relative_rate</name></member>
+      <member refid="classgr__block_1a6863065f43aac33e6167f3b622de7cd0" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_alignment</name></member>
+      <member refid="classgr__basic__block_1a0821ef947158670d53bf0739f3c8877b" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_color</name></member>
+      <member refid="classgr__block_1a26b61f2c2ca308c3bde82f01d3e9650b" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_detail</name></member>
+      <member refid="classgr__block_1a176a95343488a9a760c8edf8bb08db20" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_fixed_rate</name></member>
+      <member refid="classgr__block_1a7c1c85a2d47f72255efd821a6f98f7ba" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_history</name></member>
+      <member refid="classgr__basic__block_1a419d0fbba0ca02d822cbc299b979de54" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_input_signature</name></member>
+      <member refid="classgr__block_1adafb375e8453f129062bb5924907a61f" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_is_unaligned</name></member>
+      <member refid="classgr__basic__block_1a4e78d61b09a066f5719dbb9c18f3d441" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_msg_handler</name></member>
+      <member refid="classgr__block_1a14e8b799f920e52afb93fac413b1a729" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_output_multiple</name></member>
+      <member refid="classgr__basic__block_1a949b6ad69ebfdf423835265db99cf63d" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_output_signature</name></member>
+      <member refid="classgr__block_1ab9dc7e6d30692bbfa65fc7c4eef6fc9d" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_relative_rate</name></member>
+      <member refid="classgr__block_1af9bce945f28950c1800d8deb6bb997a1" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a1f7f6b204a5d383f5903b222aa838eb3" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>set_unaligned</name></member>
+      <member refid="classaudio__sink_1a233a664687d3341ae518c52232a90975" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>sptr</name></member>
+      <member refid="classaudio__osx__sink_1af4004bd08b0577701983ba0e2029bd48" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>start</name></member>
+      <member refid="classaudio__osx__sink_1af57ebe4d74be578d0357e9a7171eb785" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>stop</name></member>
+      <member refid="classgr__block_1a46e8fbf665a9a3182a9cc4d3e4402118" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>tag_propagation_policy</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>tag_propagation_policy_t</name></member>
+      <member refid="classgr__basic__block_1a87b0e931b388d349dacd6a5010b5739c" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>to_basic_block</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ac59dabb0af9fac19958d18378f3cfbfb" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>TPP_ALL_TO_ALL</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61ad472255a4873399940aec9d614d82287" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>TPP_DONT</name></member>
+      <member refid="classgr__block_1a32561c88f124ea07881879fe79840f61a98228946b0f3b3887230269c9ba5a60f" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>TPP_ONE_TO_ONE</name></member>
+      <member refid="classgr__block_1a811b7548c5573f890ff2baf8a0f5c981" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>unaligned</name></member>
+      <member refid="classgr__basic__block_1aa2a2947744d418c5470fbf4e623b58fe" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>unique_id</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3d" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>vcolor</name></member>
+      <member refid="classgr__basic__block_1a5c90b7c003ddd61f8df6bef2aceeab3da476d594a077e729bad0f2cfa2008c899" prot="protected" virt="non-virtual"><scope>audio_osx_sink</scope><name>WHITE</name></member>
+      <member refid="classaudio__osx__sink_1a38c0585e65251d0f5b399751ebf36d17" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>work</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca248a1e0554813ce26007ff5ec1530392" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>WORK_CALLED_PRODUCE</name></member>
+      <member refid="classgr__block_1af026aa236701757fd5f71129daad883ca221c2211857dcee81fb2bbb97fe6b223" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>WORK_DONE</name></member>
+      <member refid="classaudio__osx__sink_1aa62867a778efec48976d1537bcb48a9d" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>~audio_osx_sink</name></member>
+      <member refid="classgr__basic__block_1a5bc14d27d53b7b57a960a47cc255e3f9" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>~gr_basic_block</name></member>
+      <member refid="classgr__block_1a19133eeffa5f8e6743342f375551ad0c" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>~gr_block</name></member>
+      <member refid="classgr__msg__accepter_1ad2ee9c687b775b08ce0e27e913ed8a7d" prot="public" virt="non-virtual"><scope>audio_osx_sink</scope><name>~gr_msg_accepter</name></member>
+      <member refid="classgruel_1_1msg__accepter_1a043f8b7de22a127df5dd9b3dfe76e2da" prot="public" virt="virtual"><scope>audio_osx_sink</scope><name>~msg_accepter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

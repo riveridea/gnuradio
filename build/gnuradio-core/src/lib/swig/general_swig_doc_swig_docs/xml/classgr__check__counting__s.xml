@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__check__counting__s" kind="class" prot="public">
+    <compoundname>gr_check_counting_s</compoundname>
+    <includes refid="gr__check__counting__s_8h" local="no">gr_check_counting_s.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361" prot="private" static="no">
+        <name>state</name>
+        <enumvalue id="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361ae3549f9628adb72a60b75d8689a167c3" prot="private">
+          <name>SEARCHING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361a933cc96a72665a2191da26cc30495ac2" prot="private">
+          <name>LOCKED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="44" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__check__counting__s_1aed0b5e734697c2518a5eb9056e705e3b" prot="private" static="no" mutable="no">
+        <type>state</type>
+        <definition>state gr_check_counting_s::d_state</definition>
+        <argsstring></argsstring>
+        <name>d_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1aef5526ded5ae0be67797fb611538103e" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_check_counting_s::d_history</definition>
+        <argsstring></argsstring>
+        <name>d_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="50" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1a626192ff99c739150b264c907d918fa9" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short gr_check_counting_s::d_current_count</definition>
+        <argsstring></argsstring>
+        <name>d_current_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="51" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1a40c3d313191d40da832a5729c8ed70c7" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_check_counting_s::d_current_count_32bit</definition>
+        <argsstring></argsstring>
+        <name>d_current_count_32bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="52" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1a035a441fcda7fffec91adceafd7ff601" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_check_counting_s::d_total_errors</definition>
+        <argsstring></argsstring>
+        <name>d_total_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="54" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1ae3067aab54b7605aefd1a0694712c5b0" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr_check_counting_s::d_total_shorts</definition>
+        <argsstring></argsstring>
+        <name>d_total_shorts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="55" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__check__counting__s_1adf4f5e70fc2f892fe8c2e602d1011b5f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr_check_counting_s::d_do_32bit</definition>
+        <argsstring></argsstring>
+        <name>d_do_32bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="56" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__check__counting__s_1abfee49cdd4c8c6bb17e3fe50d6603877" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref> <ref refid="gr__check__counting__s_8h_1a144c767b384377bcd5319f1888575bd4" kindref="member">gr_check_counting_s_sptr</ref></type>
+        <definition>GR_CORE_API gr_check_counting_s_sptr gr_make_check_counting_s</definition>
+        <argsstring>(bool do_32bit)</argsstring>
+        <name>gr_make_check_counting_s</name>
+        <param>
+          <type>bool</type>
+          <declname>do_32bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__check__counting__s_1a4016d5130b2dc69d285e81d7f9de2097" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_check_counting_s::gr_check_counting_s</definition>
+        <argsstring>(bool do_32bit)</argsstring>
+        <name>gr_check_counting_s</name>
+        <param>
+          <type>bool</type>
+          <declname>do_32bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a2187019ebf6b2fba348475027f9ab235" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::enter_SEARCHING</definition>
+        <argsstring>()</argsstring>
+        <name>enter_SEARCHING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a0ca45784f5ba37a24862e330af9ba737" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::enter_LOCKED</definition>
+        <argsstring>()</argsstring>
+        <name>enter_LOCKED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a3882a07e294e7daae4be2a5beb726d01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::right</definition>
+        <argsstring>()</argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="63" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1ad8743f0081de9dfb29d9d4132dca05cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::wrong</definition>
+        <argsstring>()</argsstring>
+        <name>wrong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1aecd2fd09b418b9a76c31122bf6050fe5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_check_counting_s::right_three_times</definition>
+        <argsstring>()</argsstring>
+        <name>right_three_times</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="72" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a7ba081f4b6ae424078b5894092370f3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gr_check_counting_s::wrong_three_times</definition>
+        <argsstring>()</argsstring>
+        <name>wrong_three_times</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="73" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a0b112fbca47d68ec45f9cce0a2b39468" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::log_error</definition>
+        <argsstring>(unsigned short expected, unsigned short actual)</argsstring>
+        <name>log_error</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a3a8b8ec177d428ae510a9207672d25bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr_check_counting_s::log_error_32bit</definition>
+        <argsstring>(unsigned int expected, unsigned int actual)</argsstring>
+        <name>log_error_32bit</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1afcd47af6c3a5927c02e525d4ca0e04cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_check_counting_s::check_32bit</definition>
+        <argsstring>(int noutput_items, unsigned short *in)</argsstring>
+        <name>check_32bit</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__check__counting__s_1a9a814b80576ebabaaccc33e90eaeccf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_check_counting_s::check_16bit</definition>
+        <argsstring>(int noutput_items, unsigned short *in)</argsstring>
+        <name>check_16bit</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>unsigned short *</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__check__counting__s_1adcd1e7e2ff4a6dbc5800bcd79fe1a46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_check_counting_s::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>sink that checks if its input stream consists of a counting sequence. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>do_32bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>expect an interleaved 32 bit counter in stead of 16 bit counter (default false)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This sink is typically used to test the USRP &quot;Counting Mode&quot; or &quot;Counting mode 32 bit&quot;. </para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_check_counting_s.h" bodystart="40" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classgr__check__counting__s_1a9a814b80576ebabaaccc33e90eaeccf2" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>check_16bit</name></member>
+      <member refid="classgr__check__counting__s_1afcd47af6c3a5927c02e525d4ca0e04cb" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>check_32bit</name></member>
+      <member refid="classgr__check__counting__s_1a626192ff99c739150b264c907d918fa9" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_current_count</name></member>
+      <member refid="classgr__check__counting__s_1a40c3d313191d40da832a5729c8ed70c7" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_current_count_32bit</name></member>
+      <member refid="classgr__check__counting__s_1adf4f5e70fc2f892fe8c2e602d1011b5f" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_do_32bit</name></member>
+      <member refid="classgr__check__counting__s_1aef5526ded5ae0be67797fb611538103e" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_history</name></member>
+      <member refid="classgr__check__counting__s_1aed0b5e734697c2518a5eb9056e705e3b" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_state</name></member>
+      <member refid="classgr__check__counting__s_1a035a441fcda7fffec91adceafd7ff601" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_total_errors</name></member>
+      <member refid="classgr__check__counting__s_1ae3067aab54b7605aefd1a0694712c5b0" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>d_total_shorts</name></member>
+      <member refid="classgr__check__counting__s_1a0ca45784f5ba37a24862e330af9ba737" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>enter_LOCKED</name></member>
+      <member refid="classgr__check__counting__s_1a2187019ebf6b2fba348475027f9ab235" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>enter_SEARCHING</name></member>
+      <member refid="classgr__check__counting__s_1a4016d5130b2dc69d285e81d7f9de2097" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>gr_check_counting_s</name></member>
+      <member refid="classgr__check__counting__s_1abfee49cdd4c8c6bb17e3fe50d6603877" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>gr_make_check_counting_s</name></member>
+      <member refid="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361a933cc96a72665a2191da26cc30495ac2" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>LOCKED</name></member>
+      <member refid="classgr__check__counting__s_1a0b112fbca47d68ec45f9cce0a2b39468" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>log_error</name></member>
+      <member refid="classgr__check__counting__s_1a3a8b8ec177d428ae510a9207672d25bb" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>log_error_32bit</name></member>
+      <member refid="classgr__check__counting__s_1a3882a07e294e7daae4be2a5beb726d01" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>right</name></member>
+      <member refid="classgr__check__counting__s_1aecd2fd09b418b9a76c31122bf6050fe5" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>right_three_times</name></member>
+      <member refid="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361ae3549f9628adb72a60b75d8689a167c3" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>SEARCHING</name></member>
+      <member refid="classgr__check__counting__s_1a6d49976a676bd8ef7d61f2cc8da86361" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>state</name></member>
+      <member refid="classgr__check__counting__s_1adcd1e7e2ff4a6dbc5800bcd79fe1a46b" prot="public" virt="non-virtual"><scope>gr_check_counting_s</scope><name>work</name></member>
+      <member refid="classgr__check__counting__s_1ad8743f0081de9dfb29d9d4132dca05cf" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>wrong</name></member>
+      <member refid="classgr__check__counting__s_1a7ba081f4b6ae424078b5894092370f3a" prot="private" virt="non-virtual"><scope>gr_check_counting_s</scope><name>wrong_three_times</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

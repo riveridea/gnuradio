@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__short__to__char" kind="class" prot="public">
+    <compoundname>gr_short_to_char</compoundname>
+    <includes refid="gr__short__to__char_8h" local="no">gr_short_to_char.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__short__to__char_1ada30ec8573f144825bf00d7e2ca7ebca" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t gr_short_to_char::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" line="49" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__short__to__char_1a21dd9c4ae623fc4dca649389949cc60b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__short__to__char_8h_1a9efe17140134d6024c0dccde6ec5f2bb" kindref="member">gr_short_to_char_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_short_to_char_sptr gr_make_short_to_char</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_make_short_to_char</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" line="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__short__to__char_1a3f2713a4c169e220bdeedb45d2bb663e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_short_to_char::gr_short_to_char</definition>
+        <argsstring>(size_t vlen)</argsstring>
+        <name>gr_short_to_char</name>
+        <param>
+          <type>size_t</type>
+          <declname>vlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__short__to__char_1abb18a57ad62eb8d3b3e164fa85170e07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>virtual int gr_short_to_char::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" line="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Convert stream of short to a stream of float. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector length of data streams. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_short_to_char.h" bodystart="42" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgr__short__to__char_1ada30ec8573f144825bf00d7e2ca7ebca" prot="private" virt="non-virtual"><scope>gr_short_to_char</scope><name>d_vlen</name></member>
+      <member refid="classgr__short__to__char_1a21dd9c4ae623fc4dca649389949cc60b" prot="private" virt="non-virtual"><scope>gr_short_to_char</scope><name>gr_make_short_to_char</name></member>
+      <member refid="classgr__short__to__char_1a3f2713a4c169e220bdeedb45d2bb663e" prot="private" virt="non-virtual"><scope>gr_short_to_char</scope><name>gr_short_to_char</name></member>
+      <member refid="classgr__short__to__char_1abb18a57ad62eb8d3b3e164fa85170e07" prot="public" virt="virtual"><scope>gr_short_to_char</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="classgr__nlog10__ff" kind="class" prot="public">
+    <compoundname>gr_nlog10_ff</compoundname>
+    <includes refid="gr__nlog10__ff_8h" local="no">gr_nlog10_ff.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr__nlog10__ff_1a3e8057d243617302b423e0cee6d277b1" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int gr_nlog10_ff::d_vlen</definition>
+        <argsstring></argsstring>
+        <name>d_vlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="41" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__nlog10__ff_1a805f576ef6416ecda6ace230cdaa7583" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_nlog10_ff::d_n</definition>
+        <argsstring></argsstring>
+        <name>d_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="42" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr__nlog10__ff_1aa510670b253454644d9012d435c7a00d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr_nlog10_ff::d_k</definition>
+        <argsstring></argsstring>
+        <name>d_k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="43" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgr__nlog10__ff_1a9a1fb0b9c66b815e3edb2bb29ef81f09" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend __GR_ATTR_IMPORT <ref refid="gr__nlog10__ff_8h_1a36c78092f0a829e9829a623e5f29ebb2" kindref="member">gr_nlog10_ff_sptr</ref></type>
+        <definition>__GR_ATTR_IMPORT gr_nlog10_ff_sptr gr_make_nlog10_ff</definition>
+        <argsstring>(float n, unsigned vlen, float k)</argsstring>
+        <name>gr_make_nlog10_ff</name>
+        <param>
+          <type>float</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>vlen</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr__nlog10__ff_1a11f32e125a0c03a78aed83066e5a1388" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_nlog10_ff::gr_nlog10_ff</definition>
+        <argsstring>(float n, unsigned vlen, float k)</argsstring>
+        <name>gr_nlog10_ff</name>
+        <param>
+          <type>float</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>vlen</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr__nlog10__ff_1a01e5c37ef689a22414fe1dfcf60e061e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr_nlog10_ff::~gr_nlog10_ff</definition>
+        <argsstring>()</argsstring>
+        <name>~gr_nlog10_ff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr__nlog10__ff_1a5759704ab6a7c54d379ab79ae976c81a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr_nlog10_ff::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>output = n*log10(input) + k </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" line="38" bodyfile="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_nlog10_ff.h" bodystart="37" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classgr__nlog10__ff_1aa510670b253454644d9012d435c7a00d" prot="private" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>d_k</name></member>
+      <member refid="classgr__nlog10__ff_1a805f576ef6416ecda6ace230cdaa7583" prot="private" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>d_n</name></member>
+      <member refid="classgr__nlog10__ff_1a3e8057d243617302b423e0cee6d277b1" prot="private" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>d_vlen</name></member>
+      <member refid="classgr__nlog10__ff_1a9a1fb0b9c66b815e3edb2bb29ef81f09" prot="private" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>gr_make_nlog10_ff</name></member>
+      <member refid="classgr__nlog10__ff_1a11f32e125a0c03a78aed83066e5a1388" prot="private" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>gr_nlog10_ff</name></member>
+      <member refid="classgr__nlog10__ff_1a5759704ab6a7c54d379ab79ae976c81a" prot="public" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>work</name></member>
+      <member refid="classgr__nlog10__ff_1a01e5c37ef689a22414fe1dfcf60e061e" prot="public" virt="non-virtual"><scope>gr_nlog10_ff</scope><name>~gr_nlog10_ff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
