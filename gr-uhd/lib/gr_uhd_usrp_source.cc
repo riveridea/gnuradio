@@ -26,11 +26,10 @@
 #include <boost/format.hpp>
 #include <boost/make_shared.hpp>
 #include "gr_uhd_common.h"
-#include <python2.7/Python.h>
+#include <stdio.h>
 
 static const pmt::pmt_t TIME_KEY = pmt::pmt_string_to_symbol("rx_time");
 
-#define printf PySys_WriteStdout
 
 #include <uhd/convert.hpp>
 inline gr_io_signature_sptr args_to_io_sig(const uhd::stream_args_t &args){
