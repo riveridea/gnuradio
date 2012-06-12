@@ -218,25 +218,25 @@
 <para>This PLL locks onto a [possibly noisy] reference carrier on the input and outputs that signal, downconverted to DC</para><para>All settings max_freq and min_freq are in terms of radians per sample, NOT HERTZ. The loop bandwidth determins the lock range and should be set around pi/200 -- 2pi/100. <simplesect kind="see"><para><ref refid="classgr__pll__freqdet__cf" kindref="compound">gr_pll_freqdet_cf</ref>, <ref refid="classgr__pll__carriertracking__cc" kindref="compound">gr_pll_carriertracking_cc</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="506">
+      <node id="510">
         <label>gr_pll_carriertracking_cc</label>
         <link refid="classgr__pll__carriertracking__cc"/>
-        <childnode refid="507" relation="public-inheritance">
+        <childnode refid="511" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="507">
+      <node id="511">
         <label>gri_control_loop</label>
         <link refid="classgri__control__loop"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="508">
+      <node id="512">
         <label>gr_pll_carriertracking_cc</label>
         <link refid="classgr__pll__carriertracking__cc"/>
-        <childnode refid="509" relation="public-inheritance">
+        <childnode refid="513" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="509">
+      <node id="513">
         <label>gri_control_loop</label>
         <link refid="classgri__control__loop"/>
       </node>

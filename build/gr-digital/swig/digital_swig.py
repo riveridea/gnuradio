@@ -5809,6 +5809,10 @@ class digital_ofdm_insert_preamble_sptr(object):
 
     __swig_destroy__ = _digital_swig.delete_digital_ofdm_insert_preamble_sptr
     __del__ = lambda self : None;
+    def enter_preamble(self):
+        """enter_preamble(self)"""
+        return _digital_swig.digital_ofdm_insert_preamble_sptr_enter_preamble(self)
+
     def history(self):
         """history(self) -> unsigned int"""
         return _digital_swig.digital_ofdm_insert_preamble_sptr_history(self)

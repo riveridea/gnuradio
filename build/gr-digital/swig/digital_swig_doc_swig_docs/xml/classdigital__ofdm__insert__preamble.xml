@@ -170,19 +170,6 @@
         </inbodydescription>
         <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="90"/>
       </memberdef>
-      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void digital_ofdm_insert_preamble::enter_preamble</definition>
-        <argsstring>()</argsstring>
-        <name>enter_preamble</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="91"/>
-      </memberdef>
       <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a3769cdcd4b0b5cbd98910ecfda85ae77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void digital_ofdm_insert_preamble::enter_first_payload</definition>
@@ -194,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="92"/>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1a0dffeaf555045fc014a37e90a3735813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -207,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="93"/>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="92"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -216,6 +203,19 @@
         <definition>digital_ofdm_insert_preamble::~digital_ofdm_insert_preamble</definition>
         <argsstring>()</argsstring>
         <name>~digital_ofdm_insert_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::enter_preamble</definition>
+        <argsstring>()</argsstring>
+        <name>enter_preamble</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -253,6 +253,27 @@
         </inbodydescription>
         <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="102"/>
       </memberdef>
+      <memberdef kind="function" id="classdigital__ofdm__insert__preamble_1ad1d6eda83a2acaaddc608cd159863ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void digital_ofdm_insert_preamble::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="103"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>insert &quot;pre-modulated&quot; preamble symbols before each payload. </para>    </briefdescription>
@@ -283,7 +304,7 @@
 </parameteritem>
 </parameterlist>
 </para>    </detaileddescription>
-    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="66" bodyend="103"/>
+    <location file="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" line="67" bodyfile="/home/alexzh/gr_alex/gnuradio/gr-digital/include/digital_ofdm_insert_preamble.h" bodystart="66" bodyend="105"/>
     <listofallmembers>
       <member refid="classdigital__ofdm__insert__preamble_1af557f6998e4d6611d3424af6fb548550" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_fft_length</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1a96741e922bf1d4e36a72eb0a23878144" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>d_nsymbols_output</name></member>
@@ -295,7 +316,8 @@
       <member refid="classdigital__ofdm__insert__preamble_1a3769cdcd4b0b5cbd98910ecfda85ae77" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_first_payload</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1ae874181a68c4f00760ec6841e1be6fb8" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_idle</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1a0dffeaf555045fc014a37e90a3735813" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_payload</name></member>
-      <member refid="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1aac5c73449566a2ea4df150d1b858353e" prot="public" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>enter_preamble</name></member>
+      <member refid="classdigital__ofdm__insert__preamble_1ad1d6eda83a2acaaddc608cd159863ed9" prot="public" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>forecast</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1a0d91935a5b6964c66a4ee2b12642734f" prot="public" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>general_work</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba20515e348bb5b7193057d4b090222b88" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_FIRST_PAYLOAD</name></member>
       <member refid="classdigital__ofdm__insert__preamble_1af815a03a66f5427bbfb4e4b185d2471ba27d608d9aa738df40ca918ad2b1ff907" prot="private" virt="non-virtual"><scope>digital_ofdm_insert_preamble</scope><name>ST_IDLE</name></member>

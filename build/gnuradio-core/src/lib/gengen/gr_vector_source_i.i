@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2004,2008 Free Software Foundation, Inc.
+ * Copyright 2004,2008,2012 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -30,7 +30,8 @@ gr_make_vector_source_i (const std::vector<int> &data, bool repeat = false, int 
 
 class gr_vector_source_i : public gr_sync_block {
  public:
-  void rewind() {d_offset=0;}
+  void rewind();
+  void set_data(const std::vector<int> &data);
  private:
   gr_vector_source_i (const std::vector<int> &data, int vlen);
 };

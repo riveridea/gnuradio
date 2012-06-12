@@ -87,6 +87,9 @@ IFF_ONE_QUEUE	= 0x2000   # beats me ;)
 CLUSTER_HEAD    = 0x0001   # cluster head
 CLUSTER_NODE    = 0x0002   # cluster node
 
+CTRL_TYPE        = 0x01   # control packet
+DATA_TYPE        = 0x02   # data packet
+
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
     
@@ -202,11 +205,74 @@ class ctrl_st_machine(object):
     
     def __init__(self, node_type):
         self.node_type = node_type
+        if node_type == CLUSTER_HEAD:
+            #hash table used to store the sensing data for different nodes
+            #indexed by the IP address of the USRP
+            self.ndata = dict()  
+        elif node_type == CLUSTER_NODE:
+            #hash table to store the sensing data for different transaction
+            #indexed by the transaction id
+            self.ndata = dict()
+            
+        self.output    = []   #outgoing message queue
+        self.tb = None #top block (to access the device information)
+    
+    def set_top_block(self, tb):
+        self.tb = tb
+        self.sensor = tb.sensor
 
-    def process_payload(self):
+    def process_payload(self, payload):
+        global outpktno
+
+        length = len(payload)
         if self.node_type == "head":
             print "head"
+
+            
         elif self.node_type == "node":
+            if length <= 15:
+                print 'useless payload'
+                return 1
+                   
+            (pktno, pktsize, pkttype) = 
+                 struct.unpack('!IHB', payload[0:7])
+            (fromaddr, toaddr) =
+                 struct.unpack('!II', payload[7:15]')
+
+            if pkttype == CRTL_TYPE and length > 15:
+                payld_size = struct.unpack('!I', payload[15:19])
+                
+                if length != payld_size + 15
+                    print 'invalid payload'
+                    return 1
+ 
+                (start_time, samp_num) = 
+                     struct.unpack('!dH', payload[23:33])
+                
+                # start the data collection as specified time
+                self.sensor.set_start_time(uhd.time_spec_t(start_time))
+                samps = self.sensor.finite_acquisition(samp_num)
+
+                data_per_pkt = 256
+                samp_per_pkt = data_per_pkt/8
+                for i in range(samp_num/samp_per_pkt):
+                    out_payload = ''
+                    for j in range(samp_per_pkt):
+                        samp = samps[j+i*samp_per_pkt]
+                        out_payload += 
+                            struct.pack('!ff', samp.real, samp.imag)
+
+                    outpktno += 1
+                    header = 
+                        struct.pack('!IHB', outpktno, data_per_pkt+33, DATA_TYPE)
+                    header +=
+                        struct.pack('!II', toaddrr, fromaddr)
+                    header +=
+                        struct.pack('!dH', start_time, samp_num)
+                    out_payload += header
+                    # put the packet to outgoing queue
+                    self.output.append(out_payload)
+                    
             print "node"
         else:
             print "error"
@@ -259,13 +325,16 @@ class cs_mac(object):
         FIXME: may want to check for EINTR and EAGAIN and reissue read
         """
         min_delay = 0.001               # seconds
+        output_q = self.csm.output
 
         while 1:
             payload = os.read(self.tun_fd, 10*1024)
-            if not payload:
+            
+            if not payload and len(output_q) == 0:
                 self.tb.send_pkt(eof=True)
                 break
-
+           
+            self.csm.output.append(payload)
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
 
@@ -275,7 +344,9 @@ class cs_mac(object):
                 time.sleep(delay)
                 if delay < 0.050:
                     delay = delay * 2       # exponential back-off
-
+            
+            #only send the packet from the output queue
+            payload = output_q.pop()
             self.tb.send_pkt(payload)
 
 
@@ -352,6 +423,7 @@ def main():
                       mac.phy_rx_callback,
                       options)
 
+    csm.set_top_block(tb)
     mac.set_top_block(tb)    # give the MAC a handle for the PHY
 
     if tb.txpath.bitrate() != tb.rxpath.bitrate():

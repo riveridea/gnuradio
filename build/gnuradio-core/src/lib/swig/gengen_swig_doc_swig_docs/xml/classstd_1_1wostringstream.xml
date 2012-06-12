@@ -8,52 +8,52 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="856">
-        <label>std::wostringstream</label>
-        <childnode refid="857" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="857">
-        <label>std::basic_ostringstream&lt; wchar_t &gt;</label>
-        <childnode refid="858" relation="public-inheritance">
-        </childnode>
-      </node>
       <node id="858">
-        <label>std::basic_ostream&lt; Char &gt;</label>
+        <label>std::wostringstream</label>
         <childnode refid="859" relation="public-inheritance">
         </childnode>
       </node>
       <node id="859">
-        <label>std::basic_ios&lt; Char &gt;</label>
+        <label>std::basic_ostringstream&lt; wchar_t &gt;</label>
         <childnode refid="860" relation="public-inheritance">
         </childnode>
       </node>
       <node id="860">
-        <label>std::ios_base</label>
+        <label>std::basic_ostream&lt; Char &gt;</label>
+        <childnode refid="861" relation="public-inheritance">
+        </childnode>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="861">
-        <label>std::wostringstream</label>
+        <label>std::basic_ios&lt; Char &gt;</label>
         <childnode refid="862" relation="public-inheritance">
         </childnode>
       </node>
       <node id="862">
-        <label>std::basic_ostringstream&lt; wchar_t &gt;</label>
-        <childnode refid="863" relation="public-inheritance">
-        </childnode>
+        <label>std::ios_base</label>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="863">
-        <label>std::basic_ostream&lt; Char &gt;</label>
+        <label>std::wostringstream</label>
         <childnode refid="864" relation="public-inheritance">
         </childnode>
       </node>
       <node id="864">
-        <label>std::basic_ios&lt; Char &gt;</label>
+        <label>std::basic_ostringstream&lt; wchar_t &gt;</label>
         <childnode refid="865" relation="public-inheritance">
         </childnode>
       </node>
       <node id="865">
+        <label>std::basic_ostream&lt; Char &gt;</label>
+        <childnode refid="866" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="866">
+        <label>std::basic_ios&lt; Char &gt;</label>
+        <childnode refid="867" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="867">
         <label>std::ios_base</label>
       </node>
     </collaborationgraph>

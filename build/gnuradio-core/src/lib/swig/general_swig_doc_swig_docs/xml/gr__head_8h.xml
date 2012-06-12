@@ -6,29 +6,29 @@
     <includes local="no">gr_sync_block.h</includes>
     <includes local="no">stddef.h</includes>
     <incdepgraph>
-      <node id="487">
+      <node id="489">
         <label>gruel/attributes.h</label>
       </node>
-      <node id="488">
+      <node id="490">
         <label>gr_sync_block.h</label>
       </node>
-      <node id="486">
+      <node id="488">
         <label>gr_core_api.h</label>
         <link refid="gr__core__api_8h"/>
-        <childnode refid="487" relation="include">
+        <childnode refid="489" relation="include">
         </childnode>
       </node>
-      <node id="489">
+      <node id="491">
         <label>stddef.h</label>
       </node>
-      <node id="485">
+      <node id="487">
         <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h</label>
         <link refid="gr_head.h"/>
-        <childnode refid="486" relation="include">
-        </childnode>
         <childnode refid="488" relation="include">
         </childnode>
-        <childnode refid="489" relation="include">
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="57"/>
+        <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h" line="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -78,7 +78,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004,2009<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004,2009,2012<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -122,13 +122,14 @@
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53" refid="classgr__head_1aad358bebb4764e8c62264f1f5b8014c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__head_1aad358bebb4764e8c62264f1f5b8014c0" kindref="member">reset</ref>()<sp/>{<sp/>d_ncopied_items<sp/>=<sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__head_8h_1a71a848b2c17d1926d2ef9e54b489bae1" kindref="member">gr_head_sptr</ref></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><ref refid="gr__head_8h_1a33eb756de50ce488e62c6e588b60eb78" kindref="member">gr_make_head</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizeof_stream_item,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nitems);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classgr__head_1a5983a65335c19c01f660064fd7e42a5b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__head_1a5983a65335c19c01f660064fd7e42a5b" kindref="member">set_length</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nitems)<sp/>{<sp/>d_nitems<sp/>=<sp/>nitems;<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="gr__core__api_8h_1a8b8937b0c61edd85ab57ce8203543248" kindref="member">GR_CORE_API</ref><sp/><ref refid="gr__head_8h_1a71a848b2c17d1926d2ef9e54b489bae1" kindref="member">gr_head_sptr</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="gr__head_8h_1a33eb756de50ce488e62c6e588b60eb78" kindref="member">gr_make_head</ref><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sizeof_stream_item,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nitems);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_GR_HEAD_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_GR_HEAD_H<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_head.h"/>
   </compounddef>

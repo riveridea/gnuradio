@@ -4696,6 +4696,30 @@ general/gr_iqcomp_cc.cc.s:
 	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_iqcomp_cc.cc.s
 .PHONY : general/gr_iqcomp_cc.cc.s
 
+general/gr_keep_m_in_n.o: general/gr_keep_m_in_n.cc.o
+.PHONY : general/gr_keep_m_in_n.o
+
+# target to build an object file
+general/gr_keep_m_in_n.cc.o:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o
+.PHONY : general/gr_keep_m_in_n.cc.o
+
+general/gr_keep_m_in_n.i: general/gr_keep_m_in_n.cc.i
+.PHONY : general/gr_keep_m_in_n.i
+
+# target to preprocess a source file
+general/gr_keep_m_in_n.cc.i:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.i
+.PHONY : general/gr_keep_m_in_n.cc.i
+
+general/gr_keep_m_in_n.s: general/gr_keep_m_in_n.cc.s
+.PHONY : general/gr_keep_m_in_n.s
+
+# target to generate assembly for a file
+general/gr_keep_m_in_n.cc.s:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.s
+.PHONY : general/gr_keep_m_in_n.cc.s
+
 general/gr_keep_one_in_n.o: general/gr_keep_one_in_n.cc.o
 .PHONY : general/gr_keep_one_in_n.o
 
@@ -5055,6 +5079,30 @@ general/gr_pa_2x2_phase_combiner.s: general/gr_pa_2x2_phase_combiner.cc.s
 general/gr_pa_2x2_phase_combiner.cc.s:
 	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pa_2x2_phase_combiner.cc.s
 .PHONY : general/gr_pa_2x2_phase_combiner.cc.s
+
+general/gr_pack_k_bits_bb.o: general/gr_pack_k_bits_bb.cc.o
+.PHONY : general/gr_pack_k_bits_bb.o
+
+# target to build an object file
+general/gr_pack_k_bits_bb.cc.o:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o
+.PHONY : general/gr_pack_k_bits_bb.cc.o
+
+general/gr_pack_k_bits_bb.i: general/gr_pack_k_bits_bb.cc.i
+.PHONY : general/gr_pack_k_bits_bb.i
+
+# target to preprocess a source file
+general/gr_pack_k_bits_bb.cc.i:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.i
+.PHONY : general/gr_pack_k_bits_bb.cc.i
+
+general/gr_pack_k_bits_bb.s: general/gr_pack_k_bits_bb.cc.s
+.PHONY : general/gr_pack_k_bits_bb.s
+
+# target to generate assembly for a file
+general/gr_pack_k_bits_bb.cc.s:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.s
+.PHONY : general/gr_pack_k_bits_bb.cc.s
 
 general/gr_packet_sink.o: general/gr_packet_sink.cc.o
 .PHONY : general/gr_packet_sink.o
@@ -9064,6 +9112,30 @@ gengen/gr_unpacked_to_packed_ss.cc.s:
 	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_unpacked_to_packed_ss.cc.s
 .PHONY : gengen/gr_unpacked_to_packed_ss.cc.s
 
+gengen/gr_vector_insert_b.o: gengen/gr_vector_insert_b.cc.o
+.PHONY : gengen/gr_vector_insert_b.o
+
+# target to build an object file
+gengen/gr_vector_insert_b.cc.o:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o
+.PHONY : gengen/gr_vector_insert_b.cc.o
+
+gengen/gr_vector_insert_b.i: gengen/gr_vector_insert_b.cc.i
+.PHONY : gengen/gr_vector_insert_b.i
+
+# target to preprocess a source file
+gengen/gr_vector_insert_b.cc.i:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.i
+.PHONY : gengen/gr_vector_insert_b.cc.i
+
+gengen/gr_vector_insert_b.s: gengen/gr_vector_insert_b.cc.s
+.PHONY : gengen/gr_vector_insert_b.s
+
+# target to generate assembly for a file
+gengen/gr_vector_insert_b.cc.s:
+	cd /home/alexzh/gr_alex/gnuradio/build && $(MAKE) -f gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/build.make gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.s
+.PHONY : gengen/gr_vector_insert_b.cc.s
+
 gengen/gr_vector_sink_b.o: gengen/gr_vector_sink_b.cc.o
 .PHONY : gengen/gr_vector_sink_b.o
 
@@ -12145,6 +12217,9 @@ help:
 	@echo "... general/gr_iqcomp_cc.o"
 	@echo "... general/gr_iqcomp_cc.i"
 	@echo "... general/gr_iqcomp_cc.s"
+	@echo "... general/gr_keep_m_in_n.o"
+	@echo "... general/gr_keep_m_in_n.i"
+	@echo "... general/gr_keep_m_in_n.s"
 	@echo "... general/gr_keep_one_in_n.o"
 	@echo "... general/gr_keep_one_in_n.i"
 	@echo "... general/gr_keep_one_in_n.s"
@@ -12190,6 +12265,9 @@ help:
 	@echo "... general/gr_pa_2x2_phase_combiner.o"
 	@echo "... general/gr_pa_2x2_phase_combiner.i"
 	@echo "... general/gr_pa_2x2_phase_combiner.s"
+	@echo "... general/gr_pack_k_bits_bb.o"
+	@echo "... general/gr_pack_k_bits_bb.i"
+	@echo "... general/gr_pack_k_bits_bb.s"
 	@echo "... general/gr_packet_sink.o"
 	@echo "... general/gr_packet_sink.i"
 	@echo "... general/gr_packet_sink.s"
@@ -12691,6 +12769,9 @@ help:
 	@echo "... gengen/gr_unpacked_to_packed_ss.o"
 	@echo "... gengen/gr_unpacked_to_packed_ss.i"
 	@echo "... gengen/gr_unpacked_to_packed_ss.s"
+	@echo "... gengen/gr_vector_insert_b.o"
+	@echo "... gengen/gr_vector_insert_b.i"
+	@echo "... gengen/gr_vector_insert_b.s"
 	@echo "... gengen/gr_vector_sink_b.o"
 	@echo "... gengen/gr_vector_sink_b.i"
 	@echo "... gengen/gr_vector_sink_b.s"

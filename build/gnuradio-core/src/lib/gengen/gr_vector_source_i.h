@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2004,2008 Free Software Foundation, Inc.
+ * Copyright 2004,2008,2012 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -52,6 +52,7 @@ class gr_vector_source_i : public gr_sync_block {
   virtual int work (int noutput_items,
 		    gr_vector_const_void_star &input_items,
 		    gr_vector_void_star &output_items);
+  void set_data(const std::vector<int> &data){ d_data = data; rewind(); }
 };
 
 GR_CORE_API gr_vector_source_i_sptr

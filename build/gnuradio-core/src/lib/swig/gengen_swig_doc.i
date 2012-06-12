@@ -1592,6 +1592,18 @@ The low  bits are extracted from each input byte or short. These bits are then p
 
 The combination of gr_packed_to_unpacked_XX followed by gr_chunks_to_symbols_Xf or gr_chunks_to_symbols_Xc handles the general case of mapping from a stream of bytes or shorts into arbitrary float or complex symbols."
 
+%feature("docstring") gr_vector_insert_b "source of unsigned char's that gets its data from a vector"
+
+
+
+
+
+
+
+
+
+%feature("docstring") gr_make_vector_insert_b "source of unsigned char's that gets its data from a vector"
+
 %feature("docstring") gr_vector_sink_b "unsigned char sink that writes to a vector"
 
 
@@ -1670,9 +1682,13 @@ The combination of gr_packed_to_unpacked_XX followed by gr_chunks_to_symbols_Xf 
 
 
 
+
+
 %feature("docstring") gr_make_vector_source_b "source of unsigned char's that gets its data from a vector"
 
 %feature("docstring") gr_vector_source_c "source of gr_complex's that gets its data from a vector"
+
+
 
 
 
@@ -1690,6 +1706,8 @@ The combination of gr_packed_to_unpacked_XX followed by gr_chunks_to_symbols_Xf 
 
 
 
+
+
 %feature("docstring") gr_make_vector_source_f "source of float's that gets its data from a vector"
 
 %feature("docstring") gr_vector_source_i "source of int's that gets its data from a vector"
@@ -1700,9 +1718,13 @@ The combination of gr_packed_to_unpacked_XX followed by gr_chunks_to_symbols_Xf 
 
 
 
+
+
 %feature("docstring") gr_make_vector_source_i "source of int's that gets its data from a vector"
 
 %feature("docstring") gr_vector_source_s "source of short's that gets its data from a vector"
+
+
 
 
 

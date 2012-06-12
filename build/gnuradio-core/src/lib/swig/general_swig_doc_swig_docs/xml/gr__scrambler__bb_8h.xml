@@ -6,42 +6,42 @@
     <includes local="no">gr_sync_block.h</includes>
     <includes refid="gri__lfsr_8h" local="yes">gri_lfsr.h</includes>
     <incdepgraph>
-      <node id="755">
+      <node id="767">
         <label>gruel/attributes.h</label>
       </node>
-      <node id="756">
+      <node id="768">
         <label>gr_sync_block.h</label>
       </node>
-      <node id="759">
+      <node id="771">
         <label>stdint.h</label>
       </node>
-      <node id="758">
+      <node id="770">
         <label>stdexcept</label>
       </node>
-      <node id="754">
+      <node id="766">
         <label>gr_core_api.h</label>
         <link refid="gr__core__api_8h"/>
-        <childnode refid="755" relation="include">
+        <childnode refid="767" relation="include">
         </childnode>
       </node>
-      <node id="753">
+      <node id="765">
         <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_scrambler_bb.h</label>
         <link refid="gr_scrambler_bb.h"/>
-        <childnode refid="754" relation="include">
+        <childnode refid="766" relation="include">
         </childnode>
-        <childnode refid="756" relation="include">
+        <childnode refid="768" relation="include">
         </childnode>
-        <childnode refid="757" relation="include">
+        <childnode refid="769" relation="include">
         </childnode>
       </node>
-      <node id="757">
+      <node id="769">
         <label>gri_lfsr.h</label>
         <link refid="gri__lfsr_8h"/>
-        <childnode refid="754" relation="include">
+        <childnode refid="766" relation="include">
         </childnode>
-        <childnode refid="758" relation="include">
+        <childnode refid="770" relation="include">
         </childnode>
-        <childnode refid="759" relation="include">
+        <childnode refid="771" relation="include">
         </childnode>
       </node>
     </incdepgraph>

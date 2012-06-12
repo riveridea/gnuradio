@@ -1149,7 +1149,7 @@ gnuradio_BINARY_DIR:STATIC=/home/alexzh/gr_alex/gnuradio/build
 gnuradio_SOURCE_DIR:STATIC=/home/alexzh/gr_alex/gnuradio
 
 //Dependencies for the target
-gruel_LIB_DEPENDS:STATIC=general;/usr/lib/libboost_date_time-mt.so;general;/usr/lib/libboost_program_options-mt.so;general;/usr/lib/libboost_filesystem-mt.so;general;/usr/lib/libboost_system-mt.so;general;/usr/lib/libboost_thread-mt.so;general;pthread;general;pthread;
+gruel_LIB_DEPENDS:STATIC=general;/usr/lib/libboost_date_time-mt.so;general;/usr/lib/libboost_program_options-mt.so;general;/usr/lib/libboost_filesystem-mt.so;general;/usr/lib/libboost_system-mt.so;general;/usr/lib/libboost_thread-mt.so;general;pthread;
 
 //Dependencies for the target
 test-gnuradio-core_LIB_DEPENDS:STATIC=general;gnuradio-core;general;/usr/lib/libcppunit.so;general;dl;general;/usr/lib/libboost_date_time-mt.so;general;/usr/lib/libboost_program_options-mt.so;general;/usr/lib/libboost_filesystem-mt.so;general;/usr/lib/libboost_system-mt.so;general;/usr/lib/libboost_thread-mt.so;
@@ -2325,7 +2325,7 @@ Q_WS_QWS:INTERNAL=
 Q_WS_WIN:INTERNAL=
 //Have symbol Q_WS_X11
 Q_WS_X11:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread
+SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDLmain.a;/usr/lib/x86_64-linux-gnu/libSDL.so;-lpthread;-lpthread
 //ADVANCED property for variable: SHD_INCLUDE_DIRS
 SHD_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SHD_LIBRARIES

@@ -45,6 +45,8 @@
   </compound>
   <compound refid="classstd_1_1multimap_1_1const__iterator" kind="class"><name>std::multimap::const_iterator</name>
   </compound>
+  <compound refid="classstd_1_1list_1_1const__iterator" kind="class"><name>std::list::const_iterator</name>
+  </compound>
   <compound refid="classstd_1_1basic__string_1_1const__iterator" kind="class"><name>std::basic_string::const_iterator</name>
   </compound>
   <compound refid="classstd_1_1set_1_1const__iterator" kind="class"><name>std::set::const_iterator</name>
@@ -58,8 +60,6 @@
   <compound refid="classstd_1_1wstring_1_1const__iterator" kind="class"><name>std::wstring::const_iterator</name>
   </compound>
   <compound refid="classstd_1_1deque_1_1const__iterator" kind="class"><name>std::deque::const_iterator</name>
-  </compound>
-  <compound refid="classstd_1_1list_1_1const__iterator" kind="class"><name>std::list::const_iterator</name>
   </compound>
   <compound refid="classstd_1_1map_1_1const__reverse__iterator" kind="class"><name>std::map::const_reverse_iterator</name>
   </compound>
@@ -937,6 +937,16 @@
     <member refid="classgr__unpacked__to__packed__ss_1a9485d2a34361afee3faee85728a4c815" kind="function"><name>general_work</name></member>
     <member refid="classgr__unpacked__to__packed__ss_1af80ffeec84f4ce9fcda155f22f615b01" kind="function"><name>check_topology</name></member>
   </compound>
+  <compound refid="classgr__vector__insert__b" kind="class"><name>gr_vector_insert_b</name>
+    <member refid="classgr__vector__insert__b_1a6b473ace80ba5fd4d997d64502f647d1" kind="variable"><name>d_data</name></member>
+    <member refid="classgr__vector__insert__b_1ad4c32a174a218648ed0b2d75d9efc818" kind="variable"><name>d_offset</name></member>
+    <member refid="classgr__vector__insert__b_1abc9e944eeb7b20e7cd82d44f6ae619a9" kind="variable"><name>d_periodicity</name></member>
+    <member refid="classgr__vector__insert__b_1a9ef655ef4a9411a3b95a7599dd6797d1" kind="friend"><name>gr_make_vector_insert_b</name></member>
+    <member refid="classgr__vector__insert__b_1a246951f43b001a719ed07e08704eeec5" kind="function"><name>gr_vector_insert_b</name></member>
+    <member refid="classgr__vector__insert__b_1ad02715f1fade05950dd5d2bd57bd4b5b" kind="function"><name>rewind</name></member>
+    <member refid="classgr__vector__insert__b_1a775cd9c0a0042f4e77d3c48970548bf0" kind="function"><name>general_work</name></member>
+    <member refid="classgr__vector__insert__b_1a75649ba33c1cdc94ea6bc2ee3a18b046" kind="function"><name>set_data</name></member>
+  </compound>
   <compound refid="classgr__vector__sink__b" kind="class"><name>gr_vector_sink_b</name>
     <member refid="classgr__vector__sink__b_1a5bb4ae247c8390fa4a391bb3df98b5c1" kind="variable"><name>d_data</name></member>
     <member refid="classgr__vector__sink__b_1adc6e9020cc2e95b13be8f8664b210422" kind="variable"><name>d_vlen</name></member>
@@ -996,6 +1006,7 @@
     <member refid="classgr__vector__source__b_1aeeb12ce756c857453ad7686140c55852" kind="function"><name>gr_vector_source_b</name></member>
     <member refid="classgr__vector__source__b_1aaa48bfb7a9a1a9e62efc536ebb232daa" kind="function"><name>rewind</name></member>
     <member refid="classgr__vector__source__b_1ac9851c20de6020b61c23c814ba8bdc61" kind="function"><name>work</name></member>
+    <member refid="classgr__vector__source__b_1a2961d4117fa2383717d85b369f6041fe" kind="function"><name>set_data</name></member>
   </compound>
   <compound refid="classgr__vector__source__c" kind="class"><name>gr_vector_source_c</name>
     <member refid="classgr__vector__source__c_1a504bcc46b5045c7cbcf31256fee40e82" kind="variable"><name>d_data</name></member>
@@ -1006,6 +1017,7 @@
     <member refid="classgr__vector__source__c_1adda805999b9c7861cd33a3e08828d658" kind="function"><name>gr_vector_source_c</name></member>
     <member refid="classgr__vector__source__c_1aa1865d80bb8788754cb5285f8a72e3bb" kind="function"><name>rewind</name></member>
     <member refid="classgr__vector__source__c_1a1ae716f9170275f028294333952a3906" kind="function"><name>work</name></member>
+    <member refid="classgr__vector__source__c_1aea817c66894ea91b1d2fe983d0bea4e1" kind="function"><name>set_data</name></member>
   </compound>
   <compound refid="classgr__vector__source__f" kind="class"><name>gr_vector_source_f</name>
     <member refid="classgr__vector__source__f_1a7190b2adf44fc2c871a7bf8714fd3e90" kind="variable"><name>d_data</name></member>
@@ -1016,6 +1028,7 @@
     <member refid="classgr__vector__source__f_1aad77e8186104eda6b8a659f4b4b23eee" kind="function"><name>gr_vector_source_f</name></member>
     <member refid="classgr__vector__source__f_1a91b335b0d72e5e33227e77b92331f9e1" kind="function"><name>rewind</name></member>
     <member refid="classgr__vector__source__f_1ad013b0e717228d009dd5f07d861969ec" kind="function"><name>work</name></member>
+    <member refid="classgr__vector__source__f_1adf984568d9fcfd6b1cbcbc0d33254b5d" kind="function"><name>set_data</name></member>
   </compound>
   <compound refid="classgr__vector__source__i" kind="class"><name>gr_vector_source_i</name>
     <member refid="classgr__vector__source__i_1a87d47d37e5ce539a6a8d1db38f619042" kind="variable"><name>d_data</name></member>
@@ -1026,6 +1039,7 @@
     <member refid="classgr__vector__source__i_1a1b6ebd28e0e582be7fca383313dc7d7c" kind="function"><name>gr_vector_source_i</name></member>
     <member refid="classgr__vector__source__i_1a7e7473d6bd99e924f8405360d8fc38d3" kind="function"><name>rewind</name></member>
     <member refid="classgr__vector__source__i_1a4b731890cc8ed21dd094d155e185b3c5" kind="function"><name>work</name></member>
+    <member refid="classgr__vector__source__i_1a48001681310e66496242509da37e47af" kind="function"><name>set_data</name></member>
   </compound>
   <compound refid="classgr__vector__source__s" kind="class"><name>gr_vector_source_s</name>
     <member refid="classgr__vector__source__s_1a685bdaa94148129d7899120cb8ee7c1d" kind="variable"><name>d_data</name></member>
@@ -1036,6 +1050,7 @@
     <member refid="classgr__vector__source__s_1a6392e499db3ddae33d5b401e91659e4a" kind="function"><name>gr_vector_source_s</name></member>
     <member refid="classgr__vector__source__s_1a6e02608e6c4411781eab6778a9cdb270" kind="function"><name>rewind</name></member>
     <member refid="classgr__vector__source__s_1a3afd83adb786857a217d0e857902fc0b" kind="function"><name>work</name></member>
+    <member refid="classgr__vector__source__s_1a0387ddccad2ea10b167f960e8bfccefb" kind="function"><name>set_data</name></member>
   </compound>
   <compound refid="classgr__xor__bb" kind="class"><name>gr_xor_bb</name>
     <member refid="classgr__xor__bb_1a268fe91bc19c99588192e76db3e5e750" kind="friend"><name>gr_make_xor_bb</name></member>
@@ -1064,23 +1079,23 @@
   </compound>
   <compound refid="classstd_1_1istringstream" kind="class"><name>std::istringstream</name>
   </compound>
-  <compound refid="classstd_1_1multimap_1_1iterator" kind="class"><name>std::multimap::iterator</name>
-  </compound>
   <compound refid="classstd_1_1basic__string_1_1iterator" kind="class"><name>std::basic_string::iterator</name>
+  </compound>
+  <compound refid="classstd_1_1multimap_1_1iterator" kind="class"><name>std::multimap::iterator</name>
   </compound>
   <compound refid="classstd_1_1set_1_1iterator" kind="class"><name>std::set::iterator</name>
   </compound>
-  <compound refid="classstd_1_1wstring_1_1iterator" kind="class"><name>std::wstring::iterator</name>
-  </compound>
   <compound refid="classstd_1_1string_1_1iterator" kind="class"><name>std::string::iterator</name>
   </compound>
-  <compound refid="classstd_1_1list_1_1iterator" kind="class"><name>std::list::iterator</name>
+  <compound refid="classstd_1_1wstring_1_1iterator" kind="class"><name>std::wstring::iterator</name>
+  </compound>
+  <compound refid="classstd_1_1map_1_1iterator" kind="class"><name>std::map::iterator</name>
   </compound>
   <compound refid="classstd_1_1deque_1_1iterator" kind="class"><name>std::deque::iterator</name>
   </compound>
   <compound refid="classstd_1_1vector_1_1iterator" kind="class"><name>std::vector::iterator</name>
   </compound>
-  <compound refid="classstd_1_1map_1_1iterator" kind="class"><name>std::map::iterator</name>
+  <compound refid="classstd_1_1list_1_1iterator" kind="class"><name>std::list::iterator</name>
   </compound>
   <compound refid="classstd_1_1multiset_1_1iterator" kind="class"><name>std::multiset::iterator</name>
   </compound>
@@ -1120,25 +1135,25 @@
   </compound>
   <compound refid="classstd_1_1range__error" kind="class"><name>std::range_error</name>
   </compound>
-  <compound refid="classstd_1_1basic__string_1_1reverse__iterator" kind="class"><name>std::basic_string::reverse_iterator</name>
+  <compound refid="classstd_1_1vector_1_1reverse__iterator" kind="class"><name>std::vector::reverse_iterator</name>
+  </compound>
+  <compound refid="classstd_1_1list_1_1reverse__iterator" kind="class"><name>std::list::reverse_iterator</name>
   </compound>
   <compound refid="classstd_1_1wstring_1_1reverse__iterator" kind="class"><name>std::wstring::reverse_iterator</name>
   </compound>
-  <compound refid="classstd_1_1map_1_1reverse__iterator" kind="class"><name>std::map::reverse_iterator</name>
-  </compound>
   <compound refid="classstd_1_1multimap_1_1reverse__iterator" kind="class"><name>std::multimap::reverse_iterator</name>
-  </compound>
-  <compound refid="classstd_1_1multiset_1_1reverse__iterator" kind="class"><name>std::multiset::reverse_iterator</name>
   </compound>
   <compound refid="classstd_1_1set_1_1reverse__iterator" kind="class"><name>std::set::reverse_iterator</name>
   </compound>
   <compound refid="classstd_1_1deque_1_1reverse__iterator" kind="class"><name>std::deque::reverse_iterator</name>
   </compound>
-  <compound refid="classstd_1_1vector_1_1reverse__iterator" kind="class"><name>std::vector::reverse_iterator</name>
-  </compound>
-  <compound refid="classstd_1_1list_1_1reverse__iterator" kind="class"><name>std::list::reverse_iterator</name>
-  </compound>
   <compound refid="classstd_1_1string_1_1reverse__iterator" kind="class"><name>std::string::reverse_iterator</name>
+  </compound>
+  <compound refid="classstd_1_1basic__string_1_1reverse__iterator" kind="class"><name>std::basic_string::reverse_iterator</name>
+  </compound>
+  <compound refid="classstd_1_1map_1_1reverse__iterator" kind="class"><name>std::map::reverse_iterator</name>
+  </compound>
+  <compound refid="classstd_1_1multiset_1_1reverse__iterator" kind="class"><name>std::multiset::reverse_iterator</name>
   </compound>
   <compound refid="classstd_1_1runtime__error" kind="class"><name>std::runtime_error</name>
   </compound>
@@ -1573,6 +1588,11 @@
   <compound refid="gr__unpacked__to__packed__ss_8h" kind="file"><name>gr_unpacked_to_packed_ss.h</name>
     <member refid="gr__unpacked__to__packed__ss_8h_1a8f3473b1982aff4af16fb208ec7db565" kind="typedef"><name>gr_unpacked_to_packed_ss_sptr</name></member>
     <member refid="gr__unpacked__to__packed__ss_8h_1a3322fd4f720412169130af1e99bad5ab" kind="function"><name>gr_make_unpacked_to_packed_ss</name></member>
+  </compound>
+  <compound refid="gr__vector__insert__b_8h" kind="file"><name>gr_vector_insert_b.h</name>
+    <member refid="gr__vector__insert__b_8h_1aea7f5acba249aea86e2f4afebb1d4b47" kind="typedef"><name>gr_vector_insert_b_sptr</name></member>
+    <member refid="gr__vector__insert__b_8h_1a701c7871249e88327da0ff35a52a18bc" kind="variable"><name>gr_vector_insert_b</name></member>
+    <member refid="gr__vector__insert__b_8h_1a3e3e6c9499b85d491eb4fe26c8ea7183" kind="function"><name>gr_make_vector_insert_b</name></member>
   </compound>
   <compound refid="gr__vector__sink__b_8h" kind="file"><name>gr_vector_sink_b.h</name>
     <member refid="gr__vector__sink__b_8h_1a1c2b13c3a43ed5e6022276a3643d532a" kind="typedef"><name>gr_vector_sink_b_sptr</name></member>

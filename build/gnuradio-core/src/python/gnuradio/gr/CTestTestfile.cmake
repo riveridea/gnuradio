@@ -18,6 +18,7 @@ ADD_TEST(qa_rational_resampler "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gn
 ADD_TEST(qa_wavefile "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_wavefile_test.sh")
 ADD_TEST(qa_int_to_float "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_int_to_float_test.sh")
 ADD_TEST(qa_copy "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_copy_test.sh")
+ADD_TEST(qa_vector_insert "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_vector_insert_test.sh")
 ADD_TEST(qa_pll_refout "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_pll_refout_test.sh")
 ADD_TEST(qa_complex_to_xxx "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_complex_to_xxx_test.sh")
 ADD_TEST(qa_kludged_imports "/bin/sh" "/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/python/gnuradio/gr/qa_kludged_imports_test.sh")

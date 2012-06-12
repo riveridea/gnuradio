@@ -3535,150 +3535,152 @@ namespace Swig {
 #define SWIGTYPE_p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t swig_types[105]
 #define SWIGTYPE_p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t swig_types[106]
 #define SWIGTYPE_p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t swig_types[107]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_b_t swig_types[108]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_c_t swig_types[109]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_f_t swig_types[110]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_i_t swig_types[111]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_s_t swig_types[112]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_b_t swig_types[113]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_c_t swig_types[114]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_f_t swig_types[115]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_i_t swig_types[116]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_s_t swig_types[117]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_bb_t swig_types[118]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_ii_t swig_types[119]
-#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_ss_t swig_types[120]
-#define SWIGTYPE_p_char swig_types[121]
-#define SWIGTYPE_p_difference_type swig_types[122]
-#define SWIGTYPE_p_gr_add_cc swig_types[123]
-#define SWIGTYPE_p_gr_add_const_cc swig_types[124]
-#define SWIGTYPE_p_gr_add_const_ff swig_types[125]
-#define SWIGTYPE_p_gr_add_const_ii swig_types[126]
-#define SWIGTYPE_p_gr_add_const_sf swig_types[127]
-#define SWIGTYPE_p_gr_add_const_ss swig_types[128]
-#define SWIGTYPE_p_gr_add_const_vcc swig_types[129]
-#define SWIGTYPE_p_gr_add_const_vff swig_types[130]
-#define SWIGTYPE_p_gr_add_const_vii swig_types[131]
-#define SWIGTYPE_p_gr_add_const_vss swig_types[132]
-#define SWIGTYPE_p_gr_add_ii swig_types[133]
-#define SWIGTYPE_p_gr_add_ss swig_types[134]
-#define SWIGTYPE_p_gr_and_bb swig_types[135]
-#define SWIGTYPE_p_gr_and_const_bb swig_types[136]
-#define SWIGTYPE_p_gr_and_const_ii swig_types[137]
-#define SWIGTYPE_p_gr_and_const_ss swig_types[138]
-#define SWIGTYPE_p_gr_and_ii swig_types[139]
-#define SWIGTYPE_p_gr_and_ss swig_types[140]
-#define SWIGTYPE_p_gr_argmax_fs swig_types[141]
-#define SWIGTYPE_p_gr_argmax_is swig_types[142]
-#define SWIGTYPE_p_gr_argmax_ss swig_types[143]
-#define SWIGTYPE_p_gr_basic_block swig_types[144]
-#define SWIGTYPE_p_gr_block swig_types[145]
-#define SWIGTYPE_p_gr_chunks_to_symbols_bc swig_types[146]
-#define SWIGTYPE_p_gr_chunks_to_symbols_bf swig_types[147]
-#define SWIGTYPE_p_gr_chunks_to_symbols_ic swig_types[148]
-#define SWIGTYPE_p_gr_chunks_to_symbols_if swig_types[149]
-#define SWIGTYPE_p_gr_chunks_to_symbols_sc swig_types[150]
-#define SWIGTYPE_p_gr_chunks_to_symbols_sf swig_types[151]
-#define SWIGTYPE_p_gr_divide_cc swig_types[152]
-#define SWIGTYPE_p_gr_divide_ff swig_types[153]
-#define SWIGTYPE_p_gr_divide_ii swig_types[154]
-#define SWIGTYPE_p_gr_divide_ss swig_types[155]
-#define SWIGTYPE_p_gr_endianness_t swig_types[156]
-#define SWIGTYPE_p_gr_hier_block2 swig_types[157]
-#define SWIGTYPE_p_gr_integrate_cc swig_types[158]
-#define SWIGTYPE_p_gr_integrate_ff swig_types[159]
-#define SWIGTYPE_p_gr_integrate_ii swig_types[160]
-#define SWIGTYPE_p_gr_integrate_ss swig_types[161]
-#define SWIGTYPE_p_gr_max_ff swig_types[162]
-#define SWIGTYPE_p_gr_max_ii swig_types[163]
-#define SWIGTYPE_p_gr_max_ss swig_types[164]
-#define SWIGTYPE_p_gr_moving_average_cc swig_types[165]
-#define SWIGTYPE_p_gr_moving_average_ff swig_types[166]
-#define SWIGTYPE_p_gr_moving_average_ii swig_types[167]
-#define SWIGTYPE_p_gr_moving_average_ss swig_types[168]
-#define SWIGTYPE_p_gr_multiply_const_ii swig_types[169]
-#define SWIGTYPE_p_gr_multiply_const_ss swig_types[170]
-#define SWIGTYPE_p_gr_multiply_const_vcc swig_types[171]
-#define SWIGTYPE_p_gr_multiply_const_vff swig_types[172]
-#define SWIGTYPE_p_gr_multiply_const_vii swig_types[173]
-#define SWIGTYPE_p_gr_multiply_const_vss swig_types[174]
-#define SWIGTYPE_p_gr_multiply_ii swig_types[175]
-#define SWIGTYPE_p_gr_multiply_ss swig_types[176]
-#define SWIGTYPE_p_gr_mute_cc swig_types[177]
-#define SWIGTYPE_p_gr_mute_ff swig_types[178]
-#define SWIGTYPE_p_gr_mute_ii swig_types[179]
-#define SWIGTYPE_p_gr_mute_ss swig_types[180]
-#define SWIGTYPE_p_gr_noise_source_c swig_types[181]
-#define SWIGTYPE_p_gr_noise_source_f swig_types[182]
-#define SWIGTYPE_p_gr_noise_source_i swig_types[183]
-#define SWIGTYPE_p_gr_noise_source_s swig_types[184]
-#define SWIGTYPE_p_gr_noise_type_t swig_types[185]
-#define SWIGTYPE_p_gr_not_bb swig_types[186]
-#define SWIGTYPE_p_gr_not_ii swig_types[187]
-#define SWIGTYPE_p_gr_not_ss swig_types[188]
-#define SWIGTYPE_p_gr_or_bb swig_types[189]
-#define SWIGTYPE_p_gr_or_ii swig_types[190]
-#define SWIGTYPE_p_gr_or_ss swig_types[191]
-#define SWIGTYPE_p_gr_packed_to_unpacked_bb swig_types[192]
-#define SWIGTYPE_p_gr_packed_to_unpacked_ii swig_types[193]
-#define SWIGTYPE_p_gr_packed_to_unpacked_ss swig_types[194]
-#define SWIGTYPE_p_gr_peak_detector_fb swig_types[195]
-#define SWIGTYPE_p_gr_peak_detector_ib swig_types[196]
-#define SWIGTYPE_p_gr_peak_detector_sb swig_types[197]
-#define SWIGTYPE_p_gr_probe_signal_b swig_types[198]
-#define SWIGTYPE_p_gr_probe_signal_c swig_types[199]
-#define SWIGTYPE_p_gr_probe_signal_f swig_types[200]
-#define SWIGTYPE_p_gr_probe_signal_i swig_types[201]
-#define SWIGTYPE_p_gr_probe_signal_s swig_types[202]
-#define SWIGTYPE_p_gr_probe_signal_vb swig_types[203]
-#define SWIGTYPE_p_gr_probe_signal_vc swig_types[204]
-#define SWIGTYPE_p_gr_probe_signal_vf swig_types[205]
-#define SWIGTYPE_p_gr_probe_signal_vi swig_types[206]
-#define SWIGTYPE_p_gr_probe_signal_vs swig_types[207]
-#define SWIGTYPE_p_gr_sample_and_hold_bb swig_types[208]
-#define SWIGTYPE_p_gr_sample_and_hold_ff swig_types[209]
-#define SWIGTYPE_p_gr_sample_and_hold_ii swig_types[210]
-#define SWIGTYPE_p_gr_sample_and_hold_ss swig_types[211]
-#define SWIGTYPE_p_gr_sig_source_c swig_types[212]
-#define SWIGTYPE_p_gr_sig_source_f swig_types[213]
-#define SWIGTYPE_p_gr_sig_source_i swig_types[214]
-#define SWIGTYPE_p_gr_sig_source_s swig_types[215]
-#define SWIGTYPE_p_gr_sub_cc swig_types[216]
-#define SWIGTYPE_p_gr_sub_ff swig_types[217]
-#define SWIGTYPE_p_gr_sub_ii swig_types[218]
-#define SWIGTYPE_p_gr_sub_ss swig_types[219]
-#define SWIGTYPE_p_gr_sync_block swig_types[220]
-#define SWIGTYPE_p_gr_sync_decimator swig_types[221]
-#define SWIGTYPE_p_gr_sync_interpolator swig_types[222]
-#define SWIGTYPE_p_gr_top_block swig_types[223]
-#define SWIGTYPE_p_gr_unpacked_to_packed_bb swig_types[224]
-#define SWIGTYPE_p_gr_unpacked_to_packed_ii swig_types[225]
-#define SWIGTYPE_p_gr_unpacked_to_packed_ss swig_types[226]
-#define SWIGTYPE_p_gr_vector_sink_b swig_types[227]
-#define SWIGTYPE_p_gr_vector_sink_c swig_types[228]
-#define SWIGTYPE_p_gr_vector_sink_f swig_types[229]
-#define SWIGTYPE_p_gr_vector_sink_i swig_types[230]
-#define SWIGTYPE_p_gr_vector_sink_s swig_types[231]
-#define SWIGTYPE_p_gr_vector_source_b swig_types[232]
-#define SWIGTYPE_p_gr_vector_source_c swig_types[233]
-#define SWIGTYPE_p_gr_vector_source_f swig_types[234]
-#define SWIGTYPE_p_gr_vector_source_i swig_types[235]
-#define SWIGTYPE_p_gr_vector_source_s swig_types[236]
-#define SWIGTYPE_p_gr_waveform_t swig_types[237]
-#define SWIGTYPE_p_gr_xor_bb swig_types[238]
-#define SWIGTYPE_p_gr_xor_ii swig_types[239]
-#define SWIGTYPE_p_gr_xor_ss swig_types[240]
-#define SWIGTYPE_p_gruel__rt_status_t swig_types[241]
-#define SWIGTYPE_p_long_long swig_types[242]
-#define SWIGTYPE_p_size_type swig_types[243]
-#define SWIGTYPE_p_std__complexT_double_t swig_types[244]
-#define SWIGTYPE_p_std__complexT_float_t swig_types[245]
-#define SWIGTYPE_p_std__invalid_argument swig_types[246]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[247]
-#define SWIGTYPE_p_unsigned_long_long swig_types[248]
-#define SWIGTYPE_p_value_type swig_types[249]
-static swig_type_info *swig_types[251];
-static swig_module_info swig_module = {swig_types, 250, 0, 0, 0, 0};
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t swig_types[108]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_b_t swig_types[109]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_c_t swig_types[110]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_f_t swig_types[111]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_i_t swig_types[112]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_sink_s_t swig_types[113]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_b_t swig_types[114]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_c_t swig_types[115]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_f_t swig_types[116]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_i_t swig_types[117]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_s_t swig_types[118]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_bb_t swig_types[119]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_ii_t swig_types[120]
+#define SWIGTYPE_p_boost__shared_ptrT_gr_xor_ss_t swig_types[121]
+#define SWIGTYPE_p_char swig_types[122]
+#define SWIGTYPE_p_difference_type swig_types[123]
+#define SWIGTYPE_p_gr_add_cc swig_types[124]
+#define SWIGTYPE_p_gr_add_const_cc swig_types[125]
+#define SWIGTYPE_p_gr_add_const_ff swig_types[126]
+#define SWIGTYPE_p_gr_add_const_ii swig_types[127]
+#define SWIGTYPE_p_gr_add_const_sf swig_types[128]
+#define SWIGTYPE_p_gr_add_const_ss swig_types[129]
+#define SWIGTYPE_p_gr_add_const_vcc swig_types[130]
+#define SWIGTYPE_p_gr_add_const_vff swig_types[131]
+#define SWIGTYPE_p_gr_add_const_vii swig_types[132]
+#define SWIGTYPE_p_gr_add_const_vss swig_types[133]
+#define SWIGTYPE_p_gr_add_ii swig_types[134]
+#define SWIGTYPE_p_gr_add_ss swig_types[135]
+#define SWIGTYPE_p_gr_and_bb swig_types[136]
+#define SWIGTYPE_p_gr_and_const_bb swig_types[137]
+#define SWIGTYPE_p_gr_and_const_ii swig_types[138]
+#define SWIGTYPE_p_gr_and_const_ss swig_types[139]
+#define SWIGTYPE_p_gr_and_ii swig_types[140]
+#define SWIGTYPE_p_gr_and_ss swig_types[141]
+#define SWIGTYPE_p_gr_argmax_fs swig_types[142]
+#define SWIGTYPE_p_gr_argmax_is swig_types[143]
+#define SWIGTYPE_p_gr_argmax_ss swig_types[144]
+#define SWIGTYPE_p_gr_basic_block swig_types[145]
+#define SWIGTYPE_p_gr_block swig_types[146]
+#define SWIGTYPE_p_gr_chunks_to_symbols_bc swig_types[147]
+#define SWIGTYPE_p_gr_chunks_to_symbols_bf swig_types[148]
+#define SWIGTYPE_p_gr_chunks_to_symbols_ic swig_types[149]
+#define SWIGTYPE_p_gr_chunks_to_symbols_if swig_types[150]
+#define SWIGTYPE_p_gr_chunks_to_symbols_sc swig_types[151]
+#define SWIGTYPE_p_gr_chunks_to_symbols_sf swig_types[152]
+#define SWIGTYPE_p_gr_divide_cc swig_types[153]
+#define SWIGTYPE_p_gr_divide_ff swig_types[154]
+#define SWIGTYPE_p_gr_divide_ii swig_types[155]
+#define SWIGTYPE_p_gr_divide_ss swig_types[156]
+#define SWIGTYPE_p_gr_endianness_t swig_types[157]
+#define SWIGTYPE_p_gr_hier_block2 swig_types[158]
+#define SWIGTYPE_p_gr_integrate_cc swig_types[159]
+#define SWIGTYPE_p_gr_integrate_ff swig_types[160]
+#define SWIGTYPE_p_gr_integrate_ii swig_types[161]
+#define SWIGTYPE_p_gr_integrate_ss swig_types[162]
+#define SWIGTYPE_p_gr_max_ff swig_types[163]
+#define SWIGTYPE_p_gr_max_ii swig_types[164]
+#define SWIGTYPE_p_gr_max_ss swig_types[165]
+#define SWIGTYPE_p_gr_moving_average_cc swig_types[166]
+#define SWIGTYPE_p_gr_moving_average_ff swig_types[167]
+#define SWIGTYPE_p_gr_moving_average_ii swig_types[168]
+#define SWIGTYPE_p_gr_moving_average_ss swig_types[169]
+#define SWIGTYPE_p_gr_multiply_const_ii swig_types[170]
+#define SWIGTYPE_p_gr_multiply_const_ss swig_types[171]
+#define SWIGTYPE_p_gr_multiply_const_vcc swig_types[172]
+#define SWIGTYPE_p_gr_multiply_const_vff swig_types[173]
+#define SWIGTYPE_p_gr_multiply_const_vii swig_types[174]
+#define SWIGTYPE_p_gr_multiply_const_vss swig_types[175]
+#define SWIGTYPE_p_gr_multiply_ii swig_types[176]
+#define SWIGTYPE_p_gr_multiply_ss swig_types[177]
+#define SWIGTYPE_p_gr_mute_cc swig_types[178]
+#define SWIGTYPE_p_gr_mute_ff swig_types[179]
+#define SWIGTYPE_p_gr_mute_ii swig_types[180]
+#define SWIGTYPE_p_gr_mute_ss swig_types[181]
+#define SWIGTYPE_p_gr_noise_source_c swig_types[182]
+#define SWIGTYPE_p_gr_noise_source_f swig_types[183]
+#define SWIGTYPE_p_gr_noise_source_i swig_types[184]
+#define SWIGTYPE_p_gr_noise_source_s swig_types[185]
+#define SWIGTYPE_p_gr_noise_type_t swig_types[186]
+#define SWIGTYPE_p_gr_not_bb swig_types[187]
+#define SWIGTYPE_p_gr_not_ii swig_types[188]
+#define SWIGTYPE_p_gr_not_ss swig_types[189]
+#define SWIGTYPE_p_gr_or_bb swig_types[190]
+#define SWIGTYPE_p_gr_or_ii swig_types[191]
+#define SWIGTYPE_p_gr_or_ss swig_types[192]
+#define SWIGTYPE_p_gr_packed_to_unpacked_bb swig_types[193]
+#define SWIGTYPE_p_gr_packed_to_unpacked_ii swig_types[194]
+#define SWIGTYPE_p_gr_packed_to_unpacked_ss swig_types[195]
+#define SWIGTYPE_p_gr_peak_detector_fb swig_types[196]
+#define SWIGTYPE_p_gr_peak_detector_ib swig_types[197]
+#define SWIGTYPE_p_gr_peak_detector_sb swig_types[198]
+#define SWIGTYPE_p_gr_probe_signal_b swig_types[199]
+#define SWIGTYPE_p_gr_probe_signal_c swig_types[200]
+#define SWIGTYPE_p_gr_probe_signal_f swig_types[201]
+#define SWIGTYPE_p_gr_probe_signal_i swig_types[202]
+#define SWIGTYPE_p_gr_probe_signal_s swig_types[203]
+#define SWIGTYPE_p_gr_probe_signal_vb swig_types[204]
+#define SWIGTYPE_p_gr_probe_signal_vc swig_types[205]
+#define SWIGTYPE_p_gr_probe_signal_vf swig_types[206]
+#define SWIGTYPE_p_gr_probe_signal_vi swig_types[207]
+#define SWIGTYPE_p_gr_probe_signal_vs swig_types[208]
+#define SWIGTYPE_p_gr_sample_and_hold_bb swig_types[209]
+#define SWIGTYPE_p_gr_sample_and_hold_ff swig_types[210]
+#define SWIGTYPE_p_gr_sample_and_hold_ii swig_types[211]
+#define SWIGTYPE_p_gr_sample_and_hold_ss swig_types[212]
+#define SWIGTYPE_p_gr_sig_source_c swig_types[213]
+#define SWIGTYPE_p_gr_sig_source_f swig_types[214]
+#define SWIGTYPE_p_gr_sig_source_i swig_types[215]
+#define SWIGTYPE_p_gr_sig_source_s swig_types[216]
+#define SWIGTYPE_p_gr_sub_cc swig_types[217]
+#define SWIGTYPE_p_gr_sub_ff swig_types[218]
+#define SWIGTYPE_p_gr_sub_ii swig_types[219]
+#define SWIGTYPE_p_gr_sub_ss swig_types[220]
+#define SWIGTYPE_p_gr_sync_block swig_types[221]
+#define SWIGTYPE_p_gr_sync_decimator swig_types[222]
+#define SWIGTYPE_p_gr_sync_interpolator swig_types[223]
+#define SWIGTYPE_p_gr_top_block swig_types[224]
+#define SWIGTYPE_p_gr_unpacked_to_packed_bb swig_types[225]
+#define SWIGTYPE_p_gr_unpacked_to_packed_ii swig_types[226]
+#define SWIGTYPE_p_gr_unpacked_to_packed_ss swig_types[227]
+#define SWIGTYPE_p_gr_vector_insert_b swig_types[228]
+#define SWIGTYPE_p_gr_vector_sink_b swig_types[229]
+#define SWIGTYPE_p_gr_vector_sink_c swig_types[230]
+#define SWIGTYPE_p_gr_vector_sink_f swig_types[231]
+#define SWIGTYPE_p_gr_vector_sink_i swig_types[232]
+#define SWIGTYPE_p_gr_vector_sink_s swig_types[233]
+#define SWIGTYPE_p_gr_vector_source_b swig_types[234]
+#define SWIGTYPE_p_gr_vector_source_c swig_types[235]
+#define SWIGTYPE_p_gr_vector_source_f swig_types[236]
+#define SWIGTYPE_p_gr_vector_source_i swig_types[237]
+#define SWIGTYPE_p_gr_vector_source_s swig_types[238]
+#define SWIGTYPE_p_gr_waveform_t swig_types[239]
+#define SWIGTYPE_p_gr_xor_bb swig_types[240]
+#define SWIGTYPE_p_gr_xor_ii swig_types[241]
+#define SWIGTYPE_p_gr_xor_ss swig_types[242]
+#define SWIGTYPE_p_gruel__rt_status_t swig_types[243]
+#define SWIGTYPE_p_long_long swig_types[244]
+#define SWIGTYPE_p_size_type swig_types[245]
+#define SWIGTYPE_p_std__complexT_double_t swig_types[246]
+#define SWIGTYPE_p_std__complexT_float_t swig_types[247]
+#define SWIGTYPE_p_std__invalid_argument swig_types[248]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[249]
+#define SWIGTYPE_p_unsigned_long_long swig_types[250]
+#define SWIGTYPE_p_value_type swig_types[251]
+static swig_type_info *swig_types[253];
+static swig_module_info swig_module = {swig_types, 252, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -5081,6 +5083,7 @@ SWIG_From_int  (int value)
 #include<gr_vector_source_i.h>
 #include<gr_vector_source_f.h>
 #include<gr_vector_source_c.h>
+#include<gr_vector_insert_b.h>
 #include<gr_vector_sink_b.h>
 #include<gr_vector_sink_s.h>
 #include<gr_vector_sink_i.h>
@@ -5186,24 +5189,6 @@ SWIG_From_int  (int value)
 #include<gr_peak_detector_sb.h>
 
 
-SWIGINTERNINLINE PyObject* 
-SWIG_From_unsigned_SS_long  (unsigned long value)
-{
-  return (value > LONG_MAX) ?
-    PyLong_FromUnsignedLong(value) : PyInt_FromLong(static_cast< long >(value)); 
-}
-
-
-SWIGINTERNINLINE PyObject *
-SWIG_From_unsigned_SS_int  (unsigned int value)
-{    
-  return SWIG_From_unsigned_SS_long  (value);
-}
-
-
-  #define SWIG_From_double   PyFloat_FromDouble 
-
-
 #include <limits.h>
 #if !defined(SWIG_NO_LLONG_MAX)
 # if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
@@ -5212,95 +5197,6 @@ SWIG_From_unsigned_SS_int  (unsigned int value)
 #   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
 # endif
 #endif
-
-
-SWIGINTERN int
-SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
-{
-  unsigned long v;
-  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v > UINT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< unsigned int >(v);
-    }
-  }  
-  return res;
-}
-
-
-SWIGINTERNINLINE PyObject* 
-SWIG_From_long_SS_long  (long long value)
-{
-  return ((value < LONG_MIN) || (value > LONG_MAX)) ?
-    PyLong_FromLongLong(value) : PyInt_FromLong(static_cast< long >(value)); 
-}
-
-
-SWIGINTERNINLINE PyObject* 
-SWIG_From_unsigned_SS_long_SS_long  (unsigned long long value)
-{
-  return (value > LONG_MAX) ?
-    PyLong_FromUnsignedLongLong(value) : PyInt_FromLong(static_cast< long >(value)); 
-}
-
-
-SWIGINTERN swig_type_info*
-SWIG_pchar_descriptor(void)
-{
-  static int init = 0;
-  static swig_type_info* info = 0;
-  if (!init) {
-    info = SWIG_TypeQuery("_p_char");
-    init = 1;
-  }
-  return info;
-}
-
-
-SWIGINTERNINLINE PyObject *
-SWIG_FromCharPtrAndSize(const char* carray, size_t size)
-{
-  if (carray) {
-    if (size > INT_MAX) {
-      swig_type_info* pchar_descriptor = SWIG_pchar_descriptor();
-      return pchar_descriptor ? 
-	SWIG_InternalNewPointerObj(const_cast< char * >(carray), pchar_descriptor, 0) : SWIG_Py_Void();
-    } else {
-#if PY_VERSION_HEX >= 0x03000000
-      return PyUnicode_FromStringAndSize(carray, static_cast< int >(size));
-#else
-      return PyString_FromStringAndSize(carray, static_cast< int >(size));
-#endif
-    }
-  } else {
-    return SWIG_Py_Void();
-  }
-}
-
-
-SWIGINTERNINLINE PyObject *
-SWIG_From_std_string  (const std::string& s)
-{
-  return SWIG_FromCharPtrAndSize(s.data(), s.size());
-}
-
-
-SWIGINTERN int
-SWIG_AsVal_int (PyObject * obj, int *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < INT_MIN || v > INT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< int >(v);
-    }
-  }  
-  return res;
-}
 
 
 SWIGINTERN int
@@ -5316,6 +5212,14 @@ SWIG_AsVal_unsigned_SS_char (PyObject * obj, unsigned char *val)
     }
   }  
   return res;
+}
+
+
+SWIGINTERNINLINE PyObject* 
+SWIG_From_unsigned_SS_long  (unsigned long value)
+{
+  return (value > LONG_MAX) ?
+    PyLong_FromUnsignedLong(value) : PyInt_FromLong(static_cast< long >(value)); 
 }
 
 
@@ -5453,6 +5357,105 @@ namespace swig {
 	};
       }
     
+
+SWIGINTERNINLINE PyObject *
+SWIG_From_unsigned_SS_int  (unsigned int value)
+{    
+  return SWIG_From_unsigned_SS_long  (value);
+}
+
+
+  #define SWIG_From_double   PyFloat_FromDouble 
+
+
+SWIGINTERN int
+SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
+{
+  unsigned long v;
+  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v > UINT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< unsigned int >(v);
+    }
+  }  
+  return res;
+}
+
+
+SWIGINTERNINLINE PyObject* 
+SWIG_From_long_SS_long  (long long value)
+{
+  return ((value < LONG_MIN) || (value > LONG_MAX)) ?
+    PyLong_FromLongLong(value) : PyInt_FromLong(static_cast< long >(value)); 
+}
+
+
+SWIGINTERNINLINE PyObject* 
+SWIG_From_unsigned_SS_long_SS_long  (unsigned long long value)
+{
+  return (value > LONG_MAX) ?
+    PyLong_FromUnsignedLongLong(value) : PyInt_FromLong(static_cast< long >(value)); 
+}
+
+
+SWIGINTERN swig_type_info*
+SWIG_pchar_descriptor(void)
+{
+  static int init = 0;
+  static swig_type_info* info = 0;
+  if (!init) {
+    info = SWIG_TypeQuery("_p_char");
+    init = 1;
+  }
+  return info;
+}
+
+
+SWIGINTERNINLINE PyObject *
+SWIG_FromCharPtrAndSize(const char* carray, size_t size)
+{
+  if (carray) {
+    if (size > INT_MAX) {
+      swig_type_info* pchar_descriptor = SWIG_pchar_descriptor();
+      return pchar_descriptor ? 
+	SWIG_InternalNewPointerObj(const_cast< char * >(carray), pchar_descriptor, 0) : SWIG_Py_Void();
+    } else {
+#if PY_VERSION_HEX >= 0x03000000
+      return PyUnicode_FromStringAndSize(carray, static_cast< int >(size));
+#else
+      return PyString_FromStringAndSize(carray, static_cast< int >(size));
+#endif
+    }
+  } else {
+    return SWIG_Py_Void();
+  }
+}
+
+
+SWIGINTERNINLINE PyObject *
+SWIG_From_std_string  (const std::string& s)
+{
+  return SWIG_FromCharPtrAndSize(s.data(), s.size());
+}
+
+
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< int >(v);
+    }
+  }  
+  return res;
+}
+
 
 SWIGINTERN int
 SWIG_AsVal_bool (PyObject *obj, bool *val)
@@ -6788,6 +6791,57 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_gr_vector_source_b_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_source_b > *arg1 = (boost::shared_ptr< gr_vector_source_b > *) 0 ;
+  std::vector< unsigned char,std::allocator< unsigned char > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_source_b_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_source_b_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_source_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_source_b > * >(argp1);
+  {
+    std::vector<unsigned char,std::allocator< unsigned char > > *ptr = (std::vector<unsigned char,std::allocator< unsigned char > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_source_b_sptr_set_data" "', argument " "2"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_source_b_sptr_set_data" "', argument " "2"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< unsigned char,std::allocator< unsigned char > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_gr_vector_source_b_sptr_history(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   boost::shared_ptr< gr_vector_source_b > *arg1 = (boost::shared_ptr< gr_vector_source_b > *) 0 ;
@@ -7606,6 +7660,57 @@ SWIGINTERN PyObject *_wrap_gr_vector_source_s_sptr_rewind(PyObject *SWIGUNUSEDPA
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_source_s_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_source_s > *arg1 = (boost::shared_ptr< gr_vector_source_s > *) 0 ;
+  std::vector< short,std::allocator< short > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_source_s_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_s_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_source_s_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_source_s > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_source_s > * >(argp1);
+  {
+    std::vector<short,std::allocator< short > > *ptr = (std::vector<short,std::allocator< short > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_source_s_sptr_set_data" "', argument " "2"" of type '" "std::vector< short,std::allocator< short > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_source_s_sptr_set_data" "', argument " "2"" of type '" "std::vector< short,std::allocator< short > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< short,std::allocator< short > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
 }
 
@@ -8432,6 +8537,57 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_gr_vector_source_i_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_source_i > *arg1 = (boost::shared_ptr< gr_vector_source_i > *) 0 ;
+  std::vector< int,std::allocator< int > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_source_i_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_i_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_source_i_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_source_i > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_source_i > * >(argp1);
+  {
+    std::vector<int,std::allocator< int > > *ptr = (std::vector<int,std::allocator< int > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_source_i_sptr_set_data" "', argument " "2"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_source_i_sptr_set_data" "', argument " "2"" of type '" "std::vector< int,std::allocator< int > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< int,std::allocator< int > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_gr_vector_source_i_sptr_history(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   boost::shared_ptr< gr_vector_source_i > *arg1 = (boost::shared_ptr< gr_vector_source_i > *) 0 ;
@@ -9250,6 +9406,57 @@ SWIGINTERN PyObject *_wrap_gr_vector_source_f_sptr_rewind(PyObject *SWIGUNUSEDPA
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_source_f_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_source_f > *arg1 = (boost::shared_ptr< gr_vector_source_f > *) 0 ;
+  std::vector< float,std::allocator< float > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_source_f_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_f_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_source_f_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_source_f > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_source_f > * >(argp1);
+  {
+    std::vector<float,std::allocator< float > > *ptr = (std::vector<float,std::allocator< float > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_source_f_sptr_set_data" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_source_f_sptr_set_data" "', argument " "2"" of type '" "std::vector< float,std::allocator< float > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< float,std::allocator< float > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
   return NULL;
 }
 
@@ -10076,6 +10283,57 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_gr_vector_source_c_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_source_c > *arg1 = (boost::shared_ptr< gr_vector_source_c > *) 0 ;
+  std::vector< gr_complex,std::allocator< gr_complex > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_source_c_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_c_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_source_c_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_source_c > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_source_c > * >(argp1);
+  {
+    std::vector<std::complex< float >,std::allocator< std::complex< float > > > *ptr = (std::vector<std::complex< float >,std::allocator< std::complex< float > > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_source_c_sptr_set_data" "', argument " "2"" of type '" "std::vector< gr_complex,std::allocator< gr_complex > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_source_c_sptr_set_data" "', argument " "2"" of type '" "std::vector< gr_complex,std::allocator< gr_complex > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< gr_complex,std::allocator< gr_complex > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_gr_vector_source_c_sptr_history(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   boost::shared_ptr< gr_vector_source_c > *arg1 = (boost::shared_ptr< gr_vector_source_c > *) 0 ;
@@ -10705,6 +10963,877 @@ SWIGINTERN PyObject *_wrap_vector_source_c(PyObject *SWIGUNUSEDPARM(self), PyObj
     
   }
   resultobj = SWIG_NewPointerObj((new gr_vector_source_c_sptr(static_cast< const gr_vector_source_c_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_vector_source_c_t, SWIG_POINTER_OWN |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_gr_vector_insert_b_sptr__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *result = 0 ;
+  
+  {
+    try {
+      result = (boost::shared_ptr< gr_vector_insert_b > *)new boost::shared_ptr< gr_vector_insert_b >();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_gr_vector_insert_b_sptr__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  gr_vector_insert_b *arg1 = (gr_vector_insert_b *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  boost::shared_ptr< gr_vector_insert_b > *result = 0 ;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"new_gr_vector_insert_b_sptr",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_gr_vector_insert_b, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_gr_vector_insert_b_sptr" "', argument " "1"" of type '" "gr_vector_insert_b *""'"); 
+  }
+  arg1 = reinterpret_cast< gr_vector_insert_b * >(argp1);
+  {
+    try {
+      result = (boost::shared_ptr< gr_vector_insert_b > *)new boost::shared_ptr< gr_vector_insert_b >(arg1);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_gr_vector_insert_b_sptr(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = args ? (int)PyObject_Length(args) : 0;
+  for (ii = 0; (ii < 1) && (ii < argc); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_gr_vector_insert_b_sptr__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_gr_vector_insert_b, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_gr_vector_insert_b_sptr__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_gr_vector_insert_b_sptr'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    boost::shared_ptr< gr_vector_insert_b >::shared_ptr()\n"
+    "    boost::shared_ptr< gr_vector_insert_b >::shared_ptr(gr_vector_insert_b *)\n");
+  return 0;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr___deref__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  gr_vector_insert_b *result = 0 ;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr___deref__",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr___deref__" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (gr_vector_insert_b *)(arg1)->operator ->();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_gr_vector_insert_b, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_gr_vector_insert_b_sptr(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"delete_gr_vector_insert_b_sptr",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_gr_vector_insert_b_sptr" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      delete arg1;
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_rewind(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_rewind",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_rewind" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      (*arg1)->rewind();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_set_data(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  std::vector< unsigned char,std::allocator< unsigned char > > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "data", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_insert_b_sptr_set_data",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_set_data" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    std::vector<unsigned char,std::allocator< unsigned char > > *ptr = (std::vector<unsigned char,std::allocator< unsigned char > > *)0;
+    res2 = swig::asptr(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_insert_b_sptr_set_data" "', argument " "2"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_insert_b_sptr_set_data" "', argument " "2"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  {
+    try {
+      (*arg1)->set_data((std::vector< unsigned char,std::allocator< unsigned char > > const &)*arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_history(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  unsigned int result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_history",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_history" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (unsigned int)(*arg1)->history();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_unsigned_SS_int(static_cast< unsigned int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_output_multiple(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_output_multiple",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_output_multiple" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (int)(*arg1)->output_multiple();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_relative_rate(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_relative_rate",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_relative_rate" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (double)(*arg1)->relative_rate();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_start(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_start",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_start" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->start();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_stop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_stop",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_stop" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (bool)(*arg1)->stop();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_nitems_read(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "which_input", NULL 
+  };
+  uint64_t result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_insert_b_sptr_nitems_read",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_nitems_read" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "gr_vector_insert_b_sptr_nitems_read" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  {
+    try {
+      result = (uint64_t)(*arg1)->nitems_read(arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_unsigned_SS_long_SS_long(static_cast< unsigned long long >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_nitems_written(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  unsigned int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  unsigned int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "which_output", NULL 
+  };
+  uint64_t result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_insert_b_sptr_nitems_written",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_nitems_written" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  ecode2 = SWIG_AsVal_unsigned_SS_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "gr_vector_insert_b_sptr_nitems_written" "', argument " "2"" of type '" "unsigned int""'");
+  } 
+  arg2 = static_cast< unsigned int >(val2);
+  {
+    try {
+      result = (uint64_t)(*arg1)->nitems_written(arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_unsigned_SS_long_SS_long(static_cast< unsigned long long >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_detail(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  gr_block_detail_sptr result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_detail",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_detail" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (*arg1)->detail();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj((new gr_block_detail_sptr(static_cast< const gr_block_detail_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_block_detail_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_set_detail(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  gr_block_detail_sptr arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "detail", NULL 
+  };
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO:gr_vector_insert_b_sptr_set_detail",kwnames,&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_set_detail" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_boost__shared_ptrT_gr_block_detail_t,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "gr_vector_insert_b_sptr_set_detail" "', argument " "2"" of type '" "gr_block_detail_sptr""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "gr_vector_insert_b_sptr_set_detail" "', argument " "2"" of type '" "gr_block_detail_sptr""'");
+    } else {
+      gr_block_detail_sptr * temp = reinterpret_cast< gr_block_detail_sptr * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  {
+    try {
+      (*arg1)->set_detail(arg2);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_name(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_name",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_name" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (*arg1)->name();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_input_signature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  gr_io_signature_sptr result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_input_signature",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_input_signature" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (*arg1)->input_signature();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj((new gr_io_signature_sptr(static_cast< const gr_io_signature_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_io_signature_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_output_signature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  gr_io_signature_sptr result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_output_signature",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_output_signature" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (*arg1)->output_signature();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj((new gr_io_signature_sptr(static_cast< const gr_io_signature_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_io_signature_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_unique_id(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  long result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_unique_id",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_unique_id" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > const *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (long)(*arg1)->unique_id();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_long(static_cast< long >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_to_basic_block(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  gr_basic_block_sptr result;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"gr_vector_insert_b_sptr_to_basic_block",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_to_basic_block" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  {
+    try {
+      result = (*arg1)->to_basic_block();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj((new gr_basic_block_sptr(static_cast< const gr_basic_block_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_basic_block_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_gr_vector_insert_b_sptr_check_topology(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< gr_vector_insert_b > *arg1 = (boost::shared_ptr< gr_vector_insert_b > *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char *  kwnames[] = {
+    (char *) "self",(char *) "ninputs",(char *) "noutputs", NULL 
+  };
+  bool result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OOO:gr_vector_insert_b_sptr_check_topology",kwnames,&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "gr_vector_insert_b_sptr_check_topology" "', argument " "1"" of type '" "boost::shared_ptr< gr_vector_insert_b > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< gr_vector_insert_b > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "gr_vector_insert_b_sptr_check_topology" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "gr_vector_insert_b_sptr_check_topology" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  {
+    try {
+      result = (bool)(*arg1)->check_topology(arg2,arg3);
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *gr_vector_insert_b_sptr_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_UnpackTuple(args,(char*)"swigregister", 1, 1,&obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_vector_insert_b(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
+  PyObject *resultobj = 0;
+  std::vector< unsigned char,std::allocator< unsigned char > > *arg1 = 0 ;
+  int arg2 ;
+  int arg3 = (int) 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  char *  kwnames[] = {
+    (char *) "data",(char *) "periodicity",(char *) "offset", NULL 
+  };
+  gr_vector_insert_b_sptr result;
+  
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OO|O:vector_insert_b",kwnames,&obj0,&obj1,&obj2)) SWIG_fail;
+  {
+    std::vector<unsigned char,std::allocator< unsigned char > > *ptr = (std::vector<unsigned char,std::allocator< unsigned char > > *)0;
+    res1 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "vector_insert_b" "', argument " "1"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "vector_insert_b" "', argument " "1"" of type '" "std::vector< unsigned char,std::allocator< unsigned char > > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "vector_insert_b" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (obj2) {
+    ecode3 = SWIG_AsVal_int(obj2, &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "vector_insert_b" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = static_cast< int >(val3);
+  }
+  {
+    try {
+      try {
+        result = gr_make_vector_insert_b((std::vector< unsigned char,std::allocator< unsigned char > > const &)*arg1,arg2,arg3);
+      }
+      catch(std::invalid_argument &_e) {
+        SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+      }
+      
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_NewPointerObj((new gr_vector_insert_b_sptr(static_cast< const gr_vector_insert_b_sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr_vector_insert_b_t, SWIG_POINTER_OWN |  0 );
   if (SWIG_IsNewObj(res1)) delete arg1;
   return resultobj;
 fail:
@@ -95431,6 +96560,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gr_vector_source_b_sptr___deref__", _wrap_gr_vector_source_b_sptr___deref__, METH_VARARGS, (char *)"gr_vector_source_b_sptr___deref__(gr_vector_source_b_sptr self)"},
 	 { (char *)"delete_gr_vector_source_b_sptr", _wrap_delete_gr_vector_source_b_sptr, METH_VARARGS, (char *)"delete_gr_vector_source_b_sptr(gr_vector_source_b_sptr self)"},
 	 { (char *)"gr_vector_source_b_sptr_rewind", _wrap_gr_vector_source_b_sptr_rewind, METH_VARARGS, (char *)"gr_vector_source_b_sptr_rewind(gr_vector_source_b_sptr self)"},
+	 { (char *)"gr_vector_source_b_sptr_set_data", (PyCFunction) _wrap_gr_vector_source_b_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_source_b_sptr_set_data(gr_vector_source_b_sptr self, __dummy_0__ data)"},
 	 { (char *)"gr_vector_source_b_sptr_history", _wrap_gr_vector_source_b_sptr_history, METH_VARARGS, (char *)"gr_vector_source_b_sptr_history(gr_vector_source_b_sptr self) -> unsigned int"},
 	 { (char *)"gr_vector_source_b_sptr_output_multiple", _wrap_gr_vector_source_b_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_source_b_sptr_output_multiple(gr_vector_source_b_sptr self) -> int"},
 	 { (char *)"gr_vector_source_b_sptr_relative_rate", _wrap_gr_vector_source_b_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_source_b_sptr_relative_rate(gr_vector_source_b_sptr self) -> double"},
@@ -95459,6 +96589,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gr_vector_source_s_sptr___deref__", _wrap_gr_vector_source_s_sptr___deref__, METH_VARARGS, (char *)"gr_vector_source_s_sptr___deref__(gr_vector_source_s_sptr self)"},
 	 { (char *)"delete_gr_vector_source_s_sptr", _wrap_delete_gr_vector_source_s_sptr, METH_VARARGS, (char *)"delete_gr_vector_source_s_sptr(gr_vector_source_s_sptr self)"},
 	 { (char *)"gr_vector_source_s_sptr_rewind", _wrap_gr_vector_source_s_sptr_rewind, METH_VARARGS, (char *)"gr_vector_source_s_sptr_rewind(gr_vector_source_s_sptr self)"},
+	 { (char *)"gr_vector_source_s_sptr_set_data", (PyCFunction) _wrap_gr_vector_source_s_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_source_s_sptr_set_data(gr_vector_source_s_sptr self, __dummy_2__ data)"},
 	 { (char *)"gr_vector_source_s_sptr_history", _wrap_gr_vector_source_s_sptr_history, METH_VARARGS, (char *)"gr_vector_source_s_sptr_history(gr_vector_source_s_sptr self) -> unsigned int"},
 	 { (char *)"gr_vector_source_s_sptr_output_multiple", _wrap_gr_vector_source_s_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_source_s_sptr_output_multiple(gr_vector_source_s_sptr self) -> int"},
 	 { (char *)"gr_vector_source_s_sptr_relative_rate", _wrap_gr_vector_source_s_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_source_s_sptr_relative_rate(gr_vector_source_s_sptr self) -> double"},
@@ -95487,6 +96618,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gr_vector_source_i_sptr___deref__", _wrap_gr_vector_source_i_sptr___deref__, METH_VARARGS, (char *)"gr_vector_source_i_sptr___deref__(gr_vector_source_i_sptr self)"},
 	 { (char *)"delete_gr_vector_source_i_sptr", _wrap_delete_gr_vector_source_i_sptr, METH_VARARGS, (char *)"delete_gr_vector_source_i_sptr(gr_vector_source_i_sptr self)"},
 	 { (char *)"gr_vector_source_i_sptr_rewind", _wrap_gr_vector_source_i_sptr_rewind, METH_VARARGS, (char *)"gr_vector_source_i_sptr_rewind(gr_vector_source_i_sptr self)"},
+	 { (char *)"gr_vector_source_i_sptr_set_data", (PyCFunction) _wrap_gr_vector_source_i_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_source_i_sptr_set_data(gr_vector_source_i_sptr self, __dummy_3__ data)"},
 	 { (char *)"gr_vector_source_i_sptr_history", _wrap_gr_vector_source_i_sptr_history, METH_VARARGS, (char *)"gr_vector_source_i_sptr_history(gr_vector_source_i_sptr self) -> unsigned int"},
 	 { (char *)"gr_vector_source_i_sptr_output_multiple", _wrap_gr_vector_source_i_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_source_i_sptr_output_multiple(gr_vector_source_i_sptr self) -> int"},
 	 { (char *)"gr_vector_source_i_sptr_relative_rate", _wrap_gr_vector_source_i_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_source_i_sptr_relative_rate(gr_vector_source_i_sptr self) -> double"},
@@ -95515,6 +96647,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gr_vector_source_f_sptr___deref__", _wrap_gr_vector_source_f_sptr___deref__, METH_VARARGS, (char *)"gr_vector_source_f_sptr___deref__(gr_vector_source_f_sptr self)"},
 	 { (char *)"delete_gr_vector_source_f_sptr", _wrap_delete_gr_vector_source_f_sptr, METH_VARARGS, (char *)"delete_gr_vector_source_f_sptr(gr_vector_source_f_sptr self)"},
 	 { (char *)"gr_vector_source_f_sptr_rewind", _wrap_gr_vector_source_f_sptr_rewind, METH_VARARGS, (char *)"gr_vector_source_f_sptr_rewind(gr_vector_source_f_sptr self)"},
+	 { (char *)"gr_vector_source_f_sptr_set_data", (PyCFunction) _wrap_gr_vector_source_f_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_source_f_sptr_set_data(gr_vector_source_f_sptr self, __dummy_4__ data)"},
 	 { (char *)"gr_vector_source_f_sptr_history", _wrap_gr_vector_source_f_sptr_history, METH_VARARGS, (char *)"gr_vector_source_f_sptr_history(gr_vector_source_f_sptr self) -> unsigned int"},
 	 { (char *)"gr_vector_source_f_sptr_output_multiple", _wrap_gr_vector_source_f_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_source_f_sptr_output_multiple(gr_vector_source_f_sptr self) -> int"},
 	 { (char *)"gr_vector_source_f_sptr_relative_rate", _wrap_gr_vector_source_f_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_source_f_sptr_relative_rate(gr_vector_source_f_sptr self) -> double"},
@@ -95543,6 +96676,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"gr_vector_source_c_sptr___deref__", _wrap_gr_vector_source_c_sptr___deref__, METH_VARARGS, (char *)"gr_vector_source_c_sptr___deref__(gr_vector_source_c_sptr self)"},
 	 { (char *)"delete_gr_vector_source_c_sptr", _wrap_delete_gr_vector_source_c_sptr, METH_VARARGS, (char *)"delete_gr_vector_source_c_sptr(gr_vector_source_c_sptr self)"},
 	 { (char *)"gr_vector_source_c_sptr_rewind", _wrap_gr_vector_source_c_sptr_rewind, METH_VARARGS, (char *)"gr_vector_source_c_sptr_rewind(gr_vector_source_c_sptr self)"},
+	 { (char *)"gr_vector_source_c_sptr_set_data", (PyCFunction) _wrap_gr_vector_source_c_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_source_c_sptr_set_data(gr_vector_source_c_sptr self, std::vector<(gr_complex,std::allocator<(gr_complex)>)> data)"},
 	 { (char *)"gr_vector_source_c_sptr_history", _wrap_gr_vector_source_c_sptr_history, METH_VARARGS, (char *)"gr_vector_source_c_sptr_history(gr_vector_source_c_sptr self) -> unsigned int"},
 	 { (char *)"gr_vector_source_c_sptr_output_multiple", _wrap_gr_vector_source_c_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_source_c_sptr_output_multiple(gr_vector_source_c_sptr self) -> int"},
 	 { (char *)"gr_vector_source_c_sptr_relative_rate", _wrap_gr_vector_source_c_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_source_c_sptr_relative_rate(gr_vector_source_c_sptr self) -> double"},
@@ -95564,6 +96698,35 @@ static PyMethodDef SwigMethods[] = {
 		"    bool repeat = False, int vlen = 1) -> gr_vector_source_c_sptr\n"
 		"\n"
 		"source of gr_complex's that gets its data from a vector\n"
+		""},
+	 { (char *)"new_gr_vector_insert_b_sptr", _wrap_new_gr_vector_insert_b_sptr, METH_VARARGS, (char *)"\n"
+		"gr_vector_insert_b_sptr()\n"
+		"new_gr_vector_insert_b_sptr( p) -> gr_vector_insert_b_sptr\n"
+		""},
+	 { (char *)"gr_vector_insert_b_sptr___deref__", _wrap_gr_vector_insert_b_sptr___deref__, METH_VARARGS, (char *)"gr_vector_insert_b_sptr___deref__(gr_vector_insert_b_sptr self)"},
+	 { (char *)"delete_gr_vector_insert_b_sptr", _wrap_delete_gr_vector_insert_b_sptr, METH_VARARGS, (char *)"delete_gr_vector_insert_b_sptr(gr_vector_insert_b_sptr self)"},
+	 { (char *)"gr_vector_insert_b_sptr_rewind", _wrap_gr_vector_insert_b_sptr_rewind, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_rewind(gr_vector_insert_b_sptr self)"},
+	 { (char *)"gr_vector_insert_b_sptr_set_data", (PyCFunction) _wrap_gr_vector_insert_b_sptr_set_data, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_insert_b_sptr_set_data(gr_vector_insert_b_sptr self, __dummy_0__ data)"},
+	 { (char *)"gr_vector_insert_b_sptr_history", _wrap_gr_vector_insert_b_sptr_history, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_history(gr_vector_insert_b_sptr self) -> unsigned int"},
+	 { (char *)"gr_vector_insert_b_sptr_output_multiple", _wrap_gr_vector_insert_b_sptr_output_multiple, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_output_multiple(gr_vector_insert_b_sptr self) -> int"},
+	 { (char *)"gr_vector_insert_b_sptr_relative_rate", _wrap_gr_vector_insert_b_sptr_relative_rate, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_relative_rate(gr_vector_insert_b_sptr self) -> double"},
+	 { (char *)"gr_vector_insert_b_sptr_start", _wrap_gr_vector_insert_b_sptr_start, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_start(gr_vector_insert_b_sptr self) -> bool"},
+	 { (char *)"gr_vector_insert_b_sptr_stop", _wrap_gr_vector_insert_b_sptr_stop, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_stop(gr_vector_insert_b_sptr self) -> bool"},
+	 { (char *)"gr_vector_insert_b_sptr_nitems_read", (PyCFunction) _wrap_gr_vector_insert_b_sptr_nitems_read, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_insert_b_sptr_nitems_read(gr_vector_insert_b_sptr self, unsigned int which_input) -> uint64_t"},
+	 { (char *)"gr_vector_insert_b_sptr_nitems_written", (PyCFunction) _wrap_gr_vector_insert_b_sptr_nitems_written, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_insert_b_sptr_nitems_written(gr_vector_insert_b_sptr self, unsigned int which_output) -> uint64_t"},
+	 { (char *)"gr_vector_insert_b_sptr_detail", _wrap_gr_vector_insert_b_sptr_detail, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_detail(gr_vector_insert_b_sptr self) -> gr_block_detail_sptr"},
+	 { (char *)"gr_vector_insert_b_sptr_set_detail", (PyCFunction) _wrap_gr_vector_insert_b_sptr_set_detail, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_insert_b_sptr_set_detail(gr_vector_insert_b_sptr self, gr_block_detail_sptr detail)"},
+	 { (char *)"gr_vector_insert_b_sptr_name", _wrap_gr_vector_insert_b_sptr_name, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_name(gr_vector_insert_b_sptr self) -> string"},
+	 { (char *)"gr_vector_insert_b_sptr_input_signature", _wrap_gr_vector_insert_b_sptr_input_signature, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_input_signature(gr_vector_insert_b_sptr self) -> gr_io_signature_sptr"},
+	 { (char *)"gr_vector_insert_b_sptr_output_signature", _wrap_gr_vector_insert_b_sptr_output_signature, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_output_signature(gr_vector_insert_b_sptr self) -> gr_io_signature_sptr"},
+	 { (char *)"gr_vector_insert_b_sptr_unique_id", _wrap_gr_vector_insert_b_sptr_unique_id, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_unique_id(gr_vector_insert_b_sptr self) -> long"},
+	 { (char *)"gr_vector_insert_b_sptr_to_basic_block", _wrap_gr_vector_insert_b_sptr_to_basic_block, METH_VARARGS, (char *)"gr_vector_insert_b_sptr_to_basic_block(gr_vector_insert_b_sptr self) -> gr_basic_block_sptr"},
+	 { (char *)"gr_vector_insert_b_sptr_check_topology", (PyCFunction) _wrap_gr_vector_insert_b_sptr_check_topology, METH_VARARGS | METH_KEYWORDS, (char *)"gr_vector_insert_b_sptr_check_topology(gr_vector_insert_b_sptr self, int ninputs, int noutputs) -> bool"},
+	 { (char *)"gr_vector_insert_b_sptr_swigregister", gr_vector_insert_b_sptr_swigregister, METH_VARARGS, NULL},
+	 { (char *)"vector_insert_b", (PyCFunction) _wrap_vector_insert_b, METH_VARARGS | METH_KEYWORDS, (char *)"\n"
+		"vector_insert_b(__dummy_0__ data, int periodicity, int offset = 0) -> gr_vector_insert_b_sptr\n"
+		"\n"
+		"source of unsigned char's that gets its data from a vector\n"
 		""},
 	 { (char *)"new_gr_vector_sink_b_sptr", _wrap_new_gr_vector_sink_b_sptr, METH_VARARGS, (char *)"\n"
 		"gr_vector_sink_b_sptr()\n"
@@ -99236,6 +100399,9 @@ static void *_p_gr_noise_source_iTo_p_gr_basic_block(void *x, int *SWIGUNUSEDPAR
 static void *_p_gr_sig_source_iTo_p_gr_basic_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_basic_block *) (gr_block *)(gr_sync_block *) ((gr_sig_source_i *) x));
 }
+static void *_p_gr_vector_insert_bTo_p_gr_basic_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((gr_basic_block *) (gr_block *) ((gr_vector_insert_b *) x));
+}
 static void *_p_gr_vector_sink_bTo_p_gr_basic_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_basic_block *) (gr_block *)(gr_sync_block *) ((gr_vector_sink_b *) x));
 }
@@ -99590,6 +100756,9 @@ static void *_p_gr_noise_source_iTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newm
 static void *_p_gr_sig_source_iTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_block *) (gr_sync_block *) ((gr_sig_source_i *) x));
 }
+static void *_p_gr_vector_insert_bTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((gr_block *)  ((gr_vector_insert_b *) x));
+}
 static void *_p_gr_vector_sink_bTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_block *) (gr_sync_block *) ((gr_vector_sink_b *) x));
 }
@@ -99638,11 +100807,11 @@ static void *_p_gr_vector_sink_iTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newme
 static void *_p_gr_probe_signal_vfTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_block *) (gr_sync_block *) ((gr_probe_signal_vf *) x));
 }
-static void *_p_gr_noise_source_sTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((gr_block *)  ((gr_noise_source_s *) x));
-}
 static void *_p_gr_vector_source_sTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_block *) (gr_sync_block *) ((gr_vector_source_s *) x));
+}
+static void *_p_gr_noise_source_sTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((gr_block *)  ((gr_noise_source_s *) x));
 }
 static void *_p_gr_sig_source_sTo_p_gr_block(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((gr_block *) (gr_sync_block *) ((gr_sig_source_s *) x));
@@ -99944,6 +101113,7 @@ static swig_type_info _swigt__p_boost__shared_ptrT_gr_top_block_t = {"_p_boost__
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t = {"_p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t", "boost::shared_ptr< gr_unpacked_to_packed_bb > *|gr_unpacked_to_packed_bb_sptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t = {"_p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t", "boost::shared_ptr< gr_unpacked_to_packed_ii > *|gr_unpacked_to_packed_ii_sptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t = {"_p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t", "boost::shared_ptr< gr_unpacked_to_packed_ss > *|gr_unpacked_to_packed_ss_sptr *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_boost__shared_ptrT_gr_vector_insert_b_t = {"_p_boost__shared_ptrT_gr_vector_insert_b_t", "boost::shared_ptr< gr_vector_insert_b > *|gr_vector_insert_b_sptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_vector_sink_b_t = {"_p_boost__shared_ptrT_gr_vector_sink_b_t", "boost::shared_ptr< gr_vector_sink_b > *|gr_vector_sink_b_sptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_vector_sink_c_t = {"_p_boost__shared_ptrT_gr_vector_sink_c_t", "boost::shared_ptr< gr_vector_sink_c > *|gr_vector_sink_c_sptr *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_boost__shared_ptrT_gr_vector_sink_f_t = {"_p_boost__shared_ptrT_gr_vector_sink_f_t", "boost::shared_ptr< gr_vector_sink_f > *|gr_vector_sink_f_sptr *", 0, 0, (void*)0, 0};
@@ -100063,6 +101233,7 @@ static swig_type_info _swigt__p_gr_sync_interpolator = {"_p_gr_sync_interpolator
 static swig_type_info _swigt__p_gr_unpacked_to_packed_bb = {"_p_gr_unpacked_to_packed_bb", "gr_unpacked_to_packed_bb *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gr_unpacked_to_packed_ii = {"_p_gr_unpacked_to_packed_ii", "gr_unpacked_to_packed_ii *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gr_unpacked_to_packed_ss = {"_p_gr_unpacked_to_packed_ss", "gr_unpacked_to_packed_ss *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_gr_vector_insert_b = {"_p_gr_vector_insert_b", "gr_vector_insert_b *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gr_vector_sink_b = {"_p_gr_vector_sink_b", "gr_vector_sink_b *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gr_vector_sink_c = {"_p_gr_vector_sink_c", "gr_vector_sink_c *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gr_vector_sink_f = {"_p_gr_vector_sink_f", "gr_vector_sink_f *", 0, 0, (void*)0, 0};
@@ -100196,6 +101367,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t,
   &_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t,
   &_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t,
+  &_swigt__p_boost__shared_ptrT_gr_vector_insert_b_t,
   &_swigt__p_boost__shared_ptrT_gr_vector_sink_b_t,
   &_swigt__p_boost__shared_ptrT_gr_vector_sink_c_t,
   &_swigt__p_boost__shared_ptrT_gr_vector_sink_f_t,
@@ -100315,6 +101487,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_gr_unpacked_to_packed_bb,
   &_swigt__p_gr_unpacked_to_packed_ii,
   &_swigt__p_gr_unpacked_to_packed_ss,
+  &_swigt__p_gr_vector_insert_b,
   &_swigt__p_gr_vector_sink_b,
   &_swigt__p_gr_vector_sink_c,
   &_swigt__p_gr_vector_sink_f,
@@ -100448,6 +101621,7 @@ static swig_cast_info _swigc__p_boost__shared_ptrT_gr_top_block_t[] = {  {&_swig
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_boost__shared_ptrT_gr_vector_insert_b_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_vector_insert_b_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_vector_sink_b_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_vector_sink_b_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_vector_sink_c_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_vector_sink_c_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_boost__shared_ptrT_gr_vector_sink_f_t[] = {  {&_swigt__p_boost__shared_ptrT_gr_vector_sink_f_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -100486,8 +101660,8 @@ static swig_cast_info _swigc__p_gr_argmax_is[] = {  {&_swigt__p_gr_argmax_is, 0,
 static swig_cast_info _swigc__p_gr_argmax_ss[] = {  {&_swigt__p_gr_argmax_ss, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_top_block[] = {{&_swigt__p_gr_top_block, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_hier_block2[] = {{&_swigt__p_gr_hier_block2, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_gr_basic_block[] = {  {&_swigt__p_gr_argmax_is, _p_gr_argmax_isTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_s, _p_gr_probe_signal_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_ss, _p_gr_multiply_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ii, _p_gr_integrate_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ff, _p_gr_mute_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_ss, _p_gr_xor_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_cc, _p_gr_moving_average_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_argmax_ss, _p_gr_argmax_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ss, _p_gr_max_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_bb, _p_gr_not_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_ic, _p_gr_chunks_to_symbols_icTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vii, _p_gr_multiply_const_viiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vii, _p_gr_add_const_viiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_ss, _p_gr_and_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_if, _p_gr_chunks_to_symbols_ifTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_b, _p_gr_vector_source_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sc, _p_gr_chunks_to_symbols_scTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ff, _p_gr_divide_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ff, _p_gr_sample_and_hold_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_c, _p_gr_vector_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_c, _p_gr_noise_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_c, _p_gr_sig_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_ss, _p_gr_not_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sf, _p_gr_chunks_to_symbols_sfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_top_block, _p_gr_top_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_block, _p_gr_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_f, _p_gr_vector_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_f, _p_gr_noise_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_f, _p_gr_sig_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ff, _p_gr_add_const_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_ib, _p_gr_peak_detector_ibTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ss, _p_gr_integrate_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_i, _p_gr_sig_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_i, _p_gr_noise_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_i, _p_gr_vector_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_b, _p_gr_vector_sink_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_c, _p_gr_vector_sink_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_sb, _p_gr_peak_detector_sbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bc, _p_gr_chunks_to_symbols_bcTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vss, _p_gr_multiply_const_vssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vss, _p_gr_add_const_vssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_cc, _p_gr_sub_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_f, _p_gr_vector_sink_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_cc, _p_gr_add_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bf, _p_gr_chunks_to_symbols_bfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vb, _p_gr_probe_signal_vbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ii, _p_gr_mute_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vc, _p_gr_probe_signal_vcTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ff, _p_gr_moving_average_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_i, _p_gr_vector_sink_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vf, _p_gr_probe_signal_vfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_s, _p_gr_noise_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_s, _p_gr_vector_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_s, _p_gr_sig_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ii, _p_gr_unpacked_to_packed_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ii, _p_gr_packed_to_unpacked_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sync_decimator, _p_gr_sync_decimatorTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vi, _p_gr_probe_signal_viTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ii, _p_gr_divide_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ii, _p_gr_sample_and_hold_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_ii, _p_gr_or_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_bb, _p_gr_unpacked_to_packed_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_bb, _p_gr_packed_to_unpacked_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_s, _p_gr_vector_sink_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_ii, _p_gr_multiply_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ii, _p_gr_add_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_ii, _p_gr_and_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_sf, _p_gr_add_const_sfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_bb, _p_gr_sample_and_hold_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_bb, _p_gr_or_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ss, _p_gr_mute_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vs, _p_gr_probe_signal_vsTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_bb, _p_gr_and_const_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ff, _p_gr_sub_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_basic_block, 0, 0, 0},  {&_swigt__p_gr_sync_block, _p_gr_sync_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ss, _p_gr_unpacked_to_packed_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ss, _p_gr_packed_to_unpacked_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_cc, _p_gr_integrate_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ss, _p_gr_divide_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ss, _p_gr_sample_and_hold_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_ss, _p_gr_or_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ii, _p_gr_moving_average_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vcc, _p_gr_add_const_vccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vcc, _p_gr_multiply_const_vccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_ss, _p_gr_multiply_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ss, _p_gr_add_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_ss, _p_gr_and_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ff, _p_gr_max_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ss, _p_gr_moving_average_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ii, _p_gr_sub_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_ii, _p_gr_add_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sync_interpolator, _p_gr_sync_interpolatorTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ff, _p_gr_integrate_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_cc, _p_gr_mute_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_argmax_fs, _p_gr_argmax_fsTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_b, _p_gr_probe_signal_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_c, _p_gr_probe_signal_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vff, _p_gr_multiply_const_vffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vff, _p_gr_add_const_vffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_f, _p_gr_probe_signal_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_ii, _p_gr_multiply_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_ii, _p_gr_xor_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_cc, _p_gr_divide_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ii, _p_gr_max_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_i, _p_gr_probe_signal_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_ii, _p_gr_and_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_cc, _p_gr_add_const_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_hier_block2, _p_gr_hier_block2To_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_bb, _p_gr_xor_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ss, _p_gr_sub_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_ss, _p_gr_add_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_ii, _p_gr_not_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_fb, _p_gr_peak_detector_fbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_bb, _p_gr_and_bbTo_p_gr_basic_block, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_gr_block[] = {  {&_swigt__p_gr_argmax_is, _p_gr_argmax_isTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_s, _p_gr_probe_signal_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_ss, _p_gr_multiply_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ii, _p_gr_integrate_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ff, _p_gr_mute_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_ss, _p_gr_xor_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_cc, _p_gr_moving_average_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_argmax_ss, _p_gr_argmax_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ss, _p_gr_max_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_bb, _p_gr_not_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_ic, _p_gr_chunks_to_symbols_icTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vii, _p_gr_multiply_const_viiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vii, _p_gr_add_const_viiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_ss, _p_gr_and_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_if, _p_gr_chunks_to_symbols_ifTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_b, _p_gr_vector_source_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sc, _p_gr_chunks_to_symbols_scTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ff, _p_gr_divide_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ff, _p_gr_sample_and_hold_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_c, _p_gr_vector_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_c, _p_gr_noise_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_c, _p_gr_sig_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_ss, _p_gr_not_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sf, _p_gr_chunks_to_symbols_sfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_block, 0, 0, 0},  {&_swigt__p_gr_vector_source_f, _p_gr_vector_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_f, _p_gr_noise_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_f, _p_gr_sig_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ff, _p_gr_add_const_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_ib, _p_gr_peak_detector_ibTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ss, _p_gr_integrate_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_i, _p_gr_vector_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_i, _p_gr_noise_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_i, _p_gr_sig_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_b, _p_gr_vector_sink_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_c, _p_gr_vector_sink_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_sb, _p_gr_peak_detector_sbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bc, _p_gr_chunks_to_symbols_bcTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vss, _p_gr_multiply_const_vssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vss, _p_gr_add_const_vssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_cc, _p_gr_sub_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_f, _p_gr_vector_sink_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_cc, _p_gr_add_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bf, _p_gr_chunks_to_symbols_bfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vb, _p_gr_probe_signal_vbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ii, _p_gr_mute_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vc, _p_gr_probe_signal_vcTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ff, _p_gr_moving_average_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_i, _p_gr_vector_sink_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vf, _p_gr_probe_signal_vfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_s, _p_gr_noise_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_s, _p_gr_vector_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_s, _p_gr_sig_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ii, _p_gr_unpacked_to_packed_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ii, _p_gr_packed_to_unpacked_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_decimator, _p_gr_sync_decimatorTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vi, _p_gr_probe_signal_viTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ii, _p_gr_divide_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ii, _p_gr_sample_and_hold_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_ii, _p_gr_or_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_bb, _p_gr_unpacked_to_packed_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_bb, _p_gr_packed_to_unpacked_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_s, _p_gr_vector_sink_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_ii, _p_gr_multiply_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ii, _p_gr_add_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_ii, _p_gr_and_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_sf, _p_gr_add_const_sfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_bb, _p_gr_sample_and_hold_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_bb, _p_gr_or_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ss, _p_gr_mute_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vs, _p_gr_probe_signal_vsTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_bb, _p_gr_and_const_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ff, _p_gr_sub_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_block, _p_gr_sync_blockTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ss, _p_gr_unpacked_to_packed_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ss, _p_gr_packed_to_unpacked_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_cc, _p_gr_integrate_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ss, _p_gr_divide_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ss, _p_gr_sample_and_hold_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_ss, _p_gr_or_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ii, _p_gr_moving_average_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vcc, _p_gr_add_const_vccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vcc, _p_gr_multiply_const_vccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_ss, _p_gr_multiply_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ss, _p_gr_add_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_ss, _p_gr_and_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ff, _p_gr_max_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ss, _p_gr_moving_average_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ii, _p_gr_sub_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_ii, _p_gr_add_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_interpolator, _p_gr_sync_interpolatorTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ff, _p_gr_integrate_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_cc, _p_gr_mute_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_argmax_fs, _p_gr_argmax_fsTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_b, _p_gr_probe_signal_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_c, _p_gr_probe_signal_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vff, _p_gr_multiply_const_vffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vff, _p_gr_add_const_vffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_f, _p_gr_probe_signal_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_ii, _p_gr_multiply_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_ii, _p_gr_xor_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_cc, _p_gr_divide_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ii, _p_gr_max_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_i, _p_gr_probe_signal_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_ii, _p_gr_and_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_cc, _p_gr_add_const_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_bb, _p_gr_xor_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ss, _p_gr_sub_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_ss, _p_gr_add_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_ii, _p_gr_not_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_fb, _p_gr_peak_detector_fbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_bb, _p_gr_and_bbTo_p_gr_block, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_gr_basic_block[] = {  {&_swigt__p_gr_argmax_is, _p_gr_argmax_isTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_s, _p_gr_probe_signal_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_ss, _p_gr_multiply_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ii, _p_gr_integrate_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ff, _p_gr_mute_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_ss, _p_gr_xor_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_cc, _p_gr_moving_average_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_argmax_ss, _p_gr_argmax_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ss, _p_gr_max_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_bb, _p_gr_not_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_ic, _p_gr_chunks_to_symbols_icTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vii, _p_gr_multiply_const_viiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vii, _p_gr_add_const_viiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_ss, _p_gr_and_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_if, _p_gr_chunks_to_symbols_ifTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_b, _p_gr_vector_source_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sc, _p_gr_chunks_to_symbols_scTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ff, _p_gr_divide_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ff, _p_gr_sample_and_hold_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_c, _p_gr_vector_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_c, _p_gr_noise_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_c, _p_gr_sig_source_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_ss, _p_gr_not_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sf, _p_gr_chunks_to_symbols_sfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_top_block, _p_gr_top_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_block, _p_gr_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_f, _p_gr_vector_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_f, _p_gr_noise_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_f, _p_gr_sig_source_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ff, _p_gr_add_const_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_ib, _p_gr_peak_detector_ibTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ss, _p_gr_integrate_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_i, _p_gr_sig_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_i, _p_gr_noise_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_i, _p_gr_vector_source_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_insert_b, _p_gr_vector_insert_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_b, _p_gr_vector_sink_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_c, _p_gr_vector_sink_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_sb, _p_gr_peak_detector_sbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bc, _p_gr_chunks_to_symbols_bcTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vss, _p_gr_multiply_const_vssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vss, _p_gr_add_const_vssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_cc, _p_gr_sub_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_f, _p_gr_vector_sink_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_cc, _p_gr_add_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bf, _p_gr_chunks_to_symbols_bfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vb, _p_gr_probe_signal_vbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ii, _p_gr_mute_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vc, _p_gr_probe_signal_vcTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ff, _p_gr_moving_average_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_i, _p_gr_vector_sink_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vf, _p_gr_probe_signal_vfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_source_s, _p_gr_vector_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_noise_source_s, _p_gr_noise_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sig_source_s, _p_gr_sig_source_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ii, _p_gr_unpacked_to_packed_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ii, _p_gr_packed_to_unpacked_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sync_decimator, _p_gr_sync_decimatorTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vi, _p_gr_probe_signal_viTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ii, _p_gr_divide_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ii, _p_gr_sample_and_hold_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_ii, _p_gr_or_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_bb, _p_gr_unpacked_to_packed_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_bb, _p_gr_packed_to_unpacked_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_vector_sink_s, _p_gr_vector_sink_sTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_ii, _p_gr_multiply_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ii, _p_gr_add_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_ii, _p_gr_and_const_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_sf, _p_gr_add_const_sfTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_bb, _p_gr_sample_and_hold_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_bb, _p_gr_or_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_ss, _p_gr_mute_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_vs, _p_gr_probe_signal_vsTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_bb, _p_gr_and_const_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ff, _p_gr_sub_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_basic_block, 0, 0, 0},  {&_swigt__p_gr_sync_block, _p_gr_sync_blockTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ss, _p_gr_unpacked_to_packed_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ss, _p_gr_packed_to_unpacked_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_cc, _p_gr_integrate_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_ss, _p_gr_divide_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ss, _p_gr_sample_and_hold_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_or_ss, _p_gr_or_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ii, _p_gr_moving_average_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vcc, _p_gr_add_const_vccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vcc, _p_gr_multiply_const_vccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_ss, _p_gr_multiply_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_ss, _p_gr_add_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_const_ss, _p_gr_and_const_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ff, _p_gr_max_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_moving_average_ss, _p_gr_moving_average_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ii, _p_gr_sub_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_ii, _p_gr_add_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sync_interpolator, _p_gr_sync_interpolatorTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_integrate_ff, _p_gr_integrate_ffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_mute_cc, _p_gr_mute_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_argmax_fs, _p_gr_argmax_fsTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_b, _p_gr_probe_signal_bTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_c, _p_gr_probe_signal_cTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_const_vff, _p_gr_multiply_const_vffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_vff, _p_gr_add_const_vffTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_f, _p_gr_probe_signal_fTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_multiply_ii, _p_gr_multiply_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_ii, _p_gr_xor_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_divide_cc, _p_gr_divide_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_max_ii, _p_gr_max_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_probe_signal_i, _p_gr_probe_signal_iTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_ii, _p_gr_and_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_const_cc, _p_gr_add_const_ccTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_hier_block2, _p_gr_hier_block2To_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_xor_bb, _p_gr_xor_bbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_sub_ss, _p_gr_sub_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_add_ss, _p_gr_add_ssTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_not_ii, _p_gr_not_iiTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_peak_detector_fb, _p_gr_peak_detector_fbTo_p_gr_basic_block, 0, 0},  {&_swigt__p_gr_and_bb, _p_gr_and_bbTo_p_gr_basic_block, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_gr_block[] = {  {&_swigt__p_gr_argmax_is, _p_gr_argmax_isTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_s, _p_gr_probe_signal_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_ss, _p_gr_multiply_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ii, _p_gr_integrate_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ff, _p_gr_mute_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_ss, _p_gr_xor_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_cc, _p_gr_moving_average_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_argmax_ss, _p_gr_argmax_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ss, _p_gr_max_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_bb, _p_gr_not_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_ic, _p_gr_chunks_to_symbols_icTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vii, _p_gr_multiply_const_viiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vii, _p_gr_add_const_viiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_ss, _p_gr_and_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_if, _p_gr_chunks_to_symbols_ifTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_b, _p_gr_vector_source_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sc, _p_gr_chunks_to_symbols_scTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ff, _p_gr_divide_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ff, _p_gr_sample_and_hold_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_c, _p_gr_vector_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_c, _p_gr_noise_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_c, _p_gr_sig_source_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_ss, _p_gr_not_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_sf, _p_gr_chunks_to_symbols_sfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_block, 0, 0, 0},  {&_swigt__p_gr_vector_source_f, _p_gr_vector_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_f, _p_gr_noise_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_f, _p_gr_sig_source_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ff, _p_gr_add_const_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_ib, _p_gr_peak_detector_ibTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ss, _p_gr_integrate_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_i, _p_gr_vector_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_i, _p_gr_noise_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_i, _p_gr_sig_source_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_insert_b, _p_gr_vector_insert_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_b, _p_gr_vector_sink_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_c, _p_gr_vector_sink_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_sb, _p_gr_peak_detector_sbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bc, _p_gr_chunks_to_symbols_bcTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vss, _p_gr_multiply_const_vssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vss, _p_gr_add_const_vssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_cc, _p_gr_sub_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_f, _p_gr_vector_sink_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_cc, _p_gr_add_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_chunks_to_symbols_bf, _p_gr_chunks_to_symbols_bfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vb, _p_gr_probe_signal_vbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ii, _p_gr_mute_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vc, _p_gr_probe_signal_vcTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ff, _p_gr_moving_average_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_i, _p_gr_vector_sink_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vf, _p_gr_probe_signal_vfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_source_s, _p_gr_vector_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_noise_source_s, _p_gr_noise_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sig_source_s, _p_gr_sig_source_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ii, _p_gr_unpacked_to_packed_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ii, _p_gr_packed_to_unpacked_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_decimator, _p_gr_sync_decimatorTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vi, _p_gr_probe_signal_viTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ii, _p_gr_divide_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ii, _p_gr_sample_and_hold_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_ii, _p_gr_or_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_bb, _p_gr_unpacked_to_packed_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_bb, _p_gr_packed_to_unpacked_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_vector_sink_s, _p_gr_vector_sink_sTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_ii, _p_gr_multiply_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ii, _p_gr_add_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_ii, _p_gr_and_const_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_sf, _p_gr_add_const_sfTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_bb, _p_gr_sample_and_hold_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_bb, _p_gr_or_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_ss, _p_gr_mute_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_vs, _p_gr_probe_signal_vsTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_bb, _p_gr_and_const_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ff, _p_gr_sub_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_block, _p_gr_sync_blockTo_p_gr_block, 0, 0},  {&_swigt__p_gr_unpacked_to_packed_ss, _p_gr_unpacked_to_packed_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_packed_to_unpacked_ss, _p_gr_packed_to_unpacked_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_cc, _p_gr_integrate_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_ss, _p_gr_divide_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sample_and_hold_ss, _p_gr_sample_and_hold_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_or_ss, _p_gr_or_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ii, _p_gr_moving_average_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vcc, _p_gr_add_const_vccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vcc, _p_gr_multiply_const_vccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_ss, _p_gr_multiply_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_ss, _p_gr_add_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_const_ss, _p_gr_and_const_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ff, _p_gr_max_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_moving_average_ss, _p_gr_moving_average_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ii, _p_gr_sub_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_ii, _p_gr_add_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sync_interpolator, _p_gr_sync_interpolatorTo_p_gr_block, 0, 0},  {&_swigt__p_gr_integrate_ff, _p_gr_integrate_ffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_mute_cc, _p_gr_mute_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_argmax_fs, _p_gr_argmax_fsTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_b, _p_gr_probe_signal_bTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_c, _p_gr_probe_signal_cTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_const_vff, _p_gr_multiply_const_vffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_vff, _p_gr_add_const_vffTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_f, _p_gr_probe_signal_fTo_p_gr_block, 0, 0},  {&_swigt__p_gr_multiply_ii, _p_gr_multiply_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_ii, _p_gr_xor_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_divide_cc, _p_gr_divide_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_max_ii, _p_gr_max_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_probe_signal_i, _p_gr_probe_signal_iTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_ii, _p_gr_and_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_const_cc, _p_gr_add_const_ccTo_p_gr_block, 0, 0},  {&_swigt__p_gr_xor_bb, _p_gr_xor_bbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_sub_ss, _p_gr_sub_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_add_ss, _p_gr_add_ssTo_p_gr_block, 0, 0},  {&_swigt__p_gr_not_ii, _p_gr_not_iiTo_p_gr_block, 0, 0},  {&_swigt__p_gr_peak_detector_fb, _p_gr_peak_detector_fbTo_p_gr_block, 0, 0},  {&_swigt__p_gr_and_bb, _p_gr_and_bbTo_p_gr_block, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_chunks_to_symbols_bc[] = {  {&_swigt__p_gr_chunks_to_symbols_bc, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_chunks_to_symbols_bf[] = {  {&_swigt__p_gr_chunks_to_symbols_bf, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_chunks_to_symbols_ic[] = {  {&_swigt__p_gr_chunks_to_symbols_ic, 0, 0, 0},{0, 0, 0, 0}};
@@ -100567,6 +101741,7 @@ static swig_cast_info _swigc__p_gr_sync_interpolator[] = {  {&_swigt__p_gr_chunk
 static swig_cast_info _swigc__p_gr_unpacked_to_packed_bb[] = {  {&_swigt__p_gr_unpacked_to_packed_bb, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_unpacked_to_packed_ii[] = {  {&_swigt__p_gr_unpacked_to_packed_ii, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_unpacked_to_packed_ss[] = {  {&_swigt__p_gr_unpacked_to_packed_ss, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_gr_vector_insert_b[] = {  {&_swigt__p_gr_vector_insert_b, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_vector_sink_b[] = {  {&_swigt__p_gr_vector_sink_b, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_vector_sink_c[] = {  {&_swigt__p_gr_vector_sink_c, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gr_vector_sink_f[] = {  {&_swigt__p_gr_vector_sink_f, 0, 0, 0},{0, 0, 0, 0}};
@@ -100700,6 +101875,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_bb_t,
   _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_ii_t,
   _swigc__p_boost__shared_ptrT_gr_unpacked_to_packed_ss_t,
+  _swigc__p_boost__shared_ptrT_gr_vector_insert_b_t,
   _swigc__p_boost__shared_ptrT_gr_vector_sink_b_t,
   _swigc__p_boost__shared_ptrT_gr_vector_sink_c_t,
   _swigc__p_boost__shared_ptrT_gr_vector_sink_f_t,
@@ -100819,6 +101995,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_gr_unpacked_to_packed_bb,
   _swigc__p_gr_unpacked_to_packed_ii,
   _swigc__p_gr_unpacked_to_packed_ss,
+  _swigc__p_gr_vector_insert_b,
   _swigc__p_gr_vector_sink_b,
   _swigc__p_gr_vector_sink_c,
   _swigc__p_gr_vector_sink_f,

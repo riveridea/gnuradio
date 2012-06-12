@@ -5,18 +5,18 @@
     <includes local="no">gr_core_api.h</includes>
     <includes local="no">gr_sync_block.h</includes>
     <incdepgraph>
-      <node id="445">
+      <node id="449">
         <label>gr_sync_block.h</label>
       </node>
-      <node id="444">
+      <node id="448">
         <label>gr_core_api.h</label>
       </node>
-      <node id="443">
+      <node id="447">
         <label>/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h</label>
         <link refid="gr_vector_source_s.h"/>
-        <childnode refid="444" relation="include">
+        <childnode refid="448" relation="include">
         </childnode>
-        <childnode refid="445" relation="include">
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="58"/>
+        <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h" line="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,7 +87,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004,2008<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2004,2008,2012<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>GNU<sp/>Radio</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
@@ -134,12 +134,13 @@
 <codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgr__vector__source__s_1a3afd83adb786857a217d0e857902fc0b" kindref="member">work</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noutput_items,</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_const_void_star<sp/>&amp;input_items,</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gr_vector_void_star<sp/>&amp;output_items);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">GR_CORE_API<sp/><ref refid="gr__vector__source__s_8h_1a0f75c96e7eb59f9e25dece8bc3f683d0" kindref="member">gr_vector_source_s_sptr</ref></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><ref refid="gr__vector__source__s_8h_1a80490134f47eb8f7cf94799962f8c67b" kindref="member">gr_make_vector_source_s</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;short&gt;<sp/>&amp;data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>repeat<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vlen<sp/>=<sp/>1);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="55" refid="classgr__vector__source__s_1a0387ddccad2ea10b167f960e8bfccefb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgr__vector__source__s_1a0387ddccad2ea10b167f960e8bfccefb" kindref="member">set_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;short&gt;<sp/>&amp;data){<sp/>d_data<sp/>=<sp/>data;<sp/><ref refid="classgr__vector__source__s_1a6e02608e6c4411781eab6778a9cdb270" kindref="member">rewind</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">GR_CORE_API<sp/><ref refid="gr__vector__source__s_8h_1a0f75c96e7eb59f9e25dece8bc3f683d0" kindref="member">gr_vector_source_s_sptr</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="gr__vector__source__s_8h_1a80490134f47eb8f7cf94799962f8c67b" kindref="member">gr_make_vector_source_s</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;short&gt;<sp/>&amp;data,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>repeat<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vlen<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="/home/alexzh/gr_alex/gnuradio/build/gnuradio-core/src/lib/gengen/gr_vector_source_s.h"/>
   </compounddef>

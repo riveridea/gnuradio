@@ -631,6 +631,10 @@ class gr_head_sptr(object):
         """reset(self)"""
         return _gnuradio_core_general.gr_head_sptr_reset(self)
 
+    def set_length(self, *args, **kwargs):
+        """set_length(self, int nitems)"""
+        return _gnuradio_core_general.gr_head_sptr_set_length(self, *args, **kwargs)
+
     def history(self):
         """history(self) -> unsigned int"""
         return _gnuradio_core_general.gr_head_sptr_history(self)
@@ -1577,6 +1581,101 @@ def keep_one_in_n(*args, **kwargs):
     decimate a stream, keeping one item out of every n.
     """
   return _gnuradio_core_general.keep_one_in_n(*args, **kwargs)
+class gr_keep_m_in_n_sptr(object):
+    """Proxy of C++ boost::shared_ptr<(gr_keep_m_in_n)> class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> gr_keep_m_in_n_sptr
+        __init__(self,  p) -> gr_keep_m_in_n_sptr
+        """
+        this = _gnuradio_core_general.new_gr_keep_m_in_n_sptr(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def __deref__(self):
+        """__deref__(self)"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr___deref__(self)
+
+    __swig_destroy__ = _gnuradio_core_general.delete_gr_keep_m_in_n_sptr
+    __del__ = lambda self : None;
+    def set_offset(self, *args, **kwargs):
+        """set_offset(self, int offset)"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_set_offset(self, *args, **kwargs)
+
+    def history(self):
+        """history(self) -> unsigned int"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_history(self)
+
+    def output_multiple(self):
+        """output_multiple(self) -> int"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_output_multiple(self)
+
+    def relative_rate(self):
+        """relative_rate(self) -> double"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_relative_rate(self)
+
+    def start(self):
+        """start(self) -> bool"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_start(self)
+
+    def stop(self):
+        """stop(self) -> bool"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_stop(self)
+
+    def nitems_read(self, *args, **kwargs):
+        """nitems_read(self, unsigned int which_input) -> uint64_t"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_nitems_read(self, *args, **kwargs)
+
+    def nitems_written(self, *args, **kwargs):
+        """nitems_written(self, unsigned int which_output) -> uint64_t"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_nitems_written(self, *args, **kwargs)
+
+    def detail(self):
+        """detail(self) -> gr_block_detail_sptr"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_detail(self)
+
+    def set_detail(self, *args, **kwargs):
+        """set_detail(self, gr_block_detail_sptr detail)"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_set_detail(self, *args, **kwargs)
+
+    def name(self):
+        """name(self) -> string"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_name(self)
+
+    def input_signature(self):
+        """input_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_input_signature(self)
+
+    def output_signature(self):
+        """output_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_output_signature(self)
+
+    def unique_id(self):
+        """unique_id(self) -> long"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_unique_id(self)
+
+    def to_basic_block(self):
+        """to_basic_block(self) -> gr_basic_block_sptr"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_to_basic_block(self)
+
+    def check_topology(self, *args, **kwargs):
+        """check_topology(self, int ninputs, int noutputs) -> bool"""
+        return _gnuradio_core_general.gr_keep_m_in_n_sptr_check_topology(self, *args, **kwargs)
+
+gr_keep_m_in_n_sptr_swigregister = _gnuradio_core_general.gr_keep_m_in_n_sptr_swigregister
+gr_keep_m_in_n_sptr_swigregister(gr_keep_m_in_n_sptr)
+
+gr_keep_m_in_n_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.name(), self.unique_id ())
+
+
+def keep_m_in_n(*args, **kwargs):
+  """
+    keep_m_in_n(size_t itemsize, int m, int n, int offset) -> gr_keep_m_in_n_sptr
+
+    decimate a stream, keeping one item out of every n.
+    """
+  return _gnuradio_core_general.keep_m_in_n(*args, **kwargs)
 class gr_fft_vcc_sptr(object):
     """Proxy of C++ boost::shared_ptr<(gr_fft_vcc)> class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
@@ -9207,6 +9306,97 @@ def unpack_k_bits_bb(*args, **kwargs):
     Converts a byte with k relevent bits to k output bytes with 1 bit in the LSB.
     """
   return _gnuradio_core_general.unpack_k_bits_bb(*args, **kwargs)
+class gr_pack_k_bits_bb_sptr(object):
+    """Proxy of C++ boost::shared_ptr<(gr_pack_k_bits_bb)> class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> gr_pack_k_bits_bb_sptr
+        __init__(self,  p) -> gr_pack_k_bits_bb_sptr
+        """
+        this = _gnuradio_core_general.new_gr_pack_k_bits_bb_sptr(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def __deref__(self):
+        """__deref__(self)"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr___deref__(self)
+
+    __swig_destroy__ = _gnuradio_core_general.delete_gr_pack_k_bits_bb_sptr
+    __del__ = lambda self : None;
+    def history(self):
+        """history(self) -> unsigned int"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_history(self)
+
+    def output_multiple(self):
+        """output_multiple(self) -> int"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_output_multiple(self)
+
+    def relative_rate(self):
+        """relative_rate(self) -> double"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_relative_rate(self)
+
+    def start(self):
+        """start(self) -> bool"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_start(self)
+
+    def stop(self):
+        """stop(self) -> bool"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_stop(self)
+
+    def nitems_read(self, *args, **kwargs):
+        """nitems_read(self, unsigned int which_input) -> uint64_t"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_nitems_read(self, *args, **kwargs)
+
+    def nitems_written(self, *args, **kwargs):
+        """nitems_written(self, unsigned int which_output) -> uint64_t"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_nitems_written(self, *args, **kwargs)
+
+    def detail(self):
+        """detail(self) -> gr_block_detail_sptr"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_detail(self)
+
+    def set_detail(self, *args, **kwargs):
+        """set_detail(self, gr_block_detail_sptr detail)"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_set_detail(self, *args, **kwargs)
+
+    def name(self):
+        """name(self) -> string"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_name(self)
+
+    def input_signature(self):
+        """input_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_input_signature(self)
+
+    def output_signature(self):
+        """output_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_output_signature(self)
+
+    def unique_id(self):
+        """unique_id(self) -> long"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_unique_id(self)
+
+    def to_basic_block(self):
+        """to_basic_block(self) -> gr_basic_block_sptr"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_to_basic_block(self)
+
+    def check_topology(self, *args, **kwargs):
+        """check_topology(self, int ninputs, int noutputs) -> bool"""
+        return _gnuradio_core_general.gr_pack_k_bits_bb_sptr_check_topology(self, *args, **kwargs)
+
+gr_pack_k_bits_bb_sptr_swigregister = _gnuradio_core_general.gr_pack_k_bits_bb_sptr_swigregister
+gr_pack_k_bits_bb_sptr_swigregister(gr_pack_k_bits_bb_sptr)
+
+gr_pack_k_bits_bb_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.name(), self.unique_id ())
+
+
+def pack_k_bits_bb(*args, **kwargs):
+  """
+    pack_k_bits_bb(int k) -> gr_pack_k_bits_bb_sptr
+
+    Converts a stream of bytes with 1 bit in the LSB to a byte with k relevent bits.
+    """
+  return _gnuradio_core_general.pack_k_bits_bb(*args, **kwargs)
 class gr_diff_phasor_cc_sptr(object):
     """Proxy of C++ boost::shared_ptr<(gr_diff_phasor_cc)> class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')

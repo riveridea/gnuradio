@@ -196,6 +196,10 @@ class gr_vector_source_b_sptr(object):
         """rewind(self)"""
         return _gnuradio_core_gengen.gr_vector_source_b_sptr_rewind(self)
 
+    def set_data(self, *args, **kwargs):
+        """set_data(self, __dummy_0__ data)"""
+        return _gnuradio_core_gengen.gr_vector_source_b_sptr_set_data(self, *args, **kwargs)
+
     def history(self):
         """history(self) -> unsigned int"""
         return _gnuradio_core_gengen.gr_vector_source_b_sptr_history(self)
@@ -290,6 +294,10 @@ class gr_vector_source_s_sptr(object):
     def rewind(self):
         """rewind(self)"""
         return _gnuradio_core_gengen.gr_vector_source_s_sptr_rewind(self)
+
+    def set_data(self, *args, **kwargs):
+        """set_data(self, __dummy_2__ data)"""
+        return _gnuradio_core_gengen.gr_vector_source_s_sptr_set_data(self, *args, **kwargs)
 
     def history(self):
         """history(self) -> unsigned int"""
@@ -386,6 +394,10 @@ class gr_vector_source_i_sptr(object):
         """rewind(self)"""
         return _gnuradio_core_gengen.gr_vector_source_i_sptr_rewind(self)
 
+    def set_data(self, *args, **kwargs):
+        """set_data(self, __dummy_3__ data)"""
+        return _gnuradio_core_gengen.gr_vector_source_i_sptr_set_data(self, *args, **kwargs)
+
     def history(self):
         """history(self) -> unsigned int"""
         return _gnuradio_core_gengen.gr_vector_source_i_sptr_history(self)
@@ -480,6 +492,10 @@ class gr_vector_source_f_sptr(object):
     def rewind(self):
         """rewind(self)"""
         return _gnuradio_core_gengen.gr_vector_source_f_sptr_rewind(self)
+
+    def set_data(self, *args, **kwargs):
+        """set_data(self, __dummy_4__ data)"""
+        return _gnuradio_core_gengen.gr_vector_source_f_sptr_set_data(self, *args, **kwargs)
 
     def history(self):
         """history(self) -> unsigned int"""
@@ -576,6 +592,10 @@ class gr_vector_source_c_sptr(object):
         """rewind(self)"""
         return _gnuradio_core_gengen.gr_vector_source_c_sptr_rewind(self)
 
+    def set_data(self, *args, **kwargs):
+        """set_data(self, std::vector<(gr_complex,std::allocator<(gr_complex)>)> data)"""
+        return _gnuradio_core_gengen.gr_vector_source_c_sptr_set_data(self, *args, **kwargs)
+
     def history(self):
         """history(self) -> unsigned int"""
         return _gnuradio_core_gengen.gr_vector_source_c_sptr_history(self)
@@ -650,6 +670,105 @@ def vector_source_c(*args, **kwargs):
     source of gr_complex's that gets its data from a vector
     """
   return _gnuradio_core_gengen.vector_source_c(*args, **kwargs)
+class gr_vector_insert_b_sptr(object):
+    """Proxy of C++ boost::shared_ptr<(gr_vector_insert_b)> class"""
+    thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        """
+        __init__(self) -> gr_vector_insert_b_sptr
+        __init__(self,  p) -> gr_vector_insert_b_sptr
+        """
+        this = _gnuradio_core_gengen.new_gr_vector_insert_b_sptr(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def __deref__(self):
+        """__deref__(self)"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr___deref__(self)
+
+    __swig_destroy__ = _gnuradio_core_gengen.delete_gr_vector_insert_b_sptr
+    __del__ = lambda self : None;
+    def rewind(self):
+        """rewind(self)"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_rewind(self)
+
+    def set_data(self, *args, **kwargs):
+        """set_data(self, __dummy_0__ data)"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_set_data(self, *args, **kwargs)
+
+    def history(self):
+        """history(self) -> unsigned int"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_history(self)
+
+    def output_multiple(self):
+        """output_multiple(self) -> int"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_output_multiple(self)
+
+    def relative_rate(self):
+        """relative_rate(self) -> double"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_relative_rate(self)
+
+    def start(self):
+        """start(self) -> bool"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_start(self)
+
+    def stop(self):
+        """stop(self) -> bool"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_stop(self)
+
+    def nitems_read(self, *args, **kwargs):
+        """nitems_read(self, unsigned int which_input) -> uint64_t"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_nitems_read(self, *args, **kwargs)
+
+    def nitems_written(self, *args, **kwargs):
+        """nitems_written(self, unsigned int which_output) -> uint64_t"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_nitems_written(self, *args, **kwargs)
+
+    def detail(self):
+        """detail(self) -> gr_block_detail_sptr"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_detail(self)
+
+    def set_detail(self, *args, **kwargs):
+        """set_detail(self, gr_block_detail_sptr detail)"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_set_detail(self, *args, **kwargs)
+
+    def name(self):
+        """name(self) -> string"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_name(self)
+
+    def input_signature(self):
+        """input_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_input_signature(self)
+
+    def output_signature(self):
+        """output_signature(self) -> gr_io_signature_sptr"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_output_signature(self)
+
+    def unique_id(self):
+        """unique_id(self) -> long"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_unique_id(self)
+
+    def to_basic_block(self):
+        """to_basic_block(self) -> gr_basic_block_sptr"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_to_basic_block(self)
+
+    def check_topology(self, *args, **kwargs):
+        """check_topology(self, int ninputs, int noutputs) -> bool"""
+        return _gnuradio_core_gengen.gr_vector_insert_b_sptr_check_topology(self, *args, **kwargs)
+
+gr_vector_insert_b_sptr_swigregister = _gnuradio_core_gengen.gr_vector_insert_b_sptr_swigregister
+gr_vector_insert_b_sptr_swigregister(gr_vector_insert_b_sptr)
+
+gr_vector_insert_b_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.name(), self.unique_id ())
+
+
+def vector_insert_b(*args, **kwargs):
+  """
+    vector_insert_b(__dummy_0__ data, int periodicity, int offset = 0) -> gr_vector_insert_b_sptr
+
+    source of unsigned char's that gets its data from a vector
+    """
+  return _gnuradio_core_gengen.vector_insert_b(*args, **kwargs)
 class gr_vector_sink_b_sptr(object):
     """Proxy of C++ boost::shared_ptr<(gr_vector_sink_b)> class"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')

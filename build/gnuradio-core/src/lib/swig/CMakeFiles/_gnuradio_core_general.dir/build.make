@@ -162,7 +162,8 @@ gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-cor
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_streams_to_vector.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_cpm.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/filter/gr_single_pole_iir.h
-gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_add_ff.i
+gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_pack_k_bits_bb.i
+gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_pack_k_bits_bb.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_transcendental.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_transcendental.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_stretch_ff.h
@@ -185,6 +186,8 @@ gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-cor
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_vector_map.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gri_agc_cc.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_pll_refout_cc.h
+gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_keep_m_in_n.i
+gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_keep_m_in_n.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_correlate_access_code_tag_bb.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_correlate_access_code_tag_bb.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/filter/gri_goertzel.h
@@ -331,6 +334,7 @@ gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-cor
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_char_to_short.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_int_to_float.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/runtime/gr_sync_decimator.h
+gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_add_ff.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_float_to_complex.i
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_float_to_complex.h
 gnuradio-core/src/lib/swig/gnuradio_core_generalPYTHON_wrap.cxx: ../gnuradio-core/src/lib/general/gr_fft_vcc.h
@@ -512,6 +516,7 @@ gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_diff_encoder_bb.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_deinterleave.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_annotator_1to1.h
+gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_keep_m_in_n.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/qa_gr_math.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gri_uchar_to_float.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_regenerate_bb.h
@@ -566,6 +571,7 @@ gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_peak_detector2_fb.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_uchar_to_float.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_frequency_modulator_fc.h
+gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_pack_k_bits_bb.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/qa_gr_fxpt_vco.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/qa_gr_circular_file.h
 gnuradio-core/src/lib/swig/general_swig_doc.i: ../gnuradio-core/src/lib/swig/../general/gr_stream_to_streams.h
@@ -749,6 +755,7 @@ gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_diff_encoder_bb.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_deinterleave.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_annotator_1to1.h
+gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_keep_m_in_n.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/qa_gr_math.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gri_uchar_to_float.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_regenerate_bb.h
@@ -803,6 +810,7 @@ gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_peak_detector2_fb.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_uchar_to_float.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_frequency_modulator_fc.h
+gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_pack_k_bits_bb.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/qa_gr_fxpt_vco.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/qa_gr_circular_file.h
 gnuradio-core/src/lib/swig/general_swig_doc_swig_docs/xml/index.xml: ../gnuradio-core/src/lib/swig/../general/gr_stream_to_streams.h

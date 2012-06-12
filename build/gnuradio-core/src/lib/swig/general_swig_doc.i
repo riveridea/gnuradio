@@ -924,6 +924,8 @@ Useful for building test cases"
 
 
 
+
+
 %feature("docstring") gr_make_head "copies the first N items to the output then signals done
 
 Useful for building test cases"
@@ -979,6 +981,16 @@ Args:
 
 
 
+
+%feature("docstring") gr_keep_m_in_n "decimate a stream, keeping one item out of every n."
+
+
+
+
+
+
+
+%feature("docstring") gr_make_keep_m_in_n "decimate a stream, keeping one item out of every n."
 
 %feature("docstring") gr_keep_one_in_n "decimate a stream, keeping one item out of every n."
 
@@ -1173,6 +1185,16 @@ Anntenas are arranged like this:
 2 3 0 1
 
 dx and dy are lambda/2."
+
+%feature("docstring") gr_pack_k_bits_bb "Converts a stream of bytes with 1 bit in the LSB to a byte with k relevent bits."
+
+
+
+
+
+
+
+%feature("docstring") gr_make_pack_k_bits_bb "Converts a stream of bytes with 1 bit in the LSB to a byte with k relevent bits."
 
 %feature("docstring") gr_packet_sink "process received bits looking for packet sync, header, and process bits into packet"
 

@@ -5,24 +5,24 @@
     <includes refid="gr__core__api_8h" local="no">gr_core_api.h</includes>
     <includes local="no">gr_sync_block.h</includes>
     <incdepgraph>
-      <node id="351">
+      <node id="353">
         <label>gruel/attributes.h</label>
       </node>
-      <node id="352">
+      <node id="354">
         <label>gr_sync_block.h</label>
       </node>
-      <node id="350">
+      <node id="352">
         <label>gr_core_api.h</label>
         <link refid="gr__core__api_8h"/>
-        <childnode refid="351" relation="include">
+        <childnode refid="353" relation="include">
         </childnode>
       </node>
-      <node id="349">
+      <node id="351">
         <label>/home/alexzh/gr_alex/gnuradio/gnuradio-core/src/lib/general/gr_diff_phasor_cc.h</label>
         <link refid="gr_diff_phasor_cc.h"/>
-        <childnode refid="350" relation="include">
-        </childnode>
         <childnode refid="352" relation="include">
+        </childnode>
+        <childnode refid="354" relation="include">
         </childnode>
       </node>
     </incdepgraph>

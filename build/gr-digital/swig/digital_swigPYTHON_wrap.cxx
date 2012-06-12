@@ -50879,6 +50879,38 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_digital_ofdm_insert_preamble_sptr_enter_preamble(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  boost::shared_ptr< digital_ofdm_insert_preamble > *arg1 = (boost::shared_ptr< digital_ofdm_insert_preamble > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if(!PyArg_UnpackTuple(args,(char *)"digital_ofdm_insert_preamble_sptr_enter_preamble",1,1,&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_digital_ofdm_insert_preamble_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "digital_ofdm_insert_preamble_sptr_enter_preamble" "', argument " "1"" of type '" "boost::shared_ptr< digital_ofdm_insert_preamble > *""'"); 
+  }
+  arg1 = reinterpret_cast< boost::shared_ptr< digital_ofdm_insert_preamble > * >(argp1);
+  {
+    try {
+      (*arg1)->enter_preamble();
+    }
+    catch(std::exception &e) {
+      SWIG_exception(SWIG_RuntimeError, e.what());
+    }
+    catch(...) {
+      SWIG_exception(SWIG_RuntimeError, "Unknown exception");
+    }
+    
+  }
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_digital_ofdm_insert_preamble_sptr_history(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   boost::shared_ptr< digital_ofdm_insert_preamble > *arg1 = (boost::shared_ptr< digital_ofdm_insert_preamble > *) 0 ;
@@ -63438,6 +63470,7 @@ static PyMethodDef SwigMethods[] = {
 		""},
 	 { (char *)"digital_ofdm_insert_preamble_sptr___deref__", _wrap_digital_ofdm_insert_preamble_sptr___deref__, METH_VARARGS, (char *)"digital_ofdm_insert_preamble_sptr___deref__(digital_ofdm_insert_preamble_sptr self)"},
 	 { (char *)"delete_digital_ofdm_insert_preamble_sptr", _wrap_delete_digital_ofdm_insert_preamble_sptr, METH_VARARGS, (char *)"delete_digital_ofdm_insert_preamble_sptr(digital_ofdm_insert_preamble_sptr self)"},
+	 { (char *)"digital_ofdm_insert_preamble_sptr_enter_preamble", _wrap_digital_ofdm_insert_preamble_sptr_enter_preamble, METH_VARARGS, (char *)"digital_ofdm_insert_preamble_sptr_enter_preamble(digital_ofdm_insert_preamble_sptr self)"},
 	 { (char *)"digital_ofdm_insert_preamble_sptr_history", _wrap_digital_ofdm_insert_preamble_sptr_history, METH_VARARGS, (char *)"digital_ofdm_insert_preamble_sptr_history(digital_ofdm_insert_preamble_sptr self) -> unsigned int"},
 	 { (char *)"digital_ofdm_insert_preamble_sptr_output_multiple", _wrap_digital_ofdm_insert_preamble_sptr_output_multiple, METH_VARARGS, (char *)"digital_ofdm_insert_preamble_sptr_output_multiple(digital_ofdm_insert_preamble_sptr self) -> int"},
 	 { (char *)"digital_ofdm_insert_preamble_sptr_relative_rate", _wrap_digital_ofdm_insert_preamble_sptr_relative_rate, METH_VARARGS, (char *)"digital_ofdm_insert_preamble_sptr_relative_rate(digital_ofdm_insert_preamble_sptr self) -> double"},

@@ -2659,6 +2659,25 @@ gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_iqcomp_cc.cc.o: ..
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_iqcomp_cc.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_iqcomp_cc.cc.o: ../gnuradio-core/src/lib/general/gr_iqcomp_cc.cc
 
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/general/gr_keep_m_in_n.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_basic_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_complex.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_io_signature.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_runtime_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_sptr_magic.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_sync_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_tags.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gruel/src/include/gruel/api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gruel/src/include/gruel/attributes.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gruel/src/include/gruel/msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gruel/src/include/gruel/pmt.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_m_in_n.cc.o: ../gnuradio-core/src/lib/general/gr_keep_m_in_n.cc
+
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_one_in_n.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_one_in_n.cc.o: ../gnuradio-core/src/lib/general/gr_keep_one_in_n.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_keep_one_in_n.cc.o: ../gnuradio-core/src/lib/runtime/gr_basic_block.h
@@ -2958,6 +2977,26 @@ gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pa_2x2_phase_combi
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pa_2x2_phase_combiner.cc.o: ../gruel/src/include/gruel/pmt.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pa_2x2_phase_combiner.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pa_2x2_phase_combiner.cc.o: ../gnuradio-core/src/lib/general/gr_pa_2x2_phase_combiner.cc
+
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/general/gr_pack_k_bits_bb.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_basic_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_complex.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_io_signature.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_runtime_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_sptr_magic.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_sync_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_sync_decimator.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_tags.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/runtime/gr_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gruel/src/include/gruel/api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gruel/src/include/gruel/attributes.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gruel/src/include/gruel/msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gruel/src/include/gruel/pmt.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_pack_k_bits_bb.cc.o: ../gnuradio-core/src/lib/general/gr_pack_k_bits_bb.cc
 
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_packet_sink.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/general/gr_packet_sink.cc.o: ../gnuradio-core/src/lib/general/gr_count_bits.h
@@ -5774,6 +5813,24 @@ gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_unpacked_to_packed_
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_unpacked_to_packed_ss.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_unpacked_to_packed_ss.cc.o: gnuradio-core/src/lib/gengen/gr_unpacked_to_packed_ss.cc
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_unpacked_to_packed_ss.cc.o: gnuradio-core/src/lib/gengen/gr_unpacked_to_packed_ss.h
+
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_basic_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_block.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_complex.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_io_signature.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_runtime_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_sptr_magic.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_tags.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_types.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gruel/src/include/gruel/api.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gruel/src/include/gruel/attributes.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gruel/src/include/gruel/msg_accepter.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gruel/src/include/gruel/pmt.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: ../gruel/src/include/gruel/pmt_sugar.h
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: gnuradio-core/src/lib/gengen/gr_vector_insert_b.cc
+gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_insert_b.cc.o: gnuradio-core/src/lib/gengen/gr_vector_insert_b.h
 
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_sink_b.cc.o: ../gnuradio-core/src/lib/general/gr_core_api.h
 gnuradio-core/src/lib/CMakeFiles/gnuradio-core.dir/gengen/gr_vector_sink_b.cc.o: ../gnuradio-core/src/lib/runtime/gr_basic_block.h
