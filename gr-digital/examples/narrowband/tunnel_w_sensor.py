@@ -64,6 +64,9 @@ import wx
 import os, sys
 import random, time, struct
 
+# for proteced message queue
+import threading
+
 #print os.getpid()
 #raw_input('Attach and press enter')
 
@@ -89,6 +92,9 @@ CLUSTER_NODE    = 0x0002   # cluster node
 
 CTRL_TYPE        = 0x01   # control packet
 DATA_TYPE        = 0x02   # data packet
+
+BCST_ADDR        = 4294967295
+HEAD_ADDR        = 0
 
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
@@ -214,16 +220,36 @@ class ctrl_st_machine(object):
             #indexed by the transaction id
             self.ndata = dict()
             
+        self.oq_lock = threading.Lock()
         self.output    = []   #outgoing message queue
+        self.pktno     = 0    #
         self.tb = None #top block (to access the device information)
     
     def set_top_block(self, tb):
         self.tb = tb
         self.sensor = tb.sensor
 
-    def process_payload(self, payload):
-        global outpktno
+    def start_round_robin(self, tb):
+        # broadcast the start command to all the nodes to start
+        # the first round of data collection
+        # Only head can broadcast this command
+        if self.node_type == CLUSTER_HEAD:
+            pkt_size = struct.pack('!H', 25) #include the pktno(4) 
+            pkt_type = struct.pack('!B', CTRL_TYPE)
+            fromaddr = struct.pack('!I', HEAD_ADDR)
+            toaddr = struct.pack('!I', BCST_ADDR)
+            start_time = self.tb.sensor.get_time_now().get_real_secs()+1
+            start_time = struct.pack('!d', start_time)
+            samp_num = struct.pack('!H', 128)
+            
+            payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
+            
+            self.oq_lock.acquire()
+            self.output.append(payload)
+            self.oq_lock.release()
+            
 
+    def process_payload(self, payload):
         length = len(payload)
         if self.node_type == "head":
             print "head"
@@ -262,16 +288,17 @@ class ctrl_st_machine(object):
                         out_payload += 
                             struct.pack('!ff', samp.real, samp.imag)
 
-                    outpktno += 1
                     header = 
-                        struct.pack('!IHB', outpktno, data_per_pkt+33, DATA_TYPE)
+                        struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
                     header +=
                         struct.pack('!II', toaddrr, fromaddr)
                     header +=
-                        struct.pack('!dH', start_time, samp_num)
+                        struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
+                    lock.acquire()
                     self.output.append(out_payload)
+                    lock.release()
                     
             print "node"
         else:
@@ -333,8 +360,11 @@ class cs_mac(object):
             if not payload and len(output_q) == 0:
                 self.tb.send_pkt(eof=True)
                 break
-           
+            
+            self.csm.lock.acquire()
             self.csm.output.append(payload)
+            self.csm.lock.release()           
+ 
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
 
@@ -346,7 +376,11 @@ class cs_mac(object):
                     delay = delay * 2       # exponential back-off
             
             #only send the packet from the output queue
+            self.csm.lock.acquire()
             payload = output_q.pop()
+            self.csm.lock.release()
+            self.csm.pktno += 1
+            payload = struct.pack('!I', self.pktno) + payload
             self.tb.send_pkt(payload)
 
 

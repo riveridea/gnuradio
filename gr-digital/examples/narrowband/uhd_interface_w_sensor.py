@@ -62,6 +62,7 @@ class uhd_interface:
             self.u.set_antenna(antenna, 0)
         
         #self._args = args
+        self._addr = addr
         self._ant  = antenna
         self._spec = spec
         self._gain = self.set_gain(gain)
