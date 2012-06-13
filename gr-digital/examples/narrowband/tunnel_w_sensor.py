@@ -250,6 +250,8 @@ class ctrl_st_machine(object):
             
 
     def process_payload(self, payload):
+        
+        print 'process_pay_load'
         length = len(payload)
         if self.node_type == "head":
             print "head"
