@@ -260,20 +260,17 @@ class ctrl_st_machine(object):
                 print 'useless payload'
                 return 1
                    
-            (pktno, pktsize, pkttype) = 
-                 struct.unpack('!IHB', payload[0:7])
-            (fromaddr, toaddr) =
-                 struct.unpack('!II', payload[7:15]')
+            (pktno, pktsize, pkttype) = struct.unpack('!IHB', payload[0:7])
+            (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
 
             if pkttype == CRTL_TYPE and length > 15:
-                payld_size = struct.unpack('!I', payload[15:19])
+                (payld_size,) = struct.unpack('!I', payload[15:19])
                 
-                if length != payld_size + 15
+                if length != payld_size + 15:
                     print 'invalid payload'
                     return 1
  
-                (start_time, samp_num) = 
-                     struct.unpack('!dH', payload[23:33])
+                (start_time, samp_num) = struct.unpack('!dH', payload[23:33])
                 
                 # start the data collection as specified time
                 self.sensor.set_start_time(uhd.time_spec_t(start_time))
@@ -285,15 +282,11 @@ class ctrl_st_machine(object):
                     out_payload = ''
                     for j in range(samp_per_pkt):
                         samp = samps[j+i*samp_per_pkt]
-                        out_payload += 
-                            struct.pack('!ff', samp.real, samp.imag)
+                        out_payload += struct.pack('!ff', samp.real, samp.imag)
 
-                    header = 
-                        struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
-                    header +=
-                        struct.pack('!II', toaddrr, fromaddr)
-                    header +=
-                        struct.pack('!dHH', start_time, samp_num, i)
+                    header = struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
+                    header += struct.pack('!II', toaddrr, fromaddr)
+                    header += struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
                     lock.acquire()
