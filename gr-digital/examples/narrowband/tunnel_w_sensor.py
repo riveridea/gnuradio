@@ -87,8 +87,8 @@ IFF_TAP		= 0x0002   # tunnel ethernet frames
 IFF_NO_PI	= 0x1000   # don't pass extra packet info
 IFF_ONE_QUEUE	= 0x2000   # beats me ;)
 
-CLUSTER_HEAD    = 0x0001   # cluster head
-CLUSTER_NODE    = 0x0002   # cluster node
+CLUSTER_HEAD    = 'head'   # cluster head
+CLUSTER_NODE    = 'node'   # cluster node
 
 CTRL_TYPE        = 0x01   # control packet
 DATA_TYPE        = 0x02   # data packet
@@ -229,24 +229,31 @@ class ctrl_st_machine(object):
         self.tb = tb
         self.sensor = tb.sensor
 
-    def start_round_robin(self, tb):
+    def start_round_robin(self):
         # broadcast the start command to all the nodes to start
         # the first round of data collection
         # Only head can broadcast this command
+        print 'start_round_robin'
+
         if self.node_type == CLUSTER_HEAD:
             pkt_size = struct.pack('!H', 25) #include the pktno(4) 
             pkt_type = struct.pack('!B', CTRL_TYPE)
             fromaddr = struct.pack('!I', HEAD_ADDR)
             toaddr = struct.pack('!I', BCST_ADDR)
-            start_time = self.tb.sensor.get_time_now().get_real_secs()+1
+            start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
             start_time = struct.pack('!d', start_time)
             samp_num = struct.pack('!H', 128)
             
             payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
             
+            print 'start round robin'
+            
             self.oq_lock.acquire()
+            print 'append the start command to outq'
             self.output.append(payload)
+            #print payload
             self.oq_lock.release()
+            print 'lock released'
             
 
     def process_payload(self, payload):
@@ -291,9 +298,9 @@ class ctrl_st_machine(object):
                     header += struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
-                    lock.acquire()
+                    self.oq_lock.acquire()
                     self.output.append(out_payload)
-                    lock.release()
+                    self.oq_lock.release()
                     
             print "node"
         else:
@@ -348,20 +355,25 @@ class cs_mac(object):
         """
         min_delay = 0.001               # seconds
         output_q = self.csm.output
+        
+        print 'CSMA mainloop'
 
         while 1:
-            payload = os.read(self.tun_fd, 10*1024)
+            #payload = os.read(self.tun_fd, 10*1024)
             
-            if not payload and len(output_q) == 0:
+            #if not payload and len(output_q) == 0:
+            if len(output_q) == 0:
+                print 'break'
                 self.tb.send_pkt(eof=True)
                 break
             
-            self.csm.lock.acquire()
-            self.csm.output.append(payload)
-            self.csm.lock.release()           
+            #self.csm.oq_lock.acquire()
+            #print 'append packet from tunnel'
+            #self.csm.output.append(payload)
+            #self.csm.oq_lock.release()           
  
-            if self.verbose:
-                print "Tx: len(payload) = %4d" % (len(payload),)
+            #if self.verbose:
+                #print "Tx: len(payload) = %4d" % (len(payload),)
 
             delay = min_delay
             while self.tb.carrier_sensed():
@@ -371,11 +383,13 @@ class cs_mac(object):
                     delay = delay * 2       # exponential back-off
             
             #only send the packet from the output queue
-            self.csm.lock.acquire()
+            self.csm.oq_lock.acquire()
+            print 'pop a packet from the outq'
             payload = output_q.pop()
-            self.csm.lock.release()
+            self.csm.oq_lock.release()
             self.csm.pktno += 1
-            payload = struct.pack('!I', self.pktno) + payload
+            payload = struct.pack('!I', self.csm.pktno) + payload
+
             self.tb.send_pkt(payload)
 
 
@@ -479,6 +493,8 @@ def main():
 
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
+
+    csm.start_round_robin() # start the round robin command
 
     mac.main_loop()    # don't expect this to return...
 
