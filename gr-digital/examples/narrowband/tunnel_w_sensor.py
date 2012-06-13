@@ -260,15 +260,13 @@ class ctrl_st_machine(object):
                 print 'useless payload'
                 return 1
                    
-            (pktno, pktsize, pkttype) = 
-                 struct.unpack('!IHB', payload[0:7])
-            (fromaddr, toaddr) =
-                 struct.unpack('!II', payload[7:15]')
+            (pktno, pktsize, pkttype) = struct.unpack('!IHB', payload[0:7])
+            (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
 
             if pkttype == CRTL_TYPE and length > 15:
                 (payld_size,) = struct.unpack('!I', payload[15:19])
                 
-                if length != payld_size + 15
+                if length != payld_size + 15:
                     print 'invalid payload'
                     return 1
  
