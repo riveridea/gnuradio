@@ -202,6 +202,12 @@ class ctrl_st_machine(object):
         self.output    = []   #outgoing message queue
         self.pktno     = 0    #
         self.tb = None #top block (to access the device information)
+        
+        # firstly do the finite acqaution to set the time flag
+        time = self.sensor.u.get_time_now().get_real_secs() + 0.2
+        self.sensor.u.set_start_time(uhd.time_spec_t(time))
+        test_samps = self.sensor.u.finite_acquisition(4)
+        print 'test_samps length = ', len(test_samps)        
     
     def set_top_block(self, tb):
         self.tb = tb
@@ -478,9 +484,8 @@ def main():
 
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
-    tb.sleep(10)  # wait the GPS to synch
+    
     csm.start_round_robin() # start the round robin command
-
     mac.main_loop()    # don't expect this to return...
 
     tb.stop()     # but if it does, tell flow graph to stop.
