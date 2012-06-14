@@ -43,7 +43,7 @@
 # ///////////////////////////////////////////////////////////////////
 
 
-from gnuradio import gr, digital
+from gnuradio import gr, digital, uhd
 from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
@@ -219,6 +219,7 @@ class ctrl_st_machine(object):
             fromaddr = struct.pack('!I', HEAD_ADDR)
             toaddr = struct.pack('!I', BCST_ADDR)
             start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
+            print 'start_time = ', start_time
             start_time = struct.pack('!d', start_time)
             samp_num = struct.pack('!H', 128)
             
@@ -237,7 +238,7 @@ class ctrl_st_machine(object):
     def process_payload(self, payload):
         
         print 'process_pay_load'
-        print "incoming_payload =", string_to_hex_list(payload)
+        print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
         length = len(payload)
         if self.node_type == "head":
             print "head"
@@ -252,17 +253,21 @@ class ctrl_st_machine(object):
             (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
 
             if pkttype == CTRL_TYPE and length > 15:
-                (payld_size,) = struct.unpack('!I', payload[15:19])
                 
-                if length != payld_size + 15:
+                if length != pktsize:
                     print 'invalid payload'
                     return 1
  
-                (start_time, samp_num) = struct.unpack('!dH', payload[23:33])
-                
+                (start_time, samp_num) = struct.unpack('!dH', payload[15:25])
+                print 'samp_num = ', samp_num
+                print 'start_time = ', start_time
                 # start the data collection as specified time
-                self.sensor.set_start_time(uhd.time_spec_t(start_time))
-                samps = self.sensor.finite_acquisition(samp_num)
+                sensor_time = self.sensor.u.get_time_now().get_real_secs()
+                print 'sensor_time =', sensor_time
+                self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
+                samps = self.sensor.u.finite_acquisition(samp_num)
+                 
+                print 'samps len = ', len(samps)
 
                 data_per_pkt = 256
                 samp_per_pkt = data_per_pkt/8
