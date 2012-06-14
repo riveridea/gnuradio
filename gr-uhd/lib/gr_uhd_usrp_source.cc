@@ -388,6 +388,7 @@ public:
     }
 
     void set_start_time(const uhd::time_spec_t &time){
+        printf("set_start_time successfully\n");
         _start_time = time;
         _start_time_set = true;
         _stream_now = false;
@@ -459,7 +460,6 @@ public:
             this->stop();
         }
 
-        printf("ipython printing message for finite_acquistition\n");
         //flush so there is no queued-up data
         this->flush();
 

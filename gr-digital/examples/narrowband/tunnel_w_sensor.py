@@ -478,7 +478,7 @@ def main():
 
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
-
+    tb.sleep(10)  # wait the GPS to synch
     csm.start_round_robin() # start the round robin command
 
     mac.main_loop()    # don't expect this to return...
