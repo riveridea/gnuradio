@@ -484,7 +484,7 @@ public:
             _start_time_set = false; //cleared for next run
             cmd.time_spec = _start_time;
             timeout = cmd.time_spec.get_real_secs() - get_time_now().get_real_secs() + 1.0;
-            fprintf(stderr, "start time set");
+            printf("start time set");
         }
         else{
             cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
