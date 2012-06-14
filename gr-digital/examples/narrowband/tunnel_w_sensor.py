@@ -67,7 +67,7 @@ import random, time, struct
 # for proteced message queue
 import threading
 
-import packet_utils
+import gnuradio.digital.packet_utils as pkt_utils
 
 #print os.getpid()
 #raw_input('Attach and press enter')
