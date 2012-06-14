@@ -67,6 +67,8 @@ import random, time, struct
 # for proteced message queue
 import threading
 
+import packet_utils
+
 #print os.getpid()
 #raw_input('Attach and press enter')
 
@@ -235,6 +237,7 @@ class ctrl_st_machine(object):
     def process_payload(self, payload):
         
         print 'process_pay_load'
+        print "incoming_payload =", string_to_hex_list(payload)
         length = len(payload)
         if self.node_type == "head":
             print "head"
