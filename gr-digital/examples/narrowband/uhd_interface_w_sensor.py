@@ -168,7 +168,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
         Prints information about the UHD transmitter
         """
         print "\nUHD Transmitter:"
-        print "Args:     %s"    % (self._args)
+        print "UHD TX Addr:     %s"    % (self._addr)
         print "Freq:        %sHz"  % (eng_notation.num_to_str(self._freq))
         print "Gain:        %f dB" % (self._gain)
         print "Sample Rate: %ssps" % (eng_notation.num_to_str(self._rate))
@@ -221,7 +221,7 @@ class uhd_receiver(uhd_interface, gr.hier_block2):
         Prints information about the UHD transmitter
         """
         print "\nUHD Receiver:"
-        print "UHD Args:    %s"    % (self._args)
+        print "UHD Receiver Addr:  %s"    % (self._addr)
         print "Freq:        %sHz"  % (eng_notation.num_to_str(self._freq))
         print "Gain:        %f dB" % (self._gain)
         print "Sample Rate: %ssps" % (eng_notation.num_to_str(self._rate))
@@ -293,7 +293,7 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
         Prints information about the UHD transmitter
         """
         print "\nUHD Receiver:"
-        print "UHD Addrs:    %s"    % (self.addr)
+        print "UHD Addrs:    %s"    % (self._addr)
         print "Freq:        %sHz"  % (eng_notation.num_to_str(self._freq))
         print "Gain:        %f dB" % (self._gain)
         print "Sample Rate: %ssps" % (eng_notation.num_to_str(self._rate))

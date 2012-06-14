@@ -67,6 +67,8 @@ import random, time, struct
 # for proteced message queue
 import threading
 
+import packet_utils
+
 #print os.getpid()
 #raw_input('Attach and press enter')
 
@@ -87,8 +89,8 @@ IFF_TAP		= 0x0002   # tunnel ethernet frames
 IFF_NO_PI	= 0x1000   # don't pass extra packet info
 IFF_ONE_QUEUE	= 0x2000   # beats me ;)
 
-CLUSTER_HEAD    = 0x0001   # cluster head
-CLUSTER_NODE    = 0x0002   # cluster node
+CLUSTER_HEAD    = 'head'   # cluster head
+CLUSTER_NODE    = 'node'   # cluster node
 
 CTRL_TYPE        = 0x01   # control packet
 DATA_TYPE        = 0x02   # data packet
@@ -113,17 +115,12 @@ def open_tun_interface(tun_device_filename):
 # ////////////////////////////////////////////////////////////////////
 
 #class my_top_block(gr.top_block):
-class my_top_block(grc_wxgui.top_block_gui):
+class my_top_block(gr.top_block):
 
     def __init__(self, node_type, mod_class, demod_class,
                  rx_callback, options):
 
-        #gr.top_block.__init__(self)
-        
-        # for grc block initializaiton
-        grc_wxgui.top_block_gui.__init__(self, title="My Top Block")
-        _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-        self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+        gr.top_block.__init__(self)
 
 	# is this node the sub node or head?
         self._node_type = node_type
@@ -150,31 +147,12 @@ class my_top_block(grc_wxgui.top_block_gui):
                                  options.sx_spec, options.sx_antenna, 
                                  options.verbose)
         
-        options.samples_per_symbol = self.source._sps
-
-        # Setup a FFT plotting window
-        self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
-			self.GetWin(),
-			baseband_freq=options.sx_freq,
-			y_per_div=20,
-			y_divs=10,
-			ref_level=0,
-			ref_scale=2.0,
-			sample_rate=options.sx_samprate,
-			fft_size=1024,
-			fft_rate=15,
-			average=False,
-			avg_alpha=None,
-			title="FFT Plot",
-			peak_hold=False,
-		)
-        self.Add(self.wxgui_fftsink2_0.win)       
+        options.samples_per_symbol = self.source._sps     
         
         self.txpath = transmit_path(mod_class, options)
         self.rxpath = receive_path(demod_class, rx_callback, options)
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        self.connect(self.sensor, self.wxgui_fftsink2_0)
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
@@ -229,27 +207,37 @@ class ctrl_st_machine(object):
         self.tb = tb
         self.sensor = tb.sensor
 
-    def start_round_robin(self, tb):
+    def start_round_robin(self):
         # broadcast the start command to all the nodes to start
         # the first round of data collection
         # Only head can broadcast this command
+        print 'start_round_robin'
+
         if self.node_type == CLUSTER_HEAD:
             pkt_size = struct.pack('!H', 25) #include the pktno(4) 
             pkt_type = struct.pack('!B', CTRL_TYPE)
             fromaddr = struct.pack('!I', HEAD_ADDR)
             toaddr = struct.pack('!I', BCST_ADDR)
-            start_time = self.tb.sensor.get_time_now().get_real_secs()+1
+            start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
             start_time = struct.pack('!d', start_time)
             samp_num = struct.pack('!H', 128)
             
             payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
             
+            print 'start round robin'
+            
             self.oq_lock.acquire()
+            print 'append the start command to outq'
             self.output.append(payload)
+            #print payload
             self.oq_lock.release()
+            print 'lock released'
             
 
     def process_payload(self, payload):
+        
+        print 'process_pay_load'
+        print "incoming_payload =", string_to_hex_list(payload)
         length = len(payload)
         if self.node_type == "head":
             print "head"
@@ -260,20 +248,17 @@ class ctrl_st_machine(object):
                 print 'useless payload'
                 return 1
                    
-            (pktno, pktsize, pkttype) = 
-                 struct.unpack('!IHB', payload[0:7])
-            (fromaddr, toaddr) =
-                 struct.unpack('!II', payload[7:15]')
+            (pktno, pktsize, pkttype) = struct.unpack('!IHB', payload[0:7])
+            (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
 
-            if pkttype == CRTL_TYPE and length > 15:
-                payld_size = struct.unpack('!I', payload[15:19])
+            if pkttype == CTRL_TYPE and length > 15:
+                (payld_size,) = struct.unpack('!I', payload[15:19])
                 
-                if length != payld_size + 15
+                if length != payld_size + 15:
                     print 'invalid payload'
                     return 1
  
-                (start_time, samp_num) = 
-                     struct.unpack('!dH', payload[23:33])
+                (start_time, samp_num) = struct.unpack('!dH', payload[23:33])
                 
                 # start the data collection as specified time
                 self.sensor.set_start_time(uhd.time_spec_t(start_time))
@@ -285,20 +270,16 @@ class ctrl_st_machine(object):
                     out_payload = ''
                     for j in range(samp_per_pkt):
                         samp = samps[j+i*samp_per_pkt]
-                        out_payload += 
-                            struct.pack('!ff', samp.real, samp.imag)
+                        out_payload += struct.pack('!ff', samp.real, samp.imag)
 
-                    header = 
-                        struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
-                    header +=
-                        struct.pack('!II', toaddrr, fromaddr)
-                    header +=
-                        struct.pack('!dHH', start_time, samp_num, i)
+                    header = struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
+                    header += struct.pack('!II', toaddrr, fromaddr)
+                    header += struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
-                    lock.acquire()
+                    self.oq_lock.acquire()
                     self.output.append(out_payload)
-                    lock.release()
+                    self.oq_lock.release()
                     
             print "node"
         else:
@@ -338,6 +319,8 @@ class cs_mac(object):
         @param ok: bool indicating whether payload CRC was OK
         @param payload: contents of the packet (string)
         """
+
+        print 'phy_rx_callback'
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
@@ -353,20 +336,20 @@ class cs_mac(object):
         """
         min_delay = 0.001               # seconds
         output_q = self.csm.output
+        
+        print 'CSMA mainloop'
 
         while 1:
-            payload = os.read(self.tun_fd, 10*1024)
+            #payload1 = os.read(self.tun_fd, 10*1024)
             
-            if not payload and len(output_q) == 0:
+            #if not payload1 and len(output_q) == 0:
+            if len(output_q) == 0:
+                print 'break'
                 self.tb.send_pkt(eof=True)
-                break
+                continue
             
-            self.csm.lock.acquire()
-            self.csm.output.append(payload)
-            self.csm.lock.release()           
- 
-            if self.verbose:
-                print "Tx: len(payload) = %4d" % (len(payload),)
+            #if self.verbose:
+                #print "Tx: len(payload) = %4d" % (len(payload),)
 
             delay = min_delay
             while self.tb.carrier_sensed():
@@ -376,11 +359,15 @@ class cs_mac(object):
                     delay = delay * 2       # exponential back-off
             
             #only send the packet from the output queue
-            self.csm.lock.acquire()
+            self.csm.oq_lock.acquire()
+            print 'pop a packet from the outq'
             payload = output_q.pop()
-            self.csm.lock.release()
+            print "Tx: len(payload) = %4d" % (len(payload),)
+            self.csm.oq_lock.release()
             self.csm.pktno += 1
-            payload = struct.pack('!I', self.pktno) + payload
+            payload = struct.pack('!I', self.csm.pktno) + payload
+            #print payload
+
             self.tb.send_pkt(payload)
 
 
@@ -484,6 +471,8 @@ def main():
 
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
+
+    csm.start_round_robin() # start the round robin command
 
     mac.main_loop()    # don't expect this to return...
 
