@@ -208,10 +208,10 @@ class ctrl_st_machine(object):
         self.sensor = tb.sensor
         
         # firstly do the finite acqaution to set the time flag
-        time = self.sensor.u.get_time_now().get_real_secs() + 0.2
-        self.sensor.u.set_start_time(uhd.time_spec_t(time))
-        test_samps = self.sensor.u.finite_acquisition(4)
-        print 'test_samps length = ', len(test_samps)
+        #time = self.sensor.u.get_time_now().get_real_secs() + 0.2
+        #self.sensor.u.set_start_time(uhd.time_spec_t(time))
+        #test_samps = self.sensor.u.finite_acquisition(4)
+        #print 'test_samps length = ', len(test_samps)
 
     def start_round_robin(self):
         # broadcast the start command to all the nodes to start

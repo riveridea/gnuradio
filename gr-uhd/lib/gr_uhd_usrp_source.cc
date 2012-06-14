@@ -457,7 +457,8 @@ public:
         #ifdef GR_UHD_USE_STREAM_API
 
         //kludgy way to ensure rx streamer exsists
-        if (!_rx_stream){
+        //sometimes we just start the finite_acquistion by start time
+        if (!_rx_stream && !_start_time_set){ 
             this->start();
             this->stop();
         }
