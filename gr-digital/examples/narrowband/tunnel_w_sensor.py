@@ -359,17 +359,27 @@ class cs_mac(object):
         print 'CSMA mainloop'
 
         while 1:
-            #payload = os.read(self.tun_fd, 10*1024)
+            #payload1 = os.read(self.tun_fd, 10*1024)
             
-            #if not payload and len(output_q) == 0:
+            #if not payload1 and len(output_q) == 0:
             if len(output_q) == 0:
                 print 'break'
                 self.tb.send_pkt(eof=True)
-                break
+                continue
             
             #self.csm.oq_lock.acquire()
             #print 'append packet from tunnel'
-            #self.csm.output.append(payload)
+            #pkt_size = struct.pack('!H', 25) #include the pktno(4) 
+            #pkt_type = struct.pack('!B', CTRL_TYPE)
+            #fromaddr = struct.pack('!I', HEAD_ADDR)
+            #toaddr = struct.pack('!I', BCST_ADDR)
+            #start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
+            #start_time = struct.pack('!d', start_time)
+            #samp_num = struct.pack('!H', 128)
+            
+            #payload1 = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
+
+            #self.csm.output.append(payload1)
             #self.csm.oq_lock.release()           
  
             #if self.verbose:
@@ -386,9 +396,11 @@ class cs_mac(object):
             self.csm.oq_lock.acquire()
             print 'pop a packet from the outq'
             payload = output_q.pop()
+            print "Tx: len(payload) = %4d" % (len(payload),)
             self.csm.oq_lock.release()
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
+            #print payload
 
             self.tb.send_pkt(payload)
 
