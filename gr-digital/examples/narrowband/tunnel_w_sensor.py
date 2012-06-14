@@ -113,17 +113,12 @@ def open_tun_interface(tun_device_filename):
 # ////////////////////////////////////////////////////////////////////
 
 #class my_top_block(gr.top_block):
-class my_top_block(grc_wxgui.top_block_gui):
+class my_top_block(gr.top_block):
 
     def __init__(self, node_type, mod_class, demod_class,
                  rx_callback, options):
 
-        #gr.top_block.__init__(self)
-        
-        # for grc block initializaiton
-        grc_wxgui.top_block_gui.__init__(self, title="My Top Block")
-        _icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-        self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+        gr.top_block.__init__(self)
 
 	# is this node the sub node or head?
         self._node_type = node_type
@@ -150,31 +145,12 @@ class my_top_block(grc_wxgui.top_block_gui):
                                  options.sx_spec, options.sx_antenna, 
                                  options.verbose)
         
-        options.samples_per_symbol = self.source._sps
-
-        # Setup a FFT plotting window
-        self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
-			self.GetWin(),
-			baseband_freq=options.sx_freq,
-			y_per_div=20,
-			y_divs=10,
-			ref_level=0,
-			ref_scale=2.0,
-			sample_rate=options.sx_samprate,
-			fft_size=1024,
-			fft_rate=15,
-			average=False,
-			avg_alpha=None,
-			title="FFT Plot",
-			peak_hold=False,
-		)
-        self.Add(self.wxgui_fftsink2_0.win)       
+        options.samples_per_symbol = self.source._sps     
         
         self.txpath = transmit_path(mod_class, options)
         self.rxpath = receive_path(demod_class, rx_callback, options)
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        self.connect(self.sensor, self.wxgui_fftsink2_0)
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
@@ -272,7 +248,7 @@ class ctrl_st_machine(object):
             (pktno, pktsize, pkttype) = struct.unpack('!IHB', payload[0:7])
             (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
 
-            if pkttype == CRTL_TYPE and length > 15:
+            if pkttype == CTRL_TYPE and length > 15:
                 (payld_size,) = struct.unpack('!I', payload[15:19])
                 
                 if length != payld_size + 15:
@@ -340,6 +316,8 @@ class cs_mac(object):
         @param ok: bool indicating whether payload CRC was OK
         @param payload: contents of the packet (string)
         """
+
+        print 'phy_rx_callback'
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
@@ -367,21 +345,6 @@ class cs_mac(object):
                 self.tb.send_pkt(eof=True)
                 continue
             
-            #self.csm.oq_lock.acquire()
-            #print 'append packet from tunnel'
-            #pkt_size = struct.pack('!H', 25) #include the pktno(4) 
-            #pkt_type = struct.pack('!B', CTRL_TYPE)
-            #fromaddr = struct.pack('!I', HEAD_ADDR)
-            #toaddr = struct.pack('!I', BCST_ADDR)
-            #start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
-            #start_time = struct.pack('!d', start_time)
-            #samp_num = struct.pack('!H', 128)
-            
-            #payload1 = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
-
-            #self.csm.output.append(payload1)
-            #self.csm.oq_lock.release()           
- 
             #if self.verbose:
                 #print "Tx: len(payload) = %4d" % (len(payload),)
 
