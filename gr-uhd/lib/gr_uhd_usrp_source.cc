@@ -460,12 +460,16 @@ public:
         //sometimes we just start the finite_acquistion by start time
         if (!_rx_stream){
             //kludgy way to keep the _start_time_set flag :(
-            bool finite_start_time_set = _start_time_set;
+            //bool finite_start_time_set = _start_time_set;
                 
-            this->start();
-            this->stop();
+            //this->start();
+            //this->stop();
 
-            _start_time_set = finite_start_time_set;
+            //_start_time_set = finite_start_time_set;
+            #ifdef GR_UHD_USE_STREAM_API
+            _rx_stream = _dev->get_rx_stream(_stream_args);
+            _samps_per_packet = _rx_stream->get_max_num_samps();
+            #endif
         }
 
         //flush so there is no queued-up data
