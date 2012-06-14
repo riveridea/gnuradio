@@ -264,8 +264,10 @@ class ctrl_st_machine(object):
                 # start the data collection as specified time
                 sensor_time = self.sensor.u.get_time_now().get_real_secs()
                 print 'sensor_time =', sensor_time
-                self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
-                samps = self.sensor.u.finite_acquisition(samp_num)
+                
+                if start_time - sensor_time > 0.1:
+                    self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
+                    samps = self.sensor.u.finite_acquisition(samp_num)
                  
                 print 'samps len = ', len(samps)
 
