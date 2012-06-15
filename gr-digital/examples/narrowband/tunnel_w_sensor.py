@@ -341,8 +341,9 @@ class cs_mac(object):
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
-            if self.csm.process_payload(payload) == 1:
-                os.write(self.tun_fd, payload)
+            self.csm.process_payload(payload)
+            print 'payload processed'            
+            #os.write(self.tun_fd, payload)
 
     def main_loop(self):
         """
