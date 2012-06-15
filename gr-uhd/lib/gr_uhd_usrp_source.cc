@@ -406,9 +406,11 @@ public:
         if (_start_time_set){
             _start_time_set = false; //cleared for next run
             stream_cmd.time_spec = _start_time;
+            printf("start as specified time \n");
         }
         else{
             stream_cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
+            printf("start with no specified time \n");
         }
         _dev->issue_stream_cmd(stream_cmd);
         _tag_now = true;
@@ -455,9 +457,19 @@ public:
         #ifdef GR_UHD_USE_STREAM_API
 
         //kludgy way to ensure rx streamer exsists
+        //sometimes we just start the finite_acquistion by start time
         if (!_rx_stream){
-            this->start();
-            this->stop();
+            //kludgy way to keep the _start_time_set flag :(
+            //bool finite_start_time_set = _start_time_set;
+                
+            //this->start();
+            //this->stop();
+
+            //_start_time_set = finite_start_time_set;
+            #ifdef GR_UHD_USE_STREAM_API
+            _rx_stream = _dev->get_rx_stream(_stream_args);
+            _samps_per_packet = _rx_stream->get_max_num_samps();
+            #endif
         }
 
         //flush so there is no queued-up data
