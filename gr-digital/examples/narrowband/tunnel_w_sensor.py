@@ -199,7 +199,7 @@ class ctrl_st_machine(object):
             self.ndata = dict()
             
         self.oq_lock = threading.Lock()
-        self.output    = []   #outgoing message queue
+        self.output    = Queue.Queue(0)   #outgoing message queue, infinit size limit
         self.pktno     = 0    #
         self.tb = None #top block (to access the device information)               
     
@@ -233,11 +233,11 @@ class ctrl_st_machine(object):
             
             print 'start round robin'
             
-            self.oq_lock.acquire()
+            #self.oq_lock.acquire()
             print 'append the start command to outq'
-            self.output.append(payload)
+            self.output.put(payload)
             #print payload
-            self.oq_lock.release()
+            #self.oq_lock.release()
             print 'lock released'
             
 
@@ -290,9 +290,9 @@ class ctrl_st_machine(object):
                     header += struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
-                    self.oq_lock.acquire()
-                    self.output.append(out_payload)
-                    self.oq_lock.release()
+                    #self.oq_lock.acquire()
+                    self.output.put(out_payload)
+                    #self.oq_lock.release()
               
             print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)              
         else:
@@ -354,31 +354,31 @@ class cs_mac(object):
 
         while 1:
             #payload1 = os.read(self.tun_fd, 10*1024)
-            
-            #if not payload1 and len(output_q) == 0:
-            if len(output_q) == 0:
+            #self.csm.oq_lock.acquire()
+            print 'pop a packet from the outq'
+            payload = output_q.get()
+            print "Tx: len(payload) = %4d" % (len(payload),)
+            #self.csm.oq_lock.release()
+            self.csm.pktno += 1
+            payload = struct.pack('!I', self.csm.pktno) + payload
+     
+            if not payload:
                 print 'break'
                 self.tb.send_pkt(eof=True)
                 continue
             
             #if self.verbose:
                 #print "Tx: len(payload) = %4d" % (len(payload),)
+            #only send the packet from the output queue
 
+                
             delay = min_delay
             while self.tb.carrier_sensed():
                 sys.stderr.write('B')
                 time.sleep(delay)
                 if delay < 0.050:
                     delay = delay * 2       # exponential back-off
-            
-            #only send the packet from the output queue
-            self.csm.oq_lock.acquire()
-            print 'pop a packet from the outq'
-            payload = output_q.pop()
-            print "Tx: len(payload) = %4d" % (len(payload),)
-            self.csm.oq_lock.release()
-            self.csm.pktno += 1
-            payload = struct.pack('!I', self.csm.pktno) + payload
+           
             #print payload
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
