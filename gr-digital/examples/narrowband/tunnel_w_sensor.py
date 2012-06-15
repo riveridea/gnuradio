@@ -278,7 +278,10 @@ class ctrl_st_machine(object):
                  
                 print 'samps len = ', len(samps)
 
-                data_per_pkt = 4096
+                data_per_pkt = 8*samp_num
+                if data_per_pkt + 60 > 4096:
+                    raise ValueError, 'data_per_pkt exceedst the maximum 4096'                
+                
                 samp_per_pkt = data_per_pkt/8
                 for i in range(samp_num/samp_per_pkt):
                     out_payload = ''
