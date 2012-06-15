@@ -228,7 +228,7 @@ class ctrl_st_machine(object):
             start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
             print 'start_time = ', start_time
             start_time = struct.pack('!d', start_time)
-            samp_num = struct.pack('!H', 512)
+            samp_num = struct.pack('!H', 256)
             
             payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
             
@@ -278,7 +278,10 @@ class ctrl_st_machine(object):
                  
                 print 'samps len = ', len(samps)
 
-                data_per_pkt = 4096
+                data_per_pkt = 8*samp_num
+                if data_per_pkt + 60 > 4096:
+                    raise ValueError, 'data_per_pkt exceedst the maximum 4096'                
+                
                 samp_per_pkt = data_per_pkt/8
                 for i in range(samp_num/samp_per_pkt):
                     out_payload = ''
