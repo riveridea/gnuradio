@@ -228,7 +228,7 @@ class ctrl_st_machine(object):
             start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
             print 'start_time = ', start_time
             start_time = struct.pack('!d', start_time)
-            samp_num = struct.pack('!H', 8)
+            samp_num = struct.pack('!H', 1)
             
             payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
             
