@@ -286,7 +286,7 @@ class ctrl_st_machine(object):
                         out_payload += struct.pack('!ff', samp.real, samp.imag)
 
                     header = struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
-                    header += struct.pack('!II', toaddrr, fromaddr)
+                    header += struct.pack('!II', toaddr, fromaddr)
                     header += struct.pack('!dHH', start_time, samp_num, i)
                     out_payload += header
                     # put the packet to outgoing queue
