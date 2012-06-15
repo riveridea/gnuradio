@@ -66,6 +66,7 @@ import random, time, struct
 
 # for proteced message queue
 import threading
+import Queue
 
 import gnuradio.digital.packet_utils as pkt_utils
 
@@ -361,7 +362,8 @@ class cs_mac(object):
             #self.csm.oq_lock.release()
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
-     
+            output_q.task_done()
+            
             if not payload:
                 print 'break'
                 self.tb.send_pkt(eof=True)
