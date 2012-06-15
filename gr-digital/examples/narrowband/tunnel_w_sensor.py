@@ -381,6 +381,7 @@ class cs_mac(object):
             delay = min_delay
             while self.tb.carrier_sensed():
                 sys.stderr.write('B')
+                print 'delayed by CSMA'
                 time.sleep(delay)
                 if delay < 0.050:
                     delay = delay * 2       # exponential back-off
