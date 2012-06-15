@@ -227,7 +227,7 @@ class ctrl_st_machine(object):
             start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
             print 'start_time = ', start_time
             start_time = struct.pack('!d', start_time)
-            samp_num = struct.pack('!H', 128)
+            samp_num = struct.pack('!H', 32)
             
             payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
             
@@ -293,8 +293,8 @@ class ctrl_st_machine(object):
                     self.oq_lock.acquire()
                     self.output.append(out_payload)
                     self.oq_lock.release()
-                    
-            print "node"
+              
+            print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)              
         else:
             print "error"
         
@@ -380,7 +380,8 @@ class cs_mac(object):
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
             #print payload
-
+            if self.verbose:
+                print "Tx: len(payload) = %4d" % (len(payload),)
             self.tb.send_pkt(payload)
 
 
