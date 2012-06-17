@@ -225,6 +225,7 @@ class ctrl_st_machine(object):
         self.samps = ()  # store the samples for each round
         self.current_rep_node = -1 # indicating which node is reporting
         self.net_size = 2 # the number of the cluster nodes
+        self.current_start_time = 0; # the start time for the current round sensing
                
     
     def set_top_block(self, tb):
@@ -259,10 +260,11 @@ class ctrl_st_machine(object):
         ctrl_cmd = struct.pack('!B', START_SENSE)# (1)
         start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
         print 'start_time = ', start_time
+        self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
         samp_num = struct.pack('!H', 8) # (2)
         
-        payload = pkt_size + pkt_type + fromaddr + toaddr + ctrl_cmd + start_time + samp_num        
+        payload = pkt_size + fromaddr + toaddr + pkt_type + ctrl_cmd + start_time + samp_num        
       
         self.output.put(payload)
         print "start_sense =", pkt_utils.string_to_hex_list(payload)
@@ -301,7 +303,7 @@ class ctrl_st_machine(object):
             print 'useless payload'
             return 1      
         
-        (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:16])
+        (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:15])
  
         if length != pktsize:
             print 'invalid payload'
@@ -349,7 +351,7 @@ class ctrl_st_machine(object):
                     tran_id = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
                     # Collect the data from the next node
                     self.current_rep_node = node_id + 1                      
-                    round_data_collect(self.current_rep_node)    
+                    round_data_collect(self.current_start_time, self.current_rep_node)    
         ####State machine for the CLuster Node:                   
         elif self.node_type == "node":
             print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
