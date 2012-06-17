@@ -411,11 +411,7 @@ class ctrl_st_machine(object):
         data_per_pkt = 8*samp_num
         if data_per_pkt + 60 > 4096:
             raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
-            return 1      
-            
-        # temporarily using 
-        toaddr = struct.pack('!I', HEAD_ADDR) #(4)
-        fromaddr = struct.pack('!I', BCST_ADDR) #(4) 
+            return 1                  
             
         samp_per_pkt = data_per_pkt/8
         for i in range(samp_num/samp_per_pkt):
@@ -425,7 +421,7 @@ class ctrl_st_machine(object):
                 samp = samps[j+i*samp_per_pkt]
                 out_payload += struct.pack('!ff', samp.real, samp.imag)
 
-            header = struct.pack('!HIIB', data_per_pkt+29, toaddr, fromaddr, DATA_TYPE)
+            header = struct.pack('!HIIB', data_per_pkt+29, BCST_ADDR, HEAD_ADDR, DATA_TYPE)
             header += struct.pack('!HdHH', node_id, start_time, samp_num, i)
             out_payload = header + out_payload  # header is put in the front !!
                 
