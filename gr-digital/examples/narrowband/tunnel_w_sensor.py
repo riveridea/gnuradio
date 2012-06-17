@@ -368,7 +368,7 @@ class ctrl_st_machine(object):
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
                             print 'samps len = ', len(samps)
                         
-                        if self.node_id = 0: # for node 0, just report the data to head
+                        if self.node_id == 0: # for node 0, just report the data to head
                             self.report_data(self.samps, self.node_id)
                             self.state = NODE_IDLE
                         else:
