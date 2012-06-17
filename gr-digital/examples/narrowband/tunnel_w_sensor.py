@@ -482,9 +482,7 @@ class cs_mac(object):
 
             payload = output_q.get()
             print 'pop a packet from the outq'
-            #print payload
-            if self.verbose:
-                print "Tx: len(payload) = %4d" % (len(payload),)
+
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
             output_q.task_done()
@@ -505,7 +503,10 @@ class cs_mac(object):
                 time.sleep(delay)
                 if delay < 0.050:
                     delay = delay * 2       # exponential back-off
-           
+ 
+            #print payload
+            if self.verbose:
+                print "Tx: len(payload) = %4d" % (len(payload),) 
             self.tb.send_pkt(payload)
 
 
