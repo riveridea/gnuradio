@@ -262,7 +262,7 @@ class ctrl_st_machine(object):
         start_time = struct.pack('!d', start_time) # (8)
         samp_num = struct.pack('!H', 8) # (2)
         
-        payload = pkt_size + pkt_type + ctrl_cmd + fromaddr + toaddr + start_time + samp_num        
+        payload = pkt_size + pkt_type + fromaddr + toaddr + ctrl_cmd + start_time + samp_num        
       
         self.output.put(payload)
         print "start_sense =", pkt_utils.string_to_hex_list(payload)
