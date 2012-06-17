@@ -378,7 +378,9 @@ class ctrl_st_machine(object):
                             print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
-                            self.report_data(self.samps, self.node_id)
+                            if self.report_data(self.samps, self.node_id, samp_num) == 1
+                                print 'error in reporting data'
+                                return 1
                             self.state = NODE_IDLE
                             print '------>NODE_IDLE'
                         else:
@@ -403,9 +405,9 @@ class ctrl_st_machine(object):
         else:
             print "error node type"
         
-        return 1
+        return 0
 
-    def report_data(self, samps, node_id):
+    def report_data(self, samps, node_id, samp_num):
         data_per_pkt = 8*samp_num
         if data_per_pkt + 60 > 4096:
             raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
@@ -425,7 +427,9 @@ class ctrl_st_machine(object):
                 
                 self.output.put(out_payload)
             print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)  
-            
+        
+        return 0
+        
     def process_collected_data(self):
         print 'process the collected data in the hash table'
         return 1
