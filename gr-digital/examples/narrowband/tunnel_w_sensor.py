@@ -311,7 +311,7 @@ class ctrl_st_machine(object):
         ####State Machine For the Cluster Head    
         if self.node_type == "head":
             if pkttype == DATA_TYPE:
-                node_id = struct.unpack('!H', payload[15:16])
+                (node_id,) = struct.unpack('!H', payload[15:16])
                 if self.state == SENSE_START:
                     if node_id == 0 and self.current_rep_id == -1:
                         print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
@@ -348,7 +348,7 @@ class ctrl_st_machine(object):
                 
                 # If reach here, the state should be ROUND_COLLECTING
                 if self.state == ROUND_COLLECTING:                              
-                    tran_id = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
+                    (tran_id,) = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
                     # Collect the data from the next node
                     self.current_rep_node = node_id + 1                      
                     round_data_collect(self.current_start_time, self.current_rep_node)    
@@ -356,7 +356,8 @@ class ctrl_st_machine(object):
         elif self.node_type == "node":
             print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
-                ctrl_cmd = struct.unpack('!B', payload[15:16])
+                (ctrl_cmd,) = struct.unpack('!B', payload[15:16])
+                
                 print 'pkttype == CTRL_TYPE'                               
                 if self.state == NODE_IDLE:
                     print '-->NODE_IDLE'
