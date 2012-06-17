@@ -411,8 +411,12 @@ class ctrl_st_machine(object):
         data_per_pkt = 8*samp_num
         if data_per_pkt + 60 > 4096:
             raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
-            return 1                           
-               
+            return 1      
+            
+        # temporarily using 
+        toaddr = struct.pack('!I', HEAD_ADDR) #(4)
+        fromaddr = struct.pack('!I', BCST_ADDR) #(4) 
+            
         samp_per_pkt = data_per_pkt/8
         for i in range(samp_num/samp_per_pkt):
             out_payload = ''
