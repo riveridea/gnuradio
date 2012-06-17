@@ -223,7 +223,7 @@ class ctrl_st_machine(object):
         self.pktno     = 0    #
         self.tb = None #top block (to access the device information)  
         self.samps = ()  # store the samples for each round
-        self.current_rep_node = -1 # indicating which node is reporting
+        self.current_rep_id = -1 # indicating which node is reporting
         self.net_size = 2 # the number of the cluster nodes
         self.current_start_time = 0; # the start time for the current round sensing
         self.current_samp_num = 0; # the sampling number for the current round sensing
@@ -351,8 +351,12 @@ class ctrl_st_machine(object):
                 if self.state == ROUND_COLLECTING:                              
                     (tran_id,) = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
                     # Collect the data from the next node
-                    self.current_rep_node = node_id + 1                      
-                    round_data_collect(self.current_start_time, self.current_rep_node)    
+                    self.current_rep_id = node_id + 1  
+                    if self.current_rep_id < self.net_size:                   
+                        round_data_collect(self.current_start_time, self.current_rep_id)
+                    else: # should not reach here
+                        print 'error in report node id'
+                        return 1                        
         ####State machine for the CLuster Node:                   
         elif self.node_type == "node":
             print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
