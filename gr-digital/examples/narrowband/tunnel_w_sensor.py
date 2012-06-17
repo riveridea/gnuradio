@@ -323,7 +323,7 @@ class ctrl_st_machine(object):
                         self.state = HEAD_IDLE
                         return 1
                 elif self.state == ROUND_COLLECTING:
-                    if node_id - self.current_rep_id == 1: 
+                    if node_id == self.current_rep_id: 
                         if self.current_rep_id < self.net_size:
                             print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
                         else:
