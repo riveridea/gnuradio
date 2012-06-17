@@ -226,6 +226,7 @@ class ctrl_st_machine(object):
         self.current_rep_node = -1 # indicating which node is reporting
         self.net_size = 2 # the number of the cluster nodes
         self.current_start_time = 0; # the start time for the current round sensing
+        self.current_samp_num = 0; # the sampling number for the current round sensing
                
     
     def set_top_block(self, tb):
@@ -366,6 +367,8 @@ class ctrl_st_machine(object):
                         self.state = SENSING
                         print '----->SENSING'                        
                         (start_time, samp_num) = struct.unpack('!dH', payload[16:26])
+                        self.current_start_time = start_time
+                        self.current_samp_num =  samp_num
                         print 'samp_num = ', samp_num
                         print 'start_time = ', start_time
                         # start the data collection as specified time
@@ -396,7 +399,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[17:19])
                         if node_id == self.node_id:
                             print 'begin reporting data'
-                            self.report_data(self.samps, self.node_id)
+                            self.report_data(self.samps, self.node_id, self.current_samp_num)
                             self.state = NODE_IDLE
                     else:
                         print 'Received incorrect cmd in WAIT_REPORT state'
@@ -422,7 +425,7 @@ class ctrl_st_machine(object):
                 out_payload += struct.pack('!ff', samp.real, samp.imag)
 
             header = struct.pack('!HIIB', data_per_pkt+29, BCST_ADDR, HEAD_ADDR, DATA_TYPE)
-            header += struct.pack('!HdHH', node_id, start_time, samp_num, i)
+            header += struct.pack('!HdHH', node_id, self.current_start_time, samp_num, i)
             out_payload = header + out_payload  # header is put in the front !!
                 
             self.output.put(out_payload)
