@@ -312,7 +312,7 @@ class ctrl_st_machine(object):
         ####State Machine For the Cluster Head    
         if self.node_type == "head":
             if pkttype == DATA_TYPE:
-                (node_id,) = struct.unpack('!H', payload[15:16])
+                (node_id,) = struct.unpack('!H', payload[15:17])
                 if self.state == SENSE_START:
                     if node_id == 0 and self.current_rep_id == -1:
                         print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
