@@ -375,12 +375,12 @@ class ctrl_st_machine(object):
                         if start_time - sensor_time > 0.1:
                             self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
-                            print 'samps len = ', len(samps)
+                            print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             self.report_data(self.samps, self.node_id)
                             self.state = NODE_IDLE
-                            print '------>NODE_IDEL'
+                            print '------>NODE_IDLE'
                         else:
                             self.state = WAIT_REPORT
                             print '------>WAIT_REPORT'
