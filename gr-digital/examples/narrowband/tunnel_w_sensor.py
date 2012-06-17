@@ -354,7 +354,7 @@ class ctrl_st_machine(object):
         elif self.node_type == "node":
             print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
-                ctrl_cmd = struct.unpack('!B', payload[16:17])
+                ctrl_cmd = struct.unpack('!B', payload[15:16])
                                                
                 if self.state == NODE_IDLE:
                     print '-->NODE_IDLE'
@@ -362,7 +362,7 @@ class ctrl_st_machine(object):
                         print 'START_SENSE received'
                         self.state = SENSING
                         print '----->SENSING'                        
-                        (start_time, samp_num) = struct.unpack('!dH', payload[15:25])
+                        (start_time, samp_num) = struct.unpack('!dH', payload[16:26])
                         print 'samp_num = ', samp_num
                         print 'start_time = ', start_time
                         # start the data collection as specified time
