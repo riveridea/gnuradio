@@ -373,9 +373,9 @@ class ctrl_st_machine(object):
                             self.state = NODE_IDLE
                         else:
                             self.state = WAIT_REPORT
-                     else:
-                         print 'Recieved incorrect cmd in NODE_IDLE state'
-                         return   
+                    else:
+                        print 'Recieved incorrect cmd in NODE_IDLE state'
+                        return   
                 elif self.state == WAIT_REPORT:
                     if ctrl_cmd ==  COLLECT_DATA:
                         (node_id, ) =  struct.unpack('!H', payload[17:19])
