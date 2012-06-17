@@ -270,7 +270,7 @@ class ctrl_st_machine(object):
             
     def round_data_collect(self, tran_id, node_id): #usingthe start time as tran_id
         # broadcast the data collect command to all the node, but only the specified node report
-        if self.node_type != CLUSTER_HEAD
+        if self.node_type != CLUSTER_HEAD:
             print 'Only cluster head can start the data collect'
             return 1
         
