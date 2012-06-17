@@ -378,7 +378,7 @@ class ctrl_st_machine(object):
                             print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
-                            if self.report_data(self.samps, self.node_id, samp_num) == 1
+                            if self.report_data(self.samps, self.node_id, samp_num) == 1:
                                 print 'error in reporting data'
                                 return 1
                             self.state = NODE_IDLE
