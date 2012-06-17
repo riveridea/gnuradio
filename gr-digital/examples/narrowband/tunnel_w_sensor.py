@@ -349,7 +349,7 @@ class ctrl_st_machine(object):
                 
                 # If reach here, the state should be ROUND_COLLECTING
                 if self.state == ROUND_COLLECTING:                              
-                    (tran_id,) = struct.unpack('!d', payload[16:24])  # use start time as transaction ID 
+                    (tran_id,) = struct.unpack('!d', payload[17:25])  # use start time as transaction ID 
                     # Collect the data from the next node
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:                   
@@ -372,6 +372,7 @@ class ctrl_st_machine(object):
                         print '----->SENSING'                        
                         (start_time, samp_num) = struct.unpack('!dH', payload[16:26])
                         self.current_start_time = start_time
+                        print "self.current_start_time = ", pkt_utils.string_to_hex_list(payload[16:24])
                         self.current_samp_num =  samp_num
                         print 'samp_num = ', samp_num
                         print 'start_time = ', start_time
@@ -400,7 +401,7 @@ class ctrl_st_machine(object):
                     print '---->WAIT_REPORT'
                     if ctrl_cmd ==  COLLECT_DATA:
                         print 'COLLECT_DATA received'
-                        (node_id, ) =  struct.unpack('!H', payload[17:19])
+                        (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data'
                             self.report_data(self.samps, self.node_id, self.current_samp_num)
@@ -428,7 +429,7 @@ class ctrl_st_machine(object):
                 samp = samps[j+i*samp_per_pkt]
                 out_payload += struct.pack('!ff', samp.real, samp.imag)
 
-            header = struct.pack('!HIIB', data_per_pkt+29, BCST_ADDR, HEAD_ADDR, DATA_TYPE)
+            header = struct.pack('!HIIB', data_per_pkt + 29, BCST_ADDR, HEAD_ADDR, DATA_TYPE)
             header += struct.pack('!HdHH', node_id, self.current_start_time, samp_num, i)
             out_payload = header + out_payload  # header is put in the front !!
                 
