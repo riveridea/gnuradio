@@ -278,8 +278,8 @@ class ctrl_st_machine(object):
             print 'Only cluster head can start the data collect'
             return 1
         
-        if self.state != SENSE_START:
-            print 'Round robin data collection can only be performed when SENSE_START state'
+        if !(self.state == SENSE_START or self.state == ROUND_COLLECTING):
+            print 'Round robin data collection can only be performed when SENSE_START or  ROUND_COLLECTING state'
             return 1
             
         pkt_size = struct.pack('!H', 26) # (2) include the pktno(4) 
