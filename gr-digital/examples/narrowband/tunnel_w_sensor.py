@@ -413,20 +413,20 @@ class ctrl_st_machine(object):
             raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
             return 1                           
                
-            samp_per_pkt = data_per_pkt/8
-            for i in range(samp_num/samp_per_pkt):
-                out_payload = ''
+        samp_per_pkt = data_per_pkt/8
+        for i in range(samp_num/samp_per_pkt):
+            out_payload = ''
                 
-                for j in range(samp_per_pkt):
-                    samp = samps[j+i*samp_per_pkt]
-                    out_payload += struct.pack('!ff', samp.real, samp.imag)
+            for j in range(samp_per_pkt):
+                samp = samps[j+i*samp_per_pkt]
+                out_payload += struct.pack('!ff', samp.real, samp.imag)
 
-                header = struct.pack('!HIIB', data_per_pkt+29, toaddr, fromaddr, DATA_TYPE)
-                header += struct.pack('!HdHH', node_id, start_time, samp_num, i)
-                out_payload = header + out_payload  # header is put in the front !!
+            header = struct.pack('!HIIB', data_per_pkt+29, toaddr, fromaddr, DATA_TYPE)
+            header += struct.pack('!HdHH', node_id, start_time, samp_num, i)
+            out_payload = header + out_payload  # header is put in the front !!
                 
-                self.output.put(out_payload)
-            print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)  
+            self.output.put(out_payload)
+            print "outgoing_packet =", pkt_utils.string_to_hex_list(out_payload)  
         
         return 0
         
