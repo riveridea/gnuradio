@@ -605,7 +605,7 @@ def main():
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
     
-    csm.start_round_robin() # start the round robin command
+    csm.start_sensing() # start the round robin command
     mac.main_loop()    # don't expect this to return...
 
     tb.stop()     # but if it does, tell flow graph to stop.
