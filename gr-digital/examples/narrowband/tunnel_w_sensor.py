@@ -301,7 +301,7 @@ class ctrl_st_machine(object):
             print 'useless payload'
             return 1      
         
-        (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:15])
+        (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:16])
  
         if length != pktsize:
             print 'invalid payload'
@@ -355,7 +355,7 @@ class ctrl_st_machine(object):
             print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
                 ctrl_cmd = struct.unpack('!B', payload[15:16])
-                                               
+                print 'pkttype == CTRL_TYPE'                               
                 if self.state == NODE_IDLE:
                     print '-->NODE_IDLE'
                     if ctrl_cmd == START_SENSE:  # start sensing received
@@ -385,7 +385,9 @@ class ctrl_st_machine(object):
                         print 'Recieved incorrect cmd in NODE_IDLE state'
                         return 1  
                 elif self.state == WAIT_REPORT:
+                    print '---->WAIT_REPORT'
                     if ctrl_cmd ==  COLLECT_DATA:
+                        print 'COLLECT_DATA received'
                         (node_id, ) =  struct.unpack('!H', payload[17:19])
                         if node_id == self.node_id:
                             print 'begin reporting data'
