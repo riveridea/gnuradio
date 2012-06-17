@@ -104,7 +104,7 @@ COLLECT_DATA     = 0x02
 HEAD_IDLE        = 0
 SENSE_START      = 1
 ROUND_COLLECTING  = 2
-ROUND_COLLETED    = 3
+ROUND_COLLECTED    = 3
 
 # State machine at cluster node
 NODE_IDLE        = 0
