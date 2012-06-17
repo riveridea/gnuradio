@@ -260,11 +260,12 @@ class ctrl_st_machine(object):
         start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
         print 'start_time = ', start_time
         start_time = struct.pack('!d', start_time) # (8)
-        samp_num = struct.pack('!H', 32) # (2)
+        samp_num = struct.pack('!H', 8) # (2)
         
         payload = pkt_size + pkt_type + ctrl_cmd + fromaddr + toaddr + start_time + samp_num        
-        print 'start round robin'      
+      
         self.output.put(payload)
+        print "start_sense =", pkt_utils.string_to_hex_list(payload)
         
         self.state = SENSE_START
             
@@ -289,6 +290,7 @@ class ctrl_st_machine(object):
         payload = pkt_size + fromaddr + toaddr + pkt_type + ctrl_cmd + node_id + tid
             
         print 'round robin collect from node ', node_id
+        print "round_collect =", pkt_utils.string_to_hex_list(payload)
         self.output.put(payload)
                      
     def process_payload(self, payload):       
@@ -349,13 +351,17 @@ class ctrl_st_machine(object):
                     self.current_rep_node = node_id + 1                      
                     round_data_collect(self.current_rep_node)    
         ####State machine for the CLuster Node:                   
-        elif self.node_type == "node":         
+        elif self.node_type == "node":
+            print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
                 ctrl_cmd = struct.unpack('!B', payload[16:17])
-                
+                                               
                 if self.state == NODE_IDLE:
+                    print '-->NODE_IDLE'
                     if ctrl_cmd == START_SENSE:  # start sensing received
-                        self.state = SENSING                    
+                        print 'START_SENSE received'
+                        self.state = SENSING
+                        print '----->SENSING'                        
                         (start_time, samp_num) = struct.unpack('!dH', payload[15:25])
                         print 'samp_num = ', samp_num
                         print 'start_time = ', start_time
@@ -371,11 +377,13 @@ class ctrl_st_machine(object):
                         if self.node_id == 0: # for node 0, just report the data to head
                             self.report_data(self.samps, self.node_id)
                             self.state = NODE_IDLE
+                            print '------>NODE_IDEL'
                         else:
                             self.state = WAIT_REPORT
+                            print '------>WAIT_REPORT'
                     else:
                         print 'Recieved incorrect cmd in NODE_IDLE state'
-                        return   
+                        return 1  
                 elif self.state == WAIT_REPORT:
                     if ctrl_cmd ==  COLLECT_DATA:
                         (node_id, ) =  struct.unpack('!H', payload[17:19])
@@ -388,7 +396,7 @@ class ctrl_st_machine(object):
                 elif self.state == SENSING:  #only reset command accepted, not added yet
                      print 'Only Reset command accepted at this state, not implemented'                
         else:
-            print "error"
+            print "error node type"
         
         return 1
 
@@ -472,8 +480,8 @@ class cs_mac(object):
         while 1:
             #payload1 = os.read(self.tun_fd, 10*1024)
 
-            print 'pop a packet from the outq'
             payload = output_q.get()
+            print 'pop a packet from the outq'
             #print payload
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
