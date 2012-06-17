@@ -353,7 +353,7 @@ class ctrl_st_machine(object):
                     # Collect the data from the next node
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:                   
-                        round_data_collect(tran_id, self.current_rep_id)
+                        self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
                         return 1                        
