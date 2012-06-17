@@ -349,11 +349,11 @@ class ctrl_st_machine(object):
                 
                 # If reach here, the state should be ROUND_COLLECTING
                 if self.state == ROUND_COLLECTING:                              
-                    (tran_id,) = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
+                    (tran_id,) = struct.unpack('!d', payload[16:24])  # use start time as transaction ID 
                     # Collect the data from the next node
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:                   
-                        round_data_collect(self.current_start_time, self.current_rep_id)
+                        round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
                         return 1                        
