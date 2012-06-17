@@ -96,6 +96,21 @@ CLUSTER_NODE    = 'node'   # cluster node
 CTRL_TYPE        = 0x01   # control packet
 DATA_TYPE        = 0x02   # data packet
 
+# Control Command at Head
+START_SENSE      = 0x01   # start sense
+COLLECT_DATA     = 0x02   
+
+# State machine at cluster head
+HEAD_IDLE        = 0
+SENSE_START      = 1
+ROUND_COLLECTING  = 2
+ROUND_COLLETED    = 3
+
+# State machine at cluster node
+NODE_IDLE        = 0
+SENSING          = 1
+WAIT_REPORT      = 2
+
 BCST_ADDR        = 4294967295
 HEAD_ADDR        = 0
 
@@ -118,13 +133,14 @@ def open_tun_interface(tun_device_filename):
 #class my_top_block(gr.top_block):
 class my_top_block(gr.top_block):
 
-    def __init__(self, node_type, mod_class, demod_class,
+    def __init__(self, node_type, node_index, mod_class, demod_class,
                  rx_callback, options):
 
         gr.top_block.__init__(self)
 
 	# is this node the sub node or head?
         self._node_type = node_type
+        self._node_id   = node_index
 
         # Get the modulation's bits_per_symbol
         args = mod_class.extract_kwargs_from_options(options)
@@ -188,21 +204,28 @@ class ctrl_st_machine(object):
     GPS time. 
     """
     
-    def __init__(self, node_type):
+    def __init__(self, node_type, node_id):
         self.node_type = node_type
+        self.node_id = node_id
         if node_type == CLUSTER_HEAD:
             #hash table used to store the sensing data for different nodes
             #indexed by the IP address of the USRP
             self.ndata = dict()  
+            self.state = HEAD_IDLE
         elif node_type == CLUSTER_NODE:
             #hash table to store the sensing data for different transaction
             #indexed by the transaction id
             self.ndata = dict()
+            self.state = NODE_IDLE
             
         self.oq_lock = threading.Lock()
         self.output    = Queue.Queue(0)   #outgoing message queue, infinit size limit
         self.pktno     = 0    #
-        self.tb = None #top block (to access the device information)               
+        self.tb = None #top block (to access the device information)  
+        self.samps = ()  # store the samples for each round
+        self.current_rep_node = -1 # indicating which node is reporting
+        self.net_size = 2 # the number of the cluster nodes
+               
     
     def set_top_block(self, tb):
         self.tb = tb
@@ -214,96 +237,185 @@ class ctrl_st_machine(object):
         #test_samps = self.sensor.u.finite_acquisition(4)
         #print 'test_samps length = ', len(test_samps)
 
-    def start_round_robin(self):
+    def start_sensing(self):
         # broadcast the start command to all the nodes to start
         # the first round of data collection
         # Only head can broadcast this command
+        # The node with id = 0 need to report the data after this command
         print 'start_round_robin'
 
-        if self.node_type == CLUSTER_HEAD:
-            pkt_size = struct.pack('!H', 25) #include the pktno(4) 
-            pkt_type = struct.pack('!B', CTRL_TYPE)
-            fromaddr = struct.pack('!I', HEAD_ADDR)
-            toaddr = struct.pack('!I', BCST_ADDR)
-            start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
-            print 'start_time = ', start_time
-            start_time = struct.pack('!d', start_time)
-            samp_num = struct.pack('!H', 32)
-            
-            payload = pkt_size + pkt_type + fromaddr + toaddr + start_time + samp_num
-            
-            print 'start round robin'
-            
-            #self.oq_lock.acquire()
-            print 'append the start command to outq'
-            self.output.put(payload)
-            #print payload
-            #self.oq_lock.release()
-            print 'lock released'
-            
-
-    def process_payload(self, payload):
+        if self.node_type != CLUSTER_HEAD:
+            print 'Only cluster head can start the data collect'
+            return 1
         
-        print 'process_pay_load'
-        print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
-        length = len(payload)
-        if self.node_type == "head":
-            print "head"
-
+        if self.state != HEAD_IDLE:
+            print 'The sensing can only be initiated when Head is idle state'
+            return 1
             
-        elif self.node_type == "node":
-            if length <= 15:
-                print 'useless payload'
-                return 1
-                   
-            (pktno, pktsize, pkttype) = struct.unpack('!IHB', payload[0:7])
-            (fromaddr, toaddr) = struct.unpack('!II', payload[7:15])
-
-            if pkttype == CTRL_TYPE and length > 15:
-                
-                if length != pktsize:
-                    print 'invalid payload'
-                    return 1
+        pkt_size = struct.pack('!H', 26) # (2) include the pktno(4) 
+        fromaddr = struct.pack('!I', HEAD_ADDR) #(4)
+        toaddr = struct.pack('!I', BCST_ADDR) #(4)       
+        pkt_type = struct.pack('!B', CTRL_TYPE) #(1)
+        ctrl_cmd = struct.pack('!B', START_SENSE)# (1)
+        start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
+        print 'start_time = ', start_time
+        start_time = struct.pack('!d', start_time) # (8)
+        samp_num = struct.pack('!H', 32) # (2)
+        
+        payload = pkt_size + pkt_type + ctrl_cmd + fromaddr + toaddr + start_time + samp_num        
+        print 'start round robin'      
+        self.output.put(payload)
+        
+        self.state = SENSE_START
+            
+    def round_data_collect(self, tran_id, node_id): #usingthe start time as tran_id
+        # broadcast the data collect command to all the node, but only the specified node report
+        if self.node_type != CLUSTER_HEAD
+            print 'Only cluster head can start the data collect'
+            return 1
+        
+        if self.state != SENSE_START:
+            print 'Round robin data collection can only be performed when SENSE_START state'
+            return 1
+            
+        pkt_size = struct.pack('!H', 26) # (2) include the pktno(4) 
+        fromaddr = struct.pack('!I', HEAD_ADDR) # (4)
+        toaddr = struct.pack('!I', BCST_ADDR) # (4)
+        pkt_type = struct.pack('!B', CTRL_TYPE) # (1)
+        ctrl_cmd = struct.pack('!B', COLLECT_DATA)  # (1)
+        node_id = struct.pack('!H', node_id) # (2)
+        tid = struct.pack('!d', tran_id) # (8)
+           
+        payload = pkt_size + fromaddr + toaddr + pkt_type + ctrl_cmd + node_id + tid
+            
+        print 'round robin collect from node ', node_id
+        self.output.put(payload)
+                     
+    def process_payload(self, payload):       
+        print 'process_pay_load'
+        
+        length = len(payload)
+        if length <= 17:
+            print 'useless payload'
+            return 1      
+        
+        (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:15])
  
-                (start_time, samp_num) = struct.unpack('!dH', payload[15:25])
-                print 'samp_num = ', samp_num
-                print 'start_time = ', start_time
-                # start the data collection as specified time
-                sensor_time = self.sensor.u.get_time_now().get_real_secs()
-                print 'sensor_time =', sensor_time
+        if length != pktsize:
+            print 'invalid payload'
+            return 1 
+        ####State Machine For the Cluster Head    
+        if self.node_type == "head":
+            if pkttype == DATA_TYPE
+                node_id = struct.unpack('!H', payload[15:16])
+                if self.state == SENSE_START:
+                    if node_id == 0 and self.current_rep_id == -1:
+                        print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
+                        self.state = ROUND_COLLECTING
+                    else:
+                        print 'incorrect incoming data from node ', node_id
+                        # Could broadcast the reset command to reset all the nodes
+                        self.state = HEAD_IDLE
+                        return 1
+                elif self.state == ROUND_COLLECTING:
+                    if node_id - self.current_rep_id == 1 
+                        if self.current_rep_id < self.net_size:
+                            print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
+                        else:
+                            print "last node has reported data"
+                            self.state = ROUND_COLLECTED
+                            if self.process_collected_data() == 1:
+                                print 'initiate the next round of sesning'
+                                # broadcast the sensing command again
+                                # self.start_sensing()
+                                # self.state = SENSE_START
+                                self.state = HEAD_IDLE
+                            else:
+                                print 'stop all the sensing and collecting'
+                                self.state = HEAD_IDLE
+                    else:
+                        print 'incorrect incoming data from node ', node_id
+                        self.state = HEAD_IDLE
+                        return 1
+                else:
+                     print 'Should not receive data in the current state'
+                     self.state = HEAD_IDLE
+                     return 1
                 
-                if start_time - sensor_time > 0.1:
-                    self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
-                    samps = self.sensor.u.finite_acquisition(samp_num)
-                 
-                print 'samps len = ', len(samps)
-
-                data_per_pkt = 8*samp_num
-                if data_per_pkt + 60 > 4096:
-                    raise ValueError, 'data_per_pkt exceedst the maximum 4096'                
+                # If reach here, the state should be ROUND_COLLECTING
+                if self.state == ROUND_COLLECTING:                              
+                    tran_id = struct.unpack('!H', payload[16:24])  # use start time as transaction ID 
+                    # Collect the data from the next node
+                    self.current_rep_node = node_id + 1                      
+                    round_data_collect(self.current_rep_node)    
+        ####State machine for the CLuster Node:                   
+        elif self.node_type == "node":         
+            if pkttype == CTRL_TYPE:                
+                ctrl_cmd = struct.unpack('!B', payload[16:17])
                 
-                samp_per_pkt = data_per_pkt/8
-                for i in range(samp_num/samp_per_pkt):
-                    out_payload = ''
-                    for j in range(samp_per_pkt):
-                        samp = samps[j+i*samp_per_pkt]
-                        out_payload += struct.pack('!ff', samp.real, samp.imag)
-
-                    header = struct.pack('!HB', data_per_pkt+29, DATA_TYPE)
-                    header += struct.pack('!II', toaddr, fromaddr)
-                    header += struct.pack('!dHH', start_time, samp_num, i)
-                    out_payload += header
-                    # put the packet to outgoing queue
-                    #self.oq_lock.acquire()
-                    self.output.put(out_payload)
-                    #self.oq_lock.release()
-              
-            print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)              
+                if self.state == NODE_IDLE:
+                    if ctrl_cmd == START_SENSE:  # start sensing received
+                        self.state = SENSING                    
+                        (start_time, samp_num) = struct.unpack('!dH', payload[15:25])
+                        print 'samp_num = ', samp_num
+                        print 'start_time = ', start_time
+                        # start the data collection as specified time
+                        sensor_time = self.sensor.u.get_time_now().get_real_secs()
+                        print 'sensor_time =', sensor_time
+                
+                        if start_time - sensor_time > 0.1:
+                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
+                            self.samps = self.sensor.u.finite_acquisition(samp_num)               
+                            print 'samps len = ', len(samps)
+                        
+                        if self.node_id = 0: # for node 0, just report the data to head
+                            self.report_data(self.samps, self.node_id)
+                            self.state = NODE_IDLE
+                        else:
+                            self.state = WAIT_REPORT
+                     else:
+                         print 'Recieved incorrect cmd in NODE_IDLE state'
+                         return   
+                elif self.state == WAIT_REPORT:
+                    if ctrl_cmd ==  COLLECT_DATA:
+                        (node_id, ) =  struct.unpack('!H', payload[17:19])
+                        if node_id == self.node_id:
+                            print 'begin reporting data'
+                            self.report_data(self.samps, self.node_id)
+                            self.state = NODE_IDLE
+                    else:
+                        print 'Received incorrect cmd in WAIT_REPORT state'
+                elif self.state == SENSING:  #only reset command accepted, not added yet
+                     print 'Only Reset command accepted at this state, not implemented'                
         else:
             print "error"
         
         return 1
 
+    def report_data(self, samps, node_id)
+        data_per_pkt = 8*samp_num
+        if data_per_pkt + 60 > 4096:
+            raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
+            return 1                           
+               
+            samp_per_pkt = data_per_pkt/8
+            for i in range(samp_num/samp_per_pkt):
+                out_payload = ''
+                
+                for j in range(samp_per_pkt):
+                    samp = samps[j+i*samp_per_pkt]
+                    out_payload += struct.pack('!ff', samp.real, samp.imag)
+
+                header = struct.pack('!HIIB', data_per_pkt+29, toaddr, fromaddr, DATA_TYPE)
+                header += struct.pack('!HdHH', node_id, start_time, samp_num, i)
+                out_payload = header + out_payload  # header is put in the front !!
+                
+                self.output.put(out_payload)
+            print "outgoing_payload =", pkt_utils.string_to_hex_list(out_payload)  
+            
+    def process_collected_data(self)
+        print 'process the collected data in the hash table'
+        return 1
 # ////////////////////////////////////////////////////////////////////
 #                           Carrier Sense MAC
 # ////////////////////////////////////////////////////////////////////
@@ -359,11 +471,12 @@ class cs_mac(object):
 
         while 1:
             #payload1 = os.read(self.tun_fd, 10*1024)
-            #self.csm.oq_lock.acquire()
+
             print 'pop a packet from the outq'
             payload = output_q.get()
-            print "Tx: len(payload) = %4d" % (len(payload),)
-            #self.csm.oq_lock.release()
+            #print payload
+            if self.verbose:
+                print "Tx: len(payload) = %4d" % (len(payload),)
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
             output_q.task_done()
@@ -376,8 +489,7 @@ class cs_mac(object):
             #if self.verbose:
                 #print "Tx: len(payload) = %4d" % (len(payload),)
             #only send the packet from the output queue
-
-                
+               
             delay = min_delay
             while self.tb.carrier_sensed():
                 sys.stderr.write('B')
@@ -386,9 +498,6 @@ class cs_mac(object):
                 if delay < 0.050:
                     delay = delay * 2       # exponential back-off
            
-            #print payload
-            if self.verbose:
-                print "Tx: len(payload) = %4d" % (len(payload),)
             self.tb.send_pkt(payload)
 
 
@@ -423,6 +532,8 @@ def main():
                           default="node",
                           help="Select node type from: %s [default=%%default]"
                                 % (', '.join(node_types.keys()),))
+    parser.add_option("-i", "--node-index", type="eng_int", default=1, 
+                          help="Specify the node index in the cluster [default=%default]")
 
     transmit_path.add_options(parser, expert_grp)
     receive_path.add_options(parser, expert_grp)
@@ -453,13 +564,14 @@ def main():
         print "Note: failed to enable realtime scheduling"
 
     # instantiate the Control State Machine
-    csm = ctrl_st_machine(node_types[options.node_type])
+    csm = ctrl_st_machine(node_types[options.node_type], options.node_index)
 
     # instantiate the MAC
     mac = cs_mac(csm, tun_fd, verbose=True)
 
     # build the graph (PHY)
     tb = my_top_block(node_types[options.node_type],
+                      options.node_index,
                       mods[options.modulation],
                       demods[options.modulation],
                       mac.phy_rx_callback,
