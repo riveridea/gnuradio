@@ -306,7 +306,7 @@ class ctrl_st_machine(object):
             return 1 
         ####State Machine For the Cluster Head    
         if self.node_type == "head":
-            if pkttype == DATA_TYPE
+            if pkttype == DATA_TYPE:
                 node_id = struct.unpack('!H', payload[15:16])
                 if self.state == SENSE_START:
                     if node_id == 0 and self.current_rep_id == -1:
@@ -318,7 +318,7 @@ class ctrl_st_machine(object):
                         self.state = HEAD_IDLE
                         return 1
                 elif self.state == ROUND_COLLECTING:
-                    if node_id - self.current_rep_id == 1 
+                    if node_id - self.current_rep_id == 1: 
                         if self.current_rep_id < self.net_size:
                             print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
                         else:
