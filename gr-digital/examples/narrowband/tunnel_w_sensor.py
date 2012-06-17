@@ -532,7 +532,7 @@ def main():
                           default="node",
                           help="Select node type from: %s [default=%%default]"
                                 % (', '.join(node_types.keys()),))
-    parser.add_option("-i", "--node-index", type="eng_int", default=1, 
+    parser.add_option("-i", "--node-index", type="intx", default=0, 
                           help="Specify the node index in the cluster [default=%default]")
 
     transmit_path.add_options(parser, expert_grp)
