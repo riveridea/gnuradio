@@ -334,7 +334,7 @@ class ctrl_st_machine(object):
                             self.current_loop += 1
                             if self.current_loop < self.loop_number:
                                 print 'initiate the next round of sensing'
-                                time.sleep(0.006)
+                                time.sleep(0.008)
                                 self.start_sensing()
                                 self.state = SENSE_START
                                 return 0
@@ -362,7 +362,7 @@ class ctrl_st_machine(object):
                     # Collect the data from the next node
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
-                        time.sleep(0.006)                    
+                        time.sleep(0.008)                    
                         self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
