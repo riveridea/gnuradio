@@ -330,6 +330,7 @@ class ctrl_st_machine(object):
                         if self.current_rep_id >= self.net_size - 1:
                             print "last node has reported data"
                             self.state = ROUND_COLLECTED
+                            self.current_rep_id = -1
                             self.current_loop += 1
                             if self.current_loop < self.loop_number:
                                 print 'initiate the next round of sensing'
