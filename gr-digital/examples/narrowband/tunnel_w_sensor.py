@@ -252,7 +252,7 @@ class ctrl_st_machine(object):
             print 'Only cluster head can start the data collect'
             return 1
         
-        if self.state != HEAD_IDLE:
+        if self.state != HEAD_IDLE and self.state != ROUND_COLLECTED:
             print 'The sensing can only be initiated when Head is idle state'
             return 1
             
