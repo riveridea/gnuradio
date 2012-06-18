@@ -204,7 +204,7 @@ class ctrl_st_machine(object):
     GPS time. 
     """
     
-    def __init__(self, node_type, node_id):
+    def __init__(self, node_type, node_id, loop_number):
         self.node_type = node_type
         self.node_id = node_id
         if node_type == CLUSTER_HEAD:
@@ -212,6 +212,7 @@ class ctrl_st_machine(object):
             #indexed by the IP address of the USRP
             self.ndata = dict()  
             self.state = HEAD_IDLE
+            self.loop_number = loop_number
         elif node_type == CLUSTER_NODE:
             #hash table to store the sensing data for different transaction
             #indexed by the transaction id
@@ -225,8 +226,9 @@ class ctrl_st_machine(object):
         self.samps = ()  # store the samples for each round
         self.current_rep_id = -1 # indicating which node is reporting
         self.net_size = 2 # the number of the cluster nodes
-        self.current_start_time = 0; # the start time for the current round sensing
-        self.current_samp_num = 0; # the sampling number for the current round sensing
+        self.current_start_time = 0 # the start time for the current round sensing
+        self.current_samp_num = 0 # the sampling number for the current round sensing
+        self.current_loop = 0 # which loop are we in now
                
     
     def set_top_block(self, tb):
@@ -328,15 +330,21 @@ class ctrl_st_machine(object):
                         if self.current_rep_id >= self.net_size - 1:
                             print "last node has reported data"
                             self.state = ROUND_COLLECTED
-                            if self.process_collected_data() == 1:
-                                print 'initiate the next round of sesning'
-                                # broadcast the sensing command again
-                                # self.start_sensing()
-                                # self.state = SENSE_START
-                                self.state = HEAD_IDLE
+                            self.current_loop += 1
+                            if self.current_loop < self.loop_number:
+                                print 'initiate the next round of sensing'
+                                self.start_sensing()
+                                self.state = SENSE_START
+                                return 0
                             else:
-                                print 'stop all the sensing and collecting'
-                                self.state = HEAD_IDLE
+                                self.current_loop = 0
+                                print 'Complete all rounds of sesning'
+                            
+                                if self.process_collected_data() == 1:
+                                    print 'All round of sensing data are processed'
+                                    self.state = HEAD_IDLE
+                                else:
+                                    print 'Data error'
                     else:
                         print 'incorrect incoming data from node ', node_id
                         self.state = HEAD_IDLE
@@ -559,6 +567,8 @@ def main():
                                 % (', '.join(node_types.keys()),))
     parser.add_option("-i", "--node-index", type="intx", default=0, 
                           help="Specify the node index in the cluster [default=%default]")
+    parser.add_option("-l", "--loop-number", type="intx", default=1,
+                          help="Specify how many sesning loop to be performed")
 
     transmit_path.add_options(parser, expert_grp)
     receive_path.add_options(parser, expert_grp)
@@ -589,7 +599,7 @@ def main():
         print "Note: failed to enable realtime scheduling"
 
     # instantiate the Control State Machine
-    csm = ctrl_st_machine(node_types[options.node_type], options.node_index)
+    csm = ctrl_st_machine(node_types[options.node_type], options.node_index, options.loop_number)
 
     # instantiate the MAC
     mac = cs_mac(csm, tun_fd, verbose=True)
