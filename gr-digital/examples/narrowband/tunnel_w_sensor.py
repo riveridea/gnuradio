@@ -204,7 +204,7 @@ class ctrl_st_machine(object):
     GPS time. 
     """
     
-    def __init__(self, node_type, node_id, loop_number):
+    def __init__(self, node_type, node_id, loop_number, options):
         self.node_type = node_type
         self.node_id = node_id
         if node_type == CLUSTER_HEAD:
@@ -218,6 +218,8 @@ class ctrl_st_machine(object):
             #indexed by the transaction id
             self.ndata = dict()
             self.state = NODE_IDLE
+
+        self.options = options
             
         self.oq_lock = threading.Lock()
         self.output    = Queue.Queue(0)   #outgoing message queue, infinit size limit
@@ -229,8 +231,8 @@ class ctrl_st_machine(object):
         self.current_start_time = 0 # the start time for the current round sensing
         self.current_samp_num = 0 # the sampling number for the current round sensing
         self.current_loop = 0 # which loop are we in now
-               
-    
+        self.rcv_no = 0 # indicate the fragmmented packet index
+                 
     def set_top_block(self, tb):
         self.tb = tb
         self.sensor = tb.sensor
@@ -241,7 +243,7 @@ class ctrl_st_machine(object):
         #test_samps = self.sensor.u.finite_acquisition(4)
         #print 'test_samps length = ', len(test_samps)
 
-    def start_sensing(self):
+    def start_sensing(self, samp_num):
         # broadcast the start command to all the nodes to start
         # the first round of data collection
         # Only head can broadcast this command
@@ -265,7 +267,7 @@ class ctrl_st_machine(object):
         print 'start_time = ', start_time
         self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
-        samp_num = struct.pack('!H', 8) # (2)
+        samp_num = struct.pack('!H', samp_num) # (2)
         
         payload = pkt_size + fromaddr + toaddr + pkt_type + ctrl_cmd + start_time + samp_num        
       
@@ -298,7 +300,7 @@ class ctrl_st_machine(object):
         print "round_collect =", pkt_utils.string_to_hex_list(payload)
         self.output.put(payload)
                      
-    def process_payload(self, payload):       
+    def process_payload(self, payload, options):       
         print 'process_pay_load'
         
         length = len(payload)
@@ -316,9 +318,18 @@ class ctrl_st_machine(object):
             if pkttype == DATA_TYPE:
                 (node_id,) = struct.unpack('!H', payload[15:17])
                 if self.state == SENSE_START:
-                    if node_id == 0 and self.current_rep_id == -1:
+                    if node_id == 0 and self.current_rep_id == -1:  #Got data from the 1st node
                         print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
-                        self.state = ROUND_COLLECTING
+                        
+                        rt = self.defragment(payload, node_id)               
+                        if rt == 0: #Need next packet from the same node
+                            return 0
+                        elif rt == 1: #Completed collection of all the framgmented packets
+                            self.state = ROUND_COLLECTING
+                        elif rt > 1 or rt < 0:  #Errors
+                            # need to add code to reset all the nodes
+                            self.state = HEAD_IDLE
+                            return 1
                     else:
                         print 'incorrect incoming data from node ', node_id
                         # Could broadcast the reset command to reset all the nodes
@@ -327,6 +338,15 @@ class ctrl_st_machine(object):
                 elif self.state == ROUND_COLLECTING:
                     if node_id == self.current_rep_id: 
                         print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
+                        
+                        rt = self.defragment(payload, node_id)
+                        if rt == 0: #Need next packet from the same node
+                            return 0
+                        elif rt > 1 or rt < 0: 
+                            #Need to add code for reset the nodes
+                            self.state = HEAD_IDLE
+                            return 1                        
+                        #Completed collection of all the fragemented packets 
                         if self.current_rep_id >= self.net_size - 1:
                             print "last node has reported data"
                             self.state = ROUND_COLLECTED
@@ -335,7 +355,7 @@ class ctrl_st_machine(object):
                             if self.current_loop < self.loop_number:
                                 print 'initiate the next round of sensing'
                                 time.sleep(0.009)
-                                self.start_sensing()
+                                self.start_sensing(options.samp_num)
                                 self.state = SENSE_START
                                 return 0
                             else:
@@ -414,7 +434,8 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data'
-                            self.report_data(self.samps, self.node_id, self.current_samp_num)
+                            data_per_pkt = options.data_pkt
+                            self.report_data(self.samps, self.node_id, self.current_samp_num, data_per_pkt)
                             self.state = NODE_IDLE
                     else:
                         print 'Received incorrect cmd in WAIT_REPORT state'
@@ -425,14 +446,41 @@ class ctrl_st_machine(object):
         
         return 0
 
-    def report_data(self, samps, node_id, samp_num):
-        data_per_pkt = 8*samp_num
+    def defragment(self, payload, node_id):
+        global rcv_no
+        data_seq = struct.unpack('!H', payload[27:29])
+        if (data_seq != rcv_no):
+            print 'Data sequence out of order'
+            return 2
+        else:
+            samp_num = struct.unpack('!H', payload[25:27])
+            start_time = struct.unpack('!d', payload[17:25])
+            if start_time != self.current_start_time:
+                print 'Recieved the packet for different start time!'
+                return 3
+                
+            data_per_pkt = struct.unpack('!H', payload[5:7]) - 29
+            max_seq = samp_num*8/data_per_pkt - 1
+            if data_seq = max_seq:
+                print 'get the last packet of the sensing data from node ', node_id
+                rcv_no = 0
+                return 1
+            elif data_seq > max_se:
+                print 'data_seq exceeds the maximum'
+                return 4
+                
+            rcv_no += 1 #Continue to collect the following packets from the same node
+            return 0            
+        
+    def report_data(self, samps, node_id, samp_num, data_per_pkt):
+        #data_per_pkt = 8*samp_num
         if data_per_pkt + 60 > 4096:
             raise ValueError, 'data_per_pkt exceedst the maximum 4096' 
             return 1                  
             
-        samp_per_pkt = data_per_pkt/8
-        for i in range(samp_num/samp_per_pkt):
+        total_length = samp_num*8    
+        samp_per_pkt = total_length/data_per_pkt
+        for i in range(samp_num/samp_per_pkt):  #each loop generate a packet
             out_payload = ''
                 
             for j in range(samp_per_pkt):
@@ -488,7 +536,7 @@ class cs_mac(object):
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
-            self.csm.process_payload(payload)
+            self.csm.process_payload(payload, self.csm.options)
             print 'payload processed'            
             #os.write(self.tun_fd, payload)
 
@@ -564,6 +612,10 @@ def main():
                           help="set carrier detect threshold (dB) [default=%default]")
     expert_grp.add_option("","--tun-device-filename", default="/dev/net/tun",
                           help="path to tun device file [default=%default]")
+    expert_grp.add_option("-d", "--data-pkt", type="intx", default=256,
+                          help="specify the data(in bytes) per packet [default=%default]")
+    expert_grp.add_option("-p", "--samp-num", type="intx", default=8,
+                          help="specify how many samples for each node at each round of acquisition [default=%default]")
     parser.add_option("", "--node-type", type="choice", choices=node_types.keys(),
                           default="node",
                           help="Select node type from: %s [default=%%default]"
@@ -602,7 +654,7 @@ def main():
         print "Note: failed to enable realtime scheduling"
 
     # instantiate the Control State Machine
-    csm = ctrl_st_machine(node_types[options.node_type], options.node_index, options.loop_number)
+    csm = ctrl_st_machine(node_types[options.node_type], options.node_index, options.loop_number, options)
 
     # instantiate the MAC
     mac = cs_mac(csm, tun_fd, verbose=True)
@@ -643,7 +695,7 @@ def main():
 
     tb.start()    # Start executing the flow graph (runs in separate threads)
     
-    csm.start_sensing() # start the round robin command
+    csm.start_sensing(options.samp_num) # start the round robin command
     mac.main_loop()    # don't expect this to return...
 
     tb.stop()     # but if it does, tell flow graph to stop.
