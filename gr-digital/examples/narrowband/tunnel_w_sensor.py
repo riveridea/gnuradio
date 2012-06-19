@@ -461,7 +461,7 @@ class ctrl_st_machine(object):
                 
             data_per_pkt = struct.unpack('!H', payload[5:7]) - 29
             max_seq = samp_num*8/data_per_pkt - 1
-            if data_seq = max_seq:
+            if data_seq == max_seq:
                 print 'get the last packet of the sensing data from node ', node_id
                 rcv_no = 0
                 return 1
