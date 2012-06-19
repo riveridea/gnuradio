@@ -185,7 +185,10 @@ class cs_mac(object):
             if not payload:
                 self.tb.send_pkt(eof=True)
                 break
-
+            
+            time.sleep(0.009)
+            t2 = self.tb.source.u.get_time_now().get_real_secs()
+            print 'reply at time ', t
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
 
