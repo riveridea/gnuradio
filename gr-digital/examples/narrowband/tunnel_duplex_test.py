@@ -180,7 +180,7 @@ class cs_mac(object):
 
         while 1:
             payload = os.read(self.tun_fd, 10*1024)
-            t = self.source.u.get_time_now().get_real_secs()
+            t = self.tb.source.u.get_time_now().get_real_secs()
             print t
             if not payload:
                 self.tb.send_pkt(eof=True)
