@@ -56,7 +56,7 @@ class uhd_interface:
 
         # Set the antenna
         if(antenna):
-            if (istx)
+            if (istx):
                 self.u.set_antenna('TX/RX', 0)
             else:
                 self.u.set_antenna(antenna, 0)
