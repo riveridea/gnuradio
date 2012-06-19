@@ -99,13 +99,13 @@ class my_top_block(gr.top_block):
         self.source = uhd_receiver(options.rx_addr, symbol_rate,
                                    options.samples_per_symbol,
                                    options.rx_freq, options.rx_gain,
-                                   options.spec, options.antenna,
+                                   options.rx_spec, options.antenna,
                                    options.verbose)
         
         self.sink = uhd_transmitter(options.tx_addr, symbol_rate,
                                     options.samples_per_symbol,
                                     options.tx_freq, options.tx_gain,
-                                    options.spec, options.antenna,
+                                    options.tx_spec, options.antenna,
                                     options.verbose)
         
         options.samples_per_symbol = self.source._sps
