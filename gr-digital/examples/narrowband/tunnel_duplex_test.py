@@ -43,8 +43,8 @@ from optparse import OptionParser
 # from current dir
 from receive_path  import receive_path
 from transmit_path import transmit_path
-from uhd_interface import uhd_transmitter
-from uhd_interface import uhd_receiver
+from uhd_interface_w_sensor import uhd_transmitter
+from uhd_interface_w_sensor import uhd_receiver
 
 import os, sys
 import random, time, struct
@@ -96,13 +96,13 @@ class my_top_block(gr.top_block):
         args = mod_class.extract_kwargs_from_options(options)
         symbol_rate = options.bitrate / mod_class(**args).bits_per_symbol()
 
-        self.source = uhd_receiver(options.args, symbol_rate,
+        self.source = uhd_receiver(options.rx_addr, symbol_rate,
                                    options.samples_per_symbol,
                                    options.rx_freq, options.rx_gain,
                                    options.spec, options.antenna,
                                    options.verbose)
         
-        self.sink = uhd_transmitter(options.args, symbol_rate,
+        self.sink = uhd_transmitter(options.tx_addr, symbol_rate,
                                     options.samples_per_symbol,
                                     options.tx_freq, options.tx_gain,
                                     options.spec, options.antenna,
