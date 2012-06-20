@@ -266,7 +266,7 @@ class ctrl_st_machine(object):
         print 'This round of collection initated at time '
         current_time = self.tb.sensor.u.get_time_now().get_real_secs()
         print '***************************************This round of collection initated at time ', current_time
-        start_time = current_time + 0.09   #0.09s is the switching time of half-duplex
+        start_time = current_time + 0.02   #0.09s is the switching time of half-duplex
         print 'start_time = ', start_time
         self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
