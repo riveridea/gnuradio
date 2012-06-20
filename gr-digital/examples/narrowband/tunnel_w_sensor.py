@@ -263,7 +263,6 @@ class ctrl_st_machine(object):
         toaddr = struct.pack('!I', BCST_ADDR) #(4)       
         pkt_type = struct.pack('!B', CTRL_TYPE) #(1)
         ctrl_cmd = struct.pack('!B', START_SENSE)# (1)
-        print 'This round of collection initated at time '
         current_time = self.tb.sensor.u.get_time_now().get_real_secs()
         print '***************************************This round of collection initated at time ', current_time
         start_time = current_time   #0.09s is the switching time of half-duplex
@@ -418,8 +417,8 @@ class ctrl_st_machine(object):
                         sensor_time = self.sensor.u.get_time_now().get_real_secs()
                         print 'sensor_time =', sensor_time
                         
-                        if start_time + 0.01 - sensor_time > 0:
-                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.01))  #started later 0.01s
+                        if start_time + 0.015 - sensor_time > 0:
+                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.015))  #started later 0.01s
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
                             print 'samps len = ', len(self.samps)
                         
