@@ -447,18 +447,18 @@ class ctrl_st_machine(object):
         return 0
 
     def defragment(self, payload, node_id):
-        data_seq = struct.unpack('!H', payload[27:29])
+        (data_seq,) = struct.unpack('!H', payload[27:29])
         if (data_seq != self.rcv_no):
             print 'Data sequence out of order'
             return 2
         else:
-            samp_num = struct.unpack('!H', payload[25:27])
-            start_time = struct.unpack('!d', payload[17:25])
+            (samp_num,) = struct.unpack('!H', payload[25:27])
+            (start_time,) = struct.unpack('!d', payload[17:25])
             if start_time != self.current_start_time:
                 print 'Recieved the packet for different start time!'
                 return 3
                 
-            data_per_pkt = struct.unpack('!H', payload[5:7]) - 29
+            (data_per_pkt,) = struct.unpack('!H', payload[5:7]) - 29
             max_seq = samp_num*8/data_per_pkt - 1
             if data_seq == max_seq:
                 print 'get the last packet of the sensing data from node ', node_id
