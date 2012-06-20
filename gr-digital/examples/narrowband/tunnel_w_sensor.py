@@ -303,7 +303,7 @@ class ctrl_st_machine(object):
         self.output.put(payload)
                      
     def process_payload(self, payload, options):       
-        print 'process_pay_load'
+        #print 'process_pay_load'
         
         length = len(payload)
         if length <= 17:
