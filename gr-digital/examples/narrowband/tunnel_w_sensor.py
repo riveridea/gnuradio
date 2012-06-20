@@ -447,9 +447,8 @@ class ctrl_st_machine(object):
         return 0
 
     def defragment(self, payload, node_id):
-        global rcv_no
         data_seq = struct.unpack('!H', payload[27:29])
-        if (data_seq != rcv_no):
+        if (data_seq != self.rcv_no):
             print 'Data sequence out of order'
             return 2
         else:
@@ -463,13 +462,13 @@ class ctrl_st_machine(object):
             max_seq = samp_num*8/data_per_pkt - 1
             if data_seq == max_seq:
                 print 'get the last packet of the sensing data from node ', node_id
-                rcv_no = 0
+                self.rcv_no = 0
                 return 1
             elif data_seq > max_se:
                 print 'data_seq exceeds the maximum'
                 return 4
                 
-            rcv_no += 1 #Continue to collect the following packets from the same node
+            self.rcv_no += 1 #Continue to collect the following packets from the same node
             return 0            
         
     def report_data(self, samps, node_id, samp_num, data_per_pkt):
