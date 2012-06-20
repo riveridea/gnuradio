@@ -416,7 +416,7 @@ class ctrl_st_machine(object):
                             print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
-                            if self.report_data(self.samps, self.node_id, samp_num) == 1:
+                            if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
                                 return 1
                             self.state = NODE_IDLE
@@ -434,8 +434,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data'
-                            data_per_pkt = options.data_pkt
-                            self.report_data(self.samps, self.node_id, self.current_samp_num, data_per_pkt)
+                            self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
                         print 'Received incorrect cmd in WAIT_REPORT state'
