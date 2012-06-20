@@ -614,7 +614,7 @@ def main():
                           help="path to tun device file [default=%default]")
     expert_grp.add_option("-d", "--data-pkt", type="intx", default=256,
                           help="specify the data(in bytes) per packet [default=%default]")
-    expert_grp.add_option("-p", "--samp-num", type="intx", default=8,
+    expert_grp.add_option("", "--samp-num", type="intx", default=8,
                           help="specify how many samples for each node at each round of acquisition [default=%default]")
     parser.add_option("", "--node-type", type="choice", choices=node_types.keys(),
                           default="node",
