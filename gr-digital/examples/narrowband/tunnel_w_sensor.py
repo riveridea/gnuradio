@@ -465,7 +465,7 @@ class ctrl_st_machine(object):
                 print 'get the last packet of the sensing data from node ', node_id
                 self.rcv_no = 0
                 return 1
-            elif data_seq > max_se:
+            elif data_seq > max_seq:
                 print 'data_seq exceeds the maximum'
                 return 4
                 
