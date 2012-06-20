@@ -418,7 +418,7 @@ class ctrl_st_machine(object):
                         print 'sensor_time =', sensor_time
                         
                         if start_time + 0.015 - sensor_time > 0:
-                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.015))  #started later 0.01s
+                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.011))  #started later 0.01s
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
                             print 'samps len = ', len(self.samps)
                         
@@ -469,10 +469,10 @@ class ctrl_st_machine(object):
                 
             (data_per_pkt,) = struct.unpack('!H', payload[4:6])
             data_per_pkt -= 29
-            print 'data_per_pkt = ', data_per_pkt 
+            #print 'data_per_pkt = ', data_per_pkt 
             max_seq = (samp_num*8)/data_per_pkt - 1
-            print 'max_seq = ', max_seq
-            print 'data_seq = ', data_seq
+            #print 'max_seq = ', max_seq
+            #print 'data_seq = ', data_seq
             if data_seq == max_seq:
                 print 'get the last packet of the sensing data from node ', node_id
                 self.rcv_no = 0
@@ -493,8 +493,8 @@ class ctrl_st_machine(object):
         total_length = samp_num*8    
         pkt_total = total_length/data_per_pkt
         samp_per_pkt = data_per_pkt/8
-        print 'This data has total packets', pkt_total
-        print 'Each packet contains samples ', samp_per_pkt
+        #print 'This data has total packets', pkt_total
+        #print 'Each packet contains samples ', samp_per_pkt
         for i in range(pkt_total):  #each loop generate a packet
             out_payload = ''
                 
