@@ -416,6 +416,7 @@ class ctrl_st_machine(object):
                             print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
+                            print 'begin reporting data, data per pkt = ', options.data_pkt
                             if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
                                 return 1
@@ -433,7 +434,7 @@ class ctrl_st_machine(object):
                         print 'COLLECT_DATA received'
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
-                            print 'begin reporting data'
+                            print 'begin reporting data, data per pkt = ', options.data_pkt
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
@@ -479,7 +480,9 @@ class ctrl_st_machine(object):
             
         total_length = samp_num*8    
         samp_per_pkt = total_length/data_per_pkt
-        for i in range(samp_num/samp_per_pkt):  #each loop generate a packet
+        pkt_total = samp_num/samp_per_pkt
+        print 'This data has total packets', pkt_total
+        for i in range(pkt_total):  #each loop generate a packet
             out_payload = ''
                 
             for j in range(samp_per_pkt):
@@ -555,7 +558,7 @@ class cs_mac(object):
             #payload1 = os.read(self.tun_fd, 10*1024)
 
             payload = output_q.get()
-            print 'pop a packet from the outq'
+            #print 'pop a packet from the outq'
 
             self.csm.pktno += 1
             payload = struct.pack('!I', self.csm.pktno) + payload
