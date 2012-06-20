@@ -266,7 +266,7 @@ class ctrl_st_machine(object):
         print 'This round of collection initated at time '
         current_time = self.tb.sensor.u.get_time_now().get_real_secs()
         print '***************************************This round of collection initated at time ', current_time
-        start_time = current_time + 0.02   #0.09s is the switching time of half-duplex
+        start_time = current_time   #0.09s is the switching time of half-duplex
         print 'start_time = ', start_time
         self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
@@ -419,12 +419,13 @@ class ctrl_st_machine(object):
                         print 'sensor_time =', sensor_time
                 
                         if start_time - sensor_time > 0:
-                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
+                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.01))  #started later 0.01s
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
                             print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
+                            #time.sleep(0.008)  #Don't need to delay due to the sensing time plus the sensing delay there
                             if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
                                 return 1
@@ -443,6 +444,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
+                            #time.sleep(0.009) #Here we need a delay to ensure the cluster head switched to receiving
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
