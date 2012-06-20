@@ -266,7 +266,7 @@ class ctrl_st_machine(object):
         print 'This round of collection initated at time '
         current_time = self.tb.sensor.u.get_time_now().get_real_secs()
         print '***************************************This round of collection initated at time ', current_time
-        start_time = current_time + 0.01
+        start_time = current_time + 0.015
         print 'start_time = ', start_time
         self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
@@ -415,7 +415,7 @@ class ctrl_st_machine(object):
                         sensor_time = self.sensor.u.get_time_now().get_real_secs()
                         print 'sensor_time =', sensor_time
                 
-                        if start_time - sensor_time > 0.1:
+                        if start_time - sensor_time > 0:
                             self.sensor.u.set_start_time(uhd.time_spec_t(start_time))
                             self.samps = self.sensor.u.finite_acquisition(samp_num)               
                             print 'samps len = ', len(self.samps)
