@@ -479,9 +479,10 @@ class ctrl_st_machine(object):
             return 1                  
             
         total_length = samp_num*8    
-        samp_per_pkt = total_length/data_per_pkt
-        pkt_total = samp_num/samp_per_pkt
+        pkt_total = total_length/data_per_pkt
+        samp_per_pkt = data_per_pkt/8
         print 'This data has total packets', pkt_total
+        print 'Each packet contains samples ', samp_per_pkt
         for i in range(pkt_total):  #each loop generate a packet
             out_payload = ''
                 
