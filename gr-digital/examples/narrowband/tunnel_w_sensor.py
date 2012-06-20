@@ -547,12 +547,12 @@ class cs_mac(object):
         @param payload: contents of the packet (string)
         """
 
-        print 'phy_rx_callback'
+        #print 'phy_rx_callback'
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
         if ok:
             self.csm.process_payload(payload, self.csm.options)
-            print 'payload processed'            
+            #print 'payload processed'            
             #os.write(self.tun_fd, payload)
 
     def main_loop(self):
