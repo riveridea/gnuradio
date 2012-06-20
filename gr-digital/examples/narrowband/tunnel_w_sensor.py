@@ -322,7 +322,7 @@ class ctrl_st_machine(object):
                 (node_id,) = struct.unpack('!H', payload[15:17])
                 if self.state == SENSE_START:
                     if node_id == 0 and self.current_rep_id == -1:  #Got data from the 1st node
-                        print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
+                        #print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
                         
                         rt = self.defragment(payload, node_id)               
                         if rt == 0: #Need next packet from the same node
@@ -340,7 +340,7 @@ class ctrl_st_machine(object):
                         return 1
                 elif self.state == ROUND_COLLECTING:
                     if node_id == self.current_rep_id: 
-                        print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
+                        #print "incoming_payload =", pkt_utils.string_to_hex_list(payload)
                         
                         rt = self.defragment(payload, node_id)
                         if rt == 0: #Need next packet from the same node
@@ -386,6 +386,8 @@ class ctrl_st_machine(object):
                 if self.state == ROUND_COLLECTING:                              
                     (tran_id,) = struct.unpack('!d', payload[17:25])  # use start time as transaction ID 
                     # Collect the data from the next node
+                    t = self.tb.sensor.u.get_time_now().get_real_secs()
+                    print '------------------------------------------collect next node at time ',  t
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
                         #time.sleep(0.009) Maybe here the delay can be ignored as the last node don't need to receive it.                    
