@@ -263,7 +263,10 @@ class ctrl_st_machine(object):
         toaddr = struct.pack('!I', BCST_ADDR) #(4)       
         pkt_type = struct.pack('!B', CTRL_TYPE) #(1)
         ctrl_cmd = struct.pack('!B', START_SENSE)# (1)
-        start_time = self.tb.sensor.u.get_time_now().get_real_secs()+1
+        print 'This round of collection initated at time '
+        current_time = self.tb.sensor.u.get_time_now().get_real_secs()
+        print '***************************************This round of collection initated at time ', current_time
+        start_time = current_time + 0.01
         print 'start_time = ', start_time
         self.current_start_time = start_time
         start_time = struct.pack('!d', start_time) # (8)
@@ -349,6 +352,8 @@ class ctrl_st_machine(object):
                         #Completed collection of all the fragemented packets 
                         if self.current_rep_id >= self.net_size - 1:
                             print "last node has reported data"
+                            finish_time = self.tb.sensor.u.get_time_now().get_real_secs()
+                            print '==============================This round collection finished at time ',  finish_time                            
                             self.state = ROUND_COLLECTED
                             self.current_rep_id = -1
                             self.current_loop += 1
@@ -363,7 +368,7 @@ class ctrl_st_machine(object):
                                 print 'Complete all rounds of sesning'
                             
                                 if self.process_collected_data() == 1:
-                                    print 'All round of sensing data are processed'
+                                    print 'All round of sensing data are processed'                                   
                                     self.state = HEAD_IDLE
                                 else:
                                     print 'Data error'
@@ -382,7 +387,7 @@ class ctrl_st_machine(object):
                     # Collect the data from the next node
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
-                        time.sleep(0.009)                    
+                        #time.sleep(0.009) Maybe here the delay can be ignored as the last node don't need to receive it.                    
                         self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
