@@ -443,7 +443,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
-                            time.sleep(0.01) #Here we need a delay to ensure the cluster head switched to receiving
+                            #time.sleep(0.01) #Here we need a delay to ensure the cluster head switched to receiving
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
@@ -507,7 +507,7 @@ class ctrl_st_machine(object):
             out_payload = header + out_payload  # header is put in the front !!
                 
             self.output.put(out_payload)
-            print "outgoing_packet =", pkt_utils.string_to_hex_list(out_payload)  
+            #print "outgoing_packet =", pkt_utils.string_to_hex_list(out_payload)  
         
         return 0
         
