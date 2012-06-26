@@ -359,7 +359,7 @@ class ctrl_st_machine(object):
                             self.current_loop += 1
                             if self.current_loop < self.loop_number:
                                 print 'initiate the next round of sensing'
-                                time.sleep(0.01)
+                                #time.sleep(0.01)
                                 self.start_sensing(options.samp_num)
                                 self.state = SENSE_START
                                 return 0
@@ -424,7 +424,7 @@ class ctrl_st_machine(object):
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
-                            time.sleep(0.01)  #Don't need to delay due to the sensing time plus the sensing delay there
+                            #time.sleep(0.01)  #Don't need to delay due to the sensing time plus the sensing delay there
                             if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
                                 return 1
