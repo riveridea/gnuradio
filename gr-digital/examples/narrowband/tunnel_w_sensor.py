@@ -439,7 +439,7 @@ class ctrl_st_machine(object):
                         l_v = 64
                         for i in range(len(self.samps) - l_v + 1):
                             v = []
-                            for j in range(l_v + 1):
+                            for j in range(l_v):
                                 v.append(abs(self.samps[i + j]))
                             mat.append(v)
                             
