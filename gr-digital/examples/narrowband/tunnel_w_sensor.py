@@ -439,14 +439,15 @@ class ctrl_st_machine(object):
                         l_v = 64
                         for i in range(len(self.samps) - l_v + 1):
                             v = []
-                            for j in range(l_v + 1)
+                            for j in range(l_v + 1):
                                 v.append(abs(self.samps[i + j])
                             mat.append(v)
-                        matx = np.array()
-                        covmat = np.cov(mat)
+                            
+                        matx = np.array(mat).T
+                        covmat = np.cov(matx)
                         trace_cov = np.trace(covmat)
                         
-                        print trace_cov
+                        print 'trace is ', trace_cov
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
