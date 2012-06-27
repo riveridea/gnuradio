@@ -306,7 +306,7 @@ class ctrl_st_machine(object):
         #print 'process_pay_load'
         
         length = len(payload)
-        #test data
+        #test code
         if length == 12:
            self.round_data_collect(0, 1)
         
@@ -434,6 +434,7 @@ class ctrl_st_machine(object):
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
                             #time.sleep(0.01)  #Don't need to delay due to the sensing time plus the sensing delay there
+                            #test code
                             self.send_test_data()
                             return 0
                             
@@ -456,6 +457,10 @@ class ctrl_st_machine(object):
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
                             #time.sleep(0.004) #Here we need a delay to ensure the cluster head switched to receiving
+                            #test code
+                            self.send_test_data()
+                            return 0
+                            
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
