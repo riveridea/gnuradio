@@ -397,7 +397,7 @@ class ctrl_st_machine(object):
                     print '------------------------------------------collect next node at time ',  t
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
-                        #time.sleep(0.007) #Maybe here the delay can be ignored as the last node don't need to receive it.                    
+                        time.sleep(0.006) #Maybe here the delay can be ignored as the last node don't need to receive it.                    
                         self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
