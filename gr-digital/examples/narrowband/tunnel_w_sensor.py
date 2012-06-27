@@ -428,9 +428,9 @@ class ctrl_st_machine(object):
                         print 'sensor_time = %.7f' %sensor_time
                         
                         #if start_time + 0.015 - sensor_time > 0:
-                        #self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.013))  #started later 0.005s
-                        #self.samps = self.sensor.u.finite_acquisition(samp_num)               
-                        #print 'samps len = ', len(self.samps)
+                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.013))  #started later 0.005s
+                        self.samps = self.sensor.u.finite_acquisition(samp_num)               
+                        print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
