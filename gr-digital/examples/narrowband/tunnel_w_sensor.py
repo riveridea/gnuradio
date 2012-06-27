@@ -399,7 +399,9 @@ class ctrl_st_machine(object):
                         return 1                        
         ####State machine for the CLuster Node:                   
         elif self.node_type == "node":
-            print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
+            rt = self.tb.sensor.u.get_time_now().get_real_secs()
+            print 'recieve the commnad at time %.7f' %rt
+            #print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
                 (ctrl_cmd,) = struct.unpack('!B', payload[15:16])
                 
@@ -446,7 +448,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
-                            time.sleep(0.002) #Here we need a delay to ensure the cluster head switched to receiving
+                            time.sleep(0.003) #Here we need a delay to ensure the cluster head switched to receiving
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
