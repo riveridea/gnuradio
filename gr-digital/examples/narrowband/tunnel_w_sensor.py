@@ -418,7 +418,7 @@ class ctrl_st_machine(object):
                         print 'sensor_time = %.7f' %sensor_time
                         
                         #if start_time + 0.015 - sensor_time > 0:
-                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.005))  #started later 0.005s
+                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.012))  #started later 0.005s
                         self.samps = self.sensor.u.finite_acquisition(samp_num)               
                         print 'samps len = ', len(self.samps)
                         
@@ -443,7 +443,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
-                            #time.sleep(0.01) #Here we need a delay to ensure the cluster head switched to receiving
+                            time.sleep(0.002) #Here we need a delay to ensure the cluster head switched to receiving
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
