@@ -318,6 +318,9 @@ class ctrl_st_machine(object):
         ####State Machine For the Cluster Head    
         if self.node_type == "head":
             if pkttype == DATA_TYPE:
+                rt = self.tb.sensor.u.get_time_now().get_real_secs()
+                print 'recieve the data at time %.7f' rt
+                
                 (node_id,) = struct.unpack('!H', payload[15:17])
                 if self.state == SENSE_START:
                     if node_id == 0 and self.current_rep_id == -1:  #Got data from the 1st node
