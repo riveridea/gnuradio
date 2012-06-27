@@ -392,7 +392,7 @@ class ctrl_st_machine(object):
                     print '------------------------------------------collect next node at time ',  t
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
-                        #time.sleep(0.009) Maybe here the delay can be ignored as the last node don't need to receive it.                    
+                        time.sleep(0.003) #Maybe here the delay can be ignored as the last node don't need to receive it.                    
                         self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
@@ -448,7 +448,7 @@ class ctrl_st_machine(object):
                         (node_id, ) =  struct.unpack('!H', payload[16:18])
                         if node_id == self.node_id:
                             print 'begin reporting data, data per pkt = ', options.data_pkt
-                            time.sleep(0.009) #Here we need a delay to ensure the cluster head switched to receiving
+                            time.sleep(0.004) #Here we need a delay to ensure the cluster head switched to receiving
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
                     else:
