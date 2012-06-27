@@ -430,6 +430,9 @@ class ctrl_st_machine(object):
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
                             #time.sleep(0.01)  #Don't need to delay due to the sensing time plus the sensing delay there
+                            self.send_test_data()
+                            return 0
+                            
                             if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
                                 return 1
@@ -515,6 +518,13 @@ class ctrl_st_machine(object):
             #print "outgoing_packet =", pkt_utils.string_to_hex_list(out_payload)  
         
         return 0
+        
+    def send_test_data(self):
+        pktno = 0
+        pkt_size = 10
+
+        data = (pkt_size - 2) * chr(pktno & 0xff) 
+        self.output.put(data)
         
     def process_collected_data(self):
         print 'process the collected data in the hash table'
