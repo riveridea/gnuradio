@@ -70,6 +70,8 @@ import Queue
 
 import gnuradio.digital.packet_utils as pkt_utils
 
+import numpy as np
+
 #print os.getpid()
 #raw_input('Attach and press enter')
 
@@ -431,6 +433,20 @@ class ctrl_st_machine(object):
                         self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.015))  #started later 0.005s
                         self.samps = self.sensor.u.finite_acquisition(samp_num)               
                         print 'samps len = ', len(self.samps)
+                        
+                        #compute the covariance matrix
+                        mat = []
+                        l_v = 64
+                        for i in range(len(self.samps) - l_v + 1):
+                            v = []
+                            for j in range(l_v + 1)
+                                v.append(abs(self.samps[i + j])
+                            mat.append(v)
+                        matx = np.array()
+                        covmat = np.cov(mat)
+                        trace_cov = np.trace(covmat)
+                        
+                        print trace_cov
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
