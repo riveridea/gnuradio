@@ -306,9 +306,13 @@ class ctrl_st_machine(object):
         #print 'process_pay_load'
         
         length = len(payload)
+        #test data
+        if length == 12:
+           self.round_data_collect(0, 1)
+        
         if length <= 17:
             print 'useless payload'
-            return 1      
+            return 1              
         
         (pktno, pktsize, fromaddr, toaddr, pkttype) = struct.unpack('!IHIIB', payload[0:15])
  
