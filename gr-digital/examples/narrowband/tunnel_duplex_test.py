@@ -166,6 +166,10 @@ class cs_mac(object):
         """
         if self.verbose:
             print "Rx: ok = %r  len(payload) = %4d" % (ok, len(payload))
+        
+        t2 = self.tb.source.u.get_time_now().get_real_secs()
+        print 'get reply at time ', t2
+        
         if ok:
             os.write(self.tun_fd, payload)
 
@@ -180,15 +184,14 @@ class cs_mac(object):
 
         while 1:
             payload = os.read(self.tun_fd, 10*1024)
-            t = self.tb.source.u.get_time_now().get_real_secs()
-            print t
+
             if not payload:
                 self.tb.send_pkt(eof=True)
                 break
             
             #time.sleep(0.009)
             t2 = self.tb.source.u.get_time_now().get_real_secs()
-            print 'reply at time ', t
+            print 'send at time ', t
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
 
