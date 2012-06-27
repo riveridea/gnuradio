@@ -360,8 +360,8 @@ class ctrl_st_machine(object):
                         if self.current_rep_id >= self.net_size - 1:
                             print "last node has reported data"
                             finish_time = self.tb.sensor.u.get_time_now().get_real_secs()
-                            print '***************************************This round of collection started at time ', self.current_start_time - 0.09
-                            print '==============================This round collection finished at time ',  finish_time                            
+                            print '***************************************This round of collection started at time %.7f' %(self.current_start_time - 0.09)
+                            print '==============================This round collection finished at time %.7f'  %finish_time                            
                             self.state = ROUND_COLLECTED
                             self.current_rep_id = -1
                             self.current_loop += 1
