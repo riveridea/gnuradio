@@ -440,7 +440,7 @@ class ctrl_st_machine(object):
                         for i in range(len(self.samps) - l_v + 1):
                             v = []
                             for j in range(l_v + 1):
-                                v.append(abs(self.samps[i + j])
+                                v.append(abs(self.samps[i + j]))
                             mat.append(v)
                             
                         matx = np.array(mat).T
