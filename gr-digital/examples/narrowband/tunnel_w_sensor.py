@@ -308,7 +308,7 @@ class ctrl_st_machine(object):
         length = len(payload)
         #test code
         if length == 12:
-           time.sleep(5)
+           time.sleep(0.009)
            self.round_data_collect(0, 1)
         
         if length <= 17:
