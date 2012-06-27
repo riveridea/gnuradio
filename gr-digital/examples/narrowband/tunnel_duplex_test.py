@@ -191,7 +191,7 @@ class cs_mac(object):
             
             #time.sleep(0.009)
             t2 = self.tb.source.u.get_time_now().get_real_secs()
-            print 'send at time ', t
+            print 'send at time ', t2
             if self.verbose:
                 print "Tx: len(payload) = %4d" % (len(payload),)
 
