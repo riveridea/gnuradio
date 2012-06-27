@@ -307,9 +307,9 @@ class ctrl_st_machine(object):
         
         length = len(payload)
         #test code
-        if length == 12:
-           time.sleep(0.008)
-           self.round_data_collect(0, 1)
+        #if length == 12:
+        #   time.sleep(0.008)
+        #   self.round_data_collect(0, 1)
         
         if length <= 17:
             print 'useless payload'
@@ -397,7 +397,7 @@ class ctrl_st_machine(object):
                     print '------------------------------------------collect next node at time ',  t
                     self.current_rep_id = node_id + 1  
                     if self.current_rep_id < self.net_size:
-                        time.sleep(0.009) #Maybe here the delay can be ignored as the last node don't need to receive it.                    
+                        time.sleep(0.008) #Maybe here the delay can be ignored as the last node don't need to receive it.                    
                         self.round_data_collect(tran_id, self.current_rep_id)
                     else: # should not reach here
                         print 'error in report node id'
@@ -436,8 +436,8 @@ class ctrl_st_machine(object):
                             print 'begin reporting data, data per pkt = ', options.data_pkt
                             #time.sleep(0.01)  #Don't need to delay due to the sensing time plus the sensing delay there
                             #test code
-                            self.send_test_data()
-                            return 0
+                            #self.send_test_data()
+                            #return 0
                             
                             if self.report_data(self.samps, self.node_id, samp_num, options.data_pkt) == 1:
                                 print 'error in reporting data'
@@ -459,8 +459,8 @@ class ctrl_st_machine(object):
                             print 'begin reporting data, data per pkt = ', options.data_pkt
                             #time.sleep(0.004) #Here we need a delay to ensure the cluster head switched to receiving
                             #test code
-                            self.send_test_data()
-                            return 0
+                            #self.send_test_data()
+                            #return 0
                             
                             self.report_data(self.samps, self.node_id, self.current_samp_num, options.data_pkt)
                             self.state = NODE_IDLE
