@@ -414,13 +414,13 @@ class ctrl_st_machine(object):
                         print 'samp_num = ', samp_num
                         print 'start_time = ', start_time
                         # start the data collection as specified time
-                        sensor_time = self.sensor.u.get_time_now().get_real_secs()
-                        print 'sensor_time =', sensor_time
+                        #sensor_time = self.sensor.u.get_time_now().get_real_secs()
+                        #print 'sensor_time =', sensor_time
                         
-                        if start_time + 0.015 - sensor_time > 0:
-                            self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.015))  #started later 0.01s
-                            self.samps = self.sensor.u.finite_acquisition(samp_num)               
-                            print 'samps len = ', len(self.samps)
+                        #if start_time + 0.015 - sensor_time > 0:
+                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.005))  #started later 0.005s
+                        self.samps = self.sensor.u.finite_acquisition(samp_num)               
+                        print 'samps len = ', len(self.samps)
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt

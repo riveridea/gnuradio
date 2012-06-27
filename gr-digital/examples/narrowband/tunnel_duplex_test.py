@@ -183,12 +183,21 @@ class cs_mac(object):
         min_delay = 0.001               # seconds
 
         while 1:
-            payload = os.read(self.tun_fd, 10*1024)
-
-            if not payload:
-                self.tb.send_pkt(eof=True)
-                break
+            #payload = os.read(self.tun_fd, 10*1024)
             
+            if options.from_file is None:
+                data = (pkt_size - 2) * chr(pktno & 0xff) 
+            else:
+                data = source_file.read(pkt_size - 2)
+                if data == '':
+                break;
+
+                payload = struct.pack('!H', pktno & 0xffff) + data
+                send_pkt(payload)
+                n += len(payload)
+                sys.stderr.write('.')
+                pktno += 1
+                        
             #time.sleep(0.009)
             t2 = self.tb.source.u.get_time_now().get_real_secs()
             print 'send at time ', t2
