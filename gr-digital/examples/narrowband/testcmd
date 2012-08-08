@@ -1,3 +1,119 @@
-sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=921M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.120" --tx-addr="addr=192.168.10.120" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head
-sudo ./tunnel_w_sensor.py --rx-freq=921M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node
-sudo ./tunnel_w_sensor.py --rx-freq=921M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.130" --tx-addr="addr=192.168.10.130" --sx-addr="addr=192.168.10.133" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node
+sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.120" --tx-addr="addr=192.168.10.120" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128 
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.127" --tx-addr="addr=192.168.10.127" --sx-addr="addr=192.168.10.126" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.130" --tx-addr="addr=192.168.10.130" --sx-addr="addr=192.168.10.133" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
+
+usrp = uhd.usrp_source(device_addr="addr=192.168.10.106", stream_args=uhd.stream_args('fc32'))
+usrp = uhd.usrp_source(device_addr="addr=192.168.10.133", stream_args=uhd.stream_args('fc32'))
+usrp = uhd.usrp_source(device_addr="addr=192.168.10.108", stream_args=uhd.stream_args('fc32'))
+t = usrp.get_time_now().get_real_secs()
+
+sudo ./tunnel_duplex_test.py --rx-freq=800M --tx-freq=908M --tx-amplitude=1 --rx-gain=15 --bitrate=500000
+sudo ./tunnel_duplex_test.py --rx-freq=908M --tx-freq=800M --tx-amplitude=1 --rx-gain=15 --bitrate=500000
+
+
+from gnuradio import uhd
+import numpy as np
+import matplotlib.pyplot as plt
+import pylab
+
+CENTER = 1e9
+samp_rate = 2040816
+usrp = uhd.usrp_source(device_addr="addr0=192.168.10.153, ",
+stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
+usrp.set_clock_source("external", 0)
+usrp.set_time_source("external", 0)
+usrp.set_samp_rate(samp_rate)
+usrp.set_center_freq(CENTER, 0)
+usrp.set_gain(50, 0)
+usrp.set_antenna("RX2", 0)
+
+Ns = 3000
+L = 32
+o_samps = usrp.finite_acquisition(int(15*samp_rate))
+o_samps = o_samps[int(0.1*samp_rate):]
+tr_r = []
+tr_i = []
+for i in range(len(o_samps)/Ns):
+    samps = np.array(o_samps[i*Ns:(i+1)*Ns])
+    samp_vect = np.array([])
+    for j in range(Ns-L+1):
+        samp_vect = np.concatenate((samp_vect,samps[j:j+L]),axis=0)
+    samp_mtx = samp_vect.reshape(Ns-L+1,L).T
+    samp_mtx_r = np.real(samp_mtx) 
+    tr_r.append(np.trace(np.cov(samp_mtx_r)))
+    samp_mtx_i = np.imag(samp_mtx)
+    tr_i.append(np.trace(np.cov(samp_mtx_i)))
+
+varn_r = np.var(np.real(o_samps))
+vart_r = np.var(tr_r)
+vart_r_th = (2*np.square(L)/Ns)*np.square(varn_r)
+
+
+
+Ns = 600
+L  = 8
+SegL = Ns*L
+samps = usrp.finite_acquisition(int(30*samp_rate))
+samps = samps[int(0.1*samp_rate):]
+tr_r = [] 
+tr_i = []
+for i in range(len(samps)/SegL):
+    samp_vect = samps[i*SegL:(i+1)*SegL]
+    samp_vect_real = np.real(samp_vect)
+    samp_vect_imag = np.imag(samp_vect)
+    samp_matrx_r = np.array(samp_vect_real).reshape(Ns,L).T
+    tr_r.append(np.trace(np.cov(samp_matrx_r)))
+    samp_matrx_i = np.array(samp_vect_imag).reshape(Ns,L).T
+    tr_i.append(np.trace(np.cov(samp_matrx_i)))
+
+varn_r = np.var(np.real(samps))
+vart_r = np.var(tr_r)
+vart_r_th = (2*np.square(L)/Ns)*np.square(varn_r)
+
+
+
+Ns = 10
+L = 4
+samps = np.array(o_samps[0:Ns])
+samp_vect = np.array([])
+for j in range(Ns-L+1):
+    samp_vect = np.concatenate((samp_vect,samps[j:j+L]),axis=0)
+samp_mtx = samp_vect.reshape(Ns-L+1,L).T
+
+  
+  
+y = np.square(np.random.randn(3000))
+for i in range(600):
+    y += np.square(np.random.randn(3000))
+y = y/100
+    
+
+var = 0
+for i in range(1):
+    samps = usrp.finite_acquisition(int(0.15*samp_rate))
+    print 'B', i
+    abs_s = numpy.abs(samps)
+    var = numpy.var(abs_s[int(0.08*samp_rate):]) + var
+
+var = var/(1-0)
+
+Ns = 2000
+L = 32
+o_samps = np.random.randn(int(5*samp_rate))
+tr_r = []
+tr_i = []
+for i in range(len(o_samps)/Ns):
+    samps = np.array(o_samps[i*Ns:(i+1)*Ns])
+    samp_vect = np.array([])
+    for j in range(Ns-L+1):
+        samp_vect = np.concatenate((samp_vect,samps[j:j+L]),axis=0)
+    samp_mtx = samp_vect.reshape(Ns-L+1,L).T
+    samp_mtx_r = np.real(samp_mtx) 
+    tr_r.append(np.trace(np.cov(samp_mtx_r)))
+    samp_mtx_i = np.imag(samp_mtx)
+    tr_i.append(np.trace(np.cov(samp_mtx_i)))
+    
+varn_r = np.var(o_samps)
+vart_r = np.var(tr_r)
+vart_r_th = (2*np.square(L)/Ns)*np.square(varn_r)
