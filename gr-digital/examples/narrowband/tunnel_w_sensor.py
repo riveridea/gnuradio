@@ -433,10 +433,10 @@ class ctrl_st_machine(object):
                         #if start_time + 0.015 - sensor_time > 0:
                         self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.030))  #started later 0.005s
                         #test 
-                        samp_num = int(0.5*options.sx_samprate)
+                        samp_num = int(2.5*options.sx_samprate)
                         self.samps = self.sensor.u.finite_acquisition(samp_num)
                         
-                        o_samps = np.array(np.real(self.samps[int(0.1*options.sx_samprate):]))
+                        o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
                         o_samps.astype('float64').tofile(self.fd) 
 
                         print 'samps len = ', len(self.samps)
