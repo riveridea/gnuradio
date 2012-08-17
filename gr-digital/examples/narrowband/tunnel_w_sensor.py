@@ -220,6 +220,7 @@ class ctrl_st_machine(object):
             #indexed by the transaction id
             self.ndata = dict()
             self.state = NODE_IDLE
+            self.fd = open("sdata.dat","w")
 
         self.options = options
             
@@ -431,7 +432,13 @@ class ctrl_st_machine(object):
                         
                         #if start_time + 0.015 - sensor_time > 0:
                         self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.015))  #started later 0.005s
-                        self.samps = self.sensor.u.finite_acquisition(samp_num)               
+                        #test 
+                        samp_num = int(0.5*options.sx_samprate)
+                        self.samps = self.sensor.u.finite_acquisition(samp_num)
+                        
+                        o_samps = np.array(np.real(self.samps[int(0.1*options.sx_samprate):]))
+                        o_samps.astype('float64').tofile(self.fd) 
+
                         print 'samps len = ', len(self.samps)
                         
                         #compute the covariance matrix
