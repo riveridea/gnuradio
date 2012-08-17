@@ -1,7 +1,14 @@
-sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.120" --tx-addr="addr=192.168.10.120" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
+sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.109" --tx-addr="addr=192.168.10.109" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
+
+sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
+
 sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128 
+
 sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.127" --tx-addr="addr=192.168.10.127" --sx-addr="addr=192.168.10.126" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
+
 sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.130" --tx-addr="addr=192.168.10.130" --sx-addr="addr=192.168.10.133" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
+
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.129" --tx-addr="addr=192.168.10.129" --sx-addr="addr=192.168.10.128" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
 
 usrp = uhd.usrp_source(device_addr="addr=192.168.10.106", stream_args=uhd.stream_args('fc32'))
 usrp = uhd.usrp_source(device_addr="addr=192.168.10.133", stream_args=uhd.stream_args('fc32'))
