@@ -440,6 +440,7 @@ class ctrl_st_machine(object):
 
                         if len(self.samps) == 0:
                             print 'no samps captured'
+                            self.state = NODE_IDLE
                             return 0
                         
                         o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
