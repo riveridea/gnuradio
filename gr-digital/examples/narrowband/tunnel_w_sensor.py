@@ -437,6 +437,10 @@ class ctrl_st_machine(object):
                         current_t = self.sensor.u.get_time_now().get_real_secs()
                         print 'sensor_time = %.7f' %current_t
                         self.samps = self.sensor.u.finite_acquisition(samp_num)
+
+                        if len(self.samps) == 0:
+                            print 'no samps captured'
+                            return 0
                         
                         o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
                         o_samps.astype('float64').tofile(self.fd) 
