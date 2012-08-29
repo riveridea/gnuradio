@@ -425,17 +425,17 @@ class ctrl_st_machine(object):
                         print "self.current_start_time = ", pkt_utils.string_to_hex_list(payload[16:24])
                         self.current_samp_num =  samp_num
                         print 'samp_num = ', samp_num
-                        print 'start_time = %.7f' %start_time
+                        print 'start_time = %.7f' %(start_time + 0.7)
                         # start the data collection as specified time
-                        sensor_time = self.sensor.u.get_time_now().get_real_secs()
-                        print 'sensor_time = %.7f' %sensor_time
+                        #sensor_time = self.sensor.u.get_time_now().get_real_secs()
+                        #print 'sensor_time = %.7f' %sensor_time
                         
                         #if start_time + 0.015 - sensor_time > 0:
-                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.070))  #started later 0.070s
+                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.70))  #started later 0.070s
                         #test 
                         samp_num = int(10*options.sx_samprate)
                         current_t = self.sensor.u.get_time_now().get_real_secs()
-                        print 'sensor_time = %.7f' %current_t
+                        print 'current time = %.7f' %current_t
                         self.samps = self.sensor.u.finite_acquisition(samp_num)
 
                         if len(self.samps) == 0:
