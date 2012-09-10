@@ -387,6 +387,11 @@ public:
         return num_samps;
     }
 
+    void set_start_on_demand(){
+        printf("set the start on demand for usrp source"); 
+        _start_on_demand = 1;
+    }
+
     void set_start_time(const uhd::time_spec_t &time){
         printf("set_start_time successfully\n");
         _start_time = time;
@@ -399,6 +404,12 @@ public:
         _rx_stream = _dev->get_rx_stream(_stream_args);
         _samps_per_packet = _rx_stream->get_max_num_samps();
         #endif
+
+        // alex: need to wait the demand to start the streaming
+        if (_start_on_demand){
+            _start_on_demand = 0; //reset it to zero to enable start.
+            return true;
+        }
         //setup a stream command that starts streaming slightly in the future
         static const double reasonable_delay = 0.1; //order of magnitude over RTT
         uhd::stream_cmd_t stream_cmd(uhd::stream_cmd_t::STREAM_MODE_START_CONTINUOUS);
@@ -537,6 +548,9 @@ private:
 
     uhd::time_spec_t _start_time;
     bool _start_time_set;
+    //alex: _start_on_demand, if 1, indicate the start streaming will not
+    //be started right after the top block is started. Default is 0
+    bool _start_on_demand = 0;
 };
 
 
