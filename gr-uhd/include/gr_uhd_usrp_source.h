@@ -514,6 +514,11 @@ public:
      * \return a vector of buffers, where each buffer represents a channel
      */
     virtual std::vector<std::vector<std::complex<float> > > finite_acquisition_v(const size_t nsamps) = 0;
+
+	/*
+	 *alex: Need to set the usrp source to work on demand for streaming start or not
+	*/
+	virtual void set_start_on_demand() = 0;
 };
 
 #endif /* INCLUDED_GR_UHD_USRP_SOURCE_H */
