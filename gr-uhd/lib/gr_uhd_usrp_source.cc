@@ -62,7 +62,8 @@ public:
         _nchan(std::max<size_t>(1, stream_args.channels.size())),
         _stream_now(_nchan == 1),
         _tag_now(false),
-        _start_time_set(false)
+        _start_time_set(false),
+        _start_on_demand(false)
     {
         if (stream_args.cpu_format == "fc32") _type = boost::make_shared<uhd::io_type_t>(uhd::io_type_t::COMPLEX_FLOAT32);
         if (stream_args.cpu_format == "sc16") _type = boost::make_shared<uhd::io_type_t>(uhd::io_type_t::COMPLEX_INT16);
@@ -389,7 +390,7 @@ public:
 
     void set_start_on_demand(){
         printf("set the start on demand for usrp source"); 
-        _start_on_demand = 1;
+        _start_on_demand = true;
     }
 
     void set_start_time(const uhd::time_spec_t &time){
@@ -407,7 +408,7 @@ public:
 
         // alex: need to wait the demand to start the streaming
         if (_start_on_demand){
-            _start_on_demand = 0; //reset it to zero to enable start.
+            _start_on_demand = false; //reset it to zero to enable start.
             return true;
         }
         //setup a stream command that starts streaming slightly in the future
@@ -550,7 +551,7 @@ private:
     bool _start_time_set;
     //alex: _start_on_demand, if 1, indicate the start streaming will not
     //be started right after the top block is started. Default is 0
-    bool _start_on_demand = 0;
+    bool _start_on_demand;
 };
 
 
