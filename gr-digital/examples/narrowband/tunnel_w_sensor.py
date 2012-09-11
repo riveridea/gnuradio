@@ -248,7 +248,7 @@ class ctrl_st_machine(object):
         #test_samps = self.sensor.u.finite_acquisition(4)
         #print 'test_samps length = ', len(test_samps)
 
-    def stop_sensing(self)
+    def stop_sensing(self):
         """
         stop the streaming from sensor
         """
