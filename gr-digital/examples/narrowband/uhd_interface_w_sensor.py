@@ -253,6 +253,12 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
         # Set the antenna
         if(antenna):
             self.u.set_antenna(antenna, 0)
+            
+        # Set the streaming of the source as start on demand
+        # tb.start will not start streaming right now
+        # the streaming will only be started after the sensor 
+        # receives the demand
+        self.u.set_start_on_demand();
         
         self._addr = addr
         self._ant  = antenna

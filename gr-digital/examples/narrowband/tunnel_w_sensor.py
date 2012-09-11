@@ -170,8 +170,10 @@ class my_top_block(gr.top_block):
         
         self.txpath = transmit_path(mod_class, options)
         self.rxpath = receive_path(demod_class, rx_callback, options)
+        
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
+        self.connect(self.sensor, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
@@ -189,7 +191,7 @@ class my_top_block(gr.top_block):
 
         self.sink.set_freq(target_freq)
         self.source.set_freq(target_freq)
-        
+    
 # ////////////////////////////////////////////////////////////////////
 #                           Round Robin Control State Machine
 # ////////////////////////////////////////////////////////////////////
@@ -246,6 +248,13 @@ class ctrl_st_machine(object):
         #test_samps = self.sensor.u.finite_acquisition(4)
         #print 'test_samps length = ', len(test_samps)
 
+    def stop_sensing(self)
+        """
+        stop the streaming from sensor
+        """
+        self.tb.sensor.u.stop()
+        print "sensing streaming is stopped by the timer"
+        
     def start_sensing(self, samp_num):
         # broadcast the start command to all the nodes to start
         # the first round of data collection
@@ -433,35 +442,43 @@ class ctrl_st_machine(object):
                         #if start_time + 0.015 - sensor_time > 0:
                         self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.70))  #started later 0.070s
                         #test 
-                        samp_num = int(10*options.sx_samprate)
+                        #samp_num = int(10*options.sx_samprate)
+                        samp_num = 0
                         current_t = self.sensor.u.get_time_now().get_real_secs()
                         print 'current time = %.7f' %current_t
-                        self.samps = self.sensor.u.finite_acquisition(samp_num)
+                        #self.samps = self.sensor.u.finite_acquisition(samp_num)
+                        self.samps = ()
 
-                        if len(self.samps) == 0:
-                            print 'no samps captured'
-                            self.state = NODE_IDLE
-                            return 0
+                        #start streaming here
+                        self.sensor.u.start()
+                        #start the timer
+                        self.sense_timer = threading.Timer(30.0, self.stop_sensing())
+                        self.sense_timer.start()
                         
-                        o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
-                        o_samps.astype('float64').tofile(self.fd) 
+                        #if len(self.samps) == 0:
+                        #    print 'no samps captured'
+                        #    self.state = NODE_IDLE
+                        #    return 0
+                        
+                        #o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
+                        #o_samps.astype('float64').tofile(self.fd) 
 
-                        print 'samps len = ', len(self.samps)
+                        #print 'samps len = ', len(self.samps)
                         
                         #compute the covariance matrix
-                        mat = []
-                        l_v = 64
-                        for i in range(len(self.samps) - l_v + 1):
-                            v = []
-                            for j in range(l_v):
-                                v.append(abs(self.samps[i + j]))
-                            mat.append(v)
+                        #mat = []
+                        #l_v = 64
+                        #for i in range(len(self.samps) - l_v + 1):
+                        #    v = []
+                        #    for j in range(l_v):
+                        #        v.append(abs(self.samps[i + j]))
+                        #    mat.append(v)
                             
-                        matx = np.array(mat).T
-                        covmat = np.cov(matx)
-                        trace_cov = np.trace(covmat)
+                        #matx = np.array(mat).T
+                        #covmat = np.cov(matx)
+                        #trace_cov = np.trace(covmat)
                         
-                        print 'trace is ', trace_cov
+                        #print 'trace is ', trace_cov
                         
                         if self.node_id == 0: # for node 0, just report the data to head
                             print 'begin reporting data, data per pkt = ', options.data_pkt
