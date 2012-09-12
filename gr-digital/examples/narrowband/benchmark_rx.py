@@ -73,7 +73,7 @@ class my_top_block(gr.top_block):
         # occur in the sinks (specifically the UHD sink)
         self.rxpath = receive_path(demodulator, rx_callback, options) 
 
-        self.connect(self.source, self.rxpath)
+        #self.connect(self.source, self.rxpath)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         
         self.timer = threading.Timer(5, self.start_streaming)
@@ -147,7 +147,7 @@ def main():
     #self.source.u.stop()
     #tb.timer.start()
     time.sleep(10)
-        
+   
     tb.source.u.start()
     
     tb.wait()         # wait for it to finish
