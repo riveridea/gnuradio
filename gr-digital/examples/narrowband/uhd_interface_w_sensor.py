@@ -31,7 +31,7 @@ from optparse import OptionParser
 import sys
 
 # streaming(0) or finite acqusition(1)
-STREAM_OR_FINITE == 0
+STREAM_OR_FINITE = 0
 
 def add_freq_option(parser):
     """
