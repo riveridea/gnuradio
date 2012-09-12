@@ -144,7 +144,12 @@ def main():
     tb.start()        # start flow graph
 
     #self.source.u.stop()
-    tb.timer.start()
+    #tb.timer.start()
+    count = 1000000
+    while(count != 0): 
+        count -= 1
+        
+    tb.source.u.start()
     
     tb.wait()         # wait for it to finish
 
