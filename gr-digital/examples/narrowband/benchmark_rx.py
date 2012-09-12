@@ -141,7 +141,7 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
-    #tb.source.u.set_start_on_demand()        
+    tb.source.u.set_start_on_demand()        
     tb.start()        # start flow graph
     #self.source.u.stop()
     time.sleep(10)
