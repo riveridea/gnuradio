@@ -68,6 +68,7 @@ class my_top_block(gr.top_block):
         self.rxpath = receive_path(demodulator, rx_callback, options) 
 
         self.connect(self.source, self.rxpath)
+        self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
 
 
 # /////////////////////////////////////////////////////////////////////////////
