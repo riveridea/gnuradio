@@ -336,7 +336,7 @@ public:
         //We now receive a single packet with a large timeout.
         if (_metadata.error_code == uhd::rx_metadata_t::ERROR_CODE_TIMEOUT){
             num_samps = _rx_stream->recv(
-                output_items, noutput_items, _metadata, 1.0, true/*one pkt*/
+                output_items, noutput_items, _metadata, 2.0, true/*one pkt*/
             );
         }
         #else
@@ -373,9 +373,7 @@ public:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
-            std::cout << boost::format(
-                "UHD source block got error code 0x%x"
-            ) % _metadata.error_code << std::endl;            
+            printf("\n", _start_count);
             if (_start_on_demand == true && _start_count == 1) 
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
