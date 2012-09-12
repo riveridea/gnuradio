@@ -35,6 +35,7 @@ from uhd_interface import uhd_receiver
 import struct
 import sys
 import threading
+import time
 
 #import os
 #print os.getpid()
@@ -145,9 +146,7 @@ def main():
 
     #self.source.u.stop()
     #tb.timer.start()
-    count = 1000000
-    while(count != 0): 
-        count -= 1
+    time.sleep(2)
         
     tb.source.u.start()
     
