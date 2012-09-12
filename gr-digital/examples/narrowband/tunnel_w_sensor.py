@@ -116,6 +116,9 @@ WAIT_REPORT      = 2
 BCST_ADDR        = 4294967295
 HEAD_ADDR        = 0
 
+# Streaming = 0, Finite Acquisition = 1
+STREAM_OR_FINITE = 0
+
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
     
@@ -252,8 +255,10 @@ class ctrl_st_machine(object):
         """
         stop the streaming from sensor
         """
-        self.tb.sensor.u.stop()
+        self.tb.sensor.u.stop()        
         print "sensing streaming is stopped by the timer"
+        
+        self.state = WAIT_REPORT
         
     def start_sensing(self, samp_num):
         # broadcast the start command to all the nodes to start
@@ -442,23 +447,26 @@ class ctrl_st_machine(object):
                         #if start_time + 0.015 - sensor_time > 0:
                         self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.70))  #started later 0.070s
                         #test 
-                        #samp_num = int(10*options.sx_samprate)
-                        samp_num = 0
-                        current_t = self.sensor.u.get_time_now().get_real_secs()
-                        print 'current time = %.7f' %current_t
-                        #self.samps = self.sensor.u.finite_acquisition(samp_num)
-                        self.samps = ()
-
-                        #start streaming here
-                        self.sensor.u.start()
-                        #start the timer
-                        self.sense_timer = threading.Timer(30.0, self.stop_sensing())
-                        self.sense_timer.start()
+                        if (STREAM_OR_FINITE == 1): #finite acqusition
+                            samp_num = int(10*options.sx_samprate)
+                            current_t = self.sensor.u.get_time_now().get_real_secs()
+                            print 'current time = %.7f' %current_t
+                            self.samps = self.sensor.u.finite_acquisition(samp_num)
+                            if len(self.samps) == 0:
+                                print 'no samps captured'
+                                self.state = NODE_IDLE
+                                return 0                            
+                        elif (STREAM_OR_FINITE == 0): 
+                            #start streaming here
+                            self.sensor.u.start()
+                            #start the timer
+                            self.sense_timer = threading.Timer(30.0, self.stop_sensing())
+                            self.sense_timer.start()
+                            
+                            self.state = SENSING
+                            return 0  # the data report will be done in timer expiring callback
                         
-                        #if len(self.samps) == 0:
-                        #    print 'no samps captured'
-                        #    self.state = NODE_IDLE
-                        #    return 0
+
                         
                         #o_samps = np.array(np.real(self.samps[int(0.5*options.sx_samprate):]))
                         #o_samps.astype('float64').tofile(self.fd) 
