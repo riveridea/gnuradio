@@ -375,12 +375,12 @@ public:
             //However, a timeout can occur under error conditions.
             //alex
             printf("%d \n", _start_count);
-            if (_start_on_demand == true && _start_count == 1) 
+            //if (_start_on_demand == true) 
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
                 return work(noutput_items, input_items, output_items);
             
-            while(i != 0) i--;
+            //while(i != 0) i--;
             
             return WORK_DONE;
 
