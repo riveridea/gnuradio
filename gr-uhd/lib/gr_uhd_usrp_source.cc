@@ -353,10 +353,6 @@ public:
         #endif
 
         //handle possible errors conditions
-        std::cout << boost::format(
-            "UHD source block got error code 0x%x"
-        ) % _metadata.error_code << std::endl;
-
         switch(_metadata.error_code){
         case uhd::rx_metadata_t::ERROR_CODE_NONE:
             if (_tag_now){
@@ -377,6 +373,9 @@ public:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
+            std::cout << boost::format(
+                "UHD source block got error code 0x%x"
+            ) % _metadata.error_code << std::endl;            
             if (_start_on_demand == true && _start_count == 1) 
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
