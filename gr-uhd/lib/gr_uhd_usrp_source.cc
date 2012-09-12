@@ -373,7 +373,6 @@ public:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
-            printf("%d \n", _start_count);
             if (_start_on_demand == true) 
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
@@ -410,8 +409,11 @@ public:
 
     bool start(void){
         #ifdef GR_UHD_USE_STREAM_API
-        _rx_stream = _dev->get_rx_stream(_stream_args);
-        _samps_per_packet = _rx_stream->get_max_num_samps();
+        //alex, avoid _rx_stream reallocation!!
+        if (!_rx_stream){
+            _rx_stream = _dev->get_rx_stream(_stream_args);
+            _samps_per_packet = _rx_stream->get_max_num_samps();
+        }
         #endif
 
         // alex: need to wait the demand to start the streaming
