@@ -72,7 +72,7 @@ class my_top_block(gr.top_block):
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         
         self.source.u.set_start_on_demand()
-        self.timer = Timer(5, self.start_streaming)
+        self.timer = threading.Timer(5, self.start_streaming)
         
     def start_streaming(self):
         self.source.u.start()
