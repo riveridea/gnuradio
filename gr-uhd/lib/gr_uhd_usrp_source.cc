@@ -352,6 +352,7 @@ public:
         #endif
 
         //handle possible errors conditions
+        printf(_metadata.error_code);
         switch(_metadata.error_code){
         case uhd::rx_metadata_t::ERROR_CODE_NONE:
             if (_tag_now){
