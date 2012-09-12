@@ -34,6 +34,7 @@ from uhd_interface import uhd_receiver
 
 import struct
 import sys
+import threading
 
 #import os
 #print os.getpid()
@@ -69,6 +70,13 @@ class my_top_block(gr.top_block):
 
         self.connect(self.source, self.rxpath)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
+        
+        self.source.u.set_start_on_demand()
+        self.timer = Timer(5, self.start_streaming)
+        
+    def start_streaming(self):
+        self.source.u.start()
+        print 'start streaming'
 
 
 # /////////////////////////////////////////////////////////////////////////////
