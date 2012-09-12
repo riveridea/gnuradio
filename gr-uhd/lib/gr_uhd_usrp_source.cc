@@ -352,7 +352,10 @@ public:
         #endif
 
         //handle possible errors conditions
-        printf(_metadata.error_code);
+        std::cout << boost::format(
+            "UHD source block got error code 0x%x"
+        ) % _metadata.error_code << std::endl;
+
         switch(_metadata.error_code){
         case uhd::rx_metadata_t::ERROR_CODE_NONE:
             if (_tag_now){
