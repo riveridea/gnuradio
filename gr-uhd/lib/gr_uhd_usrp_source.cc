@@ -378,6 +378,9 @@ public:
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
                 return work(noutput_items, input_items, output_items);
+
+            int i = 1000000;
+            while(i != 0) i--;
             
             return WORK_DONE;
 
