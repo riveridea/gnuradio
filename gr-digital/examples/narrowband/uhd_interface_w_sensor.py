@@ -261,7 +261,7 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
         # tb.start will not start streaming right now
         # the streaming will only be started after the sensor 
         # receives the demand
-        if (STREAM_OR_FINITE == 0)
+        if (STREAM_OR_FINITE == 0):
             self.u.set_start_on_demand()
         
         self._addr = addr
