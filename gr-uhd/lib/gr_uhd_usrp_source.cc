@@ -371,6 +371,12 @@ public:
         case uhd::rx_metadata_t::ERROR_CODE_TIMEOUT:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
+            //alex
+            if (_start_on_demand == true) 
+                //We are still waiting for the start command
+                //ignore and wait
+                return work(noutput_items, input_items, output_items);
+            
             return WORK_DONE;
 
         case uhd::rx_metadata_t::ERROR_CODE_OVERFLOW:
