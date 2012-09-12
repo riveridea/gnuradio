@@ -143,11 +143,8 @@ def main():
 
     #tb.source.u.set_start_on_demand()        
     tb.start()        # start flow graph
-
     #self.source.u.stop()
-    #tb.timer.start()
     time.sleep(10)
-   
     tb.source.u.start()
     
     tb.wait()         # wait for it to finish
