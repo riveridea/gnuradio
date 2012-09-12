@@ -30,6 +30,9 @@ from optparse import OptionParser
 
 import sys
 
+# streaming(0) or finite acqusition(1)
+STREAM_OR_FINITE == 0
+
 def add_freq_option(parser):
     """
     Hackery that has the -f / --freq option set both tx_freq and rx_freq
@@ -258,7 +261,8 @@ class uhd_sensor(uhd_interface, gr.hier_block2):
         # tb.start will not start streaming right now
         # the streaming will only be started after the sensor 
         # receives the demand
-        self.u.set_start_on_demand()
+        if (STREAM_OR_FINITE == 0)
+            self.u.set_start_on_demand()
         
         self._addr = addr
         self._ant  = antenna

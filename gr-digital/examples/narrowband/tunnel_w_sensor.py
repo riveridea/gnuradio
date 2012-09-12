@@ -176,7 +176,7 @@ class my_top_block(gr.top_block):
         
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        self.connect(self.sensor, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
+        self.connect(self.sensor.u, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
