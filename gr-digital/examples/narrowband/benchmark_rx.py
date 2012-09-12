@@ -75,10 +75,7 @@ class my_top_block(gr.top_block):
         self.connect(self.source, self.rxpath)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         
-        self.source.u.set_start_on_demand()
-        #self.source.u.stop()
         self.timer = threading.Timer(5, self.start_streaming)
-        self.timer.start()
 
 
 
@@ -143,7 +140,12 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
+    tb.source.u.set_start_on_demand()        
     tb.start()        # start flow graph
+
+    #self.source.u.stop()
+    tb.timer.start()
+    
     tb.wait()         # wait for it to finish
 
 if __name__ == '__main__':
