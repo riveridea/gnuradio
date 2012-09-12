@@ -146,7 +146,7 @@ def main():
 
     #self.source.u.stop()
     #tb.timer.start()
-    time.sleep(2)
+    time.sleep(10)
         
     tb.source.u.start()
     
