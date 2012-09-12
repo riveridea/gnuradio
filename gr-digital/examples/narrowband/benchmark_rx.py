@@ -40,7 +40,11 @@ import threading
 #print os.getpid()
 #raw_input('Attach and press enter: ')
 
-class my_top_block(gr.top_block):
+class my_top_block(gr.top_block):        
+    def start_streaming(self):
+        self.source.u.start()
+        print 'start streaming'
+        
     def __init__(self, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
 
@@ -73,10 +77,7 @@ class my_top_block(gr.top_block):
         
         self.source.u.set_start_on_demand()
         self.timer = threading.Timer(5, self.start_streaming)
-        
-    def start_streaming(self):
-        self.source.u.start()
-        print 'start streaming'
+
 
 
 # /////////////////////////////////////////////////////////////////////////////
