@@ -373,7 +373,7 @@ public:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
-            printf("\n", _start_count);
+            printf("%d \n", _start_count);
             if (_start_on_demand == true && _start_count == 1) 
                 //Start is first called by the gr_block_executor
                 //We are still waiting for the mannual start command
