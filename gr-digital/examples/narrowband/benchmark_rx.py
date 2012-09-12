@@ -77,6 +77,7 @@ class my_top_block(gr.top_block):
         
         self.source.u.set_start_on_demand()
         self.timer = threading.Timer(5, self.start_streaming)
+        self.timer.start()
 
 
 
