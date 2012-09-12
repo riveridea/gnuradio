@@ -63,7 +63,8 @@ public:
         _stream_now(_nchan == 1),
         _tag_now(false),
         _start_time_set(false),
-        _start_on_demand(false)
+        _start_on_demand(false),
+        _start_count(0)
     {
         if (stream_args.cpu_format == "fc32") _type = boost::make_shared<uhd::io_type_t>(uhd::io_type_t::COMPLEX_FLOAT32);
         if (stream_args.cpu_format == "sc16") _type = boost::make_shared<uhd::io_type_t>(uhd::io_type_t::COMPLEX_INT16);
@@ -376,9 +377,9 @@ public:
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
-            if (_start_on_demand == true) 
-                //We are still waiting for the start command
-                //ignore and wait
+            if (_start_on_demand == true && _start_count == 1) 
+                //Start is first called by the gr_block_executor
+                //We are still waiting for the mannual start command
                 return work(noutput_items, input_items, output_items);
             
             return WORK_DONE;
@@ -417,10 +418,13 @@ public:
         #endif
 
         // alex: need to wait the demand to start the streaming
-        if (_start_on_demand){
-            _start_on_demand = false; //reset it to zero to enable start.
-            return true;
+        // Note, start is firstly called by the gr_block_executor constructor
+        _start_count++; //update the _start_count to enbale the next start streaming.        
+        if (_start_on_demand == true && _start_count == 1){
+            return true; //First time called, not streaming
         }
+        if (_start_count == 0) _start_count++; //handle overflow
+
         //setup a stream command that starts streaming slightly in the future
         static const double reasonable_delay = 0.1; //order of magnitude over RTT
         uhd::stream_cmd_t stream_cmd(uhd::stream_cmd_t::STREAM_MODE_START_CONTINUOUS);
@@ -562,6 +566,7 @@ private:
     //alex: _start_on_demand, if 1, indicate the start streaming will not
     //be started right after the top block is started. Default is 0
     bool _start_on_demand;
+    int  _start_count; //indicate the start is called
 };
 
 
