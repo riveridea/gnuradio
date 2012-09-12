@@ -460,7 +460,7 @@ class ctrl_st_machine(object):
                             #start streaming here
                             self.sensor.u.start()
                             #start the timer
-                            self.sense_timer = threading.Timer(30.0, self.stop_sensing())
+                            self.sense_timer = threading.Timer(30.0, self.stop_sensing)
                             self.sense_timer.start()
                             
                             self.state = SENSING
