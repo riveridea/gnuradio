@@ -226,8 +226,7 @@ class ctrl_st_machine(object):
             #indexed by the transaction id
             self.ndata = dict()
             self.state = NODE_IDLE
-            self.fd = open("sdata.dat","w")
-            self.sensor.u.set_start_on_demand()
+            self.fd = open("sdata.dat","w")            
 
         self.options = options
             
@@ -246,6 +245,8 @@ class ctrl_st_machine(object):
     def set_top_block(self, tb):
         self.tb = tb
         self.sensor = tb.sensor
+        if (STREAM_OR_FINITE == 0):
+            self.sensor.u.set_start_on_demand()
         
         # firstly do the finite acqaution to set the time flag
         #time = self.sensor.u.get_time_now().get_real_secs() + 0.2
