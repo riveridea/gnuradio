@@ -420,7 +420,7 @@ public:
         // Note, start is firstly called by the gr_block_executor constructor
         _start_count++; //update the _start_count to enbale the next start streaming.        
         if (_start_on_demand == true && _start_count == 1){
-            printf("first called start, no streaming");
+            printf("first called start, no streaming \n");
             return true; //First time called, not streaming
         }
         if (_start_count == 0) _start_count++; //handle overflow
