@@ -227,6 +227,7 @@ class ctrl_st_machine(object):
             self.ndata = dict()
             self.state = NODE_IDLE
             self.fd = open("sdata.dat","w")
+            self.sensor.u.set_start_on_demand()
 
         self.options = options
             
@@ -457,7 +458,7 @@ class ctrl_st_machine(object):
                                 print 'no samps captured'
                                 self.state = NODE_IDLE
                                 return 0                            
-                        elif (STREAM_OR_FINITE == 0): 
+                        elif (STREAM_OR_FINITE == 0): #streaming data collection
                             #start streaming here
                             self.sensor.u.start()
                             #start the timer
