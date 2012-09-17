@@ -345,11 +345,7 @@ public:
         while (_metadata.error_code == uhd::rx_metadata_t::ERROR_CODE_TIMEOUT){
             if (boost::this_thread::interruption_requested()) return WORK_DONE;
             num_samps = _rx_stream->recv(
-<<<<<<< HEAD
-                output_items, noutput_items, _metadata, 2.0, true/*one pkt*/
-=======
                 output_items, noutput_items, _metadata, 0.1, true/*one pkt*/
->>>>>>> c85bd69a10790583896aae0b420ff777e842bc8a
             );
         }
         #else
@@ -578,17 +574,16 @@ private:
 
     uhd::time_spec_t _start_time;
     bool _start_time_set;
-<<<<<<< HEAD
+
     //alex: _start_on_demand, if 1, indicate the start streaming will not
     //be started right after the top block is started. Default is 0
     bool _start_on_demand;
     int  _start_count; //indicate the start is called
-=======
 
     //tag shadows
     double _samp_rate;
     double _center_freq;
->>>>>>> c85bd69a10790583896aae0b420ff777e842bc8a
+
 };
 
 
