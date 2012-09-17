@@ -60,6 +60,7 @@
 #include <gr_complex_to_interleaved_short.h>
 #include <gr_interleaved_short_to_complex.h>
 //#include <gr_endianness.h>
+#include <gr_endian_swap.h>
 #include <gr_firdes.h>
 #include <gr_interleave.h>
 #include <gr_deinterleave.h>
@@ -135,11 +136,13 @@
 #include <complex_vec_test.h>
 #include <gr_annotator_alltoall.h>
 #include <gr_annotator_1to1.h>
+#include <gr_annotator_raw.h>
 #include <gr_burst_tagger.h>
 #include <gr_cpm.h>
 #include <gr_correlate_access_code_tag_bb.h>
 #include <gr_add_ff.h>
 #include <gr_vector_map.h>
+#include <gr_tag_debug.h>
 %}
 
 %include "gri_control_loop.i"
@@ -179,6 +182,7 @@
 %include "gr_complex_to_xxx.i"
 %include "gr_complex_to_interleaved_short.i"
 //%include "gr_endianness.i"
+%include "gr_endian_swap.i"
 %include "gr_interleaved_short_to_complex.i"
 %include "gr_firdes.i"
 %include "gr_interleave.i"
@@ -255,8 +259,10 @@
 %include "complex_vec_test.i"
 %include "gr_annotator_alltoall.i"
 %include "gr_annotator_1to1.i"
+%include "gr_annotator_raw.i"
 %include "gr_burst_tagger.i"
 %include "gr_cpm.i"
 %include "gr_correlate_access_code_tag_bb.i"
 %include "gr_add_ff.i"
 %include "gr_vector_map.i"
+%include "gr_tag_debug.i"

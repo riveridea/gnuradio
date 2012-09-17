@@ -2,17 +2,14 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Jun  5 17:10:42 2012
+# Generated: Tue Jun 19 12:07:55 2012
 ##################################################
 
-from gnuradio import blks2
 from gnuradio import eng_notation
 from gnuradio import gr
 from gnuradio import uhd
-from gnuradio import window
 from gnuradio.eng_option import eng_option
 from gnuradio.gr import firdes
-from gnuradio.wxgui import fftsink2
 from grc_gnuradio import wxgui as grc_wxgui
 from optparse import OptionParser
 import wx
@@ -27,108 +24,50 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		# Variables
 		##################################################
-		self.samp_rate_1 = samp_rate_1 = 1024000
-		self.samp_rate_2 = samp_rate_2 = samp_rate_1/10
+		self.samp_rate = samp_rate = 3200000
 
 		##################################################
 		# Blocks
 		##################################################
-		self.wxgui_fftsink2_1 = fftsink2.fft_sink_c(
-			self.GetWin(),
-			baseband_freq=928000000,
-			y_per_div=20,
-			y_divs=10,
-			ref_level=0,
-			ref_scale=2.0,
-			sample_rate=samp_rate_1,
-			fft_size=1024,
-			fft_rate=15,
-			average=False,
-			avg_alpha=None,
-			title="FFT Plot",
-			peak_hold=False,
-		)
-		self.Add(self.wxgui_fftsink2_1.win)
-		self.wxgui_fftsink2_0 = fftsink2.fft_sink_c(
-			self.GetWin(),
-			baseband_freq=908000000,
-			y_per_div=20,
-			y_divs=10,
-			ref_level=0,
-			ref_scale=2.0,
-			sample_rate=samp_rate_1,
-			fft_size=1024,
-			fft_rate=15,
-			average=False,
-			avg_alpha=None,
-			title="FFT Plot",
-			peak_hold=False,
-		)
-		self.Add(self.wxgui_fftsink2_0.win)
-		self.uhd_usrp_source_1 = uhd.usrp_source(
+		self.uhd_usrp_source_0 = uhd.usrp_source(
 			device_addr="addr=192.168.10.108",
 			stream_args=uhd.stream_args(
 				cpu_format="fc32",
 				channels=range(1),
 			),
 		)
-		self.uhd_usrp_source_1.set_samp_rate(samp_rate_1)
-		self.uhd_usrp_source_1.set_center_freq(958000000, 0)
-		self.uhd_usrp_source_1.set_gain(15, 0)
-		self.uhd_usrp_source_1.set_antenna("RX2", 0)
-		self.uhd_usrp_source_0 = uhd.usrp_source(
-			device_addr="addr=192.168.10.120",
+		self.uhd_usrp_source_0.set_samp_rate(samp_rate)
+		self.uhd_usrp_source_0.set_center_freq(908000000, 0)
+		self.uhd_usrp_source_0.set_gain(0, 0)
+		self.uhd_usrp_source_0.set_antenna("RX2", 0)
+		self.uhd_usrp_sink_0 = uhd.usrp_sink(
+			device_addr="addr=192.168.10.108",
 			stream_args=uhd.stream_args(
 				cpu_format="fc32",
 				channels=range(1),
 			),
 		)
-		self.uhd_usrp_source_0.set_subdev_spec("A:0 A:0", 0)
-		self.uhd_usrp_source_0.set_samp_rate(2*samp_rate_1)
-		self.uhd_usrp_source_0.set_center_freq(908000000, 0)
-		self.uhd_usrp_source_0.set_gain(15, 0)
-		self.uhd_usrp_source_0.set_antenna("RX2", 0)
-		self.gr_throttle_0_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate_1)
-		self.gr_throttle_0 = gr.throttle(gr.sizeof_gr_complex*1, samp_rate_1)
-		self.blks2_rational_resampler_xxx_0_0 = blks2.rational_resampler_ccc(
-			interpolation=1,
-			decimation=samp_rate_1/samp_rate_2/10,
-			taps=None,
-			fractional_bw=None,
-		)
-		self.blks2_rational_resampler_xxx_0 = blks2.rational_resampler_ccc(
-			interpolation=1,
-			decimation=2,
-			taps=None,
-			fractional_bw=None,
-		)
+		self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
+		self.uhd_usrp_sink_0.set_center_freq(1800000000, 0)
+		self.uhd_usrp_sink_0.set_gain(0, 0)
+		self.uhd_usrp_sink_0.set_antenna("TX/RX", 0)
+		self.gr_sig_source_x_0 = gr.sig_source_c(samp_rate, gr.GR_COS_WAVE, 1000, 1, 0)
+		self.gr_null_sink_0 = gr.null_sink(gr.sizeof_gr_complex*1)
 
 		##################################################
 		# Connections
 		##################################################
-		self.connect((self.uhd_usrp_source_0, 0), (self.blks2_rational_resampler_xxx_0, 0))
-		self.connect((self.gr_throttle_0, 0), (self.wxgui_fftsink2_0, 0))
-		self.connect((self.blks2_rational_resampler_xxx_0, 0), (self.gr_throttle_0, 0))
-		self.connect((self.blks2_rational_resampler_xxx_0_0, 0), (self.gr_throttle_0_0, 0))
-		self.connect((self.gr_throttle_0_0, 0), (self.wxgui_fftsink2_1, 0))
-		self.connect((self.uhd_usrp_source_1, 0), (self.blks2_rational_resampler_xxx_0_0, 0))
+		self.connect((self.gr_sig_source_x_0, 0), (self.uhd_usrp_sink_0, 0))
+		self.connect((self.uhd_usrp_source_0, 0), (self.gr_null_sink_0, 0))
 
-	def get_samp_rate_1(self):
-		return self.samp_rate_1
+	def get_samp_rate(self):
+		return self.samp_rate
 
-	def set_samp_rate_1(self, samp_rate_1):
-		self.samp_rate_1 = samp_rate_1
-		self.set_samp_rate_2(self.samp_rate_1/10)
-		self.wxgui_fftsink2_0.set_sample_rate(self.samp_rate_1)
-		self.wxgui_fftsink2_1.set_sample_rate(self.samp_rate_1)
-		self.uhd_usrp_source_0.set_samp_rate(2*self.samp_rate_1)
-		self.uhd_usrp_source_1.set_samp_rate(self.samp_rate_1)
-
-	def get_samp_rate_2(self):
-		return self.samp_rate_2
-
-	def set_samp_rate_2(self, samp_rate_2):
-		self.samp_rate_2 = samp_rate_2
+	def set_samp_rate(self, samp_rate):
+		self.samp_rate = samp_rate
+		self.gr_sig_source_x_0.set_sampling_freq(self.samp_rate)
+		self.uhd_usrp_sink_0.set_samp_rate(self.samp_rate)
+		self.uhd_usrp_source_0.set_samp_rate(self.samp_rate)
 
 if __name__ == '__main__':
 	parser = OptionParser(option_class=eng_option, usage="%prog: [options]")

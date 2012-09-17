@@ -1,10 +1,14 @@
-sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.109" --tx-addr="addr=192.168.10.109" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
+sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.109" --tx-addr="addr=192.168.10.109" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
 
 sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
 
-sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128 
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128 
 
-sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.127" --tx-addr="addr=192.168.10.127" --sx-addr="addr=192.168.10.126" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.109" --tx-addr="addr=192.168.10.109" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
+
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.127" --tx-addr="addr=192.168.10.127" --sx-addr="addr=192.168.10.126" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
+
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.123" --tx-addr="addr=192.168.10.123" --sx-addr="addr=192.168.10.124" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 0 -d 128
 
 sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.130" --tx-addr="addr=192.168.10.130" --sx-addr="addr=192.168.10.133" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
 
@@ -25,8 +29,8 @@ import matplotlib.pyplot as plt
 import pylab
 
 CENTER = 1e9
-samp_rate = 2000000
-usrp = uhd.usrp_source(device_addr="addr0=192.168.10.109, ",
+samp_rate = 200000
+usrp = uhd.usrp_source(device_addr="addr0=192.168.10.108, ",
 stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
 usrp.set_clock_source("external", 0)
 usrp.set_time_source("external", 0)
@@ -34,10 +38,11 @@ usrp.set_samp_rate(samp_rate)
 usrp.set_center_freq(CENTER, 0)
 usrp.set_gain(20, 0)
 usrp.set_antenna("RX2", 0)
+usrp.set_start_on_demand()
 
 Ns = 600
 L = 32
-o_samps = usrp.finite_acquisition(int(2.5*samp_rate))
+o_samps = usrp.finite_acquisition(int(20*samp_rate))
 o_samps = np.array(np.real(o_samps[int(0.8*samp_rate):]))
 
 f = open("sdata.dat","w")
@@ -156,4 +161,8 @@ job1 = job_server.submit(sum_primes, (600,), (isprime,), ("numpy",))
 # The value of job1() is the same as sum_primes(100)
 # If the job has not been finished yet, execution will wait here until result is available
 result = job1()
+
+
+
+
 

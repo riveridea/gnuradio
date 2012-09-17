@@ -37,6 +37,10 @@ ADD_FILE_DEPENDENCIES(${CMAKE_CURRENT_SOURCE_DIR}/gr_fxpt.cc
     ${CMAKE_CURRENT_BINARY_DIR}/sine_table.h
 )
 
+add_custom_target(general_generated DEPENDS
+    ${CMAKE_CURRENT_BINARY_DIR}/sine_table.h
+)
+
 ########################################################################
 # Handle the generated constants
 ########################################################################
@@ -47,9 +51,6 @@ execute_process(COMMAND ${PYTHON_EXECUTABLE} -c
 message(STATUS "Loading build date ${BUILD_DATE} into gr_constants...")
 
 message(STATUS "Loading version ${VERSION} into gr_constants...")
-
-file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}"     SYSCONFDIR)
-file(TO_NATIVE_PATH "${CMAKE_INSTALL_PREFIX}/${GR_PKG_CONF_DIR}" GR_PREFSDIR)
 
 #double escape for windows backslash path separators
 string(REPLACE "\\" "\\\\" prefix ${prefix})
@@ -206,6 +207,7 @@ set(gr_core_general_triple_threats
     gr_deinterleave
     gr_delay
     gr_encode_ccsds_27_bb
+    gr_endian_swap
     gr_fake_channel_coder_pp
     gr_feedforward_agc_cc
     gr_feval
@@ -292,8 +294,10 @@ set(gr_core_general_triple_threats
     gr_probe_density_b
     gr_annotator_alltoall
     gr_annotator_1to1
+    gr_annotator_raw
     gr_burst_tagger
     gr_correlate_access_code_tag_bb
+    gr_tag_debug
 )
 
 foreach(file_tt ${gr_core_general_triple_threats})

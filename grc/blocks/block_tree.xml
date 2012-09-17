@@ -20,6 +20,7 @@
 		<block>gr_udp_source</block>
 		<block>gr_wavfile_source</block>
 		<block>gr_message_source</block>
+		<block>gr_message_burst_source</block>
 		<block>pad_source</block>
 		<block>virtual_source</block>
 	</cat>
@@ -34,6 +35,7 @@
 		<block>gr_message_sink</block>
 		<block>pad_sink</block>
 		<block>virtual_sink</block>
+		<block>gr_tag_debug</block>
 	</cat>
 	<cat>
 		<name>Operators</name>
@@ -62,6 +64,8 @@
 		<block>gr_fft_vxx</block>
 		<block>blks2_logpwrfft_x</block>
 		<block>gr_vector_insert_x</block>
+
+        <block>gr_endian_swap</block>
 	</cat>
 	<cat>
 		<name>Type Conversions</name>

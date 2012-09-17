@@ -21,7 +21,6 @@
 
 
 static inline void volk_32fc_s32fc_x2_rotator_32fc_a_generic(lv_32fc_t* outVector, const lv_32fc_t* inVector, const lv_32fc_t phase_inc, lv_32fc_t* phase, unsigned int num_points){    
-    *phase = lv_cmake(1.0, 0.0);
     unsigned int i = 0; 
     int j = 0;    
     for(i = 0; i < (unsigned int)(num_points/ROTATOR_RELOAD); ++i) {
@@ -44,7 +43,6 @@ static inline void volk_32fc_s32fc_x2_rotator_32fc_a_generic(lv_32fc_t* outVecto
 #include <smmintrin.h>
 
 static inline void volk_32fc_s32fc_x2_rotator_32fc_a_sse4_1(lv_32fc_t* outVector, const lv_32fc_t* inVector, const lv_32fc_t phase_inc, lv_32fc_t* phase, unsigned int num_points){
-    *phase = lv_cmake(1.0, 0.0);
     lv_32fc_t* cPtr = outVector;
     const lv_32fc_t* aPtr = inVector;
     lv_32fc_t incr = 1;
@@ -156,7 +154,6 @@ static inline void volk_32fc_s32fc_x2_rotator_32fc_a_sse4_1(lv_32fc_t* outVector
 
 
 static inline void volk_32fc_s32fc_x2_rotator_32fc_a_avx(lv_32fc_t* outVector, const lv_32fc_t* inVector, const lv_32fc_t phase_inc, lv_32fc_t* phase, unsigned int num_points){
-    *phase = lv_cmake(1.0, 0.0);
     lv_32fc_t* cPtr = outVector;
     const lv_32fc_t* aPtr = inVector;
     lv_32fc_t incr = 1;
@@ -174,12 +171,10 @@ static inline void volk_32fc_s32fc_x2_rotator_32fc_a_avx(lv_32fc_t* outVector, c
     printf("%f, %f\n", lv_creal(phase_Ptr[2]), lv_cimag(phase_Ptr[2]));
     printf("%f, %f\n", lv_creal(phase_Ptr[3]), lv_cimag(phase_Ptr[3]));
     printf("incr: %f, %f\n", lv_creal(incr), lv_cimag(incr));*/
-    __m256 aVal, phase_Val, inc_Val, yl, yh, tmp1, tmp2, z, ylp, yhp, tmp1p, tmp2p, negated, zeros;
+    __m256 aVal, phase_Val, inc_Val, yl, yh, tmp1, tmp2, z, ylp, yhp, tmp1p, tmp2p;
     
     phase_Val = _mm256_loadu_ps((float*)phase_Ptr);
     inc_Val = _mm256_set_ps(lv_cimag(incr), lv_creal(incr),lv_cimag(incr), lv_creal(incr),lv_cimag(incr), lv_creal(incr),lv_cimag(incr), lv_creal(incr));
-    zeros = _mm256_set1_ps(0.0);
-    negated = _mm256_set1_ps(-1.0);
     const unsigned int fourthPoints = num_points / 4;
 
     

@@ -55,6 +55,17 @@ if(NOT DEFINED COMPILER_NAME)
 endif()
 
 ########################################################################
+# Special clang flag so flag checks can fail
+########################################################################
+if(COMPILER_NAME MATCHES "GNU")
+    include(CheckCXXCompilerFlag)
+    CHECK_CXX_COMPILER_FLAG("-Werror=unused-command-line-argument" HAVE_WERROR_UNUSED_CMD_LINE_ARG)
+    if(HAVE_WERROR_UNUSED_CMD_LINE_ARG)
+        set(VOLK_FLAG_CHECK_FLAGS "-Werror=unused-command-line-argument")
+    endif()
+endif()
+
+########################################################################
 # detect x86 flavor of CPU
 ########################################################################
 if (${CMAKE_SYSTEM_PROCESSOR} MATCHES "^(i.86|x86|x86_64|amd64)$")
@@ -82,7 +93,11 @@ macro(check_arch arch_name)
             COMMAND ${PYTHON_EXECUTABLE} -c "import re; print(re.sub('\\W', '_', '${have_flag}'))"
             OUTPUT_VARIABLE have_flag OUTPUT_STRIP_TRAILING_WHITESPACE
         )
+        if(VOLK_FLAG_CHECK_FLAGS)
+            set(CMAKE_REQUIRED_FLAGS ${VOLK_FLAG_CHECK_FLAGS})
+        endif()
         CHECK_CXX_COMPILER_FLAG(${flag} ${have_flag})
+        unset(CMAKE_REQUIRED_FLAGS)
         if (NOT ${have_flag})
             set(have_${arch_name} FALSE)
         endif()
@@ -135,6 +150,12 @@ if(NOT CROSSCOMPILE_MULTILIB AND CPU_IS_x86)
     if (${SIZEOF_CPU} EQUAL 32)
         OVERRULE_ARCH(64 "CPU width is 32 bits")
     endif()
+
+    #MSVC 64 bit does not have MMX, overrule it
+    if (${SIZEOF_CPU} EQUAL 64 AND MSVC)
+        OVERRULE_ARCH(mmx "No MMX for Win64")
+    endif()
+
 endif()
 
 ########################################################################
@@ -159,7 +180,7 @@ execute_process(
 # When this occurs, eliminate the redundant machines
 # to avoid unnecessary compilation of subset machines.
 ########################################################################
-foreach(arch orc 64 32)
+foreach(arch mmx orc 64 32)
     foreach(machine_name ${available_machines})
         string(REPLACE "_${arch}" "" machine_name_no_arch ${machine_name})
         if (${machine_name} STREQUAL ${machine_name_no_arch})
