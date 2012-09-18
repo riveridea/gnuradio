@@ -143,7 +143,7 @@ class my_top_block(gr.top_block):
 
         gr.top_block.__init__(self)
 
-	# is this node the sub node or head?
+        # is this node the sub node or head?
         self._node_type = node_type
         self._node_id   = node_index
 
@@ -151,23 +151,49 @@ class my_top_block(gr.top_block):
         args = mod_class.extract_kwargs_from_options(options)
         symbol_rate = options.bitrate / mod_class(**args).bits_per_symbol()
 
-        self.source = uhd_receiver(options.rx_addr, symbol_rate,
+        # Automatically USRP devices discovery
+        devices = uhd.find_devices_raw()
+        n_devices = len(devices)
+        addrs = []
+        
+        if (n_devices == 0):
+            print "no connected devices"
+            pass
+        elif (n_devices == 1 && self._node_type == CLUSTER_NODE):
+            print "only one devices for the node, we need both communicator and sensor for cluster node"
+            pass
+        elif (n_devices > 1):
+            for i in range(n_devices):
+                addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
+                addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
+                addrs[i]
+                       
+        # Setup the duplex communicator
+        # self.source = uhd_receiver(options.rx_addr, symbol_rate,
+        self.source = uhd_receiver(addrs[0], symbol_rate,
                                    options.samples_per_symbol,
                                    options.rx_freq, options.rx_gain,
                                    options.rx_spec, options.rx_antenna,
                                    options.verbose)
         
-        self.sink = uhd_transmitter(options.tx_addr, symbol_rate,
+        # self.sink = uhd_transmitter(options.tx_addr, symbol_rate,
+        self.sink = uhd_transmitter(addrs[0], symbol_rate,
                                     options.samples_per_symbol,
                                     options.tx_freq, options.tx_gain,
                                     options.rx_spec, options.rx_antenna,
                                     options.verbose)
         
-        # Setup the sensor
-        self.sensor = uhd_sensor(options.sx_addr, options.sx_samprate,
-                                 options.sx_freq, options.sx_gain,
-                                 options.sx_spec, options.sx_antenna, 
-                                 options.verbose)
+        # Setup the rest of USRPs as sensors
+        if (self._node_type == CLUSTER_NODE):
+            self.sensors = [] # list of sensors
+            for i in range(n_devices - 1):
+                #self.sensor = uhd_sensor(options.sx_addr, options.sx_samprate,
+                self.sensors.append( uhd_sensor(addrs[i+1], options.sx_samprate,
+                                                options.sx_freq, options.sx_gain,
+                                                options.sx_spec, options.sx_antenna, 
+                                                options.verbose) )
+            if (STREAM_OR_FINITE == 0):
+                self.connect(self.sensors.u, gr.file_sink(gr.sizeof_gr_complex, "%s_sensed.dat")) % (addrs[i])
         
         options.samples_per_symbol = self.source._sps     
         
@@ -176,8 +202,8 @@ class my_top_block(gr.top_block):
         
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        if (STREAM_OR_FINITE == 0):
-            self.connect(self.sensor.u, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
+        #if (STREAM_OR_FINITE == 0):
+        #    self.connect(self.sensor.u, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
@@ -654,7 +680,7 @@ class cs_mac(object):
         while 1:
             #payload1 = os.read(self.tun_fd, 10*1024)
 
-            payload = output_q.get()
+            payload = output_q.get(block)
             #print 'pop a packet from the outq'
 
             self.csm.pktno += 1
