@@ -159,9 +159,9 @@ class my_top_block(gr.top_block):
         
         if (n_devices == 0):
             sys.exit("no connected devices")
-        elif (n_devices == 1 && self._node_type == CLUSTER_NODE):
+        elif (n_devices == 1 and self._node_type == CLUSTER_NODE):
             sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
-        elif (n_devices > 1 && self._node_type == CLUSTER_NODE):
+        elif (n_devices > 1 and self._node_type == CLUSTER_NODE):
             for i in range(n_devices):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
                 addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
@@ -216,7 +216,7 @@ class my_top_block(gr.top_block):
             sys.exit("Configuration Error")
                               
         # Setup the rest of USRPs as sensors
-        if (self._node_type == CLUSTER_NODE && STREAM_OR_FINITE == 0):
+        if (self._node_type == CLUSTER_NODE and STREAM_OR_FINITE == 0):
             for i in range(n_devices - 1):
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, "%s_sensed.dat")) % (addrs[i])
         
