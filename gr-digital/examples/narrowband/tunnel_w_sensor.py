@@ -118,7 +118,8 @@ HEAD_ADDR        = 0
 
 # Streaming = 0, Finite Acquisition = 1
 STREAM_OR_FINITE = 0
-
+# Streaming time
+STREAM_TIME = 10.0
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
     
@@ -157,43 +158,67 @@ class my_top_block(gr.top_block):
         addrs = []
         
         if (n_devices == 0):
-            print "no connected devices"
-            pass
+            sys.exit("no connected devices")
         elif (n_devices == 1 && self._node_type == CLUSTER_NODE):
-            print "only one devices for the node, we need both communicator and sensor for cluster node"
-            pass
-        elif (n_devices > 1):
+            sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
+        elif (n_devices > 1 && self._node_type == CLUSTER_NODE):
             for i in range(n_devices):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
                 addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
                 addrs[i]
-                       
-        # Setup the duplex communicator
-        # self.source = uhd_receiver(options.rx_addr, symbol_rate,
-        self.source = uhd_receiver(addrs[0], symbol_rate,
-                                   options.samples_per_symbol,
-                                   options.rx_freq, options.rx_gain,
-                                   options.rx_spec, options.rx_antenna,
-                                   options.verbose)
-        
-        # self.sink = uhd_transmitter(options.tx_addr, symbol_rate,
-        self.sink = uhd_transmitter(addrs[0], symbol_rate,
-                                    options.samples_per_symbol,
-                                    options.tx_freq, options.tx_gain,
-                                    options.rx_spec, options.rx_antenna,
-                                    options.verbose)
-        
-        # Setup the rest of USRPs as sensors
-        if (self._node_type == CLUSTER_NODE):
-            self.sensors = [] # list of sensors
-            for i in range(n_devices - 1):
-                #self.sensor = uhd_sensor(options.sx_addr, options.sx_samprate,
-                self.sensors.append( uhd_sensor(addrs[i+1], options.sx_samprate,
+        else:
+            sys.exit("Configuration Error")
+                
+        # Configure the devices to 
+        # 1 Communicator
+        # N Sensors (N >= 1)
+        # How to determin the Communicator?
+        #       we need to assure all the sensors to be sync with GPS, except the communicator
+        #       thus, the device with non-sync time will be assigned as communicator
+        # Firstly, instantiate all the USRP receivers (including the sensors and the communicator)
+        self.sensors = []
+        t = []
+        dt = []
+        for i in range(n_devices):
+            self.sensors.append(uhd_sensor(addrs[i], options.sx_samprate,
                                                 options.sx_freq, options.sx_gain,
                                                 options.sx_spec, options.sx_antenna, 
-                                                options.verbose) )
-            if (STREAM_OR_FINITE == 0):
-                self.connect(self.sensors.u, gr.file_sink(gr.sizeof_gr_complex, "%s_sensed.dat")) % (addrs[i])
+                                                options.verbose))
+            t.append(self.sensors[i].u.get_time_now().get_real_secs())
+            dt.append(1)
+            if i > 1:
+                for j in range(i):
+                    if (t[j] - t[i] < 0.1): # Find a pair of GPS synched devices
+                        dt[i] += 1
+                        dt[j] += 1 
+                        
+        # Find the communicator
+        found_com = 0
+        for i in range(n_devices):
+            if (dt[i] != 1 || dt[i] != n_devices - 1):
+                sys.exit("configure error or Not sync")
+            if dt[i] == 1: # We select this as communicator
+                del self.sensors[i] # delete this devices from sensor list
+                self.source =  uhd_receiver(addrs[i], symbol_rate,
+                                            options.samples_per_symbol,
+                                            options.rx_freq, options.rx_gain,
+                                            options.rx_spec, options.rx_antenna,
+                                            options.verbose)
+                self.sink = uhd_transmitter(addrs[i], symbol_rate,
+                                            options.samples_per_symbol,
+                                            options.tx_freq, options.tx_gain,
+                                            options.rx_spec, options.rx_antenna,
+                                            options.verbose)
+                del addrs[i] # Ignore the addrs of communicator                                            
+                found_com = 1
+                
+        if found_com == 0: # no communicator found
+            sys.exit("Configuration Error")
+                              
+        # Setup the rest of USRPs as sensors
+        if (self._node_type == CLUSTER_NODE && STREAM_OR_FINITE == 0):
+            for i in range(n_devices - 1):
+                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, "%s_sensed.dat")) % (addrs[i])
         
         options.samples_per_symbol = self.source._sps     
         
@@ -202,8 +227,6 @@ class my_top_block(gr.top_block):
         
         self.connect(self.txpath, self.sink)
         self.connect(self.source, self.rxpath)
-        #if (STREAM_OR_FINITE == 0):
-        #    self.connect(self.sensor.u, gr.file_sink(gr.sizeof_gr_complex, "sensed.dat"))
 
     def send_pkt(self, payload='', eof=False):
         return self.txpath.send_pkt(payload, eof)
@@ -284,10 +307,13 @@ class ctrl_st_machine(object):
         """
         stop the streaming from sensor
         """
-        self.tb.sensor.u.stop()        
+        for i in range(len(self.sensors)):
+            self.sensors[i].u.stop()        
         print "sensing streaming is stopped by the timer"
         
-        self.state = WAIT_REPORT
+        #self.state = WAIT_REPORT
+        self.state = NODE_IDLE
+        sys.exit("temporarily exit by stopping sensing")
         
     def start_sensing(self, samp_num):
         # broadcast the start command to all the nodes to start
@@ -450,7 +476,7 @@ class ctrl_st_machine(object):
                         return 1                        
         ####State machine for the CLuster Node:                   
         elif self.node_type == "node":
-            rt = self.tb.sensor.u.get_time_now().get_real_secs()
+            rt = self.tb.sensors[0].u.get_time_now().get_real_secs()
             print 'recieve the commnad at time %.7f' %rt
             #print "incoming_command =", pkt_utils.string_to_hex_list(payload)        
             if pkttype == CTRL_TYPE:                
@@ -474,8 +500,10 @@ class ctrl_st_machine(object):
                         #print 'sensor_time = %.7f' %sensor_time
                         
                         #if start_time + 0.015 - sensor_time > 0:
-                        self.sensor.u.set_start_time(uhd.time_spec_t(start_time+0.70))  #started later 0.070s
-                        #test 
+                        for i in range(len(self.sensors)):
+                            self.sensors[i].u.set_start_time(uhd.time_spec_t(start_time+0.70))  #started later 0.070s
+                        
+                        # Start data collecting  
                         if (STREAM_OR_FINITE == 1): #finite acqusition
                             samp_num = int(10*options.sx_samprate)
                             current_t = self.sensor.u.get_time_now().get_real_secs()
@@ -487,9 +515,10 @@ class ctrl_st_machine(object):
                                 return 0                            
                         elif (STREAM_OR_FINITE == 0): #streaming data collection
                             #start streaming here
-                            self.sensor.u.start()
+                            for i in range(len(self.sensors)):
+                                self.sensors[i].u.start()
                             #start the timer
-                            self.sense_timer = threading.Timer(30.0, self.stop_sensing)
+                            self.sense_timer = threading.Timer(STREAM_TIME, self.stop_sensing)
                             self.sense_timer.start()
                             
                             self.state = SENSING
