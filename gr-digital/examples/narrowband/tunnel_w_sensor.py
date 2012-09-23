@@ -195,7 +195,7 @@ class my_top_block(gr.top_block):
         # Find the communicator
         found_com = 0
         for i in range(n_devices):
-            if (dt[i] != 1 || dt[i] != n_devices - 1):
+            if (dt[i] != 1 or dt[i] != n_devices - 1):
                 sys.exit("configure error or Not sync")
             if dt[i] == 1: # We select this as communicator
                 del self.sensors[i] # delete this devices from sensor list
