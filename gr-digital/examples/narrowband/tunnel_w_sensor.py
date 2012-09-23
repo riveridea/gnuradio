@@ -185,6 +185,8 @@ class my_top_block(gr.top_block):
                                                 options.sx_spec, options.sx_antenna, 
                                                 options.verbose))
             t.append(self.sensors[i].u.get_time_now().get_real_secs())
+            if self.sensors[i].u.get_time_source(0) == "none":
+                self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
             dt.append(1)
             if i > 1:
                 for j in range(i):
@@ -215,7 +217,7 @@ class my_top_block(gr.top_block):
                 
         if found_com == 0: # no communicator found
             sys.exit("Configuration Error")
-                              
+
         # Setup the rest of USRPs as sensors
         if (self._node_type == CLUSTER_NODE and STREAM_OR_FINITE == 0):
             for i in range(n_devices - 1):
