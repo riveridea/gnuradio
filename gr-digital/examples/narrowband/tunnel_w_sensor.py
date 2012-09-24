@@ -218,10 +218,10 @@ class my_top_block(gr.top_block):
         
         for i in range(n_devices):
             if n_devices == 2:
-                if self.sensors[i].u.get_time_source() == "mimo" and found_com == 0:
+                if self.sensors[i].u.get_time_source(0) == "mimo" and found_com == 0:
                     cind = i
                     found_com = 1
-                elif i == 1 and slef.sensors[i].u.get_time_source() == "gpsdo" and found_com == 0:
+                elif i == 1 and slef.sensors[i].u.get_time_source(0) == "gpsdo" and found_com == 0:
                     cind = i
                     found_com = 1
                 elif i == 1:
