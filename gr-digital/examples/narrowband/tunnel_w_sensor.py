@@ -181,16 +181,22 @@ class my_top_block(gr.top_block):
         dt = []
         time_src = []
         role = []
+        
+        for in in range(n_devices):
+            if self.sensors[i].u.get_time_source(0) == "none":
+                self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
+                self.sensors[i].u.set_clock_source("mimo",0)                
+            time_src.append(self.sensors[i].u.get_time_source(0))
+
+        time.sleep(10)   # time to sync between mimo connected devices
+            
         for i in range(n_devices):
             self.sensors.append(uhd_sensor(addrs[i], options.sx_samprate,
                                                 options.sx_freq, options.sx_gain,
                                                 options.sx_spec, options.sx_antenna, 
                                                 options.verbose))
             t.append(self.sensors[i].u.get_time_now().get_real_secs())
-            if self.sensors[i].u.get_time_source(0) == "none":
-                self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
-                self.sensors[i].u.set_clock_source("mimo",0)                
-            time_src.append(self.sensors[i].u.get_time_source(0))
+
             role.append("sensor")
             
             dt.append(1)
@@ -206,7 +212,6 @@ class my_top_block(gr.top_block):
         print addrs
         print time_src
         
-        time.sleep(10)
         for i in range(n_devices):
             if (dt[i] != 1 or dt[i] != n_devices - 1):
                 sys.exit("configure error or Not sync")
