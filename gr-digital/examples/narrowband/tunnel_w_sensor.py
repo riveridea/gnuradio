@@ -182,7 +182,7 @@ class my_top_block(gr.top_block):
         time_src = []
         role = []
         
-        for in in range(n_devices):
+        for i in range(n_devices):
             if self.sensors[i].u.get_time_source(0) == "none":
                 self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                 self.sensors[i].u.set_clock_source("mimo",0)                
