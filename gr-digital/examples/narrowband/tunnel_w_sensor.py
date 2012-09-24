@@ -246,7 +246,7 @@ class my_top_block(gr.top_block):
                                             options.tx_freq, options.tx_gain,
                                             options.rx_spec, options.rx_antenna,
                                             options.verbose)
-                del addrs[i] # Ignore the addrs of communicator                                            
+                del addrs[cind] # Ignore the addrs of communicator                                            
 
         print role
         
