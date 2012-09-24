@@ -167,7 +167,7 @@ class my_top_block(gr.top_block):
                 
         if (n_devices == 1 and self._node_type == CLUSTER_NODE):
             sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
-        elif (n_devices >= 1 and self._node_type == CLUSTER_HEAD):
+        elif (n_devices > 1 and self._node_type == CLUSTER_HEAD):
             sys.exit("only one devices is need for cluster head")
                 
         # Configure the devices to 
