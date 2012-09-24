@@ -217,6 +217,9 @@ class my_top_block(gr.top_block):
         cind = 0
         
         for i in range(n_devices):
+            if found_com == 1:
+                break
+                
             if n_devices == 2:
                 if self.sensors[i].u.get_time_source(0) == "mimo" and found_com == 0:
                     cind = i
