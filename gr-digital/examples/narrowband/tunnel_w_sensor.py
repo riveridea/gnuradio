@@ -180,6 +180,7 @@ class my_top_block(gr.top_block):
         t = []
         dt = []
         time_src = []
+        role = []
         for i in range(n_devices):
             self.sensors.append(uhd_sensor(addrs[i], options.sx_samprate,
                                                 options.sx_freq, options.sx_gain,
@@ -190,6 +191,7 @@ class my_top_block(gr.top_block):
                 self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                 self.sensors[i].u.set_clock_source("mimo",0)                
             time_src.append(self.sensors[i].u.get_time_source(0))
+            role.append("sensor")
             
             dt.append(1)
             if i > 1:
@@ -210,6 +212,7 @@ class my_top_block(gr.top_block):
                 sys.exit("configure error or Not sync")
             if dt[i] == 1 and found_com == 0: # We select this as communicator
                 del self.sensors[i] # delete this devices from sensor list
+                role[i] = "com"
                 self.source =  uhd_receiver(addrs[i], symbol_rate,
                                             options.samples_per_symbol,
                                             options.rx_freq, options.rx_gain,
@@ -222,7 +225,8 @@ class my_top_block(gr.top_block):
                                             options.verbose)
                 del addrs[i] # Ignore the addrs of communicator                                            
                 found_com = 1
-                
+        print role
+        
         if found_com == 0: # no communicator found
             sys.exit("Configuration Error")
 
