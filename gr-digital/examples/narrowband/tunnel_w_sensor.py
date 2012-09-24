@@ -159,17 +159,16 @@ class my_top_block(gr.top_block):
         
         if (n_devices == 0):
             sys.exit("no connected devices")
-        elif (n_devices == 1 and self._node_type == CLUSTER_NODE):
-            sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
-        elif (n_devices > 1 and self._node_type == CLUSTER_NODE):
+        elif (n_devices >= 1):
             for i in range(n_devices):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
                 addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
                 addrs[i]
-        elif (n_devices == 1 and self._node_type == CLUSTER_HEAD):
-            pass
-        else:
-            sys.exit("Configuration Error")
+                
+        if (n_devices == 1 and self._node_type == CLUSTER_NODE):
+            sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
+        elif (n_devices >= 1 and self._node_type == CLUSTER_HEAD):
+            sys.exit("only one devices is need for cluster head")
                 
         # Configure the devices to 
         # 1 Communicator
