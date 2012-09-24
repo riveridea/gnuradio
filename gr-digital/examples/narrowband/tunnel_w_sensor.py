@@ -166,6 +166,8 @@ class my_top_block(gr.top_block):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
                 addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
                 addrs[i]
+        elif (n_devices == 1 and self._node_type == CLUSTER_HEAD):
+            pass
         else:
             sys.exit("Configuration Error")
                 
@@ -192,7 +194,7 @@ class my_top_block(gr.top_block):
                 self.sensors[i].u.set_clock_source("mimo",0)                
             time_src.append(self.sensors[i].u.get_time_source(0))
 
-        time.sleep(10)   # time to sync between mimo connected devices
+        time.sleep(4)   # time to sync between mimo connected devices
             
         for i in range(n_devices):
             t.append(self.sensors[i].u.get_time_now().get_real_secs())
