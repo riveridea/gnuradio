@@ -204,7 +204,7 @@ class my_top_block(gr.top_block):
         for i in range(n_devices):
             if (dt[i] != 1 or dt[i] != n_devices - 1):
                 sys.exit("configure error or Not sync")
-            if dt[i] == 1: # We select this as communicator
+            if dt[i] == 1 and found_com == 0: # We select this as communicator
                 del self.sensors[i] # delete this devices from sensor list
                 self.source =  uhd_receiver(addrs[i], symbol_rate,
                                             options.samples_per_symbol,
