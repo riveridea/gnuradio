@@ -214,24 +214,40 @@ class my_top_block(gr.top_block):
         print time_src
         print dt
         
+        cind = 0
+        
         for i in range(n_devices):
-            if (dt[i] != n_devices - 1 and dt[i] != 1) or (sum(dt) == n_devices):
+            if n_devices == 2:
+                if self.sensors[i].get_time_source() == "mimo":
+                    cind = i
+                    found_com = 1
+                elif i == 1 and slef.sensors[i].get_time_source() == "gpsdo":
+                    cind = i
+                    found_com = 1
+                elif i == 1:
+                    sys.exit("configure error, no communicaotr found for 2 devices")                    
+      
+            elif (dt[i] != n_devices - 1 and dt[i] != 1) or (sum(dt) == n_devices):
                 sys.exit("configure error or Not sync")
-            if dt[i] == 1 and found_com == 0: # We select this as communicator
-                del self.sensors[i] # delete this devices from sensor list
-                role[i] = "com"
-                self.source =  uhd_receiver(addrs[i], symbol_rate,
+            elif dt[i] == 1 and found_com == 0: # We select this as communicator
+                cind = i
+                found_com = 1
+            
+            if found_com == 1:
+                del self.sensors[cind] # delete this devices from sensor list
+                role[cind] = "com"
+                self.source =  uhd_receiver(addrs[cind], symbol_rate,
                                             options.samples_per_symbol,
                                             options.rx_freq, options.rx_gain,
                                             options.rx_spec, options.rx_antenna,
                                             options.verbose)
-                self.sink = uhd_transmitter(addrs[i], symbol_rate,
+                self.sink = uhd_transmitter(addrs[cind], symbol_rate,
                                             options.samples_per_symbol,
                                             options.tx_freq, options.tx_gain,
                                             options.rx_spec, options.rx_antenna,
                                             options.verbose)
                 del addrs[i] # Ignore the addrs of communicator                                            
-                found_com = 1
+
         print role
         
         if found_com == 0: # no communicator found
