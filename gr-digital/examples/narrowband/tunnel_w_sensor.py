@@ -239,7 +239,8 @@ class my_top_block(gr.top_block):
         # Setup the rest of USRPs as sensors
         if (self._node_type == CLUSTER_NODE and STREAM_OR_FINITE == 0):
             for i in range(n_devices - 1):
-                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, "%s_sensed.dat")) % (addrs[i])
+                filename = "%s_sensed.dat" %(addrs[i])
+                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
         
         options.samples_per_symbol = self.source._sps     
         
