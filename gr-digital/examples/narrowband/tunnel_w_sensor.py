@@ -183,6 +183,10 @@ class my_top_block(gr.top_block):
         role = []
         
         for i in range(n_devices):
+            self.sensors.append(uhd_sensor(addrs[i], options.sx_samprate,
+                                                options.sx_freq, options.sx_gain,
+                                                options.sx_spec, options.sx_antenna, 
+                                                options.verbose))       
             if self.sensors[i].u.get_time_source(0) == "none":
                 self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                 self.sensors[i].u.set_clock_source("mimo",0)                
@@ -191,10 +195,6 @@ class my_top_block(gr.top_block):
         time.sleep(10)   # time to sync between mimo connected devices
             
         for i in range(n_devices):
-            self.sensors.append(uhd_sensor(addrs[i], options.sx_samprate,
-                                                options.sx_freq, options.sx_gain,
-                                                options.sx_spec, options.sx_antenna, 
-                                                options.verbose))
             t.append(self.sensors[i].u.get_time_now().get_real_secs())
 
             role.append("sensor")
