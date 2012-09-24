@@ -213,7 +213,7 @@ class my_top_block(gr.top_block):
         print time_src
         
         for i in range(n_devices):
-            if (dt[i] != 1 or dt[i] != n_devices - 1):
+            if (dt[i] != n_devices - 1 and dt[i] != 1):
                 sys.exit("configure error or Not sync")
             if dt[i] == 1 and found_com == 0: # We select this as communicator
                 del self.sensors[i] # delete this devices from sensor list
