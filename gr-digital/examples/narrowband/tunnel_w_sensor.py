@@ -732,7 +732,7 @@ class cs_mac(object):
         while 1:
             #payload1 = os.read(self.tun_fd, 10*1024)
 
-            payload = output_q.get(block)
+            payload = output_q.get(TRUE, NONE)
             #print 'pop a packet from the outq'
 
             self.csm.pktno += 1
