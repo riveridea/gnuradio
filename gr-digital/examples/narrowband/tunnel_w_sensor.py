@@ -206,7 +206,7 @@ class my_top_block(gr.top_block):
         print addrs
         print time_src
         
-        time.sleep(2)
+        time.sleep(10)
         for i in range(n_devices):
             if (dt[i] != 1 or dt[i] != n_devices - 1):
                 sys.exit("configure error or Not sync")
