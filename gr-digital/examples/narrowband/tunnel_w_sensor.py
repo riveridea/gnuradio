@@ -187,6 +187,7 @@ class my_top_block(gr.top_block):
             t.append(self.sensors[i].u.get_time_now().get_real_secs())
             if self.sensors[i].u.get_time_source(0) == "none":
                 self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
+                self.sensors[i].u.set_clock_source("mimo",0)
             dt.append(1)
             if i > 1:
                 for j in range(i):
