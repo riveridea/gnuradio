@@ -211,6 +211,7 @@ class my_top_block(gr.top_block):
         print t
         print addrs
         print time_src
+        print dt
         
         for i in range(n_devices):
             if (dt[i] != n_devices - 1 and dt[i] != 1):
