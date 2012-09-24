@@ -315,9 +315,10 @@ class ctrl_st_machine(object):
                  
     def set_top_block(self, tb):
         self.tb = tb
-        self.sensor = tb.sensor
+        self.sensors = tb.sensors
         if (STREAM_OR_FINITE == 0):
-            self.sensor.u.set_start_on_demand()
+            for i in range(len(self.sensors)):
+                self.sensors[i].u.set_start_on_demand()
         
         # firstly do the finite acqaution to set the time flag
         #time = self.sensor.u.get_time_now().get_real_secs() + 0.2
@@ -357,7 +358,7 @@ class ctrl_st_machine(object):
         toaddr = struct.pack('!I', BCST_ADDR) #(4)       
         pkt_type = struct.pack('!B', CTRL_TYPE) #(1)
         ctrl_cmd = struct.pack('!B', START_SENSE)# (1)
-        current_time = self.tb.sensor.u.get_time_now().get_real_secs()
+        current_time = self.tb.source.u.get_time_now().get_real_secs()
         print '***************************************This round of collection initated at time ', current_time
         start_time = current_time   #0.09s is the switching time of half-duplex
         print 'start_time = %.7f' %start_time
@@ -417,7 +418,7 @@ class ctrl_st_machine(object):
         ####State Machine For the Cluster Head    
         if self.node_type == "head":
             if pkttype == DATA_TYPE:
-                rt = self.tb.sensor.u.get_time_now().get_real_secs()
+                rt = self.tb.source.u.get_time_now().get_real_secs()
                 print 'recieve the data at time %.7f' %rt
                 
                 (node_id,) = struct.unpack('!H', payload[15:17])
