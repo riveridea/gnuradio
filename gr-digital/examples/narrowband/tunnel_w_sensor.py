@@ -200,9 +200,9 @@ class my_top_block(gr.top_block):
             role.append("sensor")
             
             dt.append(1)
-            if i > 1:
+            if i > 0:
                 for j in range(i):
-                    if (t[j] - t[i] < 0.1): # Find a pair of GPS synched devices
+                    if (abs(t[j] - t[i]) < 0.1): # Find a pair of GPS synched devices
                         dt[i] += 1
                         dt[j] += 1 
                         
