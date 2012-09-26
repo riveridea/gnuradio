@@ -119,7 +119,7 @@ HEAD_ADDR        = 0
 # Streaming = 0, Finite Acquisition = 1
 STREAM_OR_FINITE = 0
 # Streaming time
-STREAM_TIME = 10.0
+STREAM_TIME = 1800.0
 def open_tun_interface(tun_device_filename):
     from fcntl import ioctl
     
