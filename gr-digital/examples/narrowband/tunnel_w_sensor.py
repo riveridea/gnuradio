@@ -220,7 +220,7 @@ class my_top_block(gr.top_block):
             if found_com == 1:
                 break
                 
-            if self._node_type == CLUSTER_HEAD and self.sensors[0].get_time_source(0) == "gpsdo":
+            if self._node_type == CLUSTER_HEAD and self.sensors[0].u.get_time_source(0) == "gpsdo":
                 cind = 0
                 found_com == 1    
             elif n_devices == 2:
