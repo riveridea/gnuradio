@@ -224,7 +224,7 @@ class my_top_block(gr.top_block):
                 cind = 0
                 found_com = 1
             elif self._node_type == CLUSTER_NODE:                
-                elif n_devices == 2:
+                if n_devices == 2:
                     if self.sensors[i].u.get_time_source(0) == "mimo" and found_com == 0:
                         cind = i
                         found_com = 1
