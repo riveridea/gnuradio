@@ -145,8 +145,10 @@ class app_top_block(stdgui2.std_top_block):
             self.myform['rffreq'].set_value(0)
             self.myform['dspfreq'].set_value(0)
 
-        tune_req = uhd.tune_request(options.freq, 2e4);
-        if not(self.set_freq(tune_req)):
+        tune_req = uhd.tune_request(options.freq, 0)
+        rt = self.set_freq(tune_req)
+        rt.to_pp_string()
+        if not(rt):
             self._set_status_msg("Failed to set initial frequency")
 
         # Direct asynchronous notifications to callback function
@@ -274,11 +276,6 @@ class app_top_block(stdgui2.std_top_block):
         @param target_freq: frequency in Hz
         @rypte: bool
         """
-        
-        print 'target frequency = %d' % (target_freq.target_freq)
-        print 'actual frequency = %d' % (target_freq.rf_freq)
-        print 'dsp frequency = %d' % (target_freq.dsp_freq)
-        
         r = self.u.set_center_freq(target_freq, 0)
 
         if r:
