@@ -145,7 +145,6 @@ class app_top_block(stdgui2.std_top_block):
             self.myform['rffreq'].set_value(0)
             self.myform['dspfreq'].set_value(0)
 
-        tune_req = uhd.tune_request(options.freq, 5e6)
         #if not(self.set_freq(tune_req)):
         if not(self.set_freq(options.freq)):
             self._set_status_msg("Failed to set initial frequency")
@@ -275,7 +274,9 @@ class app_top_block(stdgui2.std_top_block):
         @param target_freq: frequency in Hz
         @rypte: bool
         """
-        r = self.u.set_center_freq(target_freq, 0)
+        tune_req = uhd.tune_request(target_freq, 5e6)
+        #r = self.u.set_center_freq(target_freq, 0)
+        r = self.u.set_center_freq(tune_freq, 0)
         print '%s ' % (r.to_pp_string())
 
         if r:
