@@ -287,7 +287,7 @@ class app_top_block(stdgui2.std_top_block):
 
         self.u.start()
         if r:
-            self.myform['freq'].set_value(self.u.get_center_freq())
+            self.myform['freq'].set_value(self.u.get_center_freq() + 5e6)
             self.myform['rffreq'].set_value(r.actual_rf_freq)
             self.myform['dspfreq'].set_value(r.actual_dsp_freq)
 
