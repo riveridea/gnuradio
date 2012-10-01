@@ -283,11 +283,11 @@ class app_top_block(stdgui2.std_top_block):
             print '.'
         
         print 'Locked'
-        print 'actual center freq = %d ' % (self.u.get_center_freq())
+        print 'actual center freq = %d ' % (self.u.get_center_freq() + 5000000)
 
         self.u.start()
         if r:
-            self.myform['freq'].set_value(self.u.get_center_freq() + 5e6)
+            self.myform['freq'].set_value(self.u.get_center_freq() + 5000000)
             self.myform['rffreq'].set_value(r.actual_rf_freq)
             self.myform['dspfreq'].set_value(r.actual_dsp_freq)
 
