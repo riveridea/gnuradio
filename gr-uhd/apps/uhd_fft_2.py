@@ -145,10 +145,7 @@ class app_top_block(stdgui2.std_top_block):
             self.myform['rffreq'].set_value(0)
             self.myform['dspfreq'].set_value(0)
 
-        tune_req = uhd.tune_request(options.freq, 0)
-        tune_req.rf_freq_policy = uhd.tune_request.POLICY_AUTO
-        tune_req.dsp_freq = 5e6
-        tune_req.dsp_freq_policy = uhd.tune_request.POLICY_MANUAL
+        tune_req = uhd.tune_request(options.freq, 5e6)
         if not(self.set_freq(tune_req)):
             self._set_status_msg("Failed to set initial frequency")
 
