@@ -275,7 +275,7 @@ class app_top_block(stdgui2.std_top_block):
         @rypte: bool
         """
         r = self.u.set_center_freq(target_freq, 0)
-        r.to_pp_string()
+        print '%s ' % (r.to_pp_string())
 
         if r:
             self.myform['freq'].set_value(self.u.get_center_freq())
