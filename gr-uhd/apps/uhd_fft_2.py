@@ -89,6 +89,7 @@ class app_top_block(stdgui2.std_top_block):
                                  stream_args=uhd.stream_args(cpu_format='fc32',
                                  otw_format=options.wire_format, args=options.stream_args))
 
+        self.u.set_start_on_demand()
         # Set the subdevice spec
         if(options.spec):
             self.u.set_subdev_spec(options.spec, 0)
@@ -284,6 +285,7 @@ class app_top_block(stdgui2.std_top_block):
         print 'Locked'
         print 'actual center freq = %d ' % (self.u.get_center_freq())
 
+        self.u.start()
         if r:
             self.myform['freq'].set_value(self.u.get_center_freq())
             self.myform['rffreq'].set_value(r.actual_rf_freq)
