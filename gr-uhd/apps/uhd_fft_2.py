@@ -275,7 +275,7 @@ class app_top_block(stdgui2.std_top_block):
         @rypte: bool
         """
         #r = self.u.set_center_freq(target_freq, 0)
-        r = self.u.set_center_freq(uhd.tune_request(target_freq, 5e6), 0)
+        r = self.u.set_center_freq(uhd.tune_request(target_freq, 4e6), 0)
         print '%s ' % (r.to_pp_string())
                 
         self.u.stop()  
