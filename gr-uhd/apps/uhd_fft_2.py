@@ -146,7 +146,8 @@ class app_top_block(stdgui2.std_top_block):
             self.myform['dspfreq'].set_value(0)
 
         tune_req = uhd.tune_request(options.freq, 5e6)
-        if not(self.set_freq(tune_req)):
+        #if not(self.set_freq(tune_req)):
+        if not(self.set_freq(options.freq)):
             self._set_status_msg("Failed to set initial frequency")
 
         # Direct asynchronous notifications to callback function
