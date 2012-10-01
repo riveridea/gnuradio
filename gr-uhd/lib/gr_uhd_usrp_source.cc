@@ -480,7 +480,7 @@ public:
     bool stop(void){
         _dev->issue_stream_cmd(uhd::stream_cmd_t::STREAM_MODE_STOP_CONTINUOUS);
 
-        this->flush();
+        if(_rx_stream) this->flush();
 
         return true;
     }

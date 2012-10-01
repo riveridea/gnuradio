@@ -277,7 +277,7 @@ class app_top_block(stdgui2.std_top_block):
         #r = self.u.set_center_freq(target_freq, 0)
         r = self.u.set_center_freq(uhd.tune_request(target_freq, 5e6), 0)
         print '%s ' % (r.to_pp_string())
-        self.u.stop()
+        #self.u.stop()  can not stop here, otherwise no information is get from the usrp
         print 'In locking '
         while (self.u.get_sensor("lo_locked").to_bool() == False):
             print '.'
