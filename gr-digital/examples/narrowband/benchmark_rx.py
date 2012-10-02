@@ -53,6 +53,7 @@ class my_top_block(gr.top_block):
             # Work-around to get the modulation's bits_per_symbol
             args = demodulator.extract_kwargs_from_options(options)
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
+            ask_sample_rate = symbol_rate*options.samples_per_symbol
 
             self.source = uhd_receiver(options.args, symbol_rate,
                                        options.samples_per_symbol,
@@ -60,6 +61,8 @@ class my_top_block(gr.top_block):
                                        options.spec, options.antenna,
                                        options.verbose)
             options.samples_per_symbol = self.source._sps
+            
+            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate/2), 0)
 
         elif(options.from_file is not None):
             sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
@@ -76,7 +79,7 @@ class my_top_block(gr.top_block):
         self.connect(self.source, self.rxpath)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         
-        self.timer = threading.Timer(5, self.start_streaming)
+        self.timer = threading.Timer(1, self.start_streaming)
 
 
 
@@ -141,7 +144,8 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
-    tb.source.u.set_start_on_demand()        
+    tb.source.u.set_start_on_demand()
+    
     tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
