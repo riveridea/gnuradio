@@ -62,7 +62,7 @@ class my_top_block(gr.top_block):
                                        options.verbose)
             options.samples_per_symbol = self.source._sps
             
-            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             print 'In locking '
             while (self.source.u.get_sensor("lo_locked").to_bool() == False):
                 print '.'
