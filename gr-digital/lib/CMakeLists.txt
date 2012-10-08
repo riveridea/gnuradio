@@ -135,6 +135,7 @@ list(APPEND gr_digital_sources
     digital_probe_mpsk_snr_est_c.cc
     digital_scrambler_bb.cc
     digital_simple_framer.cc
+	digtial_sampcov_matrix_calculator.cc
 )
 
 list(APPEND digital_libs
