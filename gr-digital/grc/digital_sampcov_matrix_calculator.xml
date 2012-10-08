@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+ Copyright 2011 Free Software Foundation, Inc.
+ 
+ This file is part of GNU Radio
+ 
+ GNU Radio is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3, or (at your option)
+ any later version.
+ 
+ GNU Radio is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with GNU Radio; see the file COPYING.  If not, write to
+ the Free Software Foundation, Inc., 51 Franklin Street,
+ Boston, MA 02110-1301, USA.
+-->
+
+<!--
+###################################################
+##OFDM Sampler
+###################################################
+ -->
+<block>
+	<name>Sample Covariance Matrix Calculator</name>
+	<key>digital_sampcov_matrix_calculator</key>
+	<import>from gnuradio import digital</import>
+	<make>digital.sampcov_matrix_calculator($smooth_factor, $number_of_vector)</make>
+	<param>
+		<name>Smooth Factor</name>
+		<key>smooth_factor</key>
+		<type>int</type>
+	</param>
+	<param>
+		<name>Number of Vector</name>
+		<key>number_of_vector</key>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>complex</type>
+		<vlen>$smooth_factor</vlen>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>complex</type>
+		<vlen>$smooth_factor</vlen>
+	</source>
+	<source>
+		<name>flag</name>
+		<type>byte</type>
+		<vlen>$smooth_factor</vlen>
+	</source>
+</block>
