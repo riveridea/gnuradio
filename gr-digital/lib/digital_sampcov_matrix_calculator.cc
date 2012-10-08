@@ -77,7 +77,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   for(index = 0; index < length; index++) outsig[index] = 0;
   
   // update the sample covariance matrix
-  int i, j, ret;
+  unsigned int i, j;
+  int  ret;
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
 		for(j = 0; j < d_smooth_factor; j++){
@@ -101,7 +102,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	}
 	else{
 		printf("error in number of vector \n");
-		ret = -2
+		ret = -2;
 	}
   }
   else{ 
