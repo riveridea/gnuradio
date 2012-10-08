@@ -48,11 +48,11 @@
 	<source>
 		<name>out</name>
 		<type>complex</type>
-		<vlen>$smooth_factor</vlen>
+		<vlen>$smooth_factor*$smooth_factor</vlen>
 	</source>
 	<source>
 		<name>flag</name>
 		<type>byte</type>
-		<vlen>$smooth_factor</vlen>
+		<vlen>$smooth_factor*$smooth_factor</vlen>
 	</source>
 </block>
