@@ -28,6 +28,6 @@ GR_SWIG_BLOCK_MAGIC(digital,sampcov_matrix_calculator)
 class digital_sampcov_matrix_calculator : public gr_block
 {
  private:
-  digital_ofdm_sampler (unsigned int smooth_factor, 
+  digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
 						unsigned int number_of_vector);
 };
