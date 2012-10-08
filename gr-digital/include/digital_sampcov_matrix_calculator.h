@@ -30,8 +30,7 @@ class digital_sampcov_matrix_calculator;
 typedef boost::shared_ptr<digital_sampcov_matrix_calculator> digital_sampcov_matrix_calculator_sptr;
 
 DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator(	unsigned int smooth_factor, 
-																							unsigned int number_of_vector,
-																							unsigned int timeout=1000);
+																							unsigned int number_of_vector);
 
 /*!
  * \brief caclulate the sample covariance matrix for the incoming samples
@@ -40,19 +39,12 @@ DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_c
 class DIGITAL_API digital_sampcov_matrix_calculator : public gr_block
 {
   friend DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator( unsigned int smooth_factor, 
-																									unsigned int number_of_vector,
-																									unsigned int timeout);
+																									unsigned int number_of_vector);
 
   digital_sampcov_matrix_calculator(unsigned int smooth_factor, 
-									unsigned int number_of_vector,
-									unsigned int timeout);
+									unsigned int number_of_vector);
 
  private:
-  enum state_t {STATE_INIT, STATE_PROCESSING, STATE_DONE};
-
-  state_t d_state;
-  unsigned int d_timeout_max;
-  unsigned int d_timeout;
   unsigned int d_smooth_factor;
   unsigned int d_number_of_vector;
   unsigned int d_round_ind; //indicating the index of the first sample within the whole needed samples for each incoming item  

@@ -31,19 +31,16 @@
 
 digital_sampcov_matrix_calculator_sptr
 digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
-										unsigned int number_of_vector,
-										unsigned int timeout=1000)
+										unsigned int number_of_vector)
 {
-  return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector, timeout));
+  return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector));
 }
 
 digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
-					    unsigned int number_of_vector,
-					    unsigned int timeout)
+					    unsigned int number_of_vector)
   : gr_block ("sampcov_matrix_calculator",
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*smooth_factor),
 	      gr_make_io_signature2 (1, 1, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
-    d_state(STATE_INIT), d_timeout_max(timeout), 
 	d_smooth_factor(smooth_factor), 
 	d_number_of_vector(number_of_vector),
 	d_round_ind(0)
