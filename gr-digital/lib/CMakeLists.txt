@@ -136,6 +136,7 @@ list(APPEND gr_digital_sources
     digital_scrambler_bb.cc
     digital_simple_framer.cc
 	digital_sampcov_matrix_calculator.cc
+	digital_trace_calculator.cc
 )
 
 list(APPEND digital_libs

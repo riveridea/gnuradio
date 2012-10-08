@@ -124,6 +124,7 @@ install(FILES
     digital_simple_framer.h
     digital_simple_framer_sync.h
 	digital_sampcov_matrix_calculator.h
+	digital_trace_calculator.h
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio
     COMPONENT "digital_devel"
 )

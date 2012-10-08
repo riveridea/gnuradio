@@ -174,6 +174,7 @@ install(
     digital_scrambler_bb.i
     digital_simple_framer.i
 	digital_sampcov_matrix_calculator.i
+	digital_trace_calculator.i
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio/swig
     COMPONENT "digital_swig"
 )
