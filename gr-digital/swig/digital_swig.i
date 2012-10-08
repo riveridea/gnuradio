@@ -82,6 +82,7 @@ enum snr_est_type_t {
 #include "digital_scrambler_bb.h"
 #include "digital_simple_framer.h"
 #include "digital_sampcov_matrix_calculator.h"
+#include "digital_trace_calculator.h"
 %}
 
 %include "digital_additive_scrambler_bb.i"
@@ -127,3 +128,4 @@ enum snr_est_type_t {
 %include "digital_scrambler_bb.i"
 %include "digital_simple_framer.i"
 %include "digital_sampcov_matrix_calculator.i"
+%include "digital_trace_calculator.i"
