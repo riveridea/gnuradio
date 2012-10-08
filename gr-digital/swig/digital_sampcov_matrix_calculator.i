@@ -23,13 +23,11 @@
 GR_SWIG_BLOCK_MAGIC(digital,sampcov_matrix_calculator)
 
   digital_sampcov_matrix_calculator_sptr digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
-																			unsigned int number_of_vector,
-																			unsigned int timeout=1000);
+																			unsigned int number_of_vector);
 
 class digital_sampcov_matrix_calculator : public gr_block
 {
  private:
   digital_ofdm_sampler (unsigned int smooth_factor, 
-						unsigned int number_of_vector,
-						unsigned int timeout=1000);
+						unsigned int number_of_vector);
 };
