@@ -24,7 +24,7 @@
 #include "config.h"
 #endif
 
-#include <gr_stream_to_vector.h>
+#include <digital_trace_calculator.h>
 #include <gr_io_signature.h>
 #include <string.h>
 
