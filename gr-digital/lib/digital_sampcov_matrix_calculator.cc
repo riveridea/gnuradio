@@ -29,12 +29,12 @@
 #include <gr_expj.h>
 #include <cstdio>
 
-digital_sampcov_matrix_calculator
+digital_sampcov_matrix_calculator_sptr
 digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
 										unsigned int number_of_vector,
 										unsigned int timeout=1000)
 {
-  return gnuradio::get_initial_sptr(new digital_cov_matrix_calculator (smooth_factor, number_of_vector, timeout));
+  return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector, timeout));
 }
 
 digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
@@ -45,7 +45,7 @@ digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned i
 	      gr_make_io_signature2 (1, 1, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
     d_state(STATE_INIT), d_timeout_max(timeout), 
 	d_smooth_factor(smooth_factor), 
-	d_number_of_vectors(number_of_vector),
+	d_number_of_vector(number_of_vector),
 	d_round_ind(0)
 {
   set_relative_rate(1.0/(double) smooth_factor);   // buffer allocator hint
@@ -76,8 +76,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   gr_complex *optr = (gr_complex *) output_items[0];
   char *outsig = (char *) output_items[1];
   
-  length = d_smooth_factor*d_smooth_factor;
-  int index;
+  unsigned int index, length = d_smooth_factor*d_smooth_factor;
   for(index = 0; index < length; index++) outsig[index] = 0;
   
   // update the sample covariance matrix
@@ -85,10 +84,10 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
 		for(j = 0; j < d_smooth_factor; j++){
-			d_sampcov_store[i*smooth_factor + j] = iptr[i]*iptr[j];
+			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*iptr[j];
 		}
 	}
-	d_round_ind++
+	d_round_ind++;
 	if(d_round_ind == d_number_of_vector){
 		// done with the sample covariance matrix, move them to the output 
 		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
@@ -103,13 +102,15 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		// need to wait the next round of vector
 		ret = -2;
 	}
-	else
+	else{
 		printf("error in number of vector \n");
 		ret = -2
+	}
   }
-  else 
+  else{ 
 	printf("error in d_sampcov_store size \n");
 	ret = -2;
+  }
   
   consume_each(1);
   return ret;
