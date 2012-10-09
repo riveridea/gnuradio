@@ -38,7 +38,8 @@ digital_trace_calculator::digital_trace_calculator (unsigned int smooth_factor)
   : gr_sync_decimator ("stream_to_vector",
 		       gr_make_io_signature (1, 1, sizeof (gr_complex)),
 		       gr_make_io_signature (1, 1, sizeof (float)),
-		       smooth_factor*smooth_factor)
+		       smooth_factor*smooth_factor),
+    d_smooth_factor(smooth_factor)
 {
 }
 
@@ -52,8 +53,8 @@ digital_trace_calculator::work (int noutput_items,
   
   unsigned int i;
   out[0] = 0;
-  for(i = 0; i < smooth_factor; i++){
-	out[0] += in[i*smooth_factor];
+  for(i = 0; i < d_smooth_factor; i++){
+	out[0] += in[i*d_smooth_factor];
   }
 
   return noutput_items;
