@@ -23,13 +23,13 @@
 #ifndef INCLUDED_DIGITAL_TRACE_CALCULATOR_H
 #define INCLUDED_DIGITAL_TRACE_CALCULATOR_H
 
-#include <gr_core_api.h>
+#include <digital_api.h.h>
 #include <gr_sync_decimator.h>
 
 class digital_trace_calculator;
 typedef boost::shared_ptr<digital_trace_calculator> digital_trace_calculator_sptr;
 
-GR_CORE_API digital_trace_calculator_sptr
+DIGITAL_API digital_trace_calculator_sptr
 digital_make_trace_calculator (unsigned int smooth_factor);
 
 
@@ -37,13 +37,13 @@ digital_make_trace_calculator (unsigned int smooth_factor);
  * \brief convert a stream of items into a stream of blocks containing nitems_per_block
  * \ingroup slicedice_blk
  */
-class GR_CORE_API digital_trace_calculator : public gr_sync_decimator
+class DIGITAL_API digital_trace_calculator : public gr_sync_decimator
 {
-  friend GR_CORE_API digital_trace_calculator_sptr
+  friend DIGITAL_API digital_trace_calculator_sptr
     digital_make_trace_calculator (unsigned int smooth_factor);
 
  protected:
-  digital_trace_calculator_sptr (unsigned int smooth_factor);
+  digital_trace_calculator (unsigned int smooth_factor);
 
  public:
   int work (int noutput_items,
