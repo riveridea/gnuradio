@@ -20,15 +20,13 @@
  * Boston, MA 02110-1301, USA.
  */
 
-GR_SWIG_BLOCK_MAGIC(gr,stream_to_vector)
+GR_SWIG_BLOCK_MAGIC(digital,trace_calculator)
 
-gr_stream_to_vector_sptr
-gr_make_stream_to_vector (size_t itemsize, size_t nitems_per_block);
+digital_trace_calculator_sptr
+digital_make_trace_calculator (unsigned int smooth_factor);
 
-class gr_stream_to_vector : public gr_sync_decimator
+class DIGITAL_API digital_trace_calculator : public gr_sync_decimator
 {
  protected:
-  gr_stream_to_vector (size_t itemsize, size_t nitems_per_block);
-
- public:
-};
+  digital_trace_calculator (unsigned int smooth_factor);
+ }
