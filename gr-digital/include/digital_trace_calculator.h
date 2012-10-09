@@ -41,6 +41,9 @@ class DIGITAL_API digital_trace_calculator : public gr_sync_decimator
 {
   friend DIGITAL_API digital_trace_calculator_sptr
     digital_make_trace_calculator (unsigned int smooth_factor);
+	
+ private:
+	unsigned int d_smooth_factor;
 
  protected:
   digital_trace_calculator (unsigned int smooth_factor);
