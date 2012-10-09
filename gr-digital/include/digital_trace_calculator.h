@@ -23,7 +23,7 @@
 #ifndef INCLUDED_DIGITAL_TRACE_CALCULATOR_H
 #define INCLUDED_DIGITAL_TRACE_CALCULATOR_H
 
-#include <digital_api.h.h>
+#include <digital_api.h>
 #include <gr_sync_decimator.h>
 
 class digital_trace_calculator;
