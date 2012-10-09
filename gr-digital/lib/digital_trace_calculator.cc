@@ -31,7 +31,7 @@
 digital_trace_calculator_sptr
 digital_make_trace_calculator (unsigned int smooth_factor)
 {
-  return gnuradio::get_initial_sptr(new digital_trace_calculator_sptr (smooth_factor));
+  return gnuradio::get_initial_sptr(new digital_trace_calculator(smooth_factor));
 }
 
 digital_trace_calculator::digital_trace_calculator (unsigned int smooth_factor)
