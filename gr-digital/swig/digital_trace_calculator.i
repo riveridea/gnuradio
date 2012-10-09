@@ -31,4 +31,4 @@ class digital_trace_calculator : public gr_sync_decimator
   digital_trace_calculator (unsigned int smooth_factor);
  
  public: 
-}
+};
