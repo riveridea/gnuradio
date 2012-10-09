@@ -54,7 +54,7 @@ digital_trace_calculator::work (int noutput_items,
   unsigned int i;
   out[0] = 0;
   for(i = 0; i < d_smooth_factor; i++){
-	out[0] += in[i*d_smooth_factor];
+	out[0] += in[i*d_smooth_factor].real();
   }
 
   return noutput_items;
