@@ -92,6 +92,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		outsig[0] = 1;// indicate the start of the covariance matrix
 		// reset the store
 		std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+
+        printf("1 sample convariance matrix generated \n");
 		
 		d_round_ind = 0;
 		ret = 1;
@@ -102,11 +104,13 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	}
 	else{
 		printf("error in number of vector \n");
+        d_round_ind = 0;
 		ret = -2;
 	}
   }
   else{ 
 	printf("error in d_sampcov_store size \n");
+    d_round_ind = 0;
 	ret = -2;
   }
   
