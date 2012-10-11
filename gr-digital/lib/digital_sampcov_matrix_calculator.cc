@@ -40,7 +40,7 @@ digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned i
 					    unsigned int number_of_vector)
   : gr_block ("sampcov_matrix_calculator",
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*smooth_factor),
-	      gr_make_io_signature2 (1, 1, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
+	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
 	d_smooth_factor(smooth_factor), 
 	d_number_of_vector(number_of_vector),
 	d_round_ind(0)
