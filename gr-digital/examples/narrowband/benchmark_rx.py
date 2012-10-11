@@ -85,7 +85,8 @@ class my_top_block(gr.top_block):
         self.rxpath = receive_path(demodulator, rx_callback, options) 
 
         self.connect(self.source, self.rxpath)
-        self.connect(self.source, self.sampcov)
+        self.connect(self.source, self.s2v)
+        self.connect(self.s2v, self.sampcov)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
         self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
