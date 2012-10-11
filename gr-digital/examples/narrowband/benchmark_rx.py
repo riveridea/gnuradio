@@ -62,7 +62,7 @@ class my_top_block(gr.top_block):
                                        options.verbose)
             options.samples_per_symbol = self.source._sps
             
-            self.sampcov = 
+            self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32,800)
             
             self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             print 'In locking '
@@ -85,6 +85,8 @@ class my_top_block(gr.top_block):
 
         self.connect(self.source, self.rxpath)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
+        self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
+        self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
         
         self.timer = threading.Timer(1, self.start_streaming)
 
