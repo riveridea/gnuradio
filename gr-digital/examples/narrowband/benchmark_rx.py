@@ -63,6 +63,7 @@ class my_top_block(gr.top_block):
             options.samples_per_symbol = self.source._sps
             
             self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32,800)
+            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32) 
             
             self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             print 'In locking '
