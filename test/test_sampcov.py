@@ -41,5 +41,5 @@ if __name__ == '__main__':
 	if gr.enable_realtime_scheduling() != gr.RT_OK:
 		print "Error: failed to enable realtime scheduling."
 	tb = my_top_block()
-	tb.Run(True)
+	tb.run()
 
