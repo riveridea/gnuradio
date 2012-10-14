@@ -6,7 +6,7 @@
 ##################################################
 
 from gnuradio import eng_notation
-from gnuradio import gr
+from gnuradio import gr, digital
 from gnuradio.eng_option import eng_option
 from gnuradio.gr import firdes
 from grc_gnuradio import wxgui as grc_wxgui
@@ -37,7 +37,7 @@ class top_block(grc_wxgui.top_block_gui):
 		self.connect((self.pow_cc_0, 0), (self.gr_file_sink_2, 0))
 		self.connect((self.gr_file_source_0, 0), (self.pow_cc_0, 0))
 
-        self.connect((self.gr_file_source_0, 0), self.s2v)
+	        self.connect((self.gr_file_source_0, 0), self.s2v)
 		self.connect(self.s2v, self.sampcov)
 		self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "/home/alexzh/Dropbox/Public/sampcov.dat"))
 		self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "/home/alexzh/Dropbox/Public/sampcovind.dat"))        
