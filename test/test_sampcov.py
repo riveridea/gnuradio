@@ -14,12 +14,10 @@ from optparse import OptionParser
 import baz
 import wx
 
-class top_block(grc_wxgui.top_block_gui):
+class top_block(gr.top_block):
 
 	def __init__(self):
-		grc_wxgui.top_block_gui.__init__(self, title="Top Block")
-		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+        gr.top_block.__init__(self)
 
 		##################################################
 		# Blocks
