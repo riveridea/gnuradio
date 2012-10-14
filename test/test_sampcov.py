@@ -25,8 +25,9 @@ class top_block(grc_wxgui.top_block_gui):
 		# Blocks
 		##################################################
 		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/Dropbox/Public/temp.dat", False)
-        self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32,400)
-        self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32) 
+        self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32)
+        self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32, 400)
+
 
 		##################################################
 		# Connections
