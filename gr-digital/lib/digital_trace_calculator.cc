@@ -37,7 +37,7 @@ digital_make_trace_calculator (unsigned int smooth_factor)
 
 digital_trace_calculator::digital_trace_calculator (unsigned int smooth_factor)
   : gr_sync_decimator ("stream_to_vector",
-		       gr_make_io_signature (2, 2, sizeof (gr_complex)),
+		       gr_make_io_signature (2, 2, sizeof (gr_complex), sizeof(char)),
 		       gr_make_io_signature (1, 1, sizeof (float)),
 		       smooth_factor*smooth_factor),
     d_smooth_factor(smooth_factor)
