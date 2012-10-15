@@ -104,8 +104,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
             printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
             for(j = 0; j < d_smooth_factor; j++){
                 //gr_complex product_mean = d_vector_mean[i]*(std::conj(d_vector_mean[j]));
-                d_sampcov_store[i*d_smooth_factor + j] -= 
-                       scale3*d_vector_mean[j]*(std::conj(d_vector_mean[i]));
+                //d_sampcov_store[i*d_smooth_factor + j] -= 
+                  //     scale3*d_vector_mean[j]*(std::conj(d_vector_mean[i]));
             }
         }
         printf("----------------------------------------\n");
