@@ -49,6 +49,8 @@ digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned i
   
   d_sampcov_store.resize(d_smooth_factor*d_smooth_factor);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+  d_vector_mean.resize(d_smooth_factor);
+  std::file(d_vector_mean.begin(), d_vector_mean.end(), 0);
 }
 
 void
@@ -56,7 +58,7 @@ digital_sampcov_matrix_calculator::forecast (int noutput_items, gr_vector_int &n
 {
   // Each time we just need d_smooth_factor samples and calcuate the smooth_factor*smooth_factor elements to fill
   // the output covariance matrix
-  int nreqd  = d_smooth_factor;
+  //int nreqd  = d_smooth_factor;
   unsigned ninputs = ninput_items_required.size ();
   for (unsigned i = 0; i < ninputs; i++)
     ninput_items_required[i] = 1;
@@ -83,6 +85,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   //printf("digital_sampcov_matrix_calculator::general_work, %d", noutput_items);
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
+        //updat the mean for each element of the vector
+        d_vector_mean[i] += iptr[i]/d_number_of_vector;
 		for(j = 0; j < d_smooth_factor; j++){
 			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*(std::conj(iptr[j]));
             //if(i == j) printf("%e + j%e", std::real(d_sampcov_store[i*d_smooth_factor + j]),
@@ -92,6 +96,13 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	d_round_ind++;
 	if(d_round_ind == d_number_of_vector){
 		// done with the sample covariance matrix, move them to the output 
+		// Add the mean items 
+		for(i=0; i < d_smooth_factor; i++){
+            for(j = 0; j < d_smooth_factor; j++){
+                d_sampcov_store[i*d_smooth_factor + j] -= 
+                       d_vector_mean[i]*(std::conj(d_vector_mean[j]))*d_number_of_vector;
+            }
+        }
 		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
 		outsig[0] = 1;// indicate the start of the covariance matrix
 		// reset the store

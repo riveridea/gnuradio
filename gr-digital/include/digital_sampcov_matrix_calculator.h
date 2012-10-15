@@ -50,6 +50,7 @@ class DIGITAL_API digital_sampcov_matrix_calculator : public gr_block
   unsigned int d_round_ind; //indicating the index of the first sample within the whole needed samples for each incoming item  
   
   std::vector<gr_complex> d_sampcov_store;
+  std::vector<gr_complex> d_vector_mean;
 
  public:
   void forecast (int noutput_items, gr_vector_int &ninput_items_required);
