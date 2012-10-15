@@ -36,7 +36,7 @@
 #include <stdio.h>
 
 // must be defined to either 0 or 1
-#define ENABLE_LOGGING 0
+#define ENABLE_LOGGING 1
 
 #if (ENABLE_LOGGING)
 #define LOG(x) do { x; } while(0)
@@ -275,12 +275,12 @@ gr_block_executor::run_one_iteration()
     max_items_avail = 0;
     for (int i = 0; i < d->ninputs (); i++){
       {
-	/*
-	 * Acquire the mutex and grab local copies of items_available and done.
-	 */
-	gruel::scoped_lock guard(*d->input(i)->mutex());
-	d_ninput_items[i] = d->input(i)->items_available ();
-	d_input_done[i] = d->input(i)->done();
+		/*
+		* Acquire the mutex and grab local copies of items_available and done.
+		*/
+		gruel::scoped_lock guard(*d->input(i)->mutex());
+		d_ninput_items[i] = d->input(i)->items_available ();
+		d_input_done[i] = d->input(i)->done();
       }
       max_items_avail = std::max (max_items_avail, d_ninput_items[i]);
     }
@@ -312,13 +312,13 @@ gr_block_executor::run_one_iteration()
 
       // only test this if we specifically set the output_multiple
       if(m->output_multiple_set())
-	reqd_noutput_items = round_down(reqd_noutput_items, m->output_multiple());
+		reqd_noutput_items = round_down(reqd_noutput_items, m->output_multiple());
 
-      if (reqd_noutput_items > 0 && reqd_noutput_items <= noutput_items)
-	noutput_items = reqd_noutput_items;
+		if (reqd_noutput_items > 0 && reqd_noutput_items <= noutput_items)
+			noutput_items = reqd_noutput_items;
 
-      // if we need this many outputs, overrule the max_noutput_items setting
-      max_noutput_items = std::max(m->output_multiple(), max_noutput_items);
+		// if we need this many outputs, overrule the max_noutput_items setting
+		max_noutput_items = std::max(m->output_multiple(), max_noutput_items);
     }
     noutput_items = std::min(noutput_items, max_noutput_items);
 
@@ -327,33 +327,33 @@ gr_block_executor::run_one_iteration()
     // requirement.
     if(!m->output_multiple_set()) {
       if(m->is_unaligned()) {
-	// When unaligned, don't just set noutput_items to the remaining
-	// samples to meet alignment; this causes too much overhead in
-	// requiring a premature call back here. Set the maximum amount
-	// of samples to handle unalignment and get us back aligned.
-	if(noutput_items >= m->unaligned()) {
-	  noutput_items = round_up(noutput_items, m->alignment())	\
-	    - (m->alignment() - m->unaligned());
-	  new_alignment = 0;
-	}
-	else {
-	  new_alignment = m->unaligned() - noutput_items;
-	}
-	alignment_state = 0;
+		// When unaligned, don't just set noutput_items to the remaining
+		// samples to meet alignment; this causes too much overhead in
+		// requiring a premature call back here. Set the maximum amount
+		// of samples to handle unalignment and get us back aligned.
+		if(noutput_items >= m->unaligned()) {
+			noutput_items = round_up(noutput_items, m->alignment())	\
+			- (m->alignment() - m->unaligned());
+			new_alignment = 0;
+		}
+		else {
+			new_alignment = m->unaligned() - noutput_items;
+		}
+		alignment_state = 0;
       }
       else if(noutput_items < m->alignment()) {
-	// if we don't have enough for an aligned call, keep track of
-	// misalignment, set unaligned flag, and proceed.
-	new_alignment = m->alignment() - noutput_items;
-	m->set_unaligned(new_alignment);
-	m->set_is_unaligned(true);
-	alignment_state = 1;
+		// if we don't have enough for an aligned call, keep track of
+		// misalignment, set unaligned flag, and proceed.
+		new_alignment = m->alignment() - noutput_items;
+		m->set_unaligned(new_alignment);
+		m->set_is_unaligned(true);
+		alignment_state = 1;
       }
       else {
-	// enough to round down to the nearest alignment and process.
-	noutput_items = round_down(noutput_items, m->alignment());
-	m->set_is_unaligned(false);
-	alignment_state = 2;
+		// enough to round down to the nearest alignment and process.
+		noutput_items = round_down(noutput_items, m->alignment());
+		m->set_is_unaligned(false);
+		alignment_state = 2;
       }
     }
 
@@ -370,36 +370,36 @@ gr_block_executor::run_one_iteration()
     if (i < d->ninputs ()){			// not enough input on input[i]
       // if we can, try reducing the size of our output request
       if (noutput_items > m->output_multiple ()){
-	noutput_items /= 2;
-	noutput_items = round_up (noutput_items, m->output_multiple ());
-	goto try_again;
+		noutput_items /= 2;
+		noutput_items = round_up (noutput_items, m->output_multiple ());
+		goto try_again;
       }
 
       // We're blocked on input
       LOG(*d_log << "  BLKD_IN\n");
       if (d_input_done[i]) 	// If the upstream block is done, we're done
-	goto were_done;
+	    goto were_done;
 
       // Is it possible to ever fulfill this request?
       if (d_ninput_items_required[i] > d->input(i)->max_possible_items_available ()){
-	// Nope, never going to happen...
-	std::cerr << "\nsched: <gr_block " << m->name()
-		  << " (" << m->unique_id() << ")>"
-		  << " is requesting more input data\n"
-		  << "  than we can provide.\n"
-		  << "  ninput_items_required = "
-		  << d_ninput_items_required[i] << "\n"
-		  << "  max_possible_items_available = "
-		  << d->input(i)->max_possible_items_available() << "\n"
-		  << "  If this is a filter, consider reducing the number of taps.\n";
-	goto were_done;
+	    // Nope, never going to happen...
+	    std::cerr << "\nsched: <gr_block " << m->name()
+    		  << " (" << m->unique_id() << ")>"
+    		  << " is requesting more input data\n"
+    		  << "  than we can provide.\n"
+    		  << "  ninput_items_required = "
+    		  << d_ninput_items_required[i] << "\n"
+    		  << "  max_possible_items_available = "
+    		  << d->input(i)->max_possible_items_available() << "\n"
+    		  << "  If this is a filter, consider reducing the number of taps.\n";
+	    goto were_done;
       }
 
       // If we were made unaligned in this round but return here without
       // processing; reset the unalignment claim before next entry.
       if(alignment_state == 1) {
-	m->set_unaligned(0);
-	m->set_is_unaligned(false);
+	    m->set_unaligned(0);
+	    m->set_is_unaligned(false);
       }
       return BLKD_IN;
     }
