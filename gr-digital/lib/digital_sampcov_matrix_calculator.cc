@@ -89,7 +89,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
         //updat the mean for each element of the vector
         d_vector_mean[i] += scale*iptr[i];
 		for(j = 0; j < d_smooth_factor; j++){
-			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*(std::conj(iptr[j]));
+			d_sampcov_store[i*d_smooth_factor + j] = scale*iptr[i]*(std::conj(iptr[j]));
             //if(i == j) printf("%e + j%e", std::real(d_sampcov_store[i*d_smooth_factor + j]),
               //                            std::imag(d_sampcov_store[i*d_smooth_factor + j]));
 		}
@@ -103,7 +103,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
             for(j = 0; j < d_smooth_factor; j++){
                 //gr_complex product_mean = d_vector_mean[i]*(std::conj(d_vector_mean[j]));
                 d_sampcov_store[i*d_smooth_factor + j] -= 
-                       (d_vector_mean[i]*(std::conj(d_vector_mean[j])))*(float)d_number_of_vector;
+                       d_vector_mean[i]*(std::conj(d_vector_mean[j]));
             }
         }
         printf("----------------------------------------\n");
