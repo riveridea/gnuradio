@@ -81,5 +81,6 @@ digital_trace_calculator::general_work (int noutput_items,
   }
 
   printf("trace is %e \n", out[0]);
+  consume_each(1);
   return ret;
 }
