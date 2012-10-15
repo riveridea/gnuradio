@@ -99,14 +99,14 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		// done with the sample covariance matrix, move them to the output 
 		// Add the mean items 
 		for(i=0; i < d_smooth_factor; i++){
-            printf("mean[%d] = %f \n", i, d_vector_mean[i]);
+            printf("mean[%d] = %f + j%f \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
             for(j = 0; j < d_smooth_factor; j++){
                 //gr_complex product_mean = d_vector_mean[i]*(std::conj(d_vector_mean[j]));
                 d_sampcov_store[i*d_smooth_factor + j] -= 
                        (d_vector_mean[i]*(std::conj(d_vector_mean[j])))*(float)d_number_of_vector;
             }
         }
-        printf("----------------------------------------");
+        printf("----------------------------------------\n");
 		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
 		outsig[0] = 1;// indicate the start of the covariance matrix
 		// reset the store
@@ -119,7 +119,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	}
 	else if(d_round_ind < d_number_of_vector){
 		// need to wait the next round of vector
-		printf("waiting next vector, %d", d_round_ind);
+		//printf("waiting next vector, %d", d_round_ind);
 		ret = -2;
 	}
 	else{
