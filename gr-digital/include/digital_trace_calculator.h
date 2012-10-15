@@ -37,7 +37,7 @@ digital_make_trace_calculator (unsigned int smooth_factor);
  * \brief convert a stream of items into a stream of blocks containing nitems_per_block
  * \ingroup slicedice_blk
  */
-class DIGITAL_API digital_trace_calculator : public gr_sync_decimator
+class DIGITAL_API digital_trace_calculator : public gr_block
 {
   friend DIGITAL_API digital_trace_calculator_sptr
     digital_make_trace_calculator (unsigned int smooth_factor);
