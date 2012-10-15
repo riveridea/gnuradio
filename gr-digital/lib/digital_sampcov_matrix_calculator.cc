@@ -91,7 +91,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
         //updat the mean for each element of the vector
         d_vector_mean[i] += scale1*iptr[i];
 		for(j = 0; j < d_smooth_factor; j++){
-			d_sampcov_store[i*d_smooth_factor + j] = scale2*iptr[j]*(std::conj(iptr[i]));
+			d_sampcov_store[i*d_smooth_factor + j] += scale2*iptr[j]*(std::conj(iptr[i]));
             //if(i == j) printf("%e + j%e", std::real(d_sampcov_store[i*d_smooth_factor + j]),
               //                            std::imag(d_sampcov_store[i*d_smooth_factor + j]));
 		}
