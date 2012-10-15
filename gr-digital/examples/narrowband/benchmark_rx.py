@@ -64,7 +64,6 @@ class my_top_block(gr.top_block):
             
             self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32,800)
             self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32) 
-
 			self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
             
             self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
