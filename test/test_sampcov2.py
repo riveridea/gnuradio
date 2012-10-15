@@ -28,11 +28,8 @@ class top_block(grc_wxgui.top_block_gui):
 		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/Dropbox/Public/temp.dat", False)
 		self.gr_file_sink1 = gr.file_sink(gr.sizeof_gr_complex*32*32, "/home/alexzh/Dropbox/Public/sampcov.dat")
  		self.gr_file_sink2 = gr.file_sink(gr.sizeof_char*32*32, "/home/alexzh/Dropbox/Public/sampcovind.dat")
-<<<<<<< HEAD
- 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
-=======
 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
->>>>>>> d8cf0346305a2592df33902c43b5527148a0ac40
+
 		#self.gr_file_sink_2 = gr.file_sink(gr.sizeof_gr_complex*1, "test.dat")
 		#self.gr_file_sink_2.set_unbuffered(False)
 		self.tracer = digital.digital_swig.trace_calculator(32)
@@ -44,7 +41,7 @@ class top_block(grc_wxgui.top_block_gui):
 		##################################################
 		#self.connect((self.pow_cc_0, 0), (self.gr_file_sink_2, 0))
 		#self.connect((self.gr_file_source_0, 0), (self.pow_cc_0, 0))
-<<<<<<< HEAD
+
 		
 		self.connect((self.gr_file_source_0, 0), self.s2v)
 		self.connect(self.s2v, self.sampcov)
@@ -55,18 +52,7 @@ class top_block(grc_wxgui.top_block_gui):
 		#self.connect((self.sampcov, 0), (self.tracer, 0))
 		#self.connect((self.sampcov, 1), (self.tracer, 1))
 		#self.connect(self.tracer, self.gr_file_sink3)
-=======
 
-		self.connect((self.gr_file_source_0, 0), self.s2v)
-		self.connect(self.s2v, self.sampcov)
-	        #self.connect(self.gr_file_source_0, gr.file_sink(gr.sizeof_gr_complex, "origin.dat"))
-        	#self.connect(self.s2v, gr.file_sink(gr.sizeof_gr_complex*32, "vector.dat"))
-		#self.connect((self.sampcov, 0), self.gr_file_sink1)
-		#self.connect((self.sampcov, 1), self.gr_file_sink2)
-		self.connect((self.sampcov, 0), (self.tracer, 0))
-		self.connect((self.sampcov, 1), (self.tracer, 1))
-		self.connect(self.tracer, self.gr_file_sink3)
->>>>>>> d8cf0346305a2592df33902c43b5527148a0ac40
 
 if __name__ == '__main__':
 	parser = OptionParser(option_class=eng_option, usage="%prog: [options]")
