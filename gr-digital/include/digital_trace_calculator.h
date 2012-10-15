@@ -41,18 +41,18 @@ class DIGITAL_API digital_trace_calculator : public gr_block
 {
   friend DIGITAL_API digital_trace_calculator_sptr
     digital_make_trace_calculator (unsigned int smooth_factor);
+
+	digital_trace_calculator (unsigned int smooth_factor);
 	
  private:
 	unsigned int d_smooth_factor;
 
- protected:
- 	digital_trace_calculator (unsigned int smooth_factor);
-
  public:
  	void forecast (int noutput_items, gr_vector_int &ninput_items_required);
 	int general_work (int noutput_items,
-	    gr_vector_const_void_star &input_items,
-	    gr_vector_void_star &output_items);
+						gr_vector_int &ninput_items,
+	    				gr_vector_const_void_star &input_items,
+	    				gr_vector_void_star &output_items);
 };
 
 
