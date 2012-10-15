@@ -36,18 +36,28 @@ digital_make_trace_calculator (unsigned int smooth_factor)
 }
 
 digital_trace_calculator::digital_trace_calculator (unsigned int smooth_factor)
-  : gr_sync_decimator ("stream_to_vector",
-		       gr_make_io_signature2 (2, 2, sizeof (gr_complex), sizeof(char)),
-		       gr_make_io_signature (1, 1, sizeof (float)),
-		       smooth_factor*smooth_factor),
+  : gr_block  ("stream_to_vector",
+		       gr_make_io_signature2 (2, 2, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor),
+		       gr_make_io_signature (1, 1, sizeof (float))),
     d_smooth_factor(smooth_factor)
 {
 }
 
+void
+digital_trace_calculator::forecast (int noutput_items, gr_vector_int &ninput_items_required)
+{
+  // Each time we just need a whole matrix to be ready
+  unsigned ninputs = ninput_items_required.size ();
+  for (unsigned i = 0; i < ninputs; i++)
+    ninput_items_required[i] = 1;
+}
+
+
 int
-digital_trace_calculator::work (int noutput_items,
-			     gr_vector_const_void_star &input_items,
-			     gr_vector_void_star &output_items)
+digital_trace_calculator::general_work (int noutput_items,
+                                    gr_vector_int &ninput_items,
+                                    gr_vector_const_void_star &input_items,
+                                    gr_vector_void_star &output_items)
 {
   const gr_complex *in = (const gr_complex *) input_items[0];
   const char *signal_in = (const char *)input_items[1];
@@ -66,7 +76,7 @@ digital_trace_calculator::work (int noutput_items,
   }
   else{
     std::cout<< "matrix messed up \n";            
-    ret = noutput_items;
+    ret = -2;
   }
 
   std::cout << "trace is %e \n" << out[0];
