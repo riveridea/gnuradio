@@ -27,6 +27,7 @@
 #include <digital_trace_calculator.h>
 #include <gr_io_signature.h>
 #include <string.h>
+#include <iostream>
 
 digital_trace_calculator_sptr
 digital_make_trace_calculator (unsigned int smooth_factor)
