@@ -59,7 +59,7 @@ digital_sampcov_matrix_calculator::forecast (int noutput_items, gr_vector_int &n
   int nreqd  = d_smooth_factor;
   unsigned ninputs = ninput_items_required.size ();
   for (unsigned i = 0; i < ninputs; i++)
-    ninput_items_required[i] = nreqd;
+    ninput_items_required[i] = 1;
 }
 
 int
