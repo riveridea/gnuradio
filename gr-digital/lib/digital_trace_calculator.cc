@@ -64,10 +64,10 @@ digital_trace_calculator::work (int noutput_items,
       ret = noutput_items;
   }
   else{
-    printf("matrix messed up");            
+    std::cout<< "matrix messed up \n";            
     ret = noutput_items;
   }
 
-  printf("trace is %e \n", out[0]);
+  std::cout << "trace is %e \n" << out[0];
   return ret;
 }
