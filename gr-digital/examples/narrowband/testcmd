@@ -14,6 +14,10 @@ sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-sam
 
 sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.129" --tx-addr="addr=192.168.10.129" --sx-addr="addr=192.168.10.128" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
 
+sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=200000 --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head  --samp-num=1024
+
+sudo ./tunnel_w_sensor.py --rx-freq=800M --tx-freq=908M --sx-freq=1800M --sx-samprate=200000 --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=node -i 1 -d 128
+
 usrp = uhd.usrp_source(device_addr="addr=192.168.10.106", stream_args=uhd.stream_args('fc32'))
 usrp = uhd.usrp_source(device_addr="addr=192.168.10.133", stream_args=uhd.stream_args('fc32'))
 usrp = uhd.usrp_source(device_addr="addr=192.168.10.108", stream_args=uhd.stream_args('fc32'))
@@ -25,12 +29,12 @@ sudo ./tunnel_duplex_test.py --rx-freq=908M --tx-freq=800M --tx-amplitude=1 --rx
 
 from gnuradio import uhd
 import numpy as np
-import matplotlib.pyplot as plt
-import pylab
+#import matplotlib.pyplot as plt
+#import pylab
 
 CENTER = 1e9
 samp_rate = 200000
-usrp = uhd.usrp_source(device_addr="addr0=192.168.10.108, ",
+usrp = uhd.usrp_source(device_addr="addr0=192.168.10.160, ",
 stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
 usrp.set_clock_source("external", 0)
 usrp.set_time_source("external", 0)
@@ -39,6 +43,30 @@ usrp.set_center_freq(CENTER, 0)
 usrp.set_gain(20, 0)
 usrp.set_antenna("RX2", 0)
 usrp.set_start_on_demand()
+
+devices = uhd.find_devices_raw()
+n_devices = len(devices)
+addrs = []
+for i in range(n_devices):
+    addr_t = devices[i].to_string()
+    addrs.append(addr_t[11:31])
+    addrs[i]
+
+usrp0 = uhd.usrp_source(device_addr=addrs[0], stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
+usrp1 = uhd.usrp_source(device_addr=addrs[1], stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
+
+usrp1.set_time_source("mimo",0)
+
+usrp0.get_time_source(0)
+"gpsdo"
+usrp0.get_time_source(0)
+"mimo"
+
+clk_cfg = uhd.clock_config()
+clk_cfg.ref_source = uhd.clock_config.REF_MIMO
+clk_cfg.pps_source = uhd.clock_config.PPS_MIMO
+usrp1.set_clock_config(clk_cfg)
+
 
 Ns = 600
 L = 32
