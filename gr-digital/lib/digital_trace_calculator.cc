@@ -72,7 +72,7 @@ digital_trace_calculator::general_work (int noutput_items,
       for(i = 0; i < d_smooth_factor; i++){
     	out[0] += in[i*d_smooth_factor].real();
       }
-      printf("noutput_item = %d \n", noutput_items);
+      //printf("noutput_item = %d \n", noutput_items);
       ret = 1;
   }
   else{

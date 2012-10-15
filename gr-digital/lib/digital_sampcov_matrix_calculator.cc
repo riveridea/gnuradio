@@ -101,7 +101,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		// done with the sample covariance matrix, move them to the output 
 		// Add the mean items 
 		for(i=0; i < d_smooth_factor; i++){
-            printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
+            //printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
             for(j = 0; j < d_smooth_factor; j++){
                 d_sampcov_store[i*d_smooth_factor + j] -= 
                        scale3*d_vector_mean[j]*(std::conj(d_vector_mean[i]));
