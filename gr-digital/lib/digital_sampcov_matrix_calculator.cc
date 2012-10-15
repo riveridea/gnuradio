@@ -50,7 +50,7 @@ digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned i
   d_sampcov_store.resize(d_smooth_factor*d_smooth_factor);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean.resize(d_smooth_factor);
-  std::file(d_vector_mean.begin(), d_vector_mean.end(), 0);
+  std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
 }
 
 void
@@ -86,7 +86,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
         //updat the mean for each element of the vector
-        d_vector_mean[i] += iptr[i]/d_number_of_vector;
+        d_vector_mean[i] += (1.0/(double)d_number_of_vector)*iptr[i];
 		for(j = 0; j < d_smooth_factor; j++){
 			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*(std::conj(iptr[j]));
             //if(i == j) printf("%e + j%e", std::real(d_sampcov_store[i*d_smooth_factor + j]),
