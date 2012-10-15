@@ -39,6 +39,8 @@ class top_block(grc_wxgui.top_block_gui):
 
 	        self.connect((self.gr_file_source_0, 0), self.s2v)
 		self.connect(self.s2v, self.sampcov)
+        self.connect(self.gr_file_source_0, gr.file_sink(gr.sizeof_gr_complex, "origin.dat"))
+        self.connnect(self.s2v, gr.file_sink(gr.sizeof_gr_complex*32, "vector.dat"))
 		self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "/home/alexzh/Dropbox/Public/sampcov.dat"))
 		self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "/home/alexzh/Dropbox/Public/sampcovind.dat"))        
 
