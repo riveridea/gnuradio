@@ -27,7 +27,7 @@
 #include <digital_trace_calculator.h>
 #include <gr_io_signature.h>
 #include <string.h>
-#include <iostream>
+#include <stdio.h>
 
 digital_trace_calculator_sptr
 digital_make_trace_calculator (unsigned int smooth_factor)
@@ -72,13 +72,14 @@ digital_trace_calculator::general_work (int noutput_items,
       for(i = 0; i < d_smooth_factor; i++){
     	out[0] += in[i*d_smooth_factor].real();
       }
-      ret = noutput_items;
+      printf("noutput_item = %d \n", noutput_items);
+      ret = 1;
   }
   else{
-    std::cout<< "matrix messed up \n";            
+    printf("matrix messed up \n");            
     ret = -2;
   }
 
-  std::cout << "trace is %e \n" << out[0];
+  printf("trace is %e \n", out[0]);
   return ret;
 }
