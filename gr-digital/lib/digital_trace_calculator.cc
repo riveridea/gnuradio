@@ -36,7 +36,7 @@ digital_make_trace_calculator (unsigned int smooth_factor)
 
 digital_trace_calculator::digital_trace_calculator (unsigned int smooth_factor)
   : gr_sync_decimator ("stream_to_vector",
-		       gr_make_io_signature (1, 1, sizeof (gr_complex)),
+		       gr_make_io_signature (2, 2, sizeof (gr_complex)),
 		       gr_make_io_signature (1, 1, sizeof (float)),
 		       smooth_factor*smooth_factor),
     d_smooth_factor(smooth_factor)
@@ -49,13 +49,25 @@ digital_trace_calculator::work (int noutput_items,
 			     gr_vector_void_star &output_items)
 {
   const gr_complex *in = (const gr_complex *) input_items[0];
+  const char *signal_in = (const char *)input_items[1];
+
+  int ret;
+  
   float *out = (float *) output_items[0];
   
   unsigned int i;
   out[0] = 0;
-  for(i = 0; i < d_smooth_factor; i++){
-	out[0] += in[i*d_smooth_factor].real();
+  if(signal_in[0] == 1){ 
+      for(i = 0; i < d_smooth_factor; i++){
+    	out[0] += in[i*d_smooth_factor].real();
+      }
+      ret = noutput_items;
+  }
+  else{
+    printf("matrix messed up");            
+    ret = noutput_items;
   }
 
-  return noutput_items;
+  printf("trace is %e \n", out[0]);
+  return ret;
 }
