@@ -84,7 +84,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
 		for(j = 0; j < d_smooth_factor; j++){
-			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*iptr[j];
+			d_sampcov_store[i*d_smooth_factor + j] = iptr[i]*(std::conj(iptr[j]));
 		}
 	}
 	d_round_ind++;
