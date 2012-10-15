@@ -80,7 +80,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   unsigned int i, j;
   int  ret;
 
-  printf("digital_sampcov_matrix_calculator::general_work, %d", noutput_items);
+  //printf("digital_sampcov_matrix_calculator::general_work, %d", noutput_items);
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
 		for(j = 0; j < d_smooth_factor; j++){
@@ -102,6 +102,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	}
 	else if(d_round_ind < d_number_of_vector){
 		// need to wait the next round of vector
+		printf("waiting next vector, %d", d_round_ind);
 		ret = -2;
 	}
 	else{
