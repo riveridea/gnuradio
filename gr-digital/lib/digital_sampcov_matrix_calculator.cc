@@ -82,7 +82,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   unsigned int i, j;
   int  ret;
 
-  double scale = 1.0/(double)d_number_of_vector;
+  const double scale = (const double)(1.0/(double)d_number_of_vector);
   //printf("digital_sampcov_matrix_calculator::general_work, %d", noutput_items);
   if(d_sampcov_store.size() == length){
 	for(i = 0; i < d_smooth_factor; i++){
