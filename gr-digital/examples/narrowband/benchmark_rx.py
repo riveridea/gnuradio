@@ -64,6 +64,8 @@ class my_top_block(gr.top_block):
             
             self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32,800)
             self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32) 
+
+			self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
             
             self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             print 'In locking '
@@ -88,9 +90,13 @@ class my_top_block(gr.top_block):
         self.connect(self.source, self.s2v)
         self.connect(self.s2v, self.sampcov)
         self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
-        self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
-        self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
-        
+        #self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
+        #self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
+
+		self.connect((self.sampcov, 0), (self.tracer, 0))
+		self.connect((self.sampcov, 1), (self.tracer, 1))
+		self.connect(self.tracer, self.gr_file_sink3)		
+ 
         self.timer = threading.Timer(1, self.start_streaming)
 
 
