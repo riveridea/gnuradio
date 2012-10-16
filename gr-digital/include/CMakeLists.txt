@@ -126,6 +126,7 @@ install(FILES
 	digital_sampcov_matrix_calculator.h
 	digital_trace_calculator.h
 	digital_sampcov_matrix_generator.h
+	digital_eigen_herm.h
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio
     COMPONENT "digital_devel"
 )

@@ -22,6 +22,8 @@
 ########################################################################
 include(GrBoost)
 
+find_package(GSL)
+
 ########################################################################
 # Register component
 ########################################################################
@@ -29,6 +31,7 @@ include(GrComponent)
 GR_REGISTER_COMPONENT("gr-digital" ENABLE_GR_DIGITAL
     Boost_FOUND
     ENABLE_GR_CORE
+	GSL_FOUND
 )
 
 GR_SET_GLOBAL(GR_DIGITAL_INCLUDE_DIRS

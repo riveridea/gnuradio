@@ -82,7 +82,6 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   // update the sample covariance matrix
   unsigned int i, j;
   int  ret;
-  //int  t1 = clock(), t2;
 
   struct timespec t1, t2;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
@@ -141,12 +140,10 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	ret = -2;
   }
 
-  //t2 = clock();
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
-  //int difft = t2 - t1;
   double diff_s = difftime(t2.tv_sec, t1.tv_sec);
   double diff_ns = t2.tv_nsec - t1.tv_nsec;
-  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  //printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   consume_each(1);
   return ret;
 }

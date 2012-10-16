@@ -29,9 +29,15 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}/../include
 )
 
-include_directories(${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
-
+include_directories(
+	${Boost_INCLUDE_DIRS}
+	${GSL_INCLUDE_DIRS}
+)
+link_directories(
+	${Boost_LIBRARY_DIRS}
+	${GSL_LIBRARY_DIRS}
+)
+add_definitions(${GSL_DEFINITIONS})
 
 ########################################################################
 # generate helper scripts to expand templated files
@@ -141,11 +147,13 @@ list(APPEND gr_digital_sources
 	digital_sampcov_matrix_calculator.cc
 	digital_trace_calculator.cc
 	digital_sampcov_matrix_generator.cc
+	digital_eigen_herm.cc
 )
 
 list(APPEND digital_libs
     gnuradio-core
     ${Boost_LIBRARIES}
+	${GSL_LIBRARIES}
 )
 
 add_library(gnuradio-digital SHARED ${gr_digital_sources})
