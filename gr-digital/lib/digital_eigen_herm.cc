@@ -78,7 +78,6 @@ digital_eigen_herm::general_work (int noutput_items,
   
   float *out = (float *) output_items[0];
   
-  unsigned int i;
   out[0] = 0;
 
   struct timespec t1, t2;
@@ -92,7 +91,7 @@ digital_eigen_herm::general_work (int noutput_items,
           for(j = 0; j < ds; j++)
           {
               gsl_matrix_complex_set(A, i, j, 
-                         gsl_complex_rect(std:real(in[i*ds+j]), std::imag(in[i*ds+j])));
+                         gsl_complex_rect(std::real(in[i*ds+j]), std::imag(in[i*ds+j])));
           }
       }
       
