@@ -29,10 +29,12 @@ class top_block(grc_wxgui.top_block_gui):
 		self.gr_file_sink1 = gr.file_sink(gr.sizeof_gr_complex*32*32, "/home/alexzh/Dropbox/Public/sampcov.dat")
  		self.gr_file_sink2 = gr.file_sink(gr.sizeof_char*32*32, "/home/alexzh/Dropbox/Public/sampcovind.dat")
 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
+		self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*32, "/home/alexzh/Dropbox/Public/trace.dat")
 
 		#self.gr_file_sink_2 = gr.file_sink(gr.sizeof_gr_complex*1, "test.dat")
 		#self.gr_file_sink_2.set_unbuffered(False)
-		self.tracer = digital.digital_swig.trace_calculator(32)
+		#self.tracer = digital.digital_swig.trace_calculator(32)
+		self.eval = digital.digital_swig.eigen_herm(32)
 
 		self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32)
 		self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32, 100)        
@@ -49,9 +51,12 @@ class top_block(grc_wxgui.top_block_gui):
 		#self.connect(self.s2v, gr.file_sink(gr.sizeof_gr_complex*32, "vector.dat"))
 		#self.connect((self.sampcov, 0), self.gr_file_sink1)
 		#self.connect((self.sampcov, 1), self.gr_file_sink2)
-		self.connect((self.sampcov, 0), (self.tracer, 0))
-		self.connect((self.sampcov, 1), (self.tracer, 1))
-		self.connect(self.tracer, self.gr_file_sink3)
+		#self.connect((self.sampcov, 0), (self.tracer, 0))
+		#self.connect((self.sampcov, 1), (self.tracer, 1))
+		self.connect((self.sampcov, 0), (self.eval, 0))
+		self.connect((self.sampcov, 1), (self.eval, 1))
+		#self.connect(self.tracer, self.gr_file_sink3)
+		self.connect(self.eval, self.gr_file_sink4)
 
 
 if __name__ == '__main__':
