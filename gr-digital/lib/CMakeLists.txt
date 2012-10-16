@@ -18,7 +18,7 @@
 # Boston, MA 02110-1301, USA.
 
 
-set(CMAKE_REQUIRED_LIBRARIES -lrt)
+#set(CMAKE_REQUIRED_LIBRARIES -lrt)
 
 ########################################################################
 # Setup the include and linker paths
