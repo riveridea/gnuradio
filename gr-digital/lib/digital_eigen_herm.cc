@@ -74,6 +74,7 @@ digital_eigen_herm::general_work (int noutput_items,
   const char *signal_in = (const char *)input_items[1];
 
   int ret;
+  int ds = d_smooth_factor;
   
   float *out = (float *) output_items[0];
   
@@ -85,45 +86,39 @@ digital_eigen_herm::general_work (int noutput_items,
   
   if(signal_in[0] == 1){ 
       int i, j;
-      gsl_complex *data = new gsl_complex[16];
-      for(i = 0; i < 4; i++)
+      gsl_matrix_complex *A = gsl_matrix_complex_alloc(ds, ds);
+      for(i = 0; i < ds; i++)
       {
-          for(j = 0; j < 4; j++)
+          for(j = 0; j < ds; j++)
           {
-                  data[i*4 + j] = (i < j)?gsl_complex_rect(i,j):data[j*4 + i];
-          }
-      }
-
-      gsl_matrix_complex *A = gsl_matrix_complex_alloc(4, 4 );
-      for(i = 0; i < 4; i++)
-      {
-          for(j = 0; j < 4; j++)
-          {
-              gsl_matrix_complex_set(A, i, j, data[i*4+j]);
+              gsl_matrix_complex_set(A, i, j, 
+                         gsl_complex_rect(std:real(in[i*ds+j]), std::imag(in[i*ds+j])));
           }
       }
       
-      gsl_vector *eval = gsl_vector_alloc (4);
+      gsl_vector *eval = gsl_vector_alloc (ds);
       
-      gsl_eigen_herm_workspace * w = gsl_eigen_herm_alloc (4);   
+      gsl_eigen_herm_workspace * w = gsl_eigen_herm_alloc (ds);   
       gsl_eigen_herm(A, eval, w);
       gsl_eigen_herm_free (w);
       
       {
           int i;
           
-          for (i = 0; i < 4; i++)
+          for (i = 0; i < ds; i++)
           {
               double eval_i 
                   = gsl_vector_get (eval, i);
+              out[i] = eval_i;
           
               printf ("eigenvalue = %g\n", eval_i);
-              printf ("eigenvector = \n");
 
           }
       }
+
       
       gsl_vector_free (eval);
+      gsl_matrix_complex_free (A) ;
 
       ret = 1;
   }
