@@ -82,7 +82,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   // update the sample covariance matrix
   unsigned int i, j;
   int  ret;
-  int  t = 0;
+  int  t1 = clock(), t2;
 
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
@@ -138,8 +138,9 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	ret = -2;
   }
 
-  t = clock();
-  printf ("It took me %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
+  t2 = clock();
+  int difft = t2 - t1;
+  printf ("It took me %d clicks (%f seconds).\n",difft,((float)difft)/CLOCKS_PER_SEC);
   consume_each(1);
   return ret;
 }
