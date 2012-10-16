@@ -24,6 +24,7 @@
 #define INCLUDED_DIGITAL_EIGEN_HERM_H
 
 #include <digital_api.h>
+#include <gr_block.h>
 
 class digital_eigen_herm;
 typedef boost::shared_ptr<digital_eigen_herm> digital_eigen_herm_sptr;
