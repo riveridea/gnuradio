@@ -28,6 +28,7 @@
 #include <gr_io_signature.h>
 #include <gr_expj.h>
 #include <cstdio>
+#include <time.h>
 
 digital_sampcov_matrix_calculator_sptr
 digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
@@ -81,6 +82,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   // update the sample covariance matrix
   unsigned int i, j;
   int  ret;
+  int  t = 0;
 
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
@@ -135,7 +137,9 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
     d_round_ind = 0;
 	ret = -2;
   }
-  
+
+  t = clock();
+  printf ("It took me %d clicks (%f seconds).\n",t,((float)t)/CLOCKS_PER_SEC);
   consume_each(1);
   return ret;
 }
