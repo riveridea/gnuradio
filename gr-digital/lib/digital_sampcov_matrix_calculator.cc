@@ -85,7 +85,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   //int  t1 = clock(), t2;
 
   struct timespec t1, t2;
-  clock_gettime(CLOCK_THREAD_CPUTIME_ID, &t1);
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
@@ -142,11 +142,11 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   }
 
   //t2 = clock();
-  clock_gettime(CLOCK_THREAD_CPUTIME_ID, &t2);
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   //int difft = t2 - t1;
-  double diff_s = difftime(t2.tv_sec,t1.tv_sec);
+  double diff_s = difftime(t2.tv_sec, t1.tv_sec);
   double diff_ns = t2.tv_nsec - t1.tv_nsec;
-  printf ("It took me %d seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   consume_each(1);
   return ret;
 }
