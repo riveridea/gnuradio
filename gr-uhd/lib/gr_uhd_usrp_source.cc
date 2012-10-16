@@ -412,7 +412,7 @@ public:
     }
 
     void set_start_time(const uhd::time_spec_t &time){
-        printf("set_start_time successfully\n");
+        fprintf(stderr, "set_start_time successfully\n");
         _start_time = time;
         _start_time_set = true;
         _stream_now = false;
@@ -443,11 +443,11 @@ public:
         if (_start_time_set){
             _start_time_set = false; //cleared for next run
             stream_cmd.time_spec = _start_time;
-            printf("start as specified time \n");
+            fprintf(stderr, "start as specified time \n");
         }
         else{
             stream_cmd.time_spec = get_time_now() + uhd::time_spec_t(reasonable_delay);
-            printf("start with no specified time \n");
+            fprintf(stderr, "start with no specified time \n");
         }
         _dev->issue_stream_cmd(stream_cmd);
         _tag_now = true;
