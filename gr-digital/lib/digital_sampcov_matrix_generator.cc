@@ -42,13 +42,13 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*vector_length*number_of_vector),
 	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*vector_length*vector_length, sizeof(char))),
 	d_vector_length(vector_length), 
-	d_number_of_vector(number_of_vector),
+	d_number_of_vector(number_of_vector)
 {
   set_relative_rate((double)(vector_length)/(double)(number_of_vector));   // buffer allocator hint
   
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
-  d_vector_mean.resize(d_smooth_factor);
+  d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
   
   set_output_multiple (vector_length*vector_length); // ensure the noutput items are alwyas the multiple of vector_length
@@ -79,7 +79,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   double diff_s, diff_ns;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
   
-  int i, j, k;
+  unsigned int i, j, k;
   gr_complex mean = 0;
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
@@ -92,7 +92,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 		for(k = 0; k < d_vector_length; k++)
 		{
 			d_sampcov_store[j*d_vector_length + k] += 
-				scale2*iptr[i*d_vector_length + k]*(std::conj(iptr[i*d_vector_length + j]))
+				scale2*iptr[i*d_vector_length + k]*(std::conj(iptr[i*d_vector_length + j]));
 			//d_sampcov_store[i*d_smooth_factor + j] += scale2*iptr[j]*(std::conj(iptr[i]));
 		}
 	}
