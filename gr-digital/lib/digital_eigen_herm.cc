@@ -62,7 +62,10 @@ digital_eigen_herm::~digital_eigen_herm (void)
     // free all the memory for eigen value computing
     if(w)       gsl_eigen_herm_free (w);
     if(eval)    gsl_vector_free (eval);
-    if(A)       gsl_matrix_complex_free (A) ;  
+    if(A)       gsl_matrix_complex_free (A);  
+    w = NULL;
+    eval = NULL;
+    A = NULL;
 }
 
 void
@@ -126,8 +129,8 @@ digital_eigen_herm::general_work (int noutput_items,
       }
 
       
-      gsl_vector_free (eval);
-      gsl_matrix_complex_free (A) ;
+      //gsl_vector_free (eval);
+      //gsl_matrix_complex_free (A) ;
 
       ret = 1;
   }
