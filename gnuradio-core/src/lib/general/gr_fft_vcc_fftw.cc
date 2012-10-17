@@ -98,13 +98,13 @@ gr_fft_vcc_fftw::work (int noutput_items,
     }
     else {
       if(!d_forward && d_shift) {  // apply an ifft shift on the data
-	gr_complex *dst = d_fft->get_inbuf();
-	unsigned int len = (unsigned int)(floor(d_fft_size/2.0)); // half length of complex array
-	memcpy(&dst[0], &in[len], sizeof(gr_complex)*(d_fft_size - len));
-	memcpy(&dst[d_fft_size - len], &in[0], sizeof(gr_complex)*len);
+	    gr_complex *dst = d_fft->get_inbuf();
+	    unsigned int len = (unsigned int)(floor(d_fft_size/2.0)); // half length of complex array
+	    memcpy(&dst[0], &in[len], sizeof(gr_complex)*(d_fft_size - len));
+	    memcpy(&dst[d_fft_size - len], &in[0], sizeof(gr_complex)*len);
       }
       else {
-	memcpy (d_fft->get_inbuf(), in, input_data_size);
+	    memcpy (d_fft->get_inbuf(), in, input_data_size);
       }
     }
 
