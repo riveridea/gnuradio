@@ -22,11 +22,13 @@
 GR_SWIG_BLOCK_MAGIC(digital,sampcov_matrix_calculator)
 
 digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
-																			unsigned int number_of_vector);
+																			unsigned int number_of_vector,
+																			unsigned int interval_cnt);
 
 class digital_sampcov_matrix_calculator : public gr_sync_block
 {
  private:
   digital_sampcov_matrix_calculator(unsigned int smooth_factor, 
-									unsigned int number_of_vector);
+									unsigned int number_of_vector,
+									unsigned int interval_cnt);
 };

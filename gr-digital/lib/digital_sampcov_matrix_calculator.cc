@@ -32,9 +32,10 @@
 
 digital_sampcov_matrix_calculator_sptr
 digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
-										unsigned int number_of_vector)
+										unsigned int number_of_vector,
+										unsigned int interval_cnt)
 {
-  return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector));
+  return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector, interval_cnt));
 }
 
 digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
@@ -97,7 +98,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   
   d_round_ind++;
   if(d_round_ind == d_number_of_vector)  
-    d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind++);
+    d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind + 1);
 
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);

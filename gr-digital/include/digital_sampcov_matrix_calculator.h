@@ -30,7 +30,8 @@ class digital_sampcov_matrix_calculator;
 typedef boost::shared_ptr<digital_sampcov_matrix_calculator> digital_sampcov_matrix_calculator_sptr;
 
 DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator(	unsigned int smooth_factor, 
-																							unsigned int number_of_vector);
+																							unsigned int number_of_vector,
+																							unsigned int interval_cnt);
 
 /*!
  * \brief caclulate the sample covariance matrix for the incoming samples
