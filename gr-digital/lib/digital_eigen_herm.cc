@@ -60,12 +60,18 @@ digital_eigen_herm::digital_eigen_herm (unsigned int smooth_factor)
 digital_eigen_herm::~digital_eigen_herm (void)
 {
     // free all the memory for eigen value computing
-    if(w)       gsl_eigen_herm_free (w);
-    if(eval)    gsl_vector_free (eval);
-    if(A)       gsl_matrix_complex_free (A);  
-    w = NULL;
-    eval = NULL;
-    A = NULL;
+    if(w){
+        gsl_eigen_herm_free (w);
+        w = NULL;
+    }
+    if(eval){
+        gsl_vector_free (eval);
+        eval = NULL;
+    }
+    if(A){
+        gsl_matrix_complex_free (A); 
+        A = NULL;
+    }
 }
 
 void

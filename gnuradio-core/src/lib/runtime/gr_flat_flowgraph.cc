@@ -35,7 +35,7 @@
 #define GR_FLAT_FLOWGRAPH_DEBUG 0
 
 // 32Kbyte buffer size between blocks
-#define GR_FIXED_BUFFER_SIZE (32*(1L<<10))
+#define GR_FIXED_BUFFER_SIZE (512*(1L<<10))
 
 static const unsigned int s_fixed_buffer_size = GR_FIXED_BUFFER_SIZE;
 
