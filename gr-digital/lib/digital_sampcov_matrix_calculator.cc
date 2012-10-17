@@ -86,21 +86,34 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   
   // update the sample covariance matrix
   unsigned int i, j;
-  int  ret;
+  int  ret, flag = 0, flag2 = 0;
 
   struct timespec t1, t2;
+  double diff_s, diff_ns;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
   d_round_ind++;
 
-  if(d_interval_ind != 0 ){
-    consume_each(1); // the coming d_smooth_factor items will not be used
+  if(d_interval_ind != 0) flag2 = 1;
+
+  if(d_round_ind == d_number_of_vector){
+    flag = 1;
+    d_round_ind = 0;
+    d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind + 1);
+  }
+
+  if(flag2 == 1){
+    consume_each(1);
+    if(flag == 1){
+        clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
+        diff_s = difftime(t2.tv_sec, t1.tv_sec);
+        diff_ns = t2.tv_nsec - t1.tv_nsec;
+        printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+    }
     return -2;
   }
-  
-  if(d_round_ind == d_number_of_vector)  
-    d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind + 1);
 
+  
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
   float scale3 = scale1/scale2;
@@ -116,7 +129,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		}
 	}
 	
-	if(d_round_ind == d_number_of_vector){
+	if(flag == 1){
 		// done with the sample covariance matrix, move them to the output 
 		// Add the mean items 
 		for(i=0; i < d_smooth_factor; i++){
@@ -135,7 +148,6 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 
         printf("1 sample convariance matrix generated \n");
 		
-		d_round_ind = 0;
 		ret = 1;
 	}
 	else if(d_round_ind < d_number_of_vector){
@@ -155,10 +167,12 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 	ret = -2;
   }
 
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
-  double diff_s = difftime(t2.tv_sec, t1.tv_sec);
-  double diff_ns = t2.tv_nsec - t1.tv_nsec;
-  if(ret == 1)  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   consume_each(1);
+
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
+  diff_s = difftime(t2.tv_sec, t1.tv_sec);
+  diff_ns = t2.tv_nsec - t1.tv_nsec;
+  if(ret == 1)  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  
   return ret;
 }
