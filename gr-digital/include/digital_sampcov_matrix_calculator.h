@@ -41,11 +41,11 @@ class DIGITAL_API digital_sampcov_matrix_calculator : public gr_block
 {
   friend DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator( unsigned int smooth_factor, 
 																									unsigned int number_of_vector,
-																									unsigned int interval_cnt);
+																									unsigned int interval_cnt = 0);
 
   digital_sampcov_matrix_calculator(unsigned int smooth_factor, 
 									unsigned int number_of_vector,
-									unsigned int interval_cnt);
+									unsigned int interval_cnt = 0);
 
  private:
   unsigned int d_smooth_factor;

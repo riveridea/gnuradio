@@ -33,14 +33,14 @@
 digital_sampcov_matrix_calculator_sptr
 digital_make_sampcov_matrix_calculator (unsigned int smooth_factor, 
 										unsigned int number_of_vector,
-										unsigned int interval_cnt)
+										unsigned int interval_cnt = 0)
 {
   return gnuradio::get_initial_sptr(new digital_sampcov_matrix_calculator (smooth_factor, number_of_vector, interval_cnt));
 }
 
 digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
 					    unsigned int number_of_vector,
-					    unsigned int interval_cnt)
+					    unsigned int interval_cnt = 0)
   : gr_block ("sampcov_matrix_calculator",
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*smooth_factor),
 	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
@@ -92,7 +92,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
   if(d_interval_ind != 0 ){
-    consume_each(d_smooth_factor); // the coming d_smooth_factor items will not be used
+    consume_each(1); // the coming d_smooth_factor items will not be used
     return -2;
   }
   
