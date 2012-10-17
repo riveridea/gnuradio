@@ -90,7 +90,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 
   struct timespec t1, t2;
   double diff_s, diff_ns;
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
+  //clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
   d_round_ind++;
 
@@ -105,9 +105,9 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   if(flag2 == 1){
     consume_each(1);
     if(flag == 1){
-        clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
-        diff_s = difftime(t2.tv_sec, t1.tv_sec);
-        diff_ns = t2.tv_nsec - t1.tv_nsec;
+        //clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
+        //diff_s = difftime(t2.tv_sec, t1.tv_sec);
+        //diff_ns = t2.tv_nsec - t1.tv_nsec;
         //printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
     }
     return -2;
