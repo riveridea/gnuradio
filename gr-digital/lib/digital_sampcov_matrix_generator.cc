@@ -44,14 +44,14 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
 	d_vector_length(vector_length), 
 	d_number_of_vector(number_of_vector)
 {
-  set_relative_rate((double)(vector_length)/(double)(number_of_vector));   // buffer allocator hint
+  //set_relative_rate((double)(vector_length)/(double)(number_of_vector));   // buffer allocator hint
   
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
   
-  set_output_multiple (vector_length*vector_length); // ensure the noutput items are alwyas the multiple of vector_length
+  //set_output_multiple (vector_length*vector_length); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
 void
