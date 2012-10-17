@@ -29,7 +29,7 @@ class top_block(grc_wxgui.top_block_gui):
 		self.gr_file_sink1 = gr.file_sink(gr.sizeof_gr_complex*32*32, "/home/alexzh/Dropbox/Public/sampcov.dat")
  		self.gr_file_sink2 = gr.file_sink(gr.sizeof_char*32*32, "/home/alexzh/Dropbox/Public/sampcovind.dat")
 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
-		self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*32, "/home/alexzh/Dropbox/Public/trace.dat")
+		self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*32, "eigenvalue.dat")
 
 		#self.gr_file_sink_2 = gr.file_sink(gr.sizeof_gr_complex*1, "test.dat")
 		#self.gr_file_sink_2.set_unbuffered(False)
