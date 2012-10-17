@@ -91,12 +91,13 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   struct timespec t1, t2;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
+  d_round_ind++;
+
   if(d_interval_ind != 0 ){
     consume_each(1); // the coming d_smooth_factor items will not be used
     return -2;
   }
   
-  d_round_ind++;
   if(d_round_ind == d_number_of_vector)  
     d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind + 1);
 
