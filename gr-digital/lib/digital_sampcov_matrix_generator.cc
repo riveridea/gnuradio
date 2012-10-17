@@ -39,18 +39,19 @@ digital_make_sampcov_matrix_generator (unsigned int vector_length,
 digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int vector_length, 
 					    unsigned int number_of_vector)
   : gr_block ("sampcov_matrix_generator",
-	      gr_make_io_signature (1, 1, sizeof (gr_complex)),
-	      gr_make_io_signature2 (2, 2, sizeof (gr_complex), sizeof(char))),
+	      gr_make_io_signature (1, 1, sizeof (gr_complex)*vector_length*number_of_vector),
+	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*vector_length*vector_length, sizeof(char))),
 	d_vector_length(vector_length), 
 	d_number_of_vector(number_of_vector),
-	d_round_ind(0)
 {
-  set_relative_rate(1.0/(double) vector_length);   // buffer allocator hint
+  set_relative_rate((double)(vector_length)/(double)(number_of_vector));   // buffer allocator hint
   
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+  d_vector_mean.resize(d_smooth_factor);
+  std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
   
-  set_output_multiple (vector_length); // ensure the noutput items are alwyas the multiple of vector_length
+  set_output_multiple (vector_length*vector_length); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
 void
@@ -58,10 +59,9 @@ digital_sampcov_matrix_generator::forecast (int noutput_items, gr_vector_int &ni
 {
   // Each time we just need d_vector_length samples and calcuate the smooth_factor*smooth_factor elements to fill
   // the output covariance matrix
-  int nreqd  = d_vector_length;
   unsigned ninputs = ninput_items_required.size ();
   for (unsigned i = 0; i < ninputs; i++)
-    ninput_items_required[i] = nreqd;
+    ninput_items_required[i] = 1;
 }
 
 int
@@ -74,48 +74,50 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 
   gr_complex *optr = (gr_complex *) output_items[0]; // output the sample covariance matrix
   char *outsig = (char *) output_items[1];  
+
+  struct timespec t1, t2;
+  double diff_s, diff_ns;
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
   
-  unsigned int index, length = d_vector_length*d_vector_length;
-  for(index = 0; index < length; index++) outsig[index] = 0;
-  
-  // update the sample covariance matrix
-  unsigned int i, j;
-  int  ret;
-  if(d_sampcov_store.size() == length){
-	for(i = 0; i < d_vector_length; i++){
-		for(j = 0; j < d_vector_length; j++){
-			d_sampcov_store[i*d_vector_length + j] = iptr[i]*iptr[j];
+  int i, j, k;
+  gr_complex mean = 0;
+  float scale1 = 1.0/(float)(d_number_of_vector);
+  float scale2 = 1.0/(float)(d_number_of_vector - 1);
+  float scale3 = scale1/scale2;
+  for(i = 0; i < d_number_of_vector; i++)
+  {
+	for(j = 0; j < d_vector_length; j++)
+	{
+		d_vector_mean[j] += scale1*iptr[i*d_vector_length + j];
+		for(k = 0; k < d_vector_length; k++)
+		{
+			d_sampcov_store[j*d_vector_length + k] += 
+				scale2*iptr[i*d_vector_length + k]*(std::conj(iptr[i*d_vector_length + j]))
+			//d_sampcov_store[i*d_smooth_factor + j] += scale2*iptr[j]*(std::conj(iptr[i]));
 		}
 	}
-	d_round_ind++;
-	if(d_round_ind == d_number_of_vector){
-		// done with the sample covariance matrix, move them to the output 
-		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
-		outsig[0] = 1;// indicate the start of the covariance matrix
-		// reset the store
-		std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
-
-        printf("1 sample convariance matrix generated \n");
-		
-		d_round_ind = 0;
-		ret = 1;
-	}
-	else if(d_round_ind < d_number_of_vector){
-		// need to wait the next round of vector
-		ret = -2;
-	}
-	else{
-		printf("error in number of vector \n");
-        d_round_ind = 0;
-		ret = -2;
-	}
-  }
-  else{ 
-	printf("error in d_sampcov_store size \n");
-    d_round_ind = 0;
-	ret = -2;
   }
   
+  for(i=0; i < d_vector_length; i++){
+	//printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
+    for(j = 0; j < d_vector_length; j++){
+        d_sampcov_store[i*d_vector_length + j] -= 
+            scale3*d_vector_mean[j]*(std::conj(d_vector_mean[i]));
+    }
+  }
+
+  std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
+  outsig[0] = 1;// indicate the start of the covariance matrix
+
+  std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+  std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
+		
   consume_each(1);
-  return ret;
+
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
+  diff_s = difftime(t2.tv_sec, t1.tv_sec);
+  diff_ns = t2.tv_nsec - t1.tv_nsec;
+  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  
+  return 1;
 }

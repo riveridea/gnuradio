@@ -143,8 +143,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
 		outsig[0] = 1;// indicate the start of the covariance matrix
 		// reset the store
-		//std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
-        //std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
+		std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+        std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
 
         printf("1 sample convariance matrix generated \n");
 		

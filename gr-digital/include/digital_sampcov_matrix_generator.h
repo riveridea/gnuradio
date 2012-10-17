@@ -47,11 +47,9 @@ class DIGITAL_API digital_sampcov_matrix_generator : public gr_block
  private:
   unsigned int d_vector_length;
   unsigned int d_number_of_vector;
-  unsigned int d_vec_ind; //the vector index in processing 
-  unsigned int d_len_ind; //the sample index within the current vector in processing 
-  unsigned int d_round_ind;
   
   std::vector<gr_complex> d_sampcov_store;
+  std::vector<gr_complex> d_vector_mean;
 
  public:
   void forecast (int noutput_items, gr_vector_int &ninput_items_required);
