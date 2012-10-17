@@ -108,7 +108,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
         diff_s = difftime(t2.tv_sec, t1.tv_sec);
         diff_ns = t2.tv_nsec - t1.tv_nsec;
-        printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+        //printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
     }
     return -2;
   }
@@ -172,7 +172,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   diff_s = difftime(t2.tv_sec, t1.tv_sec);
   diff_ns = t2.tv_nsec - t1.tv_nsec;
-  if(ret == 1)  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  //if(ret == 1)  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   
   return ret;
 }
