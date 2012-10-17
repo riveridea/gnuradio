@@ -129,7 +129,7 @@ digital_eigen_herm::general_work (int noutput_items,
                   = gsl_vector_get (eval, i);
               out[i] = eval_i;
           
-              printf ("eigenvalue = %g\n", eval_i);
+              //printf ("eigenvalue = %g\n", eval_i);
 
           }
       }
@@ -151,7 +151,7 @@ digital_eigen_herm::general_work (int noutput_items,
   //int difft = t2 - t1;
   double diff_s = difftime(t2.tv_sec, t1.tv_sec);
   double diff_ns = t2.tv_nsec - t1.tv_nsec;
-  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  //printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   
   consume_each(1);
   return ret;
