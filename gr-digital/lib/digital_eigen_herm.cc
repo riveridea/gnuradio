@@ -52,6 +52,17 @@ digital_eigen_herm::digital_eigen_herm (unsigned int smooth_factor)
 		       gr_make_io_signature (1, 1, sizeof (float)*smooth_factor)),
     d_smooth_factor(smooth_factor)
 {
+    A = gsl_matrix_complex_alloc(smooth_factor, smooth_factor);
+    eval = gsl_vector_alloc (smooth_factor);
+    w = gsl_eigen_herm_alloc (smooth_factor);
+}
+
+digital_eigen_herm::~digital_eigen_herm (void)
+{
+    // free all the memory for eigen value computing
+    if(w)       gsl_eigen_herm_free (w);
+    if(eval)    gsl_vector_free (eval);
+    if(A)       gsl_matrix_complex_free (A) ;  
 }
 
 void
@@ -84,7 +95,7 @@ digital_eigen_herm::general_work (int noutput_items,
   if(signal_in[0] == 1){
       // Calculate the eigen values, as the incoming matrix should be hermitian!
       int i, j;
-      gsl_matrix_complex *A = gsl_matrix_complex_alloc(ds, ds);
+      //gsl_matrix_complex *A = gsl_matrix_complex_alloc(ds, ds);
       for(i = 0; i < ds; i++)
       {
           for(j = 0; j < ds; j++)
@@ -94,11 +105,11 @@ digital_eigen_herm::general_work (int noutput_items,
           }
       }
       
-      gsl_vector *eval = gsl_vector_alloc (ds);
+      //gsl_vector *eval = gsl_vector_alloc (ds);
       
-      gsl_eigen_herm_workspace * w = gsl_eigen_herm_alloc (ds);   
+      //gsl_eigen_herm_workspace * w = gsl_eigen_herm_alloc (ds);   
       gsl_eigen_herm(A, eval, w);
-      gsl_eigen_herm_free (w);
+      //gsl_eigen_herm_free (w);
       
       {
           int i;

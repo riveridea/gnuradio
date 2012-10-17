@@ -26,6 +26,15 @@
 #include <digital_api.h>
 #include <gr_block.h>
 
+#include <gsl/gsl_math.h>
+#include <gsl/gsl_eigen.h>
+#include <gsl/gsl_vector.h>
+#include <gsl/gsl_complex_math.h>
+#include <gsl/gsl_matrix_complex_double.h>
+#include <gsl/gsl_vector_double.h>
+#include <gsl/gsl_vector_complex.h>
+
+
 class digital_eigen_herm;
 typedef boost::shared_ptr<digital_eigen_herm> digital_eigen_herm_sptr;
 
@@ -47,7 +56,13 @@ class DIGITAL_API digital_eigen_herm : public gr_block
  private:
 	unsigned int d_smooth_factor;
 
+	// preallocated store for calculating the eigen value
+	gsl_matrix_complex *A;
+    gsl_vector *eval;
+    gsl_eigen_herm_workspace * w;
+
  public:
+ 	~digital_eigen_herm (void);
  	void forecast (int noutput_items, gr_vector_int &ninput_items_required);
 	int general_work (int noutput_items,
 						gr_vector_int &ninput_items,
