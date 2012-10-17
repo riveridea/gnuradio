@@ -27,6 +27,7 @@
 #include <gr_vector_to_stream.h>
 #include <gr_io_signature.h>
 #include <string.h>
+#include <ctime>
 
 gr_vector_to_stream_sptr
 gr_make_vector_to_stream (size_t item_size, size_t nitems_per_block)
@@ -47,12 +48,21 @@ gr_vector_to_stream::work (int noutput_items,
 			     gr_vector_const_void_star &input_items,
 			     gr_vector_void_star &output_items)
 {
+  struct timespec t1, t2;
+  double diff_s, diff_ns;
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
+
   size_t block_size = output_signature()->sizeof_stream_item (0);
 
   const char *in = (const char *) input_items[0];
   char *out = (char *) output_items[0];
 
   memcpy (out, in, noutput_items * block_size);
+
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
+  diff_s = difftime(t2.tv_sec, t1.tv_sec);
+  diff_ns = t2.tv_nsec - t1.tv_nsec;
+  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
 
   return noutput_items;
 }
