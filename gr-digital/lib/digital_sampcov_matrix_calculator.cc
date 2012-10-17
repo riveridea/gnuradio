@@ -38,13 +38,17 @@ digital_make_sampcov_matrix_calculator (unsigned int smooth_factor,
 }
 
 digital_sampcov_matrix_calculator::digital_sampcov_matrix_calculator (unsigned int smooth_factor, 
-					    unsigned int number_of_vector)
+					    unsigned int number_of_vector,
+					    unsigned int interval_cnt)
   : gr_block ("sampcov_matrix_calculator",
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*smooth_factor),
 	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor)),
 	d_smooth_factor(smooth_factor), 
 	d_number_of_vector(number_of_vector),
-	d_round_ind(0)
+    d_interval_cnt(interval_cnt),
+	d_round_ind(0),
+	d_interval_ind(0)
+
 {
   set_relative_rate(1.0/(double) smooth_factor);   // buffer allocator hint
   
@@ -86,6 +90,15 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   struct timespec t1, t2;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
 
+  if(d_interval_ind != 0 ){
+    consume_each(d_smooth_factor); // the coming d_smooth_factor items will not be used
+    return -2;
+  }
+  
+  d_round_ind++;
+  if(d_round_ind == d_number_of_vector)  
+    d_interval_ind = (d_interval_ind >= d_interval_cnt)?0:(d_interval_ind++);
+
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
   float scale3 = scale1/scale2;
@@ -100,7 +113,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
               //                            std::imag(d_sampcov_store[i*d_smooth_factor + j]));
 		}
 	}
-	d_round_ind++;
+	
 	if(d_round_ind == d_number_of_vector){
 		// done with the sample covariance matrix, move them to the output 
 		// Add the mean items 

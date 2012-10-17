@@ -39,15 +39,20 @@ DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_c
 class DIGITAL_API digital_sampcov_matrix_calculator : public gr_block
 {
   friend DIGITAL_API digital_sampcov_matrix_calculator_sptr digital_make_sampcov_matrix_calculator( unsigned int smooth_factor, 
-																									unsigned int number_of_vector);
+																									unsigned int number_of_vector,
+																									unsigned int interval_cnt);
 
   digital_sampcov_matrix_calculator(unsigned int smooth_factor, 
-									unsigned int number_of_vector);
+									unsigned int number_of_vector,
+									unsigned int interval_cnt);
 
  private:
   unsigned int d_smooth_factor;
   unsigned int d_number_of_vector;
+  unsigned int d_interval_cnt;  //store the interval count for sample covariance matrix
+
   unsigned int d_round_ind; //indicating the index of the first sample within the whole needed samples for each incoming item  
+  unsigned int d_interval_ind; // used for internal indicator of the interval count
   
   std::vector<gr_complex> d_sampcov_store;
   std::vector<gr_complex> d_vector_mean;
