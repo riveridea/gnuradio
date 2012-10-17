@@ -40,7 +40,7 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
 					    unsigned int number_of_vector)
   : gr_block ("sampcov_matrix_generator",
 	      gr_make_io_signature (1, 1, sizeof (gr_complex)*vector_length*number_of_vector),
-	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*vector_length*vector_length, sizeof(char))),
+	      gr_make_io_signature2 (2, 2, sizeof (gr_complex)*vector_length*vector_length, sizeof(char)*vector_length*vector_length)),
 	d_vector_length(vector_length), 
 	d_number_of_vector(number_of_vector)
 {
