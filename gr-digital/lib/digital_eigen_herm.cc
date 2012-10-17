@@ -145,8 +145,6 @@ digital_eigen_herm::general_work (int noutput_items,
     ret = -2;
   }
 
-  printf("trace is %e \n", out[0]);
-
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   //int difft = t2 - t1;
   double diff_s = difftime(t2.tv_sec, t1.tv_sec);
