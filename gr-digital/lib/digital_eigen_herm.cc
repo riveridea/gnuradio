@@ -47,7 +47,7 @@ digital_make_eigen_herm (unsigned int smooth_factor)
 }
 
 digital_eigen_herm::digital_eigen_herm (unsigned int smooth_factor)
-  : gr_block  ("stream_to_vector",
+  : gr_block  ("eigen_herm",
 		       gr_make_io_signature2 (2, 2, sizeof (gr_complex)*smooth_factor*smooth_factor, sizeof(char)*smooth_factor*smooth_factor),
 		       gr_make_io_signature (1, 1, sizeof (float)*smooth_factor)),
     d_smooth_factor(smooth_factor)
@@ -77,13 +77,12 @@ digital_eigen_herm::general_work (int noutput_items,
   int ds = d_smooth_factor;
   
   float *out = (float *) output_items[0];
-  
-  out[0] = 0;
 
   struct timespec t1, t2;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
   
-  if(signal_in[0] == 1){ 
+  if(signal_in[0] == 1){
+      // Calculate the eigen values, as the incoming matrix should be hermitian!
       int i, j;
       gsl_matrix_complex *A = gsl_matrix_complex_alloc(ds, ds);
       for(i = 0; i < ds; i++)
