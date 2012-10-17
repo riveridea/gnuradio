@@ -300,7 +300,7 @@ gr_block_executor::run_one_iteration()
       goto were_done;
 
     if (noutput_items == 0){		// we're output blocked
-      printf("BLKD_OUT occurs at %s \n", m->name());
+      std::cout << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << endl;
       LOG(*d_log << "  BLKD_OUT\n");
       return BLKD_OUT;
     }
