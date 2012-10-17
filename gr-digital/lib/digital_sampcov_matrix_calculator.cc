@@ -115,8 +115,8 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
 		std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
 		outsig[0] = 1;// indicate the start of the covariance matrix
 		// reset the store
-		std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
-        std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
+		//std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+        //std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
 
         printf("1 sample convariance matrix generated \n");
 		
@@ -143,7 +143,7 @@ digital_sampcov_matrix_calculator::general_work (int noutput_items,
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   double diff_s = difftime(t2.tv_sec, t1.tv_sec);
   double diff_ns = t2.tv_nsec - t1.tv_nsec;
-  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
+  if(ret == 1)  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);
   consume_each(1);
   return ret;
 }
