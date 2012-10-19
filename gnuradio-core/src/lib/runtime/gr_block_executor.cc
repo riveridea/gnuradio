@@ -212,7 +212,7 @@ gr_block_executor::run_one_iteration()
       goto were_done;
 
     if (noutput_items == 0){		// we're output blocked
-      std::cerr << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << std::endl;
+      //std::cerr << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << std::endl;
       LOG(*d_log << "  BLKD_OUT\n");
       return BLKD_OUT;
     }
@@ -257,7 +257,7 @@ gr_block_executor::run_one_iteration()
     LOG(*d_log << "  noutput_items = " << noutput_items << std::endl);
 
     if (noutput_items == 0){	// we're blocked on input
-      //std::cerr << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << std::endl;
+      //std::cerr << "!!!!!*****BLKD_IN occurs at gr block " << m->name() << std::endl;
       LOG(*d_log << "  BLKD_IN\n");
       return BLKD_IN;
     }
@@ -302,7 +302,7 @@ gr_block_executor::run_one_iteration()
       goto were_done;
 
     if (noutput_items == 0){		// we're output blocked
-      std::cerr << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << std::endl;
+      //std::cerr << "!!!!!*****BLKD_OUT occurs at gr block " << m->name() << std::endl;
       LOG(*d_log << "  BLKD_OUT\n");
       return BLKD_OUT;
     }

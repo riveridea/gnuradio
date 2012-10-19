@@ -75,9 +75,12 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   gr_complex *optr = (gr_complex *) output_items[0]; // output the sample covariance matrix
   char *outsig = (char *) output_items[1];  
 
-  struct timespec t1, t2;
+  //to test the time	
+  struct timespec te;
+  static struct timespec ts[2];
   double diff_s, diff_ns;
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t1);
+
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts[1]);
   
   unsigned int i, j, k;
   gr_complex mean = 0;
@@ -114,10 +117,11 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 		
   consume_each(1);
 
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
-  diff_s = difftime(t2.tv_sec, t1.tv_sec);
-  diff_ns = t2.tv_nsec - t1.tv_nsec;
-  //printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &te);
+  diff_s = difftime(te.tv_sec, ts[0].tv_sec);
+  diff_ns = te.tv_nsec - ts[0].tv_nsec;
+  ts[0] = ts[1]; // update the time of start for measurement of next time
+  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
   
   return 1;
 }

@@ -84,7 +84,7 @@ gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_item
     case gr_block_executor::BLKD_OUT:		// Wait for output buffer space.
       {
 	    gruel::scoped_lock guard(d->d_tpb.mutex);
-        std::cerr << "BLKD_OUT at " << block->name() << std::endl;
+        //std::cerr << "BLKD_OUT at " << block->name() << std::endl;
 	    while (!d->d_tpb.output_changed){
 
 	        // wait for output room or message
