@@ -51,15 +51,7 @@ gr_streams_to_vector::work (int noutput_items,
   int nstreams = input_items.size();
 
   static struct timespec ts[2];
-  double diff_s, diff_ns;
-
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts[1]);
-
-  diff_s = difftime(ts[1].tv_sec, ts[0].tv_sec);
-  diff_ns = ts[1].tv_nsec - ts[0].tv_nsec;
-  ts[0] = ts[1]; // update the time of start for measurement of next time
-
-  fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  double diff_s, diff_ns; 
 
   const char **inv = (const char **) &input_items[0];
   char *out = (char *) output_items[0];
