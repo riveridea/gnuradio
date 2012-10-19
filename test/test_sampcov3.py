@@ -14,12 +14,10 @@ from optparse import OptionParser
 import baz
 import wx
 
-class top_block(grc_wxgui.top_block_gui):
+class my_top_block(gr.top_block):
 
 	def __init__(self):
-		grc_wxgui.top_block_gui.__init__(self, title="Top Block")
-		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
+		gr.top_block.__init__(self)
 
 		##################################################
 		# Blocks
@@ -65,6 +63,6 @@ if __name__ == '__main__':
 	(options, args) = parser.parse_args()
 	if gr.enable_realtime_scheduling() != gr.RT_OK:
 		print "Error: failed to enable realtime scheduling."
-	tb = top_block()
-	tb.Run(True)
+	tb = my_top_block()
+	tb.run()
 
