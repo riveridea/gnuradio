@@ -76,11 +76,15 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   char *outsig = (char *) output_items[1];  
 
   //to test the time	
-  struct timespec te;
+  //struct timespec te;
   static struct timespec ts[2];
   double diff_s, diff_ns;
 
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts[1]);
+
+  diff_s = difftime(ts[1].tv_sec, ts[0].tv_sec);
+  diff_ns = ts[1].tv_nsec - ts[0].tv_nsec;
+  ts[0] = ts[1]; // update the time of start for measurement of next time
   
   unsigned int i, j, k;
   gr_complex mean = 0;
@@ -117,10 +121,10 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 		
   consume_each(1);
 
-  clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &te);
-  diff_s = difftime(te.tv_sec, ts[0].tv_sec);
-  diff_ns = te.tv_nsec - ts[0].tv_nsec;
-  ts[0] = ts[1]; // update the time of start for measurement of next time
+  //clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &te);
+  //diff_s = difftime(te.tv_sec, ts[0].tv_sec);
+  //diff_ns = te.tv_nsec - ts[0].tv_nsec;
+  //ts[0] = ts[1]; // update the time of start for measurement of next time
   fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
   
   return 1;
