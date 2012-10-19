@@ -24,7 +24,7 @@ class my_top_block(gr.top_block):
 		##################################################
 		#self.pow_cc_0 = baz.pow_cc(2.0, 0.0)
 		#self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/Dropbox/Public/temp.dat", False)
-		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "file.dat", False)
+		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/gr_alex/gnuradio/gr-digital/examples/narrowband/file.dat", False)
 		self.gr_file_sink1 = gr.file_sink(gr.sizeof_gr_complex*32*32, "sampcov.dat")
  		self.gr_file_sink2 = gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat")
 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "trace.dat")
@@ -36,7 +36,7 @@ class my_top_block(gr.top_block):
 		#self.eval = digital.digital_swig.eigen_herm(32)
 
 		self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32)
-		self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32, 100)        
+		self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32, 800)        
 		##################################################
 		# Connections
 		##################################################

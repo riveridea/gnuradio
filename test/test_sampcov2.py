@@ -14,19 +14,17 @@ from optparse import OptionParser
 import baz
 import wx
 
-class top_block(grc_wxgui.top_block_gui):
+class top_block(gr.top_block):
 
 	def __init__(self):
-		grc_wxgui.top_block_gui.__init__(self, title="Top Block")
-		_icon_path = "/usr/share/icons/hicolor/32x32/apps/gnuradio-grc.png"
-		self.SetIcon(wx.Icon(_icon_path, wx.BITMAP_TYPE_ANY))
-
+		gr.top_block.__init__(self)
+		
 		##################################################
 		# Blocks
 		##################################################
 		#self.pow_cc_0 = baz.pow_cc(2.0, 0.0)
 		#self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/Dropbox/Public/temp.dat", False)
-		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "file.dat", False)
+		self.gr_file_source_0 = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/gr_alex/gnuradio/gr-digital/examples/narrowband/file.dat", False)
 		self.gr_file_sink1 = gr.file_sink(gr.sizeof_gr_complex*32*32, "sampcov.dat")
  		self.gr_file_sink2 = gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat")
 		self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "trace.dat")
@@ -37,8 +35,8 @@ class top_block(grc_wxgui.top_block_gui):
 		self.tracer = digital.digital_swig.trace_calculator(32)
 		#self.eval = digital.digital_swig.eigen_herm(32)
 
-		self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32)
-		self.sampcov = digital.digital_swig.sampcov_matrix_calculator(32, 100)        
+		self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, 32*800)
+		self.sampcov = digital.digital_swig.sampcov_matrix_generator(32, 800)        
 		##################################################
 		# Connections
 		##################################################
@@ -66,5 +64,5 @@ if __name__ == '__main__':
 	if gr.enable_realtime_scheduling() != gr.RT_OK:
 		print "Error: failed to enable realtime scheduling."
 	tb = top_block()
-	tb.Run(True)
+	tb.run(True)
 
