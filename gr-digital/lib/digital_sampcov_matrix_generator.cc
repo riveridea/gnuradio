@@ -121,7 +121,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   diff_s = difftime(te.tv_sec, ts[0].tv_sec);
   diff_ns = te.tv_nsec - ts[0].tv_nsec;
   ts[0] = ts[1]; // update the time of start for measurement of next time
-  printf ("It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
   
   return 1;
 }
