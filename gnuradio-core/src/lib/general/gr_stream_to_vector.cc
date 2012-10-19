@@ -27,6 +27,7 @@
 #include <gr_stream_to_vector.h>
 #include <gr_io_signature.h>
 #include <string.h>
+#include <stdio.h>
 
 gr_stream_to_vector_sptr
 gr_make_stream_to_vector (size_t item_size, size_t nitems_per_block)
@@ -47,6 +48,9 @@ gr_stream_to_vector::work (int noutput_items,
 			     gr_vector_const_void_star &input_items,
 			     gr_vector_void_star &output_items)
 {
+    static struct timespec ts[2];
+    double diff_s, diff_ns;
+
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts[1]);
     
     diff_s = difftime(ts[1].tv_sec, ts[0].tv_sec);
