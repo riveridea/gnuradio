@@ -36,6 +36,7 @@
 
 #if (ENABLE_VOLK)
 #include <volk/volk_32fc_x2_multiply_conjugate_32fc_a.h>
+#include <volk/volk.h>
 #endif
 
 digital_sampcov_matrix_generator_sptr
