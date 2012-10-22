@@ -34,7 +34,7 @@
 #include <cstdio>
 
 #if (ENABLE_VOLK)
-#include <volk_32fc_x2_multiply_conjugate_32fc_a.h>
+#include <volk/volk_32fc_x2_multiply_conjugate_32fc_a.h>
 #endif
 
 digital_sampcov_matrix_generator_sptr
