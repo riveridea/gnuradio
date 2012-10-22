@@ -24,10 +24,18 @@
 #include "config.h"
 #endif
 
+// must be defined to either 0 or 1
+#define ENABLE_VOLK 1
+
+
 #include <digital_sampcov_matrix_generator.h>
 #include <gr_io_signature.h>
 #include <gr_expj.h>
 #include <cstdio>
+
+#if (ENABLE_VOLK)
+#include <volk_32fc_x2_multiply_conjugate_32fc_a.h>
+#endif
 
 digital_sampcov_matrix_generator_sptr
 digital_make_sampcov_matrix_generator (unsigned int vector_length, 
@@ -91,6 +99,28 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   float scale1 = 1.0/(float)(d_number_of_vector);
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
   float scale3 = scale1/scale2;
+
+
+#if (ENABLE_VOLK)
+// Compute the autocorrelation matrix
+  gr_complex c_vector[d_vector_length]; //to store the temp vector of each multiplication
+  for(i = 0; i < d_number_of_vector; i++){
+    for(j = 0; j < d_vector_length; j++){
+        d_vector_mean[j] += scale1*iptr[i*d_vector_length + j];
+        
+        gr_complex * a_vector = &iptr[i*d_vector_length], * b_vector = a_vector + j;
+        unsigned int num_points = d_vector_length - j;
+        volk_32fc_x2_multiply_conjugate_32fc_a_sse3(c_vector, a_vector, b_vector, num_points);
+        for(k = 0; k < d_vector_length - j; k++){
+            d_sampcov_store[k*d_vector_length + j] += scale2*c_vector[k];
+            d_sampcov_store[j*d_vector_length + k] = 
+                d_sampcov_store[k*d_vector_length + j]; // Hermitian Matrix
+        }
+    }
+  }
+  
+#else
+//traditional way  
   for(i = 0; i < d_number_of_vector; i++)
   {
 	for(j = 0; j < d_vector_length; j++)
@@ -104,8 +134,13 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 		}
 	}
   }
+#endif
+
+  for(i = 0; i < d_vector_length; i++){
+    d_vector_mean[i] += scale1*d_vector_mean[i];
+  }
   
-  for(i=0; i < d_vector_length; i++){
+  for(i = 0; i < d_vector_length; i++){
 	//printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
     for(j = 0; j < d_vector_length; j++){
         d_sampcov_store[i*d_vector_length + j] -= 
