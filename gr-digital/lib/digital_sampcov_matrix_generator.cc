@@ -26,6 +26,7 @@
 
 // must be defined to either 0 or 1
 #define ENABLE_VOLK 1
+#define LV_HAVE_SSE3
 
 
 #include <digital_sampcov_matrix_generator.h>
@@ -104,7 +105,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
     for(j = 0; j < d_vector_length; j++){
         d_vector_mean[j] += scale1*iptr[i*d_vector_length + j];
         
-        gr_complex * a_vector = &iptr[i*d_vector_length], * b_vector = a_vector + j;
+        const gr_complex * a_vector = &iptr[i*d_vector_length], * b_vector = a_vector + j;
         unsigned int num_points = d_vector_length - j;
         volk_32fc_x2_multiply_conjugate_32fc_a_sse3(c_vector, a_vector, b_vector, num_points);
         for(k = 0; k < d_vector_length - j; k++){
