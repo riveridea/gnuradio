@@ -381,7 +381,6 @@ public:
             break;
 
         case uhd::rx_metadata_t::ERROR_CODE_TIMEOUT:
-<<<<<<< HEAD
             //Assume that the user called stop() on the flow graph.
             //However, a timeout can occur under error conditions.
             //alex
@@ -391,10 +390,6 @@ public:
                 return work(noutput_items, input_items, output_items);
             
             return WORK_DONE;
-=======
-            //its ok to timeout, perhaps the user is doing finite streaming
-            return 0;
->>>>>>> fa4f1c2fcec8536c9d71607a0a710878cb6010ff
 
         case uhd::rx_metadata_t::ERROR_CODE_OVERFLOW:
             _tag_now = true;
