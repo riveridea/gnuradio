@@ -141,7 +141,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 
 #if (ENABLE_VOLK)
   for(i = 0; i < d_vector_length; i++){
-    const gr_complex * a_vector = d_vector_mean, * b_vector = a_vector + i;
+    gr_complex * a_vector = d_vector_mean, * b_vector = a_vector + i;
     unsigned int num_points = d_vector_length - i;
     volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
     for(k = 0; k < d_vector_length - i; k++){
