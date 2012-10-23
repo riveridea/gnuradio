@@ -152,10 +152,10 @@ static unsigned int indicator;
     if(indicator == 0 && i == 0){
         for(j = 0; j < d_vector_length; j++){
             for(k = 0; k < d_vector_length; k++){
-                fprintf(stderr, "%f + j%f", std::real(d_sampcov_store[j*d_vector_length + k]),
+                printf("%f + j%f", std::real(d_sampcov_store[j*d_vector_length + k]),
                                             std::imag(d_sampcov_store[j*d_vector_length + k]));
             }
-            fprintf(stderr, "\n");
+            printf("\n");
         }
     }
   }
