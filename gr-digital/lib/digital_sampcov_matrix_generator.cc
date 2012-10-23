@@ -24,11 +24,6 @@
 #include "config.h"
 #endif
 
-// must be defined to either 0 or 1
-#define ENABLE_VOLK 1
-#define LV_HAVE_SSE3
-
-
 #include <digital_sampcov_matrix_generator.h>
 #include <gr_io_signature.h>
 #include <gr_expj.h>
@@ -54,16 +49,29 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
 	d_number_of_vector(number_of_vector)
 {
   //set_relative_rate((double)(vector_length)/(double)(number_of_vector));   // buffer allocator hint
-  
+#if (ENABLE_VOLK)
+  d_sampcov_store.resize(d_vector_length*d_vector_length);
+  std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+  d_vector_mean = new gr_complex[d_vector_length];
+#else
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
+#endif
 
   const int alignment_multiple =
     volk_get_alignment() / sizeof(gr_complex);
   set_output_multiple (std::max(1,alignment_multiple)); // ensure the noutput items are alwyas the multiple of vector_length
 }
+
+~digital_sampcov_matrix_generator()
+{
+#if (ENABLE_VOLK)
+    delete[] d_vector_mean;
+#endif
+}
+
 
 void
 digital_sampcov_matrix_generator::forecast (int noutput_items, gr_vector_int &ninput_items_required)

@@ -23,6 +23,9 @@
 #ifndef INCLUDED_DIGITAL_SAMPCOV_MATRIX_GENERATOR_H
 #define INCLUDED_DIGITAL_SAMPCOV_MATRIX_GENERATOR_H
 
+// must be defined to either 0 or 1
+#define ENABLE_VOLK 1
+
 #include <digital_api.h>
 #include <gr_sync_block.h>
 
@@ -43,13 +46,19 @@ class DIGITAL_API digital_sampcov_matrix_generator : public gr_block
 
   digital_sampcov_matrix_generator(unsigned int vector_length, 
 									unsigned int number_of_vector);
+  ~digital_sampcov_matrix_generator();
 
  private:
   unsigned int d_vector_length;
   unsigned int d_number_of_vector;
-  
+
+#if (ENABLE_VOLK)
+  std::vector<gr_complex> d_sampcov_store;
+  gr_complex * d_vector_mean;
+#else
   std::vector<gr_complex> d_sampcov_store;
   std::vector<gr_complex> d_vector_mean;
+#endif
 
  public:
   void forecast (int noutput_items, gr_vector_int &ninput_items_required);
