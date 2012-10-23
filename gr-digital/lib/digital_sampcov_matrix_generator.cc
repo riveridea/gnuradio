@@ -141,8 +141,8 @@ static unsigned int indicator;
 
   if(indicator == 0){
       for(k = 0; k < d_vector_length; k++){
-          fprintf(stderr, "%e + j%e ", std::real(d_vector_mean[k]),
-                                      std::imag(d_vector_mean[k]));
+          //fprintf(stderr, "%e + j%e ", std::real(d_vector_mean[k]),
+          //                            std::imag(d_vector_mean[k]));
       }
   }
 #else
@@ -176,10 +176,17 @@ static unsigned int indicator;
     gr_complex * a_vector = d_vector_mean, * b_vector = a_vector + i;
     unsigned int num_points = d_vector_length - i;
     volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
+    if(indicator == 0){
+        for(k = 0; k < num_points; k++){
+            fprintf(stderr, "%e + j%e ", std::real(c_vector[k]),
+                                        std::imag(c_vector[k]));
+        }
+    }
+    
     for(k = 0; k < d_vector_length - i; k++){
         d_sampcov_store[k*d_vector_length + k + i] -= scale3*c_vector[k];
         d_sampcov_store[(k + i)*d_vector_length + k] = 
-            d_sampcov_store[k*d_vector_length + k + i]; // Hermitian Matrix
+            std::conj(d_sampcov_store[k*d_vector_length + k + i]); // Hermitian Matrix
     }    
   }
 #else  
