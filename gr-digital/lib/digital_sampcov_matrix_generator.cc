@@ -25,7 +25,7 @@
 #endif
 
 // must be defined to either 0 or 1
-#define ENABLE_VOLK 0
+#define ENABLE_VOLK 1
 #define LV_HAVE_SSE3
 
 
@@ -123,11 +123,11 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 	for(j = 0; j < d_vector_length; j++)
 	{
 		d_vector_mean[j] += scale1*iptr[i*d_vector_length + j];
-		for(k = 0; k < d_vector_length; k++)
+		for(k = 0; k < d_vector_length - j; k++)
 		{
 			d_sampcov_store[j*d_vector_length + k] += 
 				scale2*iptr[i*d_vector_length + k]*(std::conj(iptr[i*d_vector_length + j]));
-			//d_sampcov_store[i*d_smooth_factor + j] += scale2*iptr[j]*(std::conj(iptr[i]));
+			d_sampcov_store[k*d_vector_length + j] = d_sampcov_store[j*d_vector_length + k];
 		}
 	}
   }
