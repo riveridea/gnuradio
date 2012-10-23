@@ -127,6 +127,9 @@ static unsigned int indicator;
     }
     if(indicator == 0 && i == 0){
         for(j = 0; j < d_vector_length; j++){
+            fprintf(stderr, "%e + j%e ", std::real(iptr[i*d_vector_length + j]),
+                                        std::imag(iptr[i*d_vector_length + j]));            
+            fprintf(stderr, "\n\n\n");
             for(k = 0; k < d_vector_length; k++){
                 fprintf(stderr, "%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
                                             std::imag(d_sampcov_store[j*d_vector_length + k]));
