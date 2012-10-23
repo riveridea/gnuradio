@@ -53,16 +53,16 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean = new gr_complex[d_vector_length];
+
+  const int alignment_multiple =
+    volk_get_alignment() / sizeof(gr_complex);
+  set_output_multiple (std::max(1,alignment_multiple)); // ensure the noutput items are alwyas the multiple of vector_length
 #else
   d_sampcov_store.resize(d_vector_length*d_vector_length);
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
 #endif
-
-  const int alignment_multiple =
-    volk_get_alignment() / sizeof(gr_complex);
-  set_output_multiple (std::max(1,alignment_multiple)); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
 digital_sampcov_matrix_generator::~digital_sampcov_matrix_generator()
