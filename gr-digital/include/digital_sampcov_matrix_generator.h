@@ -24,7 +24,7 @@
 #define INCLUDED_DIGITAL_SAMPCOV_MATRIX_GENERATOR_H
 
 // must be defined to either 0 or 1
-#define ENABLE_VOLK 0
+#define ENABLE_VOLK 1
 
 #include <digital_api.h>
 #include <gr_sync_block.h>

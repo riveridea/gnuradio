@@ -164,10 +164,6 @@ static unsigned int indicator;
   }
 #endif
 
-  for(i = 0; i < d_vector_length; i++){
-    d_vector_mean[i] += scale1*d_vector_mean[i];
-  }
-
 #if (ENABLE_VOLK)
   for(i = 0; i < d_vector_length; i++){
     gr_complex * a_vector = d_vector_mean, * b_vector = a_vector + i;
