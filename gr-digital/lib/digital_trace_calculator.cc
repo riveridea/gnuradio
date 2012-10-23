@@ -66,11 +66,22 @@ digital_trace_calculator::general_work (int noutput_items,
   
   float *out = (float *) output_items[0];
   
-  unsigned int i;
+  unsigned int i, j;
   out[0] = 0;
+
+static unsigned int indicator;
+if(indicator == 0){
+    for(i = 0; i < d_smooth_factor; i++){
+        for(j = 0; j < d_smooth_factor; j++){
+            printf(" %e + j%e ", in[i*d_smooth_factor + j]);
+        }
+    printf("\n");
+    }
+}
+  
   if(signal_in[0] == 1){ 
       for(i = 0; i < d_smooth_factor; i++){
-    	out[0] += in[i*d_smooth_factor].real();
+    	out[0] += in[i*d_smooth_factor + i].real();
       }
       //printf("noutput_item = %d \n", noutput_items);
       ret = 1;
