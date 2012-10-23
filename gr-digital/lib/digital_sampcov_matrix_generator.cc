@@ -25,7 +25,7 @@
 #endif
 
 // must be defined to either 0 or 1
-#define ENABLE_VOLK 1
+#define ENABLE_VOLK 0
 #define LV_HAVE_SSE3
 
 
