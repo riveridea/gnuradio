@@ -121,8 +121,8 @@ static unsigned int indicator;
         volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
         for(k = 0; k < d_vector_length - j; k++){
             d_sampcov_store[k*d_vector_length + k + j] += scale2*c_vector[k];
-            d_sampcov_store[(k + j)*d_vector_length + k] = 
-                std::conj(d_sampcov_store[k*d_vector_length + k + j]); // Hermitian Matrix
+            //d_sampcov_store[(k + j)*d_vector_length + k] = 
+              //  std::conj(d_sampcov_store[k*d_vector_length + k + j]); // Hermitian Matrix
         }
     }
     if(indicator == 1 && i == 399){
@@ -131,10 +131,10 @@ static unsigned int indicator;
             //                            std::imag(iptr[i*d_vector_length + j]));            
             //fprintf(stderr, "\n\n\n");
             for(k = 0; k < d_vector_length; k++){
-                fprintf(stderr, "%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
-                                            std::imag(d_sampcov_store[j*d_vector_length + k]));
+                //fprintf(stderr, "%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
+                //                            std::imag(d_sampcov_store[j*d_vector_length + k]));
             }
-            fprintf(stderr, "\n");
+            //fprintf(stderr, "\n");
         }
     }
   }
@@ -192,10 +192,10 @@ static unsigned int indicator;
   if(indicator == 0){
       for(j = 0; j < d_vector_length; j++){
           for(k = 0; k < d_vector_length; k++){
-              printf("%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
-                                          std::imag(d_sampcov_store[j*d_vector_length + k]));
+              //printf("%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
+                //                          std::imag(d_sampcov_store[j*d_vector_length + k]));
           }
-          printf("\n");
+          //printf("\n");
       }
   }
   
@@ -225,7 +225,7 @@ static unsigned int indicator;
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   diff_s = difftime(t2.tv_sec, t1.tv_sec);
   diff_ns = t2.tv_nsec - t1.tv_nsec;
-  //fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
   indicator++;
   return 1;
 }

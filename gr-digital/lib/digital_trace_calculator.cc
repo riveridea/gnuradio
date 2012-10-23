@@ -73,10 +73,10 @@ static unsigned int indicator;
 if(indicator == 0){
     for(i = 0; i < d_smooth_factor; i++){
         for(j = 0; j < d_smooth_factor; j++){
-            printf(" %e + j%e ", std::real(in[i*d_smooth_factor + j]),
-                                 std::imag(in[i*d_smooth_factor + j]));
+            //printf(" %e + j%e ", std::real(in[i*d_smooth_factor + j]),
+            //                     std::imag(in[i*d_smooth_factor + j]));
         }
-    printf("\n");
+    //printf("\n");
     }
 }
   
