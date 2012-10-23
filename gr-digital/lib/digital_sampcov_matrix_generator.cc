@@ -65,7 +65,7 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
   set_output_multiple (std::max(1,alignment_multiple)); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
-~digital_sampcov_matrix_generator()
+digital_sampcov_matrix_generator::~digital_sampcov_matrix_generator()
 {
 #if (ENABLE_VOLK)
     delete[] d_vector_mean;
