@@ -125,7 +125,7 @@ static unsigned int indicator;
                 std::conj(d_sampcov_store[k*d_vector_length + k + j]); // Hermitian Matrix
         }
     }
-    if(indicator == 0 && i == 1){
+    if(indicator == 0 && i == 99){
         for(j = 0; j < d_vector_length; j++){
             fprintf(stderr, "%e + j%e ", std::real(iptr[i*d_vector_length + j]),
                                         std::imag(iptr[i*d_vector_length + j]));            
