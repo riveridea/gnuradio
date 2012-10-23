@@ -114,7 +114,7 @@ static unsigned int indicator;
   gr_complex c_vector[d_vector_length]; //to store the temp vector of each multiplication
   for(i = 0; i < d_number_of_vector; i++){
     for(j = 0; j < d_vector_length; j++){
-        d_vector_mean[j] += scale1*iptr[i*d_vector_length + j];
+        d_vector_mean[j] += scale1*std::conj(iptr[i*d_vector_length + j]);
         
         const gr_complex * a_vector = &iptr[i*d_vector_length], * b_vector = a_vector + j;
         unsigned int num_points = d_vector_length - j;
