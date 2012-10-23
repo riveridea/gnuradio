@@ -25,7 +25,7 @@
 #endif
 
 // must be defined to either 0 or 1
-#define ENABLE_VOLK 0
+#define ENABLE_VOLK 1
 #define LV_HAVE_SSE3
 
 
@@ -59,8 +59,10 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
-  
-  set_output_multiple (1); // ensure the noutput items are alwyas the multiple of vector_length
+
+  const int alignment_multiple =
+    volk_get_alignment() / sizeof(gr_complex);
+  set_output_multiple (std::max(1,alignment_multiple)); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
 void
