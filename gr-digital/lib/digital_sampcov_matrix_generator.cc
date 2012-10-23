@@ -107,6 +107,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   float scale2 = 1.0/(float)(d_number_of_vector - 1);
   float scale3 = scale1/scale2;
 
+static unsigned int indicator;
 
 #if (ENABLE_VOLK)
 // Compute the autocorrelation matrix
@@ -124,8 +125,16 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
                 d_sampcov_store[k*d_vector_length + k + j]; // Hermitian Matrix
         }
     }
+    if(indicator == 1){
+        for(j = 0; j < d_vector_length; j++){
+            for(k = 0; k < d_vector_length; k++){
+                fprintf(stderr, "%f + j%f", std::real(d_sampcov_store[j*d_vector_length + k]),
+                                            std::imag(d_sampcov_store[j*d_vector_length + k]));
+            }
+            fprintf(stderr, "\n");
+        }
+    }
   }
-  
 #else
 //traditional way  
   for(i = 0; i < d_number_of_vector; i++)
@@ -140,6 +149,15 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
 			d_sampcov_store[k*d_vector_length + j] = d_sampcov_store[j*d_vector_length + k];
 		}
 	}
+    if(indicator == 1){
+        for(j = 0; j < d_vector_length; j++){
+            for(k = 0; k < d_vector_length; k++){
+                fprintf(stderr, "%f + j%f", std::real(d_sampcov_store[j*d_vector_length + k]),
+                                            std::imag(d_sampcov_store[j*d_vector_length + k]));
+            }
+            fprintf(stderr, "\n");
+        }
+    }
   }
 #endif
 
@@ -184,7 +202,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &t2);
   diff_s = difftime(t2.tv_sec, t1.tv_sec);
   diff_ns = t2.tv_nsec - t1.tv_nsec;
-  fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
-  
+  //fprintf(stderr, "It took me %f seconds and %f nanoseconds.\n", diff_s, diff_ns);  
+  indicator++;
   return 1;
 }
