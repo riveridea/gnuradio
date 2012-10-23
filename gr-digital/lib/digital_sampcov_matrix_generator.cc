@@ -111,9 +111,9 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
         unsigned int num_points = d_vector_length - j;
         volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
         for(k = 0; k < d_vector_length - j; k++){
-            d_sampcov_store[k*d_vector_length + j] += scale2*c_vector[k];
-            d_sampcov_store[j*d_vector_length + k] = 
-                d_sampcov_store[k*d_vector_length + j]; // Hermitian Matrix
+            d_sampcov_store[k*d_vector_length + k + j] += scale2*c_vector[k];
+            d_sampcov_store[(k + j)*d_vector_length + k] = 
+                d_sampcov_store[k*d_vector_length + k + j]; // Hermitian Matrix
         }
     }
   }
@@ -138,7 +138,19 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   for(i = 0; i < d_vector_length; i++){
     d_vector_mean[i] += scale1*d_vector_mean[i];
   }
-  
+
+#if (ENABLE_VOLK)
+  for(i = 0; i < d_vector_length; i++){
+    const gr_complex * a_vector = d_vector_mean, * b_vector = a_vector + i;
+    unsigned int num_points = d_vector_length - i;
+    volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
+    for(k = 0; k < d_vector_length - i; k++){
+        d_sampcov_store[k*d_vector_length + k + i] -= scale3*c_vector[k];
+        d_sampcov_store[(k + i)*d_vector_length + k] = 
+            d_sampcov_store[k*d_vector_length + k + i]; // Hermitian Matrix
+    }    
+  }
+#else  
   for(i = 0; i < d_vector_length; i++){
 	//printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
     for(j = 0; j < d_vector_length; j++){
@@ -146,6 +158,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
             scale3*d_vector_mean[j]*(std::conj(d_vector_mean[i]));
     }
   }
+#endif
 
   std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
   outsig[0] = 1;// indicate the start of the covariance matrix
