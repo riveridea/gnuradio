@@ -178,8 +178,8 @@ static unsigned int indicator;
     volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
     if(indicator == 0){
         for(k = 0; k < num_points; k++){
-            fprintf(stderr, "%e + j%e ", std::real(c_vector[k]),
-                                        std::imag(c_vector[k]));
+            //fprintf(stderr, "%e + j%e ", std::real(c_vector[k]),
+              //                          std::imag(c_vector[k]));
         }
     }
     
@@ -189,6 +189,16 @@ static unsigned int indicator;
             std::conj(d_sampcov_store[k*d_vector_length + k + i]); // Hermitian Matrix
     }    
   }
+  if(indicator == 0){
+      for(j = 0; j < d_vector_length; j++){
+          for(k = 0; k < d_vector_length; k++){
+              printf("%e + j%e ", std::real(d_sampcov_store[j*d_vector_length + k]),
+                                          std::imag(d_sampcov_store[j*d_vector_length + k]));
+          }
+          printf("\n");
+      }
+  }
+  
 #else  
   for(i = 0; i < d_vector_length; i++){
 	//printf("mean[%d] = %e + j%e \n", i, std::real(d_vector_mean[i]), std::imag(d_vector_mean[i]));
