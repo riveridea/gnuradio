@@ -171,8 +171,13 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
   std::copy(d_sampcov_store.begin(), d_sampcov_store.end(), optr );
   outsig[0] = 1;// indicate the start of the covariance matrix
 
+#if (ENABLE_VOLK)
+  std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
+  memset (d_vector_mean, 0 , d_vector_length);
+#else
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
+#endif
 		
   consume_each(1);
 
