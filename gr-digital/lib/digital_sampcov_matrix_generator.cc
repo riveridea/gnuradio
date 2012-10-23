@@ -35,7 +35,6 @@
 #include <cstdio>
 
 #if (ENABLE_VOLK)
-#include <volk/volk_32fc_x2_multiply_conjugate_32fc_a.h>
 #include <volk/volk.h>
 #endif
 
@@ -61,7 +60,7 @@ digital_sampcov_matrix_generator::digital_sampcov_matrix_generator (unsigned int
   d_vector_mean.resize(vector_length);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
   
-  //set_output_multiple (vector_length*vector_length); // ensure the noutput items are alwyas the multiple of vector_length
+  set_output_multiple (1); // ensure the noutput items are alwyas the multiple of vector_length
 }
 
 void
@@ -108,7 +107,7 @@ digital_sampcov_matrix_generator::general_work (int noutput_items,
         
         const gr_complex * a_vector = &iptr[i*d_vector_length], * b_vector = a_vector + j;
         unsigned int num_points = d_vector_length - j;
-        volk_32fc_x2_multiply_conjugate_32fc_a_sse3(c_vector, a_vector, b_vector, num_points);
+        volk_32fc_x2_multiply_conjugate_32fc_a(c_vector, a_vector, b_vector, num_points);
         for(k = 0; k < d_vector_length - j; k++){
             d_sampcov_store[k*d_vector_length + j] += scale2*c_vector[k];
             d_sampcov_store[j*d_vector_length + k] = 
