@@ -122,10 +122,10 @@ static unsigned int indicator;
         for(k = 0; k < d_vector_length - j; k++){
             d_sampcov_store[k*d_vector_length + k + j] += scale2*c_vector[k];
             d_sampcov_store[(k + j)*d_vector_length + k] = 
-                d_sampcov_store[k*d_vector_length + k + j]; // Hermitian Matrix
+                std::conj(d_sampcov_store[k*d_vector_length + k + j]); // Hermitian Matrix
         }
     }
-    if(indicator == 0 && i == 0){
+    if(indicator == 0 && i == 1){
         for(j = 0; j < d_vector_length; j++){
             fprintf(stderr, "%e + j%e ", std::real(iptr[i*d_vector_length + j]),
                                         std::imag(iptr[i*d_vector_length + j]));            
@@ -149,7 +149,7 @@ static unsigned int indicator;
 		{
 			d_sampcov_store[j*d_vector_length + k] += 
 				scale2*iptr[i*d_vector_length + k]*(std::conj(iptr[i*d_vector_length + j]));
-			d_sampcov_store[k*d_vector_length + j] = d_sampcov_store[j*d_vector_length + k];
+			d_sampcov_store[k*d_vector_length + j] = std::conj(d_sampcov_store[j*d_vector_length + k]);
 		}
 	}
     if(indicator == 0 && i == 0){
