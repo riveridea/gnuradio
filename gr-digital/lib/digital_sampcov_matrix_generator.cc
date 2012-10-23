@@ -214,7 +214,7 @@ static unsigned int indicator;
 
 #if (ENABLE_VOLK)
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
-  memset (d_vector_mean, 0 , d_vector_length);
+  memset ((char*)d_vector_mean, 0 , d_vector_length*sizeof(gr_complex));
 #else
   std::fill(d_sampcov_store.begin(), d_sampcov_store.end(), 0);
   std::fill(d_vector_mean.begin(), d_vector_mean.end(), 0);
