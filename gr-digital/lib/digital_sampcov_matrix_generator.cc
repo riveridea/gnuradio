@@ -138,6 +138,13 @@ static unsigned int indicator;
         }
     }
   }
+
+  if(indicator == 0){
+      for(k = 0; k < d_vector_length; k++){
+          fprintf(stderr, "%e + j%e ", std::real(d_vector_mean[k]),
+                                      std::imag(d_vector_mean[k]));
+      }
+  }
 #else
 //traditional way  
   for(i = 0; i < d_number_of_vector; i++)
