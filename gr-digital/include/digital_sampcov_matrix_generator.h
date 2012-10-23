@@ -45,8 +45,7 @@ class DIGITAL_API digital_sampcov_matrix_generator : public gr_block
 																									unsigned int number_of_vector);
 
   digital_sampcov_matrix_generator(unsigned int vector_length, 
-									unsigned int number_of_vector);
-  ~digital_sampcov_matrix_generator();
+									 unsigned int number_of_vector);
 
  private:
   unsigned int d_vector_length;
@@ -61,6 +60,9 @@ class DIGITAL_API digital_sampcov_matrix_generator : public gr_block
 #endif
 
  public:
+  ~digital_sampcov_matrix_generator();
+
+ 
   void forecast (int noutput_items, gr_vector_int &ninput_items_required);
 
   int general_work (int noutput_items,
