@@ -55,7 +55,8 @@ public:
     void make_time_tag(const uint64_t tag_count){;
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_time");
         const pmt::pmt_t value = pmt::pmt_make_tuple(
-            pmt::pmt_from_uint64(_time_secs),
+            //pmt::pmt_from_uint64(_time_secs),
+            pmt::pmt_from_uint64(1),
             pmt::pmt_from_double(_time_fracs)
         );
         const pmt::pmt_t srcid = pmt::pmt_string_to_symbol(this->name());
