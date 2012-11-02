@@ -103,7 +103,8 @@ int main(int argc, char *argv[]){
     const uhd::time_spec_t time_now = usrp_sink->get_time_now();
 
     boost::shared_ptr<tag_source_demo> tag_source = boost::make_shared<tag_source_demo>(
-        time_now.get_full_secs() + 1, time_now.get_frac_secs(), //time now + 1 second
+        //time_now.get_full_secs() + 1, time_now.get_frac_secs(), //time now + 1 second
+        1,0.1,
         samp_rate, idle_dur, burst_dur
     );
 
