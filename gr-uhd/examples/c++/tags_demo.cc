@@ -22,6 +22,7 @@
 #include <gr_top_block.h>
 #include <gr_uhd_usrp_source.h>
 #include <gr_uhd_usrp_sink.h>
+#include <gr_file_sink.h>
 #include <tag_source_demo.h>
 #include <tag_sink_demo.h>
 #include <boost/make_shared.hpp>
@@ -89,9 +90,20 @@ int main(int argc, char *argv[]){
     boost::shared_ptr<tag_sink_demo> tag_sink = boost::make_shared<tag_sink_demo>();
 
     //------------------------------------------------------------------
+    //-- make the file sink block to record the data
+    //------------------------------------------------------------------
+    boost::shared_ptr<gr_file_sink> file_sink = gr_make_file_sink(
+        sizeof(gr_complex), "sensing_data.dat");
+
+    //------------------------------------------------------------------
     //-- connect the usrp source test blocks
     //------------------------------------------------------------------
     tb->connect(usrp_source, 0, tag_sink, 0);
+
+    //------------------------------------------------------------------
+    //-- connect the usrp source to file sink
+    //------------------------------------------------------------------
+    tb.connect(usrp_source, 0, file_sink, 0);
 
     //------------------------------------------------------------------
     //-- make the usrp sink test blocks
