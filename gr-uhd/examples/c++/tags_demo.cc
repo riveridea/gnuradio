@@ -27,6 +27,7 @@
 #include <boost/make_shared.hpp>
 #include <boost/thread/thread.hpp> //sleep
 #include <boost/program_options.hpp>
+#include <boost/format.hpp>
 #include <csignal>
 #include <iostream>
 
@@ -101,6 +102,11 @@ int main(int argc, char *argv[]){
     usrp_sink->set_samp_rate(samp_rate);
     usrp_sink->set_center_freq(center_freq);
     const uhd::time_spec_t time_now = usrp_sink->get_time_now();
+
+    std::cout << boost::format("Now Full seconds %u, Frac seconds %f")
+    	% time_now.get_full_secs()
+    	% time_now.get_frac_secs()
+    	<< std::endl;
 
     boost::shared_ptr<tag_source_demo> tag_source = boost::make_shared<tag_source_demo>(
         time_now.get_full_secs() + 1, time_now.get_frac_secs(), //time now + 1 second
