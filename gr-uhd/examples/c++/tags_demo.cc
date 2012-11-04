@@ -54,8 +54,8 @@ int main(int argc, char *argv[]){
         ("addr", po::value<std::string>(&device_addr)->default_value(""), "the device address in string format")
         ("rate", po::value<double>(&samp_rate)->default_value(1e6), "the sample rate in samples per second")
         ("freq", po::value<double>(&center_freq)->default_value(10e6), "the center frequency in Hz")
-        ("burst", po::value<double>(&burst_dur)->default_value(0.1), "the duration of each burst in seconds")
-        ("idle", po::value<double>(&idle_dur)->default_value(0.05), "idle time between bursts in seconds")
+        ("burst", po::value<double>(&burst_dur)->default_value(0.008), "the duration of each burst in seconds")
+        ("idle", po::value<double>(&idle_dur)->default_value(0.032), "idle time between bursts in seconds")
     ;
     po::variables_map vm;
     po::store(po::parse_command_line(argc, argv, desc), vm);
@@ -85,6 +85,7 @@ int main(int argc, char *argv[]){
     );
     usrp_source->set_samp_rate(samp_rate);
     usrp_source->set_center_freq(center_freq);
+    usrp_source->set_start_on_demand();
 
     boost::shared_ptr<tag_sink_demo> tag_sink = boost::make_shared<tag_sink_demo>();
 
@@ -92,7 +93,7 @@ int main(int argc, char *argv[]){
     //-- make the file sink block to record the data
     //------------------------------------------------------------------
     boost::shared_ptr<gr_file_sink> file_sink = gr_make_file_sink(
-        sizeof(gr_complex), "sensing_data.dat");
+        sizeof(gr_complex), "/home/alexzh/temp/sensing_data.dat");
 
     //------------------------------------------------------------------
     //-- connect the usrp source test blocks
@@ -123,6 +124,12 @@ int main(int argc, char *argv[]){
     //-- connect the usrp sink test blocks
     //------------------------------------------------------------------
     tb->connect(tag_source, 0, usrp_sink, 0);
+
+    //------------------------------------------------------------------
+    //-- Set the recording time of usrp source
+    //------------------------------------------------------------------
+    usrp_source->set_start_time(uhd::time_spec_t(time_now.get_full_secs() + 1,
+                                                 time_now.get_frac_secs()));
 
     //------------------------------------------------------------------
     //-- start flow graph execution
