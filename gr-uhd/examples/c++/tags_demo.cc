@@ -102,7 +102,7 @@ int main(int argc, char *argv[]){
     //------------------------------------------------------------------
     //-- connect the usrp source to file sink
     //------------------------------------------------------------------
-    tb.connect(usrp_source, 0, file_sink, 0);
+    tb->connect(usrp_source, 0, file_sink, 0);
 
     //------------------------------------------------------------------
     //-- make the usrp sink test blocks
