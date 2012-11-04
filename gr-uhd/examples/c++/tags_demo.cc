@@ -142,6 +142,7 @@ int main(int argc, char *argv[]){
     //------------------------------------------------------------------
     std::cout << "starting flow graph" << std::endl;
     tb->start();
+    usrp_source->start();
 
     //------------------------------------------------------------------
     //-- poll the exit signal while running
