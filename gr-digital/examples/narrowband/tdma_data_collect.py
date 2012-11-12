@@ -68,7 +68,7 @@ class socket_server(threading.Thread):
 	    print msg
 			
 class socket_client(object):
-	def __init__(self, dest_addr, dest_port, parent):
+    def __init__(self, dest_addr, dest_port, parent):
 	    self._parent = parent
 	    self._dest_addr = dest_addr
 	    self._dest_port = dest_port
