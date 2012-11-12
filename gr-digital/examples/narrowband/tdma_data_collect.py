@@ -56,38 +56,37 @@ HEAD_PORT = 23000
 NODE_PORT = 23001
 
 class socket_server(threading.Thread):
-	"""Threaded Url Grab"""
     def __init__(self, port, parent):
         threading.Thread.__init__(self)
-		self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		self._socket.bind('', port)
-		self._parent = parent
+	self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	self._socket.bind('', port)
+	self._parent = parent
           
     def run(self):
         while True:
-			msg, (addr, port) = self._socket.recvfrom(MTU)
-			print msg
+	    msg, (addr, port) = self._socket.recvfrom(MTU)
+	    print msg
 			
 class socket_client(object):
 	def __init__(self, dest_addr, dest_port, parent):
 	    self._parent = parent
-		self._dest_addr = dest_addr
-		self._dest_port = dest_port
+	    self._dest_addr = dest_addr
+	    self._dest_port = dest_port
 	    self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		self._socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
+	    self._socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 		
     def set_dest(self, dest_addr, dest_port):
 	    self._dest_addr = dest_addr
-		self._dest_port = dest_port
+	    self._dest_port = dest_port
 
 class socket_ctrl_channel(object):
 	def __init__(self, head_or_node)
-		if (head_or_node): # head
-			self._sock_server = socket_server(HEAD_PORT, self)
-			self._sock_client = socket_client('', NODE_PORT, self)
+	    if (head_or_node): # head
+	       self._sock_server = socket_server(HEAD_PORT, self)
+	       self._sock_client = socket_client('', NODE_PORT, self)
 	    else:  # node
-			self._sock_server = socket_server(NODE_PORT, self)
-			self._sock_client = socket_client('', HEAD_PORT, self)
+	       self._sock_server = socket_server(NODE_PORT, self)
+	       self._sock_client = socket_client('', HEAD_PORT, self)
 
 class my_top_block(gr.top_block):        
     def start_streaming(self):
