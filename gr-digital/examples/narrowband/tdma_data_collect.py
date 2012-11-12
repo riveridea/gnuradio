@@ -55,7 +55,7 @@ CLUSTER_NODE    = 'node'   # cluster node
 HEAD_PORT = 23000
 NODE_PORT = 23001
 
-class socket_server(threading.Thread)
+class socket_server(threading.Thread):
 	"""Threaded Url Grab"""
     def __init__(self, port, parent):
         threading.Thread.__init__(self)
@@ -68,7 +68,7 @@ class socket_server(threading.Thread)
 			msg, (addr, port) = self._socket.recvfrom(MTU)
 			print msg
 			
-class socket_client(object)
+class socket_client(object):
 	def __init__(self, dest_addr, dest_port, parent):
 	    self._parent = parent
 		self._dest_addr = dest_addr
@@ -80,7 +80,7 @@ class socket_client(object)
 	    self._dest_addr = dest_addr
 		self._dest_port = dest_port
 
-class socket_ctrl_channel(object)
+class socket_ctrl_channel(object):
 	def __init__(self, head_or_node)
 		if (head_or_node): # head
 			self._sock_server = socket_server(HEAD_PORT, self)
