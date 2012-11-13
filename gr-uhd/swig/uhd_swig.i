@@ -43,7 +43,7 @@
 %{
 #include <gr_uhd_usrp_source.h>
 #include <gr_uhd_usrp_sink.h>
-#include <gr_uhd_amsg_source.h>
+//#include <gr_uhd_amsg_source.h>
 #include <gr_uhd_pulse_source.h>
 %}
 
