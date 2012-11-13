@@ -84,7 +84,7 @@ class socket_server(threading.Thread):
 	       continue
 	       
 	    if(cmds[0] == 'cmd'):
-	        if(cmds[1] == 'start' & len(cmds) == 5):
+	        if(cmds[1] == 'start' && len(cmds) == 5):
 	            (start_time, ) = struct.unpack('!d', cmd[2])
 	            (burst_duration, ) = struct.unpack('!d', cmd[3])
 	            (idle_duration, ) = struct.unpack('!d', cmd[4])
