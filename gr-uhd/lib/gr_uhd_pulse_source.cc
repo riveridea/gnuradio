@@ -27,6 +27,7 @@
 #include <boost/make_shared.hpp>
 #include <iostream>
 #include <complex>
+#include "gr_uhd_common.h"
 
 boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
         const uint64_t start_secs,
