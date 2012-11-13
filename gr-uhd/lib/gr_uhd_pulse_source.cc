@@ -29,18 +29,6 @@
 #include <complex>
 #include "gr_uhd_common.h"
 
-boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
-        const uint64_t start_secs,
-        const double start_fracs,
-        const double samp_rate,
-        const double idle_duration,
-        const double burst_duration
-)
-{ 
-    return boost::make_shared<uhd_pulse_source>(
-        start_secs, start_fracs, samp_rate, idle_duration, burst_duration);		
-}
-
 uhd_pulse_source::uhd_pulse_source(
         const uint64_t start_secs,
         const double start_fracs,
@@ -131,3 +119,16 @@ uhd_pulse_source::work(
         _samps_left_in_burst -= noutput_items;
         return noutput_items;
     }
+	
+boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
+        const uint64_t start_secs,
+        const double start_fracs,
+        const double samp_rate,
+        const double idle_duration,
+        const double burst_duration
+)
+{ 
+    return boost::make_shared<uhd_pulse_source>(
+        start_secs, start_fracs, samp_rate, idle_duration, burst_duration);		
+}
+	
