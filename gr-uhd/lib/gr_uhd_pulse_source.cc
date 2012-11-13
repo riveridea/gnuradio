@@ -19,10 +19,12 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include <gr_uhd_pulse_source.h> 
 #include <gr_sync_block.h>
 #include <gr_io_signature.h>
 #include <boost/foreach.hpp>
 #include <boost/format.hpp>
+#include <boost/make_shared.hpp>
 #include <iostream>
 #include <complex>
 
@@ -34,7 +36,7 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
         const double burst_duration
 )
 { 
-    return boost::make_shared<tag_source_demo>(
+    return boost::make_shared<uhd_pulse_source>(
         start_secs, start_fracs, samp_rate, idle_duration, burst_duration);		
 }
 
