@@ -78,18 +78,22 @@ class socket_server(threading.Thread):
 	        cmds.append(payload[pos2:pos1])
 	        pos2 = pos1 + 1
 	        pos1 = payload.find(':', pos2, len(payload))
-			if pos1 == -1:
-			    cmds.append(payload[pos2:len(payload)])
+
+	        if(pos1 == -1):
+	            cmds.append(payload[pos2:len(payload)])	    
 	    
 	    print cmds
 	    if(len(cmds) == 0):
 	       continue
 	       
 	    if(cmds[0] == 'cmd'):
+	        print '\n'
+	        print len(cmds)
+	        
 	        if(cmds[1] == 'start' and len(cmds) == 5):
-	            (start_time, ) = struct.unpack('!d', cmd[2])
-	            (burst_duration, ) = struct.unpack('!d', cmd[3])
-	            (idle_duration, ) = struct.unpack('!d', cmd[4])
+	            (start_time, ) = struct.unpack('!d', cmds[2])
+	            (burst_duration, ) = struct.unpack('!d', cmds[3])
+	            (idle_duration, ) = struct.unpack('!d', cmds[4])
 	            
 	            print start_time
 	            print '\n'
