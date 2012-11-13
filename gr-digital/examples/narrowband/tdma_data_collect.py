@@ -79,7 +79,7 @@ class socket_server(threading.Thread):
 	        pos2 = pos1 + 1
 	        pos1 = payload.find(':', pos2, len(payload))
 	        if(pos1 == -1):
-	            cmds.append(payload[pos2:l])	    
+	            cmds.append(payload[pos2:len(payload)])	    
 	    
 	    print cmds
 	    if(len(cmds) == 0):
