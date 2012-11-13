@@ -80,7 +80,7 @@ class socket_client(object):
 	    self._dest_port = dest_port
 
 class socket_ctrl_channel(object):
-	def __init__(self, head_or_node)
+	def __init__(self, head_or_node):
 	    if (head_or_node): # head
 	       self._sock_server = socket_server(HEAD_PORT, self)
 	       self._sock_client = socket_client('', NODE_PORT, self)
@@ -92,10 +92,10 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         self.source.u.start()
         print 'start streaming'
-		if self._node_type = CLUSTER_HEAD:
-			self._socket_ctrl_chan._sock_client.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
-			hostname = gethostname()
-			self._socket_ctrl_chan._sock_client.sendto(hostname, ('<broadcast>', NODE_PORT))
+	if self._node_type == CLUSTER_HEAD:
+	    self._socket_ctrl_chan._sock_client.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
+	    hostname = gethostname()
+	    self._socket_ctrl_chan._sock_client.sendto(hostname, ('<broadcast>', NODE_PORT))
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -104,10 +104,10 @@ class my_top_block(gr.top_block):
         self._node_type = node_type
         self._node_id   = node_index	
 
-		# install the socket control channel
-		self._socket_ctrl_chan = socket_ctrl_channel(self._node_type)
-		# start the socket server to capture the control messages
-		self._socket_ctrl_chan._sock_server.start()
+	# install the socket control channel
+	self._socket_ctrl_chan = socket_ctrl_channel(self._node_type)
+	# start the socket server to capture the control messages
+	self._socket_ctrl_chan._sock_server.start()
 
         if(options.rx_freq is not None):
             # Work-around to get the modulation's bits_per_symbol
