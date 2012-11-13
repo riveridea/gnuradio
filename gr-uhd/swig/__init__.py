@@ -97,7 +97,7 @@ def _prepare_uhd_swig():
     setattr(uhd_swig, 'find_devices', find_devices)
 
     #Cast constructor args (FIXME swig handle overloads?)
-    for attr in ('usrp_source', 'usrp_sink', 'amsg_source', 'pulse_source'):
+    for attr in ('usrp_source', 'usrp_sink', 'amsg_source'):
         def constructor_factory(old_constructor):
             def constructor_interceptor(*args, **kwargs):
                 args = list(args)
