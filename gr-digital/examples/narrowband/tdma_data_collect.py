@@ -91,8 +91,7 @@ class socket_ctrl_channel(object):
 
 class my_top_block(gr.top_block):        
     def start_streaming(self):
-        self.source.u.start()
-        print 'start streaming'
+
 	if self._node_type == CLUSTER_HEAD:
 	    self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
 	    hostname = socket.gethostname()
@@ -103,6 +102,9 @@ class my_top_block(gr.top_block):
 	    print hostname
 	    self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
 	    self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
+	else:
+	    self.source.u.start()
+            print '\n start streaming'
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -227,7 +229,6 @@ def main():
     tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
-    if ()
     tb.timer.start()
     #tb.source.u.start()
     
