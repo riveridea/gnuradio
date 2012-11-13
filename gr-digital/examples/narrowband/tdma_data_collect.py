@@ -64,6 +64,7 @@ class socket_server(threading.Thread):
           
     def run(self):
         while True:
+            print 'waiting the socket message\n'
 	    msg, (addr, port) = self._socket.recvfrom(MTU)
 	    print msg
 			
@@ -81,7 +82,7 @@ class socket_client(object):
 
 class socket_ctrl_channel(object):
 	def __init__(self, head_or_node):
-	    if (head_or_node): # head
+	    if (head_or_node == CLUSTER_HEAD): # head
 	       self._sock_server = socket_server(HEAD_PORT, self)
 	       self._sock_client = socket_client('', NODE_PORT, self)
 	    else:  # node
@@ -94,7 +95,8 @@ class my_top_block(gr.top_block):
         print 'start streaming'
 	if self._node_type == CLUSTER_HEAD:
 	    self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
-	    hostname = gethostname()
+	    hostname = socket.gethostname()
+	    print hostname
 	    self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
@@ -208,8 +210,8 @@ def main():
     # build the graph
     tb = my_top_block(node_types[options.node_type],
                      options.node_index,
-					 demods[options.modulation], 
-					 rx_callback, options)
+		     demods[options.modulation], 
+		     rx_callback, options)
 
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:
