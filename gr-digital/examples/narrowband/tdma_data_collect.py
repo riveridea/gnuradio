@@ -39,7 +39,6 @@ import time
 
 # socket 
 import socket
-from socket import *
 
 #import os
 #print os.getpid()
@@ -59,7 +58,8 @@ class socket_server(threading.Thread):
     def __init__(self, port, parent):
         threading.Thread.__init__(self)
 	self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	self._socket.bind('', port)
+	self._socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+	self._socket.bind(('', port))
 	self._parent = parent
           
     def run(self):
@@ -73,7 +73,7 @@ class socket_client(object):
 	    self._dest_addr = dest_addr
 	    self._dest_port = dest_port
 	    self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	    self._socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
+	    self._socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 		
     def set_dest(self, dest_addr, dest_port):
 	    self._dest_addr = dest_addr
@@ -93,9 +93,9 @@ class my_top_block(gr.top_block):
         self.source.u.start()
         print 'start streaming'
 	if self._node_type == CLUSTER_HEAD:
-	    self._socket_ctrl_chan._sock_client.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
+	    self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
 	    hostname = gethostname()
-	    self._socket_ctrl_chan._sock_client.sendto(hostname, ('<broadcast>', NODE_PORT))
+	    self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
