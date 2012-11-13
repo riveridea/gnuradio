@@ -44,6 +44,7 @@
 #include <gr_uhd_usrp_source.h>
 #include <gr_uhd_usrp_sink.h>
 #include <gr_uhd_amsg_source.h>
+#include <gr_uhd_pulse_source.h>
 %}
 
 ////////////////////////////////////////////////////////////////////////
@@ -107,6 +108,9 @@ GR_SWIG_BLOCK_MAGIC(uhd,usrp_sink)
 
 GR_SWIG_BLOCK_MAGIC(uhd,amsg_source)
 %include <gr_uhd_amsg_source.h>
+
+GR_SWIG_BLOCK_MAGIC(uhd,pulse_source)
+%include <gr_uhd_pulse_source.h>
 
 ////////////////////////////////////////////////////////////////////////
 // device discovery (no need to %include device.hpp)
