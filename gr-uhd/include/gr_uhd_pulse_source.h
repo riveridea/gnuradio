@@ -23,6 +23,9 @@
   
 #include <gr_uhd_api.h>
 #include <gr_sync_block.h>
+#include <complex>
+
+class uhd_pulse_source;
 
 GR_UHD_API boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
         const uint64_t start_secs,

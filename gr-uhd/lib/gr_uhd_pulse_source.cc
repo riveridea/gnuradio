@@ -40,10 +40,7 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
         start_secs, start_fracs, samp_rate, idle_duration, burst_duration);		
 }
 
-class uhd_pulse_source : public gr_sync_block{
-public:
-
-    uhd_pulse_source(
+uhd_pulse_source::uhd_pulse_source(
         const uint64_t start_secs,
         const double start_fracs,
         const double samp_rate,
@@ -66,7 +63,8 @@ public:
         //NOP
     }
 
-    void make_time_tag(const uint64_t tag_count){;
+void 
+uhd_pulse_source::make_time_tag(const uint64_t tag_count){;
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_time");
         const pmt::pmt_t value = pmt::pmt_make_tuple(
             pmt::pmt_from_uint64(_time_secs),
@@ -76,21 +74,24 @@ public:
         this->add_item_tag(0/*chan0*/, tag_count, key, value, srcid);
     }
 
-    void make_sob_tag(const uint64_t tag_count){
+void 
+uhd_pulse_source::make_sob_tag(const uint64_t tag_count){
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_sob");
         const pmt::pmt_t value = pmt::PMT_T;
         const pmt::pmt_t srcid = pmt::pmt_string_to_symbol(this->name());
         this->add_item_tag(0/*chan0*/, tag_count, key, value, srcid);
     }
 
-    void make_eob_tag(const uint64_t tag_count){;
+void 
+uhd_pulse_source::make_eob_tag(const uint64_t tag_count){;
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_eob");
         const pmt::pmt_t value = pmt::PMT_T;
         const pmt::pmt_t srcid = pmt::pmt_string_to_symbol(this->name());
         this->add_item_tag(0/*chan0*/, tag_count, key, value, srcid);
     }
 
-    int work(
+int 
+uhd_pulse_source::work(
         int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items
@@ -129,14 +130,3 @@ public:
         _samps_left_in_burst -= noutput_items;
         return noutput_items;
     }
-
-private:
-    uint64_t _time_secs;
-    double _time_fracs;
-    const double _samp_rate;
-    const uint64_t _samps_per_burst;
-    const double _cycle_duration;
-    uint64_t _samps_left_in_burst;
-    bool _do_new_burst;
-
-};
