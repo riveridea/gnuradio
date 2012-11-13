@@ -64,9 +64,31 @@ class socket_server(threading.Thread):
           
     def run(self):
         while 1:
-            print 'waiting the socket message\n'
 	    msg, (addr, port) = self._socket.recvfrom(MTU)
-	    print msg
+	    payload = msg
+	    cmds = []
+	    l = len(payload)
+	    pos2 = 0
+	    pos1 = payload.find(':', 0, len(payload))
+	    while(pos1 != -1):
+	        cmds.append(payload[pos2:pos1])
+	        pos2 = pos1
+	        pos1 = payload.find(':', pos2, len(payload))
+	    
+	    if(cmds[0] == 'cmd'):
+	        if(cmds[1] == 'start' & len(cmds) == 5):
+	            (start_time, ) = struct.unpack('!d', cmd[2])
+	            (burst_duration, ) = struct.unpack('!d', cmd[3])
+	            (idle_duration, ) = struct.unpack('!d', cmd[4])
+	            
+	            print start_time
+	            print '\n'
+	            print burst_duration
+	            print '\n'
+	            print idle_duration
+	            print '\n'
+	        else:
+	            print 'protocol error'
 			
 class socket_client(object):
     def __init__(self, dest_addr, dest_port, parent):
