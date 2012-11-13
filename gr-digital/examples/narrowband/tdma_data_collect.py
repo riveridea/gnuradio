@@ -72,8 +72,10 @@ class socket_server(threading.Thread):
 	    pos1 = payload.find(':', 0, len(payload))
 	    while(pos1 != -1):
 	        cmds.append(payload[pos2:pos1])
-	        pos2 = pos1
+	        pos2 = pos1 + 1
 	        pos1 = payload.find(':', pos2, len(payload))
+	    
+	    print cmds
 	    
 	    if(cmds[0] == 'cmd'):
 	        if(cmds[1] == 'start' & len(cmds) == 5):
