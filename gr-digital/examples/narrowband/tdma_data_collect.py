@@ -51,8 +51,8 @@ MTU = 4096
 CLUSTER_HEAD    = 'head'   # cluster head
 CLUSTER_NODE    = 'node'   # cluster node
 
-HEAD_PORT = 23000
-NODE_PORT = 23001
+HEAD_PORT = 23000   # port where cluster head capturing the socket message
+NODE_PORT = 23001   # port where cluster node capturing the socket message
 
 class socket_server(threading.Thread):
     def __init__(self, port, parent):
@@ -63,7 +63,7 @@ class socket_server(threading.Thread):
 	self._parent = parent
           
     def run(self):
-        while True:
+        while 1:
             print 'waiting the socket message\n'
 	    msg, (addr, port) = self._socket.recvfrom(MTU)
 	    print msg
@@ -96,8 +96,13 @@ class my_top_block(gr.top_block):
 	if self._node_type == CLUSTER_HEAD:
 	    self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
 	    hostname = socket.gethostname()
+	    start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
+	    burst_duration = struct.pack('!d', 0.008)
+	    idle_duration = struct.pack('!d', 0.032)
+	    payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
 	    print hostname
 	    self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
+	    self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -222,6 +227,7 @@ def main():
     tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
+    if ()
     tb.timer.start()
     #tb.source.u.start()
     
