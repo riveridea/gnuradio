@@ -70,6 +70,7 @@ class socket_server(threading.Thread):
 	    l = len(payload)
 	    pos2 = 0
 	    pos1 = payload.find(':', 0, len(payload))
+	    
 	    print pos1 
 	    print '\n'
 	    print payload
@@ -79,7 +80,9 @@ class socket_server(threading.Thread):
 	        pos1 = payload.find(':', pos2, len(payload))
 	    
 	    print cmds
-	    
+	    if(len(cmds) == 0):
+	       continue
+	       
 	    if(cmds[0] == 'cmd'):
 	        if(cmds[1] == 'start' & len(cmds) == 5):
 	            (start_time, ) = struct.unpack('!d', cmd[2])
