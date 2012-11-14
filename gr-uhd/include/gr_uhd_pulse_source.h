@@ -27,7 +27,7 @@
 
 class uhd_pulse_source;
 
-GR_UHD_API boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
+GR_UHD_API boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
         const uint64_t start_secs,
         const double start_fracs,
         const double samp_rate,

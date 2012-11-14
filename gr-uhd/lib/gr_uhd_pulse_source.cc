@@ -120,7 +120,7 @@ uhd_pulse_source::work(
         return noutput_items;
     }
 	
-boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
+boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
         const uint64_t start_secs,
         const double start_fracs,
         const double samp_rate,
@@ -130,7 +130,7 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
 { 
     //return boost::make_shared<uhd_pulse_source>(
       //  start_secs, start_fracs, samp_rate, idle_duration, burst_duration);	
-
+    gr_uhd_check_abi();
     return boost::shared_ptr<uhd_pulse_source>(
         new uhd_pulse_source(start_secs, start_fracs, samp_rate, idle_duration, burst_duration));		
 }
