@@ -132,6 +132,6 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_uhd_pulse_source(
       //  start_secs, start_fracs, samp_rate, idle_duration, burst_duration);	
 
     return boost::shared_ptr<uhd_pulse_source>(
-        new uhd_pulse_source(start_secs, start_fracs, samp_rate, idle_duration, burst_duration))		
+        new uhd_pulse_source(start_secs, start_fracs, samp_rate, idle_duration, burst_duration));		
 }
 	
