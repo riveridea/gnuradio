@@ -46,6 +46,8 @@ import socket
 
 ds = 32
 
+CLUSTER_SIZE = 2
+
 MTU = 4096
 
 CLUSTER_HEAD    = 'head'   # cluster head
@@ -64,43 +66,31 @@ class socket_server(threading.Thread):
           
     def run(self):
         while 1:
-	    msg, (addr, port) = self._socket.recvfrom(MTU)
-	    payload = msg
-	    cmds = []
-	    l = len(payload)
-	    pos2 = 0
-	    pos1 = payload.find(':', 0, len(payload))
+            msg, (addr, port) = self._socket.recvfrom(MTU)
+            payload = msg
+            cmds = []
+            l = len(payload)
+            pos2 = 0
+            pos1 = payload.find(':', 0, len(payload))
 	    
-	    print pos1 
-	    print '\n'
-	    print payload
-	    while(pos1 != -1):
-	        cmds.append(payload[pos2:pos1])
-	        pos2 = pos1 + 1
-	        pos1 = payload.find(':', pos2, len(payload))
+            while(pos1 != -1):
+                cmds.append(payload[pos2:pos1])
+                pos2 = pos1 + 1
+                pos1 = payload.find(':', pos2, len(payload))
 
-	        if(pos1 == -1):
-	            cmds.append(payload[pos2:len(payload)])	    
+                if(pos1 == -1):
+                cmds.append(payload[pos2:len(payload)])	    
 	    
-	    print cmds
-	    if(len(cmds) == 0):
-	       continue
+            if(len(cmds) == 0):
+                continue
 	       
-	    if(cmds[0] == 'cmd'):
-	        print '\n'
-	        print len(cmds)
-	        
-	        if(cmds[1] == 'start' and len(cmds) == 5):
-	            (start_time, ) = struct.unpack('!d', cmds[2])
-	            (burst_duration, ) = struct.unpack('!d', cmds[3])
-	            (idle_duration, ) = struct.unpack('!d', cmds[4])
-	            
-	            print start_time
-	            print '\n'
-	            print burst_duration
-	            print '\n'
-	            print idle_duration
-	            print '\n'
+            if(cmds[0] == 'cmd'):    
+			    if(cmds[1] == 'start' and len(cmds) == 5):
+				    (start_time, ) = struct.unpack('!d', cmds[2])
+					(burst_duration, ) = struct.unpack('!d', cmds[3])
+					(idle_duration, ) = struct.unpack('!d', cmds[4])
+					# handle the start command
+					self.parent.owner.start_tdma_net(start_time, burst_duration, idle_duration)
 	        else:
 	            print 'protocol error'
 			
@@ -117,30 +107,30 @@ class socket_client(object):
 	    self._dest_port = dest_port
 
 class socket_ctrl_channel(object):
-	def __init__(self, head_or_node):
+	def __init__(self, head_or_node, owner):
+	    self._owner = owner #
 	    if (head_or_node == CLUSTER_HEAD): # head
 	       self._sock_server = socket_server(HEAD_PORT, self)
 	       self._sock_client = socket_client('', NODE_PORT, self)
 	    else:  # node
 	       self._sock_server = socket_server(NODE_PORT, self)
 	       self._sock_client = socket_client('', HEAD_PORT, self)
-
+		   
 class my_top_block(gr.top_block):        
     def start_streaming(self):
-
-	if self._node_type == CLUSTER_HEAD:
-	    self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
-	    hostname = socket.gethostname()
-	    start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
-	    burst_duration = struct.pack('!d', 0.008)
-	    idle_duration = struct.pack('!d', 0.032)
-	    payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
-	    print hostname
-	    self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
-	    self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
-	else:
-	    self.source.u.start()
-            print '\n start streaming'
+        if self._node_type == CLUSTER_HEAD:
+            self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
+            hostname = socket.gethostname()
+            start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
+            burst_duration = struct.pack('!d', 0.008)
+			t_slot = 0.010  # tdma slot length
+            idle_duration = struct.pack('!d', t_slot*(CLUSTER_SIZE - 1) + t_slot - burst_duration)
+            payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
+            print hostname
+            self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
+            self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
+        else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
+            #self.source.u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -149,42 +139,101 @@ class my_top_block(gr.top_block):
         self._node_type = node_type
         self._node_id   = node_index	
 
-	# install the socket control channel
-	self._socket_ctrl_chan = socket_ctrl_channel(self._node_type)
-	# start the socket server to capture the control messages
-	self._socket_ctrl_chan._sock_server.start()
+        # install the socket control channel
+        self._socket_ctrl_chan = socket_ctrl_channel(self._node_type, self)
+        # start the socket server to capture the control messages
+        self._socket_ctrl_chan._sock_server.start()
 
         if(options.rx_freq is not None):
             # Work-around to get the modulation's bits_per_symbol
             args = demodulator.extract_kwargs_from_options(options)
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
             ask_sample_rate = symbol_rate*options.samples_per_symbol
+			
+		    self._rx_freq = options.rx_freq
+		    self._tx_freq = options.rx_freq # use the same frequence 
+		    self._sample_rate = ask_sample_rate
 
-            self.source = uhd_receiver(options.args, symbol_rate,
-                                       options.samples_per_symbol,
-                                       options.rx_freq, options.rx_gain,
-                                       options.spec, options.antenna,
-                                       options.verbose)
-            options.samples_per_symbol = self.source._sps
-                       
-            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
-            print 'In locking '
-            while (self.source.u.get_sensor("lo_locked").to_bool() == False):
-                print '.'
+			# configuration the usrp sensors and transmitters
+			# Automatically USRP devices discovery
+            devices = uhd.find_devices_raw()
+            n_devices = len(devices)
+            addrs = []
         
-            print 'Locked'
+            if (n_devices == 0):
+            sys.exit("no connected devices")
+            elif (n_devices >= 1):
+                for i in range(n_devices):
+                addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
+				addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
+				addrs[i]
+                
+            if (n_devices == 1 and self._node_type == CLUSTER_NODE):
+			    sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
+            elif (n_devices > 1 and self._node_type == CLUSTER_HEAD):
+                sys.exit("only one devices is need for cluster head")
 
-        elif(options.from_file is not None):
-            sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
-            self.source = gr.file_source(gr.sizeof_gr_complex, options.from_file)
-        else:
-            sys.stderr.write("No source defined, pulling samples from null source.\n\n")
-            self.source = gr.null_source(gr.sizeof_gr_complex)
+            # Configure Sensors, with all GPS sync
+            self.sensors = []
+            for i in range(n_devices):
+                self.sensors.append(uhd_sensor(addrs[i], ask_sample_rate,
+                                                options.sx_freq, options.sx_gain,
+                                                options.sx_spec, options.sx_antenna, 
+                                                options.verbose))
+                self.sensors[i].u.set_start_on_demand()  # the sensor will start sensing on demand												
+                if self.sensors[i].u.get_time_source(0) == "none":
+                    self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
+                    self.sensors[i].u.set_clock_source("mimo",0) 
+					
+				# file sinks
+                filename = "%s_sensed.dat" %(self._node_id + i)
+                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
+
+            # Configure Transmitters	
+			self.transmitters = []
+            for i in range(n_devices):			
+                self.transmitter.append(uhd_transmitter(addrs[i], symbol_rate,
+                                                options.samples_per_symbol,
+                                                options.tx_freq, options.tx_gain,
+                                                options.rx_spec, options.rx_antenna,
+                                                options.verbose))	
+                       
+            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+            #print 'In locking '
+            #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
+            #    print '.'
+        
+            #print 'Locked'
 
         self.timer = threading.Timer(1, self.start_streaming)
-
-
-
+	
+    def start_tdma_net(self, start_time, burst_duration, idle_duration):
+	    # specify the tdma pulse parameters and connect the 
+		# pulse source to usrp sinker also specify the usrp source
+		# with the specified start time
+		self.pulse_srcs = []
+		n_devices = len(self.transmitters)
+        if n_devices > 0:
+		    cycle_duration = burst_duration + idle_duration
+            for i in range(n_devices):
+			    s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
+		        self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
+		                             s_time.get_frac_secs(), 
+								     self._sample_rate,
+								     idle_duration,
+								     burst_duration))
+		        # Connect the pulse source to the transmitters
+				self.connect(self.pulse_srcs[i], 0, self.transmitters[i].u, 0)
+				# Set the start time for sensors
+				self.sensors[i].u.set_start_time(set_start_time)
+        else:
+		    exit("no devices on this node!")
+			
+	    # start the flow graph and all the sensors
+		tb.start()
+		for i in range(n_devices):
+		    self.sensors[i].u.start()
+		
 # /////////////////////////////////////////////////////////////////////////////
 #                                   main
 # /////////////////////////////////////////////////////////////////////////////
@@ -252,9 +301,9 @@ def main():
 
     # build the graph
     tb = my_top_block(node_types[options.node_type],
-                     options.node_index,
-		     demods[options.modulation], 
-		     rx_callback, options)
+                    options.node_index,
+                    demods[options.modulation], 
+		            rx_callback, options)
 
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:
@@ -262,13 +311,13 @@ def main():
 
     tb.source.u.set_start_on_demand()
     
-    tb.start()        # start flow graph
+    #tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
     tb.timer.start()
     #tb.source.u.start()
     
-    tb.wait()         # wait for it to finish
+    #tb.wait()         # wait for it to finish
 
 if __name__ == '__main__':
     try:
