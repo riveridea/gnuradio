@@ -161,7 +161,7 @@ class my_top_block(gr.top_block):
             addrs = []
         
             if (n_devices == 0):
-            sys.exit("no connected devices")
+                sys.exit("no connected devices")
             elif (n_devices >= 1):
                 for i in range(n_devices):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
