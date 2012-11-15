@@ -129,7 +129,7 @@ class my_top_block(gr.top_block):
             print hostname
             self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
-        else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
+        #else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
             #self.source.u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
