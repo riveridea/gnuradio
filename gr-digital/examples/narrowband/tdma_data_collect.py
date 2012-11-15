@@ -85,12 +85,12 @@ class socket_server(threading.Thread):
                 continue
 	       
             if(cmds[0] == 'cmd'):    
-			    if(cmds[1] == 'start' and len(cmds) == 5):
-				    (start_time, ) = struct.unpack('!d', cmds[2])
-					(burst_duration, ) = struct.unpack('!d', cmds[3])
-					(idle_duration, ) = struct.unpack('!d', cmds[4])
-					# handle the start command
-					self.parent.owner.start_tdma_net(start_time, burst_duration, idle_duration)
+                if(cmds[1] == 'start' and len(cmds) == 5):
+                        (start_time, ) = struct.unpack('!d', cmds[2])
+                        (burst_duration, ) = struct.unpack('!d', cmds[3])
+                        (idle_duration, ) = struct.unpack('!d', cmds[4])
+			# handle the start command
+                        self.parent.owner.start_tdma_net(start_time, burst_duration, idle_duration)
 	        else:
 	            print 'protocol error'
 			
