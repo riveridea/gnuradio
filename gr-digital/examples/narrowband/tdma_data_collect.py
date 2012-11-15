@@ -123,7 +123,7 @@ class my_top_block(gr.top_block):
             hostname = socket.gethostname()
             start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
             burst_duration = struct.pack('!d', 0.008)
-			t_slot = 0.010  # tdma slot length
+            t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(CLUSTER_SIZE - 1) + t_slot - burst_duration)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
             print hostname
@@ -150,12 +150,12 @@ class my_top_block(gr.top_block):
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
             ask_sample_rate = symbol_rate*options.samples_per_symbol
 			
-		    self._rx_freq = options.rx_freq
-		    self._tx_freq = options.rx_freq # use the same frequence 
-		    self._sample_rate = ask_sample_rate
+            self._rx_freq = options.rx_freq
+            self._tx_freq = options.rx_freq # use the same frequence 
+            self._sample_rate = ask_sample_rate
 
-			# configuration the usrp sensors and transmitters
-			# Automatically USRP devices discovery
+            # configuration the usrp sensors and transmitters
+            # Automatically USRP devices discovery
             devices = uhd.find_devices_raw()
             n_devices = len(devices)
             addrs = []
@@ -165,11 +165,11 @@ class my_top_block(gr.top_block):
             elif (n_devices >= 1):
                 for i in range(n_devices):
                 addr_t = devices[i].to_string()  #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
-				addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
-				addrs[i]
+                addrs.append(addr_t[11:30]) # suppose the addr is 192.168.10.xxx
+                addrs[i]
                 
             if (n_devices == 1 and self._node_type == CLUSTER_NODE):
-			    sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
+                sys.exit("only one devices for the node, we need both communicator and sensor for cluster node")
             elif (n_devices > 1 and self._node_type == CLUSTER_HEAD):
                 sys.exit("only one devices is need for cluster head")
 
@@ -190,7 +190,7 @@ class my_top_block(gr.top_block):
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
-			self.transmitters = []
+            self.transmitters = []
             for i in range(n_devices):			
                 self.transmitter.append(uhd_transmitter(addrs[i], symbol_rate,
                                                 options.samples_per_symbol,
@@ -208,31 +208,31 @@ class my_top_block(gr.top_block):
         self.timer = threading.Timer(1, self.start_streaming)
 	
     def start_tdma_net(self, start_time, burst_duration, idle_duration):
-	    # specify the tdma pulse parameters and connect the 
-		# pulse source to usrp sinker also specify the usrp source
-		# with the specified start time
-		self.pulse_srcs = []
-		n_devices = len(self.transmitters)
+	# specify the tdma pulse parameters and connect the 
+	# pulse source to usrp sinker also specify the usrp source
+	# with the specified start time
+	self.pulse_srcs = []
+	n_devices = len(self.transmitters)
         if n_devices > 0:
-		    cycle_duration = burst_duration + idle_duration
+            cycle_duration = burst_duration + idle_duration
             for i in range(n_devices):
-			    s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
-		        self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
-		                             s_time.get_frac_secs(), 
-								     self._sample_rate,
-								     idle_duration,
-								     burst_duration))
-		        # Connect the pulse source to the transmitters
-				self.connect(self.pulse_srcs[i], 0, self.transmitters[i].u, 0)
-				# Set the start time for sensors
-				self.sensors[i].u.set_start_time(set_start_time)
+                s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
+                self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
+		                        s_time.get_frac_secs(), 
+					self._sample_rate,
+					idle_duration,
+					burst_duration))
+		# Connect the pulse source to the transmitters
+		self.connect(self.pulse_srcs[i], 0, self.transmitters[i].u, 0)
+		# Set the start time for sensors
+		self.sensors[i].u.set_start_time(set_start_time)
         else:
-		    exit("no devices on this node!")
+            exit("no devices on this node!")
 			
-	    # start the flow graph and all the sensors
-		tb.start()
-		for i in range(n_devices):
-		    self.sensors[i].u.start()
+	# start the flow graph and all the sensors
+	tb.start()
+	for i in range(n_devices):
+	    self.sensors[i].u.start()
 		
 # /////////////////////////////////////////////////////////////////////////////
 #                                   main
