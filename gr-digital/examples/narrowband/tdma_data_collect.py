@@ -30,7 +30,9 @@ from gnuradio import digital
 
 # from current dir
 from receive_path import receive_path
-from uhd_interface import uhd_receiver
+#from uhd_interface import uhd_receiver
+from uhd_interface_w_sensor import uhd_transmitter
+from uhd_interface_w_sensor import uhd_sensor
 
 import struct
 import sys
