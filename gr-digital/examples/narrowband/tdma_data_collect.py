@@ -54,6 +54,7 @@ NETWORK_SIZE = 4
 MTU = 4096
 
 BURST_LEN = 0.008
+NODES_PC  = 2
 
 CLUSTER_HEAD    = 'head'   # cluster head
 CLUSTER_NODE    = 'node'   # cluster node
@@ -223,10 +224,10 @@ class my_top_block(gr.top_block):
 	self.pulse_srcs = []
 	n_devices = len(self.transmitters)
         if n_devices > 0:
-            cycle_duration = burst_duration + idle_duration
+            time_slot = (burst_duration + idle_duration)/NETWORK_SIZE
             print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
-                s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
+                s_time = uhd.time_spec_t(start_time + time_slot*(NODES_PC*self._node_id + i))
                 print 'specified_time = %.7f' %s_time.get_real_secs()
                 local_time = self.transmitters[i].u.get_time_now().get_real_secs()
                 print 'local_time = %.7f' %local_time
