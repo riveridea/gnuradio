@@ -104,7 +104,7 @@ uhd_pulse_source::work(
             _time_fracs += _cycle_duration;
             double intpart; //normalize
             _time_fracs = std::modf(_time_fracs, &intpart);
-            _time_secs += unsigned long long(intpart);
+            _time_secs += uint64_t(intpart);
         }
 
         //Handle the end of burst condition.
