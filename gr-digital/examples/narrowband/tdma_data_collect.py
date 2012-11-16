@@ -227,12 +227,12 @@ class my_top_block(gr.top_block):
 	n_devices = len(self.transmitters)
         if n_devices > 0:
             time_slot = (burst_duration + idle_duration)/NETWORK_SIZE
-            print 'base_s_time = %.7f' %start_time
+            #print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
                 s_time = uhd.time_spec_t(start_time + time_slot*(NODES_PC*self._node_id + i))
                 #print 'specified_time = %.7f' %s_time.get_real_secs()
                 local_time = self.transmitters[i].u.get_time_now().get_real_secs()
-                #print 'local_time = %.7f' %local_time
+                print 'current time 1 = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
 		                        s_time.get_frac_secs(), 
 					self._sample_rate,
@@ -249,8 +249,8 @@ class my_top_block(gr.top_block):
 	self.start()
 	for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
-            print "current time = %.7f" %current_time
-            print "base_s_time = %.7f" %start_time
+            print "current time 2 = %.7f" %current_time
+            #print "base_s_time = %.7f" %start_time
 	    self.sensors[i].u.start()
 		
 # /////////////////////////////////////////////////////////////////////////////
