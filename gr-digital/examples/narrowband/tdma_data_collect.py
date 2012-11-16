@@ -52,6 +52,8 @@ NETWORK_SIZE = 4
 
 MTU = 4096
 
+BURST_LEN = 0.008
+
 CLUSTER_HEAD    = 'head'   # cluster head
 CLUSTER_NODE    = 'node'   # cluster node
 
@@ -92,7 +94,7 @@ class socket_server(threading.Thread):
                         (burst_duration, ) = struct.unpack('!d', cmds[3])
                         (idle_duration, ) = struct.unpack('!d', cmds[4])
 			# handle the start command
-                        self.parent.owner.start_tdma_net(start_time, burst_duration, idle_duration)
+                        self._parent._owner.start_tdma_net(start_time, burst_duration, idle_duration)
 	        else:
 	            print 'protocol error'
 			
@@ -123,10 +125,10 @@ class my_top_block(gr.top_block):
         if self._node_type == CLUSTER_HEAD:
             self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
-            start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
-            burst_duration = struct.pack('!d', 0.008)
+            start_time = struct.pack('!d', self.sensors[0].u.get_time_now().get_real_secs() + 1)
+            burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
-            idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - burst_duration)
+            idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
             print hostname
             self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
@@ -203,7 +205,7 @@ class my_top_block(gr.top_block):
                                                 options.tx_freq, options.tx_gain,
                                                 options.tx_spec, options.tx_antenna,
                                                 options.verbose))	
-                       
+                     
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             #print 'In locking '
             #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
