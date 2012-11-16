@@ -75,7 +75,7 @@ class socket_server(threading.Thread):
             msg, (addr, port) = self._socket.recvfrom(MTU)
             
             current_time = self._parent._owner.sensors[i].u.get_time_now().get_real_secs()
-            print "msg received at time of %.7f" current_time
+            print "msg received at time of %.7f" %current_time
             
             payload = msg
             cmds = []
