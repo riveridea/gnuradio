@@ -98,6 +98,7 @@ uhd_pulse_source::work(
         //Tag a start of burst and timestamp.
         //Increment the time for the next burst.
         if (_do_new_burst){
+            //std::cout << "new burst" << std::endl;
             _do_new_burst = false;
             _samps_left_in_burst = _samps_per_burst;
 
