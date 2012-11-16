@@ -211,7 +211,7 @@ class my_top_block(gr.top_block):
         
             #print 'Locked'
 
-        self.timer = threading.Timer(1, self.start_streaming)
+        self.timer =  threading.Timer(1, self.start_streaming)
 	
     def start_tdma_net(self, start_time, burst_duration, idle_duration):
 	# specify the tdma pulse parameters and connect the 
