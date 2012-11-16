@@ -197,7 +197,7 @@ class my_top_block(gr.top_block):
             # Configure Transmitters	
             self.transmitters = []
             for i in range(n_devices):			
-                self.transmitter.append(uhd_transmitter(addrs[i], symbol_rate,
+                self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
                                                 options.samples_per_symbol,
                                                 options.tx_samprate,
                                                 options.tx_freq, options.tx_gain,
