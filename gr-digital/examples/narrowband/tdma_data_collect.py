@@ -52,6 +52,8 @@ NETWORK_SIZE = 4
 
 MTU = 4096
 
+BURST_LEN = 0.008
+
 CLUSTER_HEAD    = 'head'   # cluster head
 CLUSTER_NODE    = 'node'   # cluster node
 
@@ -124,9 +126,9 @@ class my_top_block(gr.top_block):
             self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
             start_time = struct.pack('!d', self.sensors[0].u.get_time_now().get_real_secs() + 1)
-            burst_duration = struct.pack('!d', 0.008)
+            burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
-            idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - burst_duration)
+            idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
             print hostname
             self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
