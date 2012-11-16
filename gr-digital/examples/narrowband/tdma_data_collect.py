@@ -126,7 +126,7 @@ class my_top_block(gr.top_block):
         if self._node_type == CLUSTER_HEAD:
             self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
-            start_time = struct.pack('!d', self.sensors[0].u.get_time_now().get_real_secs() + 1)
+            start_time = struct.pack('!d', self.sensors[0].u.get_time_now().get_real_secs() + 2)
             burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
@@ -239,7 +239,7 @@ class my_top_block(gr.top_block):
             exit("no devices on this node!")
 			
 	# start the flow graph and all the sensors
-	tb.start()
+	self.start()
 	for i in range(n_devices):
 	    self.sensors[i].u.start()
 		
