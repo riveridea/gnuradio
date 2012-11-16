@@ -76,7 +76,7 @@ class uhd_interface:
         self._gain = self.set_gain(gain)
         self._freq = self.set_freq(freq)
 
-        self._rate, self._sps = self.set_sample_rate(sym_rate, sps, direct_rate)
+        self._rate, self._sps = self.set_sample_rate(sym_rate, sps, samp_rate)
 
     def set_sample_rate(self, sym_rate, req_sps, direct_rate=None):
         start_sps = req_sps
@@ -148,7 +148,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
                                 gr.io_signature(0,0,0))
 
         # Set up the UHD interface as a transmitter
-        uhd_interface.__init__(self, True, addr, sym_rate, sps, frate=None
+        uhd_interface.__init__(self, True, addr, sym_rate, sps, frate=None,
                                freq, gain, spec, antenna)
 
         self.connect(self, self.u)
