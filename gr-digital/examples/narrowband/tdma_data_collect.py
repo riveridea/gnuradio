@@ -123,7 +123,7 @@ class my_top_block(gr.top_block):
         if self._node_type == CLUSTER_HEAD:
             self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
-            start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
+            start_time = struct.pack('!d', self.sensors[0].u.get_time_now().get_real_secs() + 1)
             burst_duration = struct.pack('!d', 0.008)
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - burst_duration)
@@ -203,7 +203,7 @@ class my_top_block(gr.top_block):
                                                 options.tx_freq, options.tx_gain,
                                                 options.tx_spec, options.tx_antenna,
                                                 options.verbose))	
-                       
+                     
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             #print 'In locking '
             #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
