@@ -50,6 +50,8 @@ uhd_pulse_source::uhd_pulse_source(
         _samps_left_in_burst(1), //immediate EOB
         _do_new_burst(false)
     {
+        std::cout << "_time_secs = " << _time_secs << std::endl;
+        std::cout << "_time_fracs = " << _time_fracs << std::endl;
         //NOP
     }
 
