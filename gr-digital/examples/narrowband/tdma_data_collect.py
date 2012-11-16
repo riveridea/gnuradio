@@ -224,9 +224,12 @@ class my_top_block(gr.top_block):
 	n_devices = len(self.transmitters)
         if n_devices > 0:
             cycle_duration = burst_duration + idle_duration
+            print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
                 s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
-                print s_time.get_real_secs()
+                print 'specified_time = %.7f' %s_time.get_real_secs().get_full_secs()
+                local_time = self.transmitters[i].u.get_time_now().get_full_secs()
+                print 'local_time = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
 		                        s_time.get_frac_secs(), 
 					self._sample_rate,
@@ -234,8 +237,8 @@ class my_top_block(gr.top_block):
 					burst_duration))
 		# Connect the pulse source to the transmitters
 		self.connect(self.pulse_srcs[i], self.transmitters[i].u)
-		# Set the start time for sensors
-		self.sensors[i].u.set_start_time(s_time)
+		# Set the start time for sensors                
+		#self.sensors[i].u.set_start_time(s_time)
         else:
             exit("no devices on this node!")
 			
