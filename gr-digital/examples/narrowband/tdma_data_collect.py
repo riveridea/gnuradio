@@ -38,6 +38,7 @@ import struct
 import sys
 import threading
 import time
+from ctypes import *
 
 # socket 
 import socket
