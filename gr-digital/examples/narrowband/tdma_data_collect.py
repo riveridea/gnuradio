@@ -201,7 +201,7 @@ class my_top_block(gr.top_block):
                                                 options.samples_per_symbol,
                                                 options.tx_samprate,
                                                 options.tx_freq, options.tx_gain,
-                                                options.rx_spec, options.rx_antenna,
+                                                options.tx_spec, options.rx_antenna,
                                                 options.verbose))	
                        
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
