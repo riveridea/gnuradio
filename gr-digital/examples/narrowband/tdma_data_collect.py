@@ -196,7 +196,7 @@ class my_top_block(gr.top_block):
 					
 				# file sinks
                 filename = "%s_sensed.dat" %(self._node_id + i)
-                #self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
+                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
             self.transmitters = []
@@ -237,7 +237,7 @@ class my_top_block(gr.top_block):
 					idle_duration,
 					burst_duration))
 		# Connect the pulse source to the transmitters
-		#self.connect(self.pulse_srcs[i], self.transmitters[i].u)
+		# self.connect(self.pulse_srcs[i], self.transmitters[i].u)
 		# Set the start time for sensors                
 		self.sensors[i].u.set_start_time(uhd.time_spec_t(start_time))
         else:
