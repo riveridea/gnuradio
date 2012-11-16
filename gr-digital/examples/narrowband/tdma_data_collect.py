@@ -94,7 +94,7 @@ class socket_server(threading.Thread):
                         (burst_duration, ) = struct.unpack('!d', cmds[3])
                         (idle_duration, ) = struct.unpack('!d', cmds[4])
 			# handle the start command
-                        self.parent.owner.start_tdma_net(start_time, burst_duration, idle_duration)
+                        self._parent._owner.start_tdma_net(start_time, burst_duration, idle_duration)
 	        else:
 	            print 'protocol error'
 			
