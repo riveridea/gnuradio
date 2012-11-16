@@ -48,7 +48,7 @@ import socket
 
 ds = 32
 
-CLUSTER_SIZE = 7
+NETWORK_SIZE = 4
 
 MTU = 4096
 
@@ -126,7 +126,7 @@ class my_top_block(gr.top_block):
             start_time = struct.pack('!d', self.source.u.get_time_now().get_real_secs() + 1)
             burst_duration = struct.pack('!d', 0.008)
             t_slot = 0.010  # tdma slot length
-            idle_duration = struct.pack('!d', t_slot*(CLUSTER_SIZE - 1) + t_slot - burst_duration)
+            idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - burst_duration)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
             print hostname
             self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
