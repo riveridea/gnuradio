@@ -227,8 +227,8 @@ class my_top_block(gr.top_block):
             print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
                 s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
-                print 'specified_time = %.7f' %s_time.get_real_secs().get_full_secs()
-                local_time = self.transmitters[i].u.get_time_now().get_full_secs()
+                print 'specified_time = %.7f' %s_time.get_real_secs().get_real_secs()
+                local_time = self.transmitters[i].u.get_time_now().get_real_secs()
                 print 'local_time = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
 		                        s_time.get_frac_secs(), 
