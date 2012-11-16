@@ -59,7 +59,7 @@ public:
     );
 
 private:
-    unsigned time_t _time_secs;
+    time_t _time_secs;
     double _time_fracs;
     const double _samp_rate;
     const uint64_t _samps_per_burst;
