@@ -28,7 +28,7 @@
 class uhd_pulse_source;
 
 GR_UHD_API boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
-        const uint64_t start_secs,
+        const unsigned long long start_secs,
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
@@ -39,18 +39,18 @@ class GR_UHD_API uhd_pulse_source : public gr_sync_block{
 public:
 
     uhd_pulse_source(
-        const uint64_t start_secs,
+        const unsigned long long start_secs,
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
         const double burst_duration
     );
 
-    void make_time_tag(const uint64_t tag_count);
+    void make_time_tag(const unsigned long long tag_count);
 
-    void make_sob_tag(const uint64_t tag_count);
+    void make_sob_tag(const unsigned long long tag_count);
 
-    void make_eob_tag(const uint64_t tag_count);
+    void make_eob_tag(const unsigned long long tag_count);
 
     int work(
         int noutput_items,
@@ -59,12 +59,12 @@ public:
     );
 
 private:
-    uint64_t _time_secs;
+    unsigned long long _time_secs;
     double _time_fracs;
     const double _samp_rate;
-    const uint64_t _samps_per_burst;
+    const unsigned long long _samps_per_burst;
     const double _cycle_duration;
-    uint64_t _samps_left_in_burst;
+    unsigned long long _samps_left_in_burst;
     bool _do_new_burst;
 
 };

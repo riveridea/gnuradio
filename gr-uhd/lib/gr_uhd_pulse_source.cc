@@ -30,7 +30,7 @@
 #include "gr_uhd_common.h"
 
 uhd_pulse_source::uhd_pulse_source(
-        const uint64_t start_secs,
+        const unsigned long long start_secs,
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
@@ -53,7 +53,7 @@ uhd_pulse_source::uhd_pulse_source(
     }
 
 void 
-uhd_pulse_source::make_time_tag(const uint64_t tag_count){;
+uhd_pulse_source::make_time_tag(const unsigned long long tag_count){;
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_time");
         const pmt::pmt_t value = pmt::pmt_make_tuple(
             pmt::pmt_from_uint64(_time_secs),
@@ -64,7 +64,7 @@ uhd_pulse_source::make_time_tag(const uint64_t tag_count){;
     }
 
 void 
-uhd_pulse_source::make_sob_tag(const uint64_t tag_count){
+uhd_pulse_source::make_sob_tag(const unsigned long long tag_count){
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_sob");
         const pmt::pmt_t value = pmt::PMT_T;
         const pmt::pmt_t srcid = pmt::pmt_string_to_symbol(this->name());
@@ -72,7 +72,7 @@ uhd_pulse_source::make_sob_tag(const uint64_t tag_count){
     }
 
 void 
-uhd_pulse_source::make_eob_tag(const uint64_t tag_count){;
+uhd_pulse_source::make_eob_tag(const unsigned long long tag_count){;
         const pmt::pmt_t key = pmt::pmt_string_to_symbol("tx_eob");
         const pmt::pmt_t value = pmt::PMT_T;
         const pmt::pmt_t srcid = pmt::pmt_string_to_symbol(this->name());
@@ -104,7 +104,7 @@ uhd_pulse_source::work(
             _time_fracs += _cycle_duration;
             double intpart; //normalize
             _time_fracs = std::modf(_time_fracs, &intpart);
-            _time_secs += uint64_t(intpart);
+            _time_secs += unsigned long long(intpart);
         }
 
         //Handle the end of burst condition.
@@ -121,7 +121,7 @@ uhd_pulse_source::work(
     }
 	
 boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
-        const uint64_t start_secs,
+        const unsigned long long start_secs,
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
