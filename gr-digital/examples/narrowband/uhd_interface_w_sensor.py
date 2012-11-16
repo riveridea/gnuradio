@@ -148,7 +148,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
                                 gr.io_signature(0,0,0))
 
         # Set up the UHD interface as a transmitter
-        uhd_interface.__init__(self, True, addr, sym_rate, sps, frate=None,
+        uhd_interface.__init__(self, True, addr, sym_rate, sps, frate,
                                freq, gain, spec, antenna)
 
         self.connect(self, self.u)
