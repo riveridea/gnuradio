@@ -128,7 +128,7 @@ class my_top_block(gr.top_block):
             self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
             current_time = self.sensors[0].u.get_time_now().get_real_secs()
-            print "cluster head current time "
+            print "cluster head current time %.7f" %current_time
             start_time = struct.pack('!d', current_time + 2)        
             burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
