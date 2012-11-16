@@ -67,7 +67,7 @@ class uhd_interface:
             self.u.set_antenna('TX/RX', 0)
         else:
             print 'set the antenna to RX2'
-            self.u.set_antenna('RX2', 0)
+            self.u.set_antenna('TX/RX', 0)
         
         #self._args = args
         self._addr = addr
