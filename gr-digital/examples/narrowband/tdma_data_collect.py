@@ -73,6 +73,10 @@ class socket_server(threading.Thread):
     def run(self):
         while 1:
             msg, (addr, port) = self._socket.recvfrom(MTU)
+            
+            current_time = self._parent._owner.sensors[i].u.get_time_now().get_real_secs()
+            print "msg received at time of %.7f" current_time
+            
             payload = msg
             cmds = []
             l = len(payload)
@@ -125,7 +129,7 @@ class socket_ctrl_channel(object):
 class my_top_block(gr.top_block):        
     def start_streaming(self):
         if self._node_type == CLUSTER_HEAD:
-            self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
+            #self._socket_ctrl_chan._sock_client._socket.sendto("message from cluster head\n", ('<broadcast>', NODE_PORT))
             hostname = socket.gethostname()
             current_time = self.sensors[0].u.get_time_now().get_real_secs()
             print "cluster head current time %.7f" %current_time
@@ -135,7 +139,7 @@ class my_top_block(gr.top_block):
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
             print hostname
-            self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
+            #self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
         #else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
             #self.source.u.start()
