@@ -226,6 +226,7 @@ class my_top_block(gr.top_block):
             cycle_duration = burst_duration + idle_duration
             for i in range(n_devices):
                 s_time = uhd.time_spec_t(start_time + cycle_duration*(self._node_id + i))
+                print s_time.get_real_secs()
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
 		                        s_time.get_frac_secs(), 
 					self._sample_rate,
