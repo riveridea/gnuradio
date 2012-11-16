@@ -237,9 +237,9 @@ class my_top_block(gr.top_block):
 					idle_duration,
 					burst_duration))
 		# Connect the pulse source to the transmitters
-		self.connect(self.pulse_srcs[i], self.transmitters[i].u)
+		#self.connect(self.pulse_srcs[i], self.transmitters[i].u)
 		# Set the start time for sensors                
-		#self.sensors[i].u.set_start_time(s_time)
+		self.sensors[i].u.set_start_time(uhd.time_spec_t(start_time))
         else:
             exit("no devices on this node!")
 			
