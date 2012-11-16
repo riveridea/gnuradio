@@ -195,7 +195,7 @@ class my_top_block(gr.top_block):
 					
 				# file sinks
                 filename = "%s_sensed.dat" %(self._node_id + i)
-                self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
+                #self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
             self.transmitters = []
