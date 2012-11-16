@@ -48,7 +48,7 @@ import socket
 
 ds = 32
 
-CLUSTER_SIZE = 2
+CLUSTER_SIZE = 7
 
 MTU = 4096
 
