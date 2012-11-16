@@ -201,7 +201,7 @@ class my_top_block(gr.top_block):
                                                 options.samples_per_symbol,
                                                 options.tx_samprate,
                                                 options.tx_freq, options.tx_gain,
-                                                options.tx_spec, options.rx_antenna,
+                                                options.tx_spec, options.tx_antenna,
                                                 options.verbose))	
                        
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
@@ -315,8 +315,6 @@ def main():
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
-
-    tb.source.u.set_start_on_demand()
     
     #tb.start()        # start flow graph
     #self.source.u.stop()
