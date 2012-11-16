@@ -232,7 +232,7 @@ class my_top_block(gr.top_block):
 					idle_duration,
 					burst_duration))
 		# Connect the pulse source to the transmitters
-		self.connect(self.pulse_srcs[i], 0, self.transmitters[i].u, 0)
+		self.connect(self.pulse_srcs[i], self.transmitters[i].u)
 		# Set the start time for sensors
 		self.sensors[i].u.set_start_time(set_start_time)
         else:
@@ -251,7 +251,7 @@ global n_rcvd, n_right
 
 def main():
     global n_rcvd, n_right
-
+    
     n_rcvd = 0
     n_right = 0
 
