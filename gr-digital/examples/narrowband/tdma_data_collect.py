@@ -133,7 +133,7 @@ class my_top_block(gr.top_block):
             hostname = socket.gethostname()
             current_time = self.sensors[0].u.get_time_now().get_real_secs()
             print "cluster head current time %.7f" %current_time
-            start_time = struct.pack('!d', current_time + 2)        
+            start_time = struct.pack('!d', current_time + 5)        
             burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
