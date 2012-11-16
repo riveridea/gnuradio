@@ -146,14 +146,17 @@ class my_top_block(gr.top_block):
         # start the socket server to capture the control messages
         self._socket_ctrl_chan._sock_server.start()
 
-        if(options.rx_freq is not None):
+        if(options.sx_freq is not None):
             # Work-around to get the modulation's bits_per_symbol
             args = demodulator.extract_kwargs_from_options(options)
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
-            ask_sample_rate = symbol_rate*options.samples_per_symbol
+            if (options.sx_samprate is None):
+                ask_sample_rate = symbol_rate*options.samples_per_symbol
+            else:
+                ask_sample_rate = options.sx_samprate
 			
-            self._rx_freq = options.rx_freq
-            self._tx_freq = options.rx_freq # use the same frequence 
+            self._rx_freq = options.sx_freq
+            self._tx_freq = options.sx_freq # use the same frequence 
             self._sample_rate = ask_sample_rate
 
             # configuration the usrp sensors and transmitters
@@ -196,6 +199,7 @@ class my_top_block(gr.top_block):
             for i in range(n_devices):			
                 self.transmitter.append(uhd_transmitter(addrs[i], symbol_rate,
                                                 options.samples_per_symbol,
+                                                options.tx_samprate,
                                                 options.tx_freq, options.tx_gain,
                                                 options.rx_spec, options.rx_antenna,
                                                 options.verbose))	
@@ -296,7 +300,7 @@ def main():
         sys.exit(1)
 
     if options.from_file is None:
-        if options.rx_freq is None:
+        if options.sx_freq is None:
             sys.stderr.write("You must specify -f FREQ or --freq FREQ\n")
             parser.print_help(sys.stderr)
             sys.exit(1)

@@ -48,7 +48,7 @@ def add_freq_option(parser):
                           metavar="FREQ")
 
 class uhd_interface:
-    def __init__(self, istx, addr, sym_rate, sps, freq=None,
+    def __init__(self, istx, addr, sym_rate, sps, samp_rate=None, freq=None,
                  gain=None, spec=None, antenna=None):
         
         if(istx): 
@@ -76,12 +76,15 @@ class uhd_interface:
         self._gain = self.set_gain(gain)
         self._freq = self.set_freq(freq)
 
-        self._rate, self._sps = self.set_sample_rate(sym_rate, sps)
+        self._rate, self._sps = self.set_sample_rate(sym_rate, sps, direct_rate)
 
-    def set_sample_rate(self, sym_rate, req_sps):
+    def set_sample_rate(self, sym_rate, req_sps, direct_rate=None):
         start_sps = req_sps
         while(True):
-            asked_samp_rate = sym_rate * req_sps
+            if direct_rate is None:
+                asked_samp_rate = sym_rate * req_sps
+            else:
+                asked_samp_rate = direct_rate
             self.u.set_samp_rate(asked_samp_rate)
             actual_samp_rate = self.u.get_samp_rate()
 
@@ -138,14 +141,14 @@ class uhd_interface:
 #-------------------------------------------------------------------#
 
 class uhd_transmitter(uhd_interface, gr.hier_block2):
-    def __init__(self, addr, sym_rate, sps, freq=None, gain=None,
+    def __init__(self, addr, sym_rate, sps, frate=None, freq=None, gain=None,
                  spec=None, antenna=None, verbose=False):
         gr.hier_block2.__init__(self, "uhd_transmitter",
                                 gr.io_signature(1,1,gr.sizeof_gr_complex),
                                 gr.io_signature(0,0,0))
 
         # Set up the UHD interface as a transmitter
-        uhd_interface.__init__(self, True, addr, sym_rate, sps,
+        uhd_interface.__init__(self, True, addr, sym_rate, sps, frate=None
                                freq, gain, spec, antenna)
 
         self.connect(self, self.u)
@@ -167,6 +170,8 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
         parser.add_option("", "--tx-gain", type="eng_float", default=None,
                           help="set transmit gain in dB (default is midpoint)")
         parser.add_option("-v", "--verbose", action="store_true", default=False)
+        parser.add_option("", "--tx-samprate", type="eng_float", default=None,
+                          help="set sample rate for transmitter [default=%default]")
 
     # Make a static method to call before instantiation
     add_options = staticmethod(add_options)
