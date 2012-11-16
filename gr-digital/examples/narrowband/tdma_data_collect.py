@@ -228,9 +228,9 @@ class my_top_block(gr.top_block):
             print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
                 s_time = uhd.time_spec_t(start_time + time_slot*(NODES_PC*self._node_id + i))
-                print 'specified_time = %.7f' %s_time.get_real_secs()
+                #print 'specified_time = %.7f' %s_time.get_real_secs()
                 local_time = self.transmitters[i].u.get_time_now().get_real_secs()
-                print 'local_time = %.7f' %local_time
+                #print 'local_time = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
 		                        s_time.get_frac_secs(), 
 					self._sample_rate,
@@ -246,6 +246,9 @@ class my_top_block(gr.top_block):
 	# start the flow graph and all the sensors
 	self.start()
 	for i in range(n_devices):
+            current_time = self.sensors[i].u.get_time_now().get_real_secs()
+            print "current time = %.7f" %current_time
+            print "base_s_time = %.7f" %start_time
 	    self.sensors[i].u.start()
 		
 # /////////////////////////////////////////////////////////////////////////////
