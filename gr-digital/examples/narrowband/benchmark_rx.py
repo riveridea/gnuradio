@@ -46,7 +46,8 @@ ds = 32
 class my_top_block(gr.top_block):        
     def start_streaming(self):
         stime = self.source.u.get_time_now().get_real_secs()
-        self.source.u.start(uhd.time_spec_t(stime + 2))
+        set_start_time(uhd.time_spec_t(stime + 2))
+        self.source.u.start()
         print 'start streaming'
         
     def __init__(self, demodulator, rx_callback, options):
