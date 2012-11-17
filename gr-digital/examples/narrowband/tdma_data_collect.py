@@ -145,9 +145,9 @@ class my_top_block(gr.top_block):
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
         else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
             if DEBUG == 1:
-                stime = self.sensors[0].u.get_time_now().get_real_secs()
+                #stime = self.sensors[0].u.get_time_now().get_real_secs()
                 #for i in range(NODES_PC):                      
-                self.sensors[0].u.set_start_time(uhd.time_spec_t(stime + 2))
+                #self.sensors[0].u.set_start_time(uhd.time_spec_t(stime + 2))
                 self.sensors[0].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
@@ -206,7 +206,7 @@ class my_top_block(gr.top_block):
                     self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                     self.sensors[i].u.set_clock_source("mimo",0) 
 					
-				# file sinks
+		# file sinks
                 filename = "%s_sensed.dat" %(self._node_id + i)
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
