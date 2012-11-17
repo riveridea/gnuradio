@@ -108,8 +108,8 @@ class my_top_block(gr.top_block):
         self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
         self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
 
-	self.connect((self.sampcov, 0), (self.tracer, 0))
-	self.connect((self.sampcov, 1), (self.tracer, 1))
+	#self.connect((self.sampcov, 0), (self.tracer, 0))
+	#self.connect((self.sampcov, 1), (self.tracer, 1))
 	#self.connect((self.sampcov, 0), (self.eval, 0))
 	#self.connect((self.sampcov, 1), (self.eval, 1))
 	#self.connect(self.tracer, self.gr_file_sink3)
