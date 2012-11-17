@@ -149,6 +149,7 @@ class my_top_block(gr.top_block):
                 #for i in range(NODES_PC):                      
                 self.sensors[0].u.set_start_time(uhd.time_spec_t(stime + 2))
                 self.start()
+                time.sleep(5)
                 self.sensors[0].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
