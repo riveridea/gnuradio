@@ -148,7 +148,7 @@ class my_top_block(gr.top_block):
                 stime = self.sensors[0].u.get_time_now().get_real_secs()
                 for i in range(NODES_PC):                      
                         self.sensors[i].u.set_start_time(uhd.time_spec_t(stime + 2))
-                        self.source[i].u.start()
+                        self.sensors[i].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
