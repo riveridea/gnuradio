@@ -146,9 +146,9 @@ class my_top_block(gr.top_block):
         else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
             if DEBUG == 1:
                 stime = self.sensors[0].u.get_time_now().get_real_secs()
-                for i in range(NODES_PC):                      
-                        self.sensors[i].u.set_start_time(uhd.time_spec_t(stime + 2))
-                        self.sensors[i].u.start()
+                #for i in range(NODES_PC):                      
+                self.sensors[0].u.set_start_time(uhd.time_spec_t(stime + 2))
+                self.sensors[0].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
