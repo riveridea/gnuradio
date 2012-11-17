@@ -31,6 +31,7 @@ from gnuradio import digital
 # from current dir
 from receive_path import receive_path
 from uhd_interface import uhd_receiver
+from uhd_interface_w_sensor import uhd_sensor
 
 import struct
 import sys
@@ -59,12 +60,18 @@ class my_top_block(gr.top_block):
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
             ask_sample_rate = symbol_rate*options.samples_per_symbol
 
-            self.source = uhd_receiver(options.args, symbol_rate,
-                                       options.samples_per_symbol,
-                                       options.rx_freq, options.rx_gain,
-                                       options.spec, options.antenna,
-                                       options.verbose)
+            #self.source = uhd_receiver(options.args, symbol_rate,
+            #                           options.samples_per_symbol,
+            #                           options.rx_freq, options.rx_gain,
+            #                           options.spec, options.antenna,
+            #                           options.verbose)
             options.samples_per_symbol = self.source._sps
+            devices = uhd.find_devices_raw()
+            addr0 = devices[0].to_string()
+            self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
+                                   options.sx_freq, options.sx_gain,
+                                   options.sx_spec, options.sx_antenna, 
+                                   options.verbose)
             
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
             self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)

@@ -245,7 +245,7 @@ class uhd_receiver(uhd_interface, gr.hier_block2):
 #-------------------------------------------------------------------#
 #   SENSOR
 #-------------------------------------------------------------------#       
-class uhd_sensor(uhd_interface, gr.hier_block2):
+class uhd_sensor(gr.hier_block2):
     def __init__(self, addr, samp_rate, freq=None, gain=None,
                  spec=None, antenna=None, verbose=False):
         gr.hier_block2.__init__(self, "uhd_sensor",
