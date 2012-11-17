@@ -47,6 +47,8 @@ import socket
 #print os.getpid()
 #raw_input('Attach and press enter: ')
 
+DEBUG = 1
+
 ds = 32
 
 NETWORK_SIZE = 4
@@ -141,8 +143,12 @@ class my_top_block(gr.top_block):
             print hostname
             #self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
-        #else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
-            #self.source.u.start()
+        else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
+            if DEBUG == 1:
+                stime = self.sensors[0].u.get_time_now().get_real_secs()
+                for i in range(NODES_PC):                      
+                        self.sensors[i].u.set_start_time(uhd.time_spec_t(stime + 2))
+                        self.source[i].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
