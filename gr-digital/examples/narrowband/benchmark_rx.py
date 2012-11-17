@@ -48,6 +48,7 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         stime = self.source.u.get_time_now().get_real_secs()
         self.source.u.set_start_time(uhd.time_spec_t(stime + 2))
+        self.start()
         self.source.u.start()
         print 'start streaming'
         
@@ -192,7 +193,7 @@ def main():
 
     tb.source.u.set_start_on_demand()
     
-    tb.start()        # start flow graph
+    #tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
     tb.timer.start()
