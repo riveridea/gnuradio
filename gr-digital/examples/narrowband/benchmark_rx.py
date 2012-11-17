@@ -72,7 +72,7 @@ class my_top_block(gr.top_block):
                                    options.sx_freq, options.sx_gain,
                                    options.sx_spec, options.sx_antenna, 
                                    options.verbose)
-            
+                                   
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
             self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
             self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
