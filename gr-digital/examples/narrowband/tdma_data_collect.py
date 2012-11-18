@@ -78,6 +78,7 @@ class socket_server(threading.Thread):
             
             current_time = self._parent._owner.sensors[0].u.get_time_now().get_real_secs()
             print "msg received at time of %.7f" %current_time
+            print msg
             
             payload = msg
             cmds = []
@@ -140,7 +141,7 @@ class my_top_block(gr.top_block):
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
             payload = 'cmd' + ':' + 'start' + ':' + start_time + ':' + burst_duration + ':' + idle_duration 
-            print hostname
+            #print hostname
             #self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
         else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
