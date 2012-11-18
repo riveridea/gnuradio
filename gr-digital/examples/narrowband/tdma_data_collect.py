@@ -47,7 +47,7 @@ import socket
 #print os.getpid()
 #raw_input('Attach and press enter: ')
 
-DEBUG = 1
+DEBUG = 0
 
 ds = 32
 
@@ -135,7 +135,7 @@ class my_top_block(gr.top_block):
             hostname = socket.gethostname()
             current_time = self.sensors[0].u.get_time_now().get_real_secs()
             print "cluster head current time %.7f" %current_time
-            start_time = struct.pack('!d', current_time + 5)        
+            start_time = struct.pack('!d', current_time + 10)        
             burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
@@ -259,6 +259,7 @@ class my_top_block(gr.top_block):
 			
 	# start the flow graph and all the sensors
 	self.start()
+        time.sleep(5)
 	for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
