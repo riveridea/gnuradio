@@ -214,13 +214,13 @@ class my_top_block(gr.top_block):
 
             # Configure Transmitters	
             self.transmitters = []
-            #for i in range(n_devices):			
-                #self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
-                #                                options.samples_per_symbol,
-                #                                options.tx_samprate,
-                #                                options.tx_freq, options.tx_gain,
-                #                                options.tx_spec, options.tx_antenna,
-                #                                options.verbose))	
+            for i in range(n_devices):			
+                self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
+                                                options.samples_per_symbol,
+                                                options.tx_samprate,
+                                                options.tx_freq, options.tx_gain,
+                                                options.tx_spec, options.tx_antenna,
+                                                options.verbose))	
                      
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             #print 'In locking '
