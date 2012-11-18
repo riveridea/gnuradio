@@ -31,6 +31,7 @@ from gnuradio import digital
 # from current dir
 from receive_path import receive_path
 from uhd_interface import uhd_receiver
+from uhd_interface_w_sensor import uhd_sensor
 
 import struct
 import sys
@@ -45,6 +46,9 @@ ds = 32
 
 class my_top_block(gr.top_block):        
     def start_streaming(self):
+        stime = self.source.u.get_time_now().get_real_secs()
+        self.source.u.set_start_time(uhd.time_spec_t(stime + 2))
+        self.start()
         self.source.u.start()
         print 'start streaming'
         
@@ -63,13 +67,19 @@ class my_top_block(gr.top_block):
                                        options.spec, options.antenna,
                                        options.verbose)
             options.samples_per_symbol = self.source._sps
-            
+            #devices = uhd.find_devices_raw()
+            #addr0 = devices[0].to_string()
+            #self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
+            #                       options.sx_freq, options.sx_gain,
+            #                       options.sx_spec, options.sx_antenna, 
+            #                        options.verbose)
+                                   
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
             self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
             self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
             self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
             self.tracer = digital.digital_swig.trace_calculator(ds)
-            self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
+            #self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
             self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
             self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
             self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
@@ -104,14 +114,14 @@ class my_top_block(gr.top_block):
         #self.connect(self.s2v, self.gr_file_sink6)
         
         #self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
-        #self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
-        #self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
+        self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
+        self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
 
-	self.connect((self.sampcov, 0), (self.tracer, 0))
-	self.connect((self.sampcov, 1), (self.tracer, 1))
+	#self.connect((self.sampcov, 0), (self.tracer, 0))
+	#self.connect((self.sampcov, 1), (self.tracer, 1))
 	#self.connect((self.sampcov, 0), (self.eval, 0))
 	#self.connect((self.sampcov, 1), (self.eval, 1))
-	self.connect(self.tracer, self.gr_file_sink3)
+	#self.connect(self.tracer, self.gr_file_sink3)
 	#self.connect(self.eval, self.gr_file_sink4)
 	#self.connect(self.tracer, self.gr_file_sink3)		
  
@@ -156,6 +166,7 @@ def main():
 
     receive_path.add_options(parser, expert_grp)
     uhd_receiver.add_options(parser)
+    uhd_sensor.add_options(parser)
 
     for mod in demods.values():
         mod.add_options(expert_grp)
@@ -182,7 +193,7 @@ def main():
 
     tb.source.u.set_start_on_demand()
     
-    tb.start()        # start flow graph
+    #tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
     tb.timer.start()

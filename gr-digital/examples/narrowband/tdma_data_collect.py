@@ -47,6 +47,8 @@ import socket
 #print os.getpid()
 #raw_input('Attach and press enter: ')
 
+DEBUG = 0
+
 ds = 32
 
 NETWORK_SIZE = 4
@@ -133,7 +135,7 @@ class my_top_block(gr.top_block):
             hostname = socket.gethostname()
             current_time = self.sensors[0].u.get_time_now().get_real_secs()
             print "cluster head current time %.7f" %current_time
-            start_time = struct.pack('!d', current_time + 5)        
+            start_time = struct.pack('!d', current_time + 10)        
             burst_duration = struct.pack('!d', BURST_LEN)
             t_slot = 0.010  # tdma slot length
             idle_duration = struct.pack('!d', t_slot*(NETWORK_SIZE - 1) + t_slot - BURST_LEN)
@@ -141,8 +143,14 @@ class my_top_block(gr.top_block):
             print hostname
             #self._socket_ctrl_chan._sock_client._socket.sendto(hostname, ('<broadcast>', NODE_PORT))
             self._socket_ctrl_chan._sock_client._socket.sendto(payload, ('<broadcast>', NODE_PORT))
-        #else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
-            #self.source.u.start()
+        else:  # CLUSTER_NODE will be responsible for tdma transmitting and receiving
+            if DEBUG == 1:
+                stime = self.sensors[0].u.get_time_now().get_real_secs()
+                #for i in range(NODES_PC):                      
+                self.sensors[0].u.set_start_time(uhd.time_spec_t(stime + 2))
+                self.start()
+                time.sleep(5)
+                self.sensors[0].u.start()
         
     def __init__(self, node_type, node_index, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -200,19 +208,19 @@ class my_top_block(gr.top_block):
                     self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                     self.sensors[i].u.set_clock_source("mimo",0) 
 					
-				# file sinks
+		# file sinks
                 filename = "%s_sensed.dat" %(self._node_id + i)
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
             self.transmitters = []
-            for i in range(n_devices):			
-                self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
-                                                options.samples_per_symbol,
-                                                options.tx_samprate,
-                                                options.tx_freq, options.tx_gain,
-                                                options.tx_spec, options.tx_antenna,
-                                                options.verbose))	
+            #for i in range(n_devices):			
+                #self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
+                #                                options.samples_per_symbol,
+                #                                options.tx_samprate,
+                #                                options.tx_freq, options.tx_gain,
+                #                                options.tx_spec, options.tx_antenna,
+                #                                options.verbose))	
                      
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             #print 'In locking '
@@ -251,6 +259,7 @@ class my_top_block(gr.top_block):
 			
 	# start the flow graph and all the sensors
 	self.start()
+        time.sleep(5)
 	for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
