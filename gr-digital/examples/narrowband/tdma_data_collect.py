@@ -51,11 +51,11 @@ DEBUG = 0
 
 ds = 32
 
-NETWORK_SIZE = 4
+NETWORK_SIZE = 32  # the number of all the USRPs
 
 MTU = 4096
 
-BURST_LEN = 0.008
+BURST_LEN = 0.008  #burst duration = 8ms
 NODES_PC  = 2
 
 CLUSTER_HEAD    = 'head'   # cluster head
