@@ -210,7 +210,7 @@ class my_top_block(gr.top_block):
                     self.sensors[i].u.set_clock_source("mimo",0) 
 					
 		# file sinks
-                filename = "%s_sensed.dat" %(self._node_id + i)
+                filename = "%s_sensed.dat" %(NODES_PC*self._node_id + i)
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
