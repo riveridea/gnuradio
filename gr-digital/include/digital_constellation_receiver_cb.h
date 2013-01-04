@@ -98,7 +98,7 @@ protected:
   digital_constellation_receiver_cb (digital_constellation_sptr constellation, 
 				     float loop_bw, float fmin, float fmax);
 
-  void phase_error_tracking(float phase_error);
+  void phase_error_tracking(float phase_error, const gr_complex& sample);
 
 private:
   unsigned int d_M;
