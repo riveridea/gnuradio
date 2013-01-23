@@ -63,7 +63,7 @@ digital_constellation_receiver_cb::digital_constellation_receiver_cb (digital_co
 }
 
 void
-digital_constellation_receiver_cb::phase_error_tracking(float phase_error)
+digital_constellation_receiver_cb::phase_error_tracking(float phase_error, const gr_complex& sample)
 {
   advance_loop(phase_error);
   phase_wrap();
@@ -107,7 +107,7 @@ digital_constellation_receiver_cb::general_work (int noutput_items,
     sample = nco*sample;      // get the downconverted symbol
 
     sym_value = d_constellation->decision_maker_pe(&sample, &phase_error);
-    phase_error_tracking(phase_error);  // corrects phase and frequency offsets
+    phase_error_tracking(phase_error, sample);  // corrects phase and frequency offsets
 
     out[i] = sym_value;
 
