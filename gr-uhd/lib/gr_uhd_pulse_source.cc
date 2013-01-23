@@ -103,7 +103,7 @@ uhd_pulse_source::work(
         }
         else if(in_nstreams == 1){ // data from upstreams
             const gr_complex *iptr = (const gr_complex *) input_items[0];
-            memcpy(output, iptr, sizeof(std::complex<float>)*noutput_items)           
+            memcpy(output, iptr, sizeof(std::complex<float>)*noutput_items);           
         }
 
         //Handle the start of burst condition.
@@ -141,13 +141,14 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
-        const double burst_duration
+        const double burst_duration,
+        const int    nin_streams
 )
 { 
     //return boost::make_shared<uhd_pulse_source>(
       //  start_secs, start_fracs, samp_rate, idle_duration, burst_duration);	
     gr_uhd_check_abi();
     return boost::shared_ptr<uhd_pulse_source>(
-        new uhd_pulse_source(start_secs, start_fracs, samp_rate, idle_duration, burst_duration));		
+        new uhd_pulse_source(start_secs, start_fracs, samp_rate, idle_duration, burst_duration, nin_streams));		
 }
 	
