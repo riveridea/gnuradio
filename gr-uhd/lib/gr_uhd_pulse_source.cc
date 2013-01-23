@@ -35,11 +35,12 @@ uhd_pulse_source::uhd_pulse_source(
         const double start_fracs,
         const double samp_rate,
         const double idle_duration,
-        const double burst_duration
+        const double burst_duration,
+        const int    nin_streams
     ):
         gr_sync_block(
             "uhd pulse source",
-            gr_make_io_signature(0, 0, 0),
+            gr_make_io_signature(nin_streams, nin_streams, nin_streams*sizeof(std::complex<float>)),
             gr_make_io_signature(1, 1, sizeof(std::complex<float>))
         ),
         _time_secs((uint64_t)start_secs),
@@ -50,6 +51,10 @@ uhd_pulse_source::uhd_pulse_source(
         _samps_left_in_burst(1), //immediate EOB
         _do_new_burst(false)
     {
+        if (nin_streams > 1){
+            std::cout << " Redundant input ports" << std::endl;
+        }
+    
         std::cout << "_time_secs = " << _time_secs << std::endl;
         std::cout << "_time_fracs = " << _time_fracs << std::endl;
         //NOP
@@ -90,8 +95,15 @@ uhd_pulse_source::work(
     ){
         //load the output with a constant
         std::complex<float> *output = reinterpret_cast<std::complex<float> *>(output_items[0]);
-        for (size_t i = 0; i < size_t(noutput_items); i++){
-            output[i] = std::complex<float>(0.7, 0.7);
+        int in_nstreams = input_items.size();
+        if(in_nstreams == 0){  // data generated here
+            for (size_t i = 0; i < size_t(noutput_items); i++){
+                output[i] = std::complex<float>(0.7, 0.7);
+            }
+        }
+        else if(in_nstreams == 1){ // data from upstreams
+            const gr_complex *iptr = (const gr_complex *) input_items[0];
+            memcpy(output, iptr, sizeof(std::complex<float>)*noutput_items)           
         }
 
         //Handle the start of burst condition.
