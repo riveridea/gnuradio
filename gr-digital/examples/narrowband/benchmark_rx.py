@@ -107,15 +107,15 @@ class my_top_block(gr.top_block):
 
         #self.connect(self.source, self.rxpath)
         #self.connect(self.source, self.gr_file_sink5)
-        self.connect(self.source, self.s2v)
-        self.connect(self.s2v, self.sampcov)
+        #self.connect(self.source, self.s2v)
+        #self.connect(self.s2v, self.sampcov)
         #self.connect(self.s2v, self.v2s)
         #self.connect(self.v2s, self.gr_file_sink5)
         #self.connect(self.s2v, self.gr_file_sink6)
         
         #self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
-        self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
-        self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
+        #self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
+        #self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
 
 	#self.connect((self.sampcov, 0), (self.tracer, 0))
 	#self.connect((self.sampcov, 1), (self.tracer, 1))
