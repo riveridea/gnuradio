@@ -36,7 +36,7 @@ uhd_pulse_source::uhd_pulse_source(
         const double samp_rate,
         const double idle_duration,
         const double burst_duration,
-        const int    nin_streams
+        const int    nin_streams=0
     ):
         gr_sync_block(
             "uhd pulse source",
@@ -142,7 +142,7 @@ boost::shared_ptr<uhd_pulse_source> uhd_make_pulse_source(
         const double samp_rate,
         const double idle_duration,
         const double burst_duration,
-        const int    nin_streams
+        const int    nin_streams=0
 )
 { 
     //return boost::make_shared<uhd_pulse_source>(
