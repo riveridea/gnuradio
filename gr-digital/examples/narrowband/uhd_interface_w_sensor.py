@@ -152,15 +152,15 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
                                freq, gain, spec, antenna)
 
         if(tdma): # add the tdma throttle before the uhd_sink
-		    s_time = self.u.get_time_now().get_real_secs() + 1
-			self.tdma_throttle = uhd.pulse_source(s_time.get_full_secs(),
-			                                  s_time.get_frac_secs(),
-                                              self.get_sample_rate(),											  
-			                                  0.032, #idle duration
-											  0.008, #burst duration
-										      1) # accept input data
-			self.connect(self, self.tdma_throttle, self.u)
-		else: # Normal transmitter
+	    s_time = self.u.get_time_now().get_real_secs() + 1
+	    self.tdma_throttle = uhd.pulse_source(s_time.get_full_secs(),
+						s_time.get_frac_secs(),
+						self.get_sample_rate(),											  
+						0.032, #idle duration
+						0.008, #burst duration
+						1) # accept input data
+	    self.connect(self, self.tdma_throttle, self.u)
+	else: # Normal transmitter
             self.connect(self, self.u)
 
         if(verbose):
