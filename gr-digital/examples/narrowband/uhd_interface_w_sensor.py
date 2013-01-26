@@ -160,7 +160,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
 						0.008, #burst duration
 						1) # accept input data
 	    self.connect(self, self.tdma_throttle, self.u)
-	else: # Normal transmitter
+        else: # Normal transmitter
             self.connect(self, self.u)
 
         if(verbose):
