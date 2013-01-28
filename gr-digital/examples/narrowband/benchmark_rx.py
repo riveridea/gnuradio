@@ -198,7 +198,7 @@ def main():
     tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
-    #tb.timer.start()
+    tb.timer.start()
     #tb.source.u.start()
     
     tb.wait()         # wait for it to finish
