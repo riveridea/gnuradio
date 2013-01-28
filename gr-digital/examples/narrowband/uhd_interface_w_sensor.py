@@ -152,7 +152,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
                                freq, gain, spec, antenna)
 
         if(tdma): # add the tdma throttle before the uhd_sink
-	    s_time = self.u.get_time_now().get_real_secs() + 1
+	    s_time = uhd.time_spec_t(self.u.get_time_now().get_real_secs() + 1)
 	    self.tdma_throttle = uhd.pulse_source(s_time.get_full_secs(),
 						s_time.get_frac_secs(),
 						self.get_sample_rate(),											  
@@ -168,6 +168,8 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
             
     def add_options(parser):
         add_freq_option(parser)
+        parser.add_option("-a", "--args", type="string", default="",
+                          help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-spec", type="string", default=None,

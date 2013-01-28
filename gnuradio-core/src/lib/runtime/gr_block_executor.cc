@@ -36,7 +36,7 @@
 #include <stdio.h>
 
 // must be defined to either 0 or 1
-#define ENABLE_LOGGING 0
+#define ENABLE_LOGGING 1
 
 #if (ENABLE_LOGGING)
 #define LOG(x) do { x; } while(0)
@@ -470,5 +470,6 @@ gr_block_executor::run_one_iteration()
  were_done:
   LOG(*d_log << "  were_done\n");
   d->set_done (true);
+  std::cerr << "were_done\n";
   return DONE;
 }

@@ -48,7 +48,7 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         stime = self.source.u.get_time_now().get_real_secs()
         self.source.u.set_start_time(uhd.time_spec_t(stime + 2))
-        self.start()
+        #self.start()
         self.source.u.start()
         print 'start streaming'
         
@@ -66,7 +66,9 @@ class my_top_block(gr.top_block):
                                        options.rx_freq, options.rx_gain,
                                        options.spec, options.antenna,
                                        options.verbose)
-            options.samples_per_symbol = self.source._sps
+                                       
+            self.source.u.set_start_on_demand()
+            #options.samples_per_symbol = self.source._sps
             #devices = uhd.find_devices_raw()
             #addr0 = devices[0].to_string()
             #self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
@@ -86,12 +88,12 @@ class my_top_block(gr.top_block):
             
             #self.eval = digital.digital_swig.eigen_herm(ds)
             
-            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
-            print 'In locking '
-            while (self.source.u.get_sensor("lo_locked").to_bool() == False):
-                print '.'
+            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+            #print 'In locking '
+            #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
+            #    print '.'
         
-            print 'Locked'
+            #print 'Locked'
 
         elif(options.from_file is not None):
             sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
@@ -191,9 +193,9 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
-    tb.source.u.set_start_on_demand()
+    #tb.source.u.set_start_on_demand()
     
-    #tb.start()        # start flow graph
+    tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
     tb.timer.start()
