@@ -470,5 +470,6 @@ gr_block_executor::run_one_iteration()
  were_done:
   LOG(*d_log << "  were_done\n");
   d->set_done (true);
+  std::cerr << "were_done\n"
   return DONE;
 }
