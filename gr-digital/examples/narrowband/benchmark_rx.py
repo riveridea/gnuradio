@@ -61,15 +61,15 @@ class my_top_block(gr.top_block):
             symbol_rate = options.bitrate / demodulator(**args).bits_per_symbol()
             ask_sample_rate = symbol_rate*options.samples_per_symbol
 
-            #self.source = uhd_receiver(options.args, symbol_rate,
-            #                           options.samples_per_symbol,
-            #                           options.rx_freq, options.rx_gain,
-            #                           options.spec, options.antenna,
-            #                           options.verbose)
+            self.source = uhd_receiver(options.args, symbol_rate,
+                                       options.samples_per_symbol,
+                                       options.rx_freq, options.rx_gain,
+                                       options.spec, options.antenna,
+                                       options.verbose)
             #options.samples_per_symbol = self.source._sps
-            devices = uhd.find_devices_raw()
-            addr0 = devices[0].to_string()
-            self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
+            #devices = uhd.find_devices_raw()
+            #addr0 = devices[0].to_string()
+            #self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
                                    options.sx_freq, options.sx_gain,
                                    options.sx_spec, options.sx_antenna, 
                                     options.verbose)
@@ -86,12 +86,12 @@ class my_top_block(gr.top_block):
             
             #self.eval = digital.digital_swig.eigen_herm(ds)
             
-            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
-            print 'In locking '
-            while (self.source.u.get_sensor("lo_locked").to_bool() == False):
-                print '.'
+            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+            #print 'In locking '
+            #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
+            #    print '.'
         
-            print 'Locked'
+            #print 'Locked'
 
         elif(options.from_file is not None):
             sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
@@ -125,7 +125,7 @@ class my_top_block(gr.top_block):
 	#self.connect(self.eval, self.gr_file_sink4)
 	#self.connect(self.tracer, self.gr_file_sink3)		
  
-        self.timer = threading.Timer(1, self.start_streaming)
+        #self.timer = threading.Timer(1, self.start_streaming)
 
 
 
@@ -191,12 +191,12 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
-    tb.source.u.set_start_on_demand()
+    #tb.source.u.set_start_on_demand()
     
-    #tb.start()        # start flow graph
+    tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
-    tb.timer.start()
+    #tb.timer.start()
     #tb.source.u.start()
     
     tb.wait()         # wait for it to finish
