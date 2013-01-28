@@ -51,7 +51,8 @@ class my_top_block(gr.top_block):
                                         options.samples_per_symbol,
                                         options.tx_freq, options.tx_gain,
                                         options.spec, options.antenna,
-                                        options.verbose)
+                                        options.verbose,
+                                        True)   #tdma
             options.samples_per_symbol = self.sink._sps
             
         elif(options.to_file is not None):
