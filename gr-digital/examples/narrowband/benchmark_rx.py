@@ -70,9 +70,9 @@ class my_top_block(gr.top_block):
             #devices = uhd.find_devices_raw()
             #addr0 = devices[0].to_string()
             #self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
-                                   options.sx_freq, options.sx_gain,
-                                   options.sx_spec, options.sx_antenna, 
-                                    options.verbose)
+            #                       options.sx_freq, options.sx_gain,
+            #                       options.sx_spec, options.sx_antenna, 
+            #                        options.verbose)
                                    
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
             #self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
