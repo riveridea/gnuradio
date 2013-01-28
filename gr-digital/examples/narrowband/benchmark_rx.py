@@ -76,13 +76,13 @@ class my_top_block(gr.top_block):
                                    
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
             #self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
-            #self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
+            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
             #self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
             #self.tracer = digital.digital_swig.trace_calculator(ds)
             #self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
             #self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
-            self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
-            #self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
+            #self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
+            self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
             
             #self.eval = digital.digital_swig.eigen_herm(ds)
             
@@ -106,12 +106,12 @@ class my_top_block(gr.top_block):
         #self.rxpath = receive_path(demodulator, rx_callback, options) 
 
         #self.connect(self.source, self.rxpath)
-        self.connect(self.source, self.gr_file_sink5)
-        #self.connect(self.source, self.s2v)
+        #self.connect(self.source, self.gr_file_sink5)
+        self.connect(self.source, self.s2v)
         #self.connect(self.s2v, self.sampcov)
         #self.connect(self.s2v, self.v2s)
         #self.connect(self.v2s, self.gr_file_sink5)
-        #self.connect(self.s2v, self.gr_file_sink6)
+        self.connect(self.s2v, self.gr_file_sink6)
         
         #self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
         #self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
