@@ -168,6 +168,8 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
             
     def add_options(parser):
         add_freq_option(parser)
+        parser.add_option("-a", "--args", type="string", default="",
+                          help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-spec", type="string", default=None,
