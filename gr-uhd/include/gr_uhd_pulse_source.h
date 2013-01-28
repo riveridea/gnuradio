@@ -45,7 +45,7 @@ public:
         const double samp_rate,
         const double idle_duration,
         const double burst_duration,
-        const int    nin_streams=0
+        int    nin_streams=0
     );
 
     void make_time_tag(const uint64_t tag_count);
