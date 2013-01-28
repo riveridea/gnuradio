@@ -75,14 +75,14 @@ class my_top_block(gr.top_block):
             #                        options.verbose)
                                    
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
-            self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
-            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
-            self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
-            self.tracer = digital.digital_swig.trace_calculator(ds)
+            #self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
+            #self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
+            #self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
+            #self.tracer = digital.digital_swig.trace_calculator(ds)
             #self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
-            self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
+            #self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
             self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
-            self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
+            #self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
             
             self.eval = digital.digital_swig.eigen_herm(ds)
             
