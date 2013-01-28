@@ -30,7 +30,7 @@ from gnuradio import digital
 
 # from current dir
 from receive_path import receive_path
-from uhd_interface import uhd_receiver
+from uhd_interface_w_sensor import uhd_receiver
 from uhd_interface_w_sensor import uhd_sensor
 
 import struct
@@ -84,7 +84,7 @@ class my_top_block(gr.top_block):
             self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
             #self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
             
-            self.eval = digital.digital_swig.eigen_herm(ds)
+            #self.eval = digital.digital_swig.eigen_herm(ds)
             
             self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             print 'In locking '
