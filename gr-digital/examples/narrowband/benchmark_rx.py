@@ -48,7 +48,7 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         stime = self.source.u.get_time_now().get_real_secs()
         self.source.u.set_start_time(uhd.time_spec_t(stime + 2))
-        self.start()
+        #self.start()
         self.source.u.start()
         print 'start streaming'
         
@@ -66,6 +66,8 @@ class my_top_block(gr.top_block):
                                        options.rx_freq, options.rx_gain,
                                        options.spec, options.antenna,
                                        options.verbose)
+                                       
+            self.source.u.set_start_on_demand()
             #options.samples_per_symbol = self.source._sps
             #devices = uhd.find_devices_raw()
             #addr0 = devices[0].to_string()
@@ -125,7 +127,7 @@ class my_top_block(gr.top_block):
 	#self.connect(self.eval, self.gr_file_sink4)
 	#self.connect(self.tracer, self.gr_file_sink3)		
  
-        #self.timer = threading.Timer(1, self.start_streaming)
+        self.timer = threading.Timer(1, self.start_streaming)
 
 
 
