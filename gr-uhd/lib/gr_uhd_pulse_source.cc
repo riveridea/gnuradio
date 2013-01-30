@@ -49,7 +49,8 @@ uhd_pulse_source::uhd_pulse_source(
         _samps_per_burst(samp_rate*burst_duration),
         _cycle_duration(idle_duration + burst_duration),
         _samps_left_in_burst(1), //immediate EOB
-        _do_new_burst(false)
+        _do_new_burst(false),
+        _first_sample(true)
     {
         if (nin_streams > 1){
             std::cout << " Redundant input ports" << std::endl;
@@ -109,6 +110,11 @@ uhd_pulse_source::work(
         //Handle the start of burst condition.
         //Tag a start of burst and timestamp.
         //Increment the time for the next burst.
+        if(_first_sample){
+            _do_new_burst = true;
+        }
+
+        
         if (_do_new_burst){
             std::cout << "new burst" << std::endl;
             _do_new_burst = false;
@@ -133,6 +139,7 @@ uhd_pulse_source::work(
             noutput_items = _samps_left_in_burst;
         }
 
+        std::cout << "samples left in burst = " << _samps_left_in_burst;
         _samps_left_in_burst -= noutput_items;
         std::cout << "pulse output items = " << noutput_items << std::endl;
         return noutput_items;
