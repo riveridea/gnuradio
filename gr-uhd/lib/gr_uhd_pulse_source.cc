@@ -112,6 +112,7 @@ uhd_pulse_source::work(
         //Increment the time for the next burst.
         if(_first_sample){
             _do_new_burst = true;
+            _first_sample = false;
         }
 
         
