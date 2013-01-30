@@ -156,8 +156,8 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
 	    self.tdma_throttle = uhd.pulse_source(s_time.get_full_secs(),
 						s_time.get_frac_secs(),
 						self.get_sample_rate(),											  
-						0.32, #idle duration
-						0.08, #burst duration
+						0.032, #idle duration
+						0.008, #burst duration
 						1) # accept input data
 	    self.connect(self, self.tdma_throttle, self.u)
         else: # Normal transmitter
