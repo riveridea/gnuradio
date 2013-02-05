@@ -86,7 +86,7 @@ class uhd_interface:
         #PC time and USRP time
         if(istx):
             self.tdiff_register = gr.msg_queue()
-            update_time_diff(self.u)
+            self.update_time_diff(self.u)
         #the thread to monitor the PC time and the USRP time periodically
             
 
