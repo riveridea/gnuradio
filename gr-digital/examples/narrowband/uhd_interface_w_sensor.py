@@ -151,7 +151,6 @@ class uhd_interface:
 
     def update_time_diff(self):
         msg = self.generate_time_diff()
-        #while (self.tdiff_register.delete_head_nowait() ):
         while (not self.tdiff_register.empty_p()):
             self.tdiff_register.delete_head_nowait()
             continue
@@ -160,9 +159,10 @@ class uhd_interface:
      
     def generate_time_diff(self):
         pc_time = time.time()
-        usrp_time = self.u.get_time_now().get_real_secs() + 0.00075
-        time_diff = struct.pack('!d', pc_time - usrp_time)
+        usrp_time = self.u.get_time_now().get_real_secs()
         print pc_time - usrp_time
+        time_diff = struct.pack('!d', pc_time - usrp_time)
+        
         msg = gr.message_from_string(time_diff)
         
         return msg
