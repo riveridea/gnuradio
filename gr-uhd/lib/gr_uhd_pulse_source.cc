@@ -140,9 +140,9 @@ uhd_pulse_source::work(
             noutput_items = _samps_left_in_burst;
         }
 
-        std::cout << "samples left in burst = " << _samps_left_in_burst;
+        //std::cout << "samples left in burst = " << _samps_left_in_burst;
         _samps_left_in_burst -= noutput_items;
-        std::cout << "pulse output items = " << noutput_items << std::endl;
+        //std::cout << "pulse output items = " << noutput_items << std::endl;
         return noutput_items;
     }
 	
