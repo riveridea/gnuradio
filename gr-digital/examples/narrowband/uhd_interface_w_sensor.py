@@ -29,6 +29,7 @@ from gnuradio.eng_option import eng_option
 from optparse import OptionParser
 
 import time, threading
+import struct
 import sys
 
 # streaming(0) or finite acqusition(1)
