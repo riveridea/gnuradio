@@ -110,10 +110,10 @@ uhd_pulse_source::work(
         //Handle the start of burst condition.
         //Tag a start of burst and timestamp.
         //Increment the time for the next burst.
-        //if(_first_sample){
-        //    _do_new_burst = true;
-        //    _first_sample = false;
-        //}
+        if(_first_sample){
+            _do_new_burst = true;
+            _first_sample = false;
+        }
 
         
         if (_do_new_burst){

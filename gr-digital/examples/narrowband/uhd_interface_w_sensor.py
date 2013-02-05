@@ -28,6 +28,7 @@ from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
 
+import time, threading
 import sys
 
 # streaming(0) or finite acqusition(1)
@@ -77,6 +78,17 @@ class uhd_interface:
         self._freq = self.set_freq(freq)
 
         self._rate, self._sps = self.set_sample_rate(sym_rate, sps, samp_rate)
+        
+        #setup the USRP time monitor
+        #the corresponding thread would monitor the USRP time and the
+        #PC time, then put the latest time to the messge queue 
+        #Users of the message can get the latest time difference between
+        #PC time and USRP time
+        if(istx)
+            self.tdiff_register = gr.msg_queue()
+            update_time_diff(self.u)
+        #the thread to monitor the PC time and the USRP time periodically
+            
 
     def set_sample_rate(self, sym_rate, req_sps, direct_rate=None):
         start_sps = req_sps
@@ -136,6 +148,22 @@ class uhd_interface:
                                  (freq, frange.start(), frange.stop()))
             sys.exit(1)
 
+    def update_time_diff(self, usrp):
+        print(time.ctime())
+        msg = self.generate_time_diff(usrp)
+        while (self.tdiff_register.delete_head_nowait())
+            continue
+        self.tdiff_register.insert_tail(msg)
+        threading.Timer(60, self.update_time_diff).start()           
+     
+    def generate_time_diff(self, usrp):
+        pc_time = time.time()
+        usrp_time = usrp.get_time_now().get_real_secs() + 0.00075
+        time_diff = struct.pack('!d', pc_time - usrp_time)
+        msg = gr.message_from_string(time_diff)
+        
+        return msg
+        
 #-------------------------------------------------------------------#
 #   TRANSMITTER
 #-------------------------------------------------------------------#
