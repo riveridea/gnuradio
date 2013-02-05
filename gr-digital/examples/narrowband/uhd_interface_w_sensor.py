@@ -162,7 +162,9 @@ class uhd_interface:
         usrp_time = self.u.get_time_now().get_real_secs()
         print pc_time
         print usrp_time
-        time_diff = struct.pack('!d', pc_time - usrp_time)
+        tdiff = pc_time - usrp_time
+        print tdiff
+        time_diff = struct.pack('!d', tdiff)
         
         msg = gr.message_from_string(time_diff)
         
