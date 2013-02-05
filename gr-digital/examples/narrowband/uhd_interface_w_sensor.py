@@ -151,7 +151,9 @@ class uhd_interface:
 
     def update_time_diff(self, usrp):
         msg = self.generate_time_diff(usrp)
-        while (self.tdiff_register.delete_head_nowait()):
+        #while (self.tdiff_register.delete_head_nowait() ):
+        while (!self.tdiff_register.empty_p()):
+            self.tdiff_register.delete_head_nowait()
             continue
         self.tdiff_register.insert_tail(msg)
         threading.Timer(10, self.update_time_diff).start()           
