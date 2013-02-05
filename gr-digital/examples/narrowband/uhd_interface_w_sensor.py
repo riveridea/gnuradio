@@ -84,7 +84,7 @@ class uhd_interface:
         #PC time, then put the latest time to the messge queue 
         #Users of the message can get the latest time difference between
         #PC time and USRP time
-        if(istx)
+        if(istx):
             self.tdiff_register = gr.msg_queue()
             update_time_diff(self.u)
         #the thread to monitor the PC time and the USRP time periodically
@@ -149,17 +149,17 @@ class uhd_interface:
             sys.exit(1)
 
     def update_time_diff(self, usrp):
-        print(time.ctime())
         msg = self.generate_time_diff(usrp)
-        while (self.tdiff_register.delete_head_nowait())
+        while (self.tdiff_register.delete_head_nowait()):
             continue
         self.tdiff_register.insert_tail(msg)
-        threading.Timer(60, self.update_time_diff).start()           
+        threading.Timer(10, self.update_time_diff).start()           
      
     def generate_time_diff(self, usrp):
         pc_time = time.time()
         usrp_time = usrp.get_time_now().get_real_secs() + 0.00075
         time_diff = struct.pack('!d', pc_time - usrp_time)
+        print time_diff
         msg = gr.message_from_string(time_diff)
         
         return msg
