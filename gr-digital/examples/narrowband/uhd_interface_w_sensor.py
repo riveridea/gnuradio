@@ -87,7 +87,7 @@ class uhd_interface:
         #PC time and USRP time
         if(istx):
             self.tdiff_register = gr.msg_queue()
-            self.update_time_diff(self.u)
+            self.update_time_diff()
         #the thread to monitor the PC time and the USRP time periodically
             
 
@@ -149,8 +149,8 @@ class uhd_interface:
                                  (freq, frange.start(), frange.stop()))
             sys.exit(1)
 
-    def update_time_diff(self, usrp):
-        msg = self.generate_time_diff(usrp)
+    def update_time_diff(self):
+        msg = self.generate_time_diff()
         #while (self.tdiff_register.delete_head_nowait() ):
         while (not self.tdiff_register.empty_p()):
             self.tdiff_register.delete_head_nowait()
@@ -158,9 +158,9 @@ class uhd_interface:
         self.tdiff_register.insert_tail(msg)
         threading.Timer(10, self.update_time_diff).start()           
      
-    def generate_time_diff(self, usrp):
+    def generate_time_diff(self):
         pc_time = time.time()
-        usrp_time = usrp.get_time_now().get_real_secs() + 0.00075
+        usrp_time = self.u.get_time_now().get_real_secs() + 0.00075
         time_diff = struct.pack('!d', pc_time - usrp_time)
         print pc_time - usrp_time
         msg = gr.message_from_string(time_diff)
