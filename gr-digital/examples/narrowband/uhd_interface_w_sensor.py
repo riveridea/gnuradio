@@ -160,8 +160,6 @@ class uhd_interface:
     def generate_time_diff(self):
         pc_time = time.time()
         usrp_time = self.u.get_time_now().get_real_secs()
-        print pc_time
-        print usrp_time
         tdiff = pc_time - usrp_time
         print tdiff
         time_diff = struct.pack('!d', tdiff)
