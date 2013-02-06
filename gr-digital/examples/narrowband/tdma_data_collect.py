@@ -244,7 +244,7 @@ class my_top_block(gr.top_block):
 	    # with the specified start time
 	    self.pulse_srcs = []
 	    n_devices = len(self.transmitters)
-        if n_devices > 0:
+        if (n_devices > 0):
             time_slot = (burst_duration + idle_duration)/NETWORK_SIZE
             #print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
