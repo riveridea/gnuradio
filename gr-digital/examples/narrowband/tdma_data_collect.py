@@ -34,6 +34,8 @@ from receive_path import receive_path
 from uhd_interface_w_sensor import uhd_transmitter
 from uhd_interface_w_sensor import uhd_sensor
 
+from transmit_path import transmit_path 
+
 import struct
 import sys
 import threading
@@ -222,6 +224,10 @@ class my_top_block(gr.top_block):
                                                 options.tx_freq, options.tx_gain,
                                                 options.tx_spec, options.tx_antenna,
                                                 options.verbose, True))	
+            
+            # File Source, repeatedly read the file.dat
+            self.file_src = gr.file_source(gr.sizeof_gr_complex*1, "/home/alexzh/gr_alex/gnuradio/gr-digital/examples/narrowband/file.dat", True)
+            #self.txpath = transmit_path(modulator, options)
                      
             #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
             #print 'In locking '
@@ -247,10 +253,10 @@ class my_top_block(gr.top_block):
                 local_time = self.transmitters[i].u.get_time_now().get_real_secs()
                 print 'current time 1 = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
-		                        s_time.get_frac_secs(), 
-					self._sample_rate,
-					idle_duration,
-					burst_duration))
+		                                s_time.get_frac_secs(), 
+					                    self._sample_rate,
+					                    idle_duration,
+					                    burst_duration))
 		# Connect the pulse source to the transmitters
 		self.connect(self.pulse_srcs[i], self.transmitters[i].u)
 		# Set the start time for sensors                
@@ -258,14 +264,14 @@ class my_top_block(gr.top_block):
         else:
             exit("no devices on this node!")
 			
-	# start the flow graph and all the sensors
-	self.start()
+	    # start the flow graph and all the sensors
+	    self.start()
         time.sleep(5)
-	for i in range(n_devices):
+	    for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
             #print "base_s_time = %.7f" %start_time
-	    self.sensors[i].u.start()
+	        self.sensors[i].u.start()
 		
 # /////////////////////////////////////////////////////////////////////////////
 #                                   main
