@@ -271,7 +271,7 @@ class my_top_block(gr.top_block):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
             #print "base_s_time = %.7f" %start_time
-	        self.sensors[i].u.start()
+            self.sensors[i].u.start()
 		
 # /////////////////////////////////////////////////////////////////////////////
 #                                   main
