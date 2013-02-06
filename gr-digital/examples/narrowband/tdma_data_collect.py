@@ -264,10 +264,10 @@ class my_top_block(gr.top_block):
         else:
             exit("no devices on this node!")
 			
-	    # start the flow graph and all the sensors
-	    self.start()
+        # start the flow graph and all the sensors
+        self.start()
         time.sleep(5)
-	    for i in range(n_devices):
+        for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
             #print "base_s_time = %.7f" %start_time
