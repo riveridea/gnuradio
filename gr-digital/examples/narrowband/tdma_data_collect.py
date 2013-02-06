@@ -239,11 +239,11 @@ class my_top_block(gr.top_block):
         self.timer =  threading.Timer(1, self.start_streaming)
 	
     def start_tdma_net(self, start_time, burst_duration, idle_duration):
-	    # specify the tdma pulse parameters and connect the 
-	    # pulse source to usrp sinker also specify the usrp source
-	    # with the specified start time
-	    self.pulse_srcs = []
-	    n_devices = len(self.transmitters)
+        # specify the tdma pulse parameters and connect the 
+        # pulse source to usrp sinker also specify the usrp source
+        # with the specified start time
+        self.pulse_srcs = []
+        n_devices = len(self.transmitters)
         if (n_devices > 0):
             time_slot = (burst_duration + idle_duration)/NETWORK_SIZE
             #print 'base_s_time = %.7f' %start_time
