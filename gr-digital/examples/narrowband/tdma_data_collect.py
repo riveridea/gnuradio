@@ -324,7 +324,7 @@ def main():
             
     
     demods = digital.modulation_utils.type_1_demods()
-    mods   = digital.mouulation_utils.type_1_mods()
+    mods   = digital.modulation_utils.type_1_mods()
 
     # Create Options Parser:
     parser = OptionParser (option_class=eng_option, conflict_handler="resolve")
