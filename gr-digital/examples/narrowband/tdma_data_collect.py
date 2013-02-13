@@ -276,7 +276,8 @@ class my_top_block(gr.top_block):
 		                                        s_time.get_frac_secs(), 
 					                self._sample_rate,
 					                idle_duration,
-					                burst_duration))
+					                burst_duration,
+                                                        1))
 		# Connect the pulse source to the transmitters
                 self.transmitter[i].insert_tdma_throttle(self.pulse_srcs[i])
                 self.connect(self.txpaths[i], self.transmitters[i])
