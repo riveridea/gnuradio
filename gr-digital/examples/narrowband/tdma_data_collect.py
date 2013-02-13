@@ -322,7 +322,7 @@ def main():
         print "ok = %5s  pktno = %4d  n_rcvd = %4d  n_right = %4d" % (
             ok, pktno, n_rcvd, n_right)
             
-    
+    if   
     demods = digital.modulation_utils.type_1_demods()
     mods   = digital.modulation_utils.type_1_mods()
 
@@ -361,7 +361,7 @@ def main():
         sys.exit(1)
 
     if options.from_file is None:
-        if options.sx_freq is None:
+        if (options.sx_freq is None) and (node_types[options.node_type] == CLUSTER_HEAD):
             sys.stderr.write("You must specify -f FREQ or --freq FREQ\n")
             parser.print_help(sys.stderr)
             sys.exit(1)
