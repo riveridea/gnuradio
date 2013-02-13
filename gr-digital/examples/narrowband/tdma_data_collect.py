@@ -322,7 +322,6 @@ def main():
         print "ok = %5s  pktno = %4d  n_rcvd = %4d  n_right = %4d" % (
             ok, pktno, n_rcvd, n_right)
             
-    if   
     demods = digital.modulation_utils.type_1_demods()
     mods   = digital.modulation_utils.type_1_mods()
 
