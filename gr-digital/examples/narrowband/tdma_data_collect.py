@@ -80,7 +80,7 @@ class tx_data_src(threading.Thread):
         while 1:
             data = (50 - 2) * chr(pktno & 0xff)
             payload = struct.pack('!H', pktno & 0xffff) + data
-            self._txpath.send_pkt(payload, false)
+            self._txpath.send_pkt(payload, False)
             n += len(payload)
             #sys.stderr.write('.')
             pktno += 1
