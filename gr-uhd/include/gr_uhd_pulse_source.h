@@ -68,6 +68,7 @@ private:
     const double _cycle_duration;
     uint64_t _samps_left_in_burst;
     bool _do_new_burst;
+	bool _first_sample;
 
 };
 #endif /* INCLUDED_GR_UHD_PULSE_SOURCE_H */

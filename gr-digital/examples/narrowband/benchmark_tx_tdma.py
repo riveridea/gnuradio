@@ -34,6 +34,9 @@ from uhd_interface_w_sensor import uhd_transmitter
 
 import time, struct, sys
 
+burst_len = 0.008
+idle_len  = 0.032
+
 #import os 
 #print os.getpid()
 #raw_input('Attach and press enter')

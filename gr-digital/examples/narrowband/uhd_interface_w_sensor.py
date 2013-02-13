@@ -28,6 +28,8 @@ from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
 
+import time, threading
+import struct
 import sys
 
 # streaming(0) or finite acqusition(1)
@@ -77,6 +79,17 @@ class uhd_interface:
         self._freq = self.set_freq(freq)
 
         self._rate, self._sps = self.set_sample_rate(sym_rate, sps, samp_rate)
+        
+        #setup the USRP time monitor
+        #the corresponding thread would monitor the USRP time and the
+        #PC time, then put the latest time to the messge queue 
+        #Users of the message can get the latest time difference between
+        #PC time and USRP time
+        if(istx):
+            self.tdiff_register = gr.msg_queue()
+            self.update_time_diff()
+        #the thread to monitor the PC time and the USRP time periodically
+            
 
     def set_sample_rate(self, sym_rate, req_sps, direct_rate=None):
         start_sps = req_sps
@@ -136,6 +149,25 @@ class uhd_interface:
                                  (freq, frange.start(), frange.stop()))
             sys.exit(1)
 
+    def update_time_diff(self):
+        msg = self.generate_time_diff()
+        while (not self.tdiff_register.empty_p()):
+            self.tdiff_register.delete_head_nowait()
+            continue
+        self.tdiff_register.insert_tail(msg)
+        threading.Timer(10, self.update_time_diff).start()           
+     
+    def generate_time_diff(self):
+        pc_time = time.time()
+        usrp_time = self.u.get_time_now().get_real_secs()
+        tdiff = pc_time - usrp_time
+        print tdiff
+        time_diff = struct.pack('!d', tdiff)
+        
+        msg = gr.message_from_string(time_diff)
+        
+        return msg
+        
 #-------------------------------------------------------------------#
 #   TRANSMITTER
 #-------------------------------------------------------------------#
@@ -151,21 +183,15 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
         uhd_interface.__init__(self, True, addr, sym_rate, sps, frate,
                                freq, gain, spec, antenna)
 
-        if(tdma): # add the tdma throttle before the uhd_sink
-	    s_time = uhd.time_spec_t(self.u.get_time_now().get_real_secs() + 1)
-	    self.tdma_throttle = uhd.pulse_source(s_time.get_full_secs(),
-						s_time.get_frac_secs(),
-						self.get_sample_rate(),											  
-						0.032, #idle duration
-						0.008, #burst duration
-						1) # accept input data
-	    self.connect(self, self.tdma_throttle, self.u)
-        else: # Normal transmitter
+        if(not tdma): # add the tdma throttle before the uhd_sink
             self.connect(self, self.u)
 
         if(verbose):
             self._print_verbage()
-            
+
+    def insert_tdma_throttle(self, pulse_src)
+        self.connect(self, pulse_src, self.u)
+        
     def add_options(parser):
         add_freq_option(parser)
         parser.add_option("-a", "--args", type="string", default="",
