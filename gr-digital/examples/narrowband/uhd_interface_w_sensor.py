@@ -189,7 +189,7 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
         if(verbose):
             self._print_verbage()
 
-    def insert_tdma_throttle(self, pulse_src)
+    def insert_tdma_throttle(self, pulse_src):
         self.connect(self, pulse_src, self.u)
         
     def add_options(parser):
