@@ -360,7 +360,7 @@ def main():
         sys.exit(1)
 
     if options.from_file is None:
-        if (options.sx_freq is None) and (node_types[options.node_type] == CLUSTER_NODE):
+        if (options.sx_freq is None):
             sys.stderr.write("You must specify -f FREQ or --freq FREQ\n")
             parser.print_help(sys.stderr)
             sys.exit(1)
