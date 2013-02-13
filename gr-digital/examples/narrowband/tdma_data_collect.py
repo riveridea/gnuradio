@@ -279,7 +279,7 @@ class my_top_block(gr.top_block):
 					                burst_duration,
                                                         1))
 		# Connect the pulse source to the transmitters
-                self.transmitter[i].insert_tdma_throttle(self.pulse_srcs[i])
+                self.transmitters[i].insert_tdma_throttle(self.pulse_srcs[i])
                 self.connect(self.txpaths[i], self.transmitters[i])
 		# Set the start time for sensors                
 		self.sensors[i].u.set_start_time(uhd.time_spec_t(start_time))
