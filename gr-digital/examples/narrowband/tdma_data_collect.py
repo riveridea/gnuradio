@@ -78,6 +78,7 @@ class tx_data_src(threading.Thread):
         #pkt_size = int(options.size)
         print "tx_data_src -%s start tx" %(self.getName())
         while 1:
+            data = (50 - 2) * chr(pktno & 0xff)
             payload = struct.pack('!H', pktno & 0xffff) + data
             self._txpath.send_pkt(payload, false)
             n += len(payload)
