@@ -75,7 +75,7 @@ class tx_data_src(threading.Thread):
         #generate and send packets
         n = 0
         pktno = 0
-        pkt_size = int(options.size)
+        #pkt_size = int(options.size)
         print "tx_data_src -%s start tx" %(self.getName())
         while 1:
             payload = struct.pack('!H', pktno & 0xffff) + data
