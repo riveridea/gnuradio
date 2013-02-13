@@ -347,6 +347,7 @@ def main():
                           help="Specify the node index in the cluster [default=%default]")					  
 					  
     receive_path.add_options(parser, expert_grp)
+    transmit_path.add_options(parser, expert_grp)
     uhd_sensor.add_options(parser)
     uhd_transmitter.add_options(parser)
 
