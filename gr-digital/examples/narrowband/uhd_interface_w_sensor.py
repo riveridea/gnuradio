@@ -63,13 +63,13 @@ class uhd_interface:
             self.u.set_subdev_spec(spec, 0)
 
         # Set the antenna
-        #if(antenna):
-        if(istx):
-            print 'set the antenna to TX/RX'
-            self.u.set_antenna('TX/RX', 0)
-        else:
-            print 'set the antenna to RX2'
-            self.u.set_antenna('TX/RX', 0)
+        if(antenna is None):
+            if(istx):
+                print 'set the antenna to TX/RX'
+                self.u.set_antenna('TX/RX', 0)
+            else:
+                print 'set the antenna to RX2'
+                self.u.set_antenna('RX2', 0)
         
         #self._args = args
         self._addr = addr
