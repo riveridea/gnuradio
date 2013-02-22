@@ -176,13 +176,10 @@ install(
     digital_probe_mpsk_snr_est_c.i
     digital_scrambler_bb.i
     digital_simple_framer.i
-<<<<<<< HEAD
-	digital_sampcov_matrix_calculator.i
-	digital_trace_calculator.i
-	digital_sampcov_matrix_generator.i
-=======
+    digital_sampcov_matrix_calculator.i
+    digital_trace_calculator.i
+    digital_sampcov_matrix_generator.i
     digital_simple_correlator.i
->>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio/swig
     COMPONENT "digital_swig"
 )

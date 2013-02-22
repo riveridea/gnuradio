@@ -31,9 +31,7 @@ include(GrComponent)
 GR_REGISTER_COMPONENT("gr-digital" ENABLE_GR_DIGITAL
     Boost_FOUND
     ENABLE_GR_CORE
-<<<<<<< HEAD
-	GSL_FOUND
-=======
+    GSL_FOUND
     ENABLE_GR_ANALOG
 >>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
 )

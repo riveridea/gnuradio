@@ -82,22 +82,6 @@ gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_item
 
     case gr_block_executor::BLKD_IN:		// Wait for input.
       {
-<<<<<<< HEAD
-	    gruel::scoped_lock guard(d->d_tpb.mutex);
-	    while (!d->d_tpb.input_changed){
-
-	        // wait for input or message
-	        while(!d->d_tpb.input_changed && d->d_tpb.empty_p())
-	            d->d_tpb.input_cond.wait(guard);
-
-	        // handle all pending messages
-	        while ((msg = d->d_tpb.delete_head_nowait_already_holding_mutex())){
-	            guard.unlock();			// release lock while processing msg
-	            block->dispatch_msg(msg);
-	            guard.lock();
-	        }
-	    }
-=======
 	gruel::scoped_lock guard(d->d_tpb.mutex);
 	while (!d->d_tpb.input_changed){
 
@@ -115,30 +99,12 @@ gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_item
 	    }
       }
 	}
->>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
       }
       break;
 
 
     case gr_block_executor::BLKD_OUT:		// Wait for output buffer space.
       {
-<<<<<<< HEAD
-	    gruel::scoped_lock guard(d->d_tpb.mutex);
-        //std::cerr << "BLKD_OUT at " << block->name() << std::endl;
-	    while (!d->d_tpb.output_changed){
-
-	        // wait for output room or message
-	        while(!d->d_tpb.output_changed && d->d_tpb.empty_p())
-	            d->d_tpb.output_cond.wait(guard);
-
-        	// handle all pending messages
-        	while ((msg = d->d_tpb.delete_head_nowait_already_holding_mutex())){
-        	    guard.unlock();			// release lock while processing msg
-        	    block->dispatch_msg(msg);
-        	    guard.lock();
-	        }
-	    }
-=======
 	gruel::scoped_lock guard(d->d_tpb.mutex);
 	while (!d->d_tpb.output_changed){
 
@@ -156,7 +122,6 @@ gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_item
 	    }
       }
 	}
->>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
       }
       break;
 

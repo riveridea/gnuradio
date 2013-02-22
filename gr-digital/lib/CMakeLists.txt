@@ -32,7 +32,6 @@ include_directories(
     ${Boost_INCLUDE_DIRS}
 )
 
-<<<<<<< HEAD
 include_directories(
 	${Boost_INCLUDE_DIRS}
 	${GSL_INCLUDE_DIRS}
@@ -42,9 +41,6 @@ link_directories(
 	${GSL_LIBRARY_DIRS}
 )
 add_definitions(${GSL_DEFINITIONS})
-=======
-link_directories(${Boost_LIBRARY_DIRS})
->>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
 
 ########################################################################
 # generate helper scripts to expand templated files
@@ -151,14 +147,11 @@ list(APPEND gr_digital_sources
     digital_probe_mpsk_snr_est_c.cc
     digital_scrambler_bb.cc
     digital_simple_framer.cc
-<<<<<<< HEAD
-	digital_sampcov_matrix_calculator.cc
-	digital_trace_calculator.cc
-	digital_sampcov_matrix_generator.cc
-	digital_eigen_herm.cc
-=======
+    digital_sampcov_matrix_calculator.cc
+    digital_trace_calculator.cc
+    digital_sampcov_matrix_generator.cc
+    digital_eigen_herm.cc
     digital_simple_correlator.cc
->>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
 )
 
 list(APPEND digital_libs
