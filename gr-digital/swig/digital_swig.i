@@ -81,10 +81,14 @@ enum snr_est_type_t {
 #include "digital_probe_mpsk_snr_est_c.h"
 #include "digital_scrambler_bb.h"
 #include "digital_simple_framer.h"
+<<<<<<< HEAD
 #include "digital_sampcov_matrix_calculator.h"
 #include "digital_trace_calculator.h"
 #include "digital_sampcov_matrix_generator.h"
 #include "digital_eigen_herm.h"
+=======
+#include "digital_simple_correlator.h"
+>>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
 %}
 
 %include "digital_additive_scrambler_bb.i"
@@ -129,7 +133,11 @@ enum snr_est_type_t {
 %include "digital_probe_mpsk_snr_est_c.i"
 %include "digital_scrambler_bb.i"
 %include "digital_simple_framer.i"
+<<<<<<< HEAD
 %include "digital_sampcov_matrix_calculator.i"
 %include "digital_trace_calculator.i"
 %include "digital_sampcov_matrix_generator.i"
 %include "digital_eigen_herm.i"
+=======
+%include "digital_simple_correlator.i"
+>>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8

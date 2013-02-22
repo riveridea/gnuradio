@@ -104,23 +104,23 @@ expand_cc_h_impl(not_XX             bb ss ii)
 expand_cc_h_impl(or_XX              bb ss ii)
 expand_cc_h_impl(sub_XX             ss ii ff cc)
 expand_cc_h_impl(xor_XX             bb ss ii)
+expand_cc_h_impl(packed_to_unpacked_XX bb ss ii)
+expand_cc_h_impl(unpacked_to_packed_XX bb ss ii)
 
 ########################################################################
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GNURADIO_CORE_INCLUDE_DIRS}
-    ${VOLK_INCLUDE_DIRS}
-    ${GR_BLOCKS_INCLUDE_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/../include
+    ${GR_BLOCKS_INCLUDE_DIRS}
+    ${GNURADIO_CORE_INCLUDE_DIRS}
+    ${VOLK_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
 )
 
-include_directories(${BLOCKS_INCLUDE_DIRS})
-link_directories(${BLOCKS_LIBRARY_DIRS})
-
-include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
 
 ########################################################################
@@ -128,6 +128,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 ########################################################################
 list(APPEND gr_blocks_sources
     ${generated_sources}
+    count_bits.cc
     add_ff_impl.cc
     char_to_float_impl.cc
     char_to_short_impl.cc
@@ -140,7 +141,10 @@ list(APPEND gr_blocks_sources
     complex_to_arg_impl.cc
     conjugate_cc_impl.cc
     deinterleave_impl.cc
+    delay_impl.cc
     file_source_impl.cc
+    file_meta_sink_impl.cc
+    file_meta_source_impl.cc
     float_to_char_impl.cc
     float_to_complex_impl.cc
     float_array_to_int.cc
@@ -160,7 +164,10 @@ list(APPEND gr_blocks_sources
     multiply_const_cc_impl.cc
     multiply_const_ff_impl.cc
     nlog10_ff_impl.cc
+    patterned_interleaver_impl.cc
     repeat_impl.cc
+    rms_cf_impl.cc
+    rms_ff_impl.cc
     short_to_char_impl.cc
     short_to_float_impl.cc
     stream_mux_impl.cc

@@ -123,10 +123,14 @@ install(FILES
     digital_scrambler_bb.h
     digital_simple_framer.h
     digital_simple_framer_sync.h
+<<<<<<< HEAD
 	digital_sampcov_matrix_calculator.h
 	digital_trace_calculator.h
 	digital_sampcov_matrix_generator.h
 	digital_eigen_herm.h
+=======
+    digital_simple_correlator.h
+>>>>>>> 96583a9009478242c51ecfd7bb4321ed3d90e3b8
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio
     COMPONENT "digital_devel"
 )

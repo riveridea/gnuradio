@@ -64,7 +64,8 @@ endmacro(expand_h)
 ########################################################################
 # Invoke macro to generate various sources
 #######################################################################
-#expand_h(block     bf bc sf sc if ic)
+expand_h(noise_source_X     s i f c)
+expand_h(sig_source_X       s i f c)
 
 add_custom_target(analog_generated_includes DEPENDS
     ${generated_includes}
@@ -74,9 +75,37 @@ add_custom_target(analog_generated_includes DEPENDS
 # Install header files
 ########################################################################
 install(FILES
-    ${analog_generated_includes}
+    ${generated_includes}
     api.h
     cpm.h
+    agc.h
+    agc2.h
+    noise_type.h
+    squelch_base_ff.h
+    agc_cc.h
+    agc_ff.h
+    agc2_cc.h
+    agc2_ff.h
+    cpfsk_bc.h
+    ctcss_squelch_ff.h
+    dpll_bb.h
+    feedforward_agc_cc.h
+    fmdet_cf.h
+    frequency_modulator_fc.h
+    phase_modulator_fc.h
+    pll_carriertracking_cc.h
+    pll_freqdet_cf.h
+    pll_refout_cc.h
+    probe_avg_mag_sqrd_c.h
+    probe_avg_mag_sqrd_cf.h
+    probe_avg_mag_sqrd_f.h
+    pwr_squelch_cc.h
+    pwr_squelch_ff.h
+    quadrature_demod_cf.h
+    rail_ff.h
+    rotator.h
+    sig_source_waveform.h
+    simple_squelch_cc.h
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio/analog
     COMPONENT "analog_devel"
 )

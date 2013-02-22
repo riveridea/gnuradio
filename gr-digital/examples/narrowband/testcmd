@@ -1,3 +1,8 @@
+/****************************************************
+CLUSTER NETWORK COMMANDS
+*****************************************************/
+
+
 sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=200000 --rx-addr="addr=192.168.10.109" --tx-addr="addr=192.168.10.109" --sx-addr="addr=192.168.10.108" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
 
 sudo ./tunnel_w_sensor.py --rx-freq=908M --tx-freq=800M --sx-freq=1800M --sx-samprate=1020408 --rx-addr="addr=192.168.10.107" --tx-addr="addr=192.168.10.107" --sx-addr="addr=192.168.10.106" --bitrate=2000000 --tx-amplitude=1 --rx-gain=15 --node-type=head    --samp-num=1024
@@ -26,6 +31,12 @@ t = usrp.get_time_now().get_real_secs()
 sudo ./tunnel_duplex_test.py --rx-freq=800M --tx-freq=908M --tx-amplitude=1 --rx-gain=15 --bitrate=500000
 sudo ./tunnel_duplex_test.py --rx-freq=908M --tx-freq=800M --tx-amplitude=1 --rx-gain=15 --bitrate=500000
 
+/*************************************************************
+TDMA COMPLEX NETWORK 
+*************************************************************/
+sudo ./tdma_data_collect.py --sx-freq=918M --tx-freq=918M -r 100k -m bpsk --node-type=node -i 0
+sudo ./tdma_data_collect.py --sx-freq=918M --tx-freq=918M -r 100k --node-type=head
+
 
 from gnuradio import uhd
 import numpy as np
@@ -34,7 +45,7 @@ import numpy as np
 
 CENTER = 1e9
 samp_rate = 200000
-usrp = uhd.usrp_source(device_addr="addr0=192.168.10.160, ",
+usrp = uhd.usrp_source(device_addr="addr0=192.168.10.109, ",
 stream_args=uhd.stream_args(cpu_format="fc32",channels=range(1),),)
 usrp.set_clock_source("external", 0)
 usrp.set_time_source("external", 0)
