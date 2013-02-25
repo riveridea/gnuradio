@@ -299,7 +299,7 @@ class generic_demod(gr.hier_block2):
         if verbose:
             self._print_verbage()
 
-        if True:
+        if log:
             self._setup_logging()
         
         # Connect and Initialize base class
