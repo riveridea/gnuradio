@@ -35,7 +35,7 @@ import math
 _def_samples_per_symbol = 2
 _def_excess_bw = 0.35
 _def_verbose = False
-_def_log = True
+_def_log = False
 
 # Frequency correction
 _def_freq_bw = 2*math.pi/100.0
