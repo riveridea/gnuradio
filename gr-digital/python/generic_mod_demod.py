@@ -35,7 +35,7 @@ import math
 _def_samples_per_symbol = 2
 _def_excess_bw = 0.35
 _def_verbose = False
-_def_log = False
+_def_log = True
 
 # Frequency correction
 _def_freq_bw = 2*math.pi/100.0
@@ -207,7 +207,7 @@ class generic_mod(gr.hier_block2):
 
 class generic_demod(gr.hier_block2):
 
-    def __init__(self, constellation,
+    def __init__(self, constellation, usrp_id, 
                  samples_per_symbol=_def_samples_per_symbol,
                  differential=_def_differential,
                  excess_bw=_def_excess_bw,
