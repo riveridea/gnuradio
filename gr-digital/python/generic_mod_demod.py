@@ -207,7 +207,7 @@ class generic_mod(gr.hier_block2):
 
 class generic_demod(gr.hier_block2):
 
-    def __init__(self, constellation, usrp_id, 
+    def __init__(self, constellation,
                  samples_per_symbol=_def_samples_per_symbol,
                  differential=_def_differential,
                  excess_bw=_def_excess_bw,
