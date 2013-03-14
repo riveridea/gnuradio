@@ -29,6 +29,7 @@
 #include <gri_control_loop.h>
 #include <gr_fir_util.h>
 #include <gr_fir_ccc.h>
+#include <cstdio>
 
 typedef gr_fir_ccc* (*fir_maker_t)(const std::vector<gr_complex> &taps);
 typedef gr_fir_ccc  filter_t;
@@ -120,6 +121,10 @@ class DIGITAL_API digital_fll_band_edge_cc :
   filter_t*               d_filter_upper;
   std::vector<gr_complex> d_output_hist;
   std::vector<gr_complex> d_fllbuffer;
+
+  FILE*                   d_fp_error;
+  FILE*                   d_fp_dphase;
+  FILE*                   d_fp_dfreq;
 
   /*!
    * Build the FLL
