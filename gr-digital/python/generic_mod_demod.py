@@ -33,7 +33,7 @@ import math
 
 # default values (used in __init__ and add_options)
 _def_samples_per_symbol = 2
-_def_excess_bw = 0.35
+_def_excess_bw = 0.15
 _def_verbose = False
 _def_log = True
 

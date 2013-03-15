@@ -104,6 +104,7 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   }
 
   d_freq = 0.008;
+  r_start = false;
 }
 
 digital_fll_band_edge_cc::~digital_fll_band_edge_cc()
@@ -291,9 +292,14 @@ digital_fll_band_edge_cc::work(int noutput_items,
     if(d_fp_dfreq) std::fwrite(&d_freq, sizeof(float), 1, d_fp_dfreq);
     if(d_fp_dphase) std::fwrite(&d_phase, sizeof(float), 1, d_fp_dphase);
 
-    advance_loop(error);
-    phase_wrap();
-    frequency_limit();
+    if(norm(in[i]) > 0.15 && !r_start)
+      r_start = true;
+    
+    if(r_start){
+      advance_loop(error);
+      phase_wrap();
+      frequency_limit();
+    }
 
     if(output_items.size() == 4) {
       frq[i] = d_freq;
