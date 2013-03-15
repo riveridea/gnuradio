@@ -89,10 +89,13 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   char fn_error[80], fn_dphase[80], fn_dfreq[80];
   std::strcpy(fn_error, hpath);
   std::strcat(fn_error, "/error.dat");
+  std::cout << "fn_error filename" << fn_error << std::endl;
   std::strcpy(fn_dphase, hpath);
   std::strcat(fn_dphase, "/dphase.dat");
+  std::cout << "fn_dphase filename" << fn_dphase << std::endl;
   std::strcpy(fn_dfreq, hpath);
   std::strcat(fn_dfreq, "/dfreq.dat");
+  std::cout << "fn_dfreq filename" << fn_dfreq << std::endl;
   d_fp_error = fopen(fn_error, "w");
   d_fp_dphase = fopen(fn_dphase, "w");
   d_fp_dfreq = fopen(fn_dfreq, "w");
