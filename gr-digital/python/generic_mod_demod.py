@@ -38,7 +38,7 @@ _def_verbose = False
 _def_log = True
 
 # Frequency correction
-_def_freq_bw = 2*math.pi/100.0
+_def_freq_bw = 1*math.pi/100.0
 # Symbol timing recovery 
 _def_timing_bw = 2*math.pi/100.0
 _def_timing_max_dev = 1.5
