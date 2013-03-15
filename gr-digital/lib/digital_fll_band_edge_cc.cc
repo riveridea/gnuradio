@@ -99,7 +99,7 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   d_fp_error = fopen("error.dat", "wb");
   d_fp_dphase = fopen("dphase.dat", "wb");
   d_fp_dfreq = fopen("dfreq.dat", "wb");
-  if(!(d_fp_error && d_fp_dphase && d_fp_dfreq)){
+  if((d_fp_error == NULL) || (d_fp_dphase == NULL) || (d_fp_dfreq == NULL)){
     throw std::runtime_error("can not create files for the loop tracking data");	
   }
 }
@@ -286,6 +286,8 @@ digital_fll_band_edge_cc::work(int noutput_items,
     
     error = norm(out_lower) - norm(out_upper);
     if(d_fp_error) std::fwrite(&error, sizeof(float), 1, d_fp_error);
+    if(d_fp_dfreq) std::fwrite(&d_freq, sizeof(float), 1, d_fp_dfreq);
+    if(d_fp_dphase) std::fwrite(&d_phase, sizeof(float), 1, d_fp_dphase);
 
     advance_loop(error);
     phase_wrap();
