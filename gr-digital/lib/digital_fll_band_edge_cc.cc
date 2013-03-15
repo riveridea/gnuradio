@@ -102,6 +102,8 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   if((d_fp_error == NULL) || (d_fp_dphase == NULL) || (d_fp_dfreq == NULL)){
     throw std::runtime_error("can not create files for the loop tracking data");	
   }
+
+  d_freq = 0.01;
 }
 
 digital_fll_band_edge_cc::~digital_fll_band_edge_cc()
