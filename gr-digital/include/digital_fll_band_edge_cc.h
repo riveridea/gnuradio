@@ -125,7 +125,7 @@ class DIGITAL_API digital_fll_band_edge_cc :
   FILE*                   d_fp_error;
   FILE*                   d_fp_dphase;
   FILE*                   d_fp_dfreq;
-  bool                    loop_start;
+  bool                    r_start;
 
   /*!
    * Build the FLL
