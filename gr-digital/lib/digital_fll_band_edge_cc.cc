@@ -96,9 +96,9 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   std::strcpy(fn_dfreq, hpath);
   std::strcat(fn_dfreq, "/dfreq.dat");
   std::cout << "fn_dfreq filename" << fn_dfreq << std::endl;
-  d_fp_error = fopen(fn_error, "w");
-  d_fp_dphase = fopen(fn_dphase, "w");
-  d_fp_dfreq = fopen(fn_dfreq, "w");
+  d_fp_error = fopen("error.dat", "rw");
+  d_fp_dphase = fopen("dphase.dat", "rw");
+  d_fp_dfreq = fopen("dfreq.dat", "rw");
   if(!(d_fp_error && d_fp_dphase && d_fp_dfreq)){
     throw std::runtime_error("can not create files for the loop tracking data");	
   }
