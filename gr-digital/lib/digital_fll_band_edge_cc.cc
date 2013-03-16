@@ -103,7 +103,7 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
     throw std::runtime_error("can not create files for the loop tracking data");	
   }
 
-  d_freq = 0.008;
+  //d_freq = 0.008;
   r_start = false;
 }
 
