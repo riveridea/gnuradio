@@ -95,6 +95,9 @@ private:
   //! index to delay line
   unsigned int d_dl_idx;
 
+  // delay register vector to detect the preamble
+  std::vector<int> d_dl_vector;
+
   friend DIGITAL_API digital_constellation_receiver_cb_sptr
   digital_make_constellation_receiver_cb (digital_constellation_sptr constell,
 					  float loop_bw, float fmin, float fmax);
