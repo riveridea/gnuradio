@@ -127,6 +127,13 @@ install(FILES
     digital_trace_calculator.h
     digital_sampcov_matrix_generator.h
     digital_eigen_herm.h
+    digital_ofdm_sync_sc_cfb.h
+    digital_ofdm_chanest_vcvc.h
+    digital_crc32_bb.h
+    digital_ofdm_carrier_allocator_cvc.h
+    digital_ofdm_equalizer_base.h
+    digital_ofdm_equalizer_static.h
+    digital_ofdm_equalizer_simpledfe.h
     digital_simple_correlator.h
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio
     COMPONENT "digital_devel"

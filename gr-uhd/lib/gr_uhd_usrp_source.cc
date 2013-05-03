@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Copyright 2010-2012 Free Software Foundation, Inc.
  *

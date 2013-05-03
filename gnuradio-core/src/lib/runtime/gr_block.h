@@ -26,6 +26,7 @@
 #include <gr_core_api.h>
 #include <gr_basic_block.h>
 #include <gr_tags.h>
+#include <gr_logger.h>
 
 /*!
  * \brief The abstract base class for all 'terminal' processing blocks.
@@ -458,9 +459,9 @@ class GR_CORE_API gr_block : public gr_basic_block {
   /*!
    * \brief Set the thread's affinity to processor core \p n.
    *
-   * \param mask a vector of unsigned ints of the core numbers available to this block.
+   * \param mask a vector of ints of the core numbers available to this block.
    */
-  void set_processor_affinity(const std::vector<unsigned int> &mask);
+  void set_processor_affinity(const std::vector<int> &mask);
 
   /*!
    * \brief Remove processor affinity to a specific core.
@@ -470,7 +471,7 @@ class GR_CORE_API gr_block : public gr_basic_block {
   /*!
    * \brief Get the current processor affinity.
    */
-  std::vector<unsigned int> processor_affinity() { return d_affinity; }
+  std::vector<int> processor_affinity() { return d_affinity; }
 
   // ----------------------------------------------------------------------------
 
@@ -484,11 +485,11 @@ class GR_CORE_API gr_block : public gr_basic_block {
   gr_block_detail_sptr	d_detail;		// implementation details
   unsigned              d_history;
   bool                  d_fixed_rate;
-  int                   d_min_noutput_items;
   bool                  d_max_noutput_items_set;     // if d_max_noutput_items is valid
   int                   d_max_noutput_items;         // value of max_noutput_items for this block
+  int                   d_min_noutput_items;
   tag_propagation_policy_t d_tag_propagation_policy; // policy for moving tags downstream
-  std::vector<unsigned int> d_affinity;              // thread affinity proc. mask
+  std::vector<int>      d_affinity;              // thread affinity proc. mask
 
  protected:
   gr_block (void){} //allows pure virtual interface sub-classes
@@ -609,6 +610,17 @@ class GR_CORE_API gr_block : public gr_basic_block {
   std::vector<long>    d_max_output_buffer;
   std::vector<long>    d_min_output_buffer;
 
+  /*! Used by block's setters and work functions to make
+   * setting/resetting of parameters thread-safe.
+   *
+   * Used by calling gruel::scoped_lock l(d_setlock);
+   */ 
+  gruel::mutex d_setlock;
+
+  /*! Used by blocks to access the logger system.
+   */ 
+  gr_logger_ptr d_logger;
+  gr_logger_ptr d_debug_logger;
 
   // These are really only for internal use, but leaving them public avoids
   // having to work up an ever-varying list of friend GR_CORE_APIs

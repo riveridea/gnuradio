@@ -33,6 +33,8 @@ GR_REGISTER_COMPONENT("gr-digital" ENABLE_GR_DIGITAL
     ENABLE_GR_CORE
     GSL_FOUND
     ENABLE_GR_ANALOG
+    ENABLE_GR_BLOCKS
+    ENABLE_GR_FILTER
 )
 
 GR_SET_GLOBAL(GR_DIGITAL_INCLUDE_DIRS
@@ -88,6 +90,7 @@ CPACK_COMPONENT("digital_swig"
 # Add subdirectories
 ########################################################################
 add_subdirectory(include)
+add_subdirectory(include/digital)
 add_subdirectory(lib)
 add_subdirectory(doc)
 if(ENABLE_PYTHON)
