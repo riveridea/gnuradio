@@ -113,8 +113,9 @@ digital_constellation_receiver_cb::general_work (int noutput_items,
     sym_value = d_constellation->decision_maker_pe(&sample, &phase_error);
     //remove the phase ambiguity for bpsk
     //ugly code to handle bpsk, need to refactor
+/*
     int signed_sym;
-    if(d_constellation.points() == 2){
+    if(d_constellation->points() == 2){
       signed_sym = (sym_value == 1)?1:-1; 
       d_dl_vector.push_back(signed_sym);
       if(d_dl_vector.size() == 9){
@@ -128,6 +129,7 @@ digital_constellation_receiver_cb::general_work (int noutput_items,
         }
       }
     }
+*/
 
     phase_error_tracking(phase_error, sample);  // corrects phase and frequency offsets
 

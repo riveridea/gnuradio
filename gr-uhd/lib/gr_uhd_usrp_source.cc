@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * Copyright 2010-2012 Free Software Foundation, Inc.
  *
@@ -171,6 +170,14 @@ public:
 
     void set_bandwidth(double bandwidth, size_t chan){
         return _dev->set_rx_bandwidth(bandwidth, chan);
+    }
+
+    double get_bandwidth(size_t chan){
+        return _dev->get_rx_bandwidth(chan);
+    }
+
+    uhd::freq_range_t get_bandwidth_range(size_t chan){
+        return _dev->get_rx_bandwidth_range(chan);
     }
 
     void set_auto_dc_offset(const bool enable, size_t chan){

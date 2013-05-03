@@ -174,5 +174,4 @@ GR_SWIG_BLOCK_MAGIC2(digital, ofdm_serializer_vcc);
 GR_SWIG_BLOCK_MAGIC2(digital, packet_headerparser_b);
 %include "digital/header_payload_demux.h"
 GR_SWIG_BLOCK_MAGIC2(digital, header_payload_demux);
->>>>>>> 8fda7acad4f71645bded77b5a4806b21aba46078
 %include "digital_simple_correlator.i"
