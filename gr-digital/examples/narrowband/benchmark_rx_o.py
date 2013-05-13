@@ -54,6 +54,8 @@ class my_top_block(gr.top_block):
                                        options.spec, options.antenna,
                                        options.verbose)
             options.samples_per_symbol = self.source._sps
+            
+            self.gr_file_sink = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
 
         elif(options.from_file is not None):
             sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
@@ -68,6 +70,7 @@ class my_top_block(gr.top_block):
         self.rxpath = receive_path(demodulator, rx_callback, options) 
 
         self.connect(self.source, self.rxpath)
+        self.connect(self.source, self.gr_file_sink)
 
 
 # /////////////////////////////////////////////////////////////////////////////
