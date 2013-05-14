@@ -30,7 +30,7 @@
 #include <stdexcept>
 #include <string.h>
 
-#define VERBOSE 0
+#define VERBOSE 1
 
 inline void
 gr_framer_sink_1::enter_search()
