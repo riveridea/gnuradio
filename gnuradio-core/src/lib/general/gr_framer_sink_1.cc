@@ -168,8 +168,6 @@ gr_framer_sink_1::work (int noutput_items,
 	    gr_message_sptr msg =
 	      gr_make_message(0, d_packet_whitener_offset, 0, d_packetlen_cnt);
 	    memcpy(msg->msg(), d_packet, d_packetlen_cnt);
-            fprintf(stderr,"None Zero Packet Inserted msgq limit = %d msgq count = %d\n", 
-                                d_target_queue->limit(), d_target_queue->count());
 	    d_target_queue->insert_tail(msg);		// send it
 	    msg.reset();  				// free it up
 
