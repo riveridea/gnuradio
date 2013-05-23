@@ -140,7 +140,7 @@ def main():
         n += len(payload)
         sys.stderr.write('.')
         if options.discontinuous and pktno % 1 == 0:
-            time.sleep(1)
+            time.sleep(0.01)
         pktno += 1
         
     send_pkt(eof=True)
