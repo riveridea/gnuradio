@@ -191,6 +191,16 @@ class uhd_receiver(uhd_interface, gr.hier_block2):
         uhd_interface.__init__(self, False, args, sym_rate, sps,
                                freq, gain, spec, antenna)
 
+        # Set frequency (tune request takes lo_offset)
+        if(options.lo_offset is not None):
+            treq = uhd.tune_request(freq, options.lo_offset)
+        else:
+            treq = uhd.tune_request(freq)
+        tr = self.u.set_center_freq(treq)
+        if tr == None:
+            sys.stderr.write('Failed to set center frequency\n')
+            raise SystemExit, 1        
+
         self.connect(self.u, self)
 
         if(verbose):
@@ -211,6 +221,8 @@ class uhd_receiver(uhd_interface, gr.hier_block2):
                           help="set receive gain in dB (default is midpoint)")
         if not parser.has_option("--verbose"):
             parser.add_option("-v", "--verbose", action="store_true", default=False)
+        parser.add_option("", "--lo-offset", type="eng_float", default=None,
+                          help="set daughterboard LO offset to OFFSET [default=hw default]")
 
     # Make a static method to call before instantiation
     add_options = staticmethod(add_options)
