@@ -37,6 +37,8 @@ import sys
 import threading
 import time
 
+import socket
+
 #import os
 #print os.getpid()
 #raw_input('Attach and press enter: ')
@@ -45,6 +47,28 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         self.source.u.start()
         print 'start streaming'
+        ##############################          
+        #try:
+        # Create a TCP/IP socket
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # Connect the socket to the port where the server is listening
+        server_address = ('cri-node-10.ch.dhcp.tntech.edu', 10000)
+        print >>sys.stderr, 'connecting to %s port %s' % server_address
+        sock.connect(server_address)
+      	    # Send data
+    	message_start_stream = 'start streaming'
+    	print >>sys.stderr, 'sending "%s"' % message_start_stream
+    	sock.sendall(message_start_stream)
+
+    	    # Look for the response
+    	amount_received = 0
+    	amount_expected = len(message_start_stream)
+    
+    	while amount_received < amount_expected:
+             data = sock.recv(16)
+             amount_received += len(data)
+             print >>sys.stderr, 'received "%s"' % data
+        ##############################
         
     def __init__(self, demodulator, rx_callback, options):
         gr.top_block.__init__(self)
@@ -87,6 +111,10 @@ class my_top_block(gr.top_block):
 global n_rcvd, n_right
 
 def main():
+    ##############################          
+        # Create a TCP/IP socket
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    ##############################
     global n_rcvd, n_right
 
     n_rcvd = 0
@@ -133,7 +161,6 @@ def main():
             parser.print_help(sys.stderr)
             sys.exit(1)
 
-
     # build the graph
     tb = my_top_block(demods[options.modulation], rx_callback, options)
 
@@ -149,7 +176,11 @@ def main():
     #tb.source.u.start()
     
     tb.wait()         # wait for it to finish
-
+    ######################################
+    #finally:
+    print >>sys.stderr, 'closing socket'
+    sock.close()
+    ######################################
 if __name__ == '__main__':
     try:
         main()
