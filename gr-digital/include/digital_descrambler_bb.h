@@ -24,7 +24,7 @@
 
 #include <digital_api.h>
 #include <gr_sync_block.h>
-#include "gri_lfsr.h"
+#include <analog/lfsr.h>
 
 class digital_descrambler_bb;
 typedef boost::shared_ptr<digital_descrambler_bb> digital_descrambler_bb_sptr;
@@ -33,24 +33,25 @@ DIGITAL_API digital_descrambler_bb_sptr
 digital_make_descrambler_bb(int mask, int seed, int len);
 
 /*!
+ * \ingroup coding_blk
  * Descramble an input stream using an LFSR.  This block works on the LSB only
  * of the input data stream, i.e., on an "unpacked binary" stream, and
  * produces the same format on its output.
- *
- * \param mask     Polynomial mask for LFSR
- * \param seed     Initial shift register contents
- * \param len      Shift register length
- *
- * \ingroup coding_blk
  */
-
 class DIGITAL_API digital_descrambler_bb : public gr_sync_block
 {
   friend DIGITAL_API digital_descrambler_bb_sptr
     digital_make_descrambler_bb(int mask, int seed, int len);
 
-  gri_lfsr d_lfsr;
+  gr::analog::lfsr d_lfsr;
 
+  /*!
+   * Build a descrambler block.
+   *
+   * \param mask     Polynomial mask for LFSR
+   * \param seed     Initial shift register contents
+   * \param len      Shift register length
+   */
   digital_descrambler_bb(int mask, int seed, int len);
 
 public:

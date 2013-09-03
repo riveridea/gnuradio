@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2004,2009,2010 Free Software Foundation, Inc.
+ * Copyright 2004,2009,2010,2013 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -28,10 +28,12 @@
 #include <gr_block_detail.h>
 #include <stdexcept>
 #include <iostream>
+#include <gr_block_registry.h>
+#include <gr_prefs.h>
 
 gr_block::gr_block (const std::string &name,
-		    gr_io_signature_sptr input_signature,
-		    gr_io_signature_sptr output_signature)
+                    gr_io_signature_sptr input_signature,
+                    gr_io_signature_sptr output_signature)
   : gr_basic_block(name, input_signature, output_signature),
     d_output_multiple (1),
     d_output_multiple_set(false),
@@ -42,12 +44,63 @@ gr_block::gr_block (const std::string &name,
     d_fixed_rate(false),
     d_max_noutput_items_set(false),
     d_max_noutput_items(0),
-    d_tag_propagation_policy(TPP_ALL_TO_ALL)
+    d_min_noutput_items(0),
+    d_tag_propagation_policy(TPP_ALL_TO_ALL),
+    d_max_output_buffer(std::max(output_signature->max_streams(),1), -1),
+    d_min_output_buffer(std::max(output_signature->max_streams(),1), -1)
 {
+    global_block_registry.register_primitive(alias(), this);
+
+#ifdef ENABLE_GR_LOG
+#ifdef HAVE_LOG4CPP
+    gr_prefs *p = gr_prefs::singleton();
+    std::string config_file = p->get_string("LOG", "log_config", "");
+    std::string log_level = p->get_string("LOG", "log_level", "off");
+    std::string log_file = p->get_string("LOG", "log_file", "");
+    std::string debug_level = p->get_string("LOG", "debug_level", "off");
+    std::string debug_file = p->get_string("LOG", "debug_file", "");
+
+    GR_CONFIG_LOGGER(config_file);
+
+    GR_LOG_GETLOGGER(LOG, "gr_log." + alias());
+    GR_LOG_SET_LEVEL(LOG, log_level);
+    if(log_file.size() > 0) {
+      if(log_file == "stdout") {
+        GR_LOG_ADD_CONSOLE_APPENDER(LOG, "cout","gr::log :%p: %c{1} - %m%n");
+      }
+      else if(log_file == "stderr") {
+        GR_LOG_ADD_CONSOLE_APPENDER(LOG, "cerr","gr::log :%p: %c{1} - %m%n");
+      }
+      else {
+        GR_LOG_ADD_FILE_APPENDER(LOG, log_file , true,"%r :%p: %c{1} - %m%n");
+      }
+    }
+    d_logger = LOG;
+
+    GR_LOG_GETLOGGER(DLOG, "gr_log_debug." + alias());
+    GR_LOG_SET_LEVEL(DLOG, debug_level);
+    if(debug_file.size() > 0) {
+      if(debug_file == "stdout") {
+        GR_LOG_ADD_CONSOLE_APPENDER(DLOG, "cout","gr::debug :%p: %c{1} - %m%n");
+      }
+      else if(debug_file == "stderr") {
+        GR_LOG_ADD_CONSOLE_APPENDER(DLOG, "cerr", "gr::debug :%p: %c{1} - %m%n");
+      }
+      else {
+        GR_LOG_ADD_FILE_APPENDER(DLOG, debug_file, true, "%r :%p: %c{1} - %m%n");
+      }
+    }
+    d_debug_logger = DLOG;
+#endif /* HAVE_LOG4CPP */
+#else /* ENABLE_GR_LOG */
+    d_logger = NULL;
+    d_debug_logger = NULL;
+#endif /* ENABLE_GR_LOG */
 }
 
 gr_block::~gr_block ()
 {
+    global_block_registry.unregister_primitive(alias());
 }
 
 // stub implementation:  1:1
@@ -182,11 +235,18 @@ gr_block::add_item_tag(unsigned int which_output,
 }
 
 void
+gr_block::remove_item_tag(unsigned int which_input,
+		       const gr_tag_t &tag)
+{
+  d_detail->remove_item_tag(which_input, tag, unique_id());
+}
+
+void
 gr_block::get_tags_in_range(std::vector<gr_tag_t> &v,
 			    unsigned int which_output,
 			    uint64_t start, uint64_t end)
 {
-  d_detail->get_tags_in_range(v, which_output, start, end);
+  d_detail->get_tags_in_range(v, which_output, start, end, unique_id());
 }
 
 void
@@ -195,7 +255,7 @@ gr_block::get_tags_in_range(std::vector<gr_tag_t> &v,
 			    uint64_t start, uint64_t end,
 			    const pmt::pmt_t &key)
 {
-  d_detail->get_tags_in_range(v, which_output, start, end, key);
+  d_detail->get_tags_in_range(v, which_output, start, end, key, unique_id());
 }
 
 gr_block::tag_propagation_policy_t
@@ -239,6 +299,186 @@ gr_block::is_set_max_noutput_items()
   return d_max_noutput_items_set;
 }
 
+void
+gr_block::set_processor_affinity(const std::vector<int> &mask)
+{
+  d_affinity = mask;
+  if(d_detail) {
+    d_detail->set_processor_affinity(d_affinity);
+  }
+}
+
+void
+gr_block::unset_processor_affinity()
+{
+  d_affinity.clear();
+  if(d_detail) {
+    d_detail->unset_processor_affinity();
+  }
+}
+
+float
+gr_block::pc_noutput_items()
+{
+  if(d_detail) {
+    return d_detail->pc_noutput_items();
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_noutput_items_var()
+{
+  if(d_detail) {
+    return d_detail->pc_noutput_items_var();
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_nproduced()
+{
+  if(d_detail) {
+    return d_detail->pc_nproduced();
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_nproduced_var()
+{
+  if(d_detail) {
+    return d_detail->pc_nproduced_var();
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_input_buffers_full(int which)
+{
+  if(d_detail) {
+    return d_detail->pc_input_buffers_full(static_cast<size_t>(which));
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_input_buffers_full_var(int which)
+{
+  if(d_detail) {
+    return d_detail->pc_input_buffers_full_var(static_cast<size_t>(which));
+  }
+  else {
+    return 0;
+  }
+}
+
+std::vector<float>
+gr_block::pc_input_buffers_full()
+{
+  if(d_detail) {
+    return d_detail->pc_input_buffers_full();
+  }
+  else {
+    return std::vector<float>(1,0);
+  }
+}
+
+std::vector<float>
+gr_block::pc_input_buffers_full_var()
+{
+  if(d_detail) {
+    return d_detail->pc_input_buffers_full_var();
+  }
+  else {
+    return std::vector<float>(1,0);
+  }
+}
+
+float
+gr_block::pc_output_buffers_full(int which)
+{
+  if(d_detail) {
+    return d_detail->pc_output_buffers_full(static_cast<size_t>(which));
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_output_buffers_full_var(int which)
+{
+  if(d_detail) {
+    return d_detail->pc_output_buffers_full_var(static_cast<size_t>(which));
+  }
+  else {
+    return 0;
+  }
+}
+
+std::vector<float>
+gr_block::pc_output_buffers_full()
+{
+  if(d_detail) {
+    return d_detail->pc_output_buffers_full();
+  }
+  else {
+    return std::vector<float>(1,0);
+  }
+}
+
+std::vector<float>
+gr_block::pc_output_buffers_full_var()
+{
+  if(d_detail) {
+    return d_detail->pc_output_buffers_full_var();
+  }
+  else {
+    return std::vector<float>(1,0);
+  }
+}
+
+float
+gr_block::pc_work_time()
+{
+  if(d_detail) {
+    return d_detail->pc_work_time();
+  }
+  else {
+    return 0;
+  }
+}
+
+float
+gr_block::pc_work_time_var()
+{
+  if(d_detail) {
+    return d_detail->pc_work_time_var();
+  }
+  else {
+    return 0;
+  }
+}
+
+void
+gr_block::reset_perf_counters()
+{
+  if(d_detail) {
+    d_detail->reset_perf_counters();
+  }
+}
+
 std::ostream&
 operator << (std::ostream& os, const gr_block *m)
 {
@@ -246,3 +486,12 @@ operator << (std::ostream& os, const gr_block *m)
   return os;
 }
 
+int
+gr_block::general_work(int noutput_items,
+		       gr_vector_int &ninput_items,
+		       gr_vector_const_void_star &input_items,
+		       gr_vector_void_star &output_items)
+{
+  throw std::runtime_error("gr_block::general_work() not implemented");
+  return 0;
+}

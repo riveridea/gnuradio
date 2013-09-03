@@ -105,15 +105,18 @@ execute_process(
 )
 
 set(GR_SWIG_INCLUDE_DIRS
-    ${GR_DIGITAL_INCLUDE_DIRS}
-    ${GNURADIO_CORE_SWIG_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/../include
+    ${GR_DIGITAL_INCLUDE_DIRS}
+    ${GR_ANALOG_INCLUDE_DIRS}
+    ${GNURADIO_CORE_SWIG_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
 )
 
 # Setup swig docs to depend on includes and pull in from build directory
 set(GR_SWIG_LIBRARIES gnuradio-digital)
-set(GR_SWIG_TARGET_DEPS digital_generated_includes core_swig)
+set(GR_SWIG_TARGET_DEPS digital_generated_includes)
 set(GR_SWIG_DOC_FILE ${CMAKE_CURRENT_BINARY_DIR}/digital_swig_doc.i)
 set(GR_SWIG_DOC_DIRS
   ${CMAKE_CURRENT_SOURCE_DIR}/../include
@@ -159,8 +162,8 @@ install(
     digital_map_bb.i
     digital_mpsk_receiver_cc.i
     digital_mpsk_snr_est_cc.i
-    digital_ofdm_cyclic_prefixer.i
     digital_ofdm_frame_acquisition.i
+    digital_ofdm_cyclic_prefixer.i
     digital_ofdm_frame_sink.i
     digital_ofdm_insert_preamble.i
     digital_ofdm_mapper_bcv.i
@@ -173,9 +176,10 @@ install(
     digital_probe_mpsk_snr_est_c.i
     digital_scrambler_bb.i
     digital_simple_framer.i
-	digital_sampcov_matrix_calculator.i
-	digital_trace_calculator.i
-	digital_sampcov_matrix_generator.i
+    digital_sampcov_matrix_calculator.i
+    digital_trace_calculator.i
+    digital_sampcov_matrix_generator.i
+    digital_simple_correlator.i
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio/swig
     COMPONENT "digital_swig"
 )

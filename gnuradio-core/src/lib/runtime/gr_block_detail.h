@@ -27,6 +27,7 @@
 #include <gr_runtime_types.h>
 #include <gr_tpb_detail.h>
 #include <gr_tags.h>
+#include <gruel/high_res_timer.h>
 #include <stdexcept>
 
 /*!
@@ -85,11 +86,6 @@ class GR_CORE_API gr_block_detail {
    */
   void produce_each (int how_many_items);
 
-  /*!
-   * Accept msg, place in queue, arrange for thread to be awakened if it's not already.
-   */
-  void _post(pmt::pmt_t msg);
-
   // Return the number of items read on input stream which_input
   uint64_t nitems_read(unsigned int which_input);
 
@@ -100,14 +96,25 @@ class GR_CORE_API gr_block_detail {
   /*!
    * \brief  Adds a new tag to the given output stream.
    *
-   * This takes the input parameters and builds a PMT tuple
-   * from it. It then calls gr_buffer::add_item_tag(pmt::pmt_t t),
+   * Calls gr_buffer::add_item_tag(),
    * which appends the tag onto its deque.
    *
    * \param which_output  an integer of which output stream to attach the tag
    * \param tag the tag object to add
    */
   void add_item_tag(unsigned int which_output, const gr_tag_t &tag);
+
+  /*!
+   * \brief  Removes a tag from the given input stream.
+   *
+   * Calls gr_buffer::remove_item_tag().
+   * The tag in question will then no longer appear on subsequent calls of get_tags_in_range().
+   *
+   * \param which_input  an integer of which input stream to remove the tag from
+   * \param tag the tag object to add
+   * \param id The unique block ID (use gr_block::unique_id())
+   */
+  void remove_item_tag(unsigned int which_input, const gr_tag_t &tag, long id);
 
   /*!
    * \brief Given a [start,end), returns a vector of all tags in the range.
@@ -122,11 +129,13 @@ class GR_CORE_API gr_block_detail {
    * \param which_input  an integer of which input stream to pull from
    * \param abs_start    a uint64 count of the start of the range of interest
    * \param abs_end      a uint64 count of the end of the range of interest
+   * \param id           Block ID
    */
   void get_tags_in_range(std::vector<gr_tag_t> &v,
 			 unsigned int which_input,
 			 uint64_t abs_start,
-			 uint64_t abs_end);
+			 uint64_t abs_end,
+			 long id);
 
   /*!
    * \brief Given a [start,end), returns a vector of all tags in the range
@@ -144,13 +153,51 @@ class GR_CORE_API gr_block_detail {
    * \param abs_start    a uint64 count of the start of the range of interest
    * \param abs_end      a uint64 count of the end of the range of interest
    * \param key          a PMT symbol to select only tags of this key
+   * \param id           Block ID
    */
   void get_tags_in_range(std::vector<gr_tag_t> &v,
 			 unsigned int which_input,
 			 uint64_t abs_start,
 			 uint64_t abs_end,
-			 const pmt::pmt_t &key);
+			 const pmt::pmt_t &key,
+			 long id);
 
+  /*!
+   * \brief Set core affinity of block to the cores in the vector mask.
+   *
+   * \param mask a vector of ints of the core numbers available to this block.
+   */
+  void set_processor_affinity(const std::vector<int> &mask);
+
+  /*!
+   * \brief Unset core affinity.
+   */
+  void unset_processor_affinity();
+
+  bool                               threaded;  // set if thread is currently running.
+  gruel::gr_thread_t                 thread;    // portable thread handle
+
+  void start_perf_counters();
+  void stop_perf_counters(int noutput_items, int nproduced);
+  void reset_perf_counters();
+
+  // Calls to get performance counter items
+  float pc_noutput_items();
+  float pc_nproduced();
+  float pc_input_buffers_full(size_t which);
+  std::vector<float> pc_input_buffers_full();
+  float pc_output_buffers_full(size_t which);
+  std::vector<float> pc_output_buffers_full();
+  float pc_work_time();
+
+  float pc_noutput_items_var();
+  float pc_nproduced_var();
+  float pc_input_buffers_full_var(size_t which);
+  std::vector<float> pc_input_buffers_full_var();
+  float pc_output_buffers_full_var(size_t which);
+  std::vector<float> pc_output_buffers_full_var();
+  float pc_work_time_var();
+ 
   gr_tpb_detail			     d_tpb;	// used by thread-per-block scheduler
   int				     d_produce_or;
 
@@ -163,6 +210,20 @@ class GR_CORE_API gr_block_detail {
   std::vector<gr_buffer_sptr>	     d_output;
   bool                               d_done;
 
+  // Performance counters
+  float d_avg_noutput_items;
+  float d_var_noutput_items;
+  float d_avg_nproduced;
+  float d_var_nproduced;
+  std::vector<float> d_avg_input_buffers_full;
+  std::vector<float> d_var_input_buffers_full;
+  std::vector<float> d_avg_output_buffers_full;
+  std::vector<float> d_var_output_buffers_full;
+  gruel::high_res_timer_type d_start_of_work, d_end_of_work;
+  float d_avg_work_time;
+  float d_var_work_time;
+  float d_pc_counter;
+  
   gr_block_detail (unsigned int ninputs, unsigned int noutputs);
 
   friend struct gr_tpb_detail;

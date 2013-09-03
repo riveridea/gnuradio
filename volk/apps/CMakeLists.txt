@@ -1,5 +1,5 @@
 #
-# Copyright 2011-2012 Free Software Foundation, Inc.
+# Copyright 2011-2013 Free Software Foundation, Inc.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,12 +18,10 @@
 ########################################################################
 # Setup profiler
 ########################################################################
-find_package(Boost)
-
-if(Boost_FOUND AND UNIX) #uses mkdir and $HOME
+if(Boost_FOUND)
 
 if(MSVC)
-    include_directories(${CMAKE_SOURCE_DIR}/msvc)
+    include_directories(${CMAKE_SOURCE_DIR}/cmake/msvc)
 endif(MSVC)
 
 include_directories(
@@ -48,4 +46,4 @@ install(
     COMPONENT "volk"
 )
 
-endif(Boost_FOUND AND UNIX)
+endif(Boost_FOUND)

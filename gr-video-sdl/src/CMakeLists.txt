@@ -1,4 +1,4 @@
-# Copyright 2011-2012 Free Software Foundation, Inc.
+# Copyright 2011-2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -21,14 +21,15 @@
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GNURADIO_CORE_INCLUDE_DIRS}
     ${GR_VIDEO_SDL_INCLUDE_DIRS}
+    ${GNURADIO_CORE_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
+    ${LOG4CPP_INCLUDE_DIRS}
+    ${SDL_INCLUDE_DIR}
 )
 
-include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
-
-include_directories(${SDL_INCLUDE_DIR})
 
 ########################################################################
 # Setup library
@@ -38,10 +39,25 @@ list(APPEND gr_video_sdl_sources
     video_sdl_sink_s.cc
 )
 
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-video-sdl.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-video-sdl.rc
+    @ONLY)
+
+    list(APPEND gr_uhd_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-video-sdl.rc
+    )
+endif(MSVC)
+
 list(APPEND video_sdl_libs
     gnuradio-core
     ${Boost_LIBRARIES}
     ${SDL_LIBRARY}
+    ${LOG4CPP_LIBRARIES}
 )
 
 add_library(gnuradio-video-sdl SHARED ${gr_video_sdl_sources})
@@ -66,11 +82,11 @@ if(ENABLE_PYTHON)
 include(GrPython)
 include(GrSwig)
 
-set(GR_SWIG_TARGET_DEPS core_swig)
-
 set(GR_SWIG_INCLUDE_DIRS
     ${GR_COMEDI_INCLUDE_DIRS}
     ${GNURADIO_CORE_SWIG_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
 )
 
 set(GR_SWIG_DOC_FILE ${CMAKE_CURRENT_BINARY_DIR}/video_sdl_swig_doc.i)
@@ -99,16 +115,16 @@ endif(ENABLE_PYTHON)
 # Handle the unit tests
 ########################################################################
 if(ENABLE_TESTING AND ENABLE_PYTHON)
+
+list(APPEND GR_TEST_PYTHON_DIRS
+    ${CMAKE_BINARY_DIR}/gr-video-sdl/src
+)
+list(APPEND GR_TEST_TARGET_DEPS gnuradio-video-sdl)
+
 include(GrTest)
 file(GLOB py_qa_test_files "qa_*.py")
 foreach(py_qa_test_file ${py_qa_test_files})
     get_filename_component(py_qa_test_name ${py_qa_test_file} NAME_WE)
-    set(GR_TEST_PYTHON_DIRS
-        ${CMAKE_BINARY_DIR}/gnuradio-core/src/python
-        ${CMAKE_BINARY_DIR}/gnuradio-core/src/lib/swig
-        ${CMAKE_BINARY_DIR}/gr-video-sdl/src
-    )
-    set(GR_TEST_TARGET_DEPS volk gruel gnuradio-core gnuradio-video-sdl)
-    GR_ADD_TEST(${py_qa_test_name} ${PYTHON_EXECUTABLE} ${py_qa_test_file})
+    GR_ADD_TEST(${py_qa_test_name} ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B} ${py_qa_test_file})
 endforeach(py_qa_test_file)
 endif(ENABLE_TESTING AND ENABLE_PYTHON)

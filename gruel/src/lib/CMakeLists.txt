@@ -1,4 +1,4 @@
-# Copyright 2010-2011 Free Software Foundation, Inc.
+# Copyright 2010-2011,2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -64,8 +64,8 @@ GR_INCLUDE_SUBDIRECTORY(pmt)
 ########################################################################
 # Setup the include and linker paths
 ########################################################################
-include_directories(${GRUEL_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${GRUEL_INCLUDE_DIRS})
 
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
@@ -76,9 +76,24 @@ link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND gruel_sources
     realtime.cc
     sys_pri.cc
+    thread.cc
     thread_body_wrapper.cc
     thread_group.cc
 )
+
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gruel.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gruel.rc
+    @ONLY)
+
+    list(APPEND gruel_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gruel.rc
+    )
+endif(MSVC)
 
 list(APPEND gruel_libs ${Boost_LIBRARIES})
 

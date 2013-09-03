@@ -1,4 +1,4 @@
-# Copyright 2011 Free Software Foundation, Inc.
+# Copyright 2011,2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -21,15 +21,18 @@
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GNURADIO_CORE_INCLUDE_DIRS}
     ${GR_SHD_INCLUDE_DIRS}
-)
+    ${GNURADIO_CORE_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${SHD_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
+}
 
-include_directories(${SHD_INCLUDE_DIRS})
 link_directories(${SHD_LIBRARY_DIRS})
-
-include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
+
+include_directories(${LOG4CPP_INCLUDE_DIRS})
+link_directories(${LOG4CPP_LIBRARY_DIRS})
 
 ########################################################################
 # Setup library
@@ -39,10 +42,25 @@ list(APPEND gr_shd_sources
     gr_shd_smini_sink.cc
 )
 
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-shd.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-shd.rc
+    @ONLY)
+
+    list(APPEND gr_shd_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-shd.rc
+    )
+endif(MSVC)
+
 list(APPEND shd_libs
     gnuradio-core
     ${Boost_LIBRARIES}
     ${SHD_LIBRARIES}
+    ${LOG4CPP_LIBRARIES}
 )
 
 add_library(gnuradio-shd SHARED ${gr_shd_sources})

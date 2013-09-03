@@ -234,6 +234,17 @@ gr_buffer::add_item_tag(const gr_tag_t &tag)
 }
 
 void
+gr_buffer::remove_item_tag(const gr_tag_t &tag, long id)
+{
+  gruel::scoped_lock guard(*mutex());
+  for (std::deque<gr_tag_t>::iterator it = d_item_tags.begin(); it != d_item_tags.end(); ++it) {
+    if (*it == tag) {
+      (*it).marked_deleted.push_back(id);
+    }
+  }
+}
+
+void
 gr_buffer::prune_tags(uint64_t max_time)
 {
   /* NOTE: this function _should_ lock the mutex before editing
@@ -309,7 +320,8 @@ gr_buffer_reader::update_read_pointer (int nitems)
 void
 gr_buffer_reader::get_tags_in_range(std::vector<gr_tag_t> &v,
 				    uint64_t abs_start,
-				    uint64_t abs_end)
+				    uint64_t abs_end,
+				    long id)
 {
   gruel::scoped_lock guard(*mutex());
 
@@ -321,7 +333,12 @@ gr_buffer_reader::get_tags_in_range(std::vector<gr_tag_t> &v,
     item_time = (*itr).offset;
 
     if((item_time >= abs_start) && (item_time < abs_end)) {
-      v.push_back(*itr);
+      std::vector<long>::iterator id_itr;
+      id_itr = std::find(itr->marked_deleted.begin(), itr->marked_deleted.end(), id);
+      if (id_itr == itr->marked_deleted.end()) { // If id is not in the vector of marked blocks
+	v.push_back(*itr);
+	v.back().marked_deleted.clear();
+      }
     }
 
     itr++;

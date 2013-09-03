@@ -22,31 +22,65 @@
 #include <config.h>
 #endif
 #include <gr_tpb_thread_body.h>
+#include <gr_prefs.h>
 #include <iostream>
 #include <boost/thread.hpp>
 #include <gruel/pmt.h>
+#include <boost/foreach.hpp>
 
 using namespace pmt;
 
 gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_items)
   : d_exec(block, max_noutput_items)
 {
-  // std::cerr << "gr_tpb_thread_body: " << block << std::endl;
+  //std::cerr << "gr_tpb_thread_body: " << block << std::endl;
 
   gr_block_detail *d = block->detail().get();
   gr_block_executor::state s;
   pmt_t msg;
 
+  d->threaded = true;
+  d->thread = gruel::get_current_thread_id();
+
+  gr_prefs *p = gr_prefs::singleton();
+  size_t max_nmsgs = static_cast<size_t>(p->get_long("DEFAULT", "max_messages", 100));
+
+  // Set thread affinity if it was set before fg was started.
+  if(block->processor_affinity().size() > 0) {
+    gruel::thread_bind_to_processor(d->thread, block->processor_affinity());
+  }
 
   while (1){
     boost::this_thread::interruption_point();
 
     // handle any queued up messages
-    while ((msg = d->d_tpb.delete_head_nowait()))
-      block->dispatch_msg(msg);
+    //BOOST_FOREACH( pmt::pmt_t port, block->msg_queue.keys() )
+    
+    BOOST_FOREACH( gr_basic_block::msg_queue_map_t::value_type &i, block->msg_queue )
+    {
+      // Check if we have a message handler attached before getting
+      // any messages. This is mostly a protection for the unknown
+      // startup sequence of the threads.
+      if(block->has_msg_handler(i.first)) {
+        while ((msg = block->delete_head_nowait(i.first))){
+          block->dispatch_msg(i.first,msg);
+        }
+      }
+      else {
+        // If we don't have a handler but are building up messages,
+        // prune the queue from the front to keep memory in check.
+        if(block->nmsgs(i.first) > max_nmsgs)
+          msg = block->delete_head_nowait(i.first);
+      }
+    }
 
     d->d_tpb.clear_changed();
-    s = d_exec.run_one_iteration();
+    // run one iteration if we are a connected stream block
+    if(d->noutputs() >0 || d->ninputs()>0){
+        s = d_exec.run_one_iteration();
+    } else {
+        s = gr_block_executor::BLKD_IN;
+    }
 
     switch(s){
     case gr_block_executor::READY:		// Tell neighbors we made progress.
@@ -63,41 +97,51 @@ gr_tpb_thread_body::gr_tpb_thread_body(gr_block_sptr block, int max_noutput_item
 
     case gr_block_executor::BLKD_IN:		// Wait for input.
       {
-	    gruel::scoped_lock guard(d->d_tpb.mutex);
-	    while (!d->d_tpb.input_changed){
-
-	        // wait for input or message
-	        while(!d->d_tpb.input_changed && d->d_tpb.empty_p())
-	            d->d_tpb.input_cond.wait(guard);
-
-	        // handle all pending messages
-	        while ((msg = d->d_tpb.delete_head_nowait_already_holding_mutex())){
-	            guard.unlock();			// release lock while processing msg
-	            block->dispatch_msg(msg);
-	            guard.lock();
-	        }
+	gruel::scoped_lock guard(d->d_tpb.mutex);
+	while (!d->d_tpb.input_changed){
+	  
+	  // wait for input or message
+	  while(!d->d_tpb.input_changed && block->empty_p())
+	    d->d_tpb.input_cond.wait(guard);
+	  
+	  // handle all pending messages
+	  BOOST_FOREACH( gr_basic_block::msg_queue_map_t::value_type &i, block->msg_queue )
+	    {
+	      while ((msg = block->delete_head_nowait(i.first))){
+		guard.unlock();			// release lock while processing msg
+		block->dispatch_msg(i.first, msg);
+		guard.lock();
+	      }
 	    }
+	  
+	  if (d->done()) {
+	    return;
+	    
+	  }
+	}
       }
       break;
 
 
     case gr_block_executor::BLKD_OUT:		// Wait for output buffer space.
       {
-	    gruel::scoped_lock guard(d->d_tpb.mutex);
-        //std::cerr << "BLKD_OUT at " << block->name() << std::endl;
-	    while (!d->d_tpb.output_changed){
+	gruel::scoped_lock guard(d->d_tpb.mutex);
+	while (!d->d_tpb.output_changed){
 
-	        // wait for output room or message
-	        while(!d->d_tpb.output_changed && d->d_tpb.empty_p())
-	            d->d_tpb.output_cond.wait(guard);
+	  // wait for output room or message
+	  while(!d->d_tpb.output_changed && block->empty_p())
+	    d->d_tpb.output_cond.wait(guard);
 
-        	// handle all pending messages
-        	while ((msg = d->d_tpb.delete_head_nowait_already_holding_mutex())){
-        	    guard.unlock();			// release lock while processing msg
-        	    block->dispatch_msg(msg);
-        	    guard.lock();
-	        }
+	  // handle all pending messages
+      BOOST_FOREACH( gr_basic_block::msg_queue_map_t::value_type &i, block->msg_queue )
+      {
+	    while ((msg = block->delete_head_nowait(i.first))){
+	      guard.unlock();			// release lock while processing msg
+	      block->dispatch_msg(i.first,msg);
+	      guard.lock();
 	    }
+      }
+	}
       }
       break;
 

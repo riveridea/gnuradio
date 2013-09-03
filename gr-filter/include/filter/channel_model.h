@@ -32,8 +32,9 @@ namespace gr {
     
     /*!
      * \brief channel simulator
-     * \ingroup misc_blk
+     * \ingroup channel_models_blk
      *
+     * \details
      * This block implements a basic channel model simulator that can
      * be used to help evaluate, design, and test various signals,
      * waveforms, and algorithms. This model allows the user to set
@@ -68,7 +69,7 @@ namespace gr {
 				  double frequency_offset=0.0,
 				  double epsilon=1.0,
 				  const std::vector<gr_complex> &taps=std::vector<gr_complex>(1,1),
-				  double noise_seed=3021);
+				  double noise_seed=0);
 
       virtual void set_noise_voltage(double noise_voltage) = 0;
       virtual void set_frequency_offset(double frequency_offset) = 0;

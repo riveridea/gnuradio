@@ -1,4 +1,4 @@
-# Copyright 2010-2011 Free Software Foundation, Inc.
+# Copyright 2010-2011,2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -39,24 +39,55 @@ list(APPEND gnuradio_core_sources bug_work_around_6.cc)
 list(APPEND test_gnuradio_core_sources bug_work_around_6.cc)
 
 ########################################################################
+# Set up Windows DLL resource files
+########################################################################
+
+IF(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-core.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-core.rc
+    @ONLY)
+
+    list(APPEND gnuradio_core_sources ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-core.rc)
+ENDIF(MSVC)
+
+########################################################################
 # Setup the include and linker paths
 ########################################################################
-include_directories(${GNURADIO_CORE_INCLUDE_DIRS})
-include_directories(${VOLK_INCLUDE_DIRS})
+include_directories(
+	${GNURADIO_CORE_INCLUDE_DIRS}
+	${VOLK_INCLUDE_DIRS}
+        ${GRUEL_INCLUDE_DIRS}
+        ${Boost_INCLUDE_DIRS}
+	${FFTW3F_INCLUDE_DIRS}
+)
 
-include_directories(${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
+link_directories(
+	${Boost_LIBRARY_DIRS}
+	${FFTW3F_LIBRARY_DIRS}
+)
 
-include_directories(${FFTW3F_INCLUDE_DIRS})
-link_directories(${FFTW3F_LIBRARY_DIRS})
+include_directories(${LOG4CPP_INCLUDE_DIRS})
+link_directories(${LOG4CPP_LIBRARY_DIRS})
 
 ########################################################################
 # Setup library
 ########################################################################
+
+# Only use if log4cpp is installed
+# Define ENABLE_GR_LOG so .h and .cc files can turn actual
+# logging and insert dummy functions.
+#if(LOG4CPP_FOUND)
+#    add_definitions(-DENABLE_GR_LOG)
+#endif(LOG4CPP_FOUND)
+
 list(APPEND gnuradio_core_libs
     gruel
     ${Boost_LIBRARIES}
     ${FFTW3F_LIBRARIES}
+    ${LOG4CPP_LIBRARIES}
 )
 
 if(FFTW3F_THREADS_LIBRARIES)
@@ -97,6 +128,6 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 link_directories(${CPPUNIT_LIBRARY_DIRS})
 
 add_library(test-gnuradio-core SHARED ${test_gnuradio_core_sources})
-target_link_libraries(test-gnuradio-core gnuradio-core ${CPPUNIT_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(test-gnuradio-core gnuradio-core ${CPPUNIT_LIBRARIES} ${Boost_LIBRARIES} ${LOG4CPP_LIBRARIES})
 
 endif(ENABLE_TESTING)

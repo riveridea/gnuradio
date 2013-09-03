@@ -33,7 +33,7 @@ namespace gr {
 
     /*!
      * \brief output = input * complex constant
-     * \ingroup math_blk
+     * \ingroup math_operators_blk
      */
     class BLOCKS_API multiply_const_cc : virtual public gr_sync_block
     {
@@ -46,6 +46,7 @@ namespace gr {
       /*!
        * \brief Create an instance of multiply_const_cc
        * \param k complex multiplicative constant
+       * \param vlen Vector length of incoming stream
        */
       static sptr make(gr_complex k, size_t vlen=1);
       

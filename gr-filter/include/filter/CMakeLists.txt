@@ -77,6 +77,7 @@ add_custom_target(filter_generated_includes DEPENDS
 # Install header files
 ########################################################################
 install(FILES
+    ${generated_includes}
     api.h
     firdes.h
     fir_filter.h
@@ -89,7 +90,6 @@ install(FILES
     pm_remez.h
     polyphase_filterbank.h
     single_pole_iir.h
-    ${generated_includes}
     adaptive_fir_ccc.h
     adaptive_fir_ccf.h
     dc_blocker_cc.h
@@ -99,6 +99,8 @@ install(FILES
     fft_filter_fff.h
     fractional_interpolator_cc.h
     fractional_interpolator_ff.h
+    fractional_resampler_cc.h
+    fractional_resampler_ff.h
     hilbert_fc.h
     iir_filter_ffd.h
     pfb_arb_resampler_ccf.h

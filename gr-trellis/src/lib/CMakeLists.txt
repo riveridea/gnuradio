@@ -1,4 +1,4 @@
-# Copyright 2011 Free Software Foundation, Inc.
+# Copyright 2011,2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -23,13 +23,17 @@ include(GrPython)
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GNURADIO_CORE_INCLUDE_DIRS}
     ${GR_TRELLIS_INCLUDE_DIRS}
     ${GR_DIGITAL_INCLUDE_DIRS}
+    ${GNURADIO_CORE_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
 )
 
-include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
+
+include_directories(${LOG4CPP_INCLUDE_DIRS})
+link_directories(${LOG4CPP_LIBRARY_DIRS})
 
 ########################################################################
 # generate the python helper script which calls into the build utils
@@ -102,6 +106,10 @@ expand_h_cc_i(trellis_sccc_decoder_combined_XX   fb fs fi cb cs ci)
 expand_h_cc_i(trellis_pccc_decoder_X             b s i)
 expand_h_cc_i(trellis_pccc_decoder_combined_XX   fb fs fi cb cs ci)
 
+add_custom_target(trellis_generated_includes DEPENDS
+    ${generated_trellis_includes}
+)
+
 ########################################################################
 # Create the master trellis swig include files
 ########################################################################
@@ -146,9 +154,24 @@ list(APPEND gr_trellis_sources
     ${generated_trellis_sources}
 )
 
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-trellis.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-trellis.rc
+    @ONLY)
+
+    list(APPEND gr_trellis_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-trellis.rc
+    )
+endif(MSVC)
+
 list(APPEND trellis_libs
     gnuradio-core
     ${Boost_LIBRARIES}
+    ${LOG4CPP_LIBRARIES}
 )
 
 add_library(gnuradio-trellis SHARED ${gr_trellis_sources})
@@ -198,16 +221,16 @@ if(ENABLE_PYTHON)
 include(GrPython)
 include(GrSwig)
 
-set(GR_SWIG_TARGET_DEPS core_swig)
-
 set(GR_SWIG_SOURCE_DEPS
     ${generated_trellis_includes}
     ${generated_trellis_swigs}
 )
 set(GR_SWIG_INCLUDE_DIRS
     ${GR_TRELLIS_INCLUDE_DIRS}
-    ${GNURADIO_CORE_SWIG_INCLUDE_DIRS}
     ${GR_DIGITAL_SWIG_INCLUDE_DIRS}
+    ${GNURADIO_CORE_SWIG_INCLUDE_DIRS}
+    ${GRUEL_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
 )
 
 set(GR_SWIG_DOC_FILE ${CMAKE_CURRENT_BINARY_DIR}/trellis_swig_doc.i)
