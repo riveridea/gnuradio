@@ -265,12 +265,12 @@ class generic_demod(gr.hier_block2):
         ntaps = 11 * int(self._samples_per_symbol*nfilts)
 
         # Automatic gain control
-        self.agc = gr.agc2_cc(0.6e-1, 1e-3, 1, 1, 100)
+        #self.agc = gr.agc2_cc(0.6e-1, 1e-3, 1, 1, 100)
 
         # Frequency correction
         fll_ntaps = 55
-        self.freq_recov = digital.fll_band_edge_cc(self._samples_per_symbol, self._excess_bw,
-                                                   fll_ntaps, self._freq_bw)
+        #self.freq_recov = digital.fll_band_edge_cc(self._samples_per_symbol, self._excess_bw,
+        #                                           fll_ntaps, self._freq_bw)
 
         # symbol timing recovery with RRC data filter
         taps = gr.firdes.root_raised_cosine(nfilts, nfilts*self._samples_per_symbol,
@@ -299,12 +299,13 @@ class generic_demod(gr.hier_block2):
         if verbose:
             self._print_verbage()
 
-        if log:
+        if True:
             self._setup_logging()
         
         # Connect and Initialize base class
-        blocks = [self, self.agc, self.freq_recov,
-                  self.time_recov, self.receiver]
+        #blocks = [self, self.agc, self.freq_recov,
+        #          self.time_recov, self.receiver]
+        blocks = [self, self.time_recov, self.receiver]
         if differential:
             blocks.append(self.diffdec)
         if self._constellation.apply_pre_diff_code():
@@ -328,16 +329,18 @@ class generic_demod(gr.hier_block2):
 
     def _setup_logging(self):
         print "Modulation logging turned on."
-        self.connect(self.agc,
-                     gr.file_sink(gr.sizeof_gr_complex, "rx_agc.32fc"))
-        self.connect((self.freq_recov, 0),
-                     gr.file_sink(gr.sizeof_gr_complex, "rx_freq_recov.32fc"))
-        self.connect((self.freq_recov, 1),
-                     gr.file_sink(gr.sizeof_float, "rx_freq_recov_freq.32f"))
-        self.connect((self.freq_recov, 2),
-                     gr.file_sink(gr.sizeof_float, "rx_freq_recov_phase.32f"))
-        self.connect((self.freq_recov, 3),
-                     gr.file_sink(gr.sizeof_float, "rx_freq_recov_error.32f"))
+        self.connect(self,
+                     gr.file_sink(gr.sizeof_gr_complex, "rx_raw.32fc"))
+        #self.connect(self,
+        #             gr.file_sink(gr.sizeof_gr_complex, "rx_agc.32fc"))
+        #self.connect((self.freq_recov, 0),
+        #             gr.file_sink(gr.sizeof_gr_complex, "rx_freq_recov.32fc"))
+        #self.connect((self.freq_recov, 1),
+        #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_freq.32f"))
+        #self.connect((self.freq_recov, 2),
+        #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_phase.32f"))
+        #self.connect((self.freq_recov, 3),
+        #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_error.32f"))
         self.connect((self.time_recov, 0),
                      gr.file_sink(gr.sizeof_gr_complex, "rx_time_recov.32fc"))
         self.connect((self.time_recov, 1),
@@ -354,6 +357,8 @@ class generic_demod(gr.hier_block2):
                      gr.file_sink(gr.sizeof_float, "rx_receiver_phase.32f"))
         self.connect((self.receiver, 3),
                      gr.file_sink(gr.sizeof_float, "rx_receiver_freq.32f"))
+        self.connect((self.receiver, 4),
+                     gr.file_sink(gr.sizeof_gr_complex, "rx_receiver_symbol.32fc"))
         if self._differential:
             self.connect(self.diffdec,
                          gr.file_sink(gr.sizeof_char, "rx_diffdec.8b"))
