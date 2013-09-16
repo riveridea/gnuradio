@@ -91,7 +91,8 @@ class mod_pkts(gr.hier_block2):
                                            self._modulator.bits_per_symbol(),
                                            self._access_code,
                                            self._pad_for_usrp,
-                                           self._whitener_offset)
+                                           self._whitener_offset,
+                                           False)
             #print "pkt =", string_to_hex_list(pkt)
             msg = gr.message_from_string(pkt)
             if self._use_whitener_offset is True:
@@ -162,6 +163,6 @@ class _queue_watcher_thread(_threading.Thread):
     def run(self):
         while self.keep_running:
             msg = self.rcvd_pktq.delete_head()
-            ok, payload = packet_utils.unmake_packet(msg.to_string(), int(msg.arg1()))
+            ok, payload = packet_utils.unmake_packet(msg.to_string(), int(msg.arg1()), False)
             if self.callback:
                 self.callback(ok, payload)
