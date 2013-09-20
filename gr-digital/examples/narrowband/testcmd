@@ -195,6 +195,7 @@ result = job1()
 ###############################################
 ./tdma_mon.py --node-type=node -f 918M --samp-rate=1M --link-rate=500k --node-index=0 --tx-only --tx-gain=15.5 -m bpsk
 ./tdma_mon.py --node-type=node -f 918M --samp-rate=1M --rx-gain=25 --link-rate=500k --node-index=1 --rx-only -m bpsk
+./tdma_mon.py --node-type=head -f 918M --samp-rate=1M --rx-gain=25 --link-rate=500k
 
 
 
