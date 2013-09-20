@@ -190,6 +190,11 @@ job1 = job_server.submit(sum_primes, (600,), (isprime,), ("numpy",))
 # If the job has not been finished yet, execution will wait here until result is available
 result = job1()
 
+###############################################3
+# Test the BPSK Network Links
+###############################################
+./tdma_mon.py --node-type=node -f 918M --samp-rate=1M --link-rate=500k --node-index=0 --tx-only --tx-gain=15.5 -m bpsk
+./tdma_mon.py --node-type=node -f 918M --samp-rate=1M --rx-gain=25 --link-rate=500k --node-index=1 --rx-only -m bpsk
 
 
 
