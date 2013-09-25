@@ -220,25 +220,21 @@ class my_top_block(gr.top_block):
             if found_com == 1:
                 break
                 
-            if self._node_type == CLUSTER_HEAD and self.sensors[0].u.get_time_source(0) == "gpsdo":
-                cind = 0
-                found_com = 1
-            elif self._node_type == CLUSTER_NODE:                
-                if n_devices == 2:
-                    if self.sensors[i].u.get_time_source(0) == "mimo" and found_com == 0:
-                        cind = i
-                        found_com = 1
-                    elif i == 1 and self.sensors[i].u.get_time_source(0) == "gpsdo" and found_com == 0:
-                        cind = i
-                        found_com = 1
-                    elif i == 1:
-                        sys.exit("configure error, no communicaotr found for 2 devices")                    
-      
-                elif (dt[i] != n_devices - 1 and dt[i] != 1) or (sum(dt) == n_devices):
-                    sys.exit("configure error or Not sync")
-                elif dt[i] == 1 and found_com == 0: # We select this as communicator
+            if n_devices == 2:
+                if self.sensors[i].u.get_time_source(0) == "mimo" and found_com == 0:
                     cind = i
                     found_com = 1
+                elif i == 1 and slef.sensors[i].u.get_time_source(0) == "gpsdo" and found_com == 0:
+                    cind = i
+                    found_com = 1
+                elif i == 1:
+                    sys.exit("configure error, no communicaotr found for 2 devices")                    
+      
+            elif (dt[i] != n_devices - 1 and dt[i] != 1) or (sum(dt) == n_devices):
+                sys.exit("configure error or Not sync")
+            elif dt[i] == 1 and found_com == 0: # We select this as communicator
+                cind = i
+                found_com = 1
             
             if found_com == 1:
                 del self.sensors[cind] # delete this devices from sensor list
