@@ -42,6 +42,9 @@ pn1023 = '\x80\x24\x9A\x6B\xE6\x3E\x47\x7E\x1C\x07\xFE\x38\x9D\x95\xDE\xA3\xD2\x
 
 pn511 = '\x82\x5B\x8E\x63\xE0\xAA\xCA\xE8\xD5\x1D\x26\x8A\xD4\xFC\x6D\x0B\xBD\x40\xCC\x8C\xB0\x99\xE9\xC4\xF3\x67\x57\xB6\x0D\x29\x80\x88\xF7\x20\xEE\xB1\x78\xA2\x45\x9A\xDB\xF6\x31\x00\xF0\xA5\xC0\xB4\xDE\x50\xC3\x86\xEC\x92\xA4\x21\xFF\x5F\x39\x7F\x27\x6B\x9F\x7C'
 
+pn15 = '\x8F\x58'
+pn31 = '\x85\x76\x3E\x68'
+
 class my_top_block(gr.top_block):
     def __init__(self, modulator, options):
         gr.top_block.__init__(self)
@@ -132,11 +135,13 @@ def main():
     pkt_size = int(options.size)
 
     pkt_size = 1280
+    pn_number = 2000 
+    pkt_size = pn_number*2 + 2
     while n < nbytes:
         if options.from_file is None:
             #data = (pkt_size - 2) * chr(pktno & 0xff) 
             #data = pn1023
-            data = pn511
+            data = pn_number*pn15
         else:
             data = source_file.read(pkt_size - 2)
             if data == '':
