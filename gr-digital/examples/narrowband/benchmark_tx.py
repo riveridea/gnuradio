@@ -140,8 +140,8 @@ def main():
     while n < nbytes:
         if options.from_file is None:
             #data = (pkt_size - 2) * chr(pktno & 0xff) 
-            #data = pn1023
-            data = pn_number*pn15
+            data = pn511
+            #data = pn_number*pn15
         else:
             data = source_file.read(pkt_size - 2)
             if data == '':
