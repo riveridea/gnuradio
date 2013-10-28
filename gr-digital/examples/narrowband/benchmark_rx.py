@@ -41,7 +41,8 @@ import time
 #print os.getpid()
 #raw_input('Attach and press enter: ')
 
-ds = 32
+ds = 224
+dn = 400
 
 class my_top_block(gr.top_block):        
     def start_streaming(self):
@@ -65,14 +66,14 @@ class my_top_block(gr.top_block):
             options.samples_per_symbol = self.source._sps
             
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
-            self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
-            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
-            self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
+            self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,dn)
+            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*dn)
+            self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*dn) 
             self.tracer = digital.digital_swig.trace_calculator(ds)
-            self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
+            self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "trace.dat")
             self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
             self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
-            self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
+            self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*dn, "file2.dat")
             
             self.eval = digital.digital_swig.eigen_herm(ds)
             
@@ -109,10 +110,10 @@ class my_top_block(gr.top_block):
 
 	self.connect((self.sampcov, 0), (self.tracer, 0))
 	self.connect((self.sampcov, 1), (self.tracer, 1))
-	#self.connect((self.sampcov, 0), (self.eval, 0))
-	#self.connect((self.sampcov, 1), (self.eval, 1))
+	self.connect((self.sampcov, 0), (self.eval, 0))
+	self.connect((self.sampcov, 1), (self.eval, 1))
 	self.connect(self.tracer, self.gr_file_sink3)
-	#self.connect(self.eval, self.gr_file_sink4)
+	self.connect(self.eval, self.gr_file_sink4)
 	#self.connect(self.tracer, self.gr_file_sink3)		
  
         self.timer = threading.Timer(1, self.start_streaming)
