@@ -56,7 +56,7 @@ class transmit_path(gr.hier_block2):
             digital.mod_pkts(self.modulator,
                              access_code=None,
                              msgq_limit=4,
-                             pad_for_usrp=True)
+                             pad_for_usrp=False)
 
         self.amp = gr.multiply_const_cc(1)
         self.set_tx_amplitude(self._tx_amplitude)
