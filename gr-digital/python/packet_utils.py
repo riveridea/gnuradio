@@ -139,7 +139,9 @@ def make_packet(payload, samples_per_symbol, bits_per_symbol,
         pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
                        whiten(payload_with_crc, whitener_offset), '\x55'))
     else:
-        pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
+        #pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
+        #               (payload_with_crc), '\x55'))
+        pkt = ''.join((make_header(L, whitener_offset),
                        (payload_with_crc), '\x55'))
 
     if pad_for_usrp:
