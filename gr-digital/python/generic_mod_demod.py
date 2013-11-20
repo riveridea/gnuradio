@@ -216,7 +216,8 @@ class generic_demod(gr.hier_block2):
                  timing_bw=_def_timing_bw,
                  phase_bw=_def_phase_bw,
                  verbose=_def_verbose,
-                 log=_def_log):
+                 log=_def_log,
+                 addr=''):
         """
 	Hierarchical block for RRC-filtered differential generic demodulation.
 
@@ -255,6 +256,7 @@ class generic_demod(gr.hier_block2):
         self._timing_bw = timing_bw
         self._timing_max_dev= _def_timing_max_dev
         self._differential = differential
+        self._addr = addr #the address of the receiving USRP
 
         if self._samples_per_symbol < 2:
             raise TypeError, ("sbp must be >= 2, is %d" % self._samples_per_symbol)
@@ -330,7 +332,7 @@ class generic_demod(gr.hier_block2):
     def _setup_logging(self):
         print "Modulation logging turned on."
         self.connect(self,
-                     gr.file_sink(gr.sizeof_gr_complex, "rx_raw.32fc"))
+                     gr.file_sink(gr.sizeof_gr_complex, self._addr + "rx_raw.32fc"))
         #self.connect(self,
         #             gr.file_sink(gr.sizeof_gr_complex, "rx_agc.32fc"))
         #self.connect((self.freq_recov, 0),
@@ -340,33 +342,33 @@ class generic_demod(gr.hier_block2):
         #self.connect((self.freq_recov, 2),
         #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_phase.32f"))
         #self.connect((self.freq_recov, 3),
-        #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_error.32f"))
+        #             gr.file_sink(gr.sizeof_float, "rx_freq_recov_error.32f"))        
         self.connect((self.time_recov, 0),
-                     gr.file_sink(gr.sizeof_gr_complex, "rx_time_recov.32fc"))
+                     gr.file_sink(gr.sizeof_gr_complex, self._addr + "rx_time_recov.32fc")) 
         self.connect((self.time_recov, 1),
-                     gr.file_sink(gr.sizeof_float, "rx_time_recov_error.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_time_recov_error.32f")) 
         self.connect((self.time_recov, 2),
-                     gr.file_sink(gr.sizeof_float, "rx_time_recov_rate.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_time_recov_rate.32f"))
         self.connect((self.time_recov, 3),
-                     gr.file_sink(gr.sizeof_float, "rx_time_recov_phase.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_time_recov_phase.32f"))
         self.connect((self.receiver, 0),
-                     gr.file_sink(gr.sizeof_char, "rx_receiver.8b"))
+                     gr.file_sink(gr.sizeof_char, self._addr + "rx_receiver.8b"))
         self.connect((self.receiver, 1),
-                     gr.file_sink(gr.sizeof_float, "rx_receiver_error.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_receiver_error.32f"))
         self.connect((self.receiver, 2),
-                     gr.file_sink(gr.sizeof_float, "rx_receiver_phase.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_receiver_phase.32f"))
         self.connect((self.receiver, 3),
-                     gr.file_sink(gr.sizeof_float, "rx_receiver_freq.32f"))
+                     gr.file_sink(gr.sizeof_float, self._addr + "rx_receiver_freq.32f"))
         self.connect((self.receiver, 4),
-                     gr.file_sink(gr.sizeof_gr_complex, "rx_receiver_symbol.32fc"))
+                     gr.file_sink(gr.sizeof_gr_complex, self._addr + "rx_receiver_symbol.32fc"))
         if self._differential:
             self.connect(self.diffdec,
-                         gr.file_sink(gr.sizeof_char, "rx_diffdec.8b"))
+                         gr.file_sink(gr.sizeof_char, self._addr + "rx_diffdec.8b"))
         if self._constellation.apply_pre_diff_code():
             self.connect(self.symbol_mapper,
-                         gr.file_sink(gr.sizeof_char, "rx_symbol_mapper.8b"))
+                         gr.file_sink(gr.sizeof_char, self._addr + "rx_symbol_mapper.8b"))
         self.connect(self.unpack,
-                     gr.file_sink(gr.sizeof_char, "rx_unpack.8b"))
+                     gr.file_sink(gr.sizeof_char, self._addr + "rx_unpack.8b"))
         
     def add_options(parser):
         """
