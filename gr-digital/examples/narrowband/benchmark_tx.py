@@ -157,6 +157,9 @@ def main():
             #    data = 64*pn255_4
 
             data = 64*pn255_1
+        elif options.netsync is not None:
+            data = pn1023
+            n = nbytes #only one PN sequence is sent
         else:
             data = source_file.read(pkt_size - 2)
             if data == '':
