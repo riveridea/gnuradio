@@ -106,6 +106,8 @@ def main():
                       help="enable discontinous transmission (bursts of 5 packets)")
     parser.add_option("","--from-file", default=None,
                       help="use intput file for packet contents")
+    parser.add_option("","--netsync", default=None,
+                      help="use one PN sequence sent to all receivers for their data sync")
     parser.add_option("","--to-file", default=None,
                       help="Output file for modulated samples")
 
@@ -156,6 +158,9 @@ def main():
             #    data = 64*pn255_4
 
             data = 64*pn255_1
+        elif options.netsync is not None:
+            data = pn1023
+            n = nbytes #only one PN sequence is sent
         else:
             filex = 1
             data = source_file.read(pkt_size - 2)
