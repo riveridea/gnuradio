@@ -141,7 +141,8 @@ def main():
 
     pkt_size = 1280
     pn_number = 2000 
-    pkt_size = pn_number*2 + 2
+    filex = 0
+    #pkt_size = pn_number*2 + 2
     while n < nbytes:
         if options.from_file is None:
             #data = (pkt_size - 2) * chr(pktno & 0xff)
@@ -156,13 +157,17 @@ def main():
 
             data = 64*pn255_1
         else:
+            filex = 1
             data = source_file.read(pkt_size - 2)
             if data == '':
+                print 'file done'
                 break;
 
-        payload = struct.pack('!H', pktno & 0xffff) + data
+        #payload = struct.pack('!H', pktno & 0xffff) + data
+        payload = data
         send_pkt(payload)
-        n += len(payload)
+        if filex == 0:  
+            n += len(payload)
         sys.stderr.write('.')
         if options.discontinuous and pktno % 5 == 4:
             time.sleep(1)

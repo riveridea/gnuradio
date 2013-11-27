@@ -65,9 +65,11 @@ class uhd_interface:
         self._ant  = antenna
         self._spec = spec
         self._gain = self.set_gain(gain)
-        self._freq = self.set_freq(freq)
 
         self._rate, self._sps = self.set_sample_rate(sym_rate, sps)
+        self._freq = self.set_freq(freq)
+
+        
 
     def set_sample_rate(self, sym_rate, req_sps):
         start_sps = req_sps
@@ -115,7 +117,8 @@ class uhd_interface:
             sys.stderr.write("You must specify -f FREQ or --freq FREQ\n")
             sys.exit(1)
         
-        r = self.u.set_center_freq(freq, 0)
+        r = self.u.set_center_freq(uhd.tune_request(freq, self._rate*12), 0)
+        #r = self.u.set_center_freq(freq, 0)
         if r:
             return freq
         else:

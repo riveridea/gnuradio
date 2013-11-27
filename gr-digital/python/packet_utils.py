@@ -139,12 +139,12 @@ def make_packet(payload, samples_per_symbol, bits_per_symbol,
         pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
                        whiten(payload_with_crc, whitener_offset), '\x55'))
     else:
-        pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
-                       (payload_with_crc), '\x55'))
-        #pkt = ''.join(payload)
+        #pkt = ''.join((packed_preamble, packed_access_code, make_header(L, whitener_offset),
+        #               (payload_with_crc), '\x55'))
+        pkt = ''.join(payload)
 
-    if pad_for_usrp:
-        pkt = pkt + (_npadding_bytes(len(pkt), int(samples_per_symbol), bits_per_symbol) * '\x55')
+    #if pad_for_usrp:
+    #    pkt = pkt + (_npadding_bytes(len(pkt), int(samples_per_symbol), bits_per_symbol) * '\x55')
 
     #print "make_packet: len(pkt) =", len(pkt)
     return pkt
