@@ -52,7 +52,7 @@ def bpsk_constellation(m=_def_constellation_points):
 class bpsk_mod(generic_mod):
 
     def __init__(self, constellation_points=_def_constellation_points,
-                 differential=False, addr='', *args, **kwargs):
+                 differential=False, *args, **kwargs):
 
         """
 	Hierarchical block for RRC-filtered BPSK modulation.
@@ -68,7 +68,7 @@ class bpsk_mod(generic_mod):
         if constellation_points != 2:
             raise ValueError('Number of constellation points must be 2 for BPSK.')
         super(bpsk_mod, self).__init__(constellation=constellation,
-                                       differential=differential, addr=addr, *args, **kwargs)
+                                       differential=differential, *args, **kwargs)
         
 # /////////////////////////////////////////////////////////////////////////////
 #                           BPSK demodulator
