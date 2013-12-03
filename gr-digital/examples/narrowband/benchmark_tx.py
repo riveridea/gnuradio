@@ -146,7 +146,11 @@ def main():
     filex = 0
     #pkt_size = pn_number*2 + 2
     while n < nbytes:
-        if options.from_file is None:
+        if options.netsync:
+            data = pn1023
+            n = nbytes #only one PN sequence is sent
+            print 'send one PN sync signal'
+        elif options.from_file is None:
             #data = (pkt_size - 2) * chr(pktno & 0xff)
             #if pktno % 4 == 0: 
             #    data = 64*pn255_1
@@ -158,10 +162,6 @@ def main():
             #    data = 64*pn255_4
 
             data = 64*pn255_1
-        elif options.netsync:
-            data = pn1023
-            n = nbytes #only one PN sequence is sent
-            print 'send one PN sync signal'
         else:
             filex = 1
             data = source_file.read(pkt_size - 2)
