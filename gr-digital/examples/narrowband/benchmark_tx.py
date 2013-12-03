@@ -161,6 +161,7 @@ def main():
         elif options.netsync is not None:
             data = pn1023
             n = nbytes #only one PN sequence is sent
+            print 'send one PN sync signal'
         else:
             filex = 1
             data = source_file.read(pkt_size - 2)
