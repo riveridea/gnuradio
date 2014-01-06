@@ -59,7 +59,13 @@ class my_top_block(gr.top_block):
             args = modulator.extract_kwargs_from_options(options)
             symbol_rate = options.bitrate / modulator(**args).bits_per_symbol()
 
-            self.sink = uhd_transmitter(options.args, symbol_rate,
+            #specify the first available usrp as transmitter
+            self.devices = uhd.find_devices_raw()
+            device_addr = self.devices[0].to_string() #ex. 'type=usrp2,addr=192.168.10.109,name=,serial=E6R14U3UP'
+            self.usrpaddr = device_addr[11:30]
+
+            #self.sink = uhd_transmitter(options.args, symbol_rate,
+            self.sink = uhd_transmitter(usrpaddr, symbol_rate,
                                         options.samples_per_symbol,
                                         options.tx_freq, options.tx_gain,
                                         options.spec, options.antenna,
@@ -110,6 +116,8 @@ def main():
                       help="use intput file for packet contents")
     parser.add_option("","--netsync", action="store_true", default=False,
                       help="use one PN sequence sent to all receivers for their data sync")
+    parser.add_option("","--rand-file", action="stort_true", default=False,
+                      help="use a auto generated binary file with random data as source for transmission")
     parser.add_option("","--to-file", default=None,
                       help="Output file for modulated samples")
 
@@ -128,14 +136,15 @@ def main():
     if options.from_file is not None:
         source_file = open(options.from_file, 'r')
 
-    #if self.randbinfile == True:
-    #    txfile_name = '/home/alexzh/' + self.addrs[i] + '_randtx'
-    #    with open(txfile_name, 'wb') as fout:
-    #        fout.write(os.urandom(8388608))  #generate a file of 8M random data
-
     # build the graph
     tb = my_top_block(mods[options.modulation], options)
 
+    if options.rand_file == True:
+        txfile_name = '/home/alexzh/' + tb.usrpaddr + '_randtx'
+        with open(txfile_name, 'wb') as fout:
+            fout.write(os.urandom(8388608))  #generate a file of 8M random data
+        source_file = open(txfile_name, 'r')
+        
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:
         print "Warning: failed to enable realtime scheduling"
@@ -170,11 +179,12 @@ def main():
 
             data = 64*pn255_1
         else:
-            filex = 1
-            data = source_file.read(pkt_size - 2)
-            if data == '':
-                print 'file done'
-                break;
+            if options.rand_file or options.from_file is not None:
+                filex = 1
+                data = source_file.read(pkt_size - 2)
+                if data == '':
+                    print 'file done'
+                    break;
 
         #payload = struct.pack('!H', pktno & 0xffff) + data
         payload = data
