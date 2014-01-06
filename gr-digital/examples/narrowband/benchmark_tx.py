@@ -147,7 +147,7 @@ def main():
         except IOError:
            with open(txfile_name, 'wb') as fout:
                 print 'Generating Random binary file.... waiting'
-                fout.write(os.urandom(1280*1e6))  #generate a file of 8M random data
+                fout.write(os.urandom(1280000000))  #generate a file of 8M random data
                 print '1.28G random binary file genearted'
            source_file = open(txfile_name, 'r')
         
