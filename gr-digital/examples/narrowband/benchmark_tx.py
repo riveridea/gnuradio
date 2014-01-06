@@ -116,7 +116,7 @@ def main():
                       help="use intput file for packet contents")
     parser.add_option("","--netsync", action="store_true", default=False,
                       help="use one PN sequence sent to all receivers for their data sync")
-    parser.add_option("","--rand-file", action="stort_true", default=False,
+    parser.add_option("","--rand-file", action="store_true", default=False,
                       help="use a auto generated binary file with random data as source for transmission")
     parser.add_option("","--to-file", default=None,
                       help="Output file for modulated samples")
