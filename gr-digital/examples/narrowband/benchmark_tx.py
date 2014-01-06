@@ -141,9 +141,16 @@ def main():
 
     if options.rand_file == True:
         txfile_name = '/home/alexzh/' + tb.usrpaddr + '_randtx'
-        with open(txfile_name, 'wb') as fout:
-            fout.write(os.urandom(8388608))  #generate a file of 8M random data
-        source_file = open(txfile_name, 'r')
+        try:
+           with open(txfile_name, 'r'):
+               source_file = open(txfile_name, 'r')
+        except IOError:
+           with open(txfile_name, 'wb') as fout:
+                print 'Generating Random binary file.... waiting'
+                fout.write(os.urandom(1280*1e6))  #generate a file of 8M random data
+                print '1.28G random binary file genearted'
+           source_file = open(txfile_name, 'r')
+        
         
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:
