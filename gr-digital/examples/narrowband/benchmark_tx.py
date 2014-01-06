@@ -128,10 +128,10 @@ def main():
     if options.from_file is not None:
         source_file = open(options.from_file, 'r')
 
-            if self.randbinfile == True:
-                txfile_name = '/home/alexzh/' + self.addrs[i] + '_randtx'
-                with open(txfile_name, 'wb') as fout:
-                    fout.write(os.urandom(8388608))  #generate a file of 8M random data
+    #if self.randbinfile == True:
+    #    txfile_name = '/home/alexzh/' + self.addrs[i] + '_randtx'
+    #    with open(txfile_name, 'wb') as fout:
+    #        fout.write(os.urandom(8388608))  #generate a file of 8M random data
 
     # build the graph
     tb = my_top_block(mods[options.modulation], options)
