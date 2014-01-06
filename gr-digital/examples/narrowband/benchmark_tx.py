@@ -73,6 +73,8 @@ class my_top_block(gr.top_block):
             sys.stderr.write("No sink defined, dumping samples to null sink.\n\n")
             self.sink = gr.null_sink(gr.sizeof_gr_complex)
 
+        print self.sink._args
+
         # do this after for any adjustments to the options that may
         # occur in the sinks (specifically the UHD sink)
         self.txpath = transmit_path(modulator, options)
@@ -125,6 +127,11 @@ def main():
            
     if options.from_file is not None:
         source_file = open(options.from_file, 'r')
+
+            if self.randbinfile == True:
+                txfile_name = '/home/alexzh/' + self.addrs[i] + '_randtx'
+                with open(txfile_name, 'wb') as fout:
+                    fout.write(os.urandom(8388608))  #generate a file of 8M random data
 
     # build the graph
     tb = my_top_block(mods[options.modulation], options)
