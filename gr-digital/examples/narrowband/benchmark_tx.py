@@ -204,6 +204,7 @@ def main():
         pktno += 1
         
     send_pkt(eof=True)
+    sys.stderr.write('done sent')
 
     tb.wait()                       # wait for it to finish
 
