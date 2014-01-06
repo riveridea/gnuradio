@@ -173,7 +173,7 @@ def main():
             data = pn1023
             n = nbytes #only one PN sequence is sent
             print 'send one PN sync signal'
-        elif options.from_file is None:
+        elif options.from_file is None and options.rand_file == False:
             #data = (pkt_size - 2) * chr(pktno & 0xff)
             #if pktno % 4 == 0: 
             #    data = 64*pn255_1
