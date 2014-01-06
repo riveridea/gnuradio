@@ -65,7 +65,7 @@ class my_top_block(gr.top_block):
             self.usrpaddr = device_addr[11:30]
 
             #self.sink = uhd_transmitter(options.args, symbol_rate,
-            self.sink = uhd_transmitter(usrpaddr, symbol_rate,
+            self.sink = uhd_transmitter(self.usrpaddr, symbol_rate,
                                         options.samples_per_symbol,
                                         options.tx_freq, options.tx_gain,
                                         options.spec, options.antenna,
