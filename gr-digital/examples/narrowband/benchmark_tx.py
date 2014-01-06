@@ -32,7 +32,7 @@ from gnuradio import digital
 from transmit_path import transmit_path
 from uhd_interface import uhd_transmitter
 
-import time, struct, sys
+import time, struct, sys, os
 
 #import os 
 #print os.getpid()
