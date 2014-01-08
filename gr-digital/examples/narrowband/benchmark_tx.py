@@ -81,6 +81,10 @@ class my_top_block(gr.top_block):
 
         print self.sink._args
 
+        if self.sink.u.get_time_source(0) == "none":
+            self.sink.u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
+            self.sink.u.set_clock_source("mimo",0)     
+
         # do this after for any adjustments to the options that may
         # occur in the sinks (specifically the UHD sink)
         self.txpath = transmit_path(modulator, options)
