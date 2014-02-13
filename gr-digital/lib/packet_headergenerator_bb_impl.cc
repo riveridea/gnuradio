@@ -24,7 +24,7 @@
 #endif
 
 #include <boost/format.hpp>
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include "packet_headergenerator_bb_impl.h"
 
 namespace gr {
@@ -57,9 +57,9 @@ namespace gr {
 		    const gr::digital::packet_header_default::sptr &header_formatter,
 		    const std::string &len_tag_key
 		    )
-      : gr_tagged_stream_block("packet_headergenerator_bb_impl",
-		       gr_make_io_signature(1, 1, sizeof (char)),
-		       gr_make_io_signature(1, 1, sizeof (char)),
+      : tagged_stream_block("packet_headergenerator_bb_impl",
+		       io_signature::make(1, 1, sizeof (char)),
+		       io_signature::make(1, 1, sizeof (char)),
 		       len_tag_key),
 	    d_formatter(header_formatter)
     {
@@ -80,7 +80,10 @@ namespace gr {
                        gr_vector_void_star &output_items)
     {
       unsigned char *out = (unsigned char *) output_items[0];
-      if (!d_formatter->header_formatter(ninput_items[0], out)) {
+
+      std::vector<tag_t> tags;
+      get_tags_in_range(tags, 0, nitems_read(0), nitems_read(0) + ninput_items[0]);
+      if (!d_formatter->header_formatter(ninput_items[0], out, tags)) {
 	GR_LOG_FATAL(d_logger, boost::format("header_formatter() returned false (this shouldn't happen). Offending header started at %1%") % nitems_read(0));
 	throw std::runtime_error("header formatter returned false.");
       }

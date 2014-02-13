@@ -1,4 +1,4 @@
-# Copyright 2011 Free Software Foundation, Inc.
+# Copyright 2011,2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -20,10 +20,11 @@
 ########################################################################
 # Setup dependencies
 ########################################################################
+include(GrBoost)
 include(GrPython)
 
-GR_PYTHON_CHECK_MODULE("wx >= 2.8"  wx           "wx.version().split()[0] >= '2.8'"    WX_FOUND)
-GR_PYTHON_CHECK_MODULE("numpy"      numpy        True                                  NUMPY_FOUND)
+GR_PYTHON_CHECK_MODULE("wx >= 2.8" wx "wx.version().split()[0] >= '2.8'" WX_FOUND)
+GR_PYTHON_CHECK_MODULE("numpy" numpy True NUMPY_FOUND)
 
 ########################################################################
 # Register component
@@ -37,7 +38,10 @@ if(NOT CMAKE_CROSSCOMPILING)
 endif(NOT CMAKE_CROSSCOMPILING)
 
 GR_REGISTER_COMPONENT("gr-wxgui" ENABLE_GR_WXGUI
-    ENABLE_GR_CORE
+    ENABLE_GNURADIO_RUNTIME
+    ENABLE_GR_FFT
+    ENABLE_GR_FILTER
+    ENABLE_GR_ANALOG
     ENABLE_PYTHON
     ${wxgui_python_deps}
 )
@@ -47,14 +51,42 @@ GR_REGISTER_COMPONENT("gr-wxgui" ENABLE_GR_WXGUI
 ########################################################################
 if(ENABLE_GR_WXGUI)
 
+GR_SET_GLOBAL(GR_WXGUI_INCLUDE_DIRS
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_BINARY_DIR}/lib
+    ${CMAKE_CURRENT_BINARY_DIR}/include
+)
+
 ########################################################################
 # Setup CPack components
 ########################################################################
 include(GrPackage)
-CPACK_COMPONENT("wxgui"
+CPACK_COMPONENT("wxgui_runtime"
     DISPLAY_NAME "WxGUI"
     DESCRIPTION  "Wx GUI plotter widgets and grc wrappers"
-    DEPENDS      "core_python"
+    DEPENDS      "runtime_python"
+)
+
+CPACK_COMPONENT("wxgui_devel"
+    GROUP        "WxGUI"
+    DISPLAY_NAME "Development"
+    DESCRIPTION  "C++ headers, package config, import libraries"
+    DEPENDS      "runtime_devel"
+)
+
+CPACK_COMPONENT("wxgui_python"
+    GROUP        "WxGUI"
+    DISPLAY_NAME "Python"
+    DESCRIPTION  "Python modules for runtime; GRC xml files"
+    DEPENDS      "runtime_python;wxgui_runtime"
+)
+
+CPACK_COMPONENT("wxgui_swig"
+    GROUP        "WxGUI"
+    DISPLAY_NAME "SWIG"
+    DESCRIPTION  "SWIG development .i files"
+    DEPENDS      "runtime_swig;wxgui_python;wxgui_devel"
 )
 
 ########################################################################
@@ -83,7 +115,10 @@ install(
 ########################################################################
 # Add subdirectories
 ########################################################################
+add_subdirectory(include/gnuradio/wxgui)
+add_subdirectory(lib)
 add_subdirectory(grc)
-add_subdirectory(src/python)
+add_subdirectory(python/wxgui)
+add_subdirectory(swig)
 
 endif(ENABLE_GR_WXGUI)

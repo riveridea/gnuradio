@@ -37,13 +37,9 @@ configure_file(
 
 set(BUILT_DIRS ${CMAKE_CURRENT_BINARY_DIR}/xml ${CMAKE_CURRENT_BINARY_DIR}/html)
 
-if(ENABLE_GRUEL)
+if(ENABLE_GNURADIO_RUNTIME)
   list(APPEND GENERATED_DEPS pmt_generated)
-endif(ENABLE_GRUEL)
-
-if(ENABLE_GR_CORE)
-  list(APPEND GENERATED_DEPS general_generated gengen_generated filter_generated)
-endif(ENABLE_GR_CORE)
+endif(ENABLE_GNURADIO_RUNTIME)
 
 if(ENABLE_GR_BLOCKS)
   list(APPEND GENERATED_DEPS blocks_generated_includes)

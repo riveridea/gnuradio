@@ -24,11 +24,11 @@
 #ifndef INCLUDED_PFB_DECIMATOR_CCF_IMPL_H
 #define	INCLUDED_PFB_DECIMATOR_CCF_IMPL_H
 
-#include <filter/pfb_decimator_ccf.h>
-#include <filter/polyphase_filterbank.h>
-#include <filter/fir_filter.h>
-#include <fft/fft.h>
-#include <gruel/thread.h>
+#include <gnuradio/filter/pfb_decimator_ccf.h>
+#include <gnuradio/filter/polyphase_filterbank.h>
+#include <gnuradio/filter/fir_filter.h>
+#include <gnuradio/fft/fft.h>
+#include <gnuradio/thread/thread.h>
 
 namespace gr {
   namespace filter {
@@ -40,7 +40,7 @@ namespace gr {
       unsigned int d_rate;
       unsigned int d_chan;
       gr_complex  *d_rotator;
-      gruel::mutex d_mutex; // mutex to protect set/work access
+      gr::thread::mutex d_mutex; // mutex to protect set/work access
     
     public:
       pfb_decimator_ccf_impl(unsigned int decim,
@@ -52,7 +52,7 @@ namespace gr {
       void set_taps(const std::vector<float> &taps);
       void print_taps();
       std::vector<std::vector<float> > taps() const;
-      //void set_channel(unsigned int channel);
+      void set_channel(const unsigned int channel);
 
       int work(int noutput_items,
 	       gr_vector_const_void_star &input_items,

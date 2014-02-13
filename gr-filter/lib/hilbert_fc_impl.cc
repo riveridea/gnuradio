@@ -25,26 +25,32 @@
 #endif
 
 #include "hilbert_fc_impl.h"
-#include <filter/firdes.h>
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 
 namespace gr {
   namespace filter {
     
-    hilbert_fc::sptr hilbert_fc::make(unsigned int ntaps)
+    hilbert_fc::sptr
+    hilbert_fc::make(unsigned int ntaps,
+                     firdes::win_type window,
+                     double beta)
     {
-      return gnuradio::get_initial_sptr(new hilbert_fc_impl(ntaps));
+      return gnuradio::get_initial_sptr
+        (new hilbert_fc_impl(ntaps, window, beta));
     }
 
-    hilbert_fc_impl::hilbert_fc_impl(unsigned int ntaps)
-      : gr_sync_block ("hilbert_fc",
-		       gr_make_io_signature (1, 1, sizeof(float)),
-		       gr_make_io_signature (1, 1, sizeof(gr_complex))),
+    hilbert_fc_impl::hilbert_fc_impl(unsigned int ntaps,
+                                     firdes::win_type window,
+                                     double beta)
+      : sync_block("hilbert_fc",
+                   io_signature::make(1, 1, sizeof(float)),
+                   io_signature::make(1, 1, sizeof(gr_complex))),
 	d_ntaps(ntaps | 0x1)	// ensure ntaps is odd
     {
-      d_hilb = new kernel::fir_filter_fff(1, firdes::hilbert(d_ntaps));
-      set_history (d_ntaps);
+      d_hilb = new kernel::fir_filter_fff(1, 
+                         firdes::hilbert(d_ntaps, window, beta));
+      set_history(d_ntaps);
 
       const int alignment_multiple =
 	volk_get_alignment() / sizeof(float);

@@ -24,7 +24,7 @@
 #include "config.h"
 #endif
 
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include "fractional_resampler_cc_impl.h"
 #include <stdexcept>
 
@@ -40,9 +40,9 @@ namespace gr {
 
     fractional_resampler_cc_impl::fractional_resampler_cc_impl
                                      (float phase_shift, float resamp_ratio)
-      : gr_block("fractional_resampler_cc",
-		 gr_make_io_signature(1, 1, sizeof(gr_complex)),
-		 gr_make_io_signature(1, 1, sizeof(gr_complex))),
+      : block("fractional_resampler_cc",
+              io_signature::make2(1, 2, sizeof(gr_complex), sizeof(float)),
+              io_signature::make(1, 1, sizeof(gr_complex))),
 	d_mu(phase_shift), d_mu_inc(resamp_ratio),
 	d_resamp(new mmse_fir_interpolator_cc())
     {
@@ -82,19 +82,38 @@ namespace gr {
       int ii = 0; // input index
       int oo = 0; // output index
 
-      while(oo < noutput_items) {
-	out[oo++] = d_resamp->interpolate(&in[ii], d_mu);
+      if(ninput_items.size() == 1) {
+        while(oo < noutput_items) {
+          out[oo++] = d_resamp->interpolate(&in[ii], d_mu);
 
-	double s = d_mu + d_mu_inc;
-	double f = floor(s);
-	int incr = (int)f;
-	d_mu = s - f;
-	ii += incr;
+          double s = d_mu + d_mu_inc;
+          double f = floor(s);
+          int incr = (int)f;
+          d_mu = s - f;
+          ii += incr;
+        }
+
+        consume_each(ii);
+        return noutput_items;
       }
 
-      consume_each(ii);
+      else {
+        const float *rr = (const float*)input_items[1];
+        while(oo < noutput_items) {
+          out[oo++] = d_resamp->interpolate(&in[ii], d_mu);
+          d_mu_inc = rr[ii];
 
-      return noutput_items;
+          double s = d_mu + d_mu_inc;
+          double f = floor(s);
+          int incr = (int)f;
+          d_mu = s - f;
+          ii += incr;
+        }
+
+        set_relative_rate(1.0 / d_mu_inc);
+        consume_each(ii);
+        return noutput_items;
+      }
     }
 
     float

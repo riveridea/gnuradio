@@ -25,7 +25,7 @@
 #endif
 
 #include "tag_debug_impl.h"
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <iostream>
 #include <iomanip>
 
@@ -34,37 +34,62 @@ namespace gr {
 
     tag_debug::sptr
     tag_debug::make(size_t sizeof_stream_item,
-                    const std::string &name)
+                    const std::string &name,
+                    const std::string &key_filter)
     {
       return gnuradio::get_initial_sptr
-        (new tag_debug_impl(sizeof_stream_item, name));
+        (new tag_debug_impl(sizeof_stream_item, name, key_filter));
     }
 
     tag_debug_impl::tag_debug_impl(size_t sizeof_stream_item,
-                                   const std::string &name)
-      : gr_sync_block("tag_debug",
-                      gr_make_io_signature(1, -1, sizeof_stream_item),
-                      gr_make_io_signature(0, 0, 0)),
+                                   const std::string &name,
+                                   const std::string &key_filter)
+      : sync_block("tag_debug",
+                   io_signature::make(1, -1, sizeof_stream_item),
+                   io_signature::make(0, 0, 0)),
         d_name(name), d_display(true)
     {
+      set_key_filter(key_filter);
     }
 
     tag_debug_impl::~tag_debug_impl()
     {
     }
 
-    std::vector<gr_tag_t>
+    std::vector<tag_t>
     tag_debug_impl::current_tags()
     {
-      gruel::scoped_lock l(d_mutex);
+      gr::thread::scoped_lock l(d_mutex);
       return d_tags;
+    }
+
+    int
+    tag_debug_impl::num_tags()
+    {
+      std::vector<tag_t> t;
+      get_tags_in_range(t, 0, 0, nitems_read(0));
+      return static_cast<int>(t.size());
     }
 
     void
     tag_debug_impl::set_display(bool d)
     {
-      gruel::scoped_lock l(d_mutex);
       d_display = d;
+    }
+
+    void
+    tag_debug_impl::set_key_filter(const std::string &key_filter)
+    {
+      if(key_filter == "")
+        d_filter = pmt::PMT_NIL;
+      else
+        d_filter = pmt::intern(key_filter);
+    }
+
+    std::string
+    tag_debug_impl::key_filter() const
+    {
+      return pmt::symbol_to_string(d_filter);
     }
 
     int
@@ -72,7 +97,7 @@ namespace gr {
                          gr_vector_const_void_star &input_items,
                          gr_vector_void_star &output_items)
     {
-      gruel::scoped_lock l(d_mutex);
+      gr::thread::scoped_lock l(d_mutex);
 
       std::stringstream sout;
       if(d_display) {
@@ -87,7 +112,10 @@ namespace gr {
         end_N = abs_N + (uint64_t)(noutput_items);
 
         d_tags.clear();
-        get_tags_in_range(d_tags, i, abs_N, end_N);
+        if(pmt::is_null(d_filter))
+          get_tags_in_range(d_tags, i, abs_N, end_N);
+        else
+          get_tags_in_range(d_tags, i, abs_N, end_N, d_filter);
 
         if(d_display) {
           sout << "Input Stream: " << std::setw(2) << std::setfill('0') 
@@ -95,8 +123,8 @@ namespace gr {
           for(d_tags_itr = d_tags.begin(); d_tags_itr != d_tags.end(); d_tags_itr++) {
             sout << std::setw(10) << "Offset: " << d_tags_itr->offset
                  << std::setw(10) << "Source: " 
-                 << (pmt::pmt_is_symbol(d_tags_itr->srcid) ? pmt::pmt_symbol_to_string(d_tags_itr->srcid) : "n/a")
-                 << std::setw(10) << "Key: " << pmt::pmt_symbol_to_string(d_tags_itr->key)
+                 << (pmt::is_symbol(d_tags_itr->srcid) ? pmt::symbol_to_string(d_tags_itr->srcid) : "n/a")
+                 << std::setw(10) << "Key: " << pmt::symbol_to_string(d_tags_itr->key)
                  << std::setw(10) << "Value: ";
             sout << d_tags_itr->value << std::endl;
           }
@@ -112,6 +140,20 @@ namespace gr {
       }
 
       return noutput_items;
+    }
+
+    void
+    tag_debug_impl::setup_rpc()
+    {
+#ifdef GR_CTRLPORT
+      add_rpc_variable(
+        rpcbasic_sptr(new rpcbasic_register_get<tag_debug, int>(
+	  alias(), "num. tags",
+	  &tag_debug::num_tags,
+	  pmt::from_long(0), pmt::from_long(10000), pmt::from_long(0),
+	  "", "Number of Tags", RPC_PRIVLVL_MIN,
+          DISPTIME | DISPOPTSTRIP)));
+#endif /* GR_CTRLPORT */
     }
 
   } /* namespace blocks */

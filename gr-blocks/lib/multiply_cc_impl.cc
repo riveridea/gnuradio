@@ -25,7 +25,7 @@
 #endif
 
 #include <multiply_cc_impl.h>
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 
 namespace gr {
@@ -37,9 +37,9 @@ namespace gr {
     }
 
     multiply_cc_impl::multiply_cc_impl(size_t vlen)
-      : gr_sync_block("multiply_cc",
-		      gr_make_io_signature (1, -1, sizeof(gr_complex)*vlen),
-		      gr_make_io_signature (1,  1, sizeof(gr_complex)*vlen)),
+      : sync_block("multiply_cc",
+		      io_signature::make (1, -1, sizeof(gr_complex)*vlen),
+		      io_signature::make (1,  1, sizeof(gr_complex)*vlen)),
 	d_vlen(vlen)
     {
       const int alignment_multiple =
@@ -56,14 +56,9 @@ namespace gr {
       int noi = d_vlen*noutput_items;
       
       memcpy(out, input_items[0], noi*sizeof(gr_complex));
-      if(is_unaligned()) {
-	for(size_t i = 1; i < input_items.size(); i++)
-	  volk_32fc_x2_multiply_32fc_u(out, out, (gr_complex*)input_items[i], noi);
-      }
-      else {
-	for(size_t i = 1; i < input_items.size(); i++)
-	  volk_32fc_x2_multiply_32fc_a(out, out, (gr_complex*)input_items[i], noi);
-      }
+      for(size_t i = 1; i < input_items.size(); i++)
+        volk_32fc_x2_multiply_32fc(out, out, (gr_complex*)input_items[i], noi);
+
       return noutput_items;
     }
 

@@ -8,7 +8,6 @@
 <block>
 	<name>QT GUI Check Box</name>
 	<key>variable_qtgui_check_box</key>
-	<category>GUI Widgets/QT</category>
 	<import>from PyQt4 import Qt</import>
 	<var_make>self.$(id) = $(id) = $value</var_make>
 	<make>#set $win = '_%s_check_box'%$id
@@ -18,7 +17,7 @@
 $win = Qt.QCheckBox($label)
 self._$(id)_choices = {True: $true, False: $false}
 self._$(id)_choices_inv = dict((v,k) for k,v in self._$(id)_choices.iteritems())
-self._$(id)_callback = lambda i: $(win).setChecked(self._$(id)_choices_inv[i])
+self._$(id)_callback = lambda i: Qt.QMetaObject.invokeMethod($(win), "setChecked", Qt.Q_ARG("bool", self._$(id)_choices_inv[i]))
 self._$(id)_callback(self.$id)
 $(win).stateChanged.connect(lambda i: self.set_$(id)(self._$(id)_choices[bool(i)]))
 $(gui_hint()($win))</make>

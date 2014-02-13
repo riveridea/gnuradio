@@ -1,9 +1,32 @@
 #!/usr/bin/env python
+#
+# Copyright 2013 Free Software Foundation, Inc.
+#
+# This file is part of GNU Radio
+#
+# GNU Radio is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3, or (at your option)
+# any later version.
+#
+# GNU Radio is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with GNU Radio; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 51 Franklin Street,
+# Boston, MA 02110-1301, USA.
+#
 
 from gnuradio import gr, filter
+from gnuradio import analog
+from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
+import sys
 
 try:
     import scipy
@@ -30,13 +53,13 @@ class example_fir_filter_ccc(gr.top_block):
         taps = filter.firdes.low_pass_2(1, self._fs, self._bw, self._tw, self._at)
         print "Num. Taps: ", len(taps)
 
-        self.src  = gr.noise_source_c(gr.GR_GAUSSIAN, 1)
-        self.head = gr.head(gr.sizeof_gr_complex, self._nsamps)
+        self.src  = analog.noise_source_c(analog.GR_GAUSSIAN, 1)
+        self.head = blocks.head(gr.sizeof_gr_complex, self._nsamps)
 
         self.filt0 = filter.fir_filter_ccc(self._decim, taps)
 
-        self.vsnk_src = gr.vector_sink_c()
-        self.vsnk_out = gr.vector_sink_c()
+        self.vsnk_src = blocks.vector_sink_c()
+        self.vsnk_out = blocks.vector_sink_c()
 
         self.connect(self.src, self.head, self.vsnk_src)
         self.connect(self.head, self.filt0, self.vsnk_out)

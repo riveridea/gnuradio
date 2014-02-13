@@ -63,12 +63,12 @@ void load_random_data(void *data, volk_type_t type, unsigned int n) {
     }
 }
 
-static std::vector<std::string> get_arch_list(struct volk_func_desc desc) {
+static std::vector<std::string> get_arch_list(volk_func_desc_t desc) {
     std::vector<std::string> archlist;
 
-    for(int i = 0; i < desc.n_archs; i++) {
+    for(size_t i = 0; i < desc.n_impls; i++) {
         //if(!(archs[i+1] & volk_get_lvarch())) continue; //this arch isn't available on this pc
-        archlist.push_back(std::string(desc.indices[i]));
+        archlist.push_back(std::string(desc.impl_names[i]));
     }
 
     return archlist;
@@ -93,7 +93,8 @@ volk_type_t volk_type_from_string(std::string name) {
 
     //get the data size
     size_t last_size_pos = name.find_last_of("0123456789");
-    if(last_size_pos < 0) throw std::string("no size spec in type ").append(name);
+    if(last_size_pos == std::string::npos)
+      throw std::string("no size spec in type ").append(name);
     //will throw if malformed
     int size = boost::lexical_cast<int>(name.substr(0, last_size_pos+1));
 
@@ -212,16 +213,72 @@ inline void run_cast_test3_s32fc(volk_fn_3arg_s32fc func, std::vector<void *> &b
     while(iter--) func(buffs[0], buffs[1], buffs[2], scalar, vlen, arch.c_str());
 }
 
+// This function is a nop that helps resolve GNU Radio bugs 582 and 583.
+// Without this the cast in run_volk_tests for tol_i = static_cast<int>(float tol)
+// won't happen on armhf (reported on cortex A9 and A15).
+void lv_force_cast_hf( int tol_i, float tol_f)
+{
+    int diff_i = 1;
+    float diff_f = 1;
+    if( diff_i > tol_i )
+        std::cout << "" ;
+    if( diff_f > tol_f )
+        std::cout << "" ;
+}
+
 template <class t>
 bool fcompare(t *in1, t *in2, unsigned int vlen, float tol) {
     bool fail = false;
     int print_max_errs = 10;
     for(unsigned int i=0; i<vlen; i++) {
-        if(((t *)(in1))[i] < 1e-30) continue; //this is a hack: below around here we'll start to get roundoff errors due to limited precision
-        if(fabs(((t *)(in1))[i] - ((t *)(in2))[i])/(((t *)in1)[i]) > tol) {
+        // for very small numbers we'll see round off errors due to limited 
+        // precision. So a special test case... 
+        if(fabs(((t *)(in1))[i]) < 1e-30) {
+            if( fabs( ((t *)(in2))[i] ) > tol )
+            {
+                fail=true;
+                if(print_max_errs-- > 0) {
+                    std::cout << "offset " << i << " in1: " << t(((t *)(in1))[i]) << " in2: " << t(((t *)(in2))[i]) << std::endl;
+                }
+            }
+        }
+        // the primary test is the percent different greater than given tol
+        else if(fabs(((t *)(in1))[i] - ((t *)(in2))[i])/(((t *)in1)[i]) > tol) {
             fail=true;
             if(print_max_errs-- > 0) {
                 std::cout << "offset " << i << " in1: " << t(((t *)(in1))[i]) << " in2: " << t(((t *)(in2))[i]) << std::endl;
+            }
+        }
+    }
+
+    return fail;
+}
+
+template <class t>
+bool ccompare(t *in1, t *in2, unsigned int vlen, float tol) {
+    bool fail = false;
+    int print_max_errs = 10;
+    for(unsigned int i=0; i<2*vlen; i+=2) {
+        t diff[2] = { in1[i] - in2[i], in1[i+1] - in2[i+1] };
+        t err  = std::sqrt(diff[0] * diff[0] + diff[1] * diff[1]);
+        t norm = std::sqrt(in1[i] * in1[i] + in1[i+1] * in1[i+1]);
+
+        // for very small numbers we'll see round off errors due to limited 
+        // precision. So a special test case... 
+        if (norm < 1e-30) {
+            if (err > tol)
+            {
+                fail=true;
+                if(print_max_errs-- > 0) {
+                    std::cout << "offset " << i/2 << " in1: " << in1[i] << " + " << in1[i+1] << "j  in2: " << in2[i] << " + " << in2[i+1] << "j" << std::endl;
+                }
+            }
+        }
+        // the primary test is the percent different greater than given tol
+        else if((err / norm) > tol) {
+            fail=true;
+            if(print_max_errs-- > 0) {
+                std::cout << "offset " << i/2 << " in1: " << in1[i] << " + " << in1[i+1] << "j  in2: " << in2[i] << " + " << in2[i+1] << "j" << std::endl;
             }
         }
     }
@@ -256,7 +313,7 @@ public:
 private: std::list<std::vector<char> > _mems;
 };
 
-bool run_volk_tests(struct volk_func_desc desc,
+bool run_volk_tests(volk_func_desc_t desc,
                     void (*manual_func)(),
                     std::string name,
                     float tol,
@@ -264,14 +321,25 @@ bool run_volk_tests(struct volk_func_desc desc,
                     int vlen,
                     int iter,
                     std::vector<std::string> *best_arch_vector = 0,
-                    std::string puppet_master_name = "NULL"
+                    std::string puppet_master_name = "NULL",
+                    bool benchmark_mode
                    ) {
-    std::cout << "RUN_VOLK_TESTS: " << name << std::endl;
+    std::cout << "RUN_VOLK_TESTS: " << name << "(" << vlen << "," << iter << ")" << std::endl;
+
+    // The multiply and lv_force_cast_hf are work arounds for GNU Radio bugs 582 and 583
+    // The bug is the casting/assignment below do not happen, which results in false
+    // positives when testing for errors in fcompare and icompare.
+    // Since this only happens on armhf (reported for Cortex A9 and A15) combined with
+    // the following fixes it is suspected to be a compiler bug. 
+    // Bug 1272024 on launchpad has been filed with Linaro GCC.
+    const float tol_f = tol*1.0000001;
+    const unsigned int tol_i = static_cast<const unsigned int>(tol);
+    lv_force_cast_hf( tol_i, tol_f );
 
     //first let's get a list of available architectures for the test
     std::vector<std::string> arch_list = get_arch_list(desc);
 
-    if(arch_list.size() < 2) {
+    if((!benchmark_mode) && (arch_list.size() < 2)) {
         std::cout << "no architectures to test" << std::endl;
         return false;
     }
@@ -369,8 +437,8 @@ bool run_volk_tests(struct volk_func_desc desc,
         }
 
         end = clock();
-        double arch_time = (double)(end-start)/(double)CLOCKS_PER_SEC;
-        std::cout << arch_list[i] << " completed in " << arch_time << "s" << std::endl;
+        double arch_time = 1000.0 * (double)(end-start)/(double)CLOCKS_PER_SEC;
+        std::cout << arch_list[i] << " completed in " << arch_time << "ms" << std::endl;
 
         profile_times.push_back(arch_time);
     }
@@ -393,39 +461,48 @@ bool run_volk_tests(struct volk_func_desc desc,
             for(size_t j=0; j<both_sigs.size(); j++) {
                 if(both_sigs[j].is_float) {
                     if(both_sigs[j].size == 8) {
-                        fail = fcompare((double *) test_data[generic_offset][j], (double *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                        if (both_sigs[j].is_complex) {
+                            fail = ccompare((double *) test_data[generic_offset][j], (double *) test_data[i][j], vlen, tol_f);
+
+                        } else {
+                            fail = fcompare((double *) test_data[generic_offset][j], (double *) test_data[i][j], vlen, tol_f);
+                        }
                     } else {
-                        fail = fcompare((float *) test_data[generic_offset][j], (float *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                        if (both_sigs[j].is_complex) {
+                            fail = ccompare((float *) test_data[generic_offset][j], (float *) test_data[i][j], vlen, tol_f);
+                        } else {
+                            fail = fcompare((float *) test_data[generic_offset][j], (float *) test_data[i][j], vlen, tol_f);
+                        }
                     }
                 } else {
                     //i could replace this whole switch statement with a memcmp if i wasn't interested in printing the outputs where they differ
                     switch(both_sigs[j].size) {
                     case 8:
                         if(both_sigs[j].is_signed) {
-                            fail = icompare((int64_t *) test_data[generic_offset][j], (int64_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((int64_t *) test_data[generic_offset][j], (int64_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         } else {
-                            fail = icompare((uint64_t *) test_data[generic_offset][j], (uint64_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((uint64_t *) test_data[generic_offset][j], (uint64_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         }
                         break;
                     case 4:
                         if(both_sigs[j].is_signed) {
-                            fail = icompare((int32_t *) test_data[generic_offset][j], (int32_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((int32_t *) test_data[generic_offset][j], (int32_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         } else {
-                            fail = icompare((uint32_t *) test_data[generic_offset][j], (uint32_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((uint32_t *) test_data[generic_offset][j], (uint32_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         }
                         break;
                     case 2:
                         if(both_sigs[j].is_signed) {
-                            fail = icompare((int16_t *) test_data[generic_offset][j], (int16_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((int16_t *) test_data[generic_offset][j], (int16_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         } else {
-                            fail = icompare((uint16_t *) test_data[generic_offset][j], (uint16_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((uint16_t *) test_data[generic_offset][j], (uint16_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         }
                         break;
                     case 1:
                         if(both_sigs[j].is_signed) {
-                            fail = icompare((int8_t *) test_data[generic_offset][j], (int8_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((int8_t *) test_data[generic_offset][j], (int8_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         } else {
-                            fail = icompare((uint8_t *) test_data[generic_offset][j], (uint8_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol);
+                            fail = icompare((uint8_t *) test_data[generic_offset][j], (uint8_t *) test_data[i][j], vlen*(both_sigs[j].is_complex ? 2 : 1), tol_i);
                         }
                         break;
                     default:
@@ -442,22 +519,32 @@ bool run_volk_tests(struct volk_func_desc desc,
         arch_results.push_back(!fail);
     }
 
-    double best_time = std::numeric_limits<double>::max();
-    std::string best_arch = "generic";
-    for(size_t i=0; i < arch_list.size(); i++) {
-        if((profile_times[i] < best_time) && arch_results[i]) {
-            best_time = profile_times[i];
-            best_arch = arch_list[i];
+    double best_time_a = std::numeric_limits<double>::max();
+    double best_time_u = std::numeric_limits<double>::max();
+    std::string best_arch_a = "generic";
+    std::string best_arch_u = "generic";
+    for(size_t i=0; i < arch_list.size(); i++)
+    {
+        if((profile_times[i] < best_time_u) && arch_results[i] && desc.impl_alignment[i] == 0)
+        {
+            best_time_u = profile_times[i];
+            best_arch_u = arch_list[i];
+        }
+        if((profile_times[i] < best_time_a) && arch_results[i])
+        {
+            best_time_a = profile_times[i];
+            best_arch_a = arch_list[i];
         }
     }
 
-    std::cout << "Best arch: " << best_arch << std::endl;
+    std::cout << "Best aligned arch: " << best_arch_a << std::endl;
+    std::cout << "Best unaligned arch: " << best_arch_u << std::endl;
     if(best_arch_vector) {
         if(puppet_master_name == "NULL") {
-            best_arch_vector->push_back(name + std::string(" ") + best_arch);
+            best_arch_vector->push_back(name + " " + best_arch_a + " " + best_arch_u);
         }
         else {
-            best_arch_vector->push_back(puppet_master_name + std::string(" ") + best_arch);
+            best_arch_vector->push_back(puppet_master_name + " " + best_arch_a + " " + best_arch_u);
         }
     }
 
