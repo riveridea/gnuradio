@@ -28,7 +28,7 @@ class my_top_block(gr.top_block):
 
 
 		##################################################
-		# Connections
+		# Connections, for blocks
 		##################################################
 		self.connect((self.gr_file_source_0, 0), self.s2v)
 		self.connect(self.s2v, self.sampcov)
