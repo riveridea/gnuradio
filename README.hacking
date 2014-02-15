@@ -29,11 +29,6 @@ aren't done differently, etc, etc,
 Until boost 1.35 or later is common in distributions, you'll need to
 build boost from source yourself.  See README.building-boost.
 
-Also, when running make distcheck you'll need to provide the
-DISTCHECK_CONFIGURE_FLAGS.  E.g.,
-
-  $ make distcheck DISTCHECK_CONFIGURE_FLAGS=--with-boost=/opt/boost_1_36_0
-
 
 * C++ and Python
 
@@ -158,54 +153,14 @@ off the bit rot we've been plagued with.
 For C++ we're using the cppunit framework.  cppunit has its bad
 smells, but it's mostly workable.  http://cppunit.sf.net
 
-Currently each directory <dirname> contains files qa_<dirname>.{h,cc}
+Currently each directory <dirname>/lib contains files qa_<dirname>.{h,cc}
 that bring together all the qa_<foo> test suites in the directory.
-We ought to be able to automate this without too much trouble.
 
-The directory gnuradio-core/src/tests contains programs that run
-the tests.  test_all runs all of the registered C++ unit tests.
-
-As far as I can tell, the cppunit TestFactoryRegistry maybe able to be
-tricked into doing what we want.  As is, I don't think it's enough by
-itself, since there's nothing dragging the qa* files out of the
-library and into the program.   I haven't tested out this idea.
 
 ** Python unit tests
 
 We use the standard unittest package for unit testing of Python code.
 
-
-* Subversion line ending styles
-
-All text files in the tree should have the subversion property
-'svn:eol-style' set to 'native', with the following exceptions:
-
-config/*.m4
-configure.ac
-gr-howto-write-a-block/config/*.m4
-gr-howto-write-a-block/configure.ac
-
-The easiest way to ensure this is to add or edit the following lines in
-your svn client configuration file (~/.subversion/config):
-
-enable-auto-props=yes
-
-[auto-props]
-*.c = svn:eol-style=native
-*.cc = svn:eol-style=native
-*.i = svn:eol-style=native
-*.h = svn:eol-style=native
-*.am = svn:eol-style=native
-*.py = svn:eol-style=native
-*.ac = svn:eol-style=LF
-*.m4 = svn:eol-style=LF
-
-* Misc tips
-
-ccache, a compiler cache, can really speed up your builds.
-See http://ccache.samba.org/
-
-Be sure to create links for gcc and g++
 
 
 * Standard command line options

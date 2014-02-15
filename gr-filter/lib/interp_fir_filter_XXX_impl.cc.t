@@ -27,7 +27,7 @@
 #endif
 
 #include "@IMPL_NAME@.h"
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 #include <stdexcept>
 
@@ -44,14 +44,18 @@ namespace gr {
 
     @IMPL_NAME@::@IMPL_NAME@(unsigned interpolation,
 			     const std::vector<@TAP_TYPE@> &taps)
-    : gr_sync_interpolator("@BASE_NAME@",
-			   gr_make_io_signature(1, 1, sizeof(@I_TYPE@)),
-			   gr_make_io_signature(1, 1, sizeof(@O_TYPE@)),
+    : sync_interpolator("@BASE_NAME@",
+			   io_signature::make(1, 1, sizeof(@I_TYPE@)),
+			   io_signature::make(1, 1, sizeof(@O_TYPE@)),
 			   interpolation),
       d_updated(false), d_firs(interpolation)
     {
       if(interpolation == 0) {
 	throw std::out_of_range("@IMPL_NAME@: interpolation must be > 0\n");
+      }
+
+      if(taps.size() == 0) {
+	throw std::runtime_error("@IMPL_NAME@: no filter taps provided.\n");
       }
 
       std::vector<@TAP_TYPE@> dummy_taps;
@@ -82,7 +86,7 @@ namespace gr {
       if(n > 0) {
 	n = interpolation() - n;
 	while(n-- > 0) {
-	  d_new_taps.insert(d_new_taps.begin(), 0);
+	  d_new_taps.insert(d_new_taps.end(), 0);
 	}
       }
 

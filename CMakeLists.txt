@@ -40,7 +40,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
 
 # Set the version information here
 set(VERSION_INFO_MAJOR_VERSION 3)
-set(VERSION_INFO_API_COMPAT    6)
+set(VERSION_INFO_API_COMPAT    7)
 set(VERSION_INFO_MINOR_VERSION 3)
 set(VERSION_INFO_MAINT_VERSION git)
 include(GrVersion) #setup version info
@@ -48,6 +48,17 @@ include(GrVersion) #setup version info
 # Append -O2 optimization flag for Debug builds
 SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O2")
 SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O2")
+
+########################################################################
+# Environment setup
+########################################################################
+IF(NOT DEFINED BOOST_ROOT)
+    SET(BOOST_ROOT ${CMAKE_INSTALL_PREFIX})
+ENDIF()
+
+if(ENABLE_GR_CTRLPORT)
+  set(GR_CTRLPORT True)
+endif(ENABLE_GR_CTRLPORT)
 
 ########################################################################
 # Import executables from a native build (for cross compiling)
@@ -89,7 +100,27 @@ if(MSVC)
     )
     add_definitions(-DHAVE_CONFIG_H)
     add_definitions(/MP) #build with multiple processors
+    add_definitions(/bigobj) #allow for larger object files
 endif(MSVC)
+
+# Record Compiler Info for record
+STRING(TOUPPER ${CMAKE_BUILD_TYPE} GRCBTU)
+set(COMPILER_INFO "")
+execute_process(COMMAND ${CMAKE_C_COMPILER} --version
+        OUTPUT_VARIABLE cmake_c_compiler_version)
+execute_process(COMMAND ${CMAKE_CXX_COMPILER} --version
+        OUTPUT_VARIABLE cmake_cxx_compiler_version)
+set(COMPILER_INFO "${CMAKE_C_COMPILER}:::${CMAKE_C_FLAGS_${GRCBTU}} ${CMAKE_C_FLAGS}\n${CMAKE_CXX_COMPILER}:::${CMAKE_CXX_FLAGS_${GRCBTU}} ${CMAKE_CXX_FLAGS}\n" )
+
+# Convert to a C string to compile and display properly
+string(STRIP "${cmake_c_compiler_version}" cmake_c_compiler_version)
+string(STRIP "${cmake_cxx_compiler_version}" cmake_cxx_compiler_version)
+string(STRIP ${COMPILER_INFO} COMPILER_INFO)
+MESSAGE(STATUS "Compiler Version: ${cmake_c_compiler_version}")
+MESSAGE(STATUS "Compiler Flags: ${COMPILER_INFO}")
+string(REPLACE "\n" " \\n" cmake_c_compiler_version ${cmake_c_compiler_version})
+string(REPLACE "\n" " \\n" cmake_cxx_compiler_version ${cmake_cxx_compiler_version})
+string(REPLACE "\n" " \\n" COMPILER_INFO ${COMPILER_INFO})
 
 ########################################################################
 # Install directories
@@ -107,8 +138,26 @@ set(GR_PKG_CONF_DIR     ${GR_CONF_DIR}/${CMAKE_PROJECT_NAME}/conf.d)
 set(GR_LIBEXEC_DIR      libexec)
 set(GR_PKG_LIBEXEC_DIR  ${GR_LIBEXEC_DIR}/${CMAKE_PROJECT_NAME})
 set(GRC_BLOCKS_DIR      ${GR_PKG_DATA_DIR}/grc/blocks)
-set(SYSCONFDIR          "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}" CACHE PATH "System configuration directory")
+
+# Special exception if prefix is /usr so we don't make a /usr/etc.
+string(COMPARE EQUAL ${CMAKE_INSTALL_PREFIX} "/usr" isusr)
+if(isusr)
+  set(SYSCONFDIR          "/${GR_CONF_DIR}" CACHE PATH "System configuration directory")
+else(isusr)
+  set(SYSCONFDIR          "${CMAKE_INSTALL_PREFIX}/${GR_CONF_DIR}" CACHE PATH "System configuration directory" FORCE)
+endif(isusr)
+
 set(GR_PREFSDIR         ${SYSCONFDIR}/${CMAKE_PROJECT_NAME}/conf.d)
+
+OPTION(ENABLE_PERFORMANCE_COUNTERS "Enable block performance counters" OFF)
+if(ENABLE_PERFORMANCE_COUNTERS)
+  message(STATUS "ADDING PERF COUNTERS")
+  SET(GR_PERFORMANCE_COUNTERS True)
+  add_definitions(-DGR_PERFORMANCE_COUNTERS)
+else(ENABLE_PERFORMANCE_COUNTERS)
+  SET(GR_PERFORMANCE_COUNTERS False)
+  message(STATUS "NO PERF COUNTERS")
+endif(ENABLE_PERFORMANCE_COUNTERS)
 
 ########################################################################
 # Variables replaced when configuring the package config files
@@ -135,7 +184,7 @@ add_custom_target(uninstall
 ########################################################################
 # Enable python component
 ########################################################################
-find_package(PythonLibs)
+find_package(PythonLibs 2)
 find_package(SWIG)
 
 if(SWIG_FOUND)
@@ -211,6 +260,9 @@ CPACK_COMPONENT("volk_devel"
 add_subdirectory(volk)
 endif(ENABLE_VOLK)
 
+# Handle gr_log enable/disable
+GR_LOGGING()
+
 ########################################################################
 # Distribute the README file
 ########################################################################
@@ -220,35 +272,79 @@ install(
     COMPONENT "docs"
 )
 
+########################################################################
+# The following dependency libraries are needed by all gr modules:
+########################################################################
+list(APPEND GR_TEST_TARGET_DEPS volk gnuradio-runtime)
+list(APPEND GR_TEST_PYTHON_DIRS
+    ${CMAKE_BINARY_DIR}/gnuradio-runtime/python
+    ${CMAKE_SOURCE_DIR}/gnuradio-runtime/python
+    ${CMAKE_BINARY_DIR}/gnuradio-runtime/swig
+)
+
+# Note that above we put the binary gnuradio-runtime/python directory
+# before the source directory. This is due to a quirk with ControlPort
+# and how slice generates files and names. We want the QA and
+# installed code to import the same names, so we have to grab from the
+# binary directory first.
 
 ########################################################################
 # Add subdirectories (in order of deps)
 ########################################################################
 add_subdirectory(docs)
-add_subdirectory(gruel)
-add_subdirectory(gnuradio-core)
+add_subdirectory(gnuradio-runtime)
+add_subdirectory(gr-blocks)
 add_subdirectory(grc)
-
+add_subdirectory(gr-fec)
 add_subdirectory(gr-fft)
 add_subdirectory(gr-filter)
+add_subdirectory(gr-analog)
+add_subdirectory(gr-digital)
 add_subdirectory(gr-atsc)
 add_subdirectory(gr-audio)
 add_subdirectory(gr-comedi)
-add_subdirectory(gr-analog)
-add_subdirectory(gr-digital)
+add_subdirectory(gr-channels)
 add_subdirectory(gr-noaa)
 add_subdirectory(gr-pager)
 add_subdirectory(gr-qtgui)
 add_subdirectory(gr-trellis)
 add_subdirectory(gr-uhd)
-add_subdirectory(gr-shd)
 add_subdirectory(gr-utils)
 add_subdirectory(gr-video-sdl)
 add_subdirectory(gr-vocoder)
 add_subdirectory(gr-fcd)
 add_subdirectory(gr-wavelet)
 add_subdirectory(gr-wxgui)
-add_subdirectory(gr-blocks)
+
+# Install our Cmake modules into $prefix/lib/cmake/gnuradio
+# See "Package Configuration Files" on page:
+#    http://www.cmake.org/Wiki/CMake/Tutorials/Packaging
+
+configure_file(
+  ${CMAKE_SOURCE_DIR}/cmake/Modules/GnuradioConfigVersion.cmake.in
+  ${CMAKE_BINARY_DIR}/cmake/Modules/GnuradioConfigVersion.cmake
+@ONLY)
+
+SET(cmake_configs 
+  ${CMAKE_SOURCE_DIR}/cmake/Modules/GnuradioConfig.cmake
+  ${CMAKE_BINARY_DIR}/cmake/Modules/GnuradioConfigVersion.cmake
+)
+
+if(NOT CMAKE_MODULES_DIR)
+   set(CMAKE_MODULES_DIR lib${LIB_SUFFIX}/cmake/gnuradio)
+endif(NOT CMAKE_MODULES_DIR)
+
+# Install all other cmake files into same directory
+file(GLOB cmake_others "cmake/Modules/*.cmake")
+list(REMOVE_ITEM cmake_others
+    "${CMAKE_SOURCE_DIR}/cmake/Modules/FindGnuradio.cmake"
+)
+
+install(
+  FILES ${cmake_configs} ${cmake_others}
+  DESTINATION ${CMAKE_MODULES_DIR}
+  COMPONENT "runtime_devel"
+)
 
 #finalize cpack after subdirs processed
 include(GrPackage)
@@ -260,3 +356,17 @@ CPACK_FINALIZE()
 GR_PRINT_COMPONENT_SUMMARY()
 message(STATUS "Using install prefix: ${CMAKE_INSTALL_PREFIX}")
 message(STATUS "Building for version: ${VERSION} / ${LIBVER}")
+
+# Create a config.h with some definitions to export to other projects.
+CONFIGURE_FILE(
+  ${CMAKE_CURRENT_SOURCE_DIR}/config.h.in
+  ${CMAKE_CURRENT_BINARY_DIR}/config.h
+)
+
+# Install config.h in include/gnuradio
+install(
+    FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/config.h
+    DESTINATION ${GR_INCLUDE_DIR}/gnuradio
+    COMPONENT "runtime_devel"
+)

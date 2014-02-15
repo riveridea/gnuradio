@@ -44,7 +44,7 @@ struct VOLK_CPU volk_cpu;
      * This function will bomb on non-AVX-capable machines, so
      * check for AVX capability before executing.
      */
-    #if __GNUC__ > 4 || __GNUC__ == 4 && __GNUC_MINOR__ >= 4
+    #if ((__GNUC__ > 4 || __GNUC__ == 4 && __GNUC_MINOR__ >= 2) || (__clang_major__ >= 3)) && defined(HAVE_XGETBV)
     static inline unsigned long long _xgetbv(unsigned int index){
         unsigned int eax, edx;
         __asm__ __volatile__("xgetbv" : "=a"(eax), "=d"(edx) : "c"(index));
@@ -116,10 +116,11 @@ static int has_neon(void){
     auxvec_f = fopen("/proc/self/auxv", "rb");
     if(!auxvec_f) return 0;
 
+    size_t r = 1;
     //so auxv is basically 32b of ID and 32b of value
     //so it goes like this
-    while(!found_neon && auxvec_f) {
-      fread(auxvec, sizeof(unsigned long), 2, auxvec_f);
+    while(!found_neon && r) {
+      r = fread(auxvec, sizeof(unsigned long), 2, auxvec_f);
       if((auxvec[0] == AT_HWCAP) && (auxvec[1] & HWCAP_NEON))
         found_neon = 1;
     }
@@ -150,10 +151,16 @@ static int i_can_has_$arch.name (void) {
 #end for
 
 #if defined(HAVE_FENV_H)
-    #include <fenv.h>
-    static inline void set_float_rounding(void){
-        fesetround(FE_TONEAREST);
-    }
+    #if defined(FE_TONEAREST)
+        #include <fenv.h>
+        static inline void set_float_rounding(void){
+            fesetround(FE_TONEAREST);
+        }
+    #else
+        static inline void set_float_rounding(void){
+            //do nothing
+        }
+    #endif
 #elif defined(_MSC_VER)
     #include <float.h>
     static inline void set_float_rounding(void){

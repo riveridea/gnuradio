@@ -7,7 +7,9 @@
 <block>
 	<name>Pad Source</name>
 	<key>pad_source</key>
-	<make></make>
+    <make>#if str($type) == "message"
+None;self.message_port_register_hier_out($label)
+#end if</make>
 	<param>
 		<name>Label</name>
 		<key>label</key>
@@ -44,6 +46,11 @@
 			<opt>size:gr.sizeof_char</opt>
 		</option>
 		<option>
+			<name>Message</name>
+			<key>message</key>
+			<opt>size:0</opt>
+		</option>
+		<option>
 			<name>Wildcard</name>
 			<key></key>
 			<opt>size:0</opt>
@@ -55,6 +62,14 @@
 		<value>1</value>
 		<type>int</type>
 	</param>
+	
+	<param>
+		<name>Num Streams</name>
+		<key>num_streams</key>
+		<value>1</value>
+		<type>int</type>
+	</param>
+
 	<param>
 		<name>Optional</name>
 		<key>optional</key>
@@ -71,10 +86,12 @@
 		</option>
 	</param>
 	<check>$vlen &gt; 0</check>
+	<check>$num_streams &gt; 0</check>
 	<source>
 		<name>out</name>
 		<type>$type</type>
 		<vlen>$vlen</vlen>
+		<nports>$num_streams</nports>
 	</source>
 	<doc>
 The outputs of this block will become the inputs to this flow graph when it is instantiated as a hierarchical block.

@@ -107,14 +107,53 @@ common_block_members =[
     'to_basic_block',
     'unique_id',
     'make',
-    ]
+    'alias', 
+    'is_set_max_noutput_items', 
+    'max_noutput_items', 
+    'max_output_buffer', 
+    'message_ports_in', 
+    'message_ports_out', 
+    'min_output_buffer', 
+    'pc_input_buffers_full', 
+    'pc_input_buffers_full_var', 
+    'pc_noutput_items', 
+    'pc_noutput_items_var', 
+    'pc_nproduced', 
+    'pc_nproduced_var', 
+    'pc_output_buffers_full', 
+    'pc_output_buffers_full_var', 
+    'pc_work_time', 
+    'pc_work_time_var', 
+    'processor_affinity', 
+    'set_block_alias', 
+    'set_max_noutput_items', 
+    'unset_max_noutput_items', 
+    'set_max_output_buffer', 
+    'set_min_output_buffer', 
+    'set_processor_affinity', 
+    'symbol_name', 
+    'unset_processor_affinity',
+    'disconnect_all',
+    'index',
+    'length',
+    'lock',
+    'primitive_connect',
+    'primitive_disconnect',
+    'primitive_message_port_register_hier_in',
+    'primitive_message_port_register_hier_out',
+    'primitive_msg_connect',
+    'primitive_msg_disconnect',
+    'to_hier_block2',
+    'type',
+    'unlock',
+]
 
 class OldBlockDocumenter(FunctionDocumenter):
     """
     Specialized Documenter subclass for gnuradio blocks.
 
-    It merges together the documentation for the generator function (e.g. gr.head)
-    with the wrapped sptr (e.g. gr.gr_head_sptr) to keep the documentation
+    It merges together the documentation for the generator function (e.g. blocks.head)
+    with the wrapped sptr (e.g. gr::blocks::head::sptr) to keep the documentation
     tidier.
     """
     objtype = 'oldblock'

@@ -36,6 +36,10 @@
 #define VERBOSE_MM     0     // Used for debugging symbol timing loop
 #define VERBOSE_COSTAS 0     // Used for debugging phase and frequency tracking
 
+const int size_pre = 64;
+const int known_pre[size_pre] = {1, -1, 1, -1, -1, 1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1};
+
+
 // Public constructor
 
 digital_constellation_receiver_cb_sptr 
@@ -63,7 +67,7 @@ digital_constellation_receiver_cb::digital_constellation_receiver_cb (digital_co
 }
 
 void
-digital_constellation_receiver_cb::phase_error_tracking(float phase_error)
+digital_constellation_receiver_cb::phase_error_tracking(float phase_error, const gr_complex& sample)
 {
   advance_loop(phase_error);
   phase_wrap();
@@ -107,7 +111,27 @@ digital_constellation_receiver_cb::general_work (int noutput_items,
     sample = nco*sample;      // get the downconverted symbol
 
     sym_value = d_constellation->decision_maker_pe(&sample, &phase_error);
-    phase_error_tracking(phase_error);  // corrects phase and frequency offsets
+    //remove the phase ambiguity for bpsk
+    //ugly code to handle bpsk, need to refactor
+/*
+    int signed_sym;
+    if(d_constellation->points() == 2){
+      signed_sym = (sym_value == 1)?1:-1; 
+      d_dl_vector.push_back(signed_sym);
+      if(d_dl_vector.size() == 9){
+        d_dl_vector.erase(d_dl_vector.begin());
+      }
+      if(d_dl_vector.size() == 8){
+        //correlate the know preamble
+        int m, sum = 0;
+        for(m = 0; m < size_pre; m++){
+          sum += d_dl_vector[m]*known_pre[m];
+        }
+      }
+    }
+*/
+
+    phase_error_tracking(phase_error, sample);  // corrects phase and frequency offsets
 
     out[i] = sym_value;
 

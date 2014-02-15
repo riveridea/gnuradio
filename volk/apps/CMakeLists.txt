@@ -1,5 +1,5 @@
 #
-# Copyright 2011-2012 Free Software Foundation, Inc.
+# Copyright 2011-2013 Free Software Foundation, Inc.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,23 +18,23 @@
 ########################################################################
 # Setup profiler
 ########################################################################
-find_package(Boost)
-
-if(Boost_FOUND AND UNIX) #uses mkdir and $HOME
+if(Boost_FOUND)
 
 if(MSVC)
-    include_directories(${CMAKE_SOURCE_DIR}/msvc)
+    include_directories(${CMAKE_SOURCE_DIR}/cmake/msvc)
 endif(MSVC)
 
 include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_BINARY_DIR}/include
     ${CMAKE_SOURCE_DIR}/lib
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_BINARY_DIR}/lib
     ${Boost_INCLUDE_DIRS}
 )
 
+# MAKE volk_profile
 add_executable(volk_profile
     ${CMAKE_CURRENT_SOURCE_DIR}/volk_profile.cc
     ${CMAKE_SOURCE_DIR}/lib/qa_utils.cc
@@ -48,4 +48,14 @@ install(
     COMPONENT "volk"
 )
 
-endif(Boost_FOUND AND UNIX)
+# MAKE volk-config-info
+add_executable(volk-config-info volk-config-info.cc)
+target_link_libraries(volk-config-info volk ${Boost_LIBRARIES})
+
+install(
+    TARGETS volk-config-info
+    DESTINATION bin
+    COMPONENT "volk"
+)
+
+endif(Boost_FOUND)

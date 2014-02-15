@@ -25,7 +25,7 @@
 #endif
 
 #include "add_ff_impl.h"
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 
 namespace gr {
@@ -37,9 +37,9 @@ namespace gr {
     }
 
     add_ff_impl::add_ff_impl(size_t vlen)
-      : gr_sync_block("add_ff",
-		      gr_make_io_signature (1, -1, sizeof(float)*vlen),
-		      gr_make_io_signature (1,  1, sizeof(float)*vlen)),
+      : sync_block("add_ff",
+		      io_signature::make (1, -1, sizeof(float)*vlen),
+		      io_signature::make (1,  1, sizeof(float)*vlen)),
 	d_vlen(vlen)
     {
       const int alignment_multiple =
@@ -56,14 +56,8 @@ namespace gr {
       int noi = d_vlen*noutput_items;
       
       memcpy(out, input_items[0], noi*sizeof(float));
-      if(is_unaligned()) {
-	for(size_t i = 1; i < input_items.size(); i++)
-	  volk_32f_x2_add_32f_u(out, out, (const float*)input_items[i], noi);
-      }
-      else {
-	for(size_t i = 1; i < input_items.size(); i++)
-	  volk_32f_x2_add_32f_a(out, out, (const float*)input_items[i], noi);
-      }
+      for(size_t i = 1; i < input_items.size(); i++)
+        volk_32f_x2_add_32f(out, out, (const float*)input_items[i], noi);
       return noutput_items;
     }
 

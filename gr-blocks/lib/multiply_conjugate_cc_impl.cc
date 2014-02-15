@@ -25,7 +25,7 @@
 #endif
 
 #include <multiply_conjugate_cc_impl.h>
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 
 namespace gr {
@@ -37,9 +37,9 @@ namespace gr {
     }
 
     multiply_conjugate_cc_impl::multiply_conjugate_cc_impl(size_t vlen)
-      : gr_sync_block("multiply_conjugate_cc",
-		      gr_make_io_signature (2, 2, sizeof(gr_complex)*vlen),
-		      gr_make_io_signature (1, 1, sizeof(gr_complex)*vlen)),
+      : sync_block("multiply_conjugate_cc",
+		      io_signature::make (2, 2, sizeof(gr_complex)*vlen),
+		      io_signature::make (1, 1, sizeof(gr_complex)*vlen)),
 	d_vlen(vlen)
     {
       const int alignment_multiple =
@@ -57,12 +57,7 @@ namespace gr {
       gr_complex *out = (gr_complex *) output_items[0];
       int noi = d_vlen*noutput_items;
       
-      if(is_unaligned()) {
-	volk_32fc_x2_multiply_conjugate_32fc_u(out, in0, in1, noi);
-      }
-      else {
-	volk_32fc_x2_multiply_conjugate_32fc_a(out, in0, in1, noi);
-      }
+      volk_32fc_x2_multiply_conjugate_32fc(out, in0, in1, noi);
       
       return noutput_items;
     }

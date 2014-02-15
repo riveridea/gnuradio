@@ -28,6 +28,7 @@
 #include <gr_io_signature.h>
 #include <gr_expj.h>
 #include <cstdio>
+#include <cstring>
 
 #define M_TWOPI (2*M_PI)
 
@@ -79,10 +80,47 @@ digital_fll_band_edge_cc::digital_fll_band_edge_cc(float samps_per_sym, float ro
   // Build the band edge filters
   design_filter(d_sps, d_rolloff, d_filter_size);
   d_output_hist.resize(filter_size,0);
+
+  // File to save the loop traking data
+  char *p=getenv("USER");
+  char hpath[80];
+  std::strcpy(hpath, "/home/");
+  std::strcat(hpath, p);
+  char fn_error[80], fn_dphase[80], fn_dfreq[80];
+  std::strcpy(fn_error, hpath);
+  std::strcat(fn_error, "/error.dat");
+  std::cout << "fn_error filename" << fn_error << std::endl;
+  std::strcpy(fn_dphase, hpath);
+  std::strcat(fn_dphase, "/dphase.dat");
+  std::cout << "fn_dphase filename" << fn_dphase << std::endl;
+  std::strcpy(fn_dfreq, hpath);
+  std::strcat(fn_dfreq, "/dfreq.dat");
+  std::cout << "fn_dfreq filename" << fn_dfreq << std::endl;
+  d_fp_error = fopen("error.dat", "wb");
+  d_fp_dphase = fopen("dphase.dat", "wb");
+  d_fp_dfreq = fopen("dfreq.dat", "wb");
+  if((d_fp_error == NULL) || (d_fp_dphase == NULL) || (d_fp_dfreq == NULL)){
+    throw std::runtime_error("can not create files for the loop tracking data");	
+  }
+
+  //d_freq = 0.008;
+  r_start = false;
 }
 
 digital_fll_band_edge_cc::~digital_fll_band_edge_cc()
 {
+  if(d_fp_error){
+    std::fclose(d_fp_error);
+    d_fp_error = NULL;
+  }
+  if(d_fp_dphase){
+    std::fclose(d_fp_dphase);
+    d_fp_dphase = NULL;
+  }
+  if(d_fp_dfreq){
+    std::fclose(d_fp_dfreq);
+    d_fp_dfreq = NULL;
+  }
 }
 
 
@@ -250,10 +288,18 @@ digital_fll_band_edge_cc::work(int noutput_items,
     out_lower = d_filter_upper->filter(&d_fllbuffer[i]);
     
     error = norm(out_lower) - norm(out_upper);
+    if(d_fp_error) std::fwrite(&error, sizeof(float), 1, d_fp_error);
+    if(d_fp_dfreq) std::fwrite(&d_freq, sizeof(float), 1, d_fp_dfreq);
+    if(d_fp_dphase) std::fwrite(&d_phase, sizeof(float), 1, d_fp_dphase);
 
-    advance_loop(error);
-    phase_wrap();
-    frequency_limit();
+    //if(norm(in[i]) > 0.15 && !r_start)
+    //r_start = true;
+    
+    //if(r_start){
+      advance_loop(error);
+      phase_wrap();
+      frequency_limit();
+    //}
 
     if(output_items.size() == 4) {
       frq[i] = d_freq;

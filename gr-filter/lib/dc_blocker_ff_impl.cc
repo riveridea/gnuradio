@@ -25,7 +25,7 @@
 #endif
 
 #include "dc_blocker_ff_impl.h"
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <cstdio>
 
 namespace gr {
@@ -62,9 +62,9 @@ namespace gr {
     }
 
     dc_blocker_ff_impl::dc_blocker_ff_impl(int D, bool long_form)
-      : gr_sync_block("dc_blocker_ff",
-		      gr_make_io_signature (1, 1, sizeof(float)),
-		      gr_make_io_signature (1, 1, sizeof(float))),
+      : sync_block("dc_blocker_ff",
+		      io_signature::make (1, 1, sizeof(float)),
+		      io_signature::make (1, 1, sizeof(float))),
 	d_length(D), d_long_form(long_form)
     {
       if(d_long_form) {
@@ -77,6 +77,8 @@ namespace gr {
       else {
 	d_ma_0 = new moving_averager_f(D);
 	d_ma_1 = new moving_averager_f(D);
+        d_ma_2 = NULL;
+        d_ma_3 = NULL;
       }
     }
 

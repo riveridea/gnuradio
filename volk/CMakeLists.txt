@@ -38,12 +38,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake) #location for custom "M
 # Environment setup
 ########################################################################
 IF(NOT DEFINED BOOST_ROOT)
-    SET(BOOST_ROOT "")
+    SET(BOOST_ROOT ${CMAKE_INSTALL_PREFIX})
 ENDIF()
-SET(BOOST_ROOT ${BOOST_ROOT} CACHE STRING "Modify search path for Boost components")
-
-#after caching user-defined value, make sure to add the install prefix
-SET(BOOST_ROOT ${BOOST_ROOT}:${CMAKE_INSTALL_PREFIX})
 
 IF(NOT DEFINED CROSSCOMPILE_MULTILIB)
     SET(CROSSCOMPILE_MULTILIB "")
@@ -55,8 +51,8 @@ SET(CROSSCOMPILE_MULTILIB ${CROSSCOMPILE_MULTILIB} CACHE STRING "Define \"true\"
 # Dependencies setup
 ########################################################################
 include(GrPython) #sets PYTHON_EXECUTABLE and PYTHON_DASH_B
-GR_PYTHON_CHECK_MODULE("python >= 2.5"     sys          "sys.version.split()[0] >= '2.5'"           PYTHON_MIN_VER_FOUND)
-GR_PYTHON_CHECK_MODULE("Cheetah >= 2.0.0"  Cheetah      "Cheetah.Version >= '2.0.0'"                CHEETAH_FOUND)
+VOLK_PYTHON_CHECK_MODULE("python >= 2.5" sys "sys.version.split()[0] >= '2.5'" PYTHON_MIN_VER_FOUND)
+VOLK_PYTHON_CHECK_MODULE("Cheetah >= 2.0.0" Cheetah "Cheetah.Version >= '2.0.0'" CHEETAH_FOUND)
 
 if(NOT PYTHON_MIN_VER_FOUND)
     message(FATAL_ERROR "Python 2.5 or greater required to build VOLK")
@@ -66,16 +62,22 @@ if(NOT CHEETAH_FOUND)
     message(FATAL_ERROR "Cheetah templates required to build VOLK")
 endif()
 
-set(Boost_ADDITIONAL_VERSIONS
-    "1.35.0" "1.35" "1.36.0" "1.36" "1.37.0" "1.37" "1.38.0" "1.38" "1.39.0" "1.39"
-    "1.40.0" "1.40" "1.41.0" "1.41" "1.42.0" "1.42" "1.43.0" "1.43" "1.44.0" "1.44"
-    "1.45.0" "1.45" "1.46.0" "1.46" "1.47.0" "1.47" "1.48.0" "1.48" "1.49.0" "1.49"
-    "1.50.0" "1.50" "1.51.0" "1.51" "1.52.0" "1.52" "1.53.0" "1.53" "1.54.0" "1.54"
-    "1.55.0" "1.55" "1.56.0" "1.56" "1.57.0" "1.57" "1.58.0" "1.58" "1.59.0" "1.59"
-    "1.60.0" "1.60" "1.61.0" "1.61" "1.62.0" "1.62" "1.63.0" "1.63" "1.64.0" "1.64"
-    "1.65.0" "1.65" "1.66.0" "1.66" "1.67.0" "1.67" "1.68.0" "1.68" "1.69.0" "1.69"
-)
-find_package(Boost COMPONENTS unit_test_framework)
+if(MSVC)
+    if (NOT DEFINED BOOST_ALL_DYN_LINK)
+        set(BOOST_ALL_DYN_LINK TRUE)
+    endif()
+    set(BOOST_ALL_DYN_LINK "${BOOST_ALL_DYN_LINK}" CACHE BOOL "boost enable dynamic linking")
+    if(BOOST_ALL_DYN_LINK)
+        add_definitions(-DBOOST_ALL_DYN_LINK) #setup boost auto-linking in msvc
+    else(BOOST_ALL_DYN_LINK)
+        unset(BOOST_REQUIRED_COMPONENTS) #empty components list for static link
+    endif(BOOST_ALL_DYN_LINK)
+endif(MSVC)
+include(GrBoost)
+
+if(NOT Boost_FOUND)
+    message(FATAL_ERROR "VOLK Requires boost to build")
+endif()
 
 find_package(ORC)
 
@@ -102,18 +104,35 @@ install(
 ########################################################################
 # Install all headers in the include directories
 ########################################################################
+set(VOLK_RUNTIME_DIR   bin)
+set(VOLK_LIBRARY_DIR   lib${LIB_SUFFIX})
+set(VOLK_INCLUDE_DIR   include)
+
 install(
-    DIRECTORY ${CMAKE_SOURCE_DIR}/include/volk
+    DIRECTORY ${CMAKE_SOURCE_DIR}/kernels/volk
     DESTINATION include COMPONENT "volk_devel"
     FILES_MATCHING PATTERN "*.h"
 )
 
 install(FILES
+    ${CMAKE_SOURCE_DIR}/include/volk/volk_prefs.h
+    ${CMAKE_SOURCE_DIR}/include/volk/volk_complex.h
+    ${CMAKE_SOURCE_DIR}/include/volk/volk_common.h
     ${CMAKE_BINARY_DIR}/include/volk/volk.h
     ${CMAKE_BINARY_DIR}/include/volk/volk_cpu.h
     ${CMAKE_BINARY_DIR}/include/volk/volk_config_fixed.h
     ${CMAKE_BINARY_DIR}/include/volk/volk_typedefs.h
+    ${CMAKE_SOURCE_DIR}/include/volk/volk_malloc.h
     DESTINATION include/volk
+    COMPONENT "volk_devel"
+)
+
+########################################################################
+# Install cmake search routine for external use
+########################################################################
+install(
+    FILES ${CMAKE_CURRENT_SOURCE_DIR}/cmake/VolkConfig.cmake
+    DESTINATION lib${LIB_SUFFIX}/cmake/volk/
     COMPONENT "volk_devel"
 )
 
@@ -126,6 +145,7 @@ add_subdirectory(lib)
 # And the utility apps
 ########################################################################
 add_subdirectory(apps)
+add_subdirectory(python/volk_modtool)
 
 ########################################################################
 # Print summary

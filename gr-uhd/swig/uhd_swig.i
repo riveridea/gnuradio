@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /*
- * Copyright 2010-2012 Free Software Foundation, Inc.
+ * Copyright 2010-2013 Free Software Foundation, Inc.
  *
  * This file is part of GNU Radio
  *
@@ -32,6 +32,8 @@
 ////////////////////////////////////////////////////////////////////////
 // standard includes
 ////////////////////////////////////////////////////////////////////////
+
+%include <std_vector.i>
 %include "gnuradio.i"
 
 //load generated python docstrings
@@ -41,18 +43,25 @@
 // block headers
 ////////////////////////////////////////////////////////////////////////
 %{
+<<<<<<< HEAD
 #include <gr_uhd_usrp_source.h>
 #include <gr_uhd_usrp_sink.h>
 #include <gr_uhd_amsg_source.h>
 #include <gr_uhd_pulse_source.h>
+=======
+#include <gnuradio/uhd/usrp_source.h>
+#include <gnuradio/uhd/usrp_sink.h>
+#include <gnuradio/uhd/amsg_source.h>
+>>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 %}
 
 ////////////////////////////////////////////////////////////////////////
 // used types
 ////////////////////////////////////////////////////////////////////////
-%template(string_vector_t) std::vector<std::string>;
 
-%template(size_vector_t) std::vector<size_t>;
+%template(uhd_string_vector_t) std::vector<std::string>;
+
+%template(uhd_size_vector_t) std::vector<size_t>;
 
 %include <uhd/config.hpp>
 
@@ -61,6 +70,11 @@
 %ignore uhd::dict::operator[]; //ignore warnings about %extend
 %include <uhd/types/dict.hpp>
 %template(string_string_dict_t) uhd::dict<std::string, std::string>; //define after dict
+
+%extend uhd::dict<std::string, std::string>{
+    std::string __getitem__(std::string key) {return (*self)[key];}
+    void __setitem__(std::string key, std::string val) {(*self)[key] = val;}
+};
 
 %include <uhd/types/device_addr.hpp>
 
@@ -87,12 +101,13 @@
 
 %include <uhd/types/sensors.hpp>
 
+%include <uhd/stream.hpp>
+
 ////////////////////////////////////////////////////////////////////////
 // swig dboard_iface for python access
 ////////////////////////////////////////////////////////////////////////
 %include stdint.i
 %include <uhd/types/serial.hpp>
-%template(byte_vector_t) std::vector<uint8_t>;
 %include <uhd/usrp/dboard_iface.hpp>
 
 %template(dboard_iface_sptr) boost::shared_ptr<uhd::usrp::dboard_iface>;
@@ -100,14 +115,13 @@
 ////////////////////////////////////////////////////////////////////////
 // block magic
 ////////////////////////////////////////////////////////////////////////
-GR_SWIG_BLOCK_MAGIC(uhd,usrp_source)
-%include <gr_uhd_usrp_source.h>
+%include <gnuradio/uhd/usrp_source.h>
+%include <gnuradio/uhd/usrp_sink.h>
+%include <gnuradio/uhd/amsg_source.h>
 
-GR_SWIG_BLOCK_MAGIC(uhd,usrp_sink)
-%include <gr_uhd_usrp_sink.h>
-
-GR_SWIG_BLOCK_MAGIC(uhd,amsg_source)
-%include <gr_uhd_amsg_source.h>
+GR_SWIG_BLOCK_MAGIC2(uhd, usrp_source)
+GR_SWIG_BLOCK_MAGIC2(uhd, usrp_sink)
+GR_SWIG_BLOCK_MAGIC2(uhd, amsg_source)
 
 GR_SWIG_BLOCK_MAGIC(uhd,pulse_source)
 %include <gr_uhd_pulse_source.h>

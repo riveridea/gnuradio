@@ -28,6 +28,8 @@ from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
 
+import time, threading
+import struct
 import sys
 
 # streaming(0) or finite acqusition(1)
@@ -61,13 +63,13 @@ class uhd_interface:
             self.u.set_subdev_spec(spec, 0)
 
         # Set the antenna
-        #if(antenna):
-        if(istx):
-            print 'set the antenna to TX/RX'
-            self.u.set_antenna('TX/RX', 0)
-        else:
-            print 'set the antenna to RX2'
-            self.u.set_antenna('TX/RX', 0)
+        if(antenna is None):
+            if(istx):
+                print 'set the antenna to TX/RX'
+                self.u.set_antenna('TX/RX', 0)
+            else:
+                print 'set the antenna to RX2'
+                self.u.set_antenna('RX2', 0)
         
         #self._args = args
         self._addr = addr
@@ -77,6 +79,17 @@ class uhd_interface:
         self._freq = self.set_freq(freq)
 
         self._rate, self._sps = self.set_sample_rate(sym_rate, sps, samp_rate)
+        
+        #setup the USRP time monitor
+        #the corresponding thread would monitor the USRP time and the
+        #PC time, then put the latest time to the messge queue 
+        #Users of the message can get the latest time difference between
+        #PC time and USRP time
+        if(istx):
+            self.tdiff_register = gr.msg_queue()
+            self.update_time_diff()
+        #the thread to monitor the PC time and the USRP time periodically
+            
 
     def set_sample_rate(self, sym_rate, req_sps, direct_rate=None):
         start_sps = req_sps
@@ -136,13 +149,32 @@ class uhd_interface:
                                  (freq, frange.start(), frange.stop()))
             sys.exit(1)
 
+    def update_time_diff(self):
+        msg = self.generate_time_diff()
+        while (not self.tdiff_register.empty_p()):
+            self.tdiff_register.delete_head_nowait()
+            continue
+        self.tdiff_register.insert_tail(msg)
+        threading.Timer(10, self.update_time_diff).start()           
+     
+    def generate_time_diff(self):
+        pc_time = time.time()
+        usrp_time = self.u.get_time_now().get_real_secs()
+        tdiff = pc_time - usrp_time
+        print tdiff
+        time_diff = struct.pack('!d', tdiff)
+        
+        msg = gr.message_from_string(time_diff)
+        
+        return msg
+        
 #-------------------------------------------------------------------#
 #   TRANSMITTER
 #-------------------------------------------------------------------#
 
 class uhd_transmitter(uhd_interface, gr.hier_block2):
     def __init__(self, addr, sym_rate, sps, frate=None, freq=None, gain=None,
-                 spec=None, antenna=None, verbose=False):
+                 spec=None, antenna=None, verbose=False, tdma=False):
         gr.hier_block2.__init__(self, "uhd_transmitter",
                                 gr.io_signature(1,1,gr.sizeof_gr_complex),
                                 gr.io_signature(0,0,0))
@@ -151,13 +183,19 @@ class uhd_transmitter(uhd_interface, gr.hier_block2):
         uhd_interface.__init__(self, True, addr, sym_rate, sps, frate,
                                freq, gain, spec, antenna)
 
-        self.connect(self, self.u)
+        if(not tdma): # add the tdma throttle before the uhd_sink
+            self.connect(self, self.u)
 
         if(verbose):
             self._print_verbage()
-            
+
+    def insert_tdma_throttle(self, pulse_src):
+        self.connect(self, pulse_src, self.u)
+        
     def add_options(parser):
         add_freq_option(parser)
+        parser.add_option("-a", "--args", type="string", default="",
+                          help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-addr", type="string", default="",
                           help="UHD device address args [default=%default]")
         parser.add_option("", "--tx-spec", type="string", default=None,

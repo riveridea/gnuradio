@@ -25,6 +25,7 @@ MAIN_TMPL = """\
 	<key>uhd_usrp_$(sourk)</key>
 	<throttle>1</throttle>
 	<import>from gnuradio import uhd</import>
+	<import>import time</import>
 	<make>uhd.usrp_$(sourk)(
 	device_addr=\$dev_addr,
 	stream_args=uhd.stream_args(
@@ -35,7 +36,11 @@ MAIN_TMPL = """\
 		\#if \$stream_args()
 		args=\$stream_args,
 		\#end if
+		\#if \$stream_chans()
+		channels=\$stream_chans,
+		\#else
 		channels=range(\$nchan),
+		\#end if
 	),
 )
 \#if \$clock_rate()
@@ -56,8 +61,10 @@ self.\$(id).set_subdev_spec(\$sd_spec$(m), $m)
 \#end if
 ########################################################################
 #end for
-\#if \$sync()
+\#if \$sync() == 'sync'
 self.\$(id).set_time_unknown_pps(uhd.time_spec())
+\#elif \$sync() == 'pc_clock'
+self.\$(id).set_time_now(uhd.time_spec(time.time()), uhd.ALL_MBOARDS)
 \#end if
 self.\$(id).set_samp_rate(\$samp_rate)
 #for $n in range($max_nchan)
@@ -138,9 +145,22 @@ self.\$(id).set_bandwidth(\$bw$(n), $n)
 			\#end if
 		</hide>
 		<option>
-			<name>scalar=1024</name>
-			<key>scalar=1024</key>
+			<name>peak=0.003906</name>
+			<key>peak=0.003906</key>
 		</option>
+	</param>
+	<param>
+		<name>Stream channels</name>
+		<key>stream_chans</key>
+		<value>[]</value>
+		<type>int_vector</type>
+		<hide>
+			\#if \$stream_chans()
+				none
+			\#else
+				part
+			\#end if
+		</hide>
 	</param>
 	<param>
 		<name>Device Addr</name>
@@ -164,6 +184,10 @@ self.\$(id).set_bandwidth(\$bw$(n), $n)
 		<option>
 			<name>unknown PPS</name>
 			<key>sync</key>
+		</option>
+		<option>
+			<name>PC Clock</name>
+			<key>pc_clock</key>
 		</option>
 		<option>
 			<name>don't sync</name>

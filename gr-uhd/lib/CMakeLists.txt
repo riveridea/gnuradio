@@ -1,4 +1,4 @@
-# Copyright 2011-2012 Free Software Foundation, Inc.
+# Copyright 2011-2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -21,31 +21,63 @@
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GNURADIO_CORE_INCLUDE_DIRS}
-    ${GR_UHD_INCLUDE_DIRS}
     ${CMAKE_CURRENT_BINARY_DIR}
+    ${GR_UHD_INCLUDE_DIRS}
+    ${GNURADIO_RUNTIME_INCLUDE_DIRS}
+    ${LOG4CXX_INCLUDE_DIRS}
+    ${Boost_INCLUDE_DIRS}
+    ${UHD_INCLUDE_DIRS}
 )
 
-include_directories(${UHD_INCLUDE_DIRS})
-link_directories(${UHD_LIBRARY_DIRS})
+link_directories(
+  ${UHD_LIBRARY_DIRS}
+  ${LOG4CXX_LIBRARY_DIRS}
+  ${Boost_LIBRARY_DIRS}
+)
 
-include_directories(${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
+if(ENABLE_GR_CTRLPORT)
+  ADD_DEFINITIONS(-DGR_CTRLPORT)
+  include_directories(${ICE_INCLUDE_DIR})
+endif(ENABLE_GR_CTRLPORT)
+
+include_directories(${LOG4CPP_INCLUDE_DIRS})
+link_directories(${LOG4CPP_LIBRARY_DIRS})
 
 ########################################################################
 # Setup library
 ########################################################################
 list(APPEND gr_uhd_sources
+<<<<<<< HEAD
     gr_uhd_usrp_source.cc
     gr_uhd_usrp_sink.cc
     gr_uhd_amsg_source.cc
 	gr_uhd_pulse_source.cc
+=======
+    usrp_source_impl.cc
+    usrp_sink_impl.cc
+    amsg_source_impl.cc
+>>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 )
 
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-uhd.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-uhd.rc
+    @ONLY)
+
+    list(APPEND gr_uhd_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-uhd.rc
+    )
+endif(MSVC)
+
 list(APPEND uhd_libs
-    gnuradio-core
+    gnuradio-runtime
     ${Boost_LIBRARIES}
     ${UHD_LIBRARIES}
+    ${LOG4CPP_LIBRARIES}
 )
 
 add_library(gnuradio-uhd SHARED ${gr_uhd_sources})

@@ -30,7 +30,7 @@
 #endif
 
 #include "@IMPL_NAME@.h"
-#include <gr_io_signature.h>
+#include <gnuradio/io_signature.h>
 #include <volk/volk.h>
 
 namespace gr {
@@ -52,9 +52,9 @@ namespace gr {
 			     const std::vector<@TAP_TYPE@> &taps,
 			     double center_freq,
 			     double sampling_freq)
-    : gr_sync_decimator("@BASE_NAME@",
-			gr_make_io_signature(1, 1, sizeof(@I_TYPE@)),
-			gr_make_io_signature(1, 1, sizeof(@O_TYPE@)),
+    : sync_decimator("@BASE_NAME@",
+			io_signature::make(1, 1, sizeof(@I_TYPE@)),
+			io_signature::make(1, 1, sizeof(@O_TYPE@)),
 			decimation),
       d_proto_taps(taps), d_center_freq(center_freq),
       d_sampling_freq(sampling_freq),
@@ -77,14 +77,21 @@ namespace gr {
     {
       std::vector<gr_complex> ctaps(d_proto_taps.size());
 
-      float fwT0 = -2 * M_PI * d_center_freq / d_sampling_freq;
+      // The basic principle of this block is to perform:
+      //    x(t) -> (mult by -fwT0) -> LPF -> decim -> y(t)
+      // We switch things up here to:
+      //    x(t) -> BPF -> decim -> (mult by fwT0*decim) -> y(t)
+      // The BPF is the baseband filter (LPF) moved up to the 
+      // center frequency fwT0. We then apply a derotator 
+      // with -fwT0 to downshift the signal to baseband.
+
+      float fwT0 = 2 * M_PI * d_center_freq / d_sampling_freq;
       for(unsigned int i = 0; i < d_proto_taps.size(); i++) {
 	ctaps[i] = d_proto_taps[i] * exp(gr_complex(0, i * fwT0));
       }
 
-      std::reverse(ctaps.begin(), ctaps.end());
       d_composite_fir->set_taps(ctaps);
-      d_r.set_phase_incr(exp(gr_complex(0, fwT0 * decimation())));
+      d_r.set_phase_incr(exp(gr_complex(0, -fwT0 * decimation())));
     }
 
     void
@@ -131,8 +138,8 @@ namespace gr {
 
       unsigned j = 0;
       for (int i = 0; i < noutput_items; i++){
-	out[i] = d_r.rotate(d_composite_fir->filter(&in[j]));
-	j += decimation();
+        out[i] = d_r.rotate(d_composite_fir->filter(&in[j]));
+        j += decimation();
       }
 
       return noutput_items;

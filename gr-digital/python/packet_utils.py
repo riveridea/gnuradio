@@ -68,12 +68,13 @@ def conv_1_0_string_to_packed_binary_string(s):
         i += 8
     return (''.join(r), padded)
         
-
 default_access_code = \
   conv_packed_binary_string_to_1_0_string('\xAC\xDD\xA4\xE2\xF2\x8C\x20\xFC')
+s = '\xA4\xF2'
 preamble = \
   conv_packed_binary_string_to_1_0_string('\xA4\xF2')
-
+  #conv_packed_binary_string_to_1_0_string(1024*s)
+  
 def is_1_0_string(s):
     if not isinstance(s, str):
         return False

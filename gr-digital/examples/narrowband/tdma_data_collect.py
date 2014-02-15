@@ -30,6 +30,7 @@ from gnuradio import digital
 
 # from current dir
 from receive_path import receive_path
+from transmit_path import transmit_path
 #from uhd_interface import uhd_receiver
 from uhd_interface_w_sensor import uhd_transmitter
 from uhd_interface_w_sensor import uhd_sensor
@@ -64,13 +65,34 @@ CLUSTER_NODE    = 'node'   # cluster node
 HEAD_PORT = 23000   # port where cluster head capturing the socket message
 NODE_PORT = 23001   # port where cluster node capturing the socket message
 
+# thread for getting transmitted data from file or orther source
+class tx_data_src(threading.Thread):
+    def __init__(self, tx_path):
+        threading.Thread.__init__(self)
+        self._txpath = tx_path
+        
+    def run(self):
+        #generate and send packets
+        n = 0
+        pktno = 0
+        #pkt_size = int(options.size)
+        print "tx_data_src -%s start tx" %(self.getName())
+        while 1:
+            data = (50 - 2) * chr(pktno & 0xff)
+            payload = struct.pack('!H', pktno & 0xffff) + data
+            self._txpath.send_pkt(payload, False)
+            n += len(payload)
+            #sys.stderr.write('.')
+            pktno += 1
+
+# Socket Control Channel 
 class socket_server(threading.Thread):
     def __init__(self, port, parent):
         threading.Thread.__init__(self)
-	self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	self._socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-	self._socket.bind(('', port))
-	self._parent = parent
+        self._socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self._socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self._socket.bind(('', port))
+        self._parent = parent
           
     def run(self):
         while 1:
@@ -153,7 +175,7 @@ class my_top_block(gr.top_block):
                 time.sleep(5)
                 self.sensors[0].u.start()
         
-    def __init__(self, node_type, node_index, demodulator, rx_callback, options):
+    def __init__(self, node_type, node_index, demodulator, modulator, rx_callback, options):
         gr.top_block.__init__(self)
 		
         # is this node the sub node or head?
@@ -209,36 +231,41 @@ class my_top_block(gr.top_block):
                     self.sensors[i].u.set_time_source("mimo", 0)  # Set the time source without GPS to MIMO cable
                     self.sensors[i].u.set_clock_source("mimo",0) 
 					
-		# file sinks
+	        	# file sinks
                 filename = "%s_sensed.dat" %(NODES_PC*self._node_id + i)
                 self.connect(self.sensors[i].u, gr.file_sink(gr.sizeof_gr_complex, filename))
 
             # Configure Transmitters	
             self.transmitters = []
-            for i in range(n_devices):			
+            self.txpaths = []
+            self.tx_srcs = []
+            for i in range(n_devices):	
                 self.transmitters.append(uhd_transmitter(addrs[i], symbol_rate,
                                                 options.samples_per_symbol,
                                                 options.tx_samprate,
                                                 options.tx_freq, options.tx_gain,
                                                 options.tx_spec, options.tx_antenna,
-                                                options.verbose))	
-                     
-            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
-            #print 'In locking '
-            #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
-            #    print '.'
+                                                options.verbose, True))	#TDMA transmitter
+                self.txpaths.append(transmit_path(modulator, options))
+                self.tx_srcs.append(tx_data_src(self.txpaths[i]))
+                #filename = "file%.dat" %(i)
+                #self.file_src = gr.file_source(gr.sizeof_gr_complex*1, filename, True)      
+                #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+                #print 'In locking '
+                #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
+                #    print '.'
         
-            #print 'Locked'
+                 #print 'Locked'
 
         self.timer =  threading.Timer(1, self.start_streaming)
 	
     def start_tdma_net(self, start_time, burst_duration, idle_duration):
-	# specify the tdma pulse parameters and connect the 
-	# pulse source to usrp sinker also specify the usrp source
-	# with the specified start time
-	self.pulse_srcs = []
-	n_devices = len(self.transmitters)
-        if n_devices > 0:
+        # specify the tdma pulse parameters and connect the 
+        # pulse source to usrp sinker also specify the usrp source
+        # with the specified start time
+        self.pulse_srcs = []
+        n_devices = len(self.transmitters)
+        if (n_devices > 0):
             time_slot = (burst_duration + idle_duration)/NETWORK_SIZE
             #print 'base_s_time = %.7f' %start_time
             for i in range(n_devices):
@@ -247,26 +274,30 @@ class my_top_block(gr.top_block):
                 local_time = self.transmitters[i].u.get_time_now().get_real_secs()
                 print 'current time 1 = %.7f' %local_time
                 self.pulse_srcs.append(uhd.pulse_source(s_time.get_full_secs(), 
-		                        s_time.get_frac_secs(), 
-					self._sample_rate,
-					idle_duration,
-					burst_duration))
+		                                        s_time.get_frac_secs(), 
+					                self._sample_rate,
+					                idle_duration,
+					                burst_duration,
+                                                        1))
 		# Connect the pulse source to the transmitters
-		self.connect(self.pulse_srcs[i], self.transmitters[i].u)
+                self.transmitters[i].insert_tdma_throttle(self.pulse_srcs[i])
+                self.connect(self.txpaths[i], self.transmitters[i])
 		# Set the start time for sensors                
 		self.sensors[i].u.set_start_time(uhd.time_spec_t(start_time))
         else:
             exit("no devices on this node!")
 			
-	# start the flow graph and all the sensors
-	self.start()
+        # start the flow graph and all the sensors
+        self.start()
         time.sleep(5)
-	for i in range(n_devices):
+        for i in range(n_devices):
             current_time = self.sensors[i].u.get_time_now().get_real_secs()
             print "current time 2 = %.7f" %current_time
             #print "base_s_time = %.7f" %start_time
-	    self.sensors[i].u.start()
-		
+            self.sensors[i].u.start()
+            #start the transmitting of data packets
+            self.tx_srcs[i].start()
+
 # /////////////////////////////////////////////////////////////////////////////
 #                                   main
 # /////////////////////////////////////////////////////////////////////////////
@@ -292,8 +323,9 @@ def main():
 
         print "ok = %5s  pktno = %4d  n_rcvd = %4d  n_right = %4d" % (
             ok, pktno, n_rcvd, n_right)
-
+            
     demods = digital.modulation_utils.type_1_demods()
+    mods   = digital.modulation_utils.type_1_mods()
 
     # Create Options Parser:
     parser = OptionParser (option_class=eng_option, conflict_handler="resolve")
@@ -303,6 +335,8 @@ def main():
                       default='psk',
                       help="Select modulation from: %s [default=%%default]"
                             % (', '.join(demods.keys()),))
+    parser.add_option("-s", "--size", type="eng_float", default=100,
+                      help="set packet size [default=%default]")
     parser.add_option("","--from-file", default=None,
                       help="input file of samples to demod")
 
@@ -314,6 +348,7 @@ def main():
                           help="Specify the node index in the cluster [default=%default]")					  
 					  
     receive_path.add_options(parser, expert_grp)
+    transmit_path.add_options(parser, expert_grp)
     uhd_sensor.add_options(parser)
     uhd_transmitter.add_options(parser)
 
@@ -327,7 +362,7 @@ def main():
         sys.exit(1)
 
     if options.from_file is None:
-        if options.sx_freq is None:
+        if (options.sx_freq is None):
             sys.stderr.write("You must specify -f FREQ or --freq FREQ\n")
             parser.print_help(sys.stderr)
             sys.exit(1)
@@ -336,8 +371,9 @@ def main():
     # build the graph
     tb = my_top_block(node_types[options.node_type],
                     options.node_index,
-                    demods[options.modulation], 
-		            rx_callback, options)
+                    demods[options.modulation],
+                    mods[options.modulation], 
+		    rx_callback, options)
 
     r = gr.enable_realtime_scheduling()
     if r != gr.RT_OK:

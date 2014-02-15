@@ -1,4 +1,4 @@
-# Copyright 2012 Free Software Foundation, Inc.
+# Copyright 2012-2013 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -26,7 +26,7 @@ file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py "
 #!${PYTHON_EXECUTABLE}
 
 import sys, os, re
-sys.path.append('${GR_CORE_PYTHONPATH}')
+sys.path.append('${GR_RUNTIME_PYTHONPATH}')
 os.environ['srcdir'] = '${CMAKE_CURRENT_SOURCE_DIR}'
 os.chdir('${CMAKE_CURRENT_BINARY_DIR}')
 
@@ -48,7 +48,7 @@ macro(expand_cc root)
     list(APPEND expanded_files_cc ${CMAKE_CURRENT_BINARY_DIR}/${name}.cc)
     list(APPEND expanded_files_h  ${CMAKE_CURRENT_BINARY_DIR}/${name}.h)
   endforeach(sig)
-  
+
   #create a command to generate the source files
   add_custom_command(
     OUTPUT ${expanded_files_cc}
@@ -66,15 +66,15 @@ macro(expand_cc root)
     ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
     ${root} ${root}.h.t ${ARGN}
   )
-  
+
   #make source files depends on headers to force generation
   set_source_files_properties(${expanded_files_cc}
     PROPERTIES OBJECT_DEPENDS "${expanded_files_h}"
   )
-  
+
   #install rules for the generated cc files
-  list(APPEND generated_sources ${expanded_files_cc})  
-  list(APPEND generated_headers ${expanded_files_h})  
+  list(APPEND generated_sources ${expanded_files_cc})
+  list(APPEND generated_headers ${expanded_files_h})
 endmacro(expand_cc)
 
 ########################################################################
@@ -90,19 +90,26 @@ expand_cc(rational_resampler_base_XXX_impl ccc ccf fcc fff fsf scc)
 # Setup the include and linker paths
 ########################################################################
 include_directories(
-    ${GR_FILTER_INCLUDE_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${VOLK_INCLUDE_DIRS}
-    ${GNURADIO_CORE_INCLUDE_DIRS}
+    ${GR_FILTER_INCLUDE_DIRS}
     ${GR_FFT_INCLUDE_DIRS}
+    ${GR_BLOCKS_INCLUDE_DIRS}
+    ${GNURADIO_RUNTIME_INCLUDE_DIRS}
+    ${VOLK_INCLUDE_DIRS}
+    ${LOG4CPP_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
-    ${FFTW3F_INCLUDE_DIRS}
 )
 
-link_directories(${FFT_LIBRARY_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
-link_directories(${FFTW3F_LIBRARY_DIRS})
+link_directories(
+  ${Boost_LIBRARY_DIRS}
+  ${LOG4CPP_LIBRARIES}
+)
+
+if(ENABLE_GR_CTRLPORT)
+  ADD_DEFINITIONS(-DGR_CTRLPORT)
+  include_directories(${ICE_INCLUDE_DIR})
+endif(ENABLE_GR_CTRLPORT)
 
 ########################################################################
 # Setup library
@@ -117,8 +124,6 @@ list(APPEND filter_sources
   pm_remez.cc
   polyphase_filterbank.cc
   ${generated_sources}
-  adaptive_fir_ccc_impl.cc
-  adaptive_fir_ccf_impl.cc
   dc_blocker_cc_impl.cc
   dc_blocker_ff_impl.cc
   filter_delay_fc_impl.cc
@@ -126,9 +131,13 @@ list(APPEND filter_sources
   fft_filter_fff_impl.cc
   fractional_interpolator_cc_impl.cc
   fractional_interpolator_ff_impl.cc
+  fractional_resampler_cc_impl.cc
+  fractional_resampler_ff_impl.cc
   hilbert_fc_impl.cc
   iir_filter_ffd_impl.cc
+  pfb_arb_resampler.cc
   pfb_arb_resampler_ccf_impl.cc
+  pfb_arb_resampler_ccc_impl.cc
   pfb_arb_resampler_fff_impl.cc
   pfb_channelizer_ccf_impl.cc
   pfb_decimator_ccf_impl.cc
@@ -136,22 +145,37 @@ list(APPEND filter_sources
   pfb_synthesizer_ccf_impl.cc
   single_pole_iir_filter_cc_impl.cc
   single_pole_iir_filter_ff_impl.cc
-  channel_model_impl.cc
 )
 
+#Add Windows DLL resource file if using MSVC
+if(MSVC)
+    include(${CMAKE_SOURCE_DIR}/cmake/Modules/GrVersion.cmake)
+
+    configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-filter.rc.in
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-filter.rc
+    @ONLY)
+
+    list(APPEND filter_sources
+        ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-filter.rc
+    )
+endif(MSVC)
+
 list(APPEND filter_libs
-    gnuradio-core
+    gnuradio-runtime
     gnuradio-fft
+    gnuradio-blocks
     volk
     ${Boost_LIBRARIES}
-    ${FFTW3F_LIBRARIES}
 )
+
 
 add_library(gnuradio-filter SHARED ${filter_sources})
 target_link_libraries(gnuradio-filter ${filter_libs})
 GR_LIBRARY_FOO(gnuradio-filter RUNTIME_COMPONENT "filter_runtime" DEVEL_COMPONENT "filter_devel")
-add_dependencies(gnuradio-filter gnuradio-fft filter_generated_includes filter_generated_swigs)
-
+add_dependencies(gnuradio-filter
+  filter_generated_includes filter_generated_swigs
+  gnuradio-runtime gnuradio-fft)
 
 ########################################################################
 # QA C++ Code for gr-filter
@@ -173,10 +197,12 @@ if(ENABLE_TESTING)
 
   add_executable(test-gr-filter ${test_gr_filter_sources})
 
+  list(APPEND GR_TEST_TARGET_DEPS test-gr-filter gnuradio-filter gnuradio-fft)
+
   target_link_libraries(
     test-gr-filter
-    gnuradio-core
-    gnuradio-filter 
+    gnuradio-runtime
+    gnuradio-filter
     ${Boost_LIBRARIES}
     ${CPPUNIT_LIBRARIES}
   )

@@ -23,16 +23,15 @@
 #ifndef INCLUDED_KEEP_M_IN_N_IMPL_H
 #define INCLUDED_KEEP_M_IN_N_IMPL_H
 
-#include <blocks/keep_m_in_n.h>
+#include <gnuradio/blocks/keep_m_in_n.h>
 
 namespace gr {
   namespace blocks {
 
     class BLOCKS_API keep_m_in_n_impl : public keep_m_in_n
     {
-      int d_n;
       int d_m;
-      int d_count;
+      int d_n;
       int d_offset;
       int d_itemsize;
 

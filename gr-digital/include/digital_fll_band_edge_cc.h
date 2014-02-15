@@ -29,6 +29,7 @@
 #include <gri_control_loop.h>
 #include <gr_fir_util.h>
 #include <gr_fir_ccc.h>
+#include <cstdio>
 
 typedef gr_fir_ccc* (*fir_maker_t)(const std::vector<gr_complex> &taps);
 typedef gr_fir_ccc  filter_t;
@@ -44,10 +45,9 @@ digital_make_fll_band_edge_cc(float samps_per_sym,
 /*!
  * \class digital_fll_band_edge_cc
  * \brief Frequency Lock Loop using band-edge filters
+ * \ingroup synchronizers_blk
  *
- * \ingroup general
- * \ingroup digital
- *
+ * \details
  * The frequency lock loop derives a band-edge filter that covers the
  * upper and lower bandwidths of a digitally-modulated signal. The
  * bandwidth range is determined by the excess bandwidth (e.g.,
@@ -120,6 +120,11 @@ class DIGITAL_API digital_fll_band_edge_cc :
   filter_t*               d_filter_upper;
   std::vector<gr_complex> d_output_hist;
   std::vector<gr_complex> d_fllbuffer;
+
+  FILE*                   d_fp_error;
+  FILE*                   d_fp_dphase;
+  FILE*                   d_fp_dfreq;
+  bool                    r_start;
 
   /*!
    * Build the FLL

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright 2010,2011 Free Software Foundation, Inc.
+# Copyright 2010,2011,2013 Free Software Foundation, Inc.
 # 
 # This file is part of GNU Radio
 # 
@@ -20,7 +20,12 @@
 # Boston, MA 02110-1301, USA.
 # 
 
+<<<<<<< HEAD
 from gnuradio import gr, gru, uhd
+=======
+from gnuradio import gr, gru
+from gnuradio import blocks
+>>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 from gnuradio import eng_notation
 from gnuradio.eng_option import eng_option
 from optparse import OptionParser
@@ -50,7 +55,7 @@ class my_top_block(gr.top_block):
     def start_streaming(self):
         stime = self.source.u.get_time_now().get_real_secs()
         self.source.u.set_start_time(uhd.time_spec_t(stime + 2))
-        self.start()
+        #self.start()
         self.source.u.start()
         print 'start streaming'
         ##############################          
@@ -86,11 +91,14 @@ class my_top_block(gr.top_block):
             ask_sample_rate = symbol_rate*options.samples_per_symbol
 
             self.source = uhd_receiver(options.args, symbol_rate,
-                                       options.samples_per_symbol,
-                                       options.rx_freq, options.rx_gain,
+                                       options.samples_per_symbol, options.rx_freq, 
+                                       options.lo_offset, options.rx_gain,
                                        options.spec, options.antenna,
+<<<<<<< HEAD
                                        options.verbose)
-            options.samples_per_symbol = self.source._sps
+                                       
+            self.source.u.set_start_on_demand()
+            #options.samples_per_symbol = self.source._sps
             #devices = uhd.find_devices_raw()
             #addr0 = devices[0].to_string()
             #self.source = uhd_sensor(addr0[11:30], ask_sample_rate,
@@ -99,30 +107,34 @@ class my_top_block(gr.top_block):
             #                        options.verbose)
                                    
             #self.sampcov = digital.digital_swig.sampcov_matrix_calculator(ds,800,16)
-            self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
-            self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
-            self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
-            self.tracer = digital.digital_swig.trace_calculator(ds)
+            #self.sampcov = digital.digital_swig.sampcov_matrix_generator(ds,800)
+            #self.s2v = gr.stream_to_vector(gr.sizeof_gr_complex, ds*800)
+            #self.v2s = gr.vector_to_stream(gr.sizeof_gr_complex, ds*800) 
+            #self.tracer = digital.digital_swig.trace_calculator(ds)
             #self.gr_file_sink3 = gr.file_sink(gr.sizeof_float, "/home/alexzh/Dropbox/Public/trace.dat")
-            self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
+            #self.gr_file_sink4 = gr.file_sink(gr.sizeof_float*ds, "eigenvalue.dat")
             self.gr_file_sink5 = gr.file_sink(gr.sizeof_gr_complex, "file.dat")
-            self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
+            #self.gr_file_sink6 = gr.file_sink(gr.sizeof_gr_complex*ds*800, "file2.dat")
             
-            self.eval = digital.digital_swig.eigen_herm(ds)
+            #self.eval = digital.digital_swig.eigen_herm(ds)
             
-            self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
-            print 'In locking '
-            while (self.source.u.get_sensor("lo_locked").to_bool() == False):
-                print '.'
+            #self.source.u.set_center_freq(uhd.tune_request(options.rx_freq, ask_sample_rate*2), 0)
+            #print 'In locking '
+            #while (self.source.u.get_sensor("lo_locked").to_bool() == False):
+            #    print '.'
         
-            print 'Locked'
+            #print 'Locked'
+=======
+                                       options.clock_source, options.verbose)
+            options.samples_per_symbol = self.source._sps
+>>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 
         elif(options.from_file is not None):
             sys.stderr.write(("Reading samples from '%s'.\n\n" % (options.from_file)))
-            self.source = gr.file_source(gr.sizeof_gr_complex, options.from_file)
+            self.source = blocks.file_source(gr.sizeof_gr_complex, options.from_file)
         else:
             sys.stderr.write("No source defined, pulling samples from null source.\n\n")
-            self.source = gr.null_source(gr.sizeof_gr_complex)
+            self.source = blocks.null_source(gr.sizeof_gr_complex)
 
         # Set up receive path
         # do this after for any adjustments to the options that may
@@ -130,16 +142,16 @@ class my_top_block(gr.top_block):
         #self.rxpath = receive_path(demodulator, rx_callback, options) 
 
         #self.connect(self.source, self.rxpath)
-        #self.connect(self.source, self.gr_file_sink5)
-        self.connect(self.source, self.s2v)
-        self.connect(self.s2v, self.sampcov)
+        self.connect(self.source, self.gr_file_sink5)
+        #self.connect(self.source, self.s2v)
+        #self.connect(self.s2v, self.sampcov)
         #self.connect(self.s2v, self.v2s)
         #self.connect(self.v2s, self.gr_file_sink5)
         #self.connect(self.s2v, self.gr_file_sink6)
         
         #self.connect(self.source, gr.file_sink(gr.sizeof_gr_complex, "benchmark_sensing.dat"))
-        self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
-        self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
+        #self.connect((self.sampcov, 0), gr.file_sink(gr.sizeof_gr_complex*32*32, "samplecovmatrix.dat"))
+        #self.connect((self.sampcov, 1), gr.file_sink(gr.sizeof_char*32*32, "sampcovind.dat"))
 
 	#self.connect((self.sampcov, 0), (self.tracer, 0))
 	#self.connect((self.sampcov, 1), (self.tracer, 1))
@@ -218,9 +230,9 @@ def main():
     if r != gr.RT_OK:
         print "Warning: Failed to enable realtime scheduling."
 
-    tb.source.u.set_start_on_demand()
+    #tb.source.u.set_start_on_demand()
     
-    #tb.start()        # start flow graph
+    tb.start()        # start flow graph
     #self.source.u.stop()
     #time.sleep(10)
     tb.timer.start()
