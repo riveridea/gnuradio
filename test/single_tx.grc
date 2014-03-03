@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Feb 14 16:17:05 2014</timestamp>
+  <timestamp>Fri Feb 14 16:26:31 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,22 +84,22 @@
     </param>
   </block>
   <block>
-    <key>blocks_complex_to_imag</key>
+    <key>variable</key>
     <param>
       <key>id</key>
-      <value>blocks_complex_to_imag_0</value>
+      <value>tx_gain</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>value</key>
+      <value>20</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(698, 297)</value>
+      <value>(14, 395)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -107,74 +107,26 @@
     </param>
   </block>
   <block>
-    <key>wxgui_scopesink2</key>
+    <key>const_source_x</key>
     <param>
       <key>id</key>
-      <value>wxgui_scopesink2_0</value>
+      <value>const_source_x_0</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>type</key>
-      <value>float</value>
+      <value>complex</value>
     </param>
     <param>
-      <key>title</key>
-      <value>Scope Plot</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>v_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>v_offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>t_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>ac_couple</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>xy_mode</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
+      <key>const</key>
       <value>1</value>
     </param>
     <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>trig_mode</key>
-      <value>gr.gr_TRIG_MODE_NORM</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>Counts</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(922, 170)</value>
+      <value>(273, 275)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -182,33 +134,10 @@
     </param>
   </block>
   <block>
-    <key>gr_complex_to_real</key>
+    <key>uhd_usrp_sink</key>
     <param>
       <key>id</key>
-      <value>gr_complex_to_real_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(682, 197)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>uhd_usrp_source</key>
-    <param>
-      <key>id</key>
-      <value>uhd_usrp_source_0</value>
+      <value>uhd_usrp_sink_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -228,7 +157,7 @@
     </param>
     <param>
       <key>dev_addr</key>
-      <value>addr=192.168.10.124</value>
+      <value>addr=192.168.10.139</value>
     </param>
     <param>
       <key>sync</key>
@@ -244,7 +173,7 @@
     </param>
     <param>
       <key>clock_source0</key>
-      <value>external</value>
+      <value></value>
     </param>
     <param>
       <key>time_source0</key>
@@ -352,11 +281,11 @@
     </param>
     <param>
       <key>gain0</key>
-      <value>rx_gain</value>
+      <value>tx_gain</value>
     </param>
     <param>
       <key>ant0</key>
-      <value>RX2</value>
+      <value></value>
     </param>
     <param>
       <key>bw0</key>
@@ -860,7 +789,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(377, 161)</value>
+      <value>(545, 259)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -883,7 +812,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(15, 264)</value>
+      <value>(13, 285)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -891,22 +820,42 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
+    <key>analog_sig_source_x</key>
     <param>
       <key>id</key>
-      <value>rx_gain</value>
+      <value>analog_sig_source_x_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>value</key>
-      <value>20</value>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>analog.GR_COS_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(5, 356)</value>
+      <value>(266, 414)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -914,14 +863,8 @@
     </param>
   </block>
   <connection>
-    <source_block_id>uhd_usrp_source_0</source_block_id>
-    <sink_block_id>blocks_complex_to_imag_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_complex_to_imag_0</source_block_id>
-    <sink_block_id>wxgui_scopesink2_0</sink_block_id>
+    <source_block_id>analog_sig_source_x_0</source_block_id>
+    <sink_block_id>uhd_usrp_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

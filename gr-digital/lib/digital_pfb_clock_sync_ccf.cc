@@ -423,6 +423,7 @@ digital_pfb_clock_sync_ccf::general_work(int noutput_items,
     error_r = out[i].real() * diff.real();
     error_i = out[i].imag() * diff.imag();
     d_error = (error_i + error_r) / 2.0;       // average error from I&Q channel
+    d_error = 0; // alex: test to disable the control loop
 
     // Run the control loop to update the current phase (k) and
     // tracking rate estimates based on the error value
