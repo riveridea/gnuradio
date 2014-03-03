@@ -397,7 +397,8 @@ digital_pfb_clock_sync_ccf::general_work(int noutput_items,
       }
 
       out[i+d_out_idx] = d_filters[d_filtnum]->filter(&in[count+d_out_idx]);
-      d_k = d_k + d_rate_i + d_rate_f; // update phase
+      //alex, test if the d_k is not updated with d_rate-f
+      //d_k = d_k + d_rate_i + d_rate_f; // update phase
       d_out_idx++;
 
       if(output_items.size() == 4) {
