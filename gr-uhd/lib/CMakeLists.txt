@@ -47,16 +47,9 @@ link_directories(${LOG4CPP_LIBRARY_DIRS})
 # Setup library
 ########################################################################
 list(APPEND gr_uhd_sources
-<<<<<<< HEAD
-    gr_uhd_usrp_source.cc
-    gr_uhd_usrp_sink.cc
-    gr_uhd_amsg_source.cc
-	gr_uhd_pulse_source.cc
-=======
     usrp_source_impl.cc
     usrp_sink_impl.cc
     amsg_source_impl.cc
->>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 )
 
 #Add Windows DLL resource file if using MSVC

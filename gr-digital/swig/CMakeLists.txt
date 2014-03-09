@@ -65,57 +65,6 @@ install(
     ofdm_equalizer.i
     packet_header.i
     ${CMAKE_CURRENT_BINARY_DIR}/digital_swig_doc.i
-<<<<<<< HEAD
-    ${CMAKE_CURRENT_BINARY_DIR}/digital_generated.i
-    ${generated_swigs}
-    digital_additive_scrambler_bb.i
-    digital_binary_slicer_fb.i
-    digital_bytes_to_syms.i
-    digital_clock_recovery_mm_cc.i
-    digital_clock_recovery_mm_ff.i
-    digital_cma_equalizer_cc.i
-    digital_constellation.i
-    digital_constellation_receiver_cb.i
-    digital_constellation_decoder_cb.i
-    digital_correlate_access_code_bb.i
-    digital_correlate_access_code_tag_bb.i
-    digital_costas_loop_cc.i
-    digital_cpmmod_bc.i
-    digital_crc32.i
-    digital_descrambler_bb.i
-    digital_diff_decoder_bb.i
-    digital_diff_encoder_bb.i
-    digital_diff_phasor_cc.i
-    digital_fll_band_edge_cc.i
-    digital_framer_sink_1.i
-    digital_glfsr_source_b.i
-    digital_glfsr_source_f.i
-    digital_gmskmod_bc.i
-    digital_lms_dd_equalizer_cc.i
-    digital_kurtotic_equalizer_cc.i
-    digital_map_bb.i
-    digital_mpsk_receiver_cc.i
-    digital_mpsk_snr_est_cc.i
-    digital_ofdm_frame_acquisition.i
-    digital_ofdm_cyclic_prefixer.i
-    digital_ofdm_frame_sink.i
-    digital_ofdm_insert_preamble.i
-    digital_ofdm_mapper_bcv.i
-    digital_ofdm_sampler.i
-    digital_packet_sink.i
-    digital_pfb_clock_sync_ccf.i
-    digital_pfb_clock_sync_fff.i
-    digital_pn_correlator_cc.i
-    digital_probe_density_b.i
-    digital_probe_mpsk_snr_est_c.i
-    digital_scrambler_bb.i
-    digital_simple_framer.i
-    digital_sampcov_matrix_calculator.i
-    digital_trace_calculator.i
-    digital_sampcov_matrix_generator.i
-    digital_simple_correlator.i
-=======
->>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
     DESTINATION ${GR_INCLUDE_DIR}/gnuradio/swig
     COMPONENT "digital_swig"
 )

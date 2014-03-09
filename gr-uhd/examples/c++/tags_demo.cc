@@ -18,17 +18,9 @@
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
-
-<<<<<<< HEAD
-#include <gr_top_block.h>
-#include <gr_uhd_usrp_source.h>
-#include <gr_uhd_usrp_sink.h>
-#include <gr_file_sink.h>
-=======
 #include <gnuradio/top_block.h>
 #include <gnuradio/uhd/usrp_source.h>
 #include <gnuradio/uhd/usrp_sink.h>
->>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 #include <tag_source_demo.h>
 #include <tag_sink_demo.h>
 #include <boost/make_shared.hpp>
@@ -91,15 +83,15 @@ int main(int argc, char *argv[]){
       (device_addr, uhd::stream_args_t("fc32"));
     usrp_source->set_samp_rate(samp_rate);
     usrp_source->set_center_freq(center_freq);
-    usrp_source->set_start_on_demand();
+    //usrp_source->set_start_on_demand();
 
     boost::shared_ptr<tag_sink_demo> tag_sink = boost::make_shared<tag_sink_demo>();
 
     //------------------------------------------------------------------
     //-- make the file sink block to record the data
     //------------------------------------------------------------------
-    boost::shared_ptr<gr_file_sink> file_sink = gr_make_file_sink(
-        sizeof(gr_complex), "/home/alexzh/temp/sensing_data.dat");
+//    boost::shared_ptr<gr_file_sink> file_sink = gr_make_file_sink(
+ //       sizeof(gr_complex), "/home/alexzh/temp/sensing_data.dat");
 
     //------------------------------------------------------------------
     //-- connect the usrp source test blocks
@@ -109,7 +101,7 @@ int main(int argc, char *argv[]){
     //------------------------------------------------------------------
     //-- connect the usrp source to file sink
     //------------------------------------------------------------------
-    tb->connect(usrp_source, 0, file_sink, 0);
+//    tb->connect(usrp_source, 0, file_sink, 0);
 
     //------------------------------------------------------------------
     //-- make the usrp sink test blocks

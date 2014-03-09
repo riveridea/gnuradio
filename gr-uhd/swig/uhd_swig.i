@@ -43,16 +43,9 @@
 // block headers
 ////////////////////////////////////////////////////////////////////////
 %{
-<<<<<<< HEAD
-#include <gr_uhd_usrp_source.h>
-#include <gr_uhd_usrp_sink.h>
-#include <gr_uhd_amsg_source.h>
-#include <gr_uhd_pulse_source.h>
-=======
 #include <gnuradio/uhd/usrp_source.h>
 #include <gnuradio/uhd/usrp_sink.h>
 #include <gnuradio/uhd/amsg_source.h>
->>>>>>> 295ba353abebfedf90ece523343bcfeea2c2149d
 %}
 
 ////////////////////////////////////////////////////////////////////////
@@ -123,8 +116,6 @@ GR_SWIG_BLOCK_MAGIC2(uhd, usrp_source)
 GR_SWIG_BLOCK_MAGIC2(uhd, usrp_sink)
 GR_SWIG_BLOCK_MAGIC2(uhd, amsg_source)
 
-GR_SWIG_BLOCK_MAGIC(uhd,pulse_source)
-%include <gr_uhd_pulse_source.h>
 
 ////////////////////////////////////////////////////////////////////////
 // device discovery (no need to %include device.hpp)
