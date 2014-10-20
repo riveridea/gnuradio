@@ -168,7 +168,7 @@ def main():
     pktno = 0
     pkt_size = int(options.size)
 
-    pkt_size = 1280
+    #pkt_size = 1280
     pn_number = 2000 
     filex = 0
     #pkt_size = pn_number*2 + 2
@@ -192,7 +192,10 @@ def main():
         else:
             if options.rand_file or options.from_file is not None:
                 filex = 1
-                data = source_file.read(pkt_size - 2)
+                content = source_file.read(pkt_size - 74) 
+		#add the header and timestamp and the PN code for synchronizaiton
+		timetag = time.time()
+                data = 2*pn255_1 + struct.pack('!H', pktno & 0xffff) + struct.pack('!d', timetag)
                 if data == '':
                     print 'file done'
                     break;

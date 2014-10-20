@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Feb 14 16:26:31 2014</timestamp>
+  <timestamp>Sun Oct 19 20:56:19 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -64,29 +64,6 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1000000</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(10, 170)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
       <value>tx_gain</value>
     </param>
     <param>
@@ -134,6 +111,260 @@
     </param>
   </block>
   <block>
+    <key>analog_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>analog_sig_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>analog.GR_COS_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(266, 414)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>center_freq</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>926000000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(13, 284)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>6000000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(10, 170)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>wxgui_scopesink2</key>
+    <param>
+      <key>id</key>
+      <value>wxgui_scopesink2_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Scope Plot</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>v_scale</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>v_offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>t_scale</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>ac_couple</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>xy_mode</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>win_size</key>
+      <value></value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>trig_mode</key>
+      <value>gr.gr_TRIG_MODE_NORM</value>
+    </param>
+    <param>
+      <key>y_axis_label</key>
+      <value>Counts</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(985, 206)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>low_pass_filter</key>
+    <param>
+      <key>id</key>
+      <value>low_pass_filter_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>fir_filter_ccf</value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>gain</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>2000000</value>
+    </param>
+    <param>
+      <key>cutoff_freq</key>
+      <value>500000</value>
+    </param>
+    <param>
+      <key>width</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>firdes.WIN_RECTANGULAR</value>
+    </param>
+    <param>
+      <key>beta</key>
+      <value>6.76</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(547, 494)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_noise_source_x</key>
+    <param>
+      <key>id</key>
+      <value>analog_noise_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>noise_type</key>
+      <value>analog.GR_GAUSSIAN</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>seed</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(182, 601)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>uhd_usrp_sink</key>
     <param>
       <key>id</key>
@@ -157,7 +388,7 @@
     </param>
     <param>
       <key>dev_addr</key>
-      <value>addr=192.168.10.139</value>
+      <value>addr=192.168.10.109</value>
     </param>
     <param>
       <key>sync</key>
@@ -789,7 +1020,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(545, 259)</value>
+      <value>(962, 374)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -797,65 +1028,49 @@
     </param>
   </block>
   <block>
-    <key>variable</key>
+    <key>blocks_complex_to_real</key>
     <param>
       <key>id</key>
-      <value>center_freq</value>
+      <value>blocks_complex_to_real_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>value</key>
-      <value>928000000</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(13, 285)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_sig_source_x</key>
-    <param>
-      <key>id</key>
-      <value>analog_sig_source_x_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>waveform</key>
-      <value>analog.GR_COS_WAVE</value>
-    </param>
-    <param>
-      <key>freq</key>
-      <value>1000</value>
-    </param>
-    <param>
-      <key>amp</key>
+      <key>vlen</key>
       <value>1</value>
     </param>
     <param>
-      <key>offset</key>
+      <key>_coordinate</key>
+      <value>(627, 356)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blks2_analysis_filterbank</key>
+    <param>
+      <key>id</key>
+      <value>blks2_analysis_filterbank_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>mpoints</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value></value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(266, 414)</value>
+      <value>(1033, 586)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -863,8 +1078,8 @@
     </param>
   </block>
   <connection>
-    <source_block_id>analog_sig_source_x_0</source_block_id>
-    <sink_block_id>uhd_usrp_sink_0</sink_block_id>
+    <source_block_id>blocks_complex_to_real_0</source_block_id>
+    <sink_block_id>wxgui_scopesink2_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

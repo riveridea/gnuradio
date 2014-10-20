@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Feb 14 16:17:05 2014</timestamp>
+  <timestamp>Sun Oct 19 15:31:30 2014</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -84,6 +84,29 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>rx_gain</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(5, 356)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_complex_to_imag</key>
     <param>
       <key>id</key>
@@ -99,7 +122,38 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(698, 297)</value>
+      <value>(1032, 299)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_vector_to_stream</key>
+    <param>
+      <key>id</key>
+      <value>blocks_vector_to_stream_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>1024</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1075, 437)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -174,7 +228,139 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(922, 170)</value>
+      <value>(1074, 153)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>1024</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>window.blackmanharris(1024)</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>nthreads</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(769, 395)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_noise_source_x</key>
+    <param>
+      <key>id</key>
+      <value>analog_noise_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>noise_type</key>
+      <value>analog.GR_GAUSSIAN</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>seed</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(144, 479)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_stream_to_vector</key>
+    <param>
+      <key>id</key>
+      <value>blocks_stream_to_vector_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_items</key>
+      <value>1024</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(485, 426)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>center_freq</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>926000000</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(15, 264)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -228,7 +414,7 @@
     </param>
     <param>
       <key>dev_addr</key>
-      <value>addr=192.168.10.124</value>
+      <value>addr=192.168.10.109</value>
     </param>
     <param>
       <key>sync</key>
@@ -860,53 +1046,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(377, 161)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>center_freq</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>928000000</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(15, 264)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>rx_gain</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(5, 356)</value>
+      <value>(202, 202)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -914,7 +1054,13 @@
     </param>
   </block>
   <connection>
-    <source_block_id>uhd_usrp_source_0</source_block_id>
+    <source_block_id>fft_vxx_0</source_block_id>
+    <sink_block_id>blocks_vector_to_stream_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_vector_to_stream_0</source_block_id>
     <sink_block_id>blocks_complex_to_imag_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -922,6 +1068,18 @@
   <connection>
     <source_block_id>blocks_complex_to_imag_0</source_block_id>
     <sink_block_id>wxgui_scopesink2_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_stream_to_vector_0</source_block_id>
+    <sink_block_id>fft_vxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>uhd_usrp_source_0</source_block_id>
+    <sink_block_id>blocks_stream_to_vector_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
