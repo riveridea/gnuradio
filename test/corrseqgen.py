@@ -34,7 +34,7 @@ class my_top_block(gr.top_block):
 		# Blocks
 		##################################################
 		self.uhd_usrp_sink_0 = uhd.usrp_sink(
-			device_addr="addr=192.168.10.109",
+			device_addr="addr=192.168.10.131",
 			stream_args=uhd.stream_args(
 				cpu_format="fc32",
 				channels=range(1),
