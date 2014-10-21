@@ -43,7 +43,7 @@ class my_top_block(gr.top_block):
 		self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
 		self.uhd_usrp_sink_0.set_center_freq(center_freq, 0)
 		self.uhd_usrp_sink_0.set_gain(tx_gain, 0)
-		self.iir_filter_ffd_0 = filter.iir_filter_ffd(([1.8]), ([1, -0.8]))
+		self.iir_filter_ffd_0 = filter.iir_filter_ffd(([2]), ([-1]))
 		self.const_source_x_0 = gr.sig_source_f(0, gr.GR_CONST_WAVE, 0, 0, 0)
 		self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
 		self.analog_noise_source_x_0 = analog.noise_source_f(analog.GR_GAUSSIAN, 1, 0)
