@@ -188,6 +188,7 @@ def main():
             #elif pktno % 4 == 3:
             #    data = 64*pn255_4
 
+            print 'all pn'
             data = 64*pn255_1
         else:
             if options.rand_file or options.from_file is not None:

@@ -55,6 +55,8 @@ class my_top_block(gr.top_block):
 		self.connect((self.iir_filter_ffd_0, 0), (self.blocks_float_to_complex_0, 0))
 		self.connect((self.const_source_x_0, 0), (self.blocks_float_to_complex_0, 1))
 		self.connect((self.blocks_float_to_complex_0, 0), (self.uhd_usrp_sink_0, 0))
+                self.connect((self.blocks_float_to_complex_0, 0), gr.file_sink(gr.sizeof_gr_complex*1,
+                                                       "stream.dat"))
 
 
 	def get_tx_gain(self):
