@@ -50,7 +50,7 @@ class my_top_block(gr.top_block):
 		self.connect((self.gr_file_source_0, 0), (self.blocks_float_to_complex_0, 0))
 		self.connect((self.const_source_x_0, 0), (self.blocks_float_to_complex_0, 1))
 		self.connect((self.blocks_float_to_complex_0, 0), (self.uhd_usrp_sink_0, 0))
-                self.connect((self.blocks_float_to_complex_0, 0), gr.file_sink(gr.sizeof_gr_complex*1,
+                self.connect((self.gr_file_source_0, 0), gr.file_sink(gr.sizeof_float*1,
                                                        "correlate.dat"))
 
 	def get_tx_gain(self):
